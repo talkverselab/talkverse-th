@@ -1,0 +1,44 @@
+name: thai_universe
+description: "태국어유니버스 — 한국 화자 태국어(방콕) 학습 앱"
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Audio (회화/발음 재생 — 합성 mp3 재생용)
+  audioplayers: ^6.1.0
+
+  # Storage (학습 진도/설정 로컬 저장)
+  shared_preferences: ^2.3.2
+  path_provider: ^2.1.4
+
+  # Util
+  flutter_svg: ^2.0.10+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+  # Launcher icons
+  flutter_launcher_icons: ^0.14.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    # 콘텐츠 데이터 (JSON 직접 로딩).
+    - assets/data/alphabet/
+    - assets/data/tones/
+    - assets/data/dialogues/
+    - assets/data/wordsets/
+    # 오디오 (합성 mp3). 생성되면 채워짐.
+    - assets/audio/
+    # 브랜딩 이미지
+    - assets/images/

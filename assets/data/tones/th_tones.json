@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "title": "태국어 5성조 (วรรณยุกต์)",
+    "region": "bangkok",
+    "toneCount": 5,
+    "markCount": 4,
+    "note": "태국어 성조는 '자음 분류(고/중/저) × 모음 길이 × 받침 종류 × 성조부호'로 결정된다. 같은 음절도 성조에 따라 뜻이 완전히 달라진다."
+  },
+  "tones": [
+    {
+      "id": "mid", "thai": "เสียงสามัญ", "roman": "saman", "nameKo": "평성",
+      "sample": "คา", "sampleKo": "카ー", "meaning": "끼이다",
+      "descShort": "평평", "desc": "중간 높이에서 평평하게 유지. 부호 없음.",
+      "contour": [0.5, 0.5, 0.48], "audio": ""
+    },
+    {
+      "id": "low", "thai": "เสียงเอก", "roman": "ek", "nameKo": "저성",
+      "sample": "ข่า", "sampleKo": "카↓", "meaning": "갈랑갈(생강류)",
+      "descShort": "낮게", "desc": "낮은 음에서 평평하거나 살짝 더 내려감.",
+      "contour": [0.4, 0.32, 0.24], "audio": ""
+    },
+    {
+      "id": "falling", "thai": "เสียงโท", "roman": "tho", "nameKo": "하강성",
+      "sample": "ค่า", "sampleKo": "카^↓", "meaning": "값·가치",
+      "descShort": "내림", "desc": "높이 올라갔다가 뚝 떨어짐.",
+      "contour": [0.6, 0.92, 0.2], "audio": ""
+    },
+    {
+      "id": "high", "thai": "เสียงตรี", "roman": "tri", "nameKo": "고성",
+      "sample": "ค้า", "sampleKo": "카↑", "meaning": "장사·무역하다",
+      "descShort": "높게", "desc": "높은 음에서 시작해 더 올라감.",
+      "contour": [0.55, 0.62, 0.88], "audio": ""
+    },
+    {
+      "id": "rising", "thai": "เสียงจัตวา", "roman": "chattawa", "nameKo": "상승성",
+      "sample": "ขา", "sampleKo": "카↘↗", "meaning": "다리(脚)",
+      "descShort": "올림", "desc": "낮게 내렸다가 다시 올라감(물음표 억양).",
+      "contour": [0.46, 0.26, 0.78], "audio": ""
+    }
+  ],
+  "marks": [
+    { "mark": "่", "display": "ก่", "thai": "ไม้เอก",     "roman": "mai ek",       "ko": "1성 부호 — 보통 저성으로 만든다" },
+    { "mark": "้", "display": "ก้", "thai": "ไม้โท",      "roman": "mai tho",      "ko": "2성 부호 — 보통 하강성으로 만든다" },
+    { "mark": "๊", "display": "ก๊", "thai": "ไม้ตรี",     "roman": "mai tri",      "ko": "3성 부호 — 고성. 주로 중자음에 쓴다" },
+    { "mark": "๋", "display": "ก๋", "thai": "ไม้จัตวา",   "roman": "mai chattawa", "ko": "4성 부호 — 상승성. 주로 중자음에 쓴다" }
+  ],
+  "rules": [
+    { "cls": "mid",  "clsKo": "중자음 (อักษรกลาง)", "live": "평성",   "deadShort": "저성", "deadLong": "저성", "mai1": "저성", "mai2": "하강성" },
+    { "cls": "high", "clsKo": "고자음 (อักษรสูง)",  "live": "상승성", "deadShort": "저성", "deadLong": "저성", "mai1": "저성", "mai2": "하강성" },
+    { "cls": "low",  "clsKo": "저자음 (อักษรต่ำ)",  "live": "평성",   "deadShort": "고성", "deadLong": "하강성", "mai1": "하강성", "mai2": "고성" }
+  ]
+}
