@@ -1,3 +1,6 @@
+# Raw downloaded corpora (large + license-restricted; reproducible via download scripts)
+/corpus/_raw_chat/
+
 # Miscellaneous
 *.class
 *.log
