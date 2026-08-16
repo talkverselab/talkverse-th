@@ -26,13 +26,13 @@ class _AlphabetScreenState extends State<AlphabetScreen> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
-        backgroundColor: AppTheme.bgBottom,
+        backgroundColor: AppColors.creamDeep,
         appBar: AppBar(
           title: const Text('알파벳 · พยัญชนะ',
               style: TextStyle(fontWeight: FontWeight.w800)),
           bottom: const TabBar(
-            indicatorColor: AppTheme.brand,
-            labelColor: AppTheme.brand,
+            indicatorColor: AppColors.brand,
+            labelColor: AppColors.brand,
             unselectedLabelColor: Colors.black45,
             labelStyle: TextStyle(fontWeight: FontWeight.w700),
             tabs: [
@@ -81,21 +81,21 @@ class _ConsonantTab extends StatelessWidget {
         _ClassSection(
           title: '중자음 · อักษรกลาง',
           ko: '9자',
-          color: AppTheme.classMid,
+          color: AppColors.classMid,
           consonants: data.mid,
         ),
         const SizedBox(height: 20),
         _ClassSection(
           title: '고자음 · อักษรสูง',
           ko: '11자',
-          color: AppTheme.classHigh,
+          color: AppColors.classHigh,
           consonants: data.high,
         ),
         const SizedBox(height: 20),
         _ClassSection(
           title: '저자음 · อักษรต่ำ',
           ko: '24자',
-          color: AppTheme.classLow,
+          color: AppColors.classLow,
           consonants: data.low,
         ),
         const SizedBox(height: 16),
@@ -117,7 +117,7 @@ class _ClassExplainerCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: AppTheme.indigo,
+      color: AppColors.khram,
       borderRadius: BorderRadius.circular(18),
       child: InkWell(
         borderRadius: BorderRadius.circular(18),
@@ -412,7 +412,7 @@ class _VowelGroup extends StatelessWidget {
       children: [
         Row(
           children: [
-            Container(width: 4, height: 18, color: AppTheme.teal),
+            Container(width: 4, height: 18, color: AppColors.morakot),
             const SizedBox(width: 8),
             Text(title,
                 style: Theme.of(context)
@@ -457,7 +457,7 @@ class _VowelCard extends StatelessWidget {
                 style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.w700,
-                    color: AppTheme.teal)),
+                    color: AppColors.morakot)),
             const SizedBox(height: 4),
             Text('${v.roman}  ·  ${v.ko}',
                 style: const TextStyle(fontSize: 11.5, color: Colors.black54)),
@@ -486,7 +486,7 @@ void _showVowelDetail(BuildContext context, ThaiVowel v) {
                 style: const TextStyle(
                     fontSize: 56,
                     fontWeight: FontWeight.w800,
-                    color: AppTheme.teal)),
+                    color: AppColors.morakot)),
           ),
           const SizedBox(height: 12),
           _DetailRow('로마자', v.roman),

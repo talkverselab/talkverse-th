@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "level": "L1",
+    "title": "L1 스토리 — 방콕 첫걸음",
+    "characters": { "A": "민호 (한국인 학습자)", "B": "ฟ้า 파 (방콕 현지인)" },
+    "note": "방콕 표준어. roman은 성조 부호 포함 (à 저성, â 하성, á 고성, ǎ 상성, 무부호 평성)."
+  },
+  "episodes": [
+    {
+      "id": "ep1",
+      "title": "첫 만남",
+      "emoji": "🙏",
+      "turns": [
+        { "num": 1, "speaker": "A", "th": "สวัสดีครับ ผมชื่อมินโฮครับ", "roman": "sà-wàt-dii khráp, phǒm chûue min-hoo khráp", "ko": "안녕하세요, 저는 민호입니다.", "note": "남성은 ครับ, 여성은 ค่ะ/คะ로 문장을 맺는다." },
+        { "num": 2, "speaker": "B", "th": "สวัสดีค่ะ ฉันชื่อฟ้า ยินดีที่ได้รู้จักนะคะ", "roman": "sà-wàt-dii khâ, chǎn chûue fáa, yin-dii thîi dâi rúu-jàk ná khá", "ko": "안녕하세요, 저는 파예요. 만나서 반가워요.", "note": "ยินดีที่ได้รู้จัก = 만나서 반갑습니다 (고정 표현)" },
+        { "num": 3, "speaker": "A", "th": "ยินดีเช่นกันครับ คุณฟ้าเป็นคนกรุงเทพฯ ใช่ไหมครับ", "roman": "yin-dii chên-gan khráp, khun fáa pen khon grung-thêep châi mái khráp", "ko": "저도 반갑습니다. 파 씨는 방콕 사람 맞죠?", "note": "ใช่ไหม = ~맞지요? (확인 의문)" },
+        { "num": 4, "speaker": "B", "th": "ใช่ค่ะ แล้วคุณมินโฮมาจากไหนคะ", "roman": "châi khâ, láew khun min-hoo maa jàak nǎi khá", "ko": "맞아요. 민호 씨는 어디서 왔어요?", "note": "มาจากไหน = 어디 출신? / แล้ว = 그럼(화제 전환)" },
+        { "num": 5, "speaker": "A", "th": "ผมมาจากเกาหลีครับ มาเรียนภาษาไทยที่นี่", "roman": "phǒm maa jàak gao-lǐi khráp, maa rian phaa-sǎa thai thîi-nîi", "ko": "한국에서 왔어요. 여기서 태국어를 배우러 왔어요.", "note": "เกาหลี = 한국 / ภาษาไทย = 태국어" },
+        { "num": 6, "speaker": "B", "th": "พูดไทยเก่งมากเลยนะคะ", "roman": "phûut thai gèng mâak loei ná khá", "ko": "태국어 정말 잘하시네요.", "note": "เก่ง = 잘한다, มาก = 매우, เลย = 강조" },
+        { "num": 7, "speaker": "A", "th": "ขอบคุณครับ แต่ยังพูดได้นิดหน่อยครับ", "roman": "khàawp-khun khráp, tàae yang phûut dâi nít-nàwy khráp", "ko": "감사합니다. 그래도 아직 조금밖에 못해요.", "note": "นิดหน่อย = 조금 / ยัง = 아직" },
+        { "num": 8, "speaker": "B", "th": "ไม่เป็นไรค่ะ ค่อยๆ ฝึกไปนะคะ", "roman": "mâi-pen-rai khâ, khâwy-khâwy fùek pai ná khá", "ko": "괜찮아요. 천천히 연습하면 돼요.", "note": "ไม่เป็นไร = 괜찮다(만능 표현) / ค่อยๆ = 천천히" },
+        { "num": 9, "speaker": "A", "th": "คุณฟ้าทำงานอะไรครับ", "roman": "khun fáa tham-ngaan à-rai khráp", "ko": "파 씨는 무슨 일을 하세요?", "note": "ทำงาน = 일하다 / อะไร = 무엇" },
+        { "num": 10, "speaker": "B", "th": "ฉันเป็นครูค่ะ สอนอยู่ที่โรงเรียนแถวนี้", "roman": "chǎn pen khruu khâ, sǎwn yùu thîi roong-rian thǎew-níi", "ko": "저는 교사예요. 이 근처 학교에서 가르쳐요.", "note": "ครู = 교사 / แถวนี้ = 이 근처" },
+        { "num": 11, "speaker": "A", "th": "ดีจังเลยครับ งั้นขอเบอร์ได้ไหมครับ", "roman": "dii jang loei khráp, ngán khǎaw boe dâi mái khráp", "ko": "멋지네요. 그럼 전화번호 물어봐도 될까요?", "note": "ขอ...ได้ไหม = ~해도 될까요? / เบอร์ = 번호" },
+        { "num": 12, "speaker": "B", "th": "ได้ค่ะ ไว้ไปกินข้าวด้วยกันนะ", "roman": "dâi khâ, wái pai gin khâao dûai-gan ná", "ko": "좋아요. 나중에 같이 밥 먹어요.", "note": "กินข้าว = 밥 먹다 / ด้วยกัน = 같이 / ไว้ = 나중에" }
+      ]
+    },
+    {
+      "id": "ep2",
+      "title": "길거리 음식",
+      "emoji": "🍜",
+      "turns": [
+        { "num": 1, "speaker": "B", "th": "เอาอะไรดีคะ", "roman": "ao à-rai dii khá", "ko": "뭐 드릴까요?", "note": "เอา = 갖다/원하다 (주문의 기본 동사)" },
+        { "num": 2, "speaker": "A", "th": "ผัดไทยหนึ่งจานครับ เผ็ดนิดเดียวนะครับ", "roman": "phàt-thai nùeng jaan khráp, phèt nít-diao ná khráp", "ko": "팟타이 한 접시요. 조금만 맵게 해주세요.", "note": "จาน = 접시(수량사) / เผ็ด = 맵다" },
+        { "num": 3, "speaker": "B", "th": "ใส่กุ้งไหมคะ", "roman": "sài gûng mái khá", "ko": "새우 넣을까요?", "note": "ใส่ = 넣다 / กุ้ง = 새우" },
+        { "num": 4, "speaker": "A", "th": "ใส่ครับ แล้วก็ขอน้ำมะพร้าวหนึ่งลูกครับ", "roman": "sài khráp, láew-gâaw khǎaw nám-má-phráao nùeng lûuk khráp", "ko": "넣어주세요. 그리고 코코넛 주스 하나 주세요.", "note": "แล้วก็ = 그리고 / ลูก = 개(과일 수량사)" },
+        { "num": 5, "speaker": "B", "th": "นั่งกินที่นี่หรือกลับบ้านคะ", "roman": "nâng gin thîi-nîi rǔue glàp bâan khá", "ko": "여기서 드세요, 포장이세요?", "note": "หรือ = 또는 / กลับบ้าน = 집에 가다" },
+        { "num": 6, "speaker": "A", "th": "นั่งกินที่นี่ครับ ทั้งหมดเท่าไหร่ครับ", "roman": "nâng gin thîi-nîi khráp, tháng-mòt thâo-rài khráp", "ko": "여기서 먹을게요. 전부 얼마예요?", "note": "เท่าไหร่ = 얼마 / ทั้งหมด = 전부" },
+        { "num": 7, "speaker": "B", "th": "เจ็ดสิบบาทค่ะ", "roman": "jèt-sìp bàat khâ", "ko": "70바트요.", "note": "เจ็ดสิบ = 70 / บาท = 바트(화폐)" },
+        { "num": 8, "speaker": "A", "th": "แพงไปหน่อย ลดได้ไหมครับ", "roman": "phaaeng pai nàwy, lót dâi mái khráp", "ko": "좀 비싸네요. 깎아줄 수 있어요?", "note": "แพง = 비싸다 / ลด = 깎다·할인하다" },
+        { "num": 9, "speaker": "B", "th": "อันนี้ลดไม่ได้ค่ะ แต่แถมผักให้นะ", "roman": "an-níi lót mâi dâi khâ, tàae thǎaem phàk hâi ná", "ko": "이건 안 돼요. 대신 채소 더 드릴게요.", "note": "แถม = 덤으로 주다 / ผัก = 채소" },
+        { "num": 10, "speaker": "A", "th": "โอเคครับ อร่อยมากเลยครับ", "roman": "oo-khee khráp, à-ràwy mâak loei khráp", "ko": "좋아요. 정말 맛있어요!", "note": "อร่อย = 맛있다 (여행 필수 단어)" },
+        { "num": 11, "speaker": "B", "th": "ขอบคุณค่ะ มาอีกนะคะ", "roman": "khàawp-khun khâ, maa ìik ná khá", "ko": "감사합니다. 또 오세요.", "note": "อีก = 또, 더" },
+        { "num": 12, "speaker": "A", "th": "แน่นอนครับ พรุ่งนี้มาอีกครับ", "roman": "nâae-nawn khráp, phrûng-níi maa ìik khráp", "ko": "물론이죠. 내일 또 올게요.", "note": "แน่นอน = 물론 / พรุ่งนี้ = 내일" }
+      ]
+    },
+    {
+      "id": "ep3",
+      "title": "택시 타기",
+      "emoji": "🚕",
+      "turns": [
+        { "num": 1, "speaker": "A", "th": "ไปสยามพารากอนไหมครับ", "roman": "pai sà-yǎam phaa-raa-gawn mái khráp", "ko": "시암 파라곤 가나요?", "note": "ไป...ไหม = ~에 가나요? (택시 탈 때 첫 마디)" },
+        { "num": 2, "speaker": "B", "th": "ไปครับ ขึ้นเลย", "roman": "pai khráp, khûen loei", "ko": "갑니다. 타세요.", "note": "ขึ้น = 타다·오르다 / เลย = 바로" },
+        { "num": 3, "speaker": "A", "th": "ใช้เวลานานไหมครับ", "roman": "chái wee-laa naan mái khráp", "ko": "오래 걸려요?", "note": "ใช้เวลา = 시간이 걸리다 / นาน = 오래" },
+        { "num": 4, "speaker": "B", "th": "ประมาณยี่สิบนาทีครับ ถ้ารถไม่ติด", "roman": "prà-maan yîi-sìp naa-thii khráp, thâa rót mâi tìt", "ko": "20분 정도요. 차가 안 막히면요.", "note": "รถติด = 차가 막히다 (방콕 필수 단어!)" },
+        { "num": 5, "speaker": "A", "th": "ช่วยเปิดมิเตอร์ด้วยนะครับ", "roman": "chûai pòet mí-tôe dûai ná khráp", "ko": "미터기 켜주세요.", "note": "ช่วย...ด้วย = ~해주세요 (부탁 공식)" },
+        { "num": 6, "speaker": "B", "th": "ได้ครับ ไม่ต้องห่วง", "roman": "dâi khráp, mâi tâwng hùang", "ko": "네, 걱정 마세요.", "note": "ไม่ต้อง = ~할 필요 없다 / ห่วง = 걱정하다" },
+        { "num": 7, "speaker": "A", "th": "รถติดมากเลยนะครับวันนี้", "roman": "rót tìt mâak loei ná khráp wan-níi", "ko": "오늘 차가 많이 막히네요.", "note": "วันนี้ = 오늘" },
+        { "num": 8, "speaker": "B", "th": "วันศุกร์ก็แบบนี้แหละครับ", "roman": "wan-sùk gâaw bàaep-níi làe khráp", "ko": "금요일은 원래 이래요.", "note": "วันศุกร์ = 금요일 / แหละ = ~인 거지(체념·수긍)" },
+        { "num": 9, "speaker": "A", "th": "ลงตรงหน้าห้างได้ไหมครับ", "roman": "long trong nâa hâang dâi mái khráp", "ko": "백화점 앞에서 내려도 될까요?", "note": "ลง = 내리다 / ห้าง = 백화점·몰" },
+        { "num": 10, "speaker": "B", "th": "ได้ครับ ถึงแล้วครับ", "roman": "dâi khráp, thǔeng láew khráp", "ko": "네. 도착했습니다.", "note": "ถึงแล้ว = 도착했다 (แล้ว = 완료)" },
+        { "num": 11, "speaker": "A", "th": "เท่าไหร่ครับ", "roman": "thâo-rài khráp", "ko": "얼마예요?", "note": "가격 묻기 만능 표현" },
+        { "num": 12, "speaker": "B", "th": "ร้อยยี่สิบบาทครับ ขอบคุณครับ", "roman": "ráwy yîi-sìp bàat khráp, khàawp-khun khráp", "ko": "120바트입니다. 감사합니다.", "note": "ร้อย = 100 / ยี่สิบ = 20" }
+      ]
+    }
+  ]
+}

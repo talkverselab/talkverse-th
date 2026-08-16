@@ -25,7 +25,7 @@ class _ConsonantClassScreenState extends State<ConsonantClassScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.bgBottom,
+      backgroundColor: AppColors.creamDeep,
       appBar: AppBar(
         title: const Text('자음 3분류 · ไตรยางศ์',
             style: TextStyle(fontWeight: FontWeight.w800)),
@@ -48,7 +48,7 @@ class _ConsonantClassScreenState extends State<ConsonantClassScreen> {
               _ClassBlock(
                 title: '중자음',
                 thai: 'อักษรกลาง',
-                color: AppTheme.classMid,
+                color: AppColors.classMid,
                 count: data.mid.length,
                 tagline: '소리가 막히지 않는 안정된 자음. 5성조를 모두 만들 수 있는 기준.',
                 consonants: data.mid,
@@ -58,7 +58,7 @@ class _ConsonantClassScreenState extends State<ConsonantClassScreen> {
               _ClassBlock(
                 title: '고자음',
                 thai: 'อักษรสูง',
-                color: AppTheme.classHigh,
+                color: AppColors.classHigh,
                 count: data.high.length,
                 tagline: '높은 곳에서 시작하는 무성·기식음. 무표시일 때 상승성이 된다.',
                 consonants: data.high,
@@ -68,7 +68,7 @@ class _ConsonantClassScreenState extends State<ConsonantClassScreen> {
               _ClassBlock(
                 title: '저자음',
                 thai: 'อักษรต่ำ',
-                color: AppTheme.classLow,
+                color: AppColors.classLow,
                 count: data.low.length,
                 tagline: '가장 많은 24자. 무표시일 때 평성, 비음·유음이 다수.',
                 consonants: data.low,
@@ -93,7 +93,7 @@ class _IntroCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         gradient: const LinearGradient(
-          colors: [AppTheme.indigo, AppTheme.brand],
+          colors: [AppColors.khram, AppColors.brand],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -279,7 +279,7 @@ class _ToneHintCard extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppTheme.gold.withValues(alpha: 0.14),
+        color: AppColors.thong.withValues(alpha: 0.14),
         borderRadius: BorderRadius.circular(18),
       ),
       child: Row(
