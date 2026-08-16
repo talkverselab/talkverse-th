@@ -14,6 +14,7 @@ import 'grammar_lesson_screen.dart';
 import 'keyboard_practice_screen.dart';
 import 'profile_screen.dart';
 import 'progress_screen.dart';
+import 'quick_phrases_screen.dart';
 import 'script_quiz_screen.dart';
 import 'tones_screen.dart';
 import 'word_freq_screen.dart';
@@ -79,7 +80,8 @@ class HomeScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Color(0xFFFFF0F0), Color(0xFFFFF8EE)],
+            stops: [0.0, 0.45, 1.0],
+            colors: [Color(0xFFFFD9E9), Color(0xFFFFEDE3), Color(0xFFFFF3DE)],
           ),
         ),
         child: SafeArea(
@@ -148,6 +150,24 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 const _TodayMission(),
+                const SizedBox(height: 22),
+                const Row(
+                  children: [
+                    GoldEmblem(text: 'เร็ว', size: 22),
+                    SizedBox(width: 8),
+                    Text(
+                      '퀵메뉴',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w800,
+                        color: AppColors.khram,
+                        letterSpacing: 2,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                const _QuickMenuRow(),
                 const SizedBox(height: 22),
                 const Row(
                   children: [
@@ -255,6 +275,68 @@ class _TodayMissionState extends State<_TodayMission> {
   }
 }
 
+/// 퀵메뉴 — 자주 쓰는 코너 바로가기 (바로 문장이 첫 자리).
+class _QuickMenuRow extends StatelessWidget {
+  const _QuickMenuRow();
+
+  @override
+  Widget build(BuildContext context) {
+    final items = <(String, String, bool, WidgetBuilder)>[
+      ('⚡', '바로 문장', true, (_) => const QuickPhrasesScreen()),
+      ('💬', '회화', false, (_) => const ConversationScreen()),
+      ('⌨️', '키보드연습', false, (_) => const KeyboardPracticeScreen()),
+      ('🔍', '청크 검색', false, (_) => const ChunkSearchScreen()),
+      ('🎴', '복습', false, (_) => const FlashcardScreen()),
+    ];
+    return SizedBox(
+      height: 42,
+      child: ListView.separated(
+        scrollDirection: Axis.horizontal,
+        itemCount: items.length,
+        separatorBuilder: (_, _) => const SizedBox(width: 8),
+        itemBuilder: (context, i) {
+          final (emoji, label, primary, builder) = items[i];
+          return InkWell(
+            onTap: () => Navigator.push(
+                context, MaterialPageRoute(builder: builder)),
+            borderRadius: BorderRadius.circular(21),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14),
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: primary ? AppColors.kluayMai : Colors.white,
+                borderRadius: BorderRadius.circular(21),
+                border: Border.all(
+                  color: primary
+                      ? AppColors.thongBright
+                      : AppColors.thong.withValues(alpha: 0.6),
+                  width: primary ? 1.4 : 0.9,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: (primary ? AppColors.kluayMai : AppColors.khram)
+                        .withValues(alpha: primary ? 0.35 : 0.06),
+                    blurRadius: primary ? 10 : 5,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: Text(
+                '$emoji $label',
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w800,
+                  color: primary ? AppColors.cream : AppColors.khram,
+                ),
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
 class _MenuGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -357,7 +439,7 @@ class _MenuTile extends StatelessWidget {
       borderRadius: BorderRadius.circular(12),
       child: Container(
         decoration: BoxDecoration(
-          color: AppColors.cream,
+          color: Colors.white,
           borderRadius: BorderRadius.circular(12),
           border:
               Border.all(color: AppColors.thong.withValues(alpha: 0.5)),
