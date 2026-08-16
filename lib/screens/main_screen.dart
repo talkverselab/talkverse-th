@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../core/theme.dart';
 import '../main.dart';
-import '../widgets/mascot.dart';
 import '../widgets/thai_decor.dart';
 import '../widgets/today_mission.dart';
 import 'alphabet_screen.dart';
@@ -75,10 +74,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.cream,
-      body: Stack(
-        children: [
-          const Positioned.fill(child: LaiThaiPattern(opacity: 0.06)),
-          SafeArea(
+      body: DecoratedBox(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xFFFFF0F0), Color(0xFFFFF8EE)],
+          ),
+        ),
+        child: SafeArea(
             child: ListView(
               padding:
                   const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -175,29 +179,10 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 120),
+                const SizedBox(height: 24),
               ],
             ),
-          ),
-          Builder(builder: (ctx) {
-            return ThaiMascot(
-              size: 110,
-              initialPosition: const Offset(250, 540),
-              emotion: MascotEmotion.excited,
-              cycleOnTap: true,
-              onTap: () {
-                ScaffoldMessenger.of(ctx).clearSnackBars();
-                ScaffoldMessenger.of(ctx).showSnackBar(
-                  const SnackBar(
-                    content: Text('🐘 다음 감정으로 — 탭 계속! 끌어서 이동도 가능'),
-                    duration: Duration(milliseconds: 900),
-                    backgroundColor: AppColors.kluayMaiDeep,
-                  ),
-                );
-              },
-            );
-          }),
-        ],
+        ),
       ),
     );
   }
