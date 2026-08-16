@@ -307,7 +307,6 @@ class _EpisodeBubble extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 11,
                   color: bubbleText.withValues(alpha: 0.85),
-                  fontStyle: FontStyle.italic,
                 ),
               ),
             ],

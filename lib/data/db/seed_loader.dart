@@ -8,8 +8,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'app_database.dart';
 
 class SeedLoader {
-  // v1: L1 스토리 3편 + L2 카오스 챗 6편 + 단어 1000
-  static const _kSeededKey = 'db_seeded_th_v1';
+  // v2: 독음 한글화 + L1 ep4 클럽 나이트 추가
+  static const _kSeededKey = 'db_seeded_th_v2';
 
   final AppDatabase db;
   SeedLoader(this.db);
