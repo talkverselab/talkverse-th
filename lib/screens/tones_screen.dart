@@ -23,7 +23,7 @@ class _TonesScreenState extends State<TonesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppTheme.bgBottom,
+      backgroundColor: AppColors.creamDeep,
       appBar: AppBar(
         title: const Text('성조 · วรรณยุกต์',
             style: TextStyle(fontWeight: FontWeight.w800)),
@@ -92,7 +92,7 @@ class _IntroCard extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         gradient: const LinearGradient(
-          colors: [AppTheme.gold, AppTheme.brand],
+          colors: [AppColors.thong, AppColors.brand],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -129,7 +129,7 @@ class _SectionHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(width: 4, height: 18, color: AppTheme.brand),
+        Container(width: 4, height: 18, color: AppColors.brand),
         const SizedBox(width: 8),
         Text(text,
             style: Theme.of(context)
@@ -155,7 +155,7 @@ class _ToneCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = _colors[tone.id] ?? AppTheme.brand;
+    final color = _colors[tone.id] ?? AppColors.brand;
     return Material(
       color: Colors.white,
       borderRadius: BorderRadius.circular(18),
@@ -311,7 +311,7 @@ class _ToneMarkRow extends StatelessWidget {
                 width: 46,
                 height: 46,
                 decoration: BoxDecoration(
-                  color: AppTheme.brand.withValues(alpha: 0.1),
+                  color: AppColors.brand.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 alignment: Alignment.center,
@@ -319,7 +319,7 @@ class _ToneMarkRow extends StatelessWidget {
                     style: const TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.w700,
-                        color: AppTheme.brand)),
+                        color: AppColors.brand)),
               ),
               title: Text('${m.thai}  (${m.roman})',
                   style: const TextStyle(fontWeight: FontWeight.w700)),
@@ -336,9 +336,9 @@ class _ToneRuleTable extends StatelessWidget {
   const _ToneRuleTable({required this.rules});
 
   static const _classColors = <String, Color>{
-    'mid': AppTheme.classMid,
-    'high': AppTheme.classHigh,
-    'low': AppTheme.classLow,
+    'mid': AppColors.classMid,
+    'high': AppColors.classHigh,
+    'low': AppColors.classLow,
   };
 
   @override
@@ -360,7 +360,7 @@ class _ToneRuleTable extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: DataTable(
           headingRowColor: WidgetStatePropertyAll(
-              AppTheme.indigo.withValues(alpha: 0.06)),
+              AppColors.khram.withValues(alpha: 0.06)),
           headingTextStyle: const TextStyle(
               fontWeight: FontWeight.w800, fontSize: 12.5, color: Colors.black87),
           dataTextStyle: const TextStyle(fontSize: 12.5, color: Colors.black87),

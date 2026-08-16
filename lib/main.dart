@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 
 import 'core/theme.dart';
+import 'data/db/app_database.dart';
+import 'data/db/seed_loader.dart';
 import 'screens/main_screen.dart';
 
-void main() {
+late final AppDatabase appDb;
+
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  appDb = AppDatabase();
+  await SeedLoader(appDb).seedIfNeeded();
   runApp(const ThaiUniverseApp());
 }
 
