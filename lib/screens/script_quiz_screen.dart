@@ -6,7 +6,6 @@ import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/theme.dart';
 import '../services/tts_service.dart';
-import '../widgets/thai_decor.dart';
 
 /// 문자 퀴즈 — 자음 44자 4지선다 (문자 → 이름·뜻 고르기).
 class ScriptQuizScreen extends StatefulWidget {
@@ -157,7 +156,6 @@ class _ScriptQuizScreenState extends State<ScriptQuizScreen> {
     final answer = _answer!;
     return Stack(
       children: [
-        const Positioned.fill(child: LaiThaiPattern(opacity: 0.05)),
         Column(
           children: [
             const SizedBox(height: 8),
