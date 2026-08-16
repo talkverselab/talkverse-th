@@ -75,15 +75,8 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.cream,
-      body: DecoratedBox(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            stops: [0.0, 0.45, 1.0],
-            colors: [Color(0xFFFFD9E9), Color(0xFFFFEDE3), Color(0xFFFFF3DE)],
-          ),
-        ),
+      body: ColoredBox(
+        color: AppColors.cream,
         child: SafeArea(
             child: ListView(
               padding:
@@ -299,27 +292,16 @@ class _QuickMenuRow extends StatelessWidget {
           return InkWell(
             onTap: () => Navigator.push(
                 context, MaterialPageRoute(builder: builder)),
-            borderRadius: BorderRadius.circular(21),
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 14),
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: primary ? AppColors.kluayMai : Colors.white,
-                borderRadius: BorderRadius.circular(21),
+                color: primary ? AppColors.kluayMai : AppColors.cream,
                 border: Border.all(
                   color: primary
-                      ? AppColors.thongBright
+                      ? AppColors.kluayMaiDeep
                       : AppColors.thong.withValues(alpha: 0.6),
-                  width: primary ? 1.4 : 0.9,
                 ),
-                boxShadow: [
-                  BoxShadow(
-                    color: (primary ? AppColors.kluayMai : AppColors.khram)
-                        .withValues(alpha: primary ? 0.35 : 0.06),
-                    blurRadius: primary ? 10 : 5,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
               ),
               child: Text(
                 '$emoji $label',
@@ -436,11 +418,9 @@ class _MenuTile extends StatelessWidget {
     return InkWell(
       onTap: () =>
           Navigator.push(context, MaterialPageRoute(builder: item.builder)),
-      borderRadius: BorderRadius.circular(12),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(12),
+          color: AppColors.cream,
           border:
               Border.all(color: AppColors.thong.withValues(alpha: 0.5)),
           boxShadow: [

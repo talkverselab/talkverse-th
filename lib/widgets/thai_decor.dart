@@ -28,13 +28,12 @@ class GoldEmblem extends StatelessWidget {
       height: size,
       decoration: BoxDecoration(
         color: c,
-        borderRadius: BorderRadius.circular(size * 0.28),
-        border: Border.all(color: AppColors.thongBright, width: 1.4),
+        borderRadius: BorderRadius.circular(3),
         boxShadow: [
           BoxShadow(
-            color: c.withValues(alpha: 0.35),
-            blurRadius: 5,
-            offset: const Offset(1, 2),
+            color: c.withValues(alpha: 0.3),
+            blurRadius: 4,
+            offset: const Offset(1, 1),
           ),
         ],
       ),
