@@ -8,8 +8,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'app_database.dart';
 
 class SeedLoader {
-  // v2: 독음 한글화 + L1 ep4 클럽 나이트 추가
-  static const _kSeededKey = 'db_seeded_th_v2';
+  // v3: L1 ep5 플러팅 추가
+  static const _kSeededKey = 'db_seeded_th_v3';
 
   final AppDatabase db;
   SeedLoader(this.db);
