@@ -26,7 +26,6 @@ class TodayMissionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(14),
       child: Container(
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
@@ -35,15 +34,7 @@ class TodayMissionCard extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
-          borderRadius: BorderRadius.circular(14),
           border: Border.all(color: AppColors.thong, width: 1.5),
-          boxShadow: [
-            BoxShadow(
-              color: AppColors.kluayMai.withValues(alpha: 0.3),
-              blurRadius: 12,
-              offset: const Offset(0, 4),
-            ),
-          ],
         ),
         child: Stack(
           children: [
@@ -65,7 +56,6 @@ class TodayMissionCard extends StatelessWidget {
                             horizontal: 8, vertical: 3),
                         decoration: BoxDecoration(
                           color: AppColors.thongBright,
-                          borderRadius: BorderRadius.circular(6),
                           border:
                               Border.all(color: AppColors.thongDeep, width: 0.6),
                         ),
@@ -114,7 +104,6 @@ class TodayMissionCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 6),
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(4),
                     child: Stack(
                       children: [
                         Container(
