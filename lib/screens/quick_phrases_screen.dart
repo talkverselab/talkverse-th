@@ -194,10 +194,9 @@ class _PhraseCard extends StatelessWidget {
                   Text(
                     phrase.roman,
                     style: const TextStyle(
-                      fontSize: 12,
-                      fontStyle: FontStyle.italic,
+                      fontSize: 13,
                       color: AppColors.kluayMai,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                   const SizedBox(height: 4),

@@ -306,7 +306,6 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                             textAlign: TextAlign.center,
                             style: const TextStyle(
                               fontSize: 15,
-                              fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.w700,
                               color: AppColors.kluayMai,
                             ),
@@ -351,7 +350,6 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                               textAlign: TextAlign.center,
                               style: const TextStyle(
                                 fontSize: 14,
-                                fontStyle: FontStyle.italic,
                                 fontWeight: FontWeight.w700,
                                 color: AppColors.thongDeep,
                               ),
