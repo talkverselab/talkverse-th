@@ -46,3 +46,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Netflix 자막 유래 코퍼스 (로컬 전용 — 공개 리포 제외)
+corpus/
