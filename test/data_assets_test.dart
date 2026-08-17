@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_test/flutter_test.dart';
+import 'package:thai_universe/screens/sentence_flashcard_screen.dart';
 import 'package:thai_universe/services/thai_dict_service.dart';
 
 /// 에셋 데이터 무결성 + 분절 서비스 스모크 테스트.
@@ -66,10 +67,23 @@ void main() {
     }
   });
 
+  _HintTest.run();
+
   test('청크 JSON — 2200문장', () async {
     final raw =
         await rootBundle.loadString('assets/data/chunks/th_chunks.json');
     final data = json.decode(raw) as Map<String, dynamic>;
     expect((data['chunks'] as List).length, 2200);
   });
+}
+
+// ── 플래시카드 힌트: 전체 문장이 아닌 첫 어절만 ──
+class _HintTest {
+  static void run() {
+    test('플래시카드 힌트는 첫 어절만 노출', () {
+      expect(SentenceFlashcardHint.hintOf('싸왓디 크랍, 폼 츠 민호 크랍'), '싸왓디 …');
+      expect(SentenceFlashcardHint.hintOf('내넌'), '내넌');
+      expect(SentenceFlashcardHint.hintOf(''), '');
+    });
+  }
 }

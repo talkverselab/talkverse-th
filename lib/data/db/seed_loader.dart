@@ -8,8 +8,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'app_database.dart';
 
 class SeedLoader {
-  // v3: L1 ep5 플러팅 추가
-  static const _kSeededKey = 'db_seeded_th_v3';
+  // v4: L1 ep6 클럽에서 다시 + ep7 첫 데이트 추가
+  static const _kSeededKey = 'db_seeded_th_v4';
 
   final AppDatabase db;
   SeedLoader(this.db);
