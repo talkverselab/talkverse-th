@@ -9,6 +9,16 @@ import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
 import 'episode_screen.dart';
 
+/// 힌트: 독음의 첫 어절만 (전체 문장 노출 방지)
+class SentenceFlashcardHint {
+  static String hintOf(String roman) {
+    final parts = roman.split(RegExp(r'[\s,，]+')).where((w) => w.isNotEmpty);
+    if (parts.isEmpty) return '';
+    final first = parts.first;
+    return parts.length > 1 ? '$first …' : first;
+  }
+}
+
 /// 카드 학습 상태: 몰라요 / 공부중 / 알아요.
 /// DB 매핑: 알아요=learned true · 공부중=learned false+reviewCount>0 ·
 /// 몰라요=learned false+reviewCount 0.
@@ -32,6 +42,13 @@ class SentenceFlashcardScreen extends StatefulWidget {
 class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
   static const _kKoFirst = 'flash_ko_first';
   static const _kShowHint = 'flash_show_hint';
+
+  /// 마지막 학습 위치 저장 키 (에피소드별 / 랜덤 세트는 turnId 목록까지)
+  String get _kLastIndex =>
+      'flash_last_idx_${widget.meta?.level ?? 'rand'}_${widget.meta?.id ?? 'all'}';
+  String get _kLastIds => 'flash_last_ids_rand';
+
+  static String hintOf(String roman) => SentenceFlashcardHint.hintOf(roman);
 
   List<TurnRow> _cards = [];
   final Map<int, CardState> _states = {}; // turnId → 상태
@@ -62,9 +79,25 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
             ..orderBy([(t) => OrderingTerm.asc(t.num)]))
           .get();
     } else {
-      turns = await appDb.select(appDb.turns).get();
-      turns.shuffle();
-      turns = turns.take(20).toList();
+      final all = await appDb.select(appDb.turns).get();
+      final savedIds = _prefs!.getStringList(_kLastIds);
+      if (savedIds != null && savedIds.isNotEmpty) {
+        // 마지막에 공부하던 랜덤 세트 그대로 복원
+        final byId = {for (final t in all) t.id: t};
+        turns = [
+          for (final id in savedIds)
+            if (byId[int.tryParse(id) ?? -1] != null)
+              byId[int.parse(id)]!,
+        ];
+      } else {
+        turns = [];
+      }
+      if (turns.isEmpty) {
+        turns = [...all]..shuffle();
+        turns = turns.take(20).toList();
+        await _prefs!.setStringList(
+            _kLastIds, turns.map((t) => '${t.id}').toList());
+      }
     }
     final progress = await appDb.select(appDb.userProgress).get();
     final byId = {for (final p in progress) p.turnId: p};
@@ -79,8 +112,9 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                 ? CardState.known
                 : (p.reviewCount > 0 ? CardState.studying : CardState.unknown);
       }
-      _index =
-          turns.isEmpty ? 0 : widget.initialIndex.clamp(0, turns.length - 1);
+      final saved = _prefs!.getInt(_kLastIndex) ?? 0;
+      final start = widget.initialIndex > 0 ? widget.initialIndex : saved;
+      _index = turns.isEmpty ? 0 : start.clamp(0, turns.length - 1);
       _loading = false;
     });
   }
@@ -92,6 +126,19 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
       _index = next;
       _flipped = false;
     });
+    _prefs?.setInt(_kLastIndex, next);
+  }
+
+  /// 새 랜덤 세트로 교체 (랜덤 모드 전용)
+  Future<void> _reshuffle() async {
+    await _prefs?.remove(_kLastIds);
+    await _prefs?.remove(_kLastIndex);
+    setState(() {
+      _loading = true;
+      _index = 0;
+      _flipped = false;
+    });
+    await _load();
   }
 
   Future<void> _mark(CardState state) async {
@@ -110,6 +157,9 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
       _go(1);
     } else {
       final known = _states.values.where((s) => s == CardState.known).length;
+      await _prefs?.setInt(_kLastIndex, 0);
+      if (widget.meta == null) await _prefs?.remove(_kLastIds);
+      if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text('🎉 마지막 카드! ${_cards.length}장 중 알아요 $known장'),
@@ -154,13 +204,19 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
             ),
             const SizedBox(height: 2),
             Text(
-              meta == null ? '전 레벨 랜덤 20' : '${meta.level} 회화',
+              meta == null ? '전 레벨 랜덤 20 · 이어서' : '${meta.level} 회화',
               style: const TextStyle(
                   color: AppColors.khramLight, fontSize: 10, letterSpacing: 2),
             ),
           ],
         ),
         actions: [
+          if (meta == null)
+            IconButton(
+              tooltip: '새 랜덤 20문장',
+              onPressed: _reshuffle,
+              icon: const Icon(Icons.shuffle, color: AppColors.kluayMai),
+            ),
           IconButton(
             tooltip: _koFirst ? '한국어 먼저 (탭: 태국어 먼저)' : '태국어 먼저 (탭: 한국어 먼저)',
             onPressed: _toggleDirection,
@@ -346,7 +402,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                                       AppColors.thong.withValues(alpha: 0.7)),
                             ),
                             child: Text(
-                              '💡 ${turn.roman}',
+                              '💡 ${hintOf(turn.roman!)}',
                               textAlign: TextAlign.center,
                               style: const TextStyle(
                                 fontSize: 14,
