@@ -512,7 +512,7 @@ class _LearnScreenState extends State<LearnScreen> {
           state = _LessonState.current;
           currentAssigned = true;
         } else {
-          state = _LessonState.locked;
+          state = _LessonState.open;
         }
         items.add(_LessonItem(
           '${level == 'L1' ? 'EP' : 'D'}${i + 1}',
@@ -569,7 +569,7 @@ class _LearnScreenState extends State<LearnScreen> {
   }
 }
 
-enum _LessonState { done, current, locked }
+enum _LessonState { done, current, open }
 
 class _LessonItem {
   final String id;
@@ -590,7 +590,7 @@ class _LessonItem {
 
   _LessonItem.header(this.title, int count)
       : id = '',
-        state = _LessonState.locked,
+        state = _LessonState.open,
         meta = null,
         learned = 0,
         total = count,
@@ -651,16 +651,16 @@ class _LessonRow extends StatelessWidget {
         textColor = AppColors.cream;
         trailing = const Icon(Icons.arrow_forward, color: AppColors.cream);
         break;
-      case _LessonState.locked:
-        bg = AppColors.creamDeep;
-        border = AppColors.thong.withValues(alpha: 0.3);
-        textColor = AppColors.khramLight;
-        trailing =
-            const Icon(Icons.lock, color: AppColors.khramLight, size: 18);
+      case _LessonState.open:
+        bg = AppColors.cream;
+        border = AppColors.thong.withValues(alpha: 0.6);
+        textColor = AppColors.khram;
+        trailing = const Icon(Icons.chevron_right,
+            color: AppColors.khramLight, size: 20);
         break;
     }
     return InkWell(
-      onTap: lesson.state == _LessonState.locked || lesson.meta == null
+      onTap: lesson.meta == null
           ? null
           : () async {
               await Navigator.push(
