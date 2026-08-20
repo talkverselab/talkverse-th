@@ -299,7 +299,6 @@ class _OptionTile extends StatelessWidget {
               letter.roman,
               style: const TextStyle(
                 fontSize: 12,
-                fontStyle: FontStyle.italic,
                 color: AppColors.khramLight,
               ),
             ),

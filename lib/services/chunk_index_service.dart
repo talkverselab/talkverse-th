@@ -186,10 +186,12 @@ class ChunkIndexService {
         }
       }
     } else if (_hangul.hasMatch(q)) {
-      // 한국어: 문장 뜻(ko)에 부분일치하는 문장들의 청크
+      // 한국어: 문장 뜻(ko) 또는 한글 독음(roman)에 부분일치하는 문장들의 청크
       for (var si = 0; si < _sentences.length; si++) {
         final s = _sentences[si];
-        if (s.ko == null || !s.ko!.contains(q)) continue;
+        final hit = (s.ko?.contains(q) ?? false) ||
+            (s.roman?.contains(q) ?? false);
+        if (!hit) continue;
         for (final t in s.tokens) {
           if (t['compound'] == true) matches.add(t['text'] as String);
         }
@@ -218,12 +220,13 @@ class ChunkIndexService {
     return hits;
   }
 
-  /// 한국어 질의가 청크에 없을 때 문장 번역(ko) 직접 검색 폴백.
+  /// 한국어 질의가 청크에 없을 때 문장 번역(ko)·독음(roman) 직접 검색 폴백.
   List<IndexedSentence> searchSentencesByKo(String query) {
     final q = query.trim();
     if (q.isEmpty) return [];
     return _sentences
-        .where((s) => s.ko != null && s.ko!.contains(q))
+        .where((s) =>
+            (s.ko?.contains(q) ?? false) || (s.roman?.contains(q) ?? false))
         .toList(growable: false);
   }
 }
