@@ -214,7 +214,6 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
                     '${card.roman} · ${card.ko}',
                     style: const TextStyle(
                       fontSize: 13,
-                      fontStyle: FontStyle.italic,
                       color: AppColors.khramLight,
                     ),
                   ),

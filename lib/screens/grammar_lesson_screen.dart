@@ -240,7 +240,6 @@ class _SfpCardState extends State<_SfpCard> {
                           item.roman,
                           style: const TextStyle(
                             fontSize: 11,
-                            fontStyle: FontStyle.italic,
                             color: AppColors.khramLight,
                           ),
                         ),

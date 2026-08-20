@@ -7,7 +7,7 @@ import '../widgets/selectable_thai.dart';
 import '../widgets/thai_decor.dart';
 
 /// 청크(단어) 기준 문장 검색.
-/// 예: 'อร่อย' / 'aroi' / '맛있' → 청크 목록 → 청크별 문장 → 문장 안 청크 탐색.
+/// 예: 'อร่อย' / '아러이' / '맛있' → 청크 목록 → 청크별 문장 → 문장 안 청크 탐색.
 class ChunkSearchScreen extends StatefulWidget {
   const ChunkSearchScreen({super.key});
 
@@ -74,7 +74,7 @@ class _ChunkSearchScreenState extends State<ChunkSearchScreen> {
                 fontFamilyFallback: AppTheme.fontFallback,
               ),
               decoration: InputDecoration(
-                hintText: 'อร่อย · aroi · 맛있다',
+                hintText: 'อร่อย · 아러이 · 맛있다',
                 hintStyle: const TextStyle(
                     color: AppColors.khramLight, fontSize: 15),
                 prefixIcon:
@@ -139,7 +139,7 @@ class _ChunkSearchScreenState extends State<ChunkSearchScreen> {
             ),
             const SizedBox(height: 6),
             const Text(
-              '태국어·로마자·한국어로 검색하세요',
+              '태국어·한글 독음·한국어로 검색하세요',
               style: TextStyle(
                 color: AppColors.khram,
                 fontSize: 15,
@@ -351,7 +351,6 @@ class _SentenceTile extends StatelessWidget {
               s.roman!,
               style: const TextStyle(
                 fontSize: 12,
-                fontStyle: FontStyle.italic,
                 color: AppColors.khramLight,
               ),
             ),
