@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../core/theme.dart';
 import '../data/db/app_database.dart';
 import '../main.dart';
+import '../services/ko_reading.dart';
 import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
 import 'episode_screen.dart';
@@ -211,6 +212,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
           ],
         ),
         actions: [
+          const KoReadingToggleAction(),
           if (meta == null)
             IconButton(
               tooltip: '새 랜덤 20문장',
@@ -357,7 +359,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                         ),
                         const SizedBox(height: 12),
                         if (turn.roman != null)
-                          Text(
+                          KoReadingText(
                             turn.roman!,
                             textAlign: TextAlign.center,
                             style: const TextStyle(
