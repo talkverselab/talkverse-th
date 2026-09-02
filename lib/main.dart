@@ -4,6 +4,7 @@ import 'core/theme.dart';
 import 'data/db/app_database.dart';
 import 'data/db/seed_loader.dart';
 import 'screens/main_screen.dart';
+import 'services/ko_reading.dart';
 
 late final AppDatabase appDb;
 
@@ -11,6 +12,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   appDb = AppDatabase();
   await SeedLoader(appDb).seedIfNeeded();
+  await KoReadingPrefs.load();
   runApp(const ThaiUniverseApp());
 }
 

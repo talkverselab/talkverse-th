@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/theme.dart';
+import '../services/memorized_store.dart';
 import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
 
@@ -30,6 +31,7 @@ class _WordFreqScreenState extends State<WordFreqScreen> {
   @override
   void initState() {
     super.initState();
+    MemorizedStore.load();
     _load();
   }
 
@@ -162,6 +164,28 @@ class _WordFreqScreenState extends State<WordFreqScreen> {
                                   ),
                                 ],
                               ),
+                            ),
+                            ValueListenableBuilder<int>(
+                              valueListenable: MemorizedStore.version,
+                              builder: (context, _, _) {
+                                final memorized =
+                                    MemorizedStore.contains(w.word);
+                                return IconButton(
+                                  tooltip: memorized ? '외움 해제' : '외웠어요',
+                                  onPressed: () =>
+                                      MemorizedStore.toggle(w.word),
+                                  icon: Icon(
+                                    memorized
+                                        ? Icons.check_circle
+                                        : Icons.radio_button_unchecked,
+                                    size: 18,
+                                    color: memorized
+                                        ? AppColors.kluayMai
+                                        : AppColors.khramLight
+                                            .withValues(alpha: 0.5),
+                                  ),
+                                );
+                              },
                             ),
                             IconButton(
                               icon: const Icon(Icons.volume_up,
