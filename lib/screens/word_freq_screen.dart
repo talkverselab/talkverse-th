@@ -4,8 +4,11 @@ import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/theme.dart';
 import '../services/memorized_store.dart';
+import '../services/root_service.dart';
 import '../services/tts_service.dart';
+import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
+import '../widgets/vocab_sheet.dart';
 
 /// 단어 빈도 1000 — Netflix 원어 코퍼스 (R1~R4 티어).
 class WordFreqScreen extends StatefulWidget {
@@ -36,6 +39,7 @@ class _WordFreqScreenState extends State<WordFreqScreen> {
   }
 
   Future<void> _load() async {
+    await RootService.instance.ensureLoaded();
     final raw =
         await rootBundle.loadString('assets/data/wordsets/th_top1000.csv');
     final rows = const CsvToListConverter(eol: '\n').convert(raw);
@@ -56,6 +60,13 @@ class _WordFreqScreenState extends State<WordFreqScreen> {
       _words = entries;
       _loading = false;
     });
+  }
+
+  String _meaningLine(WordEntry w) {
+    final v = VocabService.instance.lookup(w.word);
+    final base = '빈도 ${w.freq.toStringAsFixed(0)} · ${w.domain}';
+    if (v == null) return base;
+    return '${v.reading} · ${v.ko}   |   $base';
   }
 
   @override
@@ -157,11 +168,13 @@ class _WordFreqScreenState extends State<WordFreqScreen> {
                                     ),
                                   ),
                                   Text(
-                                    '빈도 ${w.freq.toStringAsFixed(0)} · ${w.domain}',
+                                    _meaningLine(w),
                                     style: const TextStyle(
                                         fontSize: 10,
                                         color: AppColors.khramLight),
                                   ),
+                                  const SizedBox(height: 3),
+                                  RootChips(th: w.word, fontSize: 10),
                                 ],
                               ),
                             ),

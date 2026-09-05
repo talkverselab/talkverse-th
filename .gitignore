@@ -49,3 +49,6 @@ app.*.map.json
 
 # Netflix 자막 유래 코퍼스 (로컬 전용 — 공개 리포 제외)
 corpus/
+
+# 단어장 원서 OCR 원문 (로컬 전용 — 공개 리포 제외; JSON 체크포인트만 커밋)
+tools/vocab_pipeline/book/*.md

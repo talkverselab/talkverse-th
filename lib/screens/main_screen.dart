@@ -16,7 +16,9 @@ import 'profile_screen.dart';
 import 'progress_screen.dart';
 import 'quick_phrases_screen.dart';
 import 'script_quiz_screen.dart';
+import 'thai_roots_screen.dart';
 import 'tones_screen.dart';
+import 'vocab_screen.dart';
 import 'word_freq_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -276,6 +278,7 @@ class _QuickMenuRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final items = <(String, String, bool, WidgetBuilder)>[
       ('⚡', '바로 문장', true, (_) => const QuickPhrasesScreen()),
+      ('📖', '단어장', false, (_) => const VocabScreen()),
       ('💬', '회화', false, (_) => const ConversationScreen()),
       ('⌨️', '키보드연습', false, (_) => const KeyboardPracticeScreen()),
       ('🔍', '청크 검색', false, (_) => const ChunkSearchScreen()),
@@ -359,6 +362,18 @@ class _MenuGrid extends StatelessWidget {
           emblem: 'คำ',
           color: AppColors.thongDeep,
           builder: (_) => const WordFreqScreen()),
+      _MenuItem(
+          label: '단어장',
+          sub: '회화집 · 나혼자 30일',
+          emblem: 'ศัพท์',
+          color: AppColors.kluayMaiDeep,
+          builder: (_) => const VocabScreen()),
+      _MenuItem(
+          label: '루트 단어',
+          sub: 'น้ำ → น้ำแข็ง',
+          emblem: 'ราก',
+          color: AppColors.morakot,
+          builder: (_) => const ThaiRootsScreen()),
       _MenuItem(
           label: '문자 퀴즈',
           sub: '4지선다',

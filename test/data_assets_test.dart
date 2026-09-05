@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_test/flutter_test.dart';
+import 'package:thai_universe/services/root_service.dart';
 import 'package:thai_universe/screens/sentence_flashcard_screen.dart';
 import 'package:thai_universe/services/thai_dict_service.dart';
 
@@ -75,6 +76,36 @@ void main() {
     final data = json.decode(raw) as Map<String, dynamic>;
     expect((data['chunks'] as List).length, 2200);
   });
+
+  test('통합 단어장 에셋 스키마', () async {
+    final raw = await rootBundle.loadString('assets/data/vocab/th_vocab.json');
+    final data = json.decode(raw) as Map<String, dynamic>;
+    final entries = data['entries'] as List;
+    expect(entries.length, greaterThan(3000));
+    for (final e in entries.take(200)) {
+      final m = e as Map<String, dynamic>;
+      expect(m['th'], isNotEmpty);
+      expect(m['ko'], isNotNull);
+      expect(RegExp(r'[A-Za-z]').hasMatch(m['reading'] as String), isFalse,
+          reason: '독음에 로마자 없음: ${m['reading']}');
+    }
+    final srcs = entries.map((e) => (e as Map)['src']).toSet();
+    expect(srcs, containsAll(['capture', 'book']));
+  });
+
+  test('루트 단어 에셋 + 경계 규칙', () async {
+    final raw = await rootBundle.loadString('assets/data/vocab/th_roots.json');
+    final roots = (json.decode(raw) as Map<String, dynamic>)['roots'] as List;
+    expect(roots.length, greaterThan(100));
+    expect(roots.any((r) => (r as Map)['th'] == 'น้ำ'), isTrue);
+    expect(RootService.containsAtBoundary('น้ำแข็ง', 'น้ำ'), isTrue);
+    expect(RootService.containsAtBoundary('แม่น้ำ', 'น้ำ'), isTrue);
+    expect(RootService.containsAtBoundary('น้ำ', 'น้ำ'), isFalse);
+    // ตา 뒤에 결합 부호(ตาย 의 ย 는 자음이라 허용되지만, ตำ 은 불가)
+    expect(RootService.containsAtBoundary('ตำรวจ', 'ตา'), isFalse);
+    expect(RootService.containsAtBoundary('เตา', 'ตา'), isFalse);
+    expect(RootService.containsAtBoundary('ตารางราคา', 'ตา'), isTrue);
+  });
 }
 
 // ── 플래시카드 힌트: 전체 문장이 아닌 첫 어절만 ──
@@ -86,4 +117,5 @@ class _HintTest {
       expect(SentenceFlashcardHint.hintOf(''), '');
     });
   }
+
 }
