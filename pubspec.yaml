@@ -60,5 +60,6 @@ flutter:
     - assets/data/chunks/
     - assets/data/grammar/
     - assets/data/phrases/
+    - assets/data/vocab/
     - assets/audio/
     - assets/images/

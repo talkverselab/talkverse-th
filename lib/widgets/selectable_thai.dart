@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import '../core/theme.dart';
 import '../services/chunk_index_service.dart';
 import '../services/thai_dict_service.dart';
+import '../services/root_service.dart';
 import '../services/tts_service.dart';
+import '../services/vocab_service.dart';
 import 'thai_decor.dart';
+import 'vocab_sheet.dart';
 
 /// 태국어 문장을 청크(단어) 단위로 탭할 수 있게 렌더링.
 ///
@@ -98,6 +101,9 @@ class _ChunkSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final info = ThaiDictService.instance.lookup(chunk);
+    final vocab = VocabService.instance.isLoaded
+        ? VocabService.instance.byTh(chunk)
+        : const <VocabEntry>[];
     final sentences = ChunkIndexService.instance
         .search(chunk)
         .where((h) => h.chunk == chunk)
@@ -132,6 +138,28 @@ class _ChunkSheet extends StatelessWidget {
                 ),
               ],
             ),
+            if (vocab.isNotEmpty) ...[
+              const SizedBox(height: 2),
+              for (final v in vocab.take(3))
+                InkWell(
+                  onTap: () => showVocabSheet(context, v),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 2),
+                    child: Text(
+                      '${v.reading}  ·  ${v.ko}   (${v.sourceLabel})',
+                      style: const TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.kluayMaiDeep,
+                      ),
+                    ),
+                  ),
+                ),
+            ],
+            if (RootService.instance.isLoaded) ...[
+              const SizedBox(height: 6),
+              RootChips(th: chunk, fontSize: 11, showLabel: true),
+            ],
             if (info != null) ...[
               const SizedBox(height: 4),
               Wrap(
