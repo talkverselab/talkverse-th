@@ -113,6 +113,34 @@ def load_captures():
     return entries, len(files)
 
 
+def load_body():
+    """회화집 본문(12~153쪽) 단어 표 — build_phrasebook.py 산출물 기반."""
+    try:
+        from build_phrasebook import body_words
+    except ImportError:
+        return [], 0
+    entries = []
+    for i, r in enumerate(body_words()):
+        th = clean_th(r["th"])
+        if not th:
+            continue
+        key = f"{r['page']}|{r['group']}|{th}|{r['ko']}"
+        entries.append(dict(
+            id=make_id("body", key),
+            th=th,
+            reading=normalize_reading(r["reading"]),
+            readingRaw=r["reading"],
+            ko=r["ko"],
+            src="body",
+            order=i,
+            pages=str(r["page"]),
+            group=r["group"],
+            theme=r["topic"],
+            uncertain=bool(r.get("uncertain")),
+        ))
+    return entries, len(entries)
+
+
 def load_book():
     entries = []
     files = sorted(glob.glob(os.path.join(HERE, "book", "day*.json")))
@@ -181,8 +209,9 @@ def build_roots(entries, top1000):
 
 def main():
     caps, ncap = load_captures()
+    body, nbody = load_body()
     book, nbook, themes = load_book()
-    entries = caps + book
+    entries = caps + body + book
     # 완전 중복(th+ko 동일) 제거 — 앞선 소스 우선
     seen = set()
     uniq = []
@@ -237,9 +266,10 @@ def main():
                 note="reading 은 한글 독음(정규화), readingRaw 는 원서 표기",
                 sources=OrderedDict(
                     capture="회화집 단어장 캡처(한→태, 가나다순)",
+                    body="회화집 본문(12~153쪽) 단어 표 — th_phrasebook.json 과 동일 출처",
                     book="나혼자 끝내는 태국어 단어장 개정판(30일차)",
                 ),
-                captureFiles=ncap, bookFiles=nbook,
+                captureFiles=ncap, bodyEntries=nbody, bookFiles=nbook,
                 themes={str(k): v for k, v in sorted(themes.items())},
             ),
             entries=entries,
@@ -249,6 +279,7 @@ def main():
                   f, ensure_ascii=False, indent=1)
 
     print(f"captures: {ncap} files, {len(caps)} entries")
+    print(f"body: {nbody} entries (회화집 본문 단어)")
     print(f"book: {nbook} files, {len(book)} entries, themes {len(themes)}")
     print(f"merged (dedup): {len(entries)}  → assets/data/vocab/th_vocab.json")
     print(f"root candidates: {len(cand_list)} (top: {[(c['th'], c['derived']) for c in cand_list[:15]]})")

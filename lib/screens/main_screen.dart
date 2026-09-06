@@ -12,6 +12,7 @@ import 'episode_screen.dart';
 import 'flashcard_screen.dart';
 import 'grammar_lesson_screen.dart';
 import 'keyboard_practice_screen.dart';
+import 'phrasebook_screen.dart';
 import 'profile_screen.dart';
 import 'progress_screen.dart';
 import 'quick_phrases_screen.dart';
@@ -278,6 +279,7 @@ class _QuickMenuRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final items = <(String, String, bool, WidgetBuilder)>[
       ('⚡', '바로 문장', true, (_) => const QuickPhrasesScreen()),
+      ('🧳', '여행회화', false, (_) => const PhrasebookScreen()),
       ('📖', '단어장', false, (_) => const VocabScreen()),
       ('💬', '회화', false, (_) => const ConversationScreen()),
       ('⌨️', '키보드연습', false, (_) => const KeyboardPracticeScreen()),
@@ -362,6 +364,12 @@ class _MenuGrid extends StatelessWidget {
           emblem: 'คำ',
           color: AppColors.thongDeep,
           builder: (_) => const WordFreqScreen()),
+      _MenuItem(
+          label: '여행 회화집',
+          sub: '기본회화 · 맛집 · 쇼핑 …',
+          emblem: 'เที่ยว',
+          color: AppColors.kluayMai,
+          builder: (_) => const PhrasebookScreen()),
       _MenuItem(
           label: '단어장',
           sub: '회화집 · 나혼자 30일',

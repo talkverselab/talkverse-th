@@ -41,6 +41,7 @@ class VocabEntry {
   });
 
   bool get isBook => src == 'book';
+  bool get isBody => src == 'body';
 
   /// "A / B" 형태의 변형 목록.
   List<String> get variants =>
@@ -50,8 +51,13 @@ class VocabEntry {
   String get speakable =>
       variants.first.replaceAll(RegExp(r'[()]'), '').trim();
 
-  String get sourceLabel =>
-      isBook ? '나혼자 30일 · $day일차${theme.isNotEmpty ? ' $theme' : ''}' : '회화집 단어장';
+  String get sourceLabel {
+    if (isBook) return '나혼자 30일 · $day일차${theme.isNotEmpty ? ' $theme' : ''}';
+    if (isBody) {
+      return '회화집 본문 p.$pages${group.isNotEmpty ? ' · $group' : ''}';
+    }
+    return '회화집 단어장';
+  }
 
   factory VocabEntry.fromJson(Map<String, dynamic> m) {
     final exm = m['ex'] as Map<String, dynamic>?;
@@ -146,7 +152,9 @@ class VocabService {
 
   bool hasTh(String th) => _byTh.containsKey(th.trim());
 
-  Iterable<VocabEntry> get captureEntries => _entries.where((e) => !e.isBook);
+  Iterable<VocabEntry> get captureEntries =>
+      _entries.where((e) => !e.isBook && !e.isBody);
+  Iterable<VocabEntry> get bodyEntries => _entries.where((e) => e.isBody);
   Iterable<VocabEntry> get bookEntries => _entries.where((e) => e.isBook);
 
   List<VocabEntry> byDay(int day) =>

@@ -8,7 +8,7 @@ import '../widgets/thai_decor.dart';
 import '../widgets/vocab_sheet.dart';
 import 'thai_roots_screen.dart';
 
-enum _Source { all, capture, book }
+enum _Source { all, capture, body, book }
 
 /// 통합 단어장 — 회화집 단어장(캡처, 가나다순) + 나혼자 30일.
 class VocabScreen extends StatefulWidget {
@@ -56,6 +56,7 @@ class _VocabScreenState extends State<VocabScreen> {
     Iterable<VocabEntry> pool = switch (_source) {
       _Source.all => svc.entries,
       _Source.capture => svc.captureEntries,
+      _Source.body => svc.bodyEntries,
       _Source.book => _day == null ? svc.bookEntries : svc.byDay(_day!),
     };
     var out = svc.search(_query, within: pool);
@@ -152,6 +153,14 @@ class _VocabScreenState extends State<VocabScreen> {
                           selected: _source == _Source.capture,
                           onTap: () => setState(() {
                             _source = _Source.capture;
+                            _day = null;
+                          }),
+                        ),
+                        _Chip(
+                          label: '회화집 본문 ${svc.bodyEntries.length}',
+                          selected: _source == _Source.body,
+                          onTap: () => setState(() {
+                            _source = _Source.body;
                             _day = null;
                           }),
                         ),
