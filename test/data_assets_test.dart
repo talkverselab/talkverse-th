@@ -93,6 +93,39 @@ void main() {
     expect(srcs, containsAll(['capture', 'book']));
   });
 
+  test('여행 회화집 에셋 스키마', () async {
+    final raw = await rootBundle.loadString('assets/data/vocab/th_phrasebook.json');
+    final data = json.decode(raw) as Map<String, dynamic>;
+    final sections = (data['meta'] as Map)['sections'] as List;
+    expect(sections.length, 9);
+    final topics = data['topics'] as List;
+    expect(topics.length, greaterThan(60));
+    var phrases = 0, words = 0;
+    final thai = RegExp(r'[฀-๿]');
+    for (final t in topics.cast<Map>()) {
+      expect(sections.any((s) => (s as Map)['id'] == t['section']), isTrue,
+          reason: 'unknown section ${t['section']}');
+      for (final g in (t['groups'] as List).cast<Map>()) {
+        for (final r in (g['rows'] as List).cast<Map>()) {
+          expect(thai.hasMatch(r['th'] as String), isTrue);
+          if (g['kind'] == 'word') {
+            words++;
+          } else {
+            phrases++;
+          }
+        }
+      }
+    }
+    expect(phrases, greaterThan(600));
+    expect(words, greaterThan(1000));
+    // 본문 단어가 통합 단어장에도 합쳐져 있어야 한다
+    final vraw = await rootBundle.loadString('assets/data/vocab/th_vocab.json');
+    final ventries = (json.decode(vraw) as Map)['entries'] as List;
+    // (th, ko) 중복은 단어장 캡처 항목이 우선이라 본문 고유분만 남는다
+    expect(ventries.where((e) => (e as Map)['src'] == 'body').length,
+        greaterThan(500));
+  });
+
   test('루트 단어 에셋 + 경계 규칙', () async {
     final raw = await rootBundle.loadString('assets/data/vocab/th_roots.json');
     final roots = (json.decode(raw) as Map<String, dynamic>)['roots'] as List;
