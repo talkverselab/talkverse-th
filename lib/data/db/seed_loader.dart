@@ -8,8 +8,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'app_database.dart';
 
 class SeedLoader {
-  // v4: L1 ep6 클럽에서 다시 + ep7 첫 데이트 추가
-  static const _kSeededKey = 'db_seeded_th_v4';
+  // v5: 모든 대화 8턴으로 정리 + L2 자체 제작 대화로 교체
+  static const _kSeededKey = 'db_seeded_th_v5';
 
   final AppDatabase db;
   SeedLoader(this.db);

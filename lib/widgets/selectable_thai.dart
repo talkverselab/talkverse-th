@@ -146,7 +146,7 @@ class _ChunkSheet extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 2),
                     child: Text(
-                      '${v.reading}  ·  ${v.ko}   (${v.sourceLabel})',
+                      '${v.reading}  ·  ${v.ko}',
                       style: const TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w700,
@@ -165,10 +165,8 @@ class _ChunkSheet extends StatelessWidget {
               Wrap(
                 spacing: 6,
                 children: [
-                  _InfoChip('빈도 #${info.rank}', AppColors.kluayMai),
-                  _InfoChip(info.tier, AppColors.morakot),
-                  if (info.domain.isNotEmpty)
-                    _InfoChip(info.domain, AppColors.thongDeep),
+                  _InfoChip(
+                      '빈도 ${_stars(info.rank)}', AppColors.kluayMai),
                 ],
               ),
             ],
@@ -205,7 +203,7 @@ class _ChunkSheet extends StatelessWidget {
                         ),
                         if (s.ko != null)
                           Text(
-                            '${s.ko}  ·  ${s.source}',
+                            s.ko!,
                             style: const TextStyle(
                               fontSize: 11,
                               color: AppColors.khramLight,
@@ -221,6 +219,23 @@ class _ChunkSheet extends StatelessWidget {
       ),
     );
   }
+}
+
+/// 빈도 순위 → 1~5 단계 (1 = 최상위 100) + 별 (1단계 = ★★★★★).
+String _stars(int rank) {
+  final level = rank <= 0
+      ? 0
+      : rank <= 100
+          ? 1
+          : rank <= 250
+              ? 2
+              : rank <= 500
+                  ? 3
+                  : rank <= 750
+                      ? 4
+                      : 5;
+  if (level == 0) return '';
+  return '$level단계 ${'★' * (6 - level)}${'☆' * (level - 1)}';
 }
 
 class _InfoChip extends StatelessWidget {

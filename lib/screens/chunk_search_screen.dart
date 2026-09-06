@@ -368,17 +368,6 @@ class _SentenceTile extends StatelessWidget {
                 ),
               ),
             ),
-          Padding(
-            padding: const EdgeInsets.only(top: 4),
-            child: Text(
-              s.source,
-              style: const TextStyle(
-                fontSize: 10,
-                color: AppColors.khramLight,
-                letterSpacing: 1,
-              ),
-            ),
-          ),
         ],
       ),
     );

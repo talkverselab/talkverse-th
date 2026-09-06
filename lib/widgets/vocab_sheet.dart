@@ -122,10 +122,6 @@ class VocabDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final e = entry;
-    final siblings = VocabService.instance
-        .byTh(e.variants.first)
-        .where((s) => s.id != e.id)
-        .toList();
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
@@ -198,89 +194,19 @@ class VocabDetail extends StatelessWidget {
             const SizedBox(height: 12),
             const LaiThaiDivider(height: 10),
             const SizedBox(height: 8),
-            if (e.ex != null && e.ex!.th.isNotEmpty) ...[
-              const _Label('예문'),
-              const SizedBox(height: 4),
-              InkWell(
-                onTap: () => TtsService.instance.speak(e.ex!.th),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      e.ex!.th,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: AppColors.khram,
-                        fontFamilyFallback: AppTheme.fontFallback,
-                      ),
-                    ),
-                    if (e.ex!.reading.isNotEmpty)
-                      Text(
-                        e.ex!.reading,
-                        style: const TextStyle(
-                          fontSize: 12,
-                          color: AppColors.kluayMaiDeep,
-                        ),
-                      ),
-                    if (e.ex!.ko.isNotEmpty)
-                      Text(
-                        e.ex!.ko,
-                        style: const TextStyle(
-                          fontSize: 12,
-                          color: AppColors.khramLight,
-                        ),
-                      ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 12),
-            ],
-            if (siblings.isNotEmpty) ...[
-              const _Label('다른 뜻 · 출처'),
-              const SizedBox(height: 4),
-              for (final s in siblings)
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 2),
-                  child: Text(
-                    '${s.ko}  ·  ${s.sourceLabel}',
-                    style: const TextStyle(
-                        fontSize: 12, color: AppColors.khramLight),
-                  ),
-                ),
-              const SizedBox(height: 12),
-            ],
             Text(
               [
-                e.sourceLabel,
-                if (e.num != null) '#${e.num}',
-                if (e.group.isNotEmpty) e.group,
-                if (e.pages.isNotEmpty) 'p.${e.pages}',
-                if (e.readingRaw.isNotEmpty && e.readingRaw != e.reading)
-                  '원서 표기 ${e.readingRaw}',
+                if (e.level > 0) e.levelLabel,
+                if (e.sourceLabel.isNotEmpty) e.sourceLabel,
+                if (e.uncertain) '판독 불확실',
               ].join('  ·  '),
-              style: const TextStyle(fontSize: 10, color: AppColors.khramLight),
+              style: const TextStyle(fontSize: 11, color: AppColors.khramLight),
             ),
           ],
         ),
       ),
     );
   }
-}
-
-class _Label extends StatelessWidget {
-  final String text;
-  const _Label(this.text);
-  @override
-  Widget build(BuildContext context) => Text(
-        text,
-        style: const TextStyle(
-          fontSize: 11,
-          fontWeight: FontWeight.w800,
-          color: AppColors.khramLight,
-          letterSpacing: 2,
-        ),
-      );
 }
 
 /// 단어 목록 행 (단어장·루트 가족 공용).
@@ -323,6 +249,14 @@ class VocabRow extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
+                  if (e.level > 0)
+                    Text(
+                      e.levelStars,
+                      style: const TextStyle(
+                          fontSize: 9, color: AppColors.thongDeep),
+                    ),
+                  if (highlightRoot != null)
+                    _PieceLine(word: e.variants.first, root: highlightRoot!),
                   if (!dense) ...[
                     const SizedBox(height: 4),
                     RootChips(th: e.th, fontSize: 10),
@@ -355,6 +289,34 @@ class VocabRow extends StatelessWidget {
               onPressed: () => TtsService.instance.speak(e.speakable),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+/// 루트 + 나머지 조각의 뜻: "น้ำ(물) + แข็ง(딱딱하다)".
+class _PieceLine extends StatelessWidget {
+  final String word;
+  final String root;
+  const _PieceLine({required this.word, required this.root});
+
+  @override
+  Widget build(BuildContext context) {
+    final pieces = RootService.instance.breakdown(word, root);
+    if (pieces.length < 2) return const SizedBox.shrink();
+    final text = pieces
+        .map((p) => p.ko == null || p.ko!.isEmpty ? p.th : '${p.th}(${p.ko})')
+        .join(' + ');
+    return Padding(
+      padding: const EdgeInsets.only(top: 2),
+      child: Text(
+        text,
+        style: const TextStyle(
+          fontSize: 11,
+          color: AppColors.thongDeep,
+          fontWeight: FontWeight.w600,
+          fontFamilyFallback: AppTheme.fontFallback,
         ),
       ),
     );

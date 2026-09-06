@@ -57,7 +57,12 @@ class TtsService {
 
   bool isSpeaking(String text) => _speaking == text;
 
-  Future<void> speak(String text) => _speakWith(text, null, 1.0);
+  /// 재생 전 지연 — 탭 직후 바로 나오지 않고 1초 뒤에 나온다.
+  static const Duration playDelay = Duration(seconds: 1);
+  int _requestSeq = 0;
+
+  /// 기본 음성 = 여성. 남/여 화자 대화 외의 단어·표현은 모두 여성 음성.
+  Future<void> speak(String text) => speakAs(text, gender: 'female');
 
   /// 화자 성별에 맞춰 읽기. gender: 'male' | 'female'
   Future<void> speakAs(String text, {required String gender}) async {
@@ -73,6 +78,10 @@ class TtsService {
       String text, Map<String, String>? voice, double pitch) async {
     await _ensureInit();
     await _tts.stop();
+    _speaking = null;
+    final seq = ++_requestSeq;
+    await Future.delayed(playDelay);
+    if (seq != _requestSeq) return; // 지연 중 새 요청이 오면 이전 요청은 버린다
     if (voice != null) {
       await _tts.setVoice(voice);
     } else {
@@ -85,6 +94,7 @@ class TtsService {
   }
 
   Future<void> stop() async {
+    _requestSeq++; // 대기 중인 지연 재생 취소
     await _tts.stop();
     _speaking = null;
   }

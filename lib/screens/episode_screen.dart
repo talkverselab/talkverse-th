@@ -33,8 +33,8 @@ class EpisodeCatalog {
 
   static const Map<String, String> levelLabels = {
     'L1': 'L1 스토리 — 방콕 첫걸음',
-    'L2': 'L2 카오스 챗 — 드라마 실전',
-    'L3': 'L3 내러티브',
+    'L2': 'L2 연애 챗 — 썸부터 고백까지',
+    'L3': 'L3 여행 회화 — 상황별 실전',
   };
 
   List<EpisodeMeta> forLevel(String level) => _byLevel[level] ?? const [];

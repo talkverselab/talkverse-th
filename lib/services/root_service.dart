@@ -26,6 +26,14 @@ class RootInfo {
       );
 }
 
+/// 분해 조각 — th 와 뜻(없으면 null), 루트 여부.
+class RootPiece {
+  final String th;
+  final String? ko;
+  final bool isRoot;
+  const RootPiece(this.th, this.ko, this.isRoot);
+}
+
 /// 루트 가족 — 확실한 파생(strong)과 후보(weak).
 class RootFamily {
   final RootInfo root;
@@ -110,6 +118,49 @@ class RootService {
       if (ok) return true;
       start = idx + 1;
     }
+  }
+
+  /// 조각의 뜻 — 단어장 → 루트 → (없으면 null). 조각 안에 다른 루트가 있으면 그 루트로 재분해.
+  String? _pieceKo(String piece) {
+    final v = VocabService.instance.lookup(piece);
+    if (v != null) return v.ko.split(',').first.trim();
+    final r = _byTh[piece];
+    if (r != null) return r.ko;
+    return null;
+  }
+
+  /// 단어를 루트와 나머지 조각으로 분해하고 각 조각의 뜻을 붙인다.
+  /// 예: น้ำแข็ง / น้ำ → [น้ำ(물), แข็ง(딱딱하다)]
+  List<RootPiece> breakdown(String word, String root) {
+    final w = word.trim();
+    final idx = w.indexOf(root);
+    if (idx < 0) return [RootPiece(w, _pieceKo(w), false)];
+    final out = <RootPiece>[];
+    void addRest(String rest) {
+      final p = rest.trim();
+      if (p.isEmpty) return;
+      final ko = _pieceKo(p);
+      if (ko != null) {
+        out.add(RootPiece(p, ko, false));
+        return;
+      }
+      // 나머지에 다른 루트가 있으면 한 번 더 쪼갠다
+      for (final r in _roots) {
+        if (r.th != root && p != r.th && containsAtBoundary(p, r.th)) {
+          final j = p.indexOf(r.th);
+          addRest(p.substring(0, j));
+          out.add(RootPiece(r.th, r.ko, true));
+          addRest(p.substring(j + r.th.length));
+          return;
+        }
+      }
+      out.add(RootPiece(p, null, false));
+    }
+
+    addRest(w.substring(0, idx));
+    out.add(RootPiece(root, _byTh[root]?.ko ?? _pieceKo(root), true));
+    addRest(w.substring(idx + root.length));
+    return out;
   }
 
   /// 나머지 조각이 알려진 단어면 '확실한 파생'.
