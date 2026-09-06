@@ -190,6 +190,102 @@ def load_book():
 STOP_ROOTS = set("ที่ ใน ไป มา ไม่ ได้ จะ และ กับ แล้ว ก็ ของ ให้ อยู่ เป็น มี คน การ ความ นี้ นั้น ว่า ๆ ครับ ค่ะ คะ ยัง อีก ด้วย ต้อง ถ้า หรือ แต่ จาก ถึง ตาม เมื่อ กว่า เท่า ไหน อะไร ใคร ทำ ดู เอา ขอ ช่วย".split())
 
 
+READING_FIX = {  # 캡처 독음 누락분 보정
+    "มี": {"reading": "미"}, "ไม่มี": {"reading": "마이 미"}, "ดี": {"reading": "디"},
+    "สภาพร่างกาย": {"reading": "싸팝 랑까이"}, "ประเภทผิว": {"reading": "쁘라펫 피우"},
+    "ปัญหาผิว": {"reading": "빤하 피우"},
+}
+
+
+def load_freq(known):
+    """빈도 Top1000 — 단어장에 없는 단어는 top1000_meanings.json 의 뜻/독음으로 추가.
+    반환: (entries, rank_by_th)"""
+    ranks = {}
+    entries = []
+    path = os.path.join(ROOT, "assets", "data", "wordsets", "th_top1000.csv")
+    meanings = {}
+    mp = os.path.join(HERE, "top1000_meanings.json")
+    if os.path.exists(mp):
+        with open(mp, encoding="utf-8") as f:
+            meanings = json.load(f)
+    try:
+        with open(path, encoding="utf-8") as f:
+            next(f)
+            for line in f:
+                parts = line.rstrip("\r\n").split(",")
+                if len(parts) < 2:
+                    continue
+                th = parts[1].strip()
+                rank = int(parts[0]) if parts[0].isdigit() else 0
+                if not th or not THAI.search(th):
+                    continue
+                ranks.setdefault(th, rank)
+                if th in known:
+                    continue
+                m = meanings.get(th)
+                if not m or not m.get("ko"):
+                    continue
+                if len(th) < 2 or "조각" in m["ko"]:
+                    continue  # 단자음·음역 조각 등 토크나이저 부산물 제외
+                entries.append(OrderedDict(
+                    id=make_id("freq", th),
+                    th=th,
+                    reading=normalize_reading(m.get("reading", "")),
+                    ko=m["ko"].strip(),
+                    src="freq",
+                    order=rank,
+                ))
+    except OSError:
+        pass
+    return entries, ranks
+
+
+def freq_level(rank):
+    """빈도 순위 → 1~5 단계 (1 = 최상위 100, 2 = ≤250, 3 = ≤500, 4 = ≤750, 5 = ≤1000)."""
+    if not rank:
+        return 0
+    if rank <= 100:
+        return 1
+    if rank <= 250:
+        return 2
+    if rank <= 500:
+        return 3
+    if rank <= 750:
+        return 4
+    return 5
+
+
+def merge_same_th(entries):
+    """표제어(th) 완전 동일 항목 병합 — 뜻은 합치고(중복 제거), 독음은 첫 항목, day/theme 는 book 우선."""
+    by = OrderedDict()
+    for e in entries:
+        key = e["th"]
+        if key not in by:
+            item = OrderedDict(e)
+            item["kos"] = []
+            by[key] = item
+        item = by[key]
+        for part in re.split(r"\s*[;/]\s*|\s*·\s*", e["ko"]):
+            part = part.strip()
+            if part and part not in item["kos"]:
+                item["kos"].append(part)
+        if not item.get("reading") and e.get("reading"):
+            item["reading"] = e["reading"]
+        if e.get("day") and not item.get("day"):
+            item["day"] = e["day"]
+            item["theme"] = e.get("theme", "")
+            item["kind"] = e.get("kind", "")
+        if e.get("uncertain") and item is not e:
+            item["uncertain"] = True
+    out = []
+    for item in by.values():
+        item["ko"] = ", ".join(item.pop("kos")[:4])
+        for k in ("readingRaw", "pages", "num", "group", "ex", "src"):
+            item.pop(k, None)
+        out.append(item)
+    return out
+
+
 def build_roots(entries, top1000):
     """루트 후보: 어휘 자체가 단어이고 다른 단어 3개 이상에 포함되는 것."""
     by_th = {}
@@ -211,17 +307,26 @@ def main():
     caps, ncap = load_captures()
     body, nbody = load_body()
     book, nbook, themes = load_book()
-    entries = caps + body + book
-    # 완전 중복(th+ko 동일) 제거 — 앞선 소스 우선
-    seen = set()
-    uniq = []
-    for e in entries:
-        key = (e["th"], e["ko"])
-        if key in seen:
-            continue
-        seen.add(key)
-        uniq.append(e)
-    entries = uniq
+    known = set()
+    for e in caps + body + book:
+        for v in e["th"].split("/"):
+            known.add(v.strip())
+    freq, ranks = load_freq(known)
+    # 우선순위: book(일차·테마 보존) > capture > body > freq. 표제어 동일 항목은 하나로 병합.
+    entries = merge_same_th(book + caps + body + freq)
+    mp = os.path.join(HERE, "top1000_meanings.json")
+    fill = json.load(open(mp, encoding="utf-8")) if os.path.exists(mp) else {}
+    fill.update(READING_FIX)
+    entries = [e for e in entries if not re.search(r"\d{4}", e["th"])]  # 날짜 등 서식 행 제외
+    for i, e in enumerate(entries):
+        e["order"] = i
+        if not e.get("reading") and e["th"] in fill:
+            e["reading"] = normalize_reading(fill[e["th"]].get("reading", ""))
+        rank = ranks.get(e["th"].split("/")[0].strip(), 0)
+        if rank:
+            e["rank"] = rank
+            e["level"] = freq_level(rank)
+    nfreq = len(freq)
 
     top1000 = []
     try:
@@ -263,13 +368,8 @@ def main():
     with open(os.path.join(OUT_DIR, "th_vocab.json"), "w", encoding="utf-8") as f:
         json.dump(OrderedDict(
             meta=OrderedDict(
-                note="reading 은 한글 독음(정규화), readingRaw 는 원서 표기",
-                sources=OrderedDict(
-                    capture="회화집 단어장 캡처(한→태, 가나다순)",
-                    body="회화집 본문(12~153쪽) 단어 표 — th_phrasebook.json 과 동일 출처",
-                    book="나혼자 끝내는 태국어 단어장 개정판(30일차)",
-                ),
-                captureFiles=ncap, bodyEntries=nbody, bookFiles=nbook,
+                note="통합 단어장 — 표제어 기준 병합, level 은 빈도 1~5 단계(1=최상위), day/theme 는 30일 코스",
+                counts=OrderedDict(capture=len(caps), body=len(body), book=len(book), freq=nfreq),
                 themes={str(k): v for k, v in sorted(themes.items())},
             ),
             entries=entries,
@@ -281,7 +381,8 @@ def main():
     print(f"captures: {ncap} files, {len(caps)} entries")
     print(f"body: {nbody} entries (회화집 본문 단어)")
     print(f"book: {nbook} files, {len(book)} entries, themes {len(themes)}")
-    print(f"merged (dedup): {len(entries)}  → assets/data/vocab/th_vocab.json")
+    print(f"freq: {nfreq} entries (Top1000 중 단어장에 없던 단어)")
+    print(f"merged by th: {len(entries)}  → assets/data/vocab/th_vocab.json")
     print(f"root candidates: {len(cand_list)} (top: {[(c['th'], c['derived']) for c in cand_list[:15]]})")
     print(f"roots written: {len(roots)}")
 

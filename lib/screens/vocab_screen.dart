@@ -8,9 +8,9 @@ import '../widgets/thai_decor.dart';
 import '../widgets/vocab_sheet.dart';
 import 'thai_roots_screen.dart';
 
-enum _Source { all, capture, body, book }
+enum _Source { all, book, ranked }
 
-/// 통합 단어장 — 회화집 단어장(캡처, 가나다순) + 나혼자 30일.
+/// 통합 단어장 — 모든 단어를 표제어 기준으로 하나로 (30일 코스 일차 필터 · 빈도순 정렬).
 class VocabScreen extends StatefulWidget {
   final int? initialDay;
   const VocabScreen({super.key, this.initialDay});
@@ -55,8 +55,7 @@ class _VocabScreenState extends State<VocabScreen> {
     final svc = VocabService.instance;
     Iterable<VocabEntry> pool = switch (_source) {
       _Source.all => svc.entries,
-      _Source.capture => svc.captureEntries,
-      _Source.body => svc.bodyEntries,
+      _Source.ranked => svc.rankedEntries,
       _Source.book => _day == null ? svc.bookEntries : svc.byDay(_day!),
     };
     var out = svc.search(_query, within: pool);
@@ -149,23 +148,16 @@ class _VocabScreenState extends State<VocabScreen> {
                           }),
                         ),
                         _Chip(
-                          label: '회화집 ${svc.captureEntries.length}',
-                          selected: _source == _Source.capture,
+                          label: '빈도순 ${svc.rankedEntries.length}',
+                          selected: _source == _Source.ranked,
+                          color: AppColors.thongDeep,
                           onTap: () => setState(() {
-                            _source = _Source.capture;
+                            _source = _Source.ranked;
                             _day = null;
                           }),
                         ),
                         _Chip(
-                          label: '회화집 본문 ${svc.bodyEntries.length}',
-                          selected: _source == _Source.body,
-                          onTap: () => setState(() {
-                            _source = _Source.body;
-                            _day = null;
-                          }),
-                        ),
-                        _Chip(
-                          label: '나혼자 30일 ${svc.bookEntries.length}',
+                          label: '30일 코스 ${svc.bookEntries.length}',
                           selected: _source == _Source.book,
                           onTap: () => setState(() {
                             _source = _Source.book;

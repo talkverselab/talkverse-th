@@ -6,21 +6,19 @@ import '../widgets/thai_decor.dart';
 import '../widgets/today_mission.dart';
 import 'alphabet_screen.dart';
 import 'chunk_search_screen.dart';
-import 'consonant_class_screen.dart';
 import 'conversation_screen.dart';
 import 'episode_screen.dart';
 import 'flashcard_screen.dart';
 import 'grammar_lesson_screen.dart';
 import 'keyboard_practice_screen.dart';
-import 'phrasebook_screen.dart';
 import 'profile_screen.dart';
 import 'progress_screen.dart';
 import 'quick_phrases_screen.dart';
 import 'script_quiz_screen.dart';
+import 'speaking_practice_screen.dart';
 import 'thai_roots_screen.dart';
 import 'tones_screen.dart';
 import 'vocab_screen.dart';
-import 'word_freq_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -279,9 +277,9 @@ class _QuickMenuRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final items = <(String, String, bool, WidgetBuilder)>[
       ('⚡', '바로 문장', true, (_) => const QuickPhrasesScreen()),
-      ('🧳', '여행회화', false, (_) => const PhrasebookScreen()),
       ('📖', '단어장', false, (_) => const VocabScreen()),
       ('💬', '회화', false, (_) => const ConversationScreen()),
+      ('🎙️', '문장 말하기', false, (_) => const SpeakingPracticeScreen()),
       ('⌨️', '키보드연습', false, (_) => const KeyboardPracticeScreen()),
       ('🔍', '청크 검색', false, (_) => const ChunkSearchScreen()),
       ('🎴', '복습', false, (_) => const FlashcardScreen()),
@@ -335,17 +333,17 @@ class _MenuGrid extends StatelessWidget {
           color: AppColors.kluayMai,
           builder: (_) => const ConversationScreen()),
       _MenuItem(
+          label: '문장 말하기',
+          sub: '한글 보고 태국어로 · 10초/5초/2초',
+          emblem: 'พูด',
+          color: const Color(0xFFD84315),
+          builder: (_) => const SpeakingPracticeScreen()),
+      _MenuItem(
           label: '문자 44',
-          sub: 'อักษรไทย',
+          sub: '자음 · 3분류 · 모음',
           emblem: 'ก',
           color: const Color(0xFFC62828),
           builder: (_) => const AlphabetScreen()),
-      _MenuItem(
-          label: '자음 3분류',
-          sub: '고·중·저',
-          emblem: 'สูง',
-          color: AppColors.morakot,
-          builder: (_) => const ConsonantClassScreen()),
       _MenuItem(
           label: '성조 5',
           sub: 'วรรณยุกต์',
@@ -359,20 +357,8 @@ class _MenuGrid extends StatelessWidget {
           color: const Color(0xFFAD1457),
           builder: (_) => const GrammarLessonScreen()),
       _MenuItem(
-          label: '단어',
-          sub: 'Top 1000',
-          emblem: 'คำ',
-          color: AppColors.thongDeep,
-          builder: (_) => const WordFreqScreen()),
-      _MenuItem(
-          label: '여행 회화집',
-          sub: '기본회화 · 맛집 · 쇼핑 …',
-          emblem: 'เที่ยว',
-          color: AppColors.kluayMai,
-          builder: (_) => const PhrasebookScreen()),
-      _MenuItem(
           label: '단어장',
-          sub: '회화집 · 나혼자 30일',
+          sub: '통합 · 빈도 · 30일 코스',
           emblem: 'ศัพท์',
           color: AppColors.kluayMaiDeep,
           builder: (_) => const VocabScreen()),

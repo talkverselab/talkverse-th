@@ -9,7 +9,7 @@ import '../widgets/memo_toggle.dart';
 import '../widgets/thai_decor.dart';
 
 /// 어말조사(คำลงท้าย) 레슨 — 태국어 말맛의 핵심.
-/// Netflix 원어 코퍼스에서 추출한 실제 예문 기반.
+/// 실제 구어 예문 기반.
 class GrammarLessonScreen extends StatefulWidget {
   const GrammarLessonScreen({super.key});
 

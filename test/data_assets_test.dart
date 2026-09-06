@@ -89,41 +89,28 @@ void main() {
       expect(RegExp(r'[A-Za-z]').hasMatch(m['reading'] as String), isFalse,
           reason: '독음에 로마자 없음: ${m['reading']}');
     }
-    final srcs = entries.map((e) => (e as Map)['src']).toSet();
-    expect(srcs, containsAll(['capture', 'book']));
+    // 표제어 중복 없음 · 예문(원서 문장) 없음 · 빈도 단계 1~5
+    final ths = entries.map((e) => (e as Map)['th'] as String).toList();
+    expect(ths.toSet().length, ths.length, reason: '표제어 중복');
+    expect(entries.any((e) => (e as Map).containsKey('ex')), isFalse);
+    expect(entries.any((e) => ((e as Map)['level'] ?? 0) == 5), isTrue);
+    expect(entries.every((e) => !(e as Map).containsKey('pages')), isTrue);
   });
 
-  test('여행 회화집 에셋 스키마', () async {
-    final raw = await rootBundle.loadString('assets/data/vocab/th_phrasebook.json');
-    final data = json.decode(raw) as Map<String, dynamic>;
-    final sections = (data['meta'] as Map)['sections'] as List;
-    expect(sections.length, 9);
-    final topics = data['topics'] as List;
-    expect(topics.length, greaterThan(60));
-    var phrases = 0, words = 0;
-    final thai = RegExp(r'[฀-๿]');
-    for (final t in topics.cast<Map>()) {
-      expect(sections.any((s) => (s as Map)['id'] == t['section']), isTrue,
-          reason: 'unknown section ${t['section']}');
-      for (final g in (t['groups'] as List).cast<Map>()) {
-        for (final r in (g['rows'] as List).cast<Map>()) {
-          expect(thai.hasMatch(r['th'] as String), isTrue);
-          if (g['kind'] == 'word') {
-            words++;
-          } else {
-            phrases++;
-          }
+  test('대화 JSON — 모든 대화 8턴 · 한글 독음 · 출처 언급 없음', () async {
+    for (final (level, key) in [('L1', 'episodes'), ('L2', 'dialogues'), ('L3', 'dialogues')]) {
+      final raw = await rootBundle.loadString('assets/data/dialogues/$level.json');
+      expect(raw.toLowerCase().contains('netflix'), isFalse);
+      final data = json.decode(raw) as Map<String, dynamic>;
+      for (final ep in (data[key] as List).cast<Map<String, dynamic>>()) {
+        final turns = ep['turns'] as List;
+        expect(turns.length, 8, reason: '$level ${ep['id']}');
+        for (final t in turns.cast<Map<String, dynamic>>()) {
+          expect(t['roman'], isNotNull, reason: '$level ${ep['id']} #${t['num']}');
+          expect(RegExp(r'[A-Za-z]').hasMatch(t['roman'] as String), isFalse);
         }
       }
     }
-    expect(phrases, greaterThan(600));
-    expect(words, greaterThan(1000));
-    // 본문 단어가 통합 단어장에도 합쳐져 있어야 한다
-    final vraw = await rootBundle.loadString('assets/data/vocab/th_vocab.json');
-    final ventries = (json.decode(vraw) as Map)['entries'] as List;
-    // (th, ko) 중복은 단어장 캡처 항목이 우선이라 본문 고유분만 남는다
-    expect(ventries.where((e) => (e as Map)['src'] == 'body').length,
-        greaterThan(500));
   });
 
   test('루트 단어 에셋 + 경계 규칙', () async {

@@ -47,8 +47,12 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Netflix 자막 유래 코퍼스 (로컬 전용 — 공개 리포 제외)
+# 구어 코퍼스 원본 (로컬 전용 — 공개 리포 제외)
 corpus/
 
 # 단어장 원서 OCR 원문 (로컬 전용 — 공개 리포 제외; JSON 체크포인트만 커밋)
 tools/vocab_pipeline/book/*.md
+
+# 회화집 원서 전사 원문 — 로컬 전용(앱에는 단어만 사용)
+tools/vocab_pipeline/pages/*.md
+tools/vocab_pipeline/phrasebook_parsed.json

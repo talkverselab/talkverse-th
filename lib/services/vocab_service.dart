@@ -4,23 +4,25 @@ import 'package:flutter/services.dart' show rootBundle;
 
 import 'thai_dict_service.dart';
 
-/// 통합 단어장 항목 — 회화집 캡처(capture) + 나혼자 단어장 30일(book).
+/// 통합 단어장 항목 — 표제어 기준으로 병합된 단어 (출처는 노출하지 않는다).
 class VocabEntry {
   final String id;
   final String th;
   final String reading; // 한글 독음(정규화)
   final String readingRaw; // 원서 표기
   final String ko;
-  final String src; // capture | book
+  final String src; // (호환용) 비어 있을 수 있음
   final int order;
-  final int day; // book only
-  final String theme; // book only
+  final int day; // 30일 코스 일차 (0 = 없음)
+  final String theme; // 30일 코스 테마
   final String kind; // main | plus
-  final int? num; // book main 번호
+  final int? num;
   final String group;
   final String pages;
   final VocabExample? ex;
   final bool uncertain;
+  final int rank; // 빈도 순위 (0 = 없음)
+  final int level; // 빈도 단계 1~5 (1 = 최상위, 0 = 없음)
 
   const VocabEntry({
     required this.id,
@@ -38,9 +40,11 @@ class VocabEntry {
     this.pages = '',
     this.ex,
     this.uncertain = false,
+    this.rank = 0,
+    this.level = 0,
   });
 
-  bool get isBook => src == 'book';
+  bool get isBook => day > 0;
   bool get isBody => src == 'body';
 
   /// "A / B" 형태의 변형 목록.
@@ -51,13 +55,14 @@ class VocabEntry {
   String get speakable =>
       variants.first.replaceAll(RegExp(r'[()]'), '').trim();
 
-  String get sourceLabel {
-    if (isBook) return '나혼자 30일 · $day일차${theme.isNotEmpty ? ' $theme' : ''}';
-    if (isBody) {
-      return '회화집 본문 p.$pages${group.isNotEmpty ? ' · $group' : ''}';
-    }
-    return '회화집 단어장';
-  }
+  /// 분류 라벨 — 30일 코스 일차/테마만. 출처(책명·쪽수)는 노출하지 않는다.
+  String get sourceLabel =>
+      isBook ? '$day일차${theme.isNotEmpty ? ' · $theme' : ''}' : '';
+
+  /// 빈도 단계 별 표시 — 1단계(최상위) = ★★★★★. level 0 이면 빈 문자열.
+  String get levelStars =>
+      level == 0 ? '' : '★' * (6 - level) + '☆' * (level - 1);
+  String get levelLabel => level == 0 ? '' : '빈도 $level단계 $levelStars';
 
   factory VocabEntry.fromJson(Map<String, dynamic> m) {
     final exm = m['ex'] as Map<String, dynamic>?;
@@ -77,6 +82,8 @@ class VocabEntry {
       pages: (m['pages'] as String?) ?? '',
       ex: exm == null ? null : VocabExample.fromJson(exm),
       uncertain: m['uncertain'] == true,
+      rank: _toInt(m['rank']) ?? 0,
+      level: _toInt(m['level']) ?? 0,
     );
   }
 }
@@ -152,10 +159,10 @@ class VocabService {
 
   bool hasTh(String th) => _byTh.containsKey(th.trim());
 
-  Iterable<VocabEntry> get captureEntries =>
-      _entries.where((e) => !e.isBook && !e.isBody);
-  Iterable<VocabEntry> get bodyEntries => _entries.where((e) => e.isBody);
   Iterable<VocabEntry> get bookEntries => _entries.where((e) => e.isBook);
+  Iterable<VocabEntry> get rankedEntries =>
+      _entries.where((e) => e.rank > 0).toList()
+        ..sort((a, b) => a.rank.compareTo(b.rank));
 
   List<VocabEntry> byDay(int day) =>
       _entries.where((e) => e.isBook && e.day == day).toList();

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../core/theme.dart';
+import '../services/root_service.dart';
 import '../services/tts_service.dart';
+import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
 
 /// 키보드연습 — 태국어 Kedmanee 자판.
@@ -90,8 +92,8 @@ class _Course {
   const _Course(this.name, this.desc, this.targets);
 }
 
-const List<_Course> _courses = [
-  _Course('자리 익히기', '기본 열(홈 로우)부터 자모 위치', [
+const List<_Course> _baseCourses = [
+  _Course('준비 · 자리 익히기', '기본 열(홈 로우)부터 자모 위치', [
     'ฟหกด',
     'สวาง',
     'เ้่า',
@@ -101,7 +103,7 @@ const List<_Course> _courses = [
     'ิืทม',
     'คตจข',
   ]),
-  _Course('필수 단어', '여행·일상 최다 빈출 단어', [
+  _Course('2단계 · 빈도 단어', '빈도 1~2단계(상위 250) 단어 — 로딩 중', [
     'สวัสดี',
     'ขอบคุณ',
     'อร่อย',
@@ -111,7 +113,7 @@ const List<_Course> _courses = [
     'กินข้าว',
     'คิดถึง',
   ]),
-  _Course('실전 문장', 'L1 다이얼로그 문장 그대로', [
+  _Course('3단계 · 실전 문장', '회화 문장 그대로', [
     'สวัสดีครับ',
     'ผมชื่อมินโฮครับ',
     'ยินดีที่ได้รู้จักนะคะ',
@@ -125,6 +127,7 @@ class _KeyboardPracticeScreenState extends State<KeyboardPracticeScreen> {
   final _controller = TextEditingController();
   final _focus = FocusNode();
 
+  List<_Course> _courses = _baseCourses;
   int _courseIdx = 0;
   int _targetIdx = 0;
   int _typedTotal = 0;
@@ -173,6 +176,39 @@ class _KeyboardPracticeScreenState extends State<KeyboardPracticeScreen> {
   void initState() {
     super.initState();
     _controller.addListener(_onInput);
+    _loadCourses();
+  }
+
+  /// 1단계 = 루트 단어 전부, 2단계 = 빈도 1~2단계(상위 250) 단어.
+  Future<void> _loadCourses() async {
+    await VocabService.instance.ensureLoaded();
+    await RootService.instance.ensureLoaded();
+    if (!mounted) return;
+    final roots = RootService.instance.roots
+        .map((r) => r.th.trim())
+        .where((t) => t.isNotEmpty && !t.contains(' '))
+        .toList();
+    final freq = VocabService.instance.entries
+        .where((e) => e.level >= 1 && e.level <= 2)
+        .toList()
+      ..sort((a, b) => a.rank.compareTo(b.rank));
+    final freqWords = freq
+        .map((e) => e.variants.first.trim())
+        .where((t) => t.isNotEmpty && !t.contains(' ') && t.length <= 12)
+        .toSet()
+        .toList();
+    setState(() {
+      _courses = [
+        _baseCourses[0],
+        _Course('1단계 · 루트 단어', '루트 단어 ${roots.length}개 전부',
+            roots.isEmpty ? _baseCourses[1].targets : roots),
+        _Course('2단계 · 빈도 단어', '빈도 1~2단계(상위 250) 단어 ${freqWords.length}개',
+            freqWords.isEmpty ? _baseCourses[1].targets : freqWords),
+        _baseCourses[2],
+      ];
+      _courseIdx = 0;
+      _targetIdx = 0;
+    });
   }
 
   @override

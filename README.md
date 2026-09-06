@@ -18,12 +18,12 @@
 
 | 메뉴 | 화면 | 내용 |
 |------|------|------|
-| 회화 (다이얼로그) | `conversation_screen` `episode_screen` | L1 스토리 3편(민호 & ฟ้า) + L2 카오스 챗 6편(Netflix 코퍼스). 채팅 버블·청크 탭·TTS·학습 체크 |
+| 회화 (다이얼로그) | `conversation_screen` `episode_screen` | L1 스토리 3편(민호 & ฟ้า) + L2 실전 챗 6편(자체 제작 구어체). 채팅 버블·청크 탭·TTS·학습 체크 |
 | 문자 44 | `alphabet_screen` | 자음 44(고·중·저) + 모음, 글자별 상세 시트 |
 | 자음 3분류 | `consonant_class_screen` | 고(สูง)·중(กลาง)·저(ต่ำ) 심화 |
 | 성조 5 | `tones_screen` | 5성조 곡선·성조부호·자음 분류별 성조 규칙표 |
 | 어말조사 | `grammar_lesson_screen` | คำลงท้าย 12종 (นะ·ครับ·ค่ะ·ไหม…) — 코퍼스 실예문 |
-| 단어 | `word_freq_screen` | Netflix 코퍼스 빈도 Top1000 (R1~R4 티어) |
+| 단어장 | `vocab_screen` | 통합 단어장 4,700+ (빈도 1~5단계 · 30일 코스 · 루트 링크) |
 | 문자 퀴즈 | `script_quiz_screen` | 자음 4지선다 10라운드 |
 | **키보드연습** | `keyboard_practice_screen` | **Kedmanee 자판** — 다음 키 하이라이트(Shift층 포함), 자모→단어→문장 코스, 정확도 |
 | 복습 | `flashcard_screen` `sentence_flashcard_screen` | 자음 카드 + 문장 플래시카드(한↔태 뒤집기, 남/녀 TTS) |
@@ -51,11 +51,11 @@ th/
 ├── assets/data/
 │   ├── alphabet/th_alphabet.json    자음 44 + 모음
 │   ├── tones/th_tones.json          5성조 + 부호 + 규칙
-│   ├── dialogues/L1.json L2.json    스토리 3편 + 카오스 챗 6편
+│   ├── dialogues/L1~L3.json         스토리 7편 + 연애 챗 6편 + 여행 회화 18편 (모두 8턴)
 │   ├── wordsets/th_top1000.csv      코퍼스 빈도 상위 1000
 │   ├── chunks/th_chunks.json        큐레이션 문장 2200
 │   └── grammar/sfp.json             어말조사 12종 + 실예문 72
-└── corpus/                          Netflix 원어 코퍼스 파이프라인 (원본)
+└── corpus/                          구어 코퍼스 파이프라인 (로컬 전용, 미추적)
 ```
 
 ---

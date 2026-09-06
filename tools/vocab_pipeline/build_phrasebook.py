@@ -1,4 +1,4 @@
-r"""회화집 본문 전사 MD(pages/*.md) → 앱 에셋 assets/data/vocab/th_phrasebook.json
+r"""회화집 본문 전사 MD(pages/*.md) → phrasebook_parsed.json (로컬 전용; build_vocab.py 가 단어 표만 사용)
 
 사용: python -X utf8 tools/vocab_pipeline/build_phrasebook.py
 - `## 제목`      → topic (페이지 단위 주제)
@@ -18,7 +18,7 @@ import sys
 sys.stdout.reconfigure(encoding="utf-8")
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
-OUT = os.path.join(ROOT, "assets", "data", "vocab", "th_phrasebook.json")
+OUT = os.path.join(HERE, "phrasebook_parsed.json")  # 원서 문장 전사 — 앱 에셋에 넣지 않음(로컬 전용)
 
 # (id, 이름, 이모지, 시작 쪽) — 책의 오른쪽 탭 순서. 시작 쪽은 전사 결과의 구분 페이지 기준.
 SECTION_STARTS = [

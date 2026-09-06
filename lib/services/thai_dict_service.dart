@@ -1,7 +1,7 @@
 import 'package:csv/csv.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
-/// 단어 정보 (Netflix 원어 코퍼스 빈도 기반).
+/// 단어 정보 (구어 코퍼스 빈도 기반).
 class ThaiWordInfo {
   final int rank;
   final String word;

@@ -24,11 +24,11 @@ class _AlphabetScreenState extends State<AlphabetScreen> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         backgroundColor: AppColors.creamDeep,
         appBar: AppBar(
-          title: const Text('알파벳 · พยัญชนะ',
+          title: const Text('문자 44 · อักษรไทย',
               style: TextStyle(fontWeight: FontWeight.w800)),
           bottom: const TabBar(
             indicatorColor: AppColors.brand,
@@ -37,6 +37,7 @@ class _AlphabetScreenState extends State<AlphabetScreen> {
             labelStyle: TextStyle(fontWeight: FontWeight.w700),
             tabs: [
               Tab(text: '자음 44'),
+              Tab(text: '3분류'),
               Tab(text: '모음'),
             ],
           ),
@@ -55,6 +56,7 @@ class _AlphabetScreenState extends State<AlphabetScreen> {
             return TabBarView(
               children: [
                 _ConsonantTab(data: data),
+                ConsonantClassBody(data: data),
                 _VowelTab(vowels: data.vowels),
               ],
             );
@@ -121,9 +123,7 @@ class _ClassExplainerCard extends StatelessWidget {
       borderRadius: BorderRadius.circular(18),
       child: InkWell(
         borderRadius: BorderRadius.circular(18),
-        onTap: () => Navigator.of(context).push(
-          MaterialPageRoute<void>(builder: (_) => const ConsonantClassScreen()),
-        ),
+        onTap: () => DefaultTabController.of(context).animateTo(1),
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: Row(

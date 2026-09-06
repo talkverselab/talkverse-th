@@ -8,7 +8,7 @@ import 'episode_screen.dart';
 import 'grammar_lesson_screen.dart';
 import 'sentence_flashcard_screen.dart';
 
-/// 회화(다이얼로그) 허브 — 스토리 에피소드 + 자체 콘텐츠 + 코퍼스.
+/// 회화(다이얼로그) 허브 — 스토리·연애 챗·여행 회화 + 실전 문장.
 class ConversationScreen extends StatefulWidget {
   const ConversationScreen({super.key});
 
@@ -209,7 +209,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
               const GoldEmblem(text: 'คุย', size: 22),
               const SizedBox(width: 8),
               const Text(
-                'Netflix 원어 코퍼스',
+                '실전 구어 문장',
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w800,
