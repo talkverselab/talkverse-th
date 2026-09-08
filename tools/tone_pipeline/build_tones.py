@@ -55,6 +55,10 @@ def collect():
     lw = json.load(io.open(os.path.join(ROOT, 'assets/data/wordsets/th_loanwords.json'), encoding='utf-8'))
     for w in lw['words']:
         add(w['th'])
+    ob = os.path.join(ROOT, 'assets/data/wordsets/th_obec_basic.json')
+    if os.path.exists(ob):
+        for w in json.load(io.open(ob, encoding='utf-8'))['standard']:
+            add(w['th'])
     a = json.load(io.open(os.path.join(ROOT, 'assets/data/alphabet/th_alphabet.json'), encoding='utf-8'))
     for c in a['consonants']:
         add(c.get('acrophonic', '').split(' ', 1)[-1])

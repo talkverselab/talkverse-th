@@ -19,11 +19,11 @@ class RootInfo {
   });
 
   factory RootInfo.fromJson(Map<String, dynamic> m) => RootInfo(
-        th: m['th'] as String,
-        reading: (m['reading'] as String?) ?? '',
-        ko: (m['ko'] as String?) ?? '',
-        note: (m['note'] as String?) ?? '',
-      );
+    th: m['th'] as String,
+    reading: (m['reading'] as String?) ?? '',
+    ko: (m['ko'] as String?) ?? '',
+    note: (m['note'] as String?) ?? '',
+  );
 }
 
 /// 분해 조각 — th 와 뜻(없으면 null), 루트 여부.
@@ -34,12 +34,23 @@ class RootPiece {
   const RootPiece(this.th, this.ko, this.isRoot);
 }
 
+/// 루트 파생어를 어느 단어 풀에서 찾을지.
+enum RootStage {
+  all, // 통합 단어장 전체
+  one, // 1단계 — 빈도 Top1000
+  two, // 2단계 — 교육부 표준 단어(ป.1~3)
+}
+
 /// 루트 가족 — 확실한 파생(strong)과 후보(weak).
 class RootFamily {
   final RootInfo root;
   final List<VocabEntry> strong;
   final List<VocabEntry> weak;
-  const RootFamily({required this.root, required this.strong, required this.weak});
+  const RootFamily({
+    required this.root,
+    required this.strong,
+    required this.weak,
+  });
   int get count => strong.length + weak.length;
   List<VocabEntry> get all => [...strong, ...weak];
 }
@@ -56,6 +67,7 @@ class RootService {
   final List<RootInfo> _roots = [];
   final Map<String, RootInfo> _byTh = {};
   final Map<String, RootFamily> _familyCache = {};
+  final Map<RootStage, Map<String, RootFamily>> _stageCache = {};
   final Map<String, List<RootInfo>> _rootsOfCache = {};
   bool _loaded = false;
   Future<void>? _loading;
@@ -72,7 +84,9 @@ class RootService {
     await VocabService.instance.ensureLoaded();
     await ThaiDictService.instance.ensureLoaded();
     try {
-      final raw = await rootBundle.loadString('assets/data/vocab/th_roots.json');
+      final raw = await rootBundle.loadString(
+        'assets/data/vocab/th_roots.json',
+      );
       final data = json.decode(raw) as Map<String, dynamic>;
       for (final r in (data['roots'] as List)) {
         final info = RootInfo.fromJson(r as Map<String, dynamic>);
@@ -90,9 +104,12 @@ class RootService {
 
   // 결합 모음·성조 부호 (앞 자음에 붙음)
   static bool _isCombining(int c) =>
-      c == 0x0E31 || (c >= 0x0E34 && c <= 0x0E3A) || (c >= 0x0E47 && c <= 0x0E4E);
+      c == 0x0E31 ||
+      (c >= 0x0E34 && c <= 0x0E3A) ||
+      (c >= 0x0E47 && c <= 0x0E4E);
   // 뒤따르는 모음 (앞 음절을 이어감)
-  static bool _isTrailingVowel(int c) => c == 0x0E30 || c == 0x0E32 || c == 0x0E33;
+  static bool _isTrailingVowel(int c) =>
+      c == 0x0E30 || c == 0x0E32 || c == 0x0E33;
   // 앞에 오는 모음 (다음 자음과 한 음절)
   static bool _isLeadingVowel(int c) => c >= 0x0E40 && c <= 0x0E44;
 
@@ -178,12 +195,20 @@ class RootService {
     return false;
   }
 
-  RootFamily familyOf(RootInfo root) {
-    return _familyCache.putIfAbsent(root.th, () {
+  RootFamily familyOf(RootInfo root, {RootStage stage = RootStage.all}) {
+    final cache = stage == RootStage.all
+        ? _familyCache
+        : _stageCache.putIfAbsent(stage, () => {});
+    return cache.putIfAbsent(root.th, () {
+      final pool = switch (stage) {
+        RootStage.all => VocabService.instance.entries,
+        RootStage.one => VocabService.instance.top1000Entries,
+        RootStage.two => VocabService.instance.obecEntries,
+      };
       final strong = <VocabEntry>[];
       final weak = <VocabEntry>[];
       final seen = <String>{};
-      for (final e in VocabService.instance.entries) {
+      for (final e in pool) {
         var matched = false;
         var isStrong = false;
         for (final v in e.variants) {
