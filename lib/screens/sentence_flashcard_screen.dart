@@ -380,6 +380,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                         if (turn.roman != null)
                           KoReadingText(
                             turn.roman!,
+                            th: turn.th,
                             textAlign: TextAlign.center,
                             style: const TextStyle(
                               fontSize: 15,

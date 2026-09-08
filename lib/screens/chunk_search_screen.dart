@@ -351,6 +351,7 @@ class _SentenceTile extends StatelessWidget {
           if (s.roman != null)
             KoReadingText(
               s.roman!,
+              th: s.th,
               style: const TextStyle(
                 fontSize: 12,
                 color: AppColors.khramLight,

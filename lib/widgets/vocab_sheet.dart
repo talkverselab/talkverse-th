@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../core/theme.dart';
 import '../screens/thai_roots_screen.dart';
+import '../services/ko_reading.dart';
 import '../services/memorized_store.dart';
 import '../services/root_service.dart';
 import '../services/tts_service.dart';
@@ -146,8 +147,9 @@ class VocabDetail extends StatelessWidget {
                         ),
                       ),
                       if (e.reading.isNotEmpty)
-                        Text(
+                        KoReadingText(
                           e.reading,
+                          th: e.th,
                           style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w700,

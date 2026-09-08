@@ -136,6 +136,27 @@ void main() {
         greaterThanOrEqualTo(15));
   });
 
+  test('성조 DB 에셋 — 대화·단어 전부 포함, 성조 기호', () async {
+    final raw = await rootBundle.loadString('assets/data/vocab/th_tones.json');
+    final data = json.decode(raw) as Map<String, dynamic>;
+    final entries = data['entries'] as Map<String, dynamic>;
+    expect(entries.length, greaterThan(5000));
+    final kai = entries['ไก่'] as Map<String, dynamic>;
+    expect((kai['syl'] as List).first['t'], 'low');
+    expect(kai['ko'], '까이ˋ');
+    final khao = entries['ข้าว'] as Map<String, dynamic>;
+    expect((khao['syl'] as List).first['t'], 'falling');
+    // 대화 문장이 모두 들어 있어야 한다
+    for (final (level, key) in [('L1', 'episodes'), ('L2', 'dialogues'), ('L3', 'dialogues')]) {
+      final d = json.decode(await rootBundle.loadString('assets/data/dialogues/$level.json')) as Map;
+      for (final ep in (d[key] as List).cast<Map>()) {
+        for (final turn in (ep['turns'] as List).cast<Map>()) {
+          expect(entries.containsKey(turn['th']), isTrue, reason: '${turn['th']}');
+        }
+      }
+    }
+  });
+
   test('루트 단어 에셋 + 경계 규칙', () async {
     final raw = await rootBundle.loadString('assets/data/vocab/th_roots.json');
     final roots = (json.decode(raw) as Map<String, dynamic>)['roots'] as List;
