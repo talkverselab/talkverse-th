@@ -82,6 +82,41 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
   List<TurnRow> _turns = [];
   final Map<int, bool> _learned = {};
   bool _loading = true;
+  int _playingIdx = -1; // 전체 재생 중인 줄 (-1 = 정지)
+  final _listCtrl = ScrollController();
+
+  void _togglePlayAll() {
+    if (_playingIdx >= 0) {
+      TtsService.instance.stopSequence();
+      setState(() => _playingIdx = -1);
+      return;
+    }
+    final lines = [
+      for (final t in _turns)
+        (text: t.th, gender: t.speaker == 'A' ? 'male' : 'female'),
+    ];
+    TtsService.instance.speakSequence(
+      lines,
+      onLine: (i) {
+        if (!mounted) return;
+        setState(() => _playingIdx = i);
+        if (i >= 0 && _listCtrl.hasClients) {
+          final target = (i * 210.0 - 60).clamp(
+              0.0, _listCtrl.position.maxScrollExtent);
+          _listCtrl.animateTo(target,
+              duration: const Duration(milliseconds: 350),
+              curve: Curves.easeOut);
+        }
+      },
+    );
+  }
+
+  @override
+  void dispose() {
+    TtsService.instance.stopSequence();
+    _listCtrl.dispose();
+    super.dispose();
+  }
 
   @override
   void initState() {
@@ -161,6 +196,17 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
           ],
         ),
         actions: [
+          IconButton(
+            tooltip: _playingIdx >= 0 ? '전체 재생 정지' : '전체 재생',
+            icon: Icon(
+              _playingIdx >= 0
+                  ? Icons.stop_circle
+                  : Icons.play_circle_fill,
+              color: AppColors.kluayMai,
+              size: 28,
+            ),
+            onPressed: _turns.isEmpty ? null : _togglePlayAll,
+          ),
           const KoReadingToggleAction(),
           IconButton(
             tooltip: '이 에피소드 플래시카드',
@@ -199,12 +245,14 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
                 const LaiThaiDivider(height: 8),
                 Expanded(
                   child: ListView.builder(
+                    controller: _listCtrl,
                     padding: const EdgeInsets.fromLTRB(12, 10, 12, 90),
                     itemCount: _turns.length,
                     itemBuilder: (context, i) {
                       final t = _turns[i];
                       return _EpisodeBubble(
                         turn: t,
+                        playing: i == _playingIdx,
                         learned: _learned[t.id] ?? false,
                         onLearnedTap: () => _toggleLearned(t),
                         onCardTap: () async {
@@ -232,12 +280,14 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
 class _EpisodeBubble extends StatelessWidget {
   final TurnRow turn;
   final bool learned;
+  final bool playing;
   final VoidCallback onLearnedTap;
   final VoidCallback? onCardTap;
 
   const _EpisodeBubble({
     required this.turn,
     required this.learned,
+    this.playing = false,
     required this.onLearnedTap,
     this.onCardTap,
   });
@@ -265,8 +315,10 @@ class _EpisodeBubble extends StatelessWidget {
             bottomRight: Radius.circular(isA ? 14 : 4),
           ),
           border: Border.all(
-            color: learned ? AppColors.morakot : AppColors.thongDeep,
-            width: learned ? 1.6 : 0.5,
+            color: playing
+                ? AppColors.khram
+                : (learned ? AppColors.morakot : AppColors.thongDeep),
+            width: playing ? 2.4 : (learned ? 1.6 : 0.5),
           ),
         ),
         child: Column(

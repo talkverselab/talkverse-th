@@ -18,6 +18,7 @@ class SelectableThaiText extends StatelessWidget {
   final List<Map<String, dynamic>> tokens;
   final TextStyle style;
   final String? highlightText;
+  final WrapAlignment alignment;
 
   const SelectableThaiText({
     super.key,
@@ -25,22 +26,51 @@ class SelectableThaiText extends StatelessWidget {
     required this.tokens,
     required this.style,
     this.highlightText,
+    this.alignment = WrapAlignment.start,
   });
+
+  /// 밑줄(탭 링크)을 붙이지 않는 토큰 — 공손 어미·고유명사(등장인물 이름).
+  static const Set<String> noLink = {
+    'ครับ',
+    'ค่ะ',
+    'คะ',
+    'นะคะ',
+    'นะครับ',
+    'ครับผม',
+    'จ้ะ',
+    'จ้า',
+    'ฮะ',
+    'มินโฮ',
+    'ฟ้า',
+    'นุช',
+  };
+
+  static bool isLinkable(Map<String, dynamic> t) {
+    if (t['compound'] != true) return false;
+    final txt = (t['text'] as String? ?? '').trim();
+    return txt.isNotEmpty && !noLink.contains(txt);
+  }
 
   @override
   Widget build(BuildContext context) {
     if (tokens.isEmpty) {
-      return Text(text, style: style);
+      return Text(
+        text,
+        style: style,
+        textAlign: alignment == WrapAlignment.center ? TextAlign.center : null,
+      );
     }
     return Wrap(
+      alignment: alignment,
       crossAxisAlignment: WrapCrossAlignment.end,
       children: [
         for (final t in tokens)
-          if (t['compound'] == true)
+          if (isLinkable(t))
             _TappableChunk(
               text: t['text'] as String,
               style: style,
-              highlighted: highlightText != null &&
+              highlighted:
+                  highlightText != null &&
                   (t['text'] as String).contains(highlightText!),
             )
           else
@@ -132,8 +162,11 @@ class _ChunkSheet extends StatelessWidget {
                   ),
                 ),
                 IconButton(
-                  icon: const Icon(Icons.volume_up,
-                      color: AppColors.kluayMai, size: 28),
+                  icon: const Icon(
+                    Icons.volume_up,
+                    color: AppColors.kluayMai,
+                    size: 28,
+                  ),
                   onPressed: () => TtsService.instance.speak(chunk),
                 ),
               ],
@@ -165,8 +198,7 @@ class _ChunkSheet extends StatelessWidget {
               Wrap(
                 spacing: 6,
                 children: [
-                  _InfoChip(
-                      '빈도 ${_stars(info.rank)}', AppColors.kluayMai),
+                  _InfoChip('빈도 ${_stars(info.rank)}', AppColors.kluayMai),
                 ],
               ),
             ],
@@ -226,14 +258,14 @@ String _stars(int rank) {
   final level = rank <= 0
       ? 0
       : rank <= 100
-          ? 1
-          : rank <= 250
-              ? 2
-              : rank <= 500
-                  ? 3
-                  : rank <= 750
-                      ? 4
-                      : 5;
+      ? 1
+      : rank <= 250
+      ? 2
+      : rank <= 500
+      ? 3
+      : rank <= 750
+      ? 4
+      : 5;
   if (level == 0) return '';
   return '$level단계 ${'★' * (6 - level)}${'☆' * (level - 1)}';
 }

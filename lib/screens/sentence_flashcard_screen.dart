@@ -5,8 +5,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../core/theme.dart';
 import '../data/db/app_database.dart';
 import '../main.dart';
+import '../services/chunk_index_service.dart';
 import '../services/ko_reading.dart';
 import '../services/tts_service.dart';
+import '../widgets/selectable_thai.dart';
 import '../widgets/thai_decor.dart';
 import 'episode_screen.dart';
 
@@ -68,17 +70,21 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
 
   Future<void> _load() async {
     _prefs = await SharedPreferences.getInstance();
-    _koFirst = _prefs!.getBool(_kKoFirst) ?? true;
+    await ChunkIndexService.instance.ensureLoaded();
+    _koFirst = true; // 항상 한→태로 시작 (세션 안에서만 전환)
     _showHint = _prefs!.getBool(_kShowHint) ?? true;
 
     List<TurnRow> turns;
     final meta = widget.meta;
     if (meta != null) {
-      turns = await (appDb.select(appDb.turns)
-            ..where((t) =>
-                t.level.equals(meta.level) & t.episodeId.equals(meta.id))
-            ..orderBy([(t) => OrderingTerm.asc(t.num)]))
-          .get();
+      turns =
+          await (appDb.select(appDb.turns)
+                ..where(
+                  (t) =>
+                      t.level.equals(meta.level) & t.episodeId.equals(meta.id),
+                )
+                ..orderBy([(t) => OrderingTerm.asc(t.num)]))
+              .get();
     } else {
       final all = await appDb.select(appDb.turns).get();
       final savedIds = _prefs!.getStringList(_kLastIds);
@@ -87,8 +93,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
         final byId = {for (final t in all) t.id: t};
         turns = [
           for (final id in savedIds)
-            if (byId[int.tryParse(id) ?? -1] != null)
-              byId[int.parse(id)]!,
+            if (byId[int.tryParse(id) ?? -1] != null) byId[int.parse(id)]!,
         ];
       } else {
         turns = [];
@@ -97,7 +102,9 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
         turns = [...all]..shuffle();
         turns = turns.take(20).toList();
         await _prefs!.setStringList(
-            _kLastIds, turns.map((t) => '${t.id}').toList());
+          _kLastIds,
+          turns.map((t) => '${t.id}').toList(),
+        );
       }
     }
     final progress = await appDb.select(appDb.userProgress).get();
@@ -110,8 +117,8 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
         _states[t.id] = p == null
             ? CardState.unknown
             : p.learned
-                ? CardState.known
-                : (p.reviewCount > 0 ? CardState.studying : CardState.unknown);
+            ? CardState.known
+            : (p.reviewCount > 0 ? CardState.studying : CardState.unknown);
       }
       final saved = _prefs!.getInt(_kLastIndex) ?? 0;
       final start = widget.initialIndex > 0 ? widget.initialIndex : saved;
@@ -145,7 +152,9 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
   Future<void> _mark(CardState state) async {
     final turn = _cards[_index];
     setState(() => _states[turn.id] = state);
-    await appDb.into(appDb.userProgress).insertOnConflictUpdate(
+    await appDb
+        .into(appDb.userProgress)
+        .insertOnConflictUpdate(
           UserProgressCompanion(
             turnId: Value(turn.id),
             learned: Value(state == CardState.known),
@@ -199,15 +208,19 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
             Text(
               meta == null ? '문장 플래시카드' : '${meta.emoji} ${meta.title} 카드',
               style: const TextStyle(
-                  color: AppColors.khram,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800),
+                color: AppColors.khram,
+                fontSize: 16,
+                fontWeight: FontWeight.w800,
+              ),
             ),
             const SizedBox(height: 2),
             Text(
               meta == null ? '전 레벨 랜덤 20 · 이어서' : '${meta.level} 회화',
               style: const TextStyle(
-                  color: AppColors.khramLight, fontSize: 10, letterSpacing: 2),
+                color: AppColors.khramLight,
+                fontSize: 10,
+                letterSpacing: 2,
+              ),
             ),
           ],
         ),
@@ -266,12 +279,16 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
       ),
       body: _loading
           ? const Center(
-              child: CircularProgressIndicator(color: AppColors.kluayMai))
+              child: CircularProgressIndicator(color: AppColors.kluayMai),
+            )
           : _cards.isEmpty
-              ? const Center(
-                  child: Text('카드가 없어요',
-                      style: TextStyle(color: AppColors.khramLight)))
-              : _buildBody(),
+          ? const Center(
+              child: Text(
+                '카드가 없어요',
+                style: TextStyle(color: AppColors.khramLight),
+              ),
+            )
+          : _buildBody(),
     );
   }
 
@@ -316,8 +333,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                             height: 28,
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
-                              color:
-                                  isA ? AppColors.kluayMai : AppColors.thong,
+                              color: isA ? AppColors.kluayMai : AppColors.thong,
                               shape: BoxShape.circle,
                             ),
                             child: Text(
@@ -334,8 +350,10 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                           _StateChip(state: state),
                           if (showThSide)
                             IconButton(
-                              icon: const Icon(Icons.volume_up,
-                                  color: AppColors.kluayMai),
+                              icon: const Icon(
+                                Icons.volume_up,
+                                color: AppColors.kluayMai,
+                              ),
                               onPressed: () => TtsService.instance.speakAs(
                                 turn.th,
                                 gender: isA ? 'male' : 'female',
@@ -345,10 +363,11 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                       ),
                       const SizedBox(height: 16),
                       if (showThSide) ...[
-                        // ── 태국어 면 ──
-                        Text(
-                          turn.th,
-                          textAlign: TextAlign.center,
+                        // ── 태국어 면 ── (회화문과 같은 청크 밑줄·링크)
+                        SelectableThaiText(
+                          text: turn.th,
+                          tokens: ChunkIndexService.instance.tokensFor(turn.th),
+                          alignment: WrapAlignment.center,
                           style: const TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.w900,
@@ -395,13 +414,15 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                           const SizedBox(height: 16),
                           Container(
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 12, vertical: 7),
+                              horizontal: 12,
+                              vertical: 7,
+                            ),
                             decoration: BoxDecoration(
                               color: AppColors.thong.withValues(alpha: 0.12),
                               borderRadius: BorderRadius.circular(8),
                               border: Border.all(
-                                  color:
-                                      AppColors.thong.withValues(alpha: 0.7)),
+                                color: AppColors.thong.withValues(alpha: 0.7),
+                              ),
                             ),
                             child: Text(
                               '💡 ${hintOf(turn.roman!)}',
@@ -421,7 +442,9 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                         const SizedBox(height: 12),
                         Container(
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 10, vertical: 6),
+                            horizontal: 10,
+                            vertical: 6,
+                          ),
                           decoration: BoxDecoration(
                             color: AppColors.thong.withValues(alpha: 0.15),
                             borderRadius: BorderRadius.circular(8),
@@ -562,21 +585,28 @@ class _NavButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color =
-        enabled ? AppColors.khram : AppColors.khramLight.withValues(alpha: 0.5);
+    final color = enabled
+        ? AppColors.khram
+        : AppColors.khramLight.withValues(alpha: 0.5);
     final children = [
       Icon(icon, size: 16, color: color),
       const SizedBox(width: 4),
-      Text(label,
-          style: TextStyle(
-              fontSize: 13, fontWeight: FontWeight.w800, color: color)),
+      Text(
+        label,
+        style: TextStyle(
+          fontSize: 13,
+          fontWeight: FontWeight.w800,
+          color: color,
+        ),
+      ),
     ];
     return OutlinedButton(
       style: OutlinedButton.styleFrom(
         side: BorderSide(
-            color: enabled
-                ? AppColors.thong
-                : AppColors.khramLight.withValues(alpha: 0.3)),
+          color: enabled
+              ? AppColors.thong
+              : AppColors.khramLight.withValues(alpha: 0.3),
+        ),
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
         minimumSize: const Size(0, 0),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
@@ -605,8 +635,9 @@ class _AnswerButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final shape =
-        RoundedRectangleBorder(borderRadius: BorderRadius.circular(12));
+    final shape = RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(12),
+    );
     return selected
         ? FilledButton(
             style: FilledButton.styleFrom(
@@ -616,8 +647,10 @@ class _AnswerButton extends StatelessWidget {
               shape: shape,
             ),
             onPressed: onTap,
-            child:
-                Text(label, style: const TextStyle(fontWeight: FontWeight.w800)),
+            child: Text(
+              label,
+              style: const TextStyle(fontWeight: FontWeight.w800),
+            ),
           )
         : OutlinedButton(
             style: OutlinedButton.styleFrom(
@@ -627,8 +660,10 @@ class _AnswerButton extends StatelessWidget {
               shape: shape,
             ),
             onPressed: onTap,
-            child:
-                Text(label, style: const TextStyle(fontWeight: FontWeight.w800)),
+            child: Text(
+              label,
+              style: const TextStyle(fontWeight: FontWeight.w800),
+            ),
           );
   }
 }

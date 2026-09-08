@@ -57,11 +57,13 @@ void main() {
     }
   });
 
-  test('어말조사 JSON — 12종 + 예문', () async {
+  test('문법 JSON — 어말조사 12종 + การ·ที่ + 예문', () async {
     final raw = await rootBundle.loadString('assets/data/grammar/sfp.json');
     final data = json.decode(raw) as Map<String, dynamic>;
     final items = data['items'] as List;
-    expect(items.length, 12);
+    expect(items.length, 14);
+    expect(items.any((i) => (i as Map)['sfp'] == 'การ'), isTrue);
+    expect(items.any((i) => (i as Map)['sfp'] == 'ที่'), isTrue);
     for (final i in items.cast<Map<String, dynamic>>()) {
       expect((i['examples'] as List), isNotEmpty,
           reason: '${i['sfp']} 예문 없음');
@@ -111,6 +113,27 @@ void main() {
         }
       }
     }
+  });
+
+  test('영어 유래 단어 에셋 — 8줄기 · 200단어 · 한글 독음', () async {
+    final raw =
+        await rootBundle.loadString('assets/data/wordsets/th_loanwords.json');
+    final data = json.decode(raw) as Map<String, dynamic>;
+    final groups = (data['groups'] as List).cast<Map>();
+    expect(groups.length, 8);
+    final ids = groups.map((g) => g['id']).toSet();
+    final words = (data['words'] as List).cast<Map>();
+    expect(words.length, 200);
+    expect(words.map((w) => w['th']).toSet().length, 200, reason: '중복 없음');
+    for (final w in words) {
+      expect(ids.contains(w['group']), isTrue, reason: '${w['th']}');
+      expect(RegExp(r'[A-Za-z]').hasMatch(w['reading'] as String), isFalse,
+          reason: '독음에 로마자 없음: ${w['th']}');
+      expect((w['en'] as String).isNotEmpty && (w['ko'] as String).isNotEmpty,
+          isTrue);
+    }
+    expect(words.where((w) => w['exception'] == true).length,
+        greaterThanOrEqualTo(15));
   });
 
   test('루트 단어 에셋 + 경계 규칙', () async {

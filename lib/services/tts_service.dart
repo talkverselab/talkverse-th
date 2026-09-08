@@ -93,7 +93,50 @@ class TtsService {
     await _tts.speak(text);
   }
 
+  int _seqToken = 0;
+  bool get isSequencePlaying => _seqPlaying;
+  bool _seqPlaying = false;
+
+  /// 여러 문장을 화자 성별에 맞춰 순서대로 끝까지 재생. onLine(i) 로 현재 줄을 알리고
+  /// 끝나면 onLine(-1). stopSequence()/stop() 으로 중단.
+  Future<void> speakSequence(
+    List<({String text, String gender})> lines, {
+    void Function(int index)? onLine,
+    Duration gap = const Duration(milliseconds: 500),
+  }) async {
+    await _ensureInit();
+    await _scanVoices();
+    final token = ++_seqToken;
+    _seqPlaying = true;
+    await _tts.awaitSpeakCompletion(true);
+    try {
+      for (var i = 0; i < lines.length; i++) {
+        if (token != _seqToken) break;
+        onLine?.call(i);
+        await speakAs(lines[i].text, gender: lines[i].gender);
+        if (token != _seqToken) break;
+        await Future.delayed(gap);
+      }
+    } finally {
+      if (token == _seqToken) {
+        _seqPlaying = false;
+        await _tts.awaitSpeakCompletion(false);
+        onLine?.call(-1);
+      }
+    }
+  }
+
+  void stopSequence() {
+    _seqToken++;
+    _seqPlaying = false;
+    _requestSeq++;
+    _tts.stop();
+    _speaking = null;
+  }
+
   Future<void> stop() async {
+    _seqToken++;
+    _seqPlaying = false;
     _requestSeq++; // 대기 중인 지연 재생 취소
     await _tts.stop();
     _speaking = null;

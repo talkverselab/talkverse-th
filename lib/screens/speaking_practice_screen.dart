@@ -19,13 +19,13 @@ import 'episode_screen.dart';
 
 // ─────────────────────────────────────────────────────────────
 // 문장 말하기 — 한국어를 보고 제한 시간 안에 태국어로 말하기
-//   1) 선택: 회화 + 단계(10초/5초/2초) + 판정 기준
+//   1) 선택: 회화 + 단계(7초/4초/2초) + 판정 기준
 //   2) 연습: 8문장 자동 진행 · 문장마다 음성 인식
 //   3) 결과: 통과/미통과 · 인식 텍스트 · 빠진 단어 · 원어민 듣기
 // ─────────────────────────────────────────────────────────────
 
 /// 단계별 문장당 제한 시간(초).
-const List<int> _kStageSeconds = [10, 5, 2];
+const List<int> _kStageSeconds = [7, 4, 2];
 const String _kPrefStage = 'speak_stage';
 const String _kPrefThreshold = 'speak_threshold';
 const String _kPrefHint = 'speak_hint';
