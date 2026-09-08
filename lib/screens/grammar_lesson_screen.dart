@@ -24,6 +24,7 @@ class _GrammarLessonScreenState extends State<GrammarLessonScreen> {
 
   static const Map<String, (String, Color)> _registers = {
     'ALL': ('전체', AppColors.khram),
+    'grammar': ('문법', Color(0xFFAD1457)),
     'polite': ('공손', AppColors.morakot),
     'neutral': ('중립', AppColors.thongDeep),
     'casual': ('구어', AppColors.kluayMai),
@@ -74,7 +75,7 @@ class _GrammarLessonScreenState extends State<GrammarLessonScreen> {
         title: const Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('어말조사',
+            Text('문법 · 어말조사',
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
             SizedBox(height: 2),
             Text('คำลงท้าย',
@@ -172,12 +173,14 @@ class _SfpCardState extends State<_SfpCard> {
   bool _expanded = false;
 
   Color get _registerColor => switch (widget.item.register) {
+        'grammar' => const Color(0xFFAD1457),
         'polite' => AppColors.morakot,
         'casual' => AppColors.kluayMai,
         _ => AppColors.thongDeep,
       };
 
   String get _registerLabel => switch (widget.item.register) {
+        'grammar' => '문법',
         'polite' => '공손',
         'casual' => '구어',
         _ => '중립',

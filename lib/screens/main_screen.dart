@@ -7,10 +7,12 @@ import '../widgets/today_mission.dart';
 import 'alphabet_screen.dart';
 import 'chunk_search_screen.dart';
 import 'conversation_screen.dart';
+import 'english_manual_screen.dart';
 import 'episode_screen.dart';
 import 'flashcard_screen.dart';
 import 'grammar_lesson_screen.dart';
 import 'keyboard_practice_screen.dart';
+import 'loanword_screen.dart';
 import 'profile_screen.dart';
 import 'progress_screen.dart';
 import 'quick_phrases_screen.dart';
@@ -334,7 +336,7 @@ class _MenuGrid extends StatelessWidget {
           builder: (_) => const ConversationScreen()),
       _MenuItem(
           label: '문장 말하기',
-          sub: '한글 보고 태국어로 · 10초/5초/2초',
+          sub: '한글 보고 태국어로 · 7초/4초/2초',
           emblem: 'พูด',
           color: const Color(0xFFD84315),
           builder: (_) => const SpeakingPracticeScreen()),
@@ -351,8 +353,8 @@ class _MenuGrid extends StatelessWidget {
           color: const Color(0xFF1565C0),
           builder: (_) => const TonesScreen()),
       _MenuItem(
-          label: '어말조사',
-          sub: 'คำลงท้าย',
+          label: '문법',
+          sub: 'การ · ที่ · 어말조사',
           emblem: 'นะ',
           color: const Color(0xFFAD1457),
           builder: (_) => const GrammarLessonScreen()),
@@ -362,6 +364,18 @@ class _MenuGrid extends StatelessWidget {
           emblem: 'ศัพท์',
           color: AppColors.kluayMaiDeep,
           builder: (_) => const VocabScreen()),
+      _MenuItem(
+          label: 'Manual for English',
+          sub: 'RTGS vs ours · 장음 밑줄',
+          emblem: 'ABC',
+          color: const Color(0xFF3949AB),
+          builder: (_) => const EnglishManualScreen()),
+      _MenuItem(
+          label: '영어 유래 단어',
+          sub: '음차 규칙 8줄기 · 200',
+          emblem: 'ทับ',
+          color: const Color(0xFF00897B),
+          builder: (_) => const LoanwordScreen()),
       _MenuItem(
           label: '루트 단어',
           sub: 'น้ำ → น้ำแข็ง',
