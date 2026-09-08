@@ -280,10 +280,16 @@ def load_freq(known):
     entries = []
     path = os.path.join(ROOT, "assets", "data", "wordsets", "th_top1000.csv")
     meanings = {}
-    mp = os.path.join(HERE, "top1000_meanings.json")
-    if os.path.exists(mp):
-        with open(mp, encoding="utf-8") as f:
-            meanings = json.load(f)
+    for mp in [os.path.join(HERE, "top1000_meanings.json")] + sorted(glob.glob(os.path.join(HERE, "spoken_meanings_*.json"))):
+        if os.path.exists(mp):
+            with open(mp, encoding="utf-8") as f:
+                meanings.update(json.load(f))
+    # 영어 유래 단어(th_loanwords.json)도 뜻·독음 출처로 사용 — 빈도 상위 외래어(โอเค 등)가 단어장에 들어오도록
+    lw = os.path.join(ROOT, "assets", "data", "wordsets", "th_loanwords.json")
+    if os.path.exists(lw):
+        with open(lw, encoding="utf-8") as f:
+            for w in json.load(f)["words"]:
+                meanings.setdefault(w["th"].strip(), {"reading": w.get("reading", ""), "ko": w.get("ko", "")})
     try:
         with open(path, encoding="utf-8") as f:
             next(f)
@@ -301,8 +307,8 @@ def load_freq(known):
                 m = meanings.get(th)
                 if not m or not m.get("ko"):
                     continue
-                if len(th) < 2 or "조각" in m["ko"]:
-                    continue  # 단자음·음역 조각 등 토크나이저 부산물 제외
+                if len(th) < 2 or "조각" in m["ko"] or "(이름)" in m["ko"]:
+                    continue  # 단자음·음역 조각·인명 등 제외
                 entries.append(OrderedDict(
                     id=make_id("freq", th),
                     th=th,
@@ -394,8 +400,10 @@ def main():
     freq, ranks = load_freq(known)
     # 우선순위: book(일차·테마 보존) > capture > body > freq. 표제어 동일 항목은 하나로 병합.
     entries = merge_same_th(book + caps + body + freq)
-    mp = os.path.join(HERE, "top1000_meanings.json")
-    fill = json.load(open(mp, encoding="utf-8")) if os.path.exists(mp) else {}
+    fill = {}
+    for mp in [os.path.join(HERE, "top1000_meanings.json")] + sorted(glob.glob(os.path.join(HERE, "spoken_meanings_*.json"))):
+        if os.path.exists(mp):
+            fill.update(json.load(open(mp, encoding="utf-8")))
     fill.update(READING_FIX)
     entries = [e for e in entries if not re.search(r"\d{4}", e["th"])]  # 날짜 등 서식 행 제외
     expressions = [e for e in entries if is_expression(e)]

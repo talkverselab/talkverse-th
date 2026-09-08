@@ -34,6 +34,10 @@ def main():
         for v in e["th"].split("/"):
             by_th.setdefault(v.strip(), e)
     meanings = {}
+    for f in [os.path.join(HERE, "top1000_meanings.json")] + sorted(glob.glob(os.path.join(HERE, "spoken_meanings_*.json"))):
+        if os.path.exists(f):
+            meanings.update({k: v for k, v in json.load(io.open(f, encoding="utf-8")).items()
+                             if "(이름)" not in v.get("ko", "") and "조각" not in v.get("ko", "")})
     for f in sorted(glob.glob(os.path.join(HERE, "obec", "meanings_*.json"))):
         meanings.update(json.load(io.open(f, encoding="utf-8")))
 

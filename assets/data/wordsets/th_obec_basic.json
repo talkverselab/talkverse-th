@@ -10,7 +10,7 @@
 "g4": 989,
 "g5": 991,
 "g6": 841,
-"inVocab": 973,
+"inVocab": 994,
 "noMeaning": 0
 }
 },
@@ -21,7 +21,7 @@
 "reading": "꺼",
 "ko": "~도, 그러면, 역시",
 "inVocab": true,
-"rank": 19,
+"rank": 5,
 "level": 1
 },
 {
@@ -39,8 +39,8 @@
 "reading": "끌라이",
 "ko": "(거리가) 멀다, 멀다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 813,
+"level": 5
 },
 {
 "th": "เข่า",
@@ -66,8 +66,8 @@
 "reading": "까웨",
 "ko": "커피",
 "inVocab": true,
-"rank": 868,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "ขน",
@@ -84,7 +84,7 @@
 "reading": "카오",
 "ko": "들어가다",
 "inVocab": true,
-"rank": 153,
+"rank": 173,
 "level": 2
 },
 {
@@ -137,9 +137,9 @@
 "grade": 1,
 "reading": "까우",
 "ko": "걸음, 나아가다",
-"inVocab": true,
-"rank": 738,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ขวา",
@@ -156,8 +156,8 @@
 "reading": "키얀",
 "ko": "쓰다(적다), 적다, 쓰다, 쓰다",
 "inVocab": true,
-"rank": 767,
-"level": 5
+"rank": 475,
+"level": 3
 },
 {
 "th": "กระดิ่ง",
@@ -183,8 +183,8 @@
 "reading": "커",
 "ko": "요청하다, 부탁하다, ~해 주세요",
 "inVocab": true,
-"rank": 286,
-"level": 3
+"rank": 85,
+"level": 1
 },
 {
 "th": "เขียว",
@@ -210,7 +210,7 @@
 "reading": "깜랑",
 "ko": "~하는 중(진행), 힘",
 "inVocab": true,
-"rank": 229,
+"rank": 215,
 "level": 2
 },
 {
@@ -219,7 +219,7 @@
 "reading": "컹",
 "ko": "~의(소유), 물건",
 "inVocab": true,
-"rank": 5,
+"rank": 29,
 "level": 1
 },
 {
@@ -246,7 +246,7 @@
 "reading": "낀",
 "ko": "먹다",
 "inVocab": true,
-"rank": 179,
+"rank": 111,
 "level": 2
 },
 {
@@ -262,10 +262,10 @@
 "th": "แข่ง",
 "grade": 1,
 "reading": "캥",
-"ko": "경주하다, 경쟁하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "경쟁하다, 시합하다",
+"inVocab": true,
+"rank": 609,
+"level": 4
 },
 {
 "th": "กระต่าย",
@@ -282,8 +282,8 @@
 "reading": "끼",
 "ko": "몇",
 "inVocab": true,
-"rank": 924,
-"level": 5
+"rank": 309,
+"level": 3
 },
 {
 "th": "ขัน",
@@ -318,8 +318,8 @@
 "reading": "꿍",
 "ko": "새우",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 689,
+"level": 4
 },
 {
 "th": "ขวด",
@@ -336,8 +336,8 @@
 "reading": "카이",
 "ko": "계란",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 971,
+"level": 5
 },
 {
 "th": "กระเทียม",
@@ -372,8 +372,8 @@
 "reading": "카이",
 "ko": "열",
 "inVocab": true,
-"rank": 891,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "กระเบื้อง",
@@ -399,7 +399,7 @@
 "reading": "카",
 "ko": "다리",
 "inVocab": true,
-"rank": 638,
+"rank": 565,
 "level": 4,
 "hint": "(น)"
 },
@@ -426,10 +426,10 @@
 "th": "เก่ง",
 "grade": 1,
 "reading": "껭",
-"ko": "잘하다, 뛰어나다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "잘하다, 능숙하다",
+"inVocab": true,
+"rank": 245,
+"level": 2
 },
 {
 "th": "ข่า",
@@ -446,7 +446,7 @@
 "reading": "콘",
 "ko": "사람, 명(단위)",
 "inVocab": true,
-"rank": 52,
+"rank": 30,
 "level": 1,
 "hint": "(น)"
 },
@@ -456,8 +456,8 @@
 "reading": "끄라빠오",
 "ko": "가방",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 652,
+"level": 4
 },
 {
 "th": "เก็บ",
@@ -465,17 +465,17 @@
 "reading": "껩 / 루암",
 "ko": "모으다",
 "inVocab": true,
-"rank": 324,
-"level": 3
+"rank": 213,
+"level": 2
 },
 {
 "th": "ข้า",
 "grade": 1,
 "reading": "카",
-"ko": "나(고어), 하인",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "나(고어, 사극 1인칭), 종",
+"inVocab": true,
+"rank": 300,
+"level": 3
 },
 {
 "th": "ค้น",
@@ -501,8 +501,8 @@
 "reading": "껨",
 "ko": "게임",
 "inVocab": true,
-"rank": 819,
-"level": 5
+"rank": 256,
+"level": 3
 },
 {
 "th": "ข้าง",
@@ -510,17 +510,17 @@
 "reading": "캉",
 "ko": "옆, 측, 쪽",
 "inVocab": true,
-"rank": 892,
-"level": 5
+"rank": 627,
+"level": 4
 },
 {
 "th": "คบ",
 "grade": 1,
 "reading": "콥",
 "ko": "사귀다, 교제하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 491,
+"level": 3
 },
 {
 "th": "กระรอก",
@@ -545,9 +545,9 @@
 "grade": 1,
 "reading": "캇",
 "ko": "부족하다, 끊어지다, 결석하다",
-"inVocab": true,
-"rank": 351,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ครัว",
@@ -564,8 +564,8 @@
 "reading": "끌루워",
 "ko": "무섭다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 244,
+"level": 2
 },
 {
 "th": "เกลือ",
@@ -591,8 +591,8 @@
 "reading": "크루",
 "ko": "교사",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 224,
+"level": 2
 },
 {
 "th": "กว่า",
@@ -600,8 +600,8 @@
 "reading": "꽈",
 "ko": "~보다(비교), 더",
 "inVocab": true,
-"rank": 77,
-"level": 1
+"rank": 101,
+"level": 2
 },
 {
 "th": "เก้าอี้",
@@ -618,7 +618,7 @@
 "reading": "카이",
 "ko": "팔다",
 "inVocab": true,
-"rank": 107,
+"rank": 235,
 "level": 2
 },
 {
@@ -654,8 +654,8 @@
 "reading": "카우",
 "ko": "하얗다, 하양, 하얗다, 흰색",
 "inVocab": true,
-"rank": 896,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "คอ",
@@ -663,8 +663,8 @@
 "reading": "커",
 "ko": "목, 목, 목구멍",
 "inVocab": true,
-"rank": 739,
-"level": 4
+"rank": 0,
+"level": 0
 },
 {
 "th": "ก่อน",
@@ -672,7 +672,7 @@
 "reading": "껀",
 "ko": "먼저, ~전에",
 "inVocab": true,
-"rank": 97,
+"rank": 56,
 "level": 1
 },
 {
@@ -681,8 +681,8 @@
 "reading": "껃",
 "ko": "태어나다",
 "inVocab": true,
-"rank": 60,
-"level": 1
+"rank": 170,
+"level": 2
 },
 {
 "th": "ข่าว",
@@ -690,35 +690,35 @@
 "reading": "카우",
 "ko": "뉴스",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 538,
+"level": 4
 },
 {
 "th": "คอย",
 "grade": 1,
 "reading": "커이",
-"ko": "기다리다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "기다리다, ~하곤 하다",
+"inVocab": true,
+"rank": 637,
+"level": 4
 },
 {
 "th": "กะ",
 "grade": 1,
 "reading": "까",
-"ko": "어림잡다, 교대(근무)",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "~와(กับ 구어), 계획하다, 어림잡다",
+"inVocab": true,
+"rank": 129,
+"level": 2
 },
 {
 "th": "เกี่ยว",
 "grade": 1,
-"reading": "끼여우",
-"ko": "걸다, (벼를) 베다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"reading": "끼야우",
+"ko": "관련되다, 관계있다, 걸다",
+"inVocab": true,
+"rank": 772,
+"level": 5
 },
 {
 "th": "ข้าว",
@@ -733,10 +733,10 @@
 "th": "ค่อย",
 "grade": 1,
 "reading": "커이",
-"ko": "천천히, 점차",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "천천히, 차차, 그다음에",
+"inVocab": true,
+"rank": 440,
+"level": 3
 },
 {
 "th": "กะทิ",
@@ -753,8 +753,8 @@
 "reading": "깨",
 "ko": "너 (2인칭, 친근)",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 78,
+"level": 1
 },
 {
 "th": "ขี่",
@@ -771,8 +771,8 @@
 "reading": "카",
 "ko": "존칭어조사 (여성, 평서문)",
 "inVocab": true,
-"rank": 883,
-"level": 5
+"rank": 23,
+"level": 1
 },
 {
 "th": "กะละมัง",
@@ -789,17 +789,17 @@
 "reading": "깨",
 "ko": "늙다",
 "inVocab": true,
-"rank": 160,
-"level": 2
+"rank": 0,
+"level": 0
 },
 {
 "th": "ขี้",
 "grade": 1,
 "reading": "키",
-"ko": "똥, 배설하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "똥, ~하는 버릇이 있는(ขี้เกียจ 등 접두)",
+"inVocab": true,
+"rank": 910,
+"level": 5
 },
 {
 "th": "คะน้า",
@@ -852,7 +852,7 @@
 "reading": "깐",
 "ko": "서로, 함께",
 "inVocab": true,
-"rank": 87,
+"rank": 33,
 "level": 1
 },
 {
@@ -861,8 +861,8 @@
 "reading": "깨우",
 "ko": "잔, 잔, 컵, 컵",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 360,
+"level": 3
 },
 {
 "th": "ขึ้น",
@@ -870,8 +870,8 @@
 "reading": "큰",
 "ko": "타다, (교통수단) 타다, 올라타다, 타다(차에 오르다)",
 "inVocab": true,
-"rank": 55,
-"level": 1
+"rank": 139,
+"level": 2
 },
 {
 "th": "คั่ว",
@@ -888,7 +888,7 @@
 "reading": "깝",
 "ko": "~와 함께, ~와",
 "inVocab": true,
-"rank": 15,
+"rank": 37,
 "level": 1
 },
 {
@@ -922,10 +922,10 @@
 "th": "กา",
 "grade": 1,
 "reading": "까",
-"ko": "까마귀, 주전자",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "까마귀, 주전자, 표시하다(체크)",
+"inVocab": true,
+"rank": 770,
+"level": 5
 },
 {
 "th": "ใกล้",
@@ -933,8 +933,8 @@
 "reading": "끌라이",
 "ko": "가깝다, 근처",
 "inVocab": true,
-"rank": 821,
-"level": 5
+"rank": 437,
+"level": 3
 },
 {
 "th": "เข็ม",
@@ -978,8 +978,8 @@
 "reading": "카오",
 "ko": "그, 그녀 (3인칭)",
 "inVocab": true,
-"rank": 156,
-"level": 2,
+"rank": 34,
+"level": 1,
 "hint": "(ส)"
 },
 {
@@ -988,7 +988,7 @@
 "reading": "캄 / 캄쌉",
 "ko": "단어",
 "inVocab": true,
-"rank": 441,
+"rank": 433,
 "level": 3
 },
 {
@@ -1005,9 +1005,9 @@
 "grade": 1,
 "reading": "쩟",
 "ko": "주차하다, 세우다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 726,
+"level": 4
 },
 {
 "th": "ชนะ",
@@ -1015,8 +1015,8 @@
 "reading": "차나",
 "ko": "이기다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 456,
+"level": 3
 },
 {
 "th": "ซ่อน",
@@ -1069,8 +1069,8 @@
 "reading": "킷",
 "ko": "생각하다, 계산하다",
 "inVocab": true,
-"rank": 231,
-"level": 2
+"rank": 70,
+"level": 1
 },
 {
 "th": "จะ",
@@ -1078,7 +1078,7 @@
 "reading": "짜",
 "ko": "~할 것이다(미래)",
 "inVocab": true,
-"rank": 10,
+"rank": 6,
 "level": 1
 },
 {
@@ -1086,9 +1086,9 @@
 "grade": 1,
 "reading": "추안",
 "ko": "권하다, 초대하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 547,
+"level": 4
 },
 {
 "th": "ซ่อม",
@@ -1123,7 +1123,7 @@
 "reading": "추아이",
 "ko": "돕다",
 "inVocab": true,
-"rank": 42,
+"rank": 90,
 "level": 1
 },
 {
@@ -1141,8 +1141,8 @@
 "reading": "큰",
 "ko": "밤",
 "inVocab": true,
-"rank": 618,
-"level": 4
+"rank": 317,
+"level": 3
 },
 {
 "th": "จัด",
@@ -1177,7 +1177,7 @@
 "reading": "크",
 "ko": "~이다 (지시, 나열, 정의할 때)",
 "inVocab": true,
-"rank": 29,
+"rank": 52,
 "level": 1
 },
 {
@@ -1186,8 +1186,8 @@
 "reading": "짭",
 "ko": "잡다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 316,
+"level": 3
 },
 {
 "th": "ชอบ",
@@ -1195,8 +1195,8 @@
 "reading": "첩",
 "ko": "좋아하다",
 "inVocab": true,
-"rank": 518,
-"level": 4
+"rank": 95,
+"level": 1
 },
 {
 "th": "ซ้าย",
@@ -1222,8 +1222,8 @@
 "reading": "짝",
 "ko": "~로부터, 떠나다",
 "inVocab": true,
-"rank": 14,
-"level": 1
+"rank": 154,
+"level": 2
 },
 {
 "th": "ชะอม",
@@ -1238,19 +1238,19 @@
 "th": "ซิ",
 "grade": 1,
 "reading": "씨",
-"ko": "~해(재촉 어조사)",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "~해(권유, 강조 어말조사, สิ 변형)",
+"inVocab": true,
+"rank": 320,
+"level": 3
 },
 {
 "th": "คุย",
 "grade": 1,
 "reading": "쿠이",
 "ko": "이야기하다, 수다 떨다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 123,
+"level": 2
 },
 {
 "th": "จ้าง",
@@ -1276,8 +1276,8 @@
 "reading": "쓰",
 "ko": "사다, 구입하다, 사다",
 "inVocab": true,
-"rank": 69,
-"level": 1
+"rank": 190,
+"level": 2
 },
 {
 "th": "คู",
@@ -1319,10 +1319,10 @@
 "th": "คู่",
 "grade": 1,
 "reading": "쿠",
-"ko": "짝, 쌍",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "짝, 커플, 쌍",
+"inVocab": true,
+"rank": 695,
+"level": 4
 },
 {
 "th": "จำ",
@@ -1330,8 +1330,8 @@
 "reading": "짬",
 "ko": "기억하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 343,
+"level": 3
 },
 {
 "th": "ชั่ว",
@@ -1348,7 +1348,7 @@
 "reading": "두어이",
 "ko": "~도, ~로써, 함께",
 "inVocab": true,
-"rank": 34,
+"rank": 41,
 "level": 1
 },
 {
@@ -1382,10 +1382,10 @@
 "th": "ดอก",
 "grade": 1,
 "reading": "덕",
-"ko": "꽃, 이자",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "꽃(류별사), 이자",
+"inVocab": true,
+"rank": 923,
+"level": 5
 },
 {
 "th": "เคย",
@@ -1393,8 +1393,8 @@
 "reading": "크이",
 "ko": "~한 적이 있다(경험)",
 "inVocab": true,
-"rank": 262,
-"level": 3
+"rank": 114,
+"level": 2
 },
 {
 "th": "จิ้งจอก",
@@ -1420,8 +1420,8 @@
 "reading": "당",
 "ko": "(소리가) 크다",
 "inVocab": true,
-"rank": 956,
-"level": 5,
+"rank": 568,
+"level": 4,
 "hint": "(ข)"
 },
 {
@@ -1455,10 +1455,10 @@
 "th": "ด่า",
 "grade": 1,
 "reading": "다",
-"ko": "욕하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "욕하다, 꾸짖다",
+"inVocab": true,
+"rank": 550,
+"level": 4
 },
 {
 "th": "แค่",
@@ -1466,8 +1466,8 @@
 "reading": "캐",
 "ko": "단지, ~만큼",
 "inVocab": true,
-"rank": 348,
-"level": 3
+"rank": 76,
+"level": 1
 },
 {
 "th": "จึง",
@@ -1475,17 +1475,17 @@
 "reading": "쯩",
 "ko": "그래서, 따라서",
 "inVocab": true,
-"rank": 58,
-"level": 1
+"rank": 901,
+"level": 5
 },
 {
 "th": "ชาย",
 "grade": 1,
 "reading": "차이",
 "ko": "남성, 남자, 가장자리",
-"inVocab": true,
-"rank": 827,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ดาว",
@@ -1493,8 +1493,8 @@
 "reading": "다우",
 "ko": "별",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 301,
+"level": 3
 },
 {
 "th": "ใคร",
@@ -1502,8 +1502,8 @@
 "reading": "크라이",
 "ko": "누가, 누구",
 "inVocab": true,
-"rank": 386,
-"level": 3
+"rank": 60,
+"level": 1
 },
 {
 "th": "จืด",
@@ -1511,17 +1511,17 @@
 "reading": "방 / 쯧 / 언",
 "ko": "얇다, 연하다, 싱겁다, 부드럽다",
 "inVocab": true,
-"rank": 268,
-"level": 3
+"rank": 0,
+"level": 0
 },
 {
 "th": "ชาว",
 "grade": 1,
 "reading": "차우",
 "ko": "~사람, ~민(民)",
-"inVocab": true,
-"rank": 975,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ดำ",
@@ -1538,9 +1538,9 @@
 "grade": 1,
 "reading": "카",
 "ko": "죽이다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 260,
+"level": 3
 },
 {
 "th": "เจ็บ",
@@ -1548,8 +1548,8 @@
 "reading": "쩹",
 "ko": "아프다, 다치다",
 "inVocab": true,
-"rank": 764,
-"level": 5
+"rank": 420,
+"level": 3
 },
 {
 "th": "ชิงช้า",
@@ -1575,7 +1575,7 @@
 "reading": "응안",
 "ko": "일, 업무, 행사",
 "inVocab": true,
-"rank": 243,
+"rank": 143,
 "level": 2
 },
 {
@@ -1583,9 +1583,9 @@
 "grade": 1,
 "reading": "쩌",
 "ko": "만나다, 발견하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 127,
+"level": 2
 },
 {
 "th": "ดินสอ",
@@ -1609,10 +1609,10 @@
 "th": "เจ้า",
 "grade": 1,
 "reading": "짜오",
-"ko": "주인, 왕족",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "너(사극, 친밀), 주인, 왕족",
+"inVocab": true,
+"rank": 381,
+"level": 3
 },
 {
 "th": "ชื่อ",
@@ -1620,8 +1620,8 @@
 "reading": "츠",
 "ko": "이름",
 "inVocab": true,
-"rank": 425,
-"level": 3
+"rank": 159,
+"level": 2
 },
 {
 "th": "ดี",
@@ -1629,7 +1629,7 @@
 "reading": "디",
 "ko": "좋음",
 "inVocab": true,
-"rank": 68,
+"rank": 46,
 "level": 1
 },
 {
@@ -1638,7 +1638,7 @@
 "reading": "응아이",
 "ko": "쉽다",
 "inVocab": true,
-"rank": 251,
+"rank": 495,
 "level": 3
 },
 {
@@ -1656,8 +1656,8 @@
 "reading": "츧",
 "ko": "벌(세트)",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 435,
+"level": 3
 },
 {
 "th": "ดึง",
@@ -1701,7 +1701,7 @@
 "reading": "듬",
 "ko": "마시다",
 "inVocab": true,
-"rank": 521,
+"rank": 737,
 "level": 4
 },
 {
@@ -1728,8 +1728,8 @@
 "reading": "차오",
 "ko": "오전, 아침, 아침, 오전, 아침, 오전",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 944,
+"level": 5
 },
 {
 "th": "ดื้อ",
@@ -1746,8 +1746,8 @@
 "reading": "응언",
 "ko": "돈, 은, 은색",
 "inVocab": true,
-"rank": 99,
-"level": 1
+"rank": 182,
+"level": 2
 },
 {
 "th": "ใจ",
@@ -1755,8 +1755,8 @@
 "reading": "짜이",
 "ko": "마음, 심장",
 "inVocab": true,
-"rank": 720,
-"level": 4
+"rank": 178,
+"level": 2
 },
 {
 "th": "เชิด",
@@ -1791,8 +1791,8 @@
 "reading": "짜이디",
 "ko": "착하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 754,
+"level": 5
 },
 {
 "th": "เชื่อ",
@@ -1800,8 +1800,8 @@
 "reading": "츠아",
 "ko": "믿다",
 "inVocab": true,
-"rank": 670,
-"level": 4
+"rank": 212,
+"level": 2
 },
 {
 "th": "ดู",
@@ -1809,8 +1809,8 @@
 "reading": "두",
 "ko": "보다",
 "inVocab": true,
-"rank": 206,
-"level": 2
+"rank": 69,
+"level": 1
 },
 {
 "th": "จน",
@@ -1818,17 +1818,17 @@
 "reading": "쫀",
 "ko": "가난하다",
 "inVocab": true,
-"rank": 183,
-"level": 2
+"rank": 304,
+"level": 3
 },
 {
 "th": "ฉัน",
 "grade": 1,
 "reading": "찬",
-"ko": "나",
-"inVocab": false,
-"rank": 0,
-"level": 0,
+"ko": "나(주로 여성 1인칭)",
+"inVocab": true,
+"rank": 26,
+"level": 1,
 "hint": "(ส)"
 },
 {
@@ -1846,7 +1846,7 @@
 "reading": "덱",
 "ko": "어린이, 아이, 어린이",
 "inVocab": true,
-"rank": 116,
+"rank": 148,
 "level": 2
 },
 {
@@ -1855,17 +1855,17 @@
 "reading": "쫍",
 "ko": "끝나다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 297,
+"level": 3
 },
 {
 "th": "ฉีด",
 "grade": 1,
 "reading": "칫",
 "ko": "주사하다, 분사하다",
-"inVocab": true,
-"rank": 988,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ใช่",
@@ -1873,8 +1873,8 @@
 "reading": "차이",
 "ko": "네, 맞다, ~이다",
 "inVocab": true,
-"rank": 175,
-"level": 2
+"rank": 48,
+"level": 1
 },
 {
 "th": "เดิน",
@@ -1882,8 +1882,8 @@
 "reading": "던",
 "ko": "걷다",
 "inVocab": true,
-"rank": 535,
-"level": 4
+"rank": 354,
+"level": 3
 },
 {
 "th": "จม",
@@ -1909,8 +1909,8 @@
 "reading": "차이 / 짜이(응언)",
 "ko": "쓰다",
 "inVocab": true,
-"rank": 16,
-"level": 1
+"rank": 204,
+"level": 2
 },
 {
 "th": "เดียว",
@@ -1918,7 +1918,7 @@
 "reading": "디여우",
 "ko": "하나의, 단독의, 같은",
 "inVocab": true,
-"rank": 314,
+"rank": 278,
 "level": 3
 },
 {
@@ -1935,10 +1935,10 @@
 "th": "ชน",
 "grade": 1,
 "reading": "촌",
-"ko": "부딪치다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "부딪치다, 충돌하다",
+"inVocab": true,
+"rank": 632,
+"level": 4
 },
 {
 "th": "ซน",
@@ -1961,11 +1961,11 @@
 {
 "th": "เดี๋ยว",
 "grade": 1,
-"reading": "디여우",
-"ko": "잠깐, 곧",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"reading": "디야우",
+"ko": "잠깐, 곧, 이따가",
+"inVocab": true,
+"rank": 42,
+"level": 1
 },
 {
 "th": "ตาก",
@@ -2000,7 +2000,7 @@
 "reading": "댕",
 "ko": "빨간색",
 "inVocab": true,
-"rank": 945,
+"rank": 941,
 "level": 5
 },
 {
@@ -2009,7 +2009,7 @@
 "reading": "땅",
 "ko": "다른, 각각, 서로",
 "inVocab": true,
-"rank": 515,
+"rank": 701,
 "level": 4
 },
 {
@@ -2027,8 +2027,8 @@
 "reading": "탕",
 "ko": "모두, 전체, ~도 ~도",
 "inVocab": true,
-"rank": 63,
-"level": 1
+"rank": 291,
+"level": 3
 },
 {
 "th": "แดด",
@@ -2045,8 +2045,8 @@
 "reading": "땀",
 "ko": "~에 따라, 따라가다",
 "inVocab": true,
-"rank": 46,
-"level": 1
+"rank": 189,
+"level": 2
 },
 {
 "th": "ถอด",
@@ -2061,19 +2061,19 @@
 "th": "ทัน",
 "grade": 1,
 "reading": "탄",
-"ko": "제때에, 따라잡다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "제때 맞추다, 따라잡다",
+"inVocab": true,
+"rank": 367,
+"level": 3
 },
 {
 "th": "โดด",
 "grade": 1,
 "reading": "돗",
-"ko": "뛰다, 점프하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "뛰어오르다, 땡땡이치다",
+"inVocab": true,
+"rank": 979,
+"level": 5
 },
 {
 "th": "ตาย",
@@ -2081,8 +2081,8 @@
 "reading": "따이",
 "ko": "죽다",
 "inVocab": true,
-"rank": 884,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "ถอน",
@@ -2106,10 +2106,10 @@
 "th": "โดน",
 "grade": 1,
 "reading": "돈",
-"ko": "당하다, 맞다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "~당하다(피동), 맞다",
+"inVocab": true,
+"rank": 202,
+"level": 2
 },
 {
 "th": "ตำ",
@@ -2125,18 +2125,18 @@
 "grade": 1,
 "reading": "터이",
 "ko": "물러나다, 후진하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 665,
+"level": 4
 },
 {
 "th": "ทา",
 "grade": 1,
 "reading": "타",
-"ko": "바르다(연고, 페인트)",
-"inVocab": true,
-"rank": 967,
-"level": 5
+"ko": "바르다(연고·페인트)",
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "โดย",
@@ -2144,8 +2144,8 @@
 "reading": "도이",
 "ko": "~에 의해, ~로써",
 "inVocab": true,
-"rank": 18,
-"level": 1
+"rank": 487,
+"level": 3
 },
 {
 "th": "ติด",
@@ -2153,7 +2153,7 @@
 "reading": "띳",
 "ko": "붙다, 걸리다, 중독되다",
 "inVocab": true,
-"rank": 478,
+"rank": 326,
 "level": 3
 },
 {
@@ -2171,8 +2171,8 @@
 "reading": "탕",
 "ko": "쪽, 길, 방향",
 "inVocab": true,
-"rank": 66,
-"level": 1
+"rank": 199,
+"level": 2
 },
 {
 "th": "ได้",
@@ -2180,17 +2180,17 @@
 "reading": "다이",
 "ko": "~할 수 있다, 얻다",
 "inVocab": true,
-"rank": 7,
+"rank": 8,
 "level": 1
 },
 {
 "th": "ตี",
 "grade": 1,
 "reading": "띠",
-"ko": "때리다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "때리다, 치다, 새벽 ~시",
+"inVocab": true,
+"rank": 817,
+"level": 5
 },
 {
 "th": "ถั่ว",
@@ -2207,18 +2207,18 @@
 "reading": "탄",
 "ko": "먹다(공손), 드시다",
 "inVocab": true,
-"rank": 952,
-"level": 5,
+"rank": 643,
+"level": 4,
 "hint": "(กิน)"
 },
 {
 "th": "ตก",
 "grade": 1,
 "reading": "똑",
-"ko": "떨어지다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "떨어지다, 낙하하다, 낙방하다",
+"inVocab": true,
+"rank": 785,
+"level": 5
 },
 {
 "th": "ตีน",
@@ -2235,7 +2235,7 @@
 "reading": "타",
 "ko": "만약",
 "inVocab": true,
-"rank": 86,
+"rank": 45,
 "level": 1
 },
 {
@@ -2244,17 +2244,17 @@
 "reading": "탄",
 "ko": "당신 (2인칭, 존칭), 그분 (3인칭, 존칭)",
 "inVocab": true,
-"rank": 533,
-"level": 4
+"rank": 126,
+"level": 2
 },
 {
 "th": "ตน",
 "grade": 1,
 "reading": "똔",
 "ko": "자신, 본인(문어)",
-"inVocab": true,
-"rank": 543,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ตึก",
@@ -2280,17 +2280,17 @@
 "reading": "탐",
 "ko": "하다, 만들다",
 "inVocab": true,
-"rank": 48,
+"rank": 32,
 "level": 1
 },
 {
 "th": "ต้น",
 "grade": 1,
 "reading": "똔",
-"ko": "나무, 그루(분류사)",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "나무(류별사), 처음, 근원",
+"inVocab": true,
+"rank": 349,
+"level": 3
 },
 {
 "th": "ตื่น",
@@ -2298,8 +2298,8 @@
 "reading": "뜬",
 "ko": "(잠에서) 깨다, 일어나다, 깨다, 일어나다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 414,
+"level": 3
 },
 {
 "th": "ถาด",
@@ -2316,8 +2316,8 @@
 "reading": "탐마이",
 "ko": "왜",
 "inVocab": true,
-"rank": 985,
-"level": 5
+"rank": 54,
+"level": 1
 },
 {
 "th": "ต้ม",
@@ -2361,8 +2361,8 @@
 "reading": "떠",
 "ko": "~에 대해, 계속하다, 잇다",
 "inVocab": true,
-"rank": 30,
-"level": 1
+"rank": 191,
+"level": 2
 },
 {
 "th": "ตู้",
@@ -2379,8 +2379,8 @@
 "reading": "탐",
 "ko": "묻다, 질문하다",
 "inVocab": true,
-"rank": 874,
-"level": 5
+"rank": 145,
+"level": 2
 },
 {
 "th": "ทิ้ง",
@@ -2388,8 +2388,8 @@
 "reading": "팅",
 "ko": "버리다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 361,
+"level": 3
 },
 {
 "th": "ตอก",
@@ -2406,8 +2406,8 @@
 "reading": "뗀",
 "ko": "춤추다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 704,
+"level": 4
 },
 {
 "th": "ถีบ",
@@ -2424,8 +2424,8 @@
 "reading": "티",
 "ko": "번, 차례, 때",
 "inVocab": true,
-"rank": 862,
-"level": 5
+"rank": 270,
+"level": 3
 },
 {
 "th": "ต้อง",
@@ -2433,7 +2433,7 @@
 "reading": "떵",
 "ko": "~해야 한다",
 "inVocab": true,
-"rank": 20,
+"rank": 40,
 "level": 1
 },
 {
@@ -2442,7 +2442,7 @@
 "reading": "뗌",
 "ko": "가득 차다",
 "inVocab": true,
-"rank": 994,
+"rank": 819,
 "level": 5
 },
 {
@@ -2451,7 +2451,7 @@
 "reading": "틍",
 "ko": "도착하다",
 "inVocab": true,
-"rank": 65,
+"rank": 98,
 "level": 1
 },
 {
@@ -2460,7 +2460,7 @@
 "reading": "티",
 "ko": "~번째 (명사 + ที่ + 숫자)",
 "inVocab": true,
-"rank": 1,
+"rank": 17,
 "level": 1
 },
 {
@@ -2469,8 +2469,8 @@
 "reading": "떤",
 "ko": "때, 부분, 회(에피소드)",
 "inVocab": true,
-"rank": 911,
-"level": 5
+"rank": 255,
+"level": 3
 },
 {
 "th": "เตะ",
@@ -2478,17 +2478,17 @@
 "reading": "떼",
 "ko": "발로 차다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 974,
+"level": 5
 },
 {
 "th": "ถือ",
 "grade": 1,
 "reading": "트",
 "ko": "들다, 보유하다, 간주하다",
-"inVocab": true,
-"rank": 517,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ทีวี",
@@ -2505,7 +2505,7 @@
 "reading": "떱",
 "ko": "대답하다, 답하다",
 "inVocab": true,
-"rank": 258,
+"rank": 390,
 "level": 3
 },
 {
@@ -2532,8 +2532,8 @@
 "reading": "툭",
 "ko": "모든, 매~",
 "inVocab": true,
-"rank": 140,
-"level": 2
+"rank": 306,
+"level": 3
 },
 {
 "th": "ต่อย",
@@ -2595,17 +2595,17 @@
 "reading": "툭",
 "ko": "(가격이) 싸다, 싸다",
 "inVocab": true,
-"rank": 88,
-"level": 1
+"rank": 221,
+"level": 2
 },
 {
 "th": "เท",
 "grade": 1,
 "reading": "테",
 "ko": "붓다, 쏟다",
-"inVocab": true,
-"rank": 393,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ตะไคร้",
@@ -2629,10 +2629,10 @@
 "th": "แถว",
 "grade": 1,
 "reading": "태우",
-"ko": "줄, 근처",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "근처, 줄, 열",
+"inVocab": true,
+"rank": 734,
+"level": 4
 },
 {
 "th": "เท่า",
@@ -2640,7 +2640,7 @@
 "reading": "타오",
 "ko": "~만큼, 배(倍), 같은",
 "inVocab": true,
-"rank": 634,
+"rank": 691,
 "level": 4
 },
 {
@@ -2658,7 +2658,7 @@
 "reading": "때",
 "ko": "그러나, 단지",
 "inVocab": true,
-"rank": 28,
+"rank": 31,
 "level": 1
 },
 {
@@ -2748,8 +2748,8 @@
 "reading": "티얀",
 "ko": "양초",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 863,
+"level": 5
 },
 {
 "th": "ตั้ง",
@@ -2757,17 +2757,17 @@
 "reading": "땅",
 "ko": "세우다, 설립하다, 설정하다",
 "inVocab": true,
-"rank": 660,
-"level": 4
+"rank": 249,
+"level": 2
 },
 {
 "th": "แต่ง",
 "grade": 1,
 "reading": "땡",
-"ko": "꾸미다, 작곡하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "꾸미다, 결혼하다(แต่งงาน), 짓다(작곡, 작문)",
+"inVocab": true,
+"rank": 823,
+"level": 5
 },
 {
 "th": "ทอง",
@@ -2781,11 +2781,11 @@
 {
 "th": "เที่ยว",
 "grade": 1,
-"reading": "티여우",
+"reading": "티야우",
 "ko": "놀러 가다, 여행하다",
-"inVocab": false,
-"rank": 0,
-"level": 0,
+"inVocab": true,
+"rank": 1000,
+"level": 5,
 "hint": "(ก)"
 },
 {
@@ -2794,8 +2794,8 @@
 "reading": "딷",
 "ko": "커트(이발)하다",
 "inVocab": true,
-"rank": 976,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "โต",
@@ -2803,8 +2803,8 @@
 "reading": "또",
 "ko": "자라다",
 "inVocab": true,
-"rank": 420,
-"level": 3
+"rank": 715,
+"level": 4
 },
 {
 "th": "ท้อง",
@@ -2812,8 +2812,8 @@
 "reading": "텅",
 "ko": "배",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 870,
+"level": 5
 },
 {
 "th": "แทน",
@@ -2821,17 +2821,17 @@
 "reading": "탠",
 "ko": "대신하다, 대신에",
 "inVocab": true,
-"rank": 458,
-"level": 3
+"rank": 614,
+"level": 4
 },
 {
 "th": "ตับ",
 "grade": 1,
 "reading": "땁",
 "ko": "간(肝)",
-"inVocab": true,
-"rank": 669,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "โต๊ะ",
@@ -2839,8 +2839,8 @@
 "reading": "또",
 "ko": "책상",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 820,
+"level": 5
 },
 {
 "th": "ทอด",
@@ -2857,8 +2857,8 @@
 "reading": "타이",
 "ko": "태국, 태국의",
 "inVocab": true,
-"rank": 54,
-"level": 1
+"rank": 503,
+"level": 4
 },
 {
 "th": "ตัว",
@@ -2866,7 +2866,7 @@
 "reading": "뚜워",
 "ko": "몸",
 "inVocab": true,
-"rank": 117,
+"rank": 174,
 "level": 2
 },
 {
@@ -2893,8 +2893,8 @@
 "reading": "터",
 "ko": "너 (2인칭), 그녀 (3인칭)",
 "inVocab": true,
-"rank": 414,
-"level": 3
+"rank": 51,
+"level": 1
 },
 {
 "th": "ตา",
@@ -2902,7 +2902,7 @@
 "reading": "따",
 "ko": "눈",
 "inVocab": true,
-"rank": 358,
+"rank": 333,
 "level": 3
 },
 {
@@ -2938,17 +2938,17 @@
 "reading": "놈",
 "ko": "우유",
 "inVocab": true,
-"rank": 922,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "นึก",
 "grade": 1,
 "reading": "늑",
 "ko": "생각하다, 떠올리다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 583,
+"level": 4
 },
 {
 "th": "ใบ",
@@ -2956,8 +2956,8 @@
 "reading": "바이",
 "ko": "잎, 장(종이 단위), 증서",
 "inVocab": true,
-"rank": 759,
-"level": 5
+"rank": 604,
+"level": 4
 },
 {
 "th": "แปรง",
@@ -2992,8 +2992,8 @@
 "reading": "쁘라뚜",
 "ko": "문",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 660,
+"level": 4
 },
 {
 "th": "แปล",
@@ -3001,17 +3001,17 @@
 "reading": "쁠래",
 "ko": "번역하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 400,
+"level": 3
 },
 {
 "th": "น้อง",
 "grade": 1,
 "reading": "넝",
-"ko": "동생",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "동생, 손아래 사람(연하 호칭)",
+"inVocab": true,
+"rank": 132,
+"level": 2
 },
 {
 "th": "นุ่ง",
@@ -3028,8 +3028,8 @@
 "reading": "쁠라",
 "ko": "물고기",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 963,
+"level": 5
 },
 {
 "th": "ไป",
@@ -3037,7 +3037,7 @@
 "reading": "빠이",
 "ko": "가다",
 "inVocab": true,
-"rank": 17,
+"rank": 3,
 "level": 1
 },
 {
@@ -3046,8 +3046,8 @@
 "reading": "넌",
 "ko": "눕다, 자다",
 "inVocab": true,
-"rank": 733,
-"level": 4
+"rank": 262,
+"level": 3
 },
 {
 "th": "เนื้อ",
@@ -3055,7 +3055,7 @@
 "reading": "느아",
 "ko": "고기, 살, 내용",
 "inVocab": true,
-"rank": 807,
+"rank": 980,
 "level": 5
 },
 {
@@ -3064,8 +3064,8 @@
 "reading": "뿌웓",
 "ko": "(통증 등) 아프다",
 "inVocab": true,
-"rank": 378,
-"level": 3
+"rank": 0,
+"level": 0
 },
 {
 "th": "ผม",
@@ -3073,8 +3073,8 @@
 "reading": "폼",
 "ko": "나 (1인칭, 남성), 나, 머리카락",
 "inVocab": true,
-"rank": 235,
-"level": 2,
+"rank": 22,
+"level": 1,
 "hint": "(น)"
 },
 {
@@ -3083,17 +3083,17 @@
 "reading": "너이",
 "ko": "적다",
 "inVocab": true,
-"rank": 191,
-"level": 2
+"rank": 422,
+"level": 3
 },
 {
 "th": "แน่",
 "grade": 1,
 "reading": "내",
-"ko": "확실한",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "확실히, 분명히",
+"inVocab": true,
+"rank": 229,
+"level": 2
 },
 {
 "th": "ป่วย",
@@ -3110,8 +3110,8 @@
 "reading": "팍",
 "ko": "채소, 야채",
 "inVocab": true,
-"rank": 993,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "นัก",
@@ -3119,7 +3119,7 @@
 "reading": "낙",
 "ko": "~하는 사람(전문가 접두사), 매우",
 "inVocab": true,
-"rank": 416,
+"rank": 410,
 "level": 3
 },
 {
@@ -3155,8 +3155,8 @@
 "reading": "낭",
 "ko": "(교통수단) 타다, 앉다, 앉다",
 "inVocab": true,
-"rank": 824,
-"level": 5
+"rank": 216,
+"level": 2
 },
 {
 "th": "ใน",
@@ -3164,7 +3164,7 @@
 "reading": "나이",
 "ko": "안(속)",
 "inVocab": true,
-"rank": 3,
+"rank": 66,
 "level": 1
 },
 {
@@ -3182,8 +3182,8 @@
 "reading": "파",
 "ko": "천",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 970,
+"level": 5
 },
 {
 "th": "นั่น",
@@ -3191,8 +3191,8 @@
 "reading": "난",
 "ko": "그(것, 곳, 사람)",
 "inVocab": true,
-"rank": 700,
-"level": 4
+"rank": 226,
+"level": 2
 },
 {
 "th": "บน",
@@ -3200,8 +3200,8 @@
 "reading": "본",
 "ko": "위",
 "inVocab": true,
-"rank": 167,
-"level": 2
+"rank": 608,
+"level": 4
 },
 {
 "th": "ปั้น",
@@ -3218,8 +3218,8 @@
 "reading": "판",
 "ko": "통과하다",
 "inVocab": true,
-"rank": 104,
-"level": 2
+"rank": 315,
+"level": 3
 },
 {
 "th": "นั้น",
@@ -3227,7 +3227,7 @@
 "reading": "난",
 "ko": "그, 그것",
 "inVocab": true,
-"rank": 47,
+"rank": 92,
 "level": 1
 },
 {
@@ -3254,8 +3254,8 @@
 "reading": "핏",
 "ko": "틀리다, 잘못된",
 "inVocab": true,
-"rank": 814,
-"level": 5
+"rank": 335,
+"level": 3
 },
 {
 "th": "นับ",
@@ -3263,7 +3263,7 @@
 "reading": "넙",
 "ko": "세다, 셈을 하다",
 "inVocab": true,
-"rank": 622,
+"rank": 644,
 "level": 4
 },
 {
@@ -3281,8 +3281,8 @@
 "reading": "빠 / 아 / 나",
 "ko": "아주머니, 고모, 이모",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 372,
+"level": 3
 },
 {
 "th": "ผี",
@@ -3297,10 +3297,10 @@
 "th": "นา",
 "grade": 1,
 "reading": "나",
-"ko": "논",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "논, ~잖아(어말조사 นะ 변형)",
+"inVocab": true,
+"rank": 662,
+"level": 4
 },
 {
 "th": "บ่อ",
@@ -3317,7 +3317,7 @@
 "reading": "빡",
 "ko": "입",
 "inVocab": true,
-"rank": 639,
+"rank": 615,
 "level": 4
 },
 {
@@ -3326,8 +3326,8 @@
 "reading": "푸",
 "ko": "~하는 사람(접두사)",
 "inVocab": true,
-"rank": 59,
-"level": 1
+"rank": 969,
+"level": 5
 },
 {
 "th": "น่า",
@@ -3335,8 +3335,8 @@
 "reading": "나",
 "ko": "~할 만하다(접두사), ~스럽다",
 "inVocab": true,
-"rank": 992,
-"level": 5
+"rank": 201,
+"level": 2
 },
 {
 "th": "บอก",
@@ -3344,8 +3344,8 @@
 "reading": "벅",
 "ko": "말하다, 알려주다",
 "inVocab": true,
-"rank": 650,
-"level": 4
+"rank": 65,
+"level": 1
 },
 {
 "th": "ปิ้ง",
@@ -3371,8 +3371,8 @@
 "reading": "룽 / 아 / 나",
 "ko": "백부, 숙부, 이모",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 293,
+"level": 3
 },
 {
 "th": "บอด",
@@ -3389,8 +3389,8 @@
 "reading": "뺀",
 "ko": "~을 끄다, 닫다",
 "inVocab": true,
-"rank": 560,
-"level": 4
+"rank": 358,
+"level": 3
 },
 {
 "th": "เผา",
@@ -3405,10 +3405,10 @@
 "th": "นาง",
 "grade": 1,
 "reading": "낭",
-"ko": "부인, ~씨(기혼 여성)",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "그녀, 걔(여성 3인칭 구어), ~부인",
+"inVocab": true,
+"rank": 884,
+"level": 5
 },
 {
 "th": "บอน",
@@ -3425,17 +3425,17 @@
 "reading": "삐",
 "ko": "년",
 "inVocab": true,
-"rank": 27,
-"level": 1
+"rank": 192,
+"level": 2
 },
 {
 "th": "เผื่อ",
 "grade": 1,
 "reading": "프아",
-"ko": "만약을 위해, 여분으로",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "~할 경우를 대비해, 혹시 몰라서",
+"inVocab": true,
+"rank": 590,
+"level": 4
 },
 {
 "th": "นาน",
@@ -3443,8 +3443,8 @@
 "reading": "난",
 "ko": "오래, 오랫동안",
 "inVocab": true,
-"rank": 322,
-"level": 3
+"rank": 208,
+"level": 2
 },
 {
 "th": "บ่อน",
@@ -3470,8 +3470,8 @@
 "reading": "폰",
 "ko": "비",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 988,
+"level": 5
 },
 {
 "th": "นาย",
@@ -3479,7 +3479,7 @@
 "reading": "나이",
 "ko": "~씨(남성 존칭), 주인, 상사",
 "inVocab": true,
-"rank": 249,
+"rank": 116,
 "level": 2
 },
 {
@@ -3488,8 +3488,8 @@
 "reading": "버이",
 "ko": "자주",
 "inVocab": true,
-"rank": 500,
-"level": 3
+"rank": 0,
+"level": 0
 },
 {
 "th": "ปืน",
@@ -3497,8 +3497,8 @@
 "reading": "쁜",
 "ko": "총기",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 745,
+"level": 4
 },
 {
 "th": "ฝัง",
@@ -3550,9 +3550,9 @@
 "grade": 1,
 "reading": "남",
 "ko": "이끌다, 가져오다",
-"inVocab": true,
-"rank": 127,
-"level": 2
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "บันได",
@@ -3578,9 +3578,9 @@
 "grade": 1,
 "reading": "파이",
 "ko": "측, 부서, 편",
-"inVocab": true,
-"rank": 385,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "น้ำ",
@@ -3588,7 +3588,7 @@
 "reading": "남",
 "ko": "물",
 "inVocab": true,
-"rank": 283,
+"rank": 252,
 "level": 3
 },
 {
@@ -3597,8 +3597,8 @@
 "reading": "방",
 "ko": "얇다",
 "inVocab": true,
-"rank": 268,
-"level": 3
+"rank": 0,
+"level": 0
 },
 {
 "th": "ปู่",
@@ -3633,7 +3633,7 @@
 "reading": "방",
 "ko": "조금, 일부, 어떤 것들",
 "inVocab": true,
-"rank": 246,
+"rank": 117,
 "level": 2
 },
 {
@@ -3651,8 +3651,8 @@
 "reading": "폽",
 "ko": "만나다, 발견하다",
 "inVocab": true,
-"rank": 78,
-"level": 1
+"rank": 537,
+"level": 4
 },
 {
 "th": "นิทาน",
@@ -3669,7 +3669,7 @@
 "reading": "반",
 "ko": "집",
 "inVocab": true,
-"rank": 200,
+"rank": 112,
 "level": 2
 },
 {
@@ -3685,10 +3685,10 @@
 "th": "พระ",
 "grade": 1,
 "reading": "프라",
-"ko": "승려, 부처",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "스님, 부처, 불상",
+"inVocab": true,
+"rank": 579,
+"level": 4
 },
 {
 "th": "นิ่ม",
@@ -3714,7 +3714,7 @@
 "reading": "뻰",
 "ko": "~이다 (소속, 직업을 나타낼 때)",
 "inVocab": true,
-"rank": 8,
+"rank": 24,
 "level": 1
 },
 {
@@ -3748,10 +3748,10 @@
 "th": "เปล่า",
 "grade": 1,
 "reading": "쁠라오",
-"ko": "비어 있는, 아니요",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "아니, 아무것도 아님, 비어 있다",
+"inVocab": true,
+"rank": 77,
+"level": 1
 },
 {
 "th": "พวก",
@@ -3759,8 +3759,8 @@
 "reading": "푸웍",
 "ko": "~들 (복수, 인칭대명사 앞에 붙임)",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 82,
+"level": 1
 },
 {
 "th": "นิ้ว",
@@ -3795,8 +3795,8 @@
 "reading": "퍼",
 "ko": "충분하다, ~하자마자, 적당히",
 "inVocab": true,
-"rank": 511,
-"level": 4
+"rank": 133,
+"level": 2
 },
 {
 "th": "นิสัย",
@@ -3822,8 +3822,8 @@
 "reading": "뻗",
 "ko": "오픈(개관), ~을 켜다, 열다",
 "inVocab": true,
-"rank": 185,
-"level": 2
+"rank": 288,
+"level": 3
 },
 {
 "th": "พ่อ",
@@ -3831,8 +3831,8 @@
 "reading": "퍼",
 "ko": "아버지",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 80,
+"level": 1
 },
 {
 "th": "นี่",
@@ -3840,8 +3840,8 @@
 "reading": "니",
 "ko": "이(것, 곳, 사람)",
 "inVocab": true,
-"rank": 741,
-"level": 4
+"rank": 19,
+"level": 1
 },
 {
 "th": "บูชา",
@@ -3876,7 +3876,7 @@
 "reading": "니",
 "ko": "이, 이것",
 "inVocab": true,
-"rank": 25,
+"rank": 39,
 "level": 1
 },
 {
@@ -3885,7 +3885,7 @@
 "reading": "뱁",
 "ko": "패턴",
 "inVocab": true,
-"rank": 64,
+"rank": 79,
 "level": 1
 },
 {
@@ -3903,7 +3903,7 @@
 "reading": "유 / 팍",
 "ko": "있다, 살다",
 "inVocab": true,
-"rank": 38,
+"rank": 28,
 "level": 1
 },
 {
@@ -3966,8 +3966,8 @@
 "reading": "몽",
 "ko": "시",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 658,
+"level": 4
 },
 {
 "th": "รด",
@@ -3984,8 +3984,8 @@
 "reading": "파",
 "ko": "데려가다, 이끌다",
 "inVocab": true,
-"rank": 752,
-"level": 5
+"rank": 183,
+"level": 2
 },
 {
 "th": "มะยม",
@@ -4002,7 +4002,7 @@
 "reading": "마이",
 "ko": "~않다 (동사, 형용사 부정)",
 "inVocab": true,
-"rank": 9,
+"rank": 1,
 "level": 1
 },
 {
@@ -4011,8 +4011,8 @@
 "reading": "껩 / 루암",
 "ko": "모으다",
 "inVocab": true,
-"rank": 324,
-"level": 3
+"rank": 213,
+"level": 2
 },
 {
 "th": "พาย",
@@ -4047,17 +4047,17 @@
 "reading": "러",
 "ko": "기다리다",
 "inVocab": true,
-"rank": 659,
-"level": 4
+"rank": 138,
+"level": 2
 },
 {
 "th": "พี่",
 "grade": 1,
 "reading": "피",
-"ko": "손위 형제자매, 형·누나·언니·오빠",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "언니, 오빠, 형, 누나(연상 호칭)",
+"inVocab": true,
+"rank": 11,
+"level": 1
 },
 {
 "th": "มะลิ",
@@ -4074,17 +4074,17 @@
 "reading": "욕",
 "ko": "들어 올리다, 들다, 면제하다",
 "inVocab": true,
-"rank": 771,
-"level": 5
+"rank": 574,
+"level": 4
 },
 {
 "th": "รอง",
 "grade": 1,
 "reading": "렁",
 "ko": "부(副)~, 차석의, 받치다",
-"inVocab": true,
-"rank": 996,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "พื้น",
@@ -4110,8 +4110,8 @@
 "reading": "엿",
 "ko": "총액, 꼭대기, 최고의",
 "inVocab": true,
-"rank": 749,
-"level": 4
+"rank": 756,
+"level": 5
 },
 {
 "th": "ร้อง",
@@ -4119,8 +4119,8 @@
 "reading": "렁",
 "ko": "노래하다, 소리치다, 청원하다",
 "inVocab": true,
-"rank": 806,
-"level": 5
+"rank": 619,
+"level": 4
 },
 {
 "th": "พุง",
@@ -4145,9 +4145,9 @@
 "grade": 1,
 "reading": "염",
 "ko": "당연히 ~하다, 으레",
-"inVocab": true,
-"rank": 463,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ร้อน",
@@ -4155,8 +4155,8 @@
 "reading": "런",
 "ko": "덥다, 뜨겁다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 758,
+"level": 5
 },
 {
 "th": "พูด",
@@ -4164,8 +4164,8 @@
 "reading": "풋",
 "ko": "말하다",
 "inVocab": true,
-"rank": 742,
-"level": 4
+"rank": 93,
+"level": 1
 },
 {
 "th": "มัน",
@@ -4173,8 +4173,8 @@
 "reading": "만",
 "ko": "그것 (3인칭)",
 "inVocab": true,
-"rank": 271,
-"level": 3,
+"rank": 12,
+"level": 1,
 "hint": "(ส)"
 },
 {
@@ -4192,8 +4192,8 @@
 "reading": "럽",
 "ko": "회(回), 주위, 라운드",
 "inVocab": true,
-"rank": 651,
-"level": 4
+"rank": 418,
+"level": 3
 },
 {
 "th": "เพราะ",
@@ -4201,8 +4201,8 @@
 "reading": "프러",
 "ko": "왜냐하면, ~때문에",
 "inVocab": true,
-"rank": 62,
-"level": 1
+"rank": 144,
+"level": 2
 },
 {
 "th": "มา",
@@ -4210,7 +4210,7 @@
 "reading": "마",
 "ko": "오다",
 "inVocab": true,
-"rank": 31,
+"rank": 10,
 "level": 1
 },
 {
@@ -4219,7 +4219,7 @@
 "reading": "양",
 "ko": "아직, 여전히",
 "inVocab": true,
-"rank": 44,
+"rank": 61,
 "level": 1
 },
 {
@@ -4227,9 +4227,9 @@
 "grade": 1,
 "reading": "라 왕",
 "ko": "조심하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 380,
+"level": 3
 },
 {
 "th": "เพาะ",
@@ -4246,8 +4246,8 @@
 "reading": "마",
 "ko": "말",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 849,
+"level": 5
 },
 {
 "th": "ยา",
@@ -4255,8 +4255,8 @@
 "reading": "야",
 "ko": "약",
 "inVocab": true,
-"rank": 26,
-"level": 1
+"rank": 539,
+"level": 4
 },
 {
 "th": "รัก",
@@ -4264,8 +4264,8 @@
 "reading": "락",
 "ko": "사랑하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 168,
+"level": 2
 },
 {
 "th": "เพื่อ",
@@ -4273,8 +4273,8 @@
 "reading": "프아",
 "ko": "~를 위해",
 "inVocab": true,
-"rank": 21,
-"level": 1
+"rank": 233,
+"level": 2
 },
 {
 "th": "มาก",
@@ -4282,7 +4282,7 @@
 "reading": "막",
 "ko": "많다, 매우",
 "inVocab": true,
-"rank": 57,
+"rank": 59,
 "level": 1
 },
 {
@@ -4290,9 +4290,9 @@
 "grade": 1,
 "reading": "야",
 "ko": "친할머니",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 929,
+"level": 5
 },
 {
 "th": "รักษา",
@@ -4300,8 +4300,8 @@
 "reading": "락싸",
 "ko": "지키다, 치료하다",
 "inVocab": true,
-"rank": 168,
-"level": 2
+"rank": 955,
+"level": 5
 },
 {
 "th": "เพื่อน",
@@ -4309,8 +4309,8 @@
 "reading": "프안",
 "ko": "친구",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 149,
+"level": 2
 },
 {
 "th": "มี",
@@ -4318,7 +4318,7 @@
 "reading": "미",
 "ko": "있음",
 "inVocab": true,
-"rank": 6,
+"rank": 21,
 "level": 1
 },
 {
@@ -4327,7 +4327,7 @@
 "reading": "약",
 "ko": "어렵다",
 "inVocab": true,
-"rank": 498,
+"rank": 351,
 "level": 3
 },
 {
@@ -4345,7 +4345,7 @@
 "reading": "패",
 "ko": "알레르기, 지다",
 "inVocab": true,
-"rank": 708,
+"rank": 551,
 "level": 4
 },
 {
@@ -4373,8 +4373,8 @@
 "reading": "랍",
 "ko": "받다",
 "inVocab": true,
-"rank": 133,
-"level": 2
+"rank": 276,
+"level": 3
 },
 {
 "th": "แพะ",
@@ -4409,8 +4409,8 @@
 "reading": "라카",
 "ko": "가격",
 "inVocab": true,
-"rank": 135,
-"level": 2
+"rank": 809,
+"level": 5
 },
 {
 "th": "ฟัง",
@@ -4418,8 +4418,8 @@
 "reading": "퐝",
 "ko": "듣다",
 "inVocab": true,
-"rank": 864,
-"level": 5
+"rank": 157,
+"level": 2
 },
 {
 "th": "มืด",
@@ -4454,8 +4454,8 @@
 "reading": "판",
 "ko": "이, 이빨, 이빨, 치아, 이",
 "inVocab": true,
-"rank": 709,
-"level": 4,
+"rank": 0,
+"level": 0,
 "hint": "(น)"
 },
 {
@@ -4464,17 +4464,17 @@
 "reading": "므",
 "ko": "손",
 "inVocab": true,
-"rank": 798,
-"level": 5
+"rank": 405,
+"level": 3
 },
 {
 "th": "ยาย",
 "grade": 1,
 "reading": "야이",
-"ko": "외할머니",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "외할머니, 할머니",
+"inVocab": true,
+"rank": 484,
+"level": 3
 },
 {
 "th": "ราด",
@@ -4498,10 +4498,10 @@
 "th": "มื้อ",
 "grade": 1,
 "reading": "므",
-"ko": "끼니, 식사",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "끼니, 식사(단위)",
+"inVocab": true,
+"rank": 824,
+"level": 5
 },
 {
 "th": "ย้าย",
@@ -4518,8 +4518,8 @@
 "reading": "란",
 "ko": "가게, 상점",
 "inVocab": true,
-"rank": 114,
-"level": 2
+"rank": 310,
+"level": 3
 },
 {
 "th": "ฟืน",
@@ -4580,9 +4580,9 @@
 "grade": 1,
 "reading": "잉",
 "ko": "쏘다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 442,
+"level": 3
 },
 {
 "th": "รำ",
@@ -4617,8 +4617,8 @@
 "reading": "임",
 "ko": "미소 짓다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 633,
+"level": 4
 },
 {
 "th": "รีด",
@@ -4653,8 +4653,8 @@
 "reading": "유은",
 "ko": "서다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 540,
+"level": 4
 },
 {
 "th": "รีบ",
@@ -4662,8 +4662,8 @@
 "reading": "립",
 "ko": "서두르다",
 "inVocab": true,
-"rank": 913,
-"level": 5
+"rank": 163,
+"level": 2
 },
 {
 "th": "ไฟ",
@@ -4671,17 +4671,17 @@
 "reading": "퐈이",
 "ko": "불",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 621,
+"level": 4
 },
 {
 "th": "เมีย",
 "grade": 1,
 "reading": "미야",
-"ko": "아내",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "아내, 마누라(구어)",
+"inVocab": true,
+"rank": 468,
+"level": 3
 },
 {
 "th": "ยุง",
@@ -4698,8 +4698,8 @@
 "reading": "루 / 루짝",
 "ko": "알다",
 "inVocab": true,
-"rank": 306,
-"level": 3
+"rank": 47,
+"level": 1
 },
 {
 "th": "มอง",
@@ -4707,8 +4707,8 @@
 "reading": "멍",
 "ko": "바라보다, 여기다",
 "inVocab": true,
-"rank": 556,
-"level": 4
+"rank": 395,
+"level": 3
 },
 {
 "th": "เมื่อ",
@@ -4716,8 +4716,8 @@
 "reading": "므아",
 "ko": "~할 때",
 "inVocab": true,
-"rank": 45,
-"level": 1
+"rank": 439,
+"level": 3
 },
 {
 "th": "ยุ่ง",
@@ -4725,8 +4725,8 @@
 "reading": "융",
 "ko": "바쁘다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 403,
+"level": 3
 },
 {
 "th": "เร็ว",
@@ -4734,8 +4734,8 @@
 "reading": "레우",
 "ko": "빠르다",
 "inVocab": true,
-"rank": 394,
-"level": 3
+"rank": 104,
+"level": 2
 },
 {
 "th": "มะกอก",
@@ -4752,8 +4752,8 @@
 "reading": "므앙",
 "ko": "도시",
 "inVocab": true,
-"rank": 536,
-"level": 4
+"rank": 855,
+"level": 5
 },
 {
 "th": "เย็น",
@@ -4761,8 +4761,8 @@
 "reading": "옌",
 "ko": "차갑다, 저녁",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 699,
+"level": 4
 },
 {
 "th": "เรา",
@@ -4770,7 +4770,7 @@
 "reading": "라오",
 "ko": "우리, 나 (1인칭)",
 "inVocab": true,
-"rank": 49,
+"rank": 15,
 "level": 1
 },
 {
@@ -4788,8 +4788,8 @@
 "reading": "매",
 "ko": "어머니",
 "inVocab": true,
-"rank": 648,
-"level": 4
+"rank": 36,
+"level": 1
 },
 {
 "th": "เย็บ",
@@ -4806,7 +4806,7 @@
 "reading": "리약",
 "ko": "부르다, 호칭하다",
 "inVocab": true,
-"rank": 221,
+"rank": 184,
 "level": 2
 },
 {
@@ -4833,8 +4833,8 @@
 "reading": "여",
 "ko": "많다",
 "inVocab": true,
-"rank": 927,
-"level": 5
+"rank": 175,
+"level": 2
 },
 {
 "th": "เรียง",
@@ -4878,8 +4878,8 @@
 "reading": "리얀",
 "ko": "공부하다, 수업, 배우다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 237,
+"level": 2
 },
 {
 "th": "เรือ",
@@ -4887,8 +4887,8 @@
 "reading": "르아",
 "ko": "배",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 603,
+"level": 4
 },
 {
 "th": "ลืม",
@@ -4896,8 +4896,8 @@
 "reading": "름",
 "ko": "잊다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 196,
+"level": 2
 },
 {
 "th": "ว่าง",
@@ -4905,8 +4905,8 @@
 "reading": "왕",
 "ko": "비다, 여유 있다, (시간이) 비다, 비었음",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 476,
+"level": 3
 },
 {
 "th": "สับ",
@@ -4923,17 +4923,17 @@
 "reading": "르앙",
 "ko": "이야기, 사안, ~에 관하여",
 "inVocab": true,
-"rank": 84,
+"rank": 75,
 "level": 1
 },
 {
 "th": "ลุก",
 "grade": 1,
 "reading": "룩",
-"ko": "일어서다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "일어나다, 일어서다",
+"inVocab": true,
+"rank": 991,
+"level": 5
 },
 {
 "th": "วาด",
@@ -4968,8 +4968,8 @@
 "reading": "룽 / 아 / 나",
 "ko": "백부, 숙부, 이모",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 293,
+"level": 3
 },
 {
 "th": "ว่าน",
@@ -5004,8 +5004,8 @@
 "reading": "룩",
 "ko": "자식, 아이, 개(둥근 것 단위)",
 "inVocab": true,
-"rank": 410,
-"level": 3
+"rank": 74,
+"level": 1
 },
 {
 "th": "วิ่ง",
@@ -5013,7 +5013,7 @@
 "reading": "윙",
 "ko": "달리다, 뛰다, 뛰다",
 "inVocab": true,
-"rank": 902,
+"rank": 939,
 "level": 5
 },
 {
@@ -5022,8 +5022,8 @@
 "reading": "싸이",
 "ko": "늦다",
 "inVocab": true,
-"rank": 979,
-"level": 5
+"rank": 563,
+"level": 4
 },
 {
 "th": "แรก",
@@ -5031,8 +5031,8 @@
 "reading": "랙",
 "ko": "첫 번째 (명사 + แรก)",
 "inVocab": true,
-"rank": 218,
-"level": 2
+"rank": 324,
+"level": 3
 },
 {
 "th": "เล็ก",
@@ -5040,7 +5040,7 @@
 "reading": "렉",
 "ko": "(크기 등) 작다, 작다",
 "inVocab": true,
-"rank": 571,
+"rank": 534,
 "level": 4
 },
 {
@@ -5055,11 +5055,11 @@
 {
 "th": "สาว",
 "grade": 1,
-"reading": "싸우",
-"ko": "처녀, 젊은 여자",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"reading": "사우",
+"ko": "아가씨, 젊은 여자",
+"inVocab": true,
+"rank": 693,
+"level": 4
 },
 {
 "th": "โรย",
@@ -5084,9 +5084,9 @@
 "grade": 1,
 "reading": "위따민",
 "ko": "비타민",
-"inVocab": true,
-"rank": 653,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "สี",
@@ -5094,8 +5094,8 @@
 "reading": "씨",
 "ko": "색, 색깔, 색",
 "inVocab": true,
-"rank": 497,
-"level": 3
+"rank": 605,
+"level": 4
 },
 {
 "th": "ไร่",
@@ -5112,8 +5112,8 @@
 "reading": "렌",
 "ko": "놀다",
 "inVocab": true,
-"rank": 553,
-"level": 4
+"rank": 128,
+"level": 2
 },
 {
 "th": "วิธี",
@@ -5121,8 +5121,8 @@
 "reading": "위티",
 "ko": "방법",
 "inVocab": true,
-"rank": 150,
-"level": 2
+"rank": 481,
+"level": 3
 },
 {
 "th": "สุก",
@@ -5139,7 +5139,7 @@
 "reading": "롱",
 "ko": "내리다, (교통수단) 내리다",
 "inVocab": true,
-"rank": 130,
+"rank": 194,
 "level": 2
 },
 {
@@ -5157,7 +5157,7 @@
 "reading": "웨()라",
 "ko": "시간",
 "inVocab": true,
-"rank": 208,
+"rank": 147,
 "level": 2
 },
 {
@@ -5174,9 +5174,9 @@
 "grade": 1,
 "reading": "롯",
 "ko": "줄이다, 할인하다",
-"inVocab": true,
-"rank": 95,
-"level": 1
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "เล่ม",
@@ -5200,10 +5200,10 @@
 "th": "สู้",
 "grade": 1,
 "reading": "쑤",
-"ko": "싸우다, 맞서다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "싸우다, 맞서다, 힘내다",
+"inVocab": true,
+"rank": 387,
+"level": 3
 },
 {
 "th": "ลบ",
@@ -5211,8 +5211,8 @@
 "reading": "롭",
 "ko": "음수, 삭제하다, 지우다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 783,
+"level": 5
 },
 {
 "th": "เลย",
@@ -5220,8 +5220,8 @@
 "reading": "르이",
 "ko": "전혀(부정 강조), 아주, 지나서",
 "inVocab": true,
-"rank": 204,
-"level": 2
+"rank": 9,
+"level": 1
 },
 {
 "th": "ไว้",
@@ -5229,7 +5229,7 @@
 "reading": "와이",
 "ko": "두다, ~해 두다(보존)",
 "inVocab": true,
-"rank": 100,
+"rank": 73,
 "level": 1
 },
 {
@@ -5237,9 +5237,9 @@
 "grade": 1,
 "reading": "쎈",
 "ko": "선, 줄, 가닥(단위)",
-"inVocab": true,
-"rank": 933,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ลม",
@@ -5290,10 +5290,10 @@
 "th": "เล่า",
 "grade": 1,
 "reading": "라오",
-"ko": "이야기하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "이야기하다, 말해 주다",
+"inVocab": true,
+"rank": 398,
+"level": 3
 },
 {
 "th": "ส่ง",
@@ -5301,7 +5301,7 @@
 "reading": "쏭",
 "ko": "보내다, 배달하다, 보내다",
 "inVocab": true,
-"rank": 186,
+"rank": 167,
 "level": 2
 },
 {
@@ -5310,8 +5310,8 @@
 "reading": "씨양",
 "ko": "소리",
 "inVocab": true,
-"rank": 903,
-"level": 5
+"rank": 359,
+"level": 3
 },
 {
 "th": "ลอง",
@@ -5319,8 +5319,8 @@
 "reading": "렁",
 "ko": "시도하다",
 "inVocab": true,
-"rank": 617,
-"level": 4
+"rank": 152,
+"level": 2
 },
 {
 "th": "เล้า",
@@ -5362,10 +5362,10 @@
 "th": "เลี้ยง",
 "grade": 1,
 "reading": "리양",
-"ko": "기르다, 대접하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "한턱내다, 기르다, 키우다",
+"inVocab": true,
+"rank": 825,
+"level": 5
 },
 {
 "th": "ส้ม",
@@ -5436,8 +5436,8 @@
 "reading": "르엇",
 "ko": "피",
 "inVocab": true,
-"rank": 171,
-"level": 2
+"rank": 501,
+"level": 4
 },
 {
 "th": "สวน",
@@ -5454,17 +5454,17 @@
 "reading": "쓰아",
 "ko": "옷(상의)",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 879,
+"level": 5
 },
 {
 "th": "ลา",
 "grade": 1,
 "reading": "라",
-"ko": "당나귀, 작별하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "작별하다, 휴가 내다, 당나귀",
+"inVocab": true,
+"rank": 368,
+"level": 3
 },
 {
 "th": "เลื่อย",
@@ -5490,8 +5490,8 @@
 "reading": "싸이",
 "ko": "입다(쓰다, 신다), 입력하다",
 "inVocab": true,
-"rank": 534,
-"level": 4
+"rank": 303,
+"level": 3
 },
 {
 "th": "ลาก",
@@ -5517,8 +5517,8 @@
 "reading": "쑤워이",
 "ko": "예쁘다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 253,
+"level": 3
 },
 {
 "th": "หก",
@@ -5526,8 +5526,8 @@
 "reading": "혹",
 "ko": "6",
 "inVocab": true,
-"rank": 0,
-"level": 0,
+"rank": 373,
+"level": 3,
 "hint": "(ก)"
 },
 {
@@ -5554,8 +5554,8 @@
 "reading": "썬",
 "ko": "가르치다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 377,
+"level": 3
 },
 {
 "th": "หญ้า",
@@ -5581,7 +5581,7 @@
 "reading": "래우",
 "ko": "이미, ~했다(완료), 그리고 나서",
 "inVocab": true,
-"rank": 37,
+"rank": 4,
 "level": 1
 },
 {
@@ -5599,8 +5599,8 @@
 "reading": "나",
 "ko": "두껍다, 무겁다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 864,
+"level": 5
 },
 {
 "th": "ลางสาด",
@@ -5617,8 +5617,8 @@
 "reading": "래",
 "ko": "와, 과, 그리고",
 "inVocab": true,
-"rank": 2,
-"level": 1
+"rank": 109,
+"level": 2
 },
 {
 "th": "ส้อม",
@@ -5635,8 +5635,8 @@
 "reading": "나",
 "ko": "얼굴, 앞, 페이지",
 "inVocab": true,
-"rank": 445,
-"level": 3
+"rank": 203,
+"level": 2
 },
 {
 "th": "ลาบ",
@@ -5651,10 +5651,10 @@
 "th": "ไล่",
 "grade": 1,
 "reading": "라이",
-"ko": "쫓다, 쫓아내다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "쫓아내다, 해고하다, 뒤쫓다",
+"inVocab": true,
+"rank": 845,
+"level": 5
 },
 {
 "th": "สะดือ",
@@ -5671,8 +5671,8 @@
 "reading": "롭 / 니",
 "ko": "피하다, 달아나다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 585,
+"level": 4
 },
 {
 "th": "ลาย",
@@ -5689,8 +5689,8 @@
 "reading": "왓",
 "ko": "사원",
 "inVocab": true,
-"rank": 865,
-"level": 5
+"rank": 596,
+"level": 4
 },
 {
 "th": "สะพาน",
@@ -5707,8 +5707,8 @@
 "reading": "누",
 "ko": "쥐",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 71,
+"level": 1
 },
 {
 "th": "ลำไย",
@@ -5725,8 +5725,8 @@
 "reading": "완",
 "ko": "날짜, 날, 요일",
 "inVocab": true,
-"rank": 129,
-"level": 2
+"rank": 89,
+"level": 1
 },
 {
 "th": "สะอาด",
@@ -5770,7 +5770,7 @@
 "reading": "쌍",
 "ko": "주문하다",
 "inVocab": true,
-"rank": 492,
+"rank": 471,
 "level": 3
 },
 {
@@ -5779,8 +5779,8 @@
 "reading": "머",
 "ko": "의사",
 "inVocab": true,
-"rank": 684,
-"level": 4
+"rank": 176,
+"level": 2
 },
 {
 "th": "ลิง",
@@ -5797,7 +5797,7 @@
 "reading": "와",
 "ko": "~라고(인용), 말하다",
 "inVocab": true,
-"rank": 13,
+"rank": 14,
 "level": 1
 },
 {
@@ -5833,7 +5833,7 @@
 "reading": "왕",
 "ko": "놓다, 두다, 배치하다",
 "inVocab": true,
-"rank": 530,
+"rank": 575,
 "level": 4
 },
 {
@@ -5869,8 +5869,8 @@
 "reading": "르아",
 "ko": "남다, 남기다",
 "inVocab": true,
-"rank": 781,
-"level": 5
+"rank": 375,
+"level": 3
 },
 {
 "th": "เอา",
@@ -5878,17 +5878,17 @@
 "reading": "아오",
 "ko": "가지다, 취하다, 원하다",
 "inVocab": true,
-"rank": 335,
-"level": 3
+"rank": 38,
+"level": 1
 },
 {
 "th": "หมู",
 "grade": 1,
 "reading": "무",
-"ko": "돼지",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "돼지, 돼지고기, 식은 죽 먹기(속어)",
+"inVocab": true,
+"rank": 657,
+"level": 4
 },
 {
 "th": "เห่า",
@@ -5904,9 +5904,9 @@
 "grade": 1,
 "reading": "앱",
 "ko": "몰래 ~하다, 숨다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 589,
+"level": 4
 },
 {
 "th": "หมู่",
@@ -5923,8 +5923,8 @@
 "reading": "행",
 "ko": "~의(장소), 곳(단위)",
 "inVocab": true,
-"rank": 154,
-"level": 2
+"rank": 778,
+"level": 5
 },
 {
 "th": "โอ๋",
@@ -5941,8 +5941,8 @@
 "reading": "르",
 "ko": "또는, ~입니까?(의문)",
 "inVocab": true,
-"rank": 12,
-"level": 1
+"rank": 230,
+"level": 2
 },
 {
 "th": "แหน",
@@ -5977,7 +5977,7 @@
 "reading": "하이",
 "ko": "주다, ~하게 하다, ~에게",
 "inVocab": true,
-"rank": 11,
+"rank": 18,
 "level": 1
 },
 {
@@ -5986,7 +5986,7 @@
 "reading": "온",
 "ko": "이체하다, 양도하다",
 "inVocab": true,
-"rank": 522,
+"rank": 549,
 "level": 4
 },
 {
@@ -6004,8 +6004,8 @@
 "reading": "야 이",
 "ko": "(크기 등) 크다, 크다",
 "inVocab": true,
-"rank": 210,
-"level": 2
+"rank": 342,
+"level": 3
 },
 {
 "th": "ไอ",
@@ -6013,8 +6013,8 @@
 "reading": "아이",
 "ko": "기침하다",
 "inVocab": true,
-"rank": 687,
-"level": 4
+"rank": 220,
+"level": 2
 },
 {
 "th": "ห้อง",
@@ -6022,8 +6022,8 @@
 "reading": "헝",
 "ko": "방",
 "inVocab": true,
-"rank": 921,
-"level": 5
+"rank": 206,
+"level": 2
 },
 {
 "th": "ใหม่",
@@ -6031,8 +6031,8 @@
 "reading": "마이",
 "ko": "새롭다, 새(new), 새롭다, 새로운",
 "inVocab": true,
-"rank": 70,
-"level": 1
+"rank": 193,
+"level": 2
 },
 {
 "th": "หอม",
@@ -6050,8 +6050,8 @@
 "reading": "나이",
 "ko": "어느",
 "inVocab": true,
-"rank": 363,
-"level": 3
+"rank": 62,
+"level": 1
 },
 {
 "th": "หอย",
@@ -6068,17 +6068,17 @@
 "reading": "마이",
 "ko": "~입니까?(의문 조사)",
 "inVocab": true,
-"rank": 780,
-"level": 5
+"rank": 35,
+"level": 1
 },
 {
 "th": "หัก",
 "grade": 1,
 "reading": "학",
 "ko": "공제하다, 부러지다, 꺾다",
-"inVocab": true,
-"rank": 932,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ไหล่",
@@ -6113,8 +6113,8 @@
 "reading": "후워",
 "ko": "머리",
 "inVocab": true,
-"rank": 842,
-"level": 5
+"rank": 690,
+"level": 4
 },
 {
 "th": "อย่า",
@@ -6122,8 +6122,8 @@
 "reading": "야",
 "ko": "~하지 마라",
 "inVocab": true,
-"rank": 747,
-"level": 4
+"rank": 67,
+"level": 1
 },
 {
 "th": "หัวเราะ",
@@ -6140,7 +6140,7 @@
 "reading": "유 / 팍",
 "ko": "있다, 살다",
 "inVocab": true,
-"rank": 38,
+"rank": 28,
 "level": 1
 },
 {
@@ -6149,7 +6149,7 @@
 "reading": "하",
 "ko": "~을 찾다, 발견하다",
 "inVocab": true,
-"rank": 236,
+"rank": 121,
 "level": 2
 },
 {
@@ -6158,7 +6158,7 @@
 "reading": "억",
 "ko": "출발하다, 나가다",
 "inVocab": true,
-"rank": 120,
+"rank": 118,
 "level": 2
 },
 {
@@ -6194,8 +6194,8 @@
 "reading": "아라이",
 "ko": "무엇을",
 "inVocab": true,
-"rank": 115,
-"level": 2
+"rank": 13,
+"level": 1
 },
 {
 "th": "หาม",
@@ -6212,7 +6212,7 @@
 "reading": "안",
 "ko": "것(단위), ~하는 것",
 "inVocab": true,
-"rank": 293,
+"rank": 446,
 "level": 3
 },
 {
@@ -6221,7 +6221,7 @@
 "reading": "하이",
 "ko": "사라지다, 낫다, 잃어버리다",
 "inVocab": true,
-"rank": 453,
+"rank": 347,
 "level": 3
 },
 {
@@ -6230,8 +6230,8 @@
 "reading": "빠 / 아 / 나",
 "ko": "아주머니, 고모, 이모",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 372,
+"level": 3
 },
 {
 "th": "หิน",
@@ -6248,7 +6248,7 @@
 "reading": "안",
 "ko": "읽다",
 "inVocab": true,
-"rank": 595,
+"rank": 510,
 "level": 4
 },
 {
@@ -6257,8 +6257,8 @@
 "reading": "히우",
 "ko": "배고프다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 486,
+"level": 3
 },
 {
 "th": "อาบ",
@@ -6311,8 +6311,8 @@
 "reading": "후",
 "ko": "귀",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 667,
+"level": 4
 },
 {
 "th": "อิ่ม",
@@ -6338,7 +6338,7 @@
 "reading": "익",
 "ko": "또, 다시, 더",
 "inVocab": true,
-"rank": 89,
+"rank": 57,
 "level": 1
 },
 {
@@ -6347,8 +6347,8 @@
 "reading": "헨",
 "ko": "보다, 보이다, 생각하다",
 "inVocab": true,
-"rank": 176,
-"level": 2
+"rank": 91,
+"level": 1
 },
 {
 "th": "อื่น",
@@ -6356,8 +6356,8 @@
 "reading": "은",
 "ko": "다른, 그 밖의",
 "inVocab": true,
-"rank": 136,
-"level": 2
+"rank": 479,
+"level": 3
 },
 {
 "th": "เหนือ",
@@ -6383,8 +6383,8 @@
 "reading": "라오",
 "ko": "술",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 852,
+"level": 5
 },
 {
 "th": "เอง",
@@ -6392,8 +6392,8 @@
 "reading": "엥",
 "ko": "스스로, 자신이",
 "inVocab": true,
-"rank": 216,
-"level": 2
+"rank": 81,
+"level": 1
 },
 {
 "th": "ก๋ง",
@@ -6426,10 +6426,10 @@
 "th": "เฉย",
 "grade": 2,
 "reading": "츠어이",
-"ko": "무관심한, 가만히 있는",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "가만히 있다, 무덤덤하다",
+"inVocab": true,
+"rank": 498,
+"level": 3
 },
 {
 "th": "กด",
@@ -6437,8 +6437,8 @@
 "reading": "꼿",
 "ko": "누르다",
 "inVocab": true,
-"rank": 774,
-"level": 5
+"rank": 613,
+"level": 4
 },
 {
 "th": "แก้",
@@ -6446,7 +6446,7 @@
 "reading": "깨",
 "ko": "고치다, 해결하다, 풀다",
 "inVocab": true,
-"rank": 507,
+"rank": 679,
 "level": 4
 },
 {
@@ -6454,9 +6454,9 @@
 "grade": 2,
 "reading": "캇",
 "ko": "예상하다, 기대하다",
-"inVocab": true,
-"rank": 640,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ชม",
@@ -6509,8 +6509,8 @@
 "reading": "끄라둑",
 "ko": "뼈",
 "inVocab": true,
-"rank": 567,
-"level": 4
+"rank": 0,
+"level": 0
 },
 {
 "th": "โกน",
@@ -6553,9 +6553,9 @@
 "grade": 2,
 "reading": "꼬 혹",
 "ko": "거짓말하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 786,
+"level": 5
 },
 {
 "th": "เค้ก",
@@ -6608,8 +6608,8 @@
 "reading": "차",
 "ko": "차",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 917,
+"level": 5
 },
 {
 "th": "กระถาง",
@@ -6625,9 +6625,9 @@
 "grade": 2,
 "reading": "카나",
 "ko": "순간, ~하는 동안",
-"inVocab": true,
-"rank": 779,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "เคี้ยว",
@@ -6644,8 +6644,8 @@
 "reading": "차",
 "ko": "느리다",
 "inVocab": true,
-"rank": 964,
-"level": 5
+"rank": 580,
+"level": 4
 },
 {
 "th": "กระทบ",
@@ -6770,8 +6770,8 @@
 "reading": "커",
 "ko": "조항, 항목, 관절",
 "inVocab": true,
-"rank": 164,
-"level": 2
+"rank": 810,
+"level": 5
 },
 {
 "th": "งวง",
@@ -6787,18 +6787,18 @@
 "grade": 2,
 "reading": "첸",
 "ko": "예를 들면, ~와 같은",
-"inVocab": true,
-"rank": 35,
-"level": 1
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "กล้า",
 "grade": 2,
 "reading": "끌라",
-"ko": "용감한, 감히 ~하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "용감하다, 감히 ~하다",
+"inVocab": true,
+"rank": 518,
+"level": 4
 },
 {
 "th": "ข้อง",
@@ -6940,9 +6940,9 @@
 "grade": 2,
 "reading": "껀",
 "ko": "덩어리, 개(덩어리 단위)",
-"inVocab": true,
-"rank": 876,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ขำ",
@@ -6968,8 +6968,8 @@
 "reading": "승",
 "ko": "~하는(관계사), 그것은",
 "inVocab": true,
-"rank": 23,
-"level": 1
+"rank": 712,
+"level": 4
 },
 {
 "th": "กะปิ",
@@ -7065,10 +7065,10 @@
 "th": "จ๊ะ",
 "grade": 2,
 "reading": "짜",
-"ko": "~요(친근한 어조사)",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "~요?, 응?(친근 의문 어말조사)",
+"inVocab": true,
+"rank": 557,
+"level": 4
 },
 {
 "th": "แซง",
@@ -7101,10 +7101,10 @@
 "th": "จัง",
 "grade": 2,
 "reading": "짱",
-"ko": "매우, 정말",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "정말, 엄청(강조)",
+"inVocab": true,
+"rank": 218,
+"level": 2
 },
 {
 "th": "แซะ",
@@ -7128,10 +7128,10 @@
 "th": "จ๋า",
 "grade": 2,
 "reading": "짜",
-"ko": "응?(친근한 대답), ~야",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "네~, ~요(다정한 대답, 어말조사)",
+"inVocab": true,
+"rank": 631,
+"level": 4
 },
 {
 "th": "ดง",
@@ -7166,7 +7166,7 @@
 "reading": "짜이",
 "ko": "지불하다",
 "inVocab": true,
-"rank": 265,
+"rank": 391,
 "level": 3
 },
 {
@@ -7229,8 +7229,8 @@
 "reading": "콩",
 "ko": "아마 ~일 것이다, 유지하다",
 "inVocab": true,
-"rank": 526,
-"level": 4
+"rank": 162,
+"level": 2
 },
 {
 "th": "จิก",
@@ -7247,8 +7247,8 @@
 "reading": "단",
 "ko": "~쪽",
 "inVocab": true,
-"rank": 93,
-"level": 1
+"rank": 0,
+"level": 0
 },
 {
 "th": "กู้",
@@ -7309,9 +7309,9 @@
 "grade": 2,
 "reading": "찐",
 "ko": "중국",
-"inVocab": true,
-"rank": 214,
-"level": 2
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ดาย",
@@ -7337,8 +7337,8 @@
 "reading": "칸",
 "ko": "간지럽다, 가렵다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 685,
+"level": 4
 },
 {
 "th": "จุด",
@@ -7346,8 +7346,8 @@
 "reading": "쭛 / 땜 / 두앙",
 "ko": "점, 눈",
 "inVocab": true,
-"rank": 398,
-"level": 3
+"rank": 811,
+"level": 5
 },
 {
 "th": "ด้าย",
@@ -7364,8 +7364,8 @@
 "reading": "까오",
 "ko": "낡다, 오래되다, 오래되다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 729,
+"level": 4
 },
 {
 "th": "คับ",
@@ -7400,8 +7400,8 @@
 "reading": "끄언",
 "ko": "초과하다, 넘다",
 "inVocab": true,
-"rank": 187,
-"level": 2
+"rank": 0,
+"level": 0
 },
 {
 "th": "ค่า",
@@ -7409,7 +7409,7 @@
 "reading": "카",
 "ko": "값, 요금, 비용",
 "inVocab": true,
-"rank": 289,
+"rank": 330,
 "level": 3
 },
 {
@@ -7454,8 +7454,8 @@
 "reading": "쨍",
 "ko": "알리다, 통보하다",
 "inVocab": true,
-"rank": 409,
-"level": 3
+"rank": 996,
+"level": 5
 },
 {
 "th": "ดูด",
@@ -7470,10 +7470,10 @@
 "th": "เด็ด",
 "grade": 2,
 "reading": "뎃",
-"ko": "따다, 꺾다, 결정적인",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "따다, 끝내주다(속어)",
+"inVocab": true,
+"rank": 982,
+"level": 5
 },
 {
 "th": "ทุ่ง",
@@ -7498,9 +7498,9 @@
 "grade": 2,
 "reading": "판",
 "ko": "꿈, 꿈꾸다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 443,
+"level": 3
 },
 {
 "th": "เดิม",
@@ -7508,7 +7508,7 @@
 "reading": "듬",
 "ko": "원래의, 기존의",
 "inVocab": true,
-"rank": 332,
+"rank": 448,
 "level": 3
 },
 {
@@ -7533,10 +7533,10 @@
 "th": "ฝาก",
 "grade": 2,
 "reading": "팍",
-"ko": "맡기다, 예금하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "맡기다, 부탁하다, 예금하다",
+"inVocab": true,
+"rank": 334,
+"level": 3
 },
 {
 "th": "เดือด",
@@ -7580,8 +7580,8 @@
 "reading": "드안",
 "ko": "달",
 "inVocab": true,
-"rank": 139,
-"level": 2
+"rank": 379,
+"level": 3
 },
 {
 "th": "แทง",
@@ -7598,8 +7598,8 @@
 "reading": "쁘라탄",
 "ko": "회장",
 "inVocab": true,
-"rank": 955,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "ฝุ่น",
@@ -7615,9 +7615,9 @@
 "grade": 2,
 "reading": "다이",
 "ko": "어느, 어떤",
-"inVocab": true,
-"rank": 227,
-"level": 2
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "แท่ง",
@@ -7632,10 +7632,10 @@
 "th": "ปะ",
 "grade": 2,
 "reading": "빠",
-"ko": "덧대다, 기우다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "~지?(หรือเปล่า 축약 의문 어말조사)",
+"inVocab": true,
+"rank": 131,
+"level": 2
 },
 {
 "th": "ฝูง",
@@ -7650,10 +7650,10 @@
 "th": "ตบ",
 "grade": 2,
 "reading": "똡",
-"ko": "손바닥으로 치다, 때리다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "때리다, 뺨치다",
+"inVocab": true,
+"rank": 542,
+"level": 4
 },
 {
 "th": "แท้ง",
@@ -7731,10 +7731,10 @@
 "th": "นัด",
 "grade": 2,
 "reading": "낫",
-"ko": "약속하다, 약속",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "약속하다, 약속(만남)",
+"inVocab": true,
+"rank": 582,
+"level": 4
 },
 {
 "th": "ปัด",
@@ -7769,8 +7769,8 @@
 "reading": "나티",
 "ko": "분, 30분, 5분, 15분",
 "inVocab": true,
-"rank": 871,
-"level": 5
+"rank": 496,
+"level": 3
 },
 {
 "th": "ปัน",
@@ -7785,10 +7785,10 @@
 "th": "พัง",
 "grade": 2,
 "reading": "팡",
-"ko": "무너지다, 부서지다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "부서지다, 망가지다, 망하다",
+"inVocab": true,
+"rank": 829,
+"level": 5
 },
 {
 "th": "ตู่",
@@ -7803,10 +7803,10 @@
 "th": "นิ่ง",
 "grade": 2,
 "reading": "닝",
-"ko": "가만히 있는, 고요한",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "가만히 있다, 고요하다",
+"inVocab": true,
+"rank": 535,
+"level": 4
 },
 {
 "th": "ปั่น",
@@ -7876,9 +7876,9 @@
 "grade": 2,
 "reading": "내우",
 "ko": "방향, 스타일, 줄",
-"inVocab": true,
-"rank": 811,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ปาด",
@@ -7904,7 +7904,7 @@
 "reading": "땍 / 쁘러",
 "ko": "깨지다",
 "inVocab": true,
-"rank": 524,
+"rank": 541,
 "level": 4
 },
 {
@@ -7920,19 +7920,19 @@
 "th": "ปี่",
 "grade": 2,
 "reading": "삐",
-"ko": "피리",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "피리(태국 전통 관악기)",
+"inVocab": true,
+"rank": 748,
+"level": 4
 },
 {
 "th": "เพียง",
 "grade": 2,
 "reading": "피앙",
 "ko": "단지, ~만",
-"inVocab": true,
-"rank": 170,
-"level": 2
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "แตง",
@@ -8003,17 +8003,17 @@
 "reading": "팽",
 "ko": "비싸다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 616,
+"level": 4
 },
 {
 "th": "โต้",
 "grade": 2,
 "reading": "또",
 "ko": "반박하다, 맞서다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 793,
+"level": 5
 },
 {
 "th": "บาด",
@@ -8082,10 +8082,10 @@
 "th": "ถ่าย",
 "grade": 2,
 "reading": "타이",
-"ko": "사진 찍다, 배설하다, 옮기다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "찍다(사진, 영상), 배설하다",
+"inVocab": true,
+"rank": 416,
+"level": 3
 },
 {
 "th": "บำรุง",
@@ -8100,10 +8100,10 @@
 "th": "ผัว",
 "grade": 2,
 "reading": "푸아",
-"ko": "남편",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "남편(속어)",
+"inVocab": true,
+"rank": 865,
+"level": 5
 },
 {
 "th": "ฟอก",
@@ -8237,8 +8237,8 @@
 "reading": "바오",
 "ko": "가볍다, (소리가) 약하다, (무게가) 가볍다, 가볍다, 약하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 686,
+"level": 4
 },
 {
 "th": "ผึ้ง",
@@ -8334,10 +8334,10 @@
 "th": "ท่า",
 "grade": 2,
 "reading": "타",
-"ko": "자세, 부두",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "자세, 태도, 부두",
+"inVocab": true,
+"rank": 697,
+"level": 4
 },
 {
 "th": "แบก",
@@ -8380,9 +8380,9 @@
 "grade": 2,
 "reading": "뱅",
 "ko": "나누다, 분할하다",
-"inVocab": true,
-"rank": 357,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "แผ่",
@@ -8506,9 +8506,9 @@
 "grade": 2,
 "reading": "멉",
 "ko": "수여하다, 맡기다",
-"inVocab": true,
-"rank": 729,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ทีม",
@@ -8516,8 +8516,8 @@
 "reading": "팀",
 "ko": "팀",
 "inVocab": true,
-"rank": 960,
-"level": 5
+"rank": 323,
+"level": 3
 },
 {
 "th": "ประถม",
@@ -8624,8 +8624,8 @@
 "reading": "마오",
 "ko": "취하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 664,
+"level": 4
 },
 {
 "th": "เริ่ม",
@@ -8633,7 +8633,7 @@
 "reading": "럼",
 "ko": "시작하다",
 "inVocab": true,
-"rank": 147,
+"rank": 239,
 "level": 2
 },
 {
@@ -8642,8 +8642,8 @@
 "reading": "쑤언",
 "ko": "부분, ~에 관해서는",
 "inVocab": true,
-"rank": 112,
-"level": 2
+"rank": 294,
+"level": 3
 },
 {
 "th": "เหงื่อ",
@@ -8695,9 +8695,9 @@
 "grade": 2,
 "reading": "매",
 "ko": "비록 ~일지라도",
-"inVocab": true,
-"rank": 302,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "แรง",
@@ -8705,8 +8705,8 @@
 "reading": "랭",
 "ko": "힘, 세게, 강한",
 "inVocab": true,
-"rank": 783,
-"level": 5
+"rank": 489,
+"level": 3
 },
 {
 "th": "ส่อง",
@@ -8775,10 +8775,10 @@
 "th": "ไร",
 "grade": 2,
 "reading": "라이",
-"ko": "진드기, 무엇(고어)",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "뭐(อะไร 구어)",
+"inVocab": true,
+"rank": 319,
+"level": 3
 },
 {
 "th": "สะดวก",
@@ -8786,8 +8786,8 @@
 "reading": "싸두악 / 싸두악싸바이",
 "ko": "편하다",
 "inVocab": true,
-"rank": 384,
-"level": 3
+"rank": 0,
+"level": 0
 },
 {
 "th": "แห่",
@@ -8802,10 +8802,10 @@
 "th": "ยอม",
 "grade": 2,
 "reading": "염",
-"ko": "양보하다, 허락하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "양보하다, 받아들이다, 굴복하다",
+"inVocab": true,
+"rank": 318,
+"level": 3
 },
 {
 "th": "ล้อ",
@@ -8820,10 +8820,10 @@
 "th": "สัก",
 "grade": 2,
 "reading": "싹",
-"ko": "문신하다, 티크나무, 조금",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "약 ~쯤, 한 ~(수량 앞), 문신하다",
+"inVocab": true,
+"rank": 228,
+"level": 2
 },
 {
 "th": "แห้ง",
@@ -8901,10 +8901,10 @@
 "th": "แหละ",
 "grade": 2,
 "reading": "래",
-"ko": "~이야(강조 어조사)",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "바로 ~야(강조 어말조사)",
+"inVocab": true,
+"rank": 214,
+"level": 2
 },
 {
 "th": "ยิ่ง",
@@ -8912,7 +8912,7 @@
 "reading": "잉",
 "ko": "더욱, ~할수록",
 "inVocab": true,
-"rank": 447,
+"rank": 364,
 "level": 3
 },
 {
@@ -8921,8 +8921,8 @@
 "reading": "라",
 "ko": "...당",
 "inVocab": true,
-"rank": 310,
-"level": 3
+"rank": 210,
+"level": 2
 },
 {
 "th": "สาลี่",
@@ -8956,9 +8956,9 @@
 "grade": 2,
 "reading": "라이얏",
 "ko": "상세한, 세밀한",
-"inVocab": true,
-"rank": 965,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "สำรับ",
@@ -8991,10 +8991,10 @@
 "th": "ล่า",
 "grade": 2,
 "reading": "라",
-"ko": "사냥하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "사냥하다, 뒤쫓다",
+"inVocab": true,
+"rank": 780,
+"level": 5
 },
 {
 "th": "สิ่ง",
@@ -9002,8 +9002,8 @@
 "reading": "씽",
 "ko": "것, 사물",
 "inVocab": true,
-"rank": 143,
-"level": 2
+"rank": 312,
+"level": 3
 },
 {
 "th": "ไหล",
@@ -9045,10 +9045,10 @@
 "th": "ไหว",
 "grade": 2,
 "reading": "와이",
-"ko": "견디다, 흔들리다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "할 수 있다, 견디다",
+"inVocab": true,
+"rank": 267,
+"level": 3
 },
 {
 "th": "เยาะ",
@@ -9109,9 +9109,9 @@
 "grade": 2,
 "reading": "쑤",
 "ko": "~로(향하여)",
-"inVocab": true,
-"rank": 277,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "อด",
@@ -9128,8 +9128,8 @@
 "reading": "액",
 "ko": "분리하다, 교차로",
 "inVocab": true,
-"rank": 997,
-"level": 5
+"rank": 740,
+"level": 4
 },
 {
 "th": "ล้าน",
@@ -9137,8 +9137,8 @@
 "reading": "란",
 "ko": "백만",
 "inVocab": true,
-"rank": 101,
-"level": 2
+"rank": 371,
+"level": 3
 },
 {
 "th": "สูง",
@@ -9146,8 +9146,8 @@
 "reading": "쑹",
 "ko": "(키가) 크다, 높다",
 "inVocab": true,
-"rank": 67,
-"level": 1
+"rank": 649,
+"level": 4
 },
 {
 "th": "อบ",
@@ -9209,8 +9209,8 @@
 "reading": "럭",
 "ko": "헤어지다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 231,
+"level": 2
 },
 {
 "th": "เสีย",
@@ -9218,8 +9218,8 @@
 "reading": "씨야",
 "ko": "고장나다",
 "inVocab": true,
-"rank": 502,
-"level": 4
+"rank": 407,
+"level": 3
 },
 {
 "th": "ออด",
@@ -9317,8 +9317,8 @@
 "reading": "르억",
 "ko": "고르다",
 "inVocab": true,
-"rank": 146,
-"level": 2
+"rank": 269,
+"level": 3
 },
 {
 "th": "ไส้",
@@ -9335,35 +9335,35 @@
 "reading": "아유",
 "ko": "나이",
 "inVocab": true,
-"rank": 244,
-"level": 2
+"rank": 451,
+"level": 3
 },
 {
 "th": "ร่วม",
 "grade": 2,
 "reading": "루엄",
 "ko": "함께하다, 참여하다",
-"inVocab": true,
-"rank": 263,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "แลก",
 "grade": 2,
 "reading": "랙",
 "ko": "교환하다, 바꾸다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 989,
+"level": 5
 },
 {
 "th": "หัด",
 "grade": 2,
 "reading": "핫",
-"ko": "연습하다, 홍역",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "연습하다, 익히다",
+"inVocab": true,
+"rank": 880,
+"level": 5
 },
 {
 "th": "อุ้ม",
@@ -9380,8 +9380,8 @@
 "reading": "루웨이",
 "ko": "부자이다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 668,
+"level": 4
 },
 {
 "th": "แล่น",
@@ -9396,10 +9396,10 @@
 "th": "หัน",
 "grade": 2,
 "reading": "한",
-"ko": "돌리다, 방향을 바꾸다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "돌리다, 돌아보다",
+"inVocab": true,
+"rank": 450,
+"level": 3
 },
 {
 "th": "เอว",
@@ -9433,9 +9433,9 @@
 "grade": 2,
 "reading": "학",
 "ko": "만약 ~라면",
-"inVocab": true,
-"rank": 83,
-"level": 1
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "เอี่ยม",
@@ -9569,7 +9569,7 @@
 "reading": "함",
 "ko": "금지하다",
 "inVocab": true,
-"rank": 391,
+"rank": 397,
 "level": 3
 },
 {
@@ -9632,8 +9632,8 @@
 "reading": "카오 짜이",
 "ko": "이해하다",
 "inVocab": true,
-"rank": 405,
-"level": 3
+"rank": 156,
+"level": 2
 },
 {
 "th": "ฉีดยา",
@@ -9677,8 +9677,8 @@
 "reading": "추아이르아",
 "ko": "돕다",
 "inVocab": true,
-"rank": 843,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "ดำนา",
@@ -9749,7 +9749,7 @@
 "reading": "추아몽",
 "ko": "시간(동안), 1시간, 시",
 "inVocab": true,
-"rank": 509,
+"rank": 659,
 "level": 4
 },
 {
@@ -9758,8 +9758,8 @@
 "reading": "디짜이",
 "ko": "기쁘다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 307,
+"level": 3
 },
 {
 "th": "กางเกงขายาว",
@@ -9794,7 +9794,7 @@
 "reading": "두 래",
 "ko": "돌보다, 관리하다",
 "inVocab": true,
-"rank": 267,
+"rank": 298,
 "level": 3
 },
 {
@@ -9812,8 +9812,8 @@
 "reading": "카이만",
 "ko": "지방",
 "inVocab": true,
-"rank": 506,
-"level": 4
+"rank": 0,
+"level": 0
 },
 {
 "th": "ชาวใต้",
@@ -9937,9 +9937,9 @@
 "grade": 2,
 "reading": "든 탕",
 "ko": "여행하다, 이동하다",
-"inVocab": true,
-"rank": 724,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "กิ่งไม้",
@@ -10007,11 +10007,11 @@
 {
 "th": "เดี๋ยวนี้",
 "grade": 2,
-"reading": "디아우 니",
-"ko": "지금, 당장",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"reading": "디야우 니",
+"ko": "지금 당장, 요즘",
+"inVocab": true,
+"rank": 378,
+"level": 3
 },
 {
 "th": "แกงเผ็ด",
@@ -10082,8 +10082,8 @@
 "reading": "다이 인",
 "ko": "들리다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 273,
+"level": 3
 },
 {
 "th": "แก้วน้ำ",
@@ -10135,9 +10135,9 @@
 "grade": 2,
 "reading": "콘 라이",
 "ko": "범인, 악당",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 731,
+"level": 4
 },
 {
 "th": "ดวงใจ",
@@ -10154,8 +10154,8 @@
 "reading": "똑 짜이",
 "ko": "놀라다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 790,
+"level": 5
 },
 {
 "th": "ข้อศอก",
@@ -10190,8 +10190,8 @@
 "reading": "똑 롱",
 "ko": "동의하다, 알겠다, 합의하다",
 "inVocab": true,
-"rank": 882,
-"level": 5
+"rank": 464,
+"level": 3
 },
 {
 "th": "ของกิน",
@@ -10244,8 +10244,8 @@
 "reading": "쿠압쿰",
 "ko": "관리하다, 감독하다",
 "inVocab": true,
-"rank": 389,
-"level": 3
+"rank": 0,
+"level": 0
 },
 {
 "th": "ดอกจำปา",
@@ -10352,8 +10352,8 @@
 "reading": "킫틍",
 "ko": "그리워하다, 보고 싶다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 558,
+"level": 4
 },
 {
 "th": "ดอกดาวกระจาย",
@@ -10568,8 +10568,8 @@
 "reading": "짜오컹",
 "ko": "주인",
 "inVocab": true,
-"rank": 555,
-"level": 4
+"rank": 0,
+"level": 0
 },
 {
 "th": "ดอกบานไม่รู้โรย",
@@ -10802,8 +10802,8 @@
 "reading": "남만",
 "ko": "기름",
 "inVocab": true,
-"rank": 732,
-"level": 4
+"rank": 0,
+"level": 0
 },
 {
 "th": "ต้นมะนาว",
@@ -10820,17 +10820,17 @@
 "reading": "뚜어 엥",
 "ko": "자기 자신",
 "inVocab": true,
-"rank": 274,
-"level": 3
+"rank": 200,
+"level": 2
 },
 {
 "th": "ทำลาย",
 "grade": 2,
 "reading": "탐 라이",
 "ko": "파괴하다, 훼손하다",
-"inVocab": true,
-"rank": 980,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "น้ำมันหมู",
@@ -10937,8 +10937,8 @@
 "reading": "티 쑷",
 "ko": "가장, 최고의",
 "inVocab": true,
-"rank": 138,
-"level": 2
+"rank": 266,
+"level": 3
 },
 {
 "th": "น้ำหวาน",
@@ -11009,8 +11009,8 @@
 "reading": "타오 난",
 "ko": "~만, 오직",
 "inVocab": true,
-"rank": 247,
-"level": 2
+"rank": 903,
+"level": 5
 },
 {
 "th": "นิ้วมือ",
@@ -11081,8 +11081,8 @@
 "reading": "타오라이",
 "ko": "얼마",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 478,
+"level": 3
 },
 {
 "th": "บ้วนปาก",
@@ -11143,9 +11143,9 @@
 "grade": 2,
 "reading": "떱 또",
 "ko": "성장하다",
-"inVocab": true,
-"rank": 119,
-"level": 2
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "นกกระสา",
@@ -11161,9 +11161,9 @@
 "grade": 2,
 "reading": "방캅",
 "ko": "강제하다, 강행하다",
-"inVocab": true,
-"rank": 400,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ต้นละมุด",
@@ -11252,8 +11252,8 @@
 "reading": "땡 응안",
 "ko": "결혼하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 741,
+"level": 4
 },
 {
 "th": "นกเอี้ยง",
@@ -11441,8 +11441,8 @@
 "reading": "나락",
 "ko": "귀엽다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 402,
+"level": 3
 },
 {
 "th": "เบิกบาน",
@@ -11567,7 +11567,7 @@
 "reading": "떠빠이",
 "ko": "다음",
 "inVocab": true,
-"rank": 367,
+"rank": 332,
 "level": 3
 },
 {
@@ -11593,18 +11593,18 @@
 "grade": 2,
 "reading": "쁘라차촌",
 "ko": "국민, 시민",
-"inVocab": true,
-"rank": 411,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ต่อมา",
 "grade": 2,
 "reading": "떠 마",
 "ko": "그 후, 나중에",
-"inVocab": true,
-"rank": 849,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ทอดมัน",
@@ -11639,8 +11639,8 @@
 "reading": "떵 깐",
 "ko": "원하다, 필요로 하다",
 "inVocab": true,
-"rank": 212,
-"level": 2
+"rank": 588,
+"level": 4
 },
 {
 "th": "ทอดผ้าป่า",
@@ -11709,10 +11709,10 @@
 "th": "ตั้งใจ",
 "grade": 2,
 "reading": "땅 짜이",
-"ko": "마음먹다, 집중하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "작정하다, 집중하다, 의도하다",
+"inVocab": true,
+"rank": 521,
+"level": 4
 },
 {
 "th": "ทานตะวัน",
@@ -11747,8 +11747,8 @@
 "reading": "땅 때",
 "ko": "~부터, ~이래",
 "inVocab": true,
-"rank": 195,
-"level": 2
+"rank": 299,
+"level": 3
 },
 {
 "th": "ทำงาน",
@@ -11756,8 +11756,8 @@
 "reading": "탐응안",
 "ko": "일하다, 근무하다, 일하다",
 "inVocab": true,
-"rank": 272,
-"level": 3
+"rank": 181,
+"level": 2
 },
 {
 "th": "น้ำนม",
@@ -11818,9 +11818,9 @@
 "grade": 2,
 "reading": "뻥 깐",
 "ko": "예방하다, 방어하다",
-"inVocab": true,
-"rank": 232,
-"level": 2
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "พระเจ้า",
@@ -12062,8 +12062,8 @@
 "reading": "룩싸우",
 "ko": "딸",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 773,
+"level": 5
 },
 {
 "th": "ผักกาด",
@@ -12152,17 +12152,17 @@
 "reading": "퍼디",
 "ko": "적당하다, 딱 맞다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 279,
+"level": 3
 },
 {
 "th": "ยินดี",
 "grade": 2,
 "reading": "인 디",
-"ko": "기쁘다, 환영하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "기쁘다, 환영하다, 축하하다",
+"inVocab": true,
+"rank": 509,
+"level": 4
 },
 {
 "th": "เล็กน้อย",
@@ -12251,8 +12251,8 @@
 "reading": "파딷",
 "ko": "수술하다",
 "inVocab": true,
-"rank": 325,
-"level": 3
+"rank": 0,
+"level": 0
 },
 {
 "th": "พัดลม",
@@ -12277,9 +12277,9 @@
 "grade": 2,
 "reading": "래우 꺼",
 "ko": "그리고, 그러고 나서",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 125,
+"level": 2
 },
 {
 "th": "ผ้าขี้ริ้ว",
@@ -12377,8 +12377,8 @@
 "reading": "렁 하이",
 "ko": "울다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 871,
+"level": 5
 },
 {
 "th": "ว่ายน้ำ",
@@ -12484,9 +12484,9 @@
 "grade": 2,
 "reading": "랍 쁘라탄",
 "ko": "드시다(식사 존칭)",
-"inVocab": true,
-"rank": 280,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "เวียนเทียน",
@@ -12502,9 +12502,9 @@
 "grade": 2,
 "reading": "푸 콘",
 "ko": "사람들",
-"inVocab": true,
-"rank": 809,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "เพราะว่า",
@@ -12512,8 +12512,8 @@
 "reading": "프러 와",
 "ko": "왜냐하면",
 "inVocab": true,
-"rank": 944,
-"level": 5
+"rank": 302,
+"level": 3
 },
 {
 "th": "ร่างกาย",
@@ -12521,8 +12521,8 @@
 "reading": "랑까이",
 "ko": "신체, 몸",
 "inVocab": true,
-"rank": 131,
-"level": 2
+"rank": 984,
+"level": 5
 },
 {
 "th": "สดชื่น",
@@ -12557,8 +12557,8 @@
 "reading": "란 카",
 "ko": "가게, 상점, 가게, 상점, 가게, 상점",
 "inVocab": true,
-"rank": 284,
-"level": 3
+"rank": 0,
+"level": 0
 },
 {
 "th": "สดใส",
@@ -12575,8 +12575,8 @@
 "reading": "푸차이",
 "ko": "남자",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 340,
+"level": 3
 },
 {
 "th": "เฟื่องฟ้า",
@@ -12592,9 +12592,9 @@
 "grade": 2,
 "reading": "라이 응안",
 "ko": "보고하다, 보고서",
-"inVocab": true,
-"rank": 796,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "สนใจ",
@@ -12602,8 +12602,8 @@
 "reading": "쏜 짜이",
 "ko": "관심이 있다",
 "inVocab": true,
-"rank": 712,
-"level": 4
+"rank": 417,
+"level": 3
 },
 {
 "th": "ผู้เฒ่า",
@@ -12620,8 +12620,8 @@
 "reading": "퐈이퐈",
 "ko": "전기",
 "inVocab": true,
-"rank": 1000,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "ร้ายแรง",
@@ -12727,9 +12727,9 @@
 "grade": 2,
 "reading": "막 마이",
 "ko": "많은, 다수의",
-"inVocab": true,
-"rank": 472,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "รู้จัก",
@@ -12737,8 +12737,8 @@
 "reading": "루 / 루짝",
 "ko": "알다",
 "inVocab": true,
-"rank": 306,
-"level": 3
+"rank": 47,
+"level": 1
 },
 {
 "th": "สวยงาม",
@@ -12773,8 +12773,8 @@
 "reading": "루쓱",
 "ko": "느끼다",
 "inVocab": true,
-"rank": 336,
-"level": 3
+"rank": 241,
+"level": 2
 },
 {
 "th": "สั่งสอน",
@@ -12800,17 +12800,17 @@
 "reading": "므아완",
 "ko": "어제",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 934,
+"level": 5
 },
 {
 "th": "เรียบร้อย",
 "grade": 2,
-"reading": "리압 러이",
-"ko": "단정하다, 완료되다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"reading": "리얍 러이",
+"ko": "완료됨, 단정하다",
+"inVocab": true,
+"rank": 392,
+"level": 3
 },
 {
 "th": "สิ่งของ",
@@ -12845,8 +12845,8 @@
 "reading": "롱 리안",
 "ko": "학교",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 527,
+"level": 4
 },
 {
 "th": "สิงโต",
@@ -12863,8 +12863,8 @@
 "reading": "씬 카",
 "ko": "상품",
 "inVocab": true,
-"rank": 33,
-"level": 1
+"rank": 0,
+"level": 0
 },
 {
 "th": "ห่วงใย",
@@ -12890,8 +12890,8 @@
 "reading": "끄롣",
 "ko": "화가 나다, 화나다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 533,
+"level": 4
 },
 {
 "th": "สีกากี",
@@ -12962,8 +12962,8 @@
 "reading": "카낫",
 "ko": "사이즈, 크기",
 "inVocab": true,
-"rank": 295,
-"level": 3
+"rank": 171,
+"level": 2
 },
 {
 "th": "สีเขียว",
@@ -13016,8 +13016,8 @@
 "reading": "헝남",
 "ko": "화장실",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 956,
+"level": 5
 },
 {
 "th": "กลับ",
@@ -13025,8 +13025,8 @@
 "reading": "끌랍",
 "ko": "돌아가다",
 "inVocab": true,
-"rank": 426,
-"level": 3
+"rank": 136,
+"level": 2
 },
 {
 "th": "ขโมย",
@@ -13061,8 +13061,8 @@
 "reading": "끌랑",
 "ko": "가운데",
 "inVocab": true,
-"rank": 844,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "ขยัน",
@@ -13160,17 +13160,17 @@
 "reading": "후아짜이",
 "ko": "심장",
 "inVocab": true,
-"rank": 345,
-"level": 3
+"rank": 735,
+"level": 4
 },
 {
 "th": "กล่าว",
 "grade": 2,
 "reading": "끌라우",
 "ko": "말하다, 언급하다",
-"inVocab": true,
-"rank": 579,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ขวาน",
@@ -13187,17 +13187,17 @@
 "reading": "씨야짜이",
 "ko": "슬프다, 속상하다, 아쉽다, 상심하다, 후회하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 500,
+"level": 3
 },
 {
 "th": "หัวหน้า",
 "grade": 2,
 "reading": "후아 나",
-"ko": "우두머리, 책임자",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "상사, 우두머리, 팀장",
+"inVocab": true,
+"rank": 688,
+"level": 4
 },
 {
 "th": "กลิ้ง",
@@ -13268,8 +13268,8 @@
 "reading": "하이 짜이",
 "ko": "숨 쉬다, 호흡하다",
 "inVocab": true,
-"rank": 461,
-"level": 3
+"rank": 948,
+"level": 5
 },
 {
 "th": "กลืน",
@@ -13313,8 +13313,8 @@
 "reading": "그룹",
 "ko": "단체",
 "inVocab": true,
-"rank": 51,
-"level": 1
+"rank": 888,
+"level": 5
 },
 {
 "th": "เขยิบ",
@@ -13331,8 +13331,8 @@
 "reading": "쓰아파",
 "ko": "옷, 의류",
 "inVocab": true,
-"rank": 968,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "อบรม",
@@ -13394,8 +13394,8 @@
 "reading": "차이 / 쾐 / 끼야우컹",
 "ko": "쓰다",
 "inVocab": true,
-"rank": 16,
-"level": 1
+"rank": 204,
+"level": 2
 },
 {
 "th": "หกล้ม",
@@ -13465,9 +13465,9 @@
 "grade": 2,
 "reading": "크롭",
 "ko": "완전한, 다 갖춘, 만(滿)",
-"inVocab": true,
-"rank": 584,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "หนังสือ",
@@ -13475,8 +13475,8 @@
 "reading": "낭쓰",
 "ko": "책",
 "inVocab": true,
-"rank": 604,
-"level": 4
+"rank": 938,
+"level": 5
 },
 {
 "th": "ออมสิน",
@@ -13520,8 +13520,8 @@
 "reading": "앗 짜",
 "ko": "아마 ~일 것이다",
 "inVocab": true,
-"rank": 201,
-"level": 2
+"rank": 258,
+"level": 3
 },
 {
 "th": "กัญชา",
@@ -13538,8 +13538,8 @@
 "reading": "크랑",
 "ko": "번, 회",
 "inVocab": true,
-"rank": 241,
-"level": 2
+"rank": 587,
+"level": 4
 },
 {
 "th": "หน้าต่าง",
@@ -13556,8 +13556,8 @@
 "reading": "압 남",
 "ko": "샤워(목욕)하다, 목욕하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 858,
+"level": 5
 },
 {
 "th": "การ",
@@ -13565,8 +13565,8 @@
 "reading": "깐",
 "ko": "~하기(명사화 접두사), 일, 업무",
 "inVocab": true,
-"rank": 4,
-"level": 1
+"rank": 160,
+"level": 2
 },
 {
 "th": "ครับ",
@@ -13574,8 +13574,8 @@
 "reading": "크랍",
 "ko": "존칭어조사 (남성)",
 "inVocab": true,
-"rank": 337,
-"level": 3
+"rank": 7,
+"level": 1
 },
 {
 "th": "หน้าที่",
@@ -13583,8 +13583,8 @@
 "reading": "나 티",
 "ko": "의무, 직무",
 "inVocab": true,
-"rank": 501,
-"level": 4
+"rank": 947,
+"level": 5
 },
 {
 "th": "อึ่งอ่าง",
@@ -13709,8 +13709,8 @@
 "reading": "꾼째",
 "ko": "열쇠",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 655,
+"level": 4
 },
 {
 "th": "คลอง",
@@ -13781,8 +13781,8 @@
 "reading": "끌리얃",
 "ko": "미워하다, 증오하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 721,
+"level": 4
 },
 {
 "th": "คล้าย",
@@ -13934,8 +13934,8 @@
 "reading": "쿠언",
 "ko": "~해야 마땅하다, ~하는 것이 좋다",
 "inVocab": true,
-"rank": 43,
-"level": 1
+"rank": 356,
+"level": 3
 },
 {
 "th": "ควัน",
@@ -13950,10 +13950,10 @@
 "th": "ตลก",
 "grade": 2,
 "reading": "따 록",
-"ko": "우습다, 코미디",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "웃기다, 코미디",
+"inVocab": true,
+"rank": 905,
+"level": 5
 },
 {
 "th": "น้อยหน่า",
@@ -13970,7 +13970,7 @@
 "reading": "쁠리얀",
 "ko": "바꾸다, 바꾸다, 교체하다",
 "inVocab": true,
-"rank": 355,
+"rank": 345,
 "level": 3
 },
 {
@@ -13979,8 +13979,8 @@
 "reading": "쾀",
 "ko": "~함(명사화 접두사)",
 "inVocab": true,
-"rank": 75,
-"level": 1
+"rank": 548,
+"level": 4
 },
 {
 "th": "ตลอด",
@@ -13988,8 +13988,8 @@
 "reading": "딸럿",
 "ko": "내내, 줄곧",
 "inVocab": true,
-"rank": 694,
-"level": 4
+"rank": 470,
+"level": 3
 },
 {
 "th": "นาค",
@@ -14024,8 +14024,8 @@
 "reading": "딸랏",
 "ko": "시장",
 "inVocab": true,
-"rank": 92,
-"level": 1
+"rank": 0,
+"level": 0
 },
 {
 "th": "บรรทัด",
@@ -14042,8 +14042,8 @@
 "reading": "쁠랙",
 "ko": "이상하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 396,
+"level": 3
 },
 {
 "th": "คุณ",
@@ -14051,8 +14051,8 @@
 "reading": "쿤",
 "ko": "당신 (2인칭)",
 "inVocab": true,
-"rank": 103,
-"level": 2
+"rank": 16,
+"level": 1
 },
 {
 "th": "ตะครุบ",
@@ -14068,9 +14068,9 @@
 "grade": 2,
 "reading": "버리웬",
 "ko": "구역, 부근",
-"inVocab": true,
-"rank": 319,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "แปลง",
@@ -14104,9 +14104,9 @@
 "grade": 2,
 "reading": "버리한",
 "ko": "경영하다, 관리하다",
-"inVocab": true,
-"rank": 456,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "โปรย",
@@ -14122,9 +14122,9 @@
 "grade": 2,
 "reading": "크르앙",
 "ko": "기계, 기기, 대(단위)",
-"inVocab": true,
-"rank": 777,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ตาล",
@@ -14150,8 +14150,8 @@
 "reading": "폰",
 "ko": "결과, 열매",
 "inVocab": true,
-"rank": 266,
-"level": 3
+"rank": 935,
+"level": 5
 },
 {
 "th": "เคารพ",
@@ -14204,26 +14204,26 @@
 "reading": "땀루원",
 "ko": "경찰",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 277,
+"level": 3
 },
 {
 "th": "บัตร",
 "grade": 2,
 "reading": "밧",
 "ko": "카드, 표",
-"inVocab": true,
-"rank": 786,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "แผล",
 "grade": 2,
 "reading": "플래",
 "ko": "상처, 궤양",
-"inVocab": true,
-"rank": 613,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "จรวด",
@@ -14240,8 +14240,8 @@
 "reading": "땀냉",
 "ko": "위치, 지위",
 "inVocab": true,
-"rank": 797,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "บาตร",
@@ -14258,8 +14258,8 @@
 "reading": "퐈랑",
 "ko": "구아바",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 828,
+"level": 5
 },
 {
 "th": "จระเข้",
@@ -14285,8 +14285,8 @@
 "reading": "씨씹밧",
 "ko": "40바트입니다.",
 "inVocab": true,
-"rank": 79,
-"level": 1
+"rank": 465,
+"level": 3
 },
 {
 "th": "พยาธิ",
@@ -14303,8 +14303,8 @@
 "reading": "찡",
 "ko": "진짜의, 정말",
 "inVocab": true,
-"rank": 415,
-"level": 3
+"rank": 135,
+"level": 2
 },
 {
 "th": "ตุ๊กตุ่น",
@@ -14348,7 +14348,7 @@
 "reading": "뜨리얌",
 "ko": "준비하다",
 "inVocab": true,
-"rank": 585,
+"rank": 626,
 "level": 4
 },
 {
@@ -14366,7 +14366,7 @@
 "reading": "파야얌",
 "ko": "노력하다, 시도하다",
 "inVocab": true,
-"rank": 630,
+"rank": 519,
 "level": 4
 },
 {
@@ -14374,9 +14374,9 @@
 "grade": 2,
 "reading": "짱왓",
 "ko": "도(행정구역), 주",
-"inVocab": true,
-"rank": 633,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ถนน",
@@ -14428,9 +14428,9 @@
 "grade": 2,
 "reading": "빠띠밧",
 "ko": "실행하다, 수행하다",
-"inVocab": true,
-"rank": 966,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "พรวน",
@@ -14474,8 +14474,8 @@
 "reading": "프럼",
 "ko": "준비된, 함께, 동시에",
 "inVocab": true,
-"rank": 222,
-"level": 2
+"rank": 283,
+"level": 3
 },
 {
 "th": "เจดีย์",
@@ -14501,8 +14501,8 @@
 "reading": "쁘라텟",
 "ko": "나라, 국가, 국가",
 "inVocab": true,
-"rank": 111,
-"level": 2
+"rank": 883,
+"level": 5
 },
 {
 "th": "พราน",
@@ -14537,8 +14537,8 @@
 "reading": "쁘라만",
 "ko": "약, 대략",
 "inVocab": true,
-"rank": 213,
-"level": 2
+"rank": 822,
+"level": 5
 },
 {
 "th": "พริก",
@@ -14554,9 +14554,9 @@
 "grade": 2,
 "reading": "쫏",
 "ko": "문제(수학), 과제",
-"inVocab": true,
-"rank": 429,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ทรพี",
@@ -14579,11 +14579,11 @@
 {
 "th": "พลัง",
 "grade": 2,
-"reading": "파 랑",
-"ko": "힘, 에너지",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"reading": "팔 랑",
+"ko": "힘, 에너지, 파워",
+"inVocab": true,
+"rank": 830,
+"level": 5
 },
 {
 "th": "โจร",
@@ -14600,17 +14600,17 @@
 "reading": "쌉",
 "ko": "알다(격식)",
 "inVocab": true,
-"rank": 455,
-"level": 3
+"rank": 708,
+"level": 4
 },
 {
 "th": "ประโยชน์",
 "grade": 2,
 "reading": "쁘라욧",
 "ko": "이익, 효용, 유용함",
-"inVocab": true,
-"rank": 689,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "พัฒนา",
@@ -14618,17 +14618,17 @@
 "reading": "파타나",
 "ko": "발달하다, 개발하다, 발전되다",
 "inVocab": true,
-"rank": 128,
-"level": 2
+"rank": 0,
+"level": 0
 },
 {
 "th": "ชนิด",
 "grade": 2,
 "reading": "차닛",
 "ko": "종류, 유형",
-"inVocab": true,
-"rank": 151,
-"level": 2
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ทราย",
@@ -14716,9 +14716,9 @@
 "grade": 2,
 "reading": "쁘륵싸",
 "ko": "상담하다, 자문하다",
-"inVocab": true,
-"rank": 525,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "พิษ",
@@ -14735,7 +14735,7 @@
 "reading": "치윋",
 "ko": "인생(삶), 인생, 삶",
 "inVocab": true,
-"rank": 476,
+"rank": 357,
 "level": 3
 },
 {
@@ -14789,8 +14789,8 @@
 "reading": "쁠러이",
 "ko": "놓아주다, 방출하다, 내버려 두다",
 "inVocab": true,
-"rank": 772,
-"level": 5
+"rank": 166,
+"level": 2
 },
 {
 "th": "พุทธ",
@@ -14807,8 +14807,8 @@
 "reading": "천",
 "ko": "어서 ~하세요, 초대하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 234,
+"level": 2
 },
 {
 "th": "ทุกข์",
@@ -14897,8 +14897,8 @@
 "reading": "빳싸와",
 "ko": "소변",
 "inVocab": true,
-"rank": 484,
-"level": 3
+"rank": 0,
+"level": 0
 },
 {
 "th": "เพลง",
@@ -14906,8 +14906,8 @@
 "reading": "플렝",
 "ko": "노래, 음악",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 185,
+"level": 2
 },
 {
 "th": "ดนตรี",
@@ -14951,17 +14951,17 @@
 "reading": "뜨롱",
 "ko": "정각",
 "inVocab": true,
-"rank": 388,
+"rank": 460,
 "level": 3
 },
 {
 "th": "โทษ",
 "grade": 2,
 "reading": "톳",
-"ko": "벌, 죄, 탓하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "벌, 죄, 미안(ขอโทษ 축약)",
+"inVocab": true,
+"rank": 311,
+"level": 3
 },
 {
 "th": "เปรียว",
@@ -14987,8 +14987,8 @@
 "reading": "뜨루엊",
 "ko": "검사하다",
 "inVocab": true,
-"rank": 145,
-"level": 2
+"rank": 0,
+"level": 0
 },
 {
 "th": "ธูป",
@@ -15013,9 +15013,9 @@
 "grade": 2,
 "reading": "팻",
 "ko": "의사",
-"inVocab": true,
-"rank": 98,
-"level": 1
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ภรรยา",
@@ -15031,9 +15031,9 @@
 "grade": 2,
 "reading": "쓱싸",
 "ko": "공부하다, 연구하다, 교육",
-"inVocab": true,
-"rank": 371,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "เสด็จ",
@@ -15050,17 +15050,17 @@
 "reading": "롭 / 니",
 "ko": "피하다, 달아나다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 585,
+"level": 4
 },
 {
 "th": "ภาค",
 "grade": 2,
 "reading": "팍",
 "ko": "지방, 부문, 학기",
-"inVocab": true,
-"rank": 446,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ศูนย์",
@@ -15068,8 +15068,8 @@
 "reading": "쑨",
 "ko": "0",
 "inVocab": true,
-"rank": 656,
-"level": 4
+"rank": 0,
+"level": 0
 },
 {
 "th": "เสร็จ",
@@ -15077,8 +15077,8 @@
 "reading": "쎧",
 "ko": "끝나다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 282,
+"level": 3
 },
 {
 "th": "หลวม",
@@ -15120,10 +15120,10 @@
 "th": "หลอก",
 "grade": 2,
 "reading": "럭",
-"ko": "속이다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "속이다, 놀리다",
+"inVocab": true,
+"rank": 389,
+"level": 3
 },
 {
 "th": "มะกรูด",
@@ -15149,8 +15149,8 @@
 "reading": "싸댕",
 "ko": "전시하다, 나타내다",
 "inVocab": true,
-"rank": 603,
-"level": 4
+"rank": 0,
+"level": 0
 },
 {
 "th": "หลอด",
@@ -15185,8 +15185,8 @@
 "reading": "잉",
 "ko": "여성, 여자",
 "inVocab": true,
-"rank": 628,
-"level": 4
+"rank": 961,
+"level": 5
 },
 {
 "th": "หลัง",
@@ -15194,8 +15194,8 @@
 "reading": "랑",
 "ko": "등, 뒤, 등",
 "inVocab": true,
-"rank": 197,
-"level": 2
+"rank": 474,
+"level": 3
 },
 {
 "th": "มะปราง",
@@ -15229,9 +15229,9 @@
 "grade": 2,
 "reading": "랍",
 "ko": "잠들다, 눈을 감다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 853,
+"level": 5
 },
 {
 "th": "มะพร้าว",
@@ -15302,8 +15302,8 @@
 "reading": "라이",
 "ko": "여러 개의",
 "inVocab": true,
-"rank": 108,
-"level": 2
+"rank": 331,
+"level": 3
 },
 {
 "th": "มิตร",
@@ -15329,8 +15329,8 @@
 "reading": "너이",
 "ko": "조금, 좀",
 "inVocab": true,
-"rank": 860,
-"level": 5
+"rank": 68,
+"level": 1
 },
 {
 "th": "หลุด",
@@ -15365,8 +15365,8 @@
 "reading": "낙",
 "ko": "무겁다, (무게가) 무겁다",
 "inVocab": true,
-"rank": 890,
-"level": 5
+"rank": 681,
+"level": 4
 },
 {
 "th": "หลุม",
@@ -15381,19 +15381,19 @@
 "th": "เมตตา",
 "grade": 2,
 "reading": "멧 따",
-"ko": "자비, 자애",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "자비, 자비를 베풀다",
+"inVocab": true,
+"rank": 769,
+"level": 5
 },
 {
 "th": "สนุก",
 "grade": 2,
 "reading": "싸 눅",
 "ko": "재미있다, 즐겁다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 409,
+"level": 3
 },
 {
 "th": "หนัง",
@@ -15401,17 +15401,17 @@
 "reading": "낭",
 "ko": "영화, 가죽",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 564,
+"level": 4
 },
 {
 "th": "หวัง",
 "grade": 2,
 "reading": "왕",
 "ko": "바라다, 희망하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 532,
+"level": 4
 },
 {
 "th": "เมล็ด",
@@ -15428,8 +15428,8 @@
 "reading": "싸바이",
 "ko": "(마사지 후) 시원하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 352,
+"level": 3
 },
 {
 "th": "หนาว",
@@ -15544,9 +15544,9 @@
 "grade": 2,
 "reading": "눔",
 "ko": "젊은 남자, 청년",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 937,
+"level": 5
 },
 {
 "th": "หาร",
@@ -15563,8 +15563,8 @@
 "reading": "롣",
 "ko": "차, 자동차, 차량, 차",
 "inVocab": true,
-"rank": 582,
-"level": 4
+"rank": 280,
+"level": 3
 },
 {
 "th": "สมมุติ",
@@ -15581,8 +15581,8 @@
 "reading": "못",
 "ko": "다 떨어지다, 모두, 전부",
 "inVocab": true,
-"rank": 765,
-"level": 5
+"rank": 115,
+"level": 2
 },
 {
 "th": "เหนียว",
@@ -15608,8 +15608,8 @@
 "reading": "싸멍",
 "ko": "뇌",
 "inVocab": true,
-"rank": 304,
-"level": 3
+"rank": 940,
+"level": 5
 },
 {
 "th": "หมวก",
@@ -15626,8 +15626,8 @@
 "reading": "느아이",
 "ko": "피곤하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 494,
+"level": 3
 },
 {
 "th": "ราษฎร",
@@ -15671,8 +15671,8 @@
 "reading": "룹",
 "ko": "사진, 그림, 형태",
 "inVocab": true,
-"rank": 901,
-"level": 5
+"rank": 525,
+"level": 4
 },
 {
 "th": "สมุด",
@@ -15698,8 +15698,8 @@
 "reading": "므언",
 "ko": "같다, ~처럼",
 "inVocab": true,
-"rank": 467,
-"level": 3
+"rank": 151,
+"level": 2
 },
 {
 "th": "โรค",
@@ -15707,8 +15707,8 @@
 "reading": "록",
 "ko": "병, 질병",
 "inVocab": true,
-"rank": 56,
-"level": 1
+"rank": 0,
+"level": 0
 },
 {
 "th": "สร้อย",
@@ -15752,8 +15752,8 @@
 "reading": "쌍",
 "ko": "건설하다, 만들다",
 "inVocab": true,
-"rank": 53,
-"level": 1
+"rank": 646,
+"level": 4
 },
 {
 "th": "หมั่น",
@@ -15788,8 +15788,8 @@
 "reading": "싸왓디",
 "ko": "안녕",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 137,
+"level": 2
 },
 {
 "th": "หมาก",
@@ -15831,10 +15831,10 @@
 "th": "หมาย",
 "grade": 2,
 "reading": "마이",
-"ko": "의미하다, 표시하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "영장, 통지서, 의미하다",
+"inVocab": true,
+"rank": 981,
+"level": 5
 },
 {
 "th": "เหล็ก",
@@ -15860,7 +15860,7 @@
 "reading": "싼야",
 "ko": "계약, 약속하다, 약속하다",
 "inVocab": true,
-"rank": 338,
+"rank": 419,
 "level": 3
 },
 {
@@ -15968,17 +15968,17 @@
 "reading": "쌈칸",
 "ko": "중요하다",
 "inVocab": true,
-"rank": 132,
-"level": 2
+"rank": 488,
+"level": 3
 },
 {
 "th": "หยิบ",
 "grade": 2,
 "reading": "입",
 "ko": "집다, 집어 들다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"inVocab": true,
+"rank": 816,
+"level": 5
 },
 {
 "th": "องค์",
@@ -16004,8 +16004,8 @@
 "reading": "쌈랍",
 "ko": "~을 위한, ~에게",
 "inVocab": true,
-"rank": 71,
-"level": 1
+"rank": 394,
+"level": 3
 },
 {
 "th": "หยุด",
@@ -16013,8 +16013,8 @@
 "reading": "윳",
 "ko": "멈추다, 정지하다",
 "inVocab": true,
-"rank": 552,
-"level": 4
+"rank": 236,
+"level": 2
 },
 {
 "th": "องุ่น",
@@ -16047,10 +16047,10 @@
 "th": "หรอก",
 "grade": 2,
 "reading": "럭",
-"ko": "~인 걸요 (부정 강조 어조사)",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "~는 게 아냐, ~할 리 없어(부정 강조 어말조사)",
+"inVocab": true,
+"rank": 88,
+"level": 1
 },
 {
 "th": "อธิบาย",
@@ -16058,8 +16058,8 @@
 "reading": "아티바이",
 "ko": "설명하다",
 "inVocab": true,
-"rank": 877,
-"level": 5
+"rank": 687,
+"level": 4
 },
 {
 "th": "ศีรษะ",
@@ -16103,8 +16103,8 @@
 "reading": "약",
 "ko": "~하고 싶다",
 "inVocab": true,
-"rank": 340,
-"level": 3
+"rank": 55,
+"level": 1
 },
 {
 "th": "อย่าง",
@@ -16112,7 +16112,7 @@
 "reading": "양",
 "ko": "~처럼, 종류, ~하게(부사화)",
 "inVocab": true,
-"rank": 22,
+"rank": 100,
 "level": 1
 },
 {
@@ -16121,17 +16121,17 @@
 "reading": "아러이",
 "ko": "맛있는, 맛있다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 338,
+"level": 3
 },
 {
 "th": "อวัยวะ",
 "grade": 2,
 "reading": "아와이야와",
 "ko": "장기, 기관(신체)",
-"inVocab": true,
-"rank": 673,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "อันตราย",
@@ -16139,7 +16139,7 @@
 "reading": "안딸라이",
 "ko": "위험하다",
 "inVocab": true,
-"rank": 910,
+"rank": 755,
 "level": 5
 },
 {
@@ -16157,8 +16157,8 @@
 "reading": "아깐",
 "ko": "증상",
 "inVocab": true,
-"rank": 50,
-"level": 1
+"rank": 964,
+"level": 5
 },
 {
 "th": "อากาศ",
@@ -16175,8 +16175,8 @@
 "reading": "아칸",
 "ko": "건물, 빌딩",
 "inVocab": true,
-"rank": 970,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "อาจ",
@@ -16184,8 +16184,8 @@
 "reading": "앗",
 "ko": "~일지도 모른다, 아마",
 "inVocab": true,
-"rank": 40,
-"level": 1
+"rank": 833,
+"level": 5
 },
 {
 "th": "อาจารย์",
@@ -16193,8 +16193,8 @@
 "reading": "아짠",
 "ko": "교수님, 선생님",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 454,
+"level": 3
 },
 {
 "th": "อาชีพ",
@@ -16210,9 +16210,9 @@
 "grade": 2,
 "reading": "아싸이",
 "ko": "거주하다, 의지하다",
-"inVocab": true,
-"rank": 801,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "อาหาร",
@@ -16220,8 +16220,8 @@
 "reading": "아한",
 "ko": "음식",
 "inVocab": true,
-"rank": 105,
-"level": 2
+"rank": 653,
+"level": 4
 },
 {
 "th": "อิฐ",
@@ -16310,8 +16310,8 @@
 "reading": "꼿마이",
 "ko": "법",
 "inVocab": true,
-"rank": 178,
-"level": 2
+"rank": 0,
+"level": 0
 },
 {
 "th": "กระวีกระวาด",
@@ -16545,8 +16545,8 @@
 "reading": "끄룽 텝",
 "ko": "방콕",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 814,
+"level": 5
 },
 {
 "th": "กะพริบ",
@@ -16616,9 +16616,9 @@
 "grade": 3,
 "reading": "꼰 라이",
 "ko": "메커니즘, 구조",
-"inVocab": true,
-"rank": 702,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "กันแสง",
@@ -16868,9 +16868,9 @@
 "grade": 3,
 "reading": "낏짜깜",
 "ko": "활동, 행사",
-"inVocab": true,
-"rank": 433,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ขม้ำ",
@@ -17139,8 +17139,8 @@
 "reading": "커톧",
 "ko": "미안한, 유감인",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 105,
+"level": 2
 },
 {
 "th": "ครอบครัว",
@@ -17148,8 +17148,8 @@
 "reading": "크럽크루아",
 "ko": "가족",
 "inVocab": true,
-"rank": 432,
-"level": 3
+"rank": 584,
+"level": 4
 },
 {
 "th": "คาคบ",
@@ -17175,8 +17175,8 @@
 "reading": "컵쿤",
 "ko": "감사하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 97,
+"level": 1
 },
 {
 "th": "ค่าง",
@@ -17400,8 +17400,8 @@
 "reading": "코싸나",
 "ko": "광고(하다), 광고",
 "inVocab": true,
-"rank": 519,
-"level": 4
+"rank": 0,
+"level": 0
 },
 {
 "th": "เข็นรถ",
@@ -17417,9 +17417,9 @@
 "grade": 3,
 "reading": "클럿",
 "ko": "출산하다",
-"inVocab": true,
-"rank": 894,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "คีรี",
@@ -17768,9 +17768,9 @@
 "grade": 3,
 "reading": "디까",
 "ko": "대법원 상고, 상고심",
-"inVocab": true,
-"rank": 459,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "จริงไซร้",
@@ -17957,9 +17957,9 @@
 "grade": 3,
 "reading": "차퍼",
 "ko": "특정한, ~만, 오직",
-"inVocab": true,
-"rank": 418,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ชายฉกรรจ์",
@@ -18273,8 +18273,8 @@
 "reading": "촉디",
 "ko": "행운",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 706,
+"level": 4
 },
 {
 "th": "เจรจา",
@@ -18435,8 +18435,8 @@
 "reading": "뜬 뗀",
 "ko": "신나다, 흥분하다, 흥분하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 911,
+"level": 5
 },
 {
 "th": "ทรงยศ",
@@ -18578,9 +18578,9 @@
 "grade": 3,
 "reading": "쌉 씬",
 "ko": "재산",
-"inVocab": true,
-"rank": 359,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ทุกัง",
@@ -18874,10 +18874,10 @@
 "th": "เถอะ",
 "grade": 3,
 "reading": "터",
-"ko": "~하자, ~해라(권유 어미)",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "~하자, ~해(권유 어말조사)",
+"inVocab": true,
+"rank": 188,
+"level": 2
 },
 {
 "th": "ทอดพระเนตร",
@@ -19162,19 +19162,19 @@
 "th": "บุตร",
 "grade": 3,
 "reading": "붓",
-"ko": "자녀(법률, 격식)",
-"inVocab": true,
-"rank": 473,
-"level": 3
+"ko": "자녀(법률·격식)",
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "นี่แหละ",
 "grade": 3,
 "reading": "니 래",
-"ko": "바로 이것",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"ko": "바로 이거야",
+"inVocab": true,
+"rank": 430,
+"level": 3
 },
 {
 "th": "บวม",
@@ -19218,7 +19218,7 @@
 "reading": "뽀까띠",
 "ko": "보통, 정상적인",
 "inVocab": true,
-"rank": 329,
+"rank": 355,
 "level": 3
 },
 {
@@ -19380,8 +19380,8 @@
 "reading": "빠띠쎗",
 "ko": "거절하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 797,
+"level": 5
 },
 {
 "th": "นที",
@@ -19460,9 +19460,9 @@
 "grade": 3,
 "reading": "나요바이",
 "ko": "정책",
-"inVocab": true,
-"rank": 288,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "บรรจง",
@@ -19488,8 +19488,8 @@
 "reading": "쁘라깟",
 "ko": "안내(게시)하다, 알리다, 공지하다, 공지하다",
 "inVocab": true,
-"rank": 490,
-"level": 3
+"rank": 0,
+"level": 0
 },
 {
 "th": "นักมายากล",
@@ -19758,8 +19758,8 @@
 "reading": "쁘라펫",
 "ko": "종류",
 "inVocab": true,
-"rank": 207,
-"level": 2
+"rank": 0,
+"level": 0
 },
 {
 "th": "น้ำบูดู",
@@ -19838,9 +19838,9 @@
 "grade": 3,
 "reading": "북콘",
 "ko": "개인, 사람",
-"inVocab": true,
-"rank": 275,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "นิทรรศการ",
@@ -19983,8 +19983,8 @@
 "reading": "삐야노",
 "ko": "피아노",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 286,
+"level": 3
 },
 {
 "th": "ประหลาด",
@@ -20090,9 +20090,9 @@
 "grade": 3,
 "reading": "쁘라꼿",
 "ko": "나타나다, 드러나다",
-"inVocab": true,
-"rank": 813,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "โปรดเกล้าฯ",
@@ -20234,9 +20234,9 @@
 "grade": 3,
 "reading": "빳쭈반",
 "ko": "현재",
-"inVocab": true,
-"rank": 192,
-"level": 2
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ผลกระทบ",
@@ -20244,8 +20244,8 @@
 "reading": "폰 끄라톱",
 "ko": "충격받다",
 "inVocab": true,
-"rank": 334,
-"level": 3
+"rank": 0,
+"level": 0
 },
 {
 "th": "พญาครุฑ",
@@ -20324,9 +20324,9 @@
 "grade": 3,
 "reading": "파낙 응안",
 "ko": "직원, 종업원",
-"inVocab": true,
-"rank": 233,
-"level": 2
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ปราะหลาด",
@@ -20423,9 +20423,9 @@
 "grade": 3,
 "reading": "팔릿",
 "ko": "생산하다, 제조하다",
-"inVocab": true,
-"rank": 531,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ปุยฝ้าย",
@@ -20441,9 +20441,9 @@
 "grade": 3,
 "reading": "팔릿따판",
 "ko": "제품",
-"inVocab": true,
-"rank": 301,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "พรรคพวก",
@@ -20549,9 +20549,9 @@
 "grade": 3,
 "reading": "쁘리얍 티얍",
 "ko": "비교하다",
-"inVocab": true,
-"rank": 728,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ผิดถูก",
@@ -20837,9 +20837,9 @@
 "grade": 3,
 "reading": "프릇띠깜",
 "ko": "행동, 행태",
-"inVocab": true,
-"rank": 424,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "พาราลิมปิก",
@@ -20991,8 +20991,8 @@
 "reading": "팔랑응안",
 "ko": "에너지",
 "inVocab": true,
-"rank": 568,
-"level": 4
+"rank": 0,
+"level": 0
 },
 {
 "th": "พิภพ",
@@ -21395,9 +21395,9 @@
 "grade": 3,
 "reading": "픔 뜸",
 "ko": "추가의, 추가하다",
-"inVocab": true,
-"rank": 254,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "มงคล",
@@ -21467,9 +21467,9 @@
 "grade": 3,
 "reading": "마눗",
 "ko": "인간",
-"inVocab": true,
-"rank": 953,
-"level": 5
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ไม้ยมก",
@@ -21486,8 +21486,8 @@
 "reading": "롯욘",
 "ko": "자동차",
 "inVocab": true,
-"rank": 623,
-"level": 4
+"rank": 0,
+"level": 0
 },
 {
 "th": "มโนมัย",
@@ -21891,8 +21891,8 @@
 "reading": "랏타탐마눈",
 "ko": "헌법",
 "inVocab": true,
-"rank": 905,
-"level": 5
+"rank": 0,
+"level": 0
 },
 {
 "th": "มะขามป้อม",
@@ -21917,9 +21917,9 @@
 "grade": 3,
 "reading": "랏타반",
 "ko": "정부",
-"inVocab": true,
-"rank": 542,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "มะดูก",
@@ -21942,11 +21942,11 @@
 {
 "th": "เยี่ยม",
 "grade": 3,
-"reading": "이암",
-"ko": "방문하다, 훌륭하다",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"reading": "이얌",
+"ko": "훌륭하다, 최고다, 방문하다",
+"inVocab": true,
+"rank": 985,
+"level": 5
 },
 {
 "th": "แมงป่อง",
@@ -21999,7 +21999,7 @@
 "reading": "랑 완",
 "ko": "상",
 "inVocab": true,
-"rank": 823,
+"rank": 966,
 "level": 5
 },
 {
@@ -22205,9 +22205,9 @@
 "grade": 3,
 "reading": "위크러",
 "ko": "분석하다",
-"inVocab": true,
-"rank": 290,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "ริบหรี่",
@@ -22295,9 +22295,9 @@
 "grade": 3,
 "reading": "위티 깐",
 "ko": "방법, 절차",
-"inVocab": true,
-"rank": 451,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "รื่นรมย์",
@@ -22386,8 +22386,8 @@
 "reading": "록",
 "ko": "지구, 세계",
 "inVocab": true,
-"rank": 180,
-"level": 2
+"rank": 384,
+"level": 3
 },
 {
 "th": "วิวัฒน์",
@@ -22484,9 +22484,9 @@
 "grade": 3,
 "reading": "왁",
 "ko": "항(법조문의 단락), 단락",
-"inVocab": true,
-"rank": 554,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "วุ่นวาย",
@@ -22530,8 +22530,8 @@
 "reading": "웹 싸이",
 "ko": "웹 사이트",
 "inVocab": true,
-"rank": 539,
-"level": 4
+"rank": 0,
+"level": 0
 },
 {
 "th": "เร่งรีบ",
@@ -22788,11 +22788,11 @@
 {
 "th": "ฤกษ์",
 "grade": 3,
-"reading": "럭",
-"ko": "길시, 좋은 때",
-"inVocab": false,
-"rank": 0,
-"level": 0
+"reading": "륵",
+"ko": "길시, 좋은 때(점성)",
+"inVocab": true,
+"rank": 553,
+"level": 4
 },
 {
 "th": "ลีลาศ",
@@ -22890,8 +22890,8 @@
 "reading": "쎗타낏",
 "ko": "경제",
 "inVocab": true,
-"rank": 189,
-"level": 2
+"rank": 0,
+"level": 0
 },
 {
 "th": "ฤษี",
@@ -22925,9 +22925,9 @@
 "grade": 3,
 "reading": "싸마칙",
 "ko": "회원, 구성원",
-"inVocab": true,
-"rank": 734,
-"level": 4
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "สาหัส",
@@ -23025,8 +23025,8 @@
 "reading": "쏭 싸이",
 "ko": "궁금하다",
 "inVocab": true,
-"rank": 0,
-"level": 0
+"rank": 515,
+"level": 4
 },
 {
 "th": "สรงน้ำ",
@@ -23078,9 +23078,9 @@
 "grade": 3,
 "reading": "쏭 씀",
 "ko": "장려하다, 촉진하다",
-"inVocab": true,
-"rank": 437,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "สรรพสิ่ง",
@@ -23187,8 +23187,8 @@
 "reading": "싸룹",
 "ko": "요약하다, 결론",
 "inVocab": true,
-"rank": 182,
-"level": 2
+"rank": 651,
+"level": 4
 },
 {
 "th": "สิทธิพิเศษ",
@@ -23348,9 +23348,9 @@
 "grade": 3,
 "reading": "싸납싸눈",
 "ko": "지원하다, 후원하다",
-"inVocab": true,
-"rank": 342,
-"level": 3
+"inVocab": false,
+"rank": 0,
+"level": 0
 },
 {
 "th": "สวรรคต",

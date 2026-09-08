@@ -1,51 +1,58 @@
 [
  {
+  "th": "กา",
+  "derived": 264,
+  "reading": "까",
+  "ko": "까마귀, 주전자, 표시하다(체크)",
+  "inTop1000": true
+ },
+ {
   "th": "ที",
-  "derived": 204,
+  "derived": 200,
   "reading": "티",
   "ko": "번, 차례, 때",
   "inTop1000": true
  },
  {
-  "th": "เท",
+  "th": "ลา",
   "derived": 144,
-  "reading": "테",
-  "ko": "붓다, 쏟다",
+  "reading": "라",
+  "ko": "작별하다, 휴가 내다, 당나귀",
   "inTop1000": true
  },
  {
   "th": "อา",
-  "derived": 124,
+  "derived": 126,
   "reading": "",
   "ko": "",
   "inTop1000": true
  },
  {
   "th": "อก",
-  "derived": 117,
+  "derived": 119,
   "reading": "옥",
   "ko": "가슴",
   "inTop1000": false
- },
- {
-  "th": "รี",
-  "derived": 114,
-  "reading": "",
-  "ko": "",
-  "inTop1000": true
- },
- {
-  "th": "รา",
-  "derived": 108,
-  "reading": "",
-  "ko": "",
-  "inTop1000": true
  },
  {
   "th": "น้ำ",
   "derived": 107,
   "reading": "남",
   "ko": "물",
+  "inTop1000": true
+ },
+ {
+  "th": "เค",
+  "derived": 100,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "อร",
+  "derived": 97,
+  "reading": "",
+  "ko": "",
   "inTop1000": true
  },
  {
@@ -56,80 +63,129 @@
   "inTop1000": true
  },
  {
+  "th": "เก",
+  "derived": 96,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "เด",
+  "derived": 95,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
   "th": "นา",
-  "derived": 91,
+  "derived": 87,
+  "reading": "나",
+  "ko": "논, ~잖아(어말조사 นะ 변형)",
+  "inTop1000": true
+ },
+ {
+  "th": "เร",
+  "derived": 86,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "เต",
+  "derived": 86,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "สิ",
+  "derived": 84,
+  "reading": "씨",
+  "ko": "~해(권유, 강조 어말조사)",
+  "inTop1000": true
+ },
+ {
+  "th": "เม",
+  "derived": 82,
   "reading": "",
   "ko": "",
   "inTop1000": true
  },
  {
   "th": "หา",
-  "derived": 88,
+  "derived": 81,
   "reading": "하",
   "ko": "~을 찾다, 발견하다",
   "inTop1000": true
  },
  {
-  "th": "ทา",
-  "derived": 88,
-  "reading": "타",
-  "ko": "바르다(연고, 페인트)",
-  "inTop1000": true
- },
- {
-  "th": "ริ",
-  "derived": 83,
-  "reading": "",
-  "ko": "",
-  "inTop1000": true
- },
- {
   "th": "ขา",
-  "derived": 74,
+  "derived": 70,
   "reading": "카",
   "ko": "다리",
   "inTop1000": true
  },
  {
   "th": "สี",
-  "derived": 72,
+  "derived": 70,
   "reading": "씨",
   "ko": "색, 색깔, 색",
   "inTop1000": true
  },
  {
-  "th": "ทาง",
+  "th": "ข้า",
   "derived": 70,
-  "reading": "탕",
-  "ko": "쪽, 길, 방향",
+  "reading": "카",
+  "ko": "나(고어, 사극 1인칭), 종",
+  "inTop1000": true
+ },
+ {
+  "th": "ริ",
+  "derived": 70,
+  "reading": "",
+  "ko": "",
   "inTop1000": true
  },
  {
   "th": "รอ",
-  "derived": 70,
+  "derived": 69,
   "reading": "러",
   "ko": "기다리다",
   "inTop1000": true
  },
  {
-  "th": "เครื่อง",
-  "derived": 69,
-  "reading": "크르앙",
-  "ko": "기계, 기기, 대(단위)",
-  "inTop1000": true
- },
- {
   "th": "กระ",
-  "derived": 68,
+  "derived": 64,
   "reading": "끄라",
   "ko": "주근깨",
   "inTop1000": false
  },
  {
-  "th": "ลิ",
-  "derived": 62,
+  "th": "ทาง",
+  "derived": 64,
+  "reading": "탕",
+  "ko": "쪽, 길, 방향",
+  "inTop1000": true
+ },
+ {
+  "th": "ดิ",
+  "derived": 64,
+  "reading": "디",
+  "ko": "~해(권유 어말조사, สิ 구어)",
+  "inTop1000": true
+ },
+ {
+  "th": "เห",
+  "derived": 63,
   "reading": "",
   "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "วัน",
+  "derived": 62,
+  "reading": "완",
+  "ko": "날짜, 날, 요일",
   "inTop1000": true
  },
  {
@@ -140,134 +196,120 @@
   "inTop1000": true
  },
  {
-  "th": "วัน",
+  "th": "ลิ",
+  "derived": 61,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ติ",
   "derived": 60,
-  "reading": "완",
-  "ko": "날짜, 날, 요일",
+  "reading": "",
+  "ko": "",
   "inTop1000": true
  },
  {
   "th": "รับ",
-  "derived": 60,
+  "derived": 58,
   "reading": "랍",
   "ko": "받다",
   "inTop1000": true
  },
  {
-  "th": "ชา",
-  "derived": 59,
-  "reading": "차",
-  "ko": "차",
-  "inTop1000": false
- },
- {
-  "th": "วิ",
-  "derived": 56,
+  "th": "น้า",
+  "derived": 57,
   "reading": "",
   "ko": "",
   "inTop1000": true
  },
  {
-  "th": "ร้าน",
-  "derived": 53,
-  "reading": "란",
-  "ko": "가게, 상점",
-  "inTop1000": true
- },
- {
-  "th": "ตา",
-  "derived": 52,
-  "reading": "따",
-  "ko": "눈",
+  "th": "ชา",
+  "derived": 56,
+  "reading": "차",
+  "ko": "차",
   "inTop1000": true
  },
  {
   "th": "หน้า",
-  "derived": 51,
+  "derived": 54,
   "reading": "나",
   "ko": "얼굴, 앞, 페이지",
   "inTop1000": true
  },
  {
-  "th": "นิ",
+  "th": "ดี",
+  "derived": 53,
+  "reading": "디",
+  "ko": "좋음",
+  "inTop1000": true
+ },
+ {
+  "th": "เอ",
+  "derived": 52,
+  "reading": "에",
+  "ko": "에이(영문자 A 음역)",
+  "inTop1000": true
+ },
+ {
+  "th": "ร้าน",
+  "derived": 51,
+  "reading": "란",
+  "ko": "가게, 상점",
+  "inTop1000": true
+ },
+ {
+  "th": "เจ",
   "derived": 51,
   "reading": "",
   "ko": "",
   "inTop1000": true
  },
  {
-  "th": "แก",
+  "th": "วิ",
   "derived": 50,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ตา",
+  "derived": 49,
+  "reading": "따",
+  "ko": "눈",
+  "inTop1000": true
+ },
+ {
+  "th": "แก",
+  "derived": 48,
   "reading": "깨",
   "ko": "너 (2인칭, 친근)",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "อบ",
-  "derived": 50,
+  "derived": 47,
   "reading": "옵",
   "ko": "찌다, (오븐에서) 굽다",
   "inTop1000": false
- },
- {
-  "th": "งาน",
-  "derived": 48,
-  "reading": "응안",
-  "ko": "일, 업무, 행사",
-  "inTop1000": true
- },
- {
-  "th": "ดี",
-  "derived": 47,
-  "reading": "디",
-  "ko": "좋음",
-  "inTop1000": true
- },
- {
-  "th": "ผู้",
-  "derived": 46,
-  "reading": "푸",
-  "ko": "~하는 사람(접두사)",
-  "inTop1000": true
- },
- {
-  "th": "นัก",
-  "derived": 45,
-  "reading": "낙",
-  "ko": "~하는 사람(전문가 접두사), 매우",
-  "inTop1000": true
- },
- {
-  "th": "เอ",
-  "derived": 45,
-  "reading": "에",
-  "ko": "에이(영문자 A 음역)",
-  "inTop1000": true
  },
  {
   "th": "ไฟ",
   "derived": 44,
   "reading": "퐈이",
   "ko": "불",
-  "inTop1000": false
- },
- {
-  "th": "นม",
-  "derived": 44,
-  "reading": "놈",
-  "ko": "우유",
   "inTop1000": true
  },
  {
-  "th": "ดิน",
-  "derived": 44,
-  "reading": "딘",
-  "ko": "흙",
+  "th": "นม",
+  "derived": 43,
+  "reading": "놈",
+  "ko": "우유",
   "inTop1000": false
  },
  {
   "th": "ค่า",
-  "derived": 44,
+  "derived": 43,
   "reading": "카",
   "ko": "값, 요금, 비용",
   "inTop1000": true
@@ -284,13 +326,34 @@
   "derived": 42,
   "reading": "쓰아",
   "ko": "옷(상의)",
+  "inTop1000": true
+ },
+ {
+  "th": "ดิน",
+  "derived": 42,
+  "reading": "딘",
+  "ko": "흙",
   "inTop1000": false
  },
  {
-  "th": "เงิน",
+  "th": "นัก",
   "derived": 42,
-  "reading": "응언",
-  "ko": "돈, 은, 은색",
+  "reading": "낙",
+  "ko": "~하는 사람(전문가 접두사), 매우",
+  "inTop1000": true
+ },
+ {
+  "th": "ดา",
+  "derived": 42,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "งาน",
+  "derived": 41,
+  "reading": "응안",
+  "ko": "일, 업무, 행사",
   "inTop1000": true
  },
  {
@@ -298,41 +361,62 @@
   "derived": 40,
   "reading": "파",
   "ko": "천",
-  "inTop1000": false
- },
- {
-  "th": "ขน",
-  "derived": 38,
-  "reading": "콘",
-  "ko": "털",
-  "inTop1000": false
- },
- {
-  "th": "อาหาร",
-  "derived": 37,
-  "reading": "아한",
-  "ko": "음식",
   "inTop1000": true
  },
  {
-  "th": "ผล",
-  "derived": 37,
-  "reading": "폰",
-  "ko": "결과, 열매",
+  "th": "เงิน",
+  "derived": 39,
+  "reading": "응언",
+  "ko": "돈, 은, 은색",
+  "inTop1000": true
+ },
+ {
+  "th": "ผู้",
+  "derived": 39,
+  "reading": "푸",
+  "ko": "~하는 사람(접두사)",
+  "inTop1000": true
+ },
+ {
+  "th": "บอ",
+  "derived": 38,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "สม",
+  "derived": 38,
+  "reading": "",
+  "ko": "",
   "inTop1000": true
  },
  {
   "th": "มือ",
-  "derived": 36,
+  "derived": 37,
   "reading": "므",
   "ko": "손",
   "inTop1000": true
  },
  {
-  "th": "บอ",
+  "th": "อาหาร",
   "derived": 36,
-  "reading": "",
-  "ko": "",
+  "reading": "아한",
+  "ko": "음식",
+  "inTop1000": true
+ },
+ {
+  "th": "ขน",
+  "derived": 36,
+  "reading": "콘",
+  "ko": "털",
+  "inTop1000": false
+ },
+ {
+  "th": "ใจ",
+  "derived": 36,
+  "reading": "짜이",
+  "ko": "마음, 심장",
   "inTop1000": true
  },
  {
@@ -340,34 +424,20 @@
   "derived": 35,
   "reading": "하",
   "ko": "5",
-  "inTop1000": false
- },
- {
-  "th": "นก",
-  "derived": 35,
-  "reading": "녹",
-  "ko": "새, 바람맞다(차이다)",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ปลา",
   "derived": 35,
   "reading": "쁠라",
   "ko": "물고기",
-  "inTop1000": false
- },
- {
-  "th": "ขาย",
-  "derived": 35,
-  "reading": "카이",
-  "ko": "팔다",
   "inTop1000": true
  },
  {
-  "th": "ภาพ",
-  "derived": 35,
-  "reading": "팝",
-  "ko": "그림, 영상, 모양, 그림, 사진",
+  "th": "ขาย",
+  "derived": 34,
+  "reading": "카이",
+  "ko": "팔다",
   "inTop1000": true
  },
  {
@@ -378,20 +448,6 @@
   "inTop1000": false
  },
  {
-  "th": "วัด",
-  "derived": 34,
-  "reading": "왓",
-  "ko": "사원",
-  "inTop1000": true
- },
- {
-  "th": "ลาย",
-  "derived": 34,
-  "reading": "라이",
-  "ko": "무늬",
-  "inTop1000": false
- },
- {
   "th": "กัน",
   "derived": 34,
   "reading": "깐",
@@ -399,18 +455,32 @@
   "inTop1000": true
  },
  {
-  "th": "ยก",
-  "derived": 34,
-  "reading": "욕",
-  "ko": "들어 올리다, 들다, 면제하다",
-  "inTop1000": true
- },
- {
   "th": "สิบ",
   "derived": 33,
   "reading": "씹",
   "ko": "10",
-  "inTop1000": false
+  "inTop1000": true
+ },
+ {
+  "th": "ภาพ",
+  "derived": 33,
+  "reading": "팝",
+  "ko": "그림, 영상, 모양, 그림, 사진",
+  "inTop1000": true
+ },
+ {
+  "th": "วัด",
+  "derived": 33,
+  "reading": "왓",
+  "ko": "사원",
+  "inTop1000": true
+ },
+ {
+  "th": "ยก",
+  "derived": 33,
+  "reading": "욕",
+  "ko": "들어 올리다, 들다, 면제하다",
+  "inTop1000": true
  },
  {
   "th": "เท้า",
@@ -420,45 +490,31 @@
   "inTop1000": false
  },
  {
-  "th": "พา",
-  "derived": 32,
-  "reading": "파",
-  "ko": "데려가다, 이끌다",
-  "inTop1000": true
- },
- {
-  "th": "รอง",
-  "derived": 32,
-  "reading": "렁",
-  "ko": "부(副)~, 차석의, 받치다",
-  "inTop1000": true
- },
- {
-  "th": "มิ",
-  "derived": 32,
-  "reading": "",
-  "ko": "",
-  "inTop1000": true
- },
- {
-  "th": "ใจ",
+  "th": "ผม",
   "derived": 31,
-  "reading": "짜이",
-  "ko": "마음, 심장",
+  "reading": "폼",
+  "ko": "나 (1인칭, 남성), 나, 머리카락",
   "inTop1000": true
  },
  {
-  "th": "ใช้",
+  "th": "ลาย",
   "derived": 31,
-  "reading": "",
-  "ko": "",
+  "reading": "라이",
+  "ko": "무늬",
+  "inTop1000": false
+ },
+ {
+  "th": "ตี",
+  "derived": 31,
+  "reading": "띠",
+  "ko": "때리다, 치다, 새벽 ~시",
   "inTop1000": true
  },
  {
-  "th": "นึ่ง",
+  "th": "นก",
   "derived": 30,
-  "reading": "능",
-  "ko": "찌다",
+  "reading": "녹",
+  "ko": "새, 바람맞다(차이다)",
   "inTop1000": false
  },
  {
@@ -466,27 +522,13 @@
   "derived": 30,
   "reading": "토",
   "ko": "전화하다",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
-  "th": "เข้า",
+  "th": "สน",
   "derived": 30,
-  "reading": "카오",
-  "ko": "들어가다",
-  "inTop1000": true
- },
- {
-  "th": "ผม",
-  "derived": 29,
-  "reading": "폼",
-  "ko": "나 (1인칭, 남성), 나, 머리카락",
-  "inTop1000": true
- },
- {
-  "th": "เวลา",
-  "derived": 29,
-  "reading": "웨()라",
-  "ko": "시간",
+  "reading": "손",
+  "ko": "관심 있다(สนใจ 축약), 소나무",
   "inTop1000": true
  },
  {
@@ -497,38 +539,45 @@
   "inTop1000": true
  },
  {
-  "th": "เดิน",
+  "th": "นึ่ง",
   "derived": 29,
+  "reading": "능",
+  "ko": "찌다",
+  "inTop1000": false
+ },
+ {
+  "th": "เดิน",
+  "derived": 28,
   "reading": "던",
   "ko": "걷다",
   "inTop1000": true
  },
  {
-  "th": "เรียน",
+  "th": "เข้า",
   "derived": 28,
+  "reading": "카오",
+  "ko": "들어가다",
+  "inTop1000": true
+ },
+ {
+  "th": "ใช้",
+  "derived": 28,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "เรียน",
+  "derived": 27,
   "reading": "리얀",
   "ko": "공부하다, 수업, 배우다",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
-  "th": "หมา",
-  "derived": 28,
-  "reading": "마",
-  "ko": "개",
-  "inTop1000": false
- },
- {
-  "th": "จำ",
-  "derived": 28,
-  "reading": "짬",
-  "ko": "기억하다",
-  "inTop1000": false
- },
- {
-  "th": "ลง",
+  "th": "เวลา",
   "derived": 27,
-  "reading": "롱",
-  "ko": "내리다, (교통수단) 내리다",
+  "reading": "웨()라",
+  "ko": "시간",
   "inTop1000": true
  },
  {
@@ -539,10 +588,10 @@
   "inTop1000": true
  },
  {
-  "th": "ลูก",
+  "th": "พา",
   "derived": 27,
-  "reading": "룩",
-  "ko": "자식, 아이, 개(둥근 것 단위)",
+  "reading": "파",
+  "ko": "데려가다, 이끌다",
   "inTop1000": true
  },
  {
@@ -553,24 +602,52 @@
   "inTop1000": true
  },
  {
-  "th": "หนึ่ง",
+  "th": "มะ",
+  "derived": 27,
+  "reading": "마",
+  "ko": "~할래?, ~니?(ไหม, มั้ย 구어 축약)",
+  "inTop1000": true
+ },
+ {
+  "th": "ผล",
+  "derived": 27,
+  "reading": "폰",
+  "ko": "결과, 열매",
+  "inTop1000": true
+ },
+ {
+  "th": "เที่ยว",
+  "derived": 27,
+  "reading": "티야우",
+  "ko": "놀러 가다, 여행하다",
+  "inTop1000": true
+ },
+ {
+  "th": "เย",
+  "derived": 27,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "หมา",
   "derived": 26,
+  "reading": "마",
+  "ko": "개",
+  "inTop1000": false
+ },
+ {
+  "th": "โม",
+  "derived": 26,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "หนึ่ง",
+  "derived": 25,
   "reading": "능",
   "ko": "1",
-  "inTop1000": true
- },
- {
-  "th": "เสีย",
-  "derived": 26,
-  "reading": "씨야",
-  "ko": "고장나다",
-  "inTop1000": true
- },
- {
-  "th": "ออก",
-  "derived": 26,
-  "reading": "억",
-  "ko": "출발하다, 나가다",
   "inTop1000": true
  },
  {
@@ -578,13 +655,13 @@
   "derived": 25,
   "reading": "커",
   "ko": "목, 목, 목구멍",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
-  "th": "นอน",
+  "th": "ออก",
   "derived": 25,
-  "reading": "넌",
-  "ko": "눕다, 자다",
+  "reading": "억",
+  "ko": "출발하다, 나가다",
   "inTop1000": true
  },
  {
@@ -595,10 +672,24 @@
   "inTop1000": false
  },
  {
-  "th": "อี",
+  "th": "ลูก",
   "derived": 25,
-  "reading": "이",
-  "ko": "이(영문자 E 음역), 계집(비하 접두사)",
+  "reading": "룩",
+  "ko": "자식, 아이, 개(둥근 것 단위)",
+  "inTop1000": true
+ },
+ {
+  "th": "เสีย",
+  "derived": 24,
+  "reading": "씨야",
+  "ko": "고장나다",
+  "inTop1000": true
+ },
+ {
+  "th": "นอน",
+  "derived": 24,
+  "reading": "넌",
+  "ko": "눕다, 자다",
   "inTop1000": true
  },
  {
@@ -606,7 +697,7 @@
   "derived": 24,
   "reading": "낭",
   "ko": "영화, 가죽",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "นั่ง",
@@ -623,17 +714,31 @@
   "inTop1000": true
  },
  {
-  "th": "เส้น",
+  "th": "จำ",
   "derived": 23,
-  "reading": "쎈",
-  "ko": "선, 줄, 가닥(단위)",
+  "reading": "짬",
+  "ko": "기억하다",
   "inTop1000": true
  },
  {
-  "th": "ต่อ",
+  "th": "พระ",
+  "derived": 23,
+  "reading": "프라",
+  "ko": "스님, 부처, 불상",
+  "inTop1000": true
+ },
+ {
+  "th": "แค",
   "derived": 22,
-  "reading": "떠",
-  "ko": "~에 대해, 계속하다, 잇다",
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ลง",
+  "derived": 21,
+  "reading": "롱",
+  "ko": "내리다, (교통수단) 내리다",
   "inTop1000": true
  },
  {
@@ -641,14 +746,49 @@
   "derived": 21,
   "reading": "왕",
   "ko": "비다, 여유 있다, (시간이) 비다, 비었음",
-  "inTop1000": false
+  "inTop1000": true
+ },
+ {
+  "th": "ต่อ",
+  "derived": 21,
+  "reading": "떠",
+  "ko": "~에 대해, 계속하다, 잇다",
+  "inTop1000": true
+ },
+ {
+  "th": "จอ",
+  "derived": 21,
+  "reading": "쩌",
+  "ko": "화면, 스크린",
+  "inTop1000": true
+ },
+ {
+  "th": "หมาย",
+  "derived": 21,
+  "reading": "마이",
+  "ko": "영장, 통지서, 의미하다",
+  "inTop1000": true
+ },
+ {
+  "th": "แล้",
+  "derived": 21,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
  },
  {
   "th": "โมง",
   "derived": 20,
   "reading": "몽",
   "ko": "시",
-  "inTop1000": false
+  "inTop1000": true
+ },
+ {
+  "th": "ปี",
+  "derived": 20,
+  "reading": "삐",
+  "ko": "년",
+  "inTop1000": true
  },
  {
   "th": "ที่นั่ง",
@@ -658,45 +798,17 @@
   "inTop1000": false
  },
  {
-  "th": "ใหญ่",
+  "th": "ตก",
   "derived": 20,
-  "reading": "야 이",
-  "ko": "(크기 등) 크다, 크다",
+  "reading": "똑",
+  "ko": "떨어지다, 낙하하다, 낙방하다",
   "inTop1000": true
  },
  {
-  "th": "ประเทศ",
-  "derived": 20,
-  "reading": "쁘라텟",
-  "ko": "나라, 국가, 국가",
-  "inTop1000": true
- },
- {
-  "th": "ข้อ",
-  "derived": 20,
-  "reading": "커",
-  "ko": "조항, 항목, 관절",
-  "inTop1000": true
- },
- {
-  "th": "ซี",
-  "derived": 20,
-  "reading": "씨",
-  "ko": "씨(영문자 C 음역)",
-  "inTop1000": true
- },
- {
-  "th": "ต่าง",
-  "derived": 20,
-  "reading": "땅",
-  "ko": "다른, 각각, 서로",
-  "inTop1000": true
- },
- {
-  "th": "บี",
-  "derived": 20,
-  "reading": "비",
-  "ko": "비(영문자 B 음역)",
+  "th": "ตรง",
+  "derived": 19,
+  "reading": "뜨롱",
+  "ko": "정각",
   "inTop1000": true
  },
  {
@@ -728,10 +840,10 @@
   "inTop1000": false
  },
  {
-  "th": "แก้",
+  "th": "ยู",
   "derived": 19,
-  "reading": "깨",
-  "ko": "고치다, 해결하다, 풀다",
+  "reading": "유",
+  "ko": "너(영어 you 차용)",
   "inTop1000": true
  },
  {
@@ -742,6 +854,27 @@
   "inTop1000": true
  },
  {
+  "th": "แก้",
+  "derived": 19,
+  "reading": "깨",
+  "ko": "고치다, 해결하다, 풀다",
+  "inTop1000": true
+ },
+ {
+  "th": "ข้อ",
+  "derived": 19,
+  "reading": "커",
+  "ko": "조항, 항목, 관절",
+  "inTop1000": true
+ },
+ {
+  "th": "ย่า",
+  "derived": 19,
+  "reading": "야",
+  "ko": "친할머니",
+  "inTop1000": true
+ },
+ {
   "th": "สาม",
   "derived": 18,
   "reading": "쌈",
@@ -749,52 +882,45 @@
   "inTop1000": true
  },
  {
-  "th": "ตรง",
-  "derived": 18,
-  "reading": "뜨롱",
-  "ko": "정각",
-  "inTop1000": true
- },
- {
-  "th": "ปี",
-  "derived": 18,
-  "reading": "삐",
-  "ko": "년",
-  "inTop1000": true
- },
- {
   "th": "เรือ",
   "derived": 18,
   "reading": "르아",
   "ko": "배",
-  "inTop1000": false
- },
- {
-  "th": "นำ",
-  "derived": 18,
-  "reading": "남",
-  "ko": "이끌다, 가져오다",
   "inTop1000": true
  },
  {
-  "th": "บัตร",
+  "th": "ใหญ่",
   "derived": 18,
-  "reading": "밧",
-  "ko": "카드, 표",
+  "reading": "야 이",
+  "ko": "(크기 등) 크다, 크다",
   "inTop1000": true
  },
  {
-  "th": "รูป",
+  "th": "ประเทศ",
   "derived": 18,
-  "reading": "룹",
-  "ko": "사진, 그림, 형태",
+  "reading": "쁘라텟",
+  "ko": "나라, 국가, 국가",
   "inTop1000": true
  },
  {
-  "th": "น่า",
+  "th": "กะ",
   "derived": 18,
-  "reading": "나",
-  "ko": "~할 만하다(접두사), ~스럽다",
+  "reading": "까",
+  "ko": "~와(กับ 구어), 계획하다, 어림잡다",
+  "inTop1000": true
+ },
+ {
+  "th": "โอ",
+  "derived": 18,
+  "reading": "오",
+  "ko": "오(영문자 O 음역)",
+  "inTop1000": true
+ },
+ {
+  "th": "ต่าง",
+  "derived": 18,
+  "reading": "땅",
+  "ko": "다른, 각각, 서로",
   "inTop1000": true
  },
  {
@@ -809,7 +935,7 @@
   "derived": 17,
   "reading": "러이",
   "ko": "100",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "หัว",
@@ -823,7 +949,7 @@
   "derived": 17,
   "reading": "피우",
   "ko": "피부",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "ลม",
@@ -844,13 +970,20 @@
   "derived": 17,
   "reading": "씬 카",
   "ko": "상품",
+  "inTop1000": false
+ },
+ {
+  "th": "ละ",
+  "derived": 17,
+  "reading": "라",
+  "ko": "...당",
   "inTop1000": true
  },
  {
-  "th": "ขึ้น",
+  "th": "คืน",
   "derived": 17,
   "reading": "큰",
-  "ko": "타다, (교통수단) 타다, 올라타다, 타다(차에 오르다)",
+  "ko": "밤",
   "inTop1000": true
  },
  {
@@ -861,38 +994,45 @@
   "inTop1000": true
  },
  {
-  "th": "ไทย",
+  "th": "นะ",
   "derived": 17,
-  "reading": "타이",
-  "ko": "태국, 태국의",
+  "reading": "나",
+  "ko": "~요(부드러운 어조사)",
   "inTop1000": true
  },
  {
-  "th": "สาร",
+  "th": "น่า",
   "derived": 17,
-  "reading": "싼",
-  "ko": "물질, 성분, 메시지",
+  "reading": "나",
+  "ko": "~할 만하다(접두사), ~스럽다",
   "inTop1000": true
  },
  {
-  "th": "ข้าง",
+  "th": "รูป",
   "derived": 17,
-  "reading": "캉",
-  "ko": "옆, 측, 쪽",
+  "reading": "룹",
+  "ko": "사진, 그림, 형태",
   "inTop1000": true
  },
  {
-  "th": "โค",
+  "th": "ล่า",
   "derived": 17,
-  "reading": "",
-  "ko": "",
+  "reading": "라",
+  "ko": "사냥하다, 뒤쫓다",
   "inTop1000": true
  },
  {
-  "th": "สอง",
+  "th": "ดอก",
+  "derived": 17,
+  "reading": "덕",
+  "ko": "꽃(류별사), 이자",
+  "inTop1000": true
+ },
+ {
+  "th": "คุณ",
   "derived": 16,
-  "reading": "썽",
-  "ko": "2",
+  "reading": "쿤",
+  "ko": "당신 (2인칭)",
   "inTop1000": true
  },
  {
@@ -907,13 +1047,6 @@
   "derived": 16,
   "reading": "츧",
   "ko": "벌(세트)",
-  "inTop1000": false
- },
- {
-  "th": "แบบ",
-  "derived": 16,
-  "reading": "뱁",
-  "ko": "패턴",
   "inTop1000": true
  },
  {
@@ -928,21 +1061,7 @@
   "derived": 16,
   "reading": "끌랑",
   "ko": "가운데",
-  "inTop1000": true
- },
- {
-  "th": "รัก",
-  "derived": 16,
-  "reading": "락",
-  "ko": "사랑하다",
   "inTop1000": false
- },
- {
-  "th": "คืน",
-  "derived": 16,
-  "reading": "큰",
-  "ko": "밤",
-  "inTop1000": true
  },
  {
   "th": "ห้าม",
@@ -952,38 +1071,45 @@
   "inTop1000": true
  },
  {
-  "th": "เปลี่ยน",
+  "th": "ไทย",
   "derived": 16,
-  "reading": "쁠리얀",
-  "ko": "바꾸다, 바꾸다, 교체하다",
+  "reading": "타이",
+  "ko": "태국, 태국의",
   "inTop1000": true
  },
  {
-  "th": "หาย",
+  "th": "จี",
   "derived": 16,
-  "reading": "하이",
-  "ko": "사라지다, 낫다, 잃어버리다",
+  "reading": "",
+  "ko": "",
   "inTop1000": true
  },
  {
-  "th": "เดินทาง",
-  "derived": 16,
-  "reading": "든 탕",
-  "ko": "여행하다, 이동하다",
-  "inTop1000": true
- },
- {
-  "th": "โต",
+  "th": "สอง",
   "derived": 15,
-  "reading": "또",
-  "ko": "자라다",
+  "reading": "썽",
+  "ko": "2",
   "inTop1000": true
  },
  {
-  "th": "ละ",
+  "th": "เย็น",
   "derived": 15,
-  "reading": "라",
-  "ko": "...당",
+  "reading": "옌",
+  "ko": "차갑다, 저녁",
+  "inTop1000": true
+ },
+ {
+  "th": "แบบ",
+  "derived": 15,
+  "reading": "뱁",
+  "ko": "패턴",
+  "inTop1000": true
+ },
+ {
+  "th": "ขึ้น",
+  "derived": 15,
+  "reading": "큰",
+  "ko": "타다, (교통수단) 타다, 올라타다, 타다(차에 오르다)",
   "inTop1000": true
  },
  {
@@ -991,13 +1117,20 @@
   "derived": 15,
   "reading": "뿌웓",
   "ko": "(통증 등) 아프다",
+  "inTop1000": false
+ },
+ {
+  "th": "รัก",
+  "derived": 15,
+  "reading": "락",
+  "ko": "사랑하다",
   "inTop1000": true
  },
  {
-  "th": "ปิด",
+  "th": "เปลี่ยน",
   "derived": 15,
-  "reading": "뺀",
-  "ko": "~을 끄다, 닫다",
+  "reading": "쁠리얀",
+  "ko": "바꾸다, 바꾸다, 교체하다",
   "inTop1000": true
  },
  {
@@ -1008,10 +1141,38 @@
   "inTop1000": false
  },
  {
-  "th": "ติด",
+  "th": "หาย",
   "derived": 15,
-  "reading": "띳",
-  "ko": "붙다, 걸리다, 중독되다",
+  "reading": "하이",
+  "ko": "사라지다, 낫다, 잃어버리다",
+  "inTop1000": true
+ },
+ {
+  "th": "ข้าง",
+  "derived": 15,
+  "reading": "캉",
+  "ko": "옆, 측, 쪽",
+  "inTop1000": true
+ },
+ {
+  "th": "หมู",
+  "derived": 15,
+  "reading": "무",
+  "ko": "돼지, 돼지고기, 식은 죽 먹기(속어)",
+  "inTop1000": true
+ },
+ {
+  "th": "ป๋า",
+  "derived": 15,
+  "reading": "빠",
+  "ko": "아빠, 큰손 아저씨(중국계 호칭)",
+  "inTop1000": true
+ },
+ {
+  "th": "โต",
+  "derived": 14,
+  "reading": "또",
+  "ko": "자라다",
   "inTop1000": true
  },
  {
@@ -1019,48 +1180,34 @@
   "derived": 14,
   "reading": "런",
   "ko": "덥다, 뜨겁다",
-  "inTop1000": false
- },
- {
-  "th": "เย็น",
-  "derived": 14,
-  "reading": "옌",
-  "ko": "차갑다, 저녁",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "กระเป๋า",
   "derived": 14,
   "reading": "끄라빠오",
   "ko": "가방",
-  "inTop1000": false
- },
- {
-  "th": "โรค",
-  "derived": 14,
-  "reading": "록",
-  "ko": "병, 질병",
   "inTop1000": true
  },
  {
-  "th": "สูง",
+  "th": "ปิด",
   "derived": 14,
-  "reading": "쑹",
-  "ko": "(키가) 크다, 높다",
+  "reading": "뺀",
+  "ko": "~을 끄다, 닫다",
   "inTop1000": true
  },
  {
-  "th": "ชื่อ",
+  "th": "ต้น",
   "derived": 14,
-  "reading": "츠",
-  "ko": "이름",
+  "reading": "똔",
+  "ko": "나무(류별사), 처음, 근원",
   "inTop1000": true
  },
  {
-  "th": "ชั้น",
+  "th": "เกา",
   "derived": 14,
-  "reading": "찬",
-  "ko": "층, 등급, 학년",
+  "reading": "까오",
+  "ko": "긁다",
   "inTop1000": true
  },
  {
@@ -1071,52 +1218,17 @@
   "inTop1000": true
  },
  {
-  "th": "นะ",
-  "derived": 14,
-  "reading": "나",
-  "ko": "~요(부드러운 어조사)",
-  "inTop1000": true
- },
- {
-  "th": "โอ",
-  "derived": 14,
-  "reading": "오",
-  "ko": "오(영문자 O 음역)",
-  "inTop1000": true
- },
- {
-  "th": "คำ",
-  "derived": 14,
-  "reading": "",
-  "ko": "",
-  "inTop1000": true
- },
- {
   "th": "สี่",
   "derived": 13,
   "reading": "씨",
   "ko": "4",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "เช้า",
   "derived": 13,
   "reading": "차오",
   "ko": "오전, 아침, 아침, 오전, 아침, 오전",
-  "inTop1000": false
- },
- {
-  "th": "พื้น",
-  "derived": 13,
-  "reading": "픈",
-  "ko": "바닥",
-  "inTop1000": false
- },
- {
-  "th": "ส่ง",
-  "derived": 13,
-  "reading": "쏭",
-  "ko": "보내다, 배달하다, 보내다",
   "inTop1000": true
  },
  {
@@ -1124,13 +1236,20 @@
   "derived": 13,
   "reading": "뜨루엊",
   "ko": "검사하다",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "ขนม",
   "derived": 13,
   "reading": "카놈",
   "ko": "과자, 간식",
+  "inTop1000": false
+ },
+ {
+  "th": "ย่าง",
+  "derived": 13,
+  "reading": "양",
+  "ko": "불에 쬐어 굽다, 굽다",
   "inTop1000": false
  },
  {
@@ -1141,10 +1260,17 @@
   "inTop1000": false
  },
  {
-  "th": "จ่าย",
+  "th": "แม่",
   "derived": 13,
-  "reading": "짜이",
-  "ko": "지불하다",
+  "reading": "매",
+  "ko": "어머니",
+  "inTop1000": true
+ },
+ {
+  "th": "ชื่อ",
+  "derived": 13,
+  "reading": "츠",
+  "ko": "이름",
   "inTop1000": true
  },
  {
@@ -1155,31 +1281,38 @@
   "inTop1000": false
  },
  {
-  "th": "บริการ",
+  "th": "ติด",
   "derived": 13,
-  "reading": "버리깐",
-  "ko": "서비스, 봉사하다",
+  "reading": "띳",
+  "ko": "붙다, 걸리다, 중독되다",
   "inTop1000": true
  },
  {
-  "th": "แพทย์",
+  "th": "ฝาก",
   "derived": 13,
-  "reading": "팻",
-  "ko": "의사",
+  "reading": "팍",
+  "ko": "맡기다, 부탁하다, 예금하다",
   "inTop1000": true
  },
  {
-  "th": "พัน",
+  "th": "จ้า",
   "derived": 13,
-  "reading": "판",
-  "ko": "천(1,000), 감다",
+  "reading": "짜",
+  "ko": "네~, 응~(다정한 대답, 어말조사)",
   "inTop1000": true
  },
  {
-  "th": "แอ",
+  "th": "จ่า",
   "derived": 13,
-  "reading": "",
-  "ko": "",
+  "reading": "짜",
+  "ko": "하사, 경사(계급 호칭)",
+  "inTop1000": true
+ },
+ {
+  "th": "แต่ง",
+  "derived": 13,
+  "reading": "땡",
+  "ko": "꾸미다, 결혼하다(แต่งงาน), 짓다(작곡, 작문)",
   "inTop1000": true
  },
  {
@@ -1201,7 +1334,7 @@
   "derived": 12,
   "reading": "후",
   "ko": "귀",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "สัตว์",
@@ -1236,14 +1369,14 @@
   "derived": 12,
   "reading": "단",
   "ko": "~쪽",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
-  "th": "เซ็น",
+  "th": "สูง",
   "derived": 12,
-  "reading": "쎈",
-  "ko": "사인, 서명",
-  "inTop1000": false
+  "reading": "쑹",
+  "ko": "(키가) 크다, 높다",
+  "inTop1000": true
  },
  {
   "th": "กบ",
@@ -1267,6 +1400,13 @@
   "inTop1000": true
  },
  {
+  "th": "จ่าย",
+  "derived": 12,
+  "reading": "짜이",
+  "ko": "지불하다",
+  "inTop1000": true
+ },
+ {
   "th": "สวน",
   "derived": 12,
   "reading": "쑤안",
@@ -1274,52 +1414,45 @@
   "inTop1000": false
  },
  {
-  "th": "โดย",
+  "th": "กาย",
   "derived": 12,
-  "reading": "도이",
-  "ko": "~에 의해, ~로써",
+  "reading": "",
+  "ko": "",
   "inTop1000": true
- },
- {
-  "th": "ลด",
-  "derived": 12,
-  "reading": "롯",
-  "ko": "줄이다, 할인하다",
-  "inTop1000": true
- },
- {
-  "th": "ผลิต",
-  "derived": 12,
-  "reading": "팔릿",
-  "ko": "생산하다, 제조하다",
-  "inTop1000": true
- },
- {
-  "th": "แผน",
-  "derived": 12,
-  "reading": "팬",
-  "ko": "계획, 플랜",
-  "inTop1000": true
- },
- {
-  "th": "ท้อง",
-  "derived": 11,
-  "reading": "텅",
-  "ko": "배",
-  "inTop1000": false
  },
  {
   "th": "ฝน",
   "derived": 11,
   "reading": "폰",
   "ko": "비",
+  "inTop1000": true
+ },
+ {
+  "th": "พื้น",
+  "derived": 11,
+  "reading": "픈",
+  "ko": "바닥",
   "inTop1000": false
  },
  {
-  "th": "ริม",
+  "th": "ส่ง",
   "derived": 11,
-  "reading": "림",
-  "ko": "가장자리",
+  "reading": "쏭",
+  "ko": "보내다, 배달하다, 보내다",
+  "inTop1000": true
+ },
+ {
+  "th": "เซ็น",
+  "derived": 11,
+  "reading": "쎈",
+  "ko": "사인, 서명",
+  "inTop1000": true
+ },
+ {
+  "th": "โรค",
+  "derived": 11,
+  "reading": "록",
+  "ko": "병, 질병",
   "inTop1000": false
  },
  {
@@ -1330,17 +1463,10 @@
   "inTop1000": false
  },
  {
-  "th": "เล็ก",
+  "th": "หลัง",
   "derived": 11,
-  "reading": "렉",
-  "ko": "(크기 등) 작다, 작다",
-  "inTop1000": true
- },
- {
-  "th": "แม่",
-  "derived": 11,
-  "reading": "매",
-  "ko": "어머니",
+  "reading": "랑",
+  "ko": "등, 뒤, 등",
   "inTop1000": true
  },
  {
@@ -1348,27 +1474,55 @@
   "derived": 11,
   "reading": "싸탄티",
   "ko": "장소",
-  "inTop1000": true
- },
- {
-  "th": "ใต้",
-  "derived": 11,
-  "reading": "따이",
-  "ko": "남쪽",
   "inTop1000": false
  },
  {
-  "th": "ราย",
+  "th": "ไร",
   "derived": 11,
   "reading": "라이",
-  "ko": "건, 명(단위), 목록",
+  "ko": "뭐(อะไร 구어)",
   "inTop1000": true
  },
  {
-  "th": "ชาย",
+  "th": "เจ้า",
   "derived": 11,
-  "reading": "차이",
-  "ko": "남성, 남자, 가장자리",
+  "reading": "짜오",
+  "ko": "너(사극, 친밀), 주인, 왕족",
+  "inTop1000": true
+ },
+ {
+  "th": "แผน",
+  "derived": 11,
+  "reading": "팬",
+  "ko": "계획, 플랜",
+  "inTop1000": true
+ },
+ {
+  "th": "พัน",
+  "derived": 11,
+  "reading": "판",
+  "ko": "천(1,000), 감다",
+  "inTop1000": true
+ },
+ {
+  "th": "ชน",
+  "derived": 11,
+  "reading": "촌",
+  "ko": "부딪치다, 충돌하다",
+  "inTop1000": true
+ },
+ {
+  "th": "หญิง",
+  "derived": 11,
+  "reading": "잉",
+  "ko": "여성, 여자",
+  "inTop1000": true
+ },
+ {
+  "th": "คำ",
+  "derived": 11,
+  "reading": "",
+  "ko": "",
   "inTop1000": true
  },
  {
@@ -1376,13 +1530,6 @@
   "derived": 11,
   "reading": "",
   "ko": "",
-  "inTop1000": true
- },
- {
-  "th": "คุณ",
-  "derived": 10,
-  "reading": "쿤",
-  "ko": "당신 (2인칭)",
   "inTop1000": true
  },
  {
@@ -1397,7 +1544,21 @@
   "derived": 10,
   "reading": "압 남",
   "ko": "샤워(목욕)하다, 목욕하다",
-  "inTop1000": false
+  "inTop1000": true
+ },
+ {
+  "th": "หมอ",
+  "derived": 10,
+  "reading": "머",
+  "ko": "의사",
+  "inTop1000": true
+ },
+ {
+  "th": "ท้อง",
+  "derived": 10,
+  "reading": "텅",
+  "ko": "배",
+  "inTop1000": true
  },
  {
   "th": "แกง",
@@ -1421,31 +1582,10 @@
   "inTop1000": false
  },
  {
-  "th": "เลือด",
+  "th": "เล็ก",
   "derived": 10,
-  "reading": "르엇",
-  "ko": "피",
-  "inTop1000": true
- },
- {
-  "th": "ดำ",
-  "derived": 10,
-  "reading": "담",
-  "ko": "검다, 검은색",
-  "inTop1000": false
- },
- {
-  "th": "กด",
-  "derived": 10,
-  "reading": "꼿",
-  "ko": "누르다",
-  "inTop1000": true
- },
- {
-  "th": "หลัง",
-  "derived": 10,
-  "reading": "랑",
-  "ko": "등, 뒤, 등",
+  "reading": "렉",
+  "ko": "(크기 등) 작다, 작다",
   "inTop1000": true
  },
  {
@@ -1460,6 +1600,13 @@
   "derived": 10,
   "reading": "깨우",
   "ko": "잔, 잔, 컵, 컵",
+  "inTop1000": true
+ },
+ {
+  "th": "ใต้",
+  "derived": 10,
+  "reading": "따이",
+  "ko": "남쪽",
   "inTop1000": false
  },
  {
@@ -1470,17 +1617,52 @@
   "inTop1000": true
  },
  {
-  "th": "ส่วน",
+  "th": "อะ",
   "derived": 10,
-  "reading": "쑤언",
-  "ko": "부분, ~에 관해서는",
+  "reading": "아",
+  "ko": "~야, ~네(구어 어말조사, นะ 축약)",
   "inTop1000": true
  },
  {
-  "th": "หญิง",
+  "th": "ไหม",
   "derived": 10,
-  "reading": "잉",
-  "ko": "여성, 여자",
+  "reading": "마이",
+  "ko": "~입니까?(의문 조사)",
+  "inTop1000": true
+ },
+ {
+  "th": "อย่า",
+  "derived": 10,
+  "reading": "야",
+  "ko": "~하지 마라",
+  "inTop1000": true
+ },
+ {
+  "th": "ยาย",
+  "derived": 10,
+  "reading": "야이",
+  "ko": "외할머니, 할머니",
+  "inTop1000": true
+ },
+ {
+  "th": "โดย",
+  "derived": 10,
+  "reading": "도이",
+  "ko": "~에 의해, ~로써",
+  "inTop1000": true
+ },
+ {
+  "th": "ท่า",
+  "derived": 10,
+  "reading": "타",
+  "ko": "자세, 태도, 부두",
+  "inTop1000": true
+ },
+ {
+  "th": "พัก",
+  "derived": 10,
+  "reading": "",
+  "ko": "",
   "inTop1000": true
  },
  {
@@ -1495,7 +1677,7 @@
   "derived": 9,
   "reading": "혹",
   "ko": "6",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "หมายเลข",
@@ -1524,13 +1706,6 @@
   "reading": "끄라닫",
   "ko": "종이",
   "inTop1000": false
- },
- {
-  "th": "หมอ",
-  "derived": 9,
-  "reading": "머",
-  "ko": "의사",
-  "inTop1000": true
  },
  {
   "th": "ดอกไม้",
@@ -1565,7 +1740,7 @@
   "derived": 9,
   "reading": "파씨",
   "ko": "세금",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "สถานี",
@@ -1575,10 +1750,10 @@
   "inTop1000": false
  },
  {
-  "th": "เปิด",
+  "th": "เลือด",
   "derived": 9,
-  "reading": "뻗",
-  "ko": "오픈(개관), ~을 켜다, 열다",
+  "reading": "르엇",
+  "ko": "피",
   "inTop1000": true
  },
  {
@@ -1589,13 +1764,6 @@
   "inTop1000": false
  },
  {
-  "th": "บาง",
-  "derived": 9,
-  "reading": "방",
-  "ko": "얇다",
-  "inTop1000": true
- },
- {
   "th": "มาก",
   "derived": 9,
   "reading": "막",
@@ -1603,17 +1771,17 @@
   "inTop1000": true
  },
  {
+  "th": "ยาก",
+  "derived": 9,
+  "reading": "약",
+  "ko": "어렵다",
+  "inTop1000": true
+ },
+ {
   "th": "ไข่",
   "derived": 9,
   "reading": "카이",
   "ko": "계란",
-  "inTop1000": false
- },
- {
-  "th": "รัฐ",
-  "derived": 9,
-  "reading": "랏(랏타)",
-  "ko": "국가, 국토",
   "inTop1000": true
  },
  {
@@ -1621,14 +1789,14 @@
   "derived": 9,
   "reading": "남만",
   "ko": "기름",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
-  "th": "ย่าง",
+  "th": "กด",
   "derived": 9,
-  "reading": "양",
-  "ko": "불에 쬐어 굽다, 굽다",
-  "inTop1000": false
+  "reading": "꼿",
+  "ko": "누르다",
+  "inTop1000": true
  },
  {
   "th": "ซัก",
@@ -1638,11 +1806,25 @@
   "inTop1000": false
  },
  {
-  "th": "แข็ง",
+  "th": "อย่าง",
   "derived": 9,
-  "reading": "캥",
-  "ko": "튼튼하다",
-  "inTop1000": false
+  "reading": "양",
+  "ko": "~처럼, 종류, ~하게(부사화)",
+  "inTop1000": true
+ },
+ {
+  "th": "ตอน",
+  "derived": 9,
+  "reading": "떤",
+  "ko": "때, 부분, 회(에피소드)",
+  "inTop1000": true
+ },
+ {
+  "th": "เดียว",
+  "derived": 9,
+  "reading": "디여우",
+  "ko": "하나의, 단독의, 같은",
+  "inTop1000": true
  },
  {
   "th": "สำหรับ",
@@ -1652,45 +1834,10 @@
   "inTop1000": true
  },
  {
-  "th": "พนักงาน",
+  "th": "แลก",
   "derived": 9,
-  "reading": "파낙 응안",
-  "ko": "직원, 종업원",
-  "inTop1000": true
- },
- {
-  "th": "ภาค",
-  "derived": 9,
-  "reading": "팍",
-  "ko": "지방, 부문, 학기",
-  "inTop1000": true
- },
- {
-  "th": "รอบ",
-  "derived": 9,
-  "reading": "럽",
-  "ko": "회(回), 주위, 라운드",
-  "inTop1000": true
- },
- {
-  "th": "ไหม",
-  "derived": 9,
-  "reading": "마이",
-  "ko": "~입니까?(의문 조사)",
-  "inTop1000": true
- },
- {
-  "th": "พี",
-  "derived": 9,
-  "reading": "피",
-  "ko": "피(영문자 P 음역)",
-  "inTop1000": true
- },
- {
-  "th": "รวม",
-  "derived": 9,
-  "reading": "",
-  "ko": "",
+  "reading": "랙",
+  "ko": "교환하다, 바꾸다",
   "inTop1000": true
  },
  {
@@ -1698,14 +1845,14 @@
   "derived": 8,
   "reading": "까오",
   "ko": "9",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ลบ",
   "derived": 8,
   "reading": "롭",
   "ko": "음수, 삭제하다, 지우다",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "วิชา",
@@ -1722,17 +1869,17 @@
   "inTop1000": false
  },
  {
-  "th": "เกิด",
-  "derived": 8,
-  "reading": "껃",
-  "ko": "태어나다",
-  "inTop1000": true
- },
- {
   "th": "อากาศ",
   "derived": 8,
   "reading": "아깓",
   "ko": "날씨",
+  "inTop1000": false
+ },
+ {
+  "th": "หมี",
+  "derived": 8,
+  "reading": "미",
+  "ko": "곰",
   "inTop1000": false
  },
  {
@@ -1750,6 +1897,13 @@
   "inTop1000": true
  },
  {
+  "th": "เปิด",
+  "derived": 8,
+  "reading": "뻗",
+  "ko": "오픈(개관), ~을 켜다, 열다",
+  "inTop1000": true
+ },
+ {
   "th": "วาด",
   "derived": 8,
   "reading": "왇",
@@ -1761,27 +1915,13 @@
   "derived": 8,
   "reading": "나",
   "ko": "두껍다, 무겁다",
-  "inTop1000": false
- },
- {
-  "th": "จน",
-  "derived": 8,
-  "reading": "쫀",
-  "ko": "가난하다",
   "inTop1000": true
  },
  {
-  "th": "ทอง",
+  "th": "บาง",
   "derived": 8,
-  "reading": "텅",
-  "ko": "금, 금색",
-  "inTop1000": false
- },
- {
-  "th": "ยาว",
-  "derived": 8,
-  "reading": "야우",
-  "ko": "길다",
+  "reading": "방",
+  "ko": "얇다",
   "inTop1000": false
  },
  {
@@ -1796,34 +1936,20 @@
   "derived": 8,
   "reading": "마",
   "ko": "말",
-  "inTop1000": false
- },
- {
-  "th": "แปล",
-  "derived": 8,
-  "reading": "쁠래",
-  "ko": "번역하다",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ดาว",
   "derived": 8,
   "reading": "다우",
   "ko": "별",
-  "inTop1000": false
- },
- {
-  "th": "ขนาด",
-  "derived": 8,
-  "reading": "카낫",
-  "ko": "사이즈, 크기",
   "inTop1000": true
  },
  {
-  "th": "รักษา",
+  "th": "พ่อ",
   "derived": 8,
-  "reading": "락싸",
-  "ko": "지키다, 치료하다",
+  "reading": "퍼",
+  "ko": "아버지",
   "inTop1000": true
  },
  {
@@ -1834,38 +1960,24 @@
   "inTop1000": false
  },
  {
-  "th": "ล้าน",
+  "th": "แข็ง",
   "derived": 8,
-  "reading": "란",
-  "ko": "백만",
+  "reading": "캥",
+  "ko": "튼튼하다",
+  "inTop1000": false
+ },
+ {
+  "th": "ฉัน",
+  "derived": 8,
+  "reading": "찬",
+  "ko": "나(주로 여성 1인칭)",
   "inTop1000": true
  },
  {
-  "th": "สิ่ง",
+  "th": "วะ",
   "derived": 8,
-  "reading": "씽",
-  "ko": "것, 사물",
-  "inTop1000": true
- },
- {
-  "th": "เดียว",
-  "derived": 8,
-  "reading": "디여우",
-  "ko": "하나의, 단독의, 같은",
-  "inTop1000": true
- },
- {
-  "th": "พอ",
-  "derived": 8,
-  "reading": "퍼",
-  "ko": "충분하다, ~하자마자, 적당히",
-  "inTop1000": true
- },
- {
-  "th": "เหตุ",
-  "derived": 8,
-  "reading": "헷",
-  "ko": "원인, 사유, 사건",
+  "reading": "와",
+  "ko": "~야(거친 어말조사, 남성, 친밀)",
   "inTop1000": true
  },
  {
@@ -1876,17 +1988,38 @@
   "inTop1000": true
  },
  {
-  "th": "ผิด",
+  "th": "สิ่ง",
   "derived": 8,
-  "reading": "핏",
-  "ko": "틀리다, 잘못된",
+  "reading": "씽",
+  "ko": "것, 사물",
   "inTop1000": true
  },
  {
-  "th": "ทุน",
+  "th": "ซิ",
   "derived": 8,
-  "reading": "툰",
-  "ko": "자본, 장학금",
+  "reading": "씨",
+  "ko": "~해(권유, 강조 어말조사, สิ 변형)",
+  "inTop1000": true
+ },
+ {
+  "th": "ล้าน",
+  "derived": 8,
+  "reading": "란",
+  "ko": "백만",
+  "inTop1000": true
+ },
+ {
+  "th": "รอบ",
+  "derived": 8,
+  "reading": "럽",
+  "ko": "회(回), 주위, 라운드",
+  "inTop1000": true
+ },
+ {
+  "th": "ป้า",
+  "derived": 8,
+  "reading": "",
+  "ko": "",
   "inTop1000": true
  },
  {
@@ -1897,10 +2030,10 @@
   "inTop1000": true
  },
  {
-  "th": "ซิ",
-  "derived": 8,
-  "reading": "",
-  "ko": "",
+  "th": "กี่",
+  "derived": 7,
+  "reading": "끼",
+  "ko": "몇",
   "inTop1000": true
  },
  {
@@ -1915,13 +2048,6 @@
   "derived": 7,
   "reading": "또",
   "ko": "책상",
-  "inTop1000": false
- },
- {
-  "th": "ทำงาน",
-  "derived": 7,
-  "reading": "탐응안",
-  "ko": "일하다, 근무하다, 일하다",
   "inTop1000": true
  },
  {
@@ -1929,13 +2055,6 @@
   "derived": 7,
   "reading": "르두",
   "ko": "계절",
-  "inTop1000": false
- },
- {
-  "th": "หมี",
-  "derived": 7,
-  "reading": "미",
-  "ko": "곰",
   "inTop1000": false
  },
  {
@@ -1950,7 +2069,7 @@
   "derived": 7,
   "reading": "딷",
   "ko": "커트(이발)하다",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "ถนน",
@@ -1960,24 +2079,31 @@
   "inTop1000": false
  },
  {
-  "th": "น้อย",
+  "th": "ริม",
   "derived": 7,
-  "reading": "너이",
-  "ko": "적다",
-  "inTop1000": true
+  "reading": "림",
+  "ko": "가장자리",
+  "inTop1000": false
  },
  {
-  "th": "ยาก",
+  "th": "มวย",
   "derived": 7,
-  "reading": "약",
-  "ko": "어렵다",
-  "inTop1000": true
+  "reading": "무워이",
+  "ko": "권투",
+  "inTop1000": false
  },
  {
-  "th": "หวัด",
+  "th": "แถ",
   "derived": 7,
-  "reading": "왓",
-  "ko": "감기",
+  "reading": "태",
+  "ko": "딴소리하다",
+  "inTop1000": false
+ },
+ {
+  "th": "ดำ",
+  "derived": 7,
+  "reading": "담",
+  "ko": "검다, 검은색",
   "inTop1000": false
  },
  {
@@ -1995,6 +2121,20 @@
   "inTop1000": false
  },
  {
+  "th": "ทอง",
+  "derived": 7,
+  "reading": "텅",
+  "ko": "금, 금색",
+  "inTop1000": false
+ },
+ {
+  "th": "ยาว",
+  "derived": 7,
+  "reading": "야우",
+  "ko": "길다",
+  "inTop1000": false
+ },
+ {
   "th": "บุหรี่",
   "derived": 7,
   "reading": "부리",
@@ -2002,10 +2142,24 @@
   "inTop1000": false
  },
  {
+  "th": "พูด",
+  "derived": 7,
+  "reading": "풋",
+  "ko": "말하다",
+  "inTop1000": true
+ },
+ {
   "th": "หยุด",
   "derived": 7,
   "reading": "윳",
   "ko": "멈추다, 정지하다",
+  "inTop1000": true
+ },
+ {
+  "th": "แปล",
+  "derived": 7,
+  "reading": "쁠래",
+  "ko": "번역하다",
   "inTop1000": true
  },
  {
@@ -2016,13 +2170,6 @@
   "inTop1000": true
  },
  {
-  "th": "บด",
-  "derived": 7,
-  "reading": "봇",
-  "ko": "분쇄하다, 으깨다",
-  "inTop1000": false
- },
- {
   "th": "เสียง",
   "derived": 7,
   "reading": "씨양",
@@ -2030,11 +2177,11 @@
   "inTop1000": true
  },
  {
-  "th": "พ่อ",
+  "th": "ลอง",
   "derived": 7,
-  "reading": "퍼",
-  "ko": "아버지",
-  "inTop1000": false
+  "reading": "렁",
+  "ko": "시도하다",
+  "inTop1000": true
  },
  {
   "th": "ภาษา",
@@ -2055,6 +2202,13 @@
   "derived": 7,
   "reading": "싸댕",
   "ko": "전시하다, 나타내다",
+  "inTop1000": false
+ },
+ {
+  "th": "รักษา",
+  "derived": 7,
+  "reading": "락싸",
+  "ko": "지키다, 치료하다",
   "inTop1000": true
  },
  {
@@ -2069,14 +2223,7 @@
   "derived": 7,
   "reading": "카우",
   "ko": "하얗다, 하양, 하얗다, 흰색",
-  "inTop1000": true
- },
- {
-  "th": "เพิ่ม",
-  "derived": 7,
-  "reading": "픔",
-  "ko": "더하다, 증가시키다",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "นาย",
@@ -2086,24 +2233,45 @@
   "inTop1000": true
  },
  {
-  "th": "ศึกษา",
+  "th": "พอ",
   "derived": 7,
-  "reading": "쓱싸",
-  "ko": "공부하다, 연구하다, 교육",
+  "reading": "퍼",
+  "ko": "충분하다, ~하자마자, 적당히",
   "inTop1000": true
  },
  {
-  "th": "ถือ",
+  "th": "กำลัง",
   "derived": 7,
-  "reading": "트",
-  "ko": "들다, 보유하다, 간주하다",
+  "reading": "깜랑",
+  "ko": "~하는 중(진행), 힘",
   "inTop1000": true
  },
  {
-  "th": "ชำระ",
+  "th": "แน่",
   "derived": 7,
-  "reading": "참라",
-  "ko": "지불하다, 청산하다",
+  "reading": "내",
+  "ko": "확실히, 분명히",
+  "inTop1000": true
+ },
+ {
+  "th": "โห",
+  "derived": 7,
+  "reading": "호",
+  "ko": "우와, 헐(놀람)",
+  "inTop1000": true
+ },
+ {
+  "th": "ตั้ง",
+  "derived": 7,
+  "reading": "땅",
+  "ko": "세우다, 설립하다, 설정하다",
+  "inTop1000": true
+ },
+ {
+  "th": "ส่วน",
+  "derived": 7,
+  "reading": "쑤언",
+  "ko": "부분, ~에 관해서는",
   "inTop1000": true
  },
  {
@@ -2114,31 +2282,108 @@
   "inTop1000": true
  },
  {
-  "th": "ตอน",
+  "th": "ถ่าย",
   "derived": 7,
-  "reading": "떤",
-  "ko": "때, 부분, 회(에피소드)",
+  "reading": "타이",
+  "ko": "찍다(사진, 영상), 배설하다",
   "inTop1000": true
  },
  {
-  "th": "ทาน",
+  "th": "รึ",
   "derived": 7,
-  "reading": "탄",
-  "ko": "먹다(공손), 드시다",
+  "reading": "르",
+  "ko": "~야?(หรือ 구어)",
   "inTop1000": true
  },
  {
-  "th": "ระยะ",
+  "th": "เท่",
+  "derived": 7,
+  "reading": "테",
+  "ko": "멋지다, 쿨하다",
+  "inTop1000": true
+ },
+ {
+  "th": "แข่ง",
+  "derived": 7,
+  "reading": "캥",
+  "ko": "경쟁하다, 시합하다",
+  "inTop1000": true
+ },
+ {
+  "th": "ร้อง",
+  "derived": 7,
+  "reading": "렁",
+  "ko": "노래하다, 소리치다, 청원하다",
+  "inTop1000": true
+ },
+ {
+  "th": "สาว",
+  "derived": 7,
+  "reading": "사우",
+  "ko": "아가씨, 젊은 여자",
+  "inTop1000": true
+ },
+ {
+  "th": "คู่",
+  "derived": 7,
+  "reading": "쿠",
+  "ko": "짝, 커플, 쌍",
+  "inTop1000": true
+ },
+ {
+  "th": "ที่แล้ว",
+  "derived": 7,
+  "reading": "티 래우",
+  "ko": "지난 ~(아ทิตย์ที่แล้ว 등)",
+  "inTop1000": true
+ },
+ {
+  "th": "หว่า",
+  "derived": 7,
+  "reading": "와",
+  "ko": "~냐?, ~네(혼잣말, 의문 어말조사)",
+  "inTop1000": true
+ },
+ {
+  "th": "ลุก",
+  "derived": 7,
+  "reading": "룩",
+  "ko": "일어나다, 일어서다",
+  "inTop1000": true
+ },
+ {
+  "th": "รู้",
   "derived": 7,
   "reading": "",
   "ko": "",
   "inTop1000": true
  },
  {
-  "th": "กี่",
+  "th": "ตี๋",
+  "derived": 7,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "หนี",
+  "derived": 7,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "เอก",
+  "derived": 7,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "นี่",
   "derived": 6,
-  "reading": "끼",
-  "ko": "몇",
+  "reading": "니",
+  "ko": "이(것, 곳, 사람)",
   "inTop1000": true
  },
  {
@@ -2153,7 +2398,7 @@
   "derived": 6,
   "reading": "뺃",
   "ko": "8",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "บ่าย",
@@ -2161,6 +2406,13 @@
   "reading": "바이",
   "ko": "오후",
   "inTop1000": false
+ },
+ {
+  "th": "ทำงาน",
+  "derived": 6,
+  "reading": "탐응안",
+  "ko": "일하다, 근무하다, 일하다",
+  "inTop1000": true
  },
  {
   "th": "บริษัท",
@@ -2175,6 +2427,13 @@
   "reading": "창",
   "ko": "정비공",
   "inTop1000": false
+ },
+ {
+  "th": "ผู้หญิง",
+  "derived": 6,
+  "reading": "푸잉",
+  "ko": "여자, 여성",
+  "inTop1000": true
  },
  {
   "th": "พายุ",
@@ -2202,14 +2461,14 @@
   "derived": 6,
   "reading": "쁘라뚜",
   "ko": "문",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ผัก",
   "derived": 6,
   "reading": "팍",
   "ko": "채소, 야채",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "ส้ม",
@@ -2223,13 +2482,20 @@
   "derived": 6,
   "reading": "꿍",
   "ko": "새우",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "เบียร์",
   "derived": 6,
   "reading": "비야",
   "ko": "맥주",
+  "inTop1000": true
+ },
+ {
+  "th": "สุก",
+  "derived": 6,
+  "reading": "쑥",
+  "ko": "(고기 등을) 익히다",
   "inTop1000": false
  },
  {
@@ -2252,13 +2518,6 @@
   "reading": "툭",
   "ko": "(가격이) 싸다, 싸다",
   "inTop1000": true
- },
- {
-  "th": "ขับ",
-  "derived": 6,
-  "reading": "캅",
-  "ko": "(차량을) 운전하다, (자동차 등) 운전하다, 운전하다",
-  "inTop1000": false
  },
  {
   "th": "แผนที่",
@@ -2300,20 +2559,13 @@
   "derived": 6,
   "reading": "리얀",
   "ko": "동전, 메달",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "เช็ค",
   "derived": 6,
   "reading": "쳌",
   "ko": "수표",
-  "inTop1000": true
- },
- {
-  "th": "มวย",
-  "derived": 6,
-  "reading": "무워이",
-  "ko": "권투",
   "inTop1000": false
  },
  {
@@ -2338,10 +2590,24 @@
   "inTop1000": false
  },
  {
+  "th": "จน",
+  "derived": 6,
+  "reading": "쫀",
+  "ko": "가난하다",
+  "inTop1000": true
+ },
+ {
   "th": "แห้ง",
   "derived": 6,
   "reading": "행",
   "ko": "마르다, 건조하다, 마르다, 건조하다",
+  "inTop1000": false
+ },
+ {
+  "th": "หวัด",
+  "derived": 6,
+  "reading": "왓",
+  "ko": "감기",
   "inTop1000": false
  },
  {
@@ -2363,7 +2629,7 @@
   "derived": 6,
   "reading": "두안",
   "ko": "급하다, 빠르다, 급하다",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "เขียว",
@@ -2380,18 +2646,25 @@
   "inTop1000": true
  },
  {
-  "th": "พูด",
-  "derived": 6,
-  "reading": "풋",
-  "ko": "말하다",
-  "inTop1000": true
- },
- {
   "th": "ลื่น",
   "derived": 6,
   "reading": "른",
   "ko": "미끄럽다",
   "inTop1000": false
+ },
+ {
+  "th": "บด",
+  "derived": 6,
+  "reading": "봇",
+  "ko": "분쇄하다, 으깨다",
+  "inTop1000": false
+ },
+ {
+  "th": "ขนาด",
+  "derived": 6,
+  "reading": "카낫",
+  "ko": "사이즈, 크기",
+  "inTop1000": true
  },
  {
   "th": "กีฬา",
@@ -2401,18 +2674,11 @@
   "inTop1000": false
  },
  {
-  "th": "ลอง",
-  "derived": 6,
-  "reading": "렁",
-  "ko": "시도하다",
-  "inTop1000": true
- },
- {
   "th": "เมา",
   "derived": 6,
   "reading": "마오",
   "ko": "취하다",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ลายทาง",
@@ -2429,24 +2695,24 @@
   "inTop1000": false
  },
  {
+  "th": "ปะ",
+  "derived": 6,
+  "reading": "빠",
+  "ko": "~지?(หรือเปล่า 축약 의문 어말조사)",
+  "inTop1000": true
+ },
+ {
+  "th": "จริง",
+  "derived": 6,
+  "reading": "찡",
+  "ko": "진짜의, 정말",
+  "inTop1000": true
+ },
+ {
   "th": "เพื่อ",
   "derived": 6,
   "reading": "프아",
   "ko": "~를 위해",
-  "inTop1000": true
- },
- {
-  "th": "กำลัง",
-  "derived": 6,
-  "reading": "깜랑",
-  "ko": "~하는 중(진행), 힘",
-  "inTop1000": true
- },
- {
-  "th": "ร่วม",
-  "derived": 6,
-  "reading": "루엄",
-  "ko": "함께하다, 참여하다",
   "inTop1000": true
  },
  {
@@ -2457,45 +2723,17 @@
   "inTop1000": true
  },
  {
-  "th": "ไต",
+  "th": "กล้า",
   "derived": 6,
-  "reading": "따이",
-  "ko": "신장, 콩팥",
+  "reading": "끌라",
+  "ko": "용감하다, 감히 ~하다",
   "inTop1000": true
  },
  {
-  "th": "ช้อป",
+  "th": "ทาน",
   "derived": 6,
-  "reading": "첩",
-  "ko": "쇼핑하다",
-  "inTop1000": true
- },
- {
-  "th": "ตั้ง",
-  "derived": 6,
-  "reading": "땅",
-  "ko": "세우다, 설립하다, 설정하다",
-  "inTop1000": true
- },
- {
-  "th": "เชื่อ",
-  "derived": 6,
-  "reading": "츠아",
-  "ko": "믿다",
-  "inTop1000": true
- },
- {
-  "th": "ใช้จ่าย",
-  "derived": 6,
-  "reading": "차이 짜이",
-  "ko": "지출하다, 소비하다",
-  "inTop1000": true
- },
- {
-  "th": "อย่า",
-  "derived": 6,
-  "reading": "야",
-  "ko": "~하지 마라",
+  "reading": "탄",
+  "ko": "먹다(공손), 드시다",
   "inTop1000": true
  },
  {
@@ -2506,31 +2744,17 @@
   "inTop1000": true
  },
  {
-  "th": "ร้อง",
+  "th": "เลี้ยง",
   "derived": 6,
-  "reading": "렁",
-  "ko": "노래하다, 소리치다, 청원하다",
+  "reading": "리양",
+  "ko": "한턱내다, 기르다, 키우다",
   "inTop1000": true
  },
  {
-  "th": "แนว",
+  "th": "อาจ",
   "derived": 6,
-  "reading": "내우",
-  "ko": "방향, 스타일, 줄",
-  "inTop1000": true
- },
- {
-  "th": "อาทิ",
-  "derived": 6,
-  "reading": "아티",
-  "ko": "예를 들면, ~등",
-  "inTop1000": true
- },
- {
-  "th": "รู้",
-  "derived": 6,
-  "reading": "",
-  "ko": "",
+  "reading": "앗",
+  "ko": "~일지도 모른다, 아마",
   "inTop1000": true
  },
  {
@@ -2538,6 +2762,34 @@
   "derived": 6,
   "reading": "",
   "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "เอ็ม",
+  "derived": 6,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "รวม",
+  "derived": 6,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ทู",
+  "derived": 6,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "พวก",
+  "derived": 5,
+  "reading": "푸웍",
+  "ko": "~들 (복수, 인칭대명사 앞에 붙임)",
   "inTop1000": true
  },
  {
@@ -2566,13 +2818,20 @@
   "derived": 5,
   "reading": "판",
   "ko": "이, 이빨, 이빨, 치아, 이",
+  "inTop1000": false
+ },
+ {
+  "th": "เกิด",
+  "derived": 5,
+  "reading": "껃",
+  "ko": "태어나다",
   "inTop1000": true
  },
  {
-  "th": "ผู้หญิง",
+  "th": "เลิก",
   "derived": 5,
-  "reading": "푸잉",
-  "ko": "여자, 여성",
+  "reading": "럭",
+  "ko": "헤어지다",
   "inTop1000": true
  },
  {
@@ -2590,24 +2849,10 @@
   "inTop1000": false
  },
  {
-  "th": "เนิน",
-  "derived": 5,
-  "reading": "넌",
-  "ko": "언덕",
-  "inTop1000": false
- },
- {
   "th": "ขนมปัง",
   "derived": 5,
   "reading": "카놈 빵",
   "ko": "빵",
-  "inTop1000": false
- },
- {
-  "th": "สุก",
-  "derived": 5,
-  "reading": "쑥",
-  "ko": "(고기 등을) 익히다",
   "inTop1000": false
  },
  {
@@ -2636,13 +2881,20 @@
   "derived": 5,
   "reading": "뜨루월 쌥",
   "ko": "확인하다, 점검하다, 검사하다",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "ห่อ",
   "derived": 5,
   "reading": "허",
   "ko": "포장하다",
+  "inTop1000": false
+ },
+ {
+  "th": "ขับ",
+  "derived": 5,
+  "reading": "캅",
+  "ko": "(차량을) 운전하다, (자동차 등) 운전하다, 운전하다",
   "inTop1000": false
  },
  {
@@ -2667,18 +2919,25 @@
   "inTop1000": false
  },
  {
-  "th": "แถ",
+  "th": "น้อย",
   "derived": 5,
-  "reading": "태",
-  "ko": "딴소리하다",
-  "inTop1000": false
+  "reading": "너이",
+  "ko": "적다",
+  "inTop1000": true
+ },
+ {
+  "th": "ง่าย",
+  "derived": 5,
+  "reading": "응아이",
+  "ko": "쉽다",
+  "inTop1000": true
  },
  {
   "th": "สวย",
   "derived": 5,
   "reading": "쑤워이",
   "ko": "예쁘다",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ผง",
@@ -2692,7 +2951,7 @@
   "derived": 5,
   "reading": "플렝",
   "ko": "노래, 음악",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ฝุ่น",
@@ -2707,27 +2966,6 @@
   "reading": "켐",
   "ko": "바늘",
   "inTop1000": false
- },
- {
-  "th": "ยืน",
-  "derived": 5,
-  "reading": "유은",
-  "ko": "서다",
-  "inTop1000": false
- },
- {
-  "th": "แนะนำ",
-  "derived": 5,
-  "reading": "내남",
-  "ko": "소개하다, 안내하다, 추천하다, 소개하다",
-  "inTop1000": true
- },
- {
-  "th": "ตลาด",
-  "derived": 5,
-  "reading": "딸랏",
-  "ko": "시장",
-  "inTop1000": true
  },
  {
   "th": "สัญญาณ",
@@ -2748,14 +2986,14 @@
   "derived": 5,
   "reading": "퐈이퐈",
   "ko": "전기",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "ประเภท",
   "derived": 5,
   "reading": "쁘라펫",
   "ko": "종류",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "อาการ",
@@ -2765,18 +3003,18 @@
   "inTop1000": true
  },
  {
-  "th": "โลก",
-  "derived": 5,
-  "reading": "록",
-  "ko": "지구, 세계",
-  "inTop1000": true
- },
- {
   "th": "ลัด",
   "derived": 5,
   "reading": "랏",
   "ko": "지름길로 가다",
   "inTop1000": false
+ },
+ {
+  "th": "เพื่อน",
+  "derived": 5,
+  "reading": "프안",
+  "ko": "친구",
+  "inTop1000": true
  },
  {
   "th": "รถเข็น",
@@ -2804,14 +3042,14 @@
   "derived": 5,
   "reading": "쑨",
   "ko": "0",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "ห้องน้ำ",
   "derived": 5,
   "reading": "헝남",
   "ko": "화장실",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "บะหมี่",
@@ -2842,38 +3080,24 @@
   "inTop1000": false
  },
  {
-  "th": "อย่าง",
+  "th": "ไว้",
   "derived": 5,
-  "reading": "양",
-  "ko": "~처럼, 종류, ~하게(부사화)",
+  "reading": "와이",
+  "ko": "두다, ~해 두다(보존)",
   "inTop1000": true
  },
  {
-  "th": "อาจ",
+  "th": "เรื่อง",
   "derived": 5,
-  "reading": "앗",
-  "ko": "~일지도 모른다, 아마",
+  "reading": "르앙",
+  "ko": "이야기, 사안, ~에 관하여",
   "inTop1000": true
  },
  {
-  "th": "ปรับ",
+  "th": "เปล่า",
   "derived": 5,
-  "reading": "쁘랍",
-  "ko": "조정하다, 벌금을 물리다",
-  "inTop1000": true
- },
- {
-  "th": "หลัก",
-  "derived": 5,
-  "reading": "락",
-  "ko": "주요한, 원칙, 기둥",
-  "inTop1000": true
- },
- {
-  "th": "จีน",
-  "derived": 5,
-  "reading": "찐",
-  "ko": "중국",
+  "reading": "쁠라오",
+  "ko": "아니, 아무것도 아님, 비어 있다",
   "inTop1000": true
  },
  {
@@ -2884,87 +3108,24 @@
   "inTop1000": true
  },
  {
-  "th": "คิด",
+  "th": "เชื่อ",
   "derived": 5,
-  "reading": "킷",
-  "ko": "생각하다, 계산하다",
+  "reading": "츠아",
+  "ko": "믿다",
   "inTop1000": true
  },
  {
-  "th": "ฐาน",
+  "th": "ทุก",
   "derived": 5,
-  "reading": "탄",
-  "ko": "기반, 토대, 베이스",
+  "reading": "툭",
+  "ko": "모든, 매~",
   "inTop1000": true
  },
  {
-  "th": "ครั้ง",
+  "th": "ผิด",
   "derived": 5,
-  "reading": "크랑",
-  "ko": "번, 회",
-  "inTop1000": true
- },
- {
-  "th": "ปกติ",
-  "derived": 5,
-  "reading": "뽀까띠",
-  "ko": "보통, 정상적인",
-  "inTop1000": true
- },
- {
-  "th": "ทั่วไป",
-  "derived": 5,
-  "reading": "투어 빠이",
-  "ko": "일반적인, 보통의",
-  "inTop1000": true
- },
- {
-  "th": "จริง",
-  "derived": 5,
-  "reading": "찡",
-  "ko": "진짜의, 정말",
-  "inTop1000": true
- },
- {
-  "th": "วาง",
-  "derived": 5,
-  "reading": "왕",
-  "ko": "놓다, 두다, 배치하다",
-  "inTop1000": true
- },
- {
-  "th": "มอง",
-  "derived": 5,
-  "reading": "멍",
-  "ko": "바라보다, 여기다",
-  "inTop1000": true
- },
- {
-  "th": "วัย",
-  "derived": 5,
-  "reading": "와이",
-  "ko": "연령대, 나이",
-  "inTop1000": true
- },
- {
-  "th": "ช่อง",
-  "derived": 5,
-  "reading": "청",
-  "ko": "채널, 구멍, 칸",
-  "inTop1000": true
- },
- {
-  "th": "ทำการ",
-  "derived": 5,
-  "reading": "탐 깐",
-  "ko": "실행하다, ~을 행하다",
-  "inTop1000": true
- },
- {
-  "th": "ทรัพย์",
-  "derived": 5,
-  "reading": "쌉",
-  "ko": "재산, 재물",
+  "reading": "핏",
+  "ko": "틀리다, 잘못된",
   "inTop1000": true
  },
  {
@@ -2975,6 +3136,13 @@
   "inTop1000": true
  },
  {
+  "th": "เพิ่ม",
+  "derived": 5,
+  "reading": "픔",
+  "ko": "더하다, 증가시키다",
+  "inTop1000": true
+ },
+ {
   "th": "ใกล้",
   "derived": 5,
   "reading": "끌라이",
@@ -2982,10 +3150,73 @@
   "inTop1000": true
  },
  {
-  "th": "สยาม",
+  "th": "สิง",
   "derived": 5,
-  "reading": "싸얌",
-  "ko": "시암(태국 옛 이름), 싸얌(지역명)",
+  "reading": "씽",
+  "ko": "빙의하다, 깃들다(귀신)",
+  "inTop1000": true
+ },
+ {
+  "th": "ตบ",
+  "derived": 5,
+  "reading": "똡",
+  "ko": "때리다, 뺨치다",
+  "inTop1000": true
+ },
+ {
+  "th": "นัด",
+  "derived": 5,
+  "reading": "낫",
+  "ko": "약속하다, 약속(만남)",
+  "inTop1000": true
+ },
+ {
+  "th": "ครั้ง",
+  "derived": 5,
+  "reading": "크랑",
+  "ko": "번, 회",
+  "inTop1000": true
+ },
+ {
+  "th": "เทพ",
+  "derived": 5,
+  "reading": "텝",
+  "ko": "신, 신급으로 잘하는(속어)",
+  "inTop1000": true
+ },
+ {
+  "th": "เบอร์",
+  "derived": 5,
+  "reading": "버",
+  "ko": "전화번호",
+  "inTop1000": true
+ },
+ {
+  "th": "จอด",
+  "derived": 5,
+  "reading": "쩟",
+  "ko": "주차하다, 세우다",
+  "inTop1000": true
+ },
+ {
+  "th": "แถว",
+  "derived": 5,
+  "reading": "태우",
+  "ko": "근처, 줄, 열",
+  "inTop1000": true
+ },
+ {
+  "th": "เกี่ยว",
+  "derived": 5,
+  "reading": "끼야우",
+  "ko": "관련되다, 관계있다, 걸다",
+  "inTop1000": true
+ },
+ {
+  "th": "หลับ",
+  "derived": 5,
+  "reading": "랍",
+  "ko": "잠들다, 눈을 감다",
   "inTop1000": true
  },
  {
@@ -2996,11 +3227,18 @@
   "inTop1000": true
  },
  {
-  "th": "พวก",
-  "derived": 4,
-  "reading": "푸웍",
-  "ko": "~들 (복수, 인칭대명사 앞에 붙임)",
-  "inTop1000": false
+  "th": "เกล",
+  "derived": 5,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "มาถึง",
+  "derived": 5,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
  },
  {
   "th": "อ่าน",
@@ -3024,6 +3262,13 @@
   "inTop1000": false
  },
  {
+  "th": "แรก",
+  "derived": 4,
+  "reading": "랙",
+  "ko": "첫 번째 (명사 + แรก)",
+  "inTop1000": true
+ },
+ {
   "th": "สุดท้าย",
   "derived": 4,
   "reading": "쑷타이",
@@ -3042,7 +3287,7 @@
   "derived": 4,
   "reading": "쌉다",
   "ko": "주, 주, 주간",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "สมุด",
@@ -3070,7 +3315,7 @@
   "derived": 4,
   "reading": "땡 응안",
   "ko": "결혼하다",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "อายุ",
@@ -3078,13 +3323,6 @@
   "reading": "아유",
   "ko": "나이",
   "inTop1000": true
- },
- {
-  "th": "เลิก",
-  "derived": 4,
-  "reading": "럭",
-  "ko": "헤어지다",
-  "inTop1000": false
  },
  {
   "th": "เกาะ",
@@ -3098,34 +3336,20 @@
   "derived": 4,
   "reading": "펫",
   "ko": "다이아몬드",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ประกาศ",
   "derived": 4,
   "reading": "쁘라깟",
   "ko": "안내(게시)하다, 알리다, 공지하다, 공지하다",
-  "inTop1000": true
- },
- {
-  "th": "ร้านค้า",
-  "derived": 4,
-  "reading": "란 카",
-  "ko": "가게, 상점, 가게, 상점, 가게, 상점",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "ซื้อ",
   "derived": 4,
   "reading": "쓰",
   "ko": "사다, 구입하다, 사다",
-  "inTop1000": true
- },
- {
-  "th": "สั่ง",
-  "derived": 4,
-  "reading": "쌍",
-  "ko": "주문하다",
   "inTop1000": true
  },
  {
@@ -3136,11 +3360,18 @@
   "inTop1000": false
  },
  {
+  "th": "สบาย",
+  "derived": 4,
+  "reading": "싸바이",
+  "ko": "(마사지 후) 시원하다",
+  "inTop1000": true
+ },
+ {
   "th": "กาแฟ",
   "derived": 4,
   "reading": "까웨",
   "ko": "커피",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "กล่อง",
@@ -3154,20 +3385,6 @@
   "derived": 4,
   "reading": "패",
   "ko": "알레르기, 지다",
-  "inTop1000": true
- },
- {
-  "th": "ดัง",
-  "derived": 4,
-  "reading": "당",
-  "ko": "(소리가) 크다",
-  "inTop1000": true
- },
- {
-  "th": "ง่าย",
-  "derived": 4,
-  "reading": "응아이",
-  "ko": "쉽다",
   "inTop1000": true
  },
  {
@@ -3189,6 +3406,13 @@
   "derived": 4,
   "reading": "칸",
   "ko": "간지럽다, 가렵다",
+  "inTop1000": true
+ },
+ {
+  "th": "รัฐ",
+  "derived": 4,
+  "reading": "랏(랏타)",
+  "ko": "국가, 국토",
   "inTop1000": false
  },
  {
@@ -3238,6 +3462,20 @@
   "derived": 4,
   "reading": "탐마다",
   "ko": "보통, 일반, 보통",
+  "inTop1000": true
+ },
+ {
+  "th": "ยืน",
+  "derived": 4,
+  "reading": "유은",
+  "ko": "서다",
+  "inTop1000": true
+ },
+ {
+  "th": "แนะนำ",
+  "derived": 4,
+  "reading": "내남",
+  "ko": "소개하다, 안내하다, 추천하다, 소개하다",
   "inTop1000": false
  },
  {
@@ -3245,13 +3483,6 @@
   "derived": 4,
   "reading": "랑까이",
   "ko": "신체, 몸",
-  "inTop1000": true
- },
- {
-  "th": "ปลอดภัย",
-  "derived": 4,
-  "reading": "쁠럿파이",
-  "ko": "안전하다, 안전",
   "inTop1000": true
  },
  {
@@ -3276,13 +3507,6 @@
   "inTop1000": false
  },
  {
-  "th": "เพื่อน",
-  "derived": 4,
-  "reading": "프안",
-  "ko": "친구",
-  "inTop1000": false
- },
- {
   "th": "ภาษาไทย",
   "derived": 4,
   "reading": "파싸타이",
@@ -3301,7 +3525,7 @@
   "derived": 4,
   "reading": "쿤나팝",
   "ko": "품질",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "นิ้ว",
@@ -3332,38 +3556,31 @@
   "inTop1000": false
  },
  {
-  "th": "ควร",
+  "th": "ใช่",
   "derived": 4,
-  "reading": "쿠언",
-  "ko": "~해야 마땅하다, ~하는 것이 좋다",
+  "reading": "차이",
+  "ko": "네, 맞다, ~이다",
   "inTop1000": true
  },
  {
-  "th": "ทั้ง",
+  "th": "ก่อน",
   "derived": 4,
-  "reading": "탕",
-  "ko": "모두, 전체, ~도 ~도",
+  "reading": "껀",
+  "ko": "먼저, ~전에",
   "inTop1000": true
  },
  {
-  "th": "พบ",
+  "th": "หน่อย",
   "derived": 4,
-  "reading": "폽",
-  "ko": "만나다, 발견하다",
+  "reading": "너이",
+  "ko": "조금, 좀",
   "inTop1000": true
  },
  {
-  "th": "ทุก",
+  "th": "คิด",
   "derived": 4,
-  "reading": "툭",
-  "ko": "모든, 매~",
-  "inTop1000": true
- },
- {
-  "th": "กำหนด",
-  "derived": 4,
-  "reading": "깜놋",
-  "ko": "정하다, 규정하다",
+  "reading": "킷",
+  "ko": "생각하다, 계산하다",
   "inTop1000": true
  },
  {
@@ -3374,6 +3591,27 @@
   "inTop1000": true
  },
  {
+  "th": "เจอ",
+  "derived": 4,
+  "reading": "쩌",
+  "ko": "만나다, 발견하다",
+  "inTop1000": true
+ },
+ {
+  "th": "แหละ",
+  "derived": 4,
+  "reading": "래",
+  "ko": "바로 ~야(강조 어말조사)",
+  "inTop1000": true
+ },
+ {
+  "th": "จัง",
+  "derived": 4,
+  "reading": "짱",
+  "ko": "정말, 엄청(강조)",
+  "inTop1000": true
+ },
+ {
   "th": "ดูแล",
   "derived": 4,
   "reading": "두 래",
@@ -3381,17 +3619,66 @@
   "inTop1000": true
  },
  {
-  "th": "หนี้",
+  "th": "ควร",
   "derived": 4,
-  "reading": "니",
-  "ko": "빚, 부채",
+  "reading": "쿠언",
+  "ko": "~해야 마땅하다, ~하는 것이 좋다",
   "inTop1000": true
  },
  {
-  "th": "อัตรา",
+  "th": "ระวัง",
   "derived": 4,
-  "reading": "앗뜨라",
-  "ko": "비율, 요율",
+  "reading": "라 왕",
+  "ko": "조심하다",
+  "inTop1000": true
+ },
+ {
+  "th": "มอง",
+  "derived": 4,
+  "reading": "멍",
+  "ko": "바라보다, 여기다",
+  "inTop1000": true
+ },
+ {
+  "th": "ค่อย",
+  "derived": 4,
+  "reading": "커이",
+  "ko": "천천히, 차차, 그다음에",
+  "inTop1000": true
+ },
+ {
+  "th": "คบ",
+  "derived": 4,
+  "reading": "콥",
+  "ko": "사귀다, 교제하다",
+  "inTop1000": true
+ },
+ {
+  "th": "พบ",
+  "derived": 4,
+  "reading": "폽",
+  "ko": "만나다, 발견하다",
+  "inTop1000": true
+ },
+ {
+  "th": "วาง",
+  "derived": 4,
+  "reading": "왕",
+  "ko": "놓다, 두다, 배치하다",
+  "inTop1000": true
+ },
+ {
+  "th": "สติ",
+  "derived": 4,
+  "reading": "사 띠",
+  "ko": "정신, 의식, 제정신",
+  "inTop1000": true
+ },
+ {
+  "th": "ชู",
+  "derived": 4,
+  "reading": "추",
+  "ko": "치켜들다, 들어 올리다",
   "inTop1000": true
  },
  {
@@ -3402,73 +3689,17 @@
   "inTop1000": true
  },
  {
-  "th": "ดำเนิน",
-  "derived": 4,
-  "reading": "담는",
-  "ko": "진행하다, 수행하다",
-  "inTop1000": true
- },
- {
-  "th": "อันดับ",
-  "derived": 4,
-  "reading": "안답",
-  "ko": "순위, 등급",
-  "inTop1000": true
- },
- {
-  "th": "ตน",
-  "derived": 4,
-  "reading": "똔",
-  "ko": "자신, 본인(문어)",
-  "inTop1000": true
- },
- {
-  "th": "ห้าง",
-  "derived": 4,
-  "reading": "항",
-  "ko": "백화점, 쇼핑몰",
-  "inTop1000": true
- },
- {
-  "th": "เสริม",
-  "derived": 4,
-  "reading": "씀",
-  "ko": "보강하다, 보충하다",
-  "inTop1000": true
- },
- {
-  "th": "คอม",
-  "derived": 4,
-  "reading": "컴",
-  "ko": "컴퓨터(약칭)",
-  "inTop1000": true
- },
- {
-  "th": "แรง",
-  "derived": 4,
-  "reading": "랭",
-  "ko": "힘, 세게, 강한",
-  "inTop1000": true
- },
- {
-  "th": "ก้อน",
-  "derived": 4,
-  "reading": "껀",
-  "ko": "덩어리, 개(덩어리 단위)",
-  "inTop1000": true
- },
- {
-  "th": "ชาว",
-  "derived": 4,
-  "reading": "차우",
-  "ko": "~사람, ~민(民)",
-  "inTop1000": true
- },
- {
-  "th": "สะดวก",
+  "th": "วิน",
   "derived": 4,
   "reading": "",
   "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "เรา",
+  "derived": 3,
+  "reading": "라오",
+  "ko": "우리, 나 (1인칭)",
   "inTop1000": true
  },
  {
@@ -3507,18 +3738,11 @@
   "inTop1000": false
  },
  {
-  "th": "แรก",
-  "derived": 3,
-  "reading": "랙",
-  "ko": "첫 번째 (명사 + แรก)",
-  "inTop1000": true
- },
- {
   "th": "จำนวน",
   "derived": 3,
   "reading": "짬누원",
   "ko": "개수, 수량",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "วันนี้",
@@ -3532,7 +3756,7 @@
   "derived": 3,
   "reading": "땀루원",
   "ko": "경찰",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ไหล่",
@@ -3553,6 +3777,13 @@
   "derived": 3,
   "reading": "남 낙",
   "ko": "몸무게, 체중",
+  "inTop1000": false
+ },
+ {
+  "th": "รู้สึก",
+  "derived": 3,
+  "reading": "루쓱",
+  "ko": "느끼다",
   "inTop1000": true
  },
  {
@@ -3616,7 +3847,7 @@
   "derived": 3,
   "reading": "남딴",
   "ko": "설탕, 갈색",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "กางเกง",
@@ -3640,6 +3871,20 @@
   "inTop1000": false
  },
  {
+  "th": "ร้านค้า",
+  "derived": 3,
+  "reading": "란 카",
+  "ko": "가게, 상점, 가게, 상점, 가게, 상점",
+  "inTop1000": false
+ },
+ {
+  "th": "สั่ง",
+  "derived": 3,
+  "reading": "쌍",
+  "ko": "주문하다",
+  "inTop1000": true
+ },
+ {
   "th": "รถเมล์",
   "derived": 3,
   "reading": "롣메",
@@ -3651,35 +3896,28 @@
   "derived": 3,
   "reading": "끌라이",
   "ko": "(거리가) 멀다, 멀다",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ถ่ายรูป",
   "derived": 3,
   "reading": "타이 룹",
   "ko": "사진 찍다, 사진을 찍다",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "จับ",
   "derived": 3,
   "reading": "짭",
   "ko": "잡다",
-  "inTop1000": false
- },
- {
-  "th": "สบาย",
-  "derived": 3,
-  "reading": "싸바이",
-  "ko": "(마사지 후) 시원하다",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ธนาคาร",
   "derived": 3,
   "reading": "타나칸",
   "ko": "은행",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "จดหมาย",
@@ -3693,7 +3931,7 @@
   "derived": 3,
   "reading": "바오",
   "ko": "가볍다, (소리가) 약하다, (무게가) 가볍다, 가볍다, 약하다",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "เบสบอล",
@@ -3714,13 +3952,6 @@
   "derived": 3,
   "reading": "차나",
   "ko": "이기다",
-  "inTop1000": false
- },
- {
-  "th": "ต่ำ",
-  "derived": 3,
-  "reading": "땀",
-  "ko": "낮다",
   "inTop1000": true
  },
  {
@@ -3728,21 +3959,21 @@
   "derived": 3,
   "reading": "쎧",
   "ko": "끝나다",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "อาจารย์",
   "derived": 3,
   "reading": "아짠",
   "ko": "교수님, 선생님",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ข่าว",
   "derived": 3,
   "reading": "카우",
   "ko": "뉴스",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ลาว",
@@ -3763,14 +3994,7 @@
   "derived": 3,
   "reading": "다이랍",
   "ko": "받다, 얻다",
-  "inTop1000": true
- },
- {
-  "th": "ศาล",
-  "derived": 3,
-  "reading": "싼",
-  "ko": "법원",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "ของหาย",
@@ -3784,6 +4008,13 @@
   "derived": 3,
   "reading": "라오",
   "ko": "술",
+  "inTop1000": true
+ },
+ {
+  "th": "ตลาด",
+  "derived": 3,
+  "reading": "딸랏",
+  "ko": "시장",
   "inTop1000": false
  },
  {
@@ -3792,6 +4023,13 @@
   "reading": "카야",
   "ko": "쓰레기",
   "inTop1000": false
+ },
+ {
+  "th": "ปลอดภัย",
+  "derived": 3,
+  "reading": "쁠럿파이",
+  "ko": "안전하다, 안전",
+  "inTop1000": true
  },
  {
   "th": "ควัน",
@@ -3805,14 +4043,14 @@
   "derived": 3,
   "reading": "카이",
   "ko": "열",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "กุญแจ",
   "derived": 3,
   "reading": "꾼째",
   "ko": "열쇠",
-  "inTop1000": false
+  "inTop1000": true
  },
  {
   "th": "ซ้าย",
@@ -3822,11 +4060,18 @@
   "inTop1000": false
  },
  {
+  "th": "โลก",
+  "derived": 3,
+  "reading": "록",
+  "ko": "지구, 세계",
+  "inTop1000": true
+ },
+ {
   "th": "เกิน",
   "derived": 3,
   "reading": "끄언",
   "ko": "초과하다, 넘다",
-  "inTop1000": true
+  "inTop1000": false
  },
  {
   "th": "คลื่น",
@@ -3840,6 +4085,13 @@
   "derived": 3,
   "reading": "깐카이",
   "ko": "판매",
+  "inTop1000": false
+ },
+ {
+  "th": "อนุญาต",
+  "derived": 3,
+  "reading": "아누얏",
+  "ko": "허락하다",
   "inTop1000": false
  },
  {
@@ -3871,13 +4123,6 @@
   "inTop1000": false
  },
  {
-  "th": "คับ",
-  "derived": 3,
-  "reading": "캅",
-  "ko": "끼다",
-  "inTop1000": false
- },
- {
   "th": "แดง",
   "derived": 3,
   "reading": "댕",
@@ -3906,150 +4151,24 @@
   "inTop1000": false
  },
  {
-  "th": "ธุรกิจ",
+  "th": "เลย",
   "derived": 3,
-  "reading": "투라낏",
-  "ko": "사업, 비즈니스",
+  "reading": "르이",
+  "ko": "전혀(부정 강조), 아주, 지나서",
   "inTop1000": true
  },
  {
-  "th": "เรื่อง",
+  "th": "ไง",
   "derived": 3,
-  "reading": "르앙",
-  "ko": "이야기, 사안, ~에 관하여",
+  "reading": "응아이",
+  "ko": "어때?, 어떻게(อย่างไร 구어), ~잖아(어말)",
   "inTop1000": true
  },
  {
-  "th": "ลงทุน",
+  "th": "อยาก",
   "derived": 3,
-  "reading": "롱 툰",
-  "ko": "투자하다",
-  "inTop1000": true
- },
- {
-  "th": "ก่อน",
-  "derived": 3,
-  "reading": "껀",
-  "ko": "먼저, ~전에",
-  "inTop1000": true
- },
- {
-  "th": "ไว้",
-  "derived": 3,
-  "reading": "와이",
-  "ko": "두다, ~해 두다(보존)",
-  "inTop1000": true
- },
- {
-  "th": "ภาวะ",
-  "derived": 3,
-  "reading": "파와",
-  "ko": "상태, 상황",
-  "inTop1000": true
- },
- {
-  "th": "ระดับ",
-  "derived": 3,
-  "reading": "라답",
-  "ko": "수준, 레벨",
-  "inTop1000": true
- },
- {
-  "th": "สิทธิ",
-  "derived": 3,
-  "reading": "씻 티",
-  "ko": "권리",
-  "inTop1000": true
- },
- {
-  "th": "เพียง",
-  "derived": 3,
-  "reading": "피앙",
-  "ko": "단지, ~만",
-  "inTop1000": true
- },
- {
-  "th": "ภายใน",
-  "derived": 3,
-  "reading": "파이 나이",
-  "ko": "~이내에, 내부",
-  "inTop1000": true
- },
- {
-  "th": "พื้นที่",
-  "derived": 3,
-  "reading": "픈 티",
-  "ko": "지역, 면적, 공간",
-  "inTop1000": true
- },
- {
-  "th": "บริเวณ",
-  "derived": 3,
-  "reading": "버리웬",
-  "ko": "구역, 부근",
-  "inTop1000": true
- },
- {
-  "th": "นาน",
-  "derived": 3,
-  "reading": "난",
-  "ko": "오래, 오랫동안",
-  "inTop1000": true
- },
- {
-  "th": "ประชาชน",
-  "derived": 3,
-  "reading": "쁘라차촌",
-  "ko": "국민, 시민",
-  "inTop1000": true
- },
- {
-  "th": "เฉพาะ",
-  "derived": 3,
-  "reading": "차퍼",
-  "ko": "특정한, ~만, 오직",
-  "inTop1000": true
- },
- {
-  "th": "ความผิด",
-  "derived": 3,
-  "reading": "쾀 핏",
-  "ko": "잘못, 죄, 위법",
-  "inTop1000": true
- },
- {
-  "th": "เชื้อ",
-  "derived": 3,
-  "reading": "츠아",
-  "ko": "병원균, 균, 혈통",
-  "inTop1000": true
- },
- {
-  "th": "ทางการ",
-  "derived": 3,
-  "reading": "탕 깐",
-  "ko": "공식적인, 당국",
-  "inTop1000": true
- },
- {
-  "th": "สื่อ",
-  "derived": 3,
-  "reading": "쓰",
-  "ko": "매체, 미디어, 전달하다",
-  "inTop1000": true
- },
- {
-  "th": "จังหวัด",
-  "derived": 3,
-  "reading": "짱왓",
-  "ko": "도(행정구역), 주",
-  "inTop1000": true
- },
- {
-  "th": "คาด",
-  "derived": 3,
-  "reading": "캇",
-  "ko": "예상하다, 기대하다",
+  "reading": "약",
+  "ko": "~하고 싶다",
   "inTop1000": true
  },
  {
@@ -4060,10 +4179,45 @@
   "inTop1000": true
  },
  {
-  "th": "ขณะ",
+  "th": "แค่",
   "derived": 3,
-  "reading": "카나",
-  "ko": "순간, ~하는 동안",
+  "reading": "캐",
+  "ko": "단지, ~만큼",
+  "inTop1000": true
+ },
+ {
+  "th": "เห็น",
+  "derived": 3,
+  "reading": "헨",
+  "ko": "보다, 보이다, 생각하다",
+  "inTop1000": true
+ },
+ {
+  "th": "คุย",
+  "derived": 3,
+  "reading": "쿠이",
+  "ko": "이야기하다, 수다 떨다",
+  "inTop1000": true
+ },
+ {
+  "th": "เหมือน",
+  "derived": 3,
+  "reading": "므언",
+  "ko": "같다, ~처럼",
+  "inTop1000": true
+ },
+ {
+  "th": "นาน",
+  "derived": 3,
+  "reading": "난",
+  "ko": "오래, 오랫동안",
+  "inTop1000": true
+ },
+ {
+  "th": "สัก",
+  "derived": 3,
+  "reading": "싹",
+  "ko": "약 ~쯤, 한 ~(수량 앞), 문신하다",
   "inTop1000": true
  },
  {
@@ -4074,24 +4228,87 @@
   "inTop1000": true
  },
  {
-  "th": "ใช้งาน",
+  "th": "ปกติ",
   "derived": 3,
-  "reading": "차이 응안",
-  "ko": "사용하다, 이용하다",
+  "reading": "뽀까띠",
+  "ko": "보통, 정상적인",
   "inTop1000": true
  },
  {
-  "th": "หน่อย",
+  "th": "ทัน",
   "derived": 3,
-  "reading": "너이",
-  "ko": "조금, 좀",
+  "reading": "탄",
+  "ko": "제때 맞추다, 따라잡다",
   "inTop1000": true
  },
  {
-  "th": "หัก",
+  "th": "เดิม",
   "derived": 3,
-  "reading": "학",
-  "ko": "공제하다, 부러지다, 꺾다",
+  "reading": "듬",
+  "ko": "원래의, 기존의",
+  "inTop1000": true
+ },
+ {
+  "th": "แรง",
+  "derived": 3,
+  "reading": "랭",
+  "ko": "힘, 세게, 강한",
+  "inTop1000": true
+ },
+ {
+  "th": "ยินดี",
+  "derived": 3,
+  "reading": "인 디",
+  "ko": "기쁘다, 환영하다, 축하하다",
+  "inTop1000": true
+ },
+ {
+  "th": "สำเร็จ",
+  "derived": 3,
+  "reading": "삼 렛",
+  "ko": "성공하다, 완성하다",
+  "inTop1000": true
+ },
+ {
+  "th": "โต้",
+  "derived": 3,
+  "reading": "또",
+  "ko": "반박하다, 맞서다",
+  "inTop1000": true
+ },
+ {
+  "th": "พัง",
+  "derived": 3,
+  "reading": "팡",
+  "ko": "부서지다, 망가지다, 망하다",
+  "inTop1000": true
+ },
+ {
+  "th": "เทค",
+  "derived": 3,
+  "reading": "텍",
+  "ko": "테이크(촬영 take), 테크(tech)(영어 차용)",
+  "inTop1000": true
+ },
+ {
+  "th": "ขี้",
+  "derived": 3,
+  "reading": "키",
+  "ko": "똥, ~하는 버릇이 있는(ขี้เกียจ 등 접두)",
+  "inTop1000": true
+ },
+ {
+  "th": "โดด",
+  "derived": 3,
+  "reading": "돗",
+  "ko": "뛰어오르다, 땡땡이치다",
+  "inTop1000": true
+ },
+ {
+  "th": "ช่วง",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
   "inTop1000": true
  }
 ]

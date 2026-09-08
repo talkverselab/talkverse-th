@@ -495,11 +495,11 @@
    "id": "core",
    "name": "회화 핵심어휘",
    "emoji": "💬",
-   "count": 2075,
+   "count": 2007,
    "parts": [
     {
      "name": "빈도 단어",
-     "count": 640
+     "count": 572
     },
     {
      "name": "핵심어휘 ㄱ",
