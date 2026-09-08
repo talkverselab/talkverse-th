@@ -1387,6 +1387,7 @@ class _ResultCard extends StatelessWidget {
             const SizedBox(height: 4),
             KoReadingText(
               turn.roman!,
+              th: turn.th,
               style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w700,

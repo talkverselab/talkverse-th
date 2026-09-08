@@ -275,6 +275,7 @@ class _PhraseCardState extends State<_PhraseCard> {
                       if (!hideTh)
                         KoReadingText(
                           phrase.roman,
+                          th: phrase.th,
                           style: const TextStyle(
                             fontSize: 13,
                             color: AppColors.kluayMai,

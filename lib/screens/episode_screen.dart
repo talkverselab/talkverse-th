@@ -358,6 +358,7 @@ class _EpisodeBubble extends StatelessWidget {
               const SizedBox(height: 3),
               KoReadingText(
                 turn.roman!,
+                th: turn.th,
                 style: TextStyle(
                   fontSize: 11,
                   color: bubbleText.withValues(alpha: 0.85),

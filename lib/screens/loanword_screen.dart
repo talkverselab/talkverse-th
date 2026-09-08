@@ -372,6 +372,7 @@ class _WordRow extends StatelessWidget {
                   ),
                   KoReadingText(
                     w.reading,
+                    th: w.th,
                     style: const TextStyle(
                         fontSize: 13,
                         color: AppColors.kluayMai,
