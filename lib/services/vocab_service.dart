@@ -22,6 +22,8 @@ class VocabEntry {
   final VocabExample? ex;
   final bool uncertain;
   final int rank; // 빈도 순위 (0 = 없음)
+  final String topic; // 주제 id (th_topics.json)
+  final String part; // 편 이름
   final int level; // 빈도 단계 1~5 (1 = 최상위, 0 = 없음)
 
   const VocabEntry({
@@ -42,6 +44,8 @@ class VocabEntry {
     this.uncertain = false,
     this.rank = 0,
     this.level = 0,
+    this.topic = 'core',
+    this.part = '',
   });
 
   bool get isBook => day > 0;
@@ -83,6 +87,8 @@ class VocabEntry {
       uncertain: m['uncertain'] == true,
       rank: _toInt(m['rank']) ?? 0,
       level: _toInt(m['level']) ?? 0,
+      topic: (m['topic'] as String?) ?? 'core',
+      part: (m['part'] as String?) ?? '',
     );
   }
 }
@@ -107,6 +113,27 @@ class VocabExample {
   );
 }
 
+/// 주제(th_topics.json / th_expressions.json 의 topics).
+class VocabTopic {
+  final String id;
+  final String name;
+  final String emoji;
+  final int count;
+  final List<String> parts;
+  const VocabTopic(this.id, this.name, this.emoji, this.count, this.parts);
+
+  factory VocabTopic.fromJson(Map m) => VocabTopic(
+    '${m['id']}',
+    '${m['name']}',
+    '${m['emoji'] ?? '📖'}',
+    (m['count'] as num?)?.toInt() ?? 0,
+    [
+      for (final p in (m['parts'] as List? ?? []).whereType<Map>())
+        '${p['name']}',
+    ],
+  );
+}
+
 /// 통합 단어장 로더/검색.
 class VocabService {
   VocabService._();
@@ -114,6 +141,8 @@ class VocabService {
 
   final List<VocabEntry> _entries = [];
   final List<VocabEntry> _obec = []; // 교육부 표준(ป.1~3) — 단어장 화면에는 노출하지 않음
+  final List<VocabEntry> _expressions = []; // 표현학습 — 단어장에서 분리한 문장·표현
+  final List<VocabTopic> _expressionTopics = [];
   final Map<String, VocabEntry> _byId = {};
   final Map<String, List<VocabEntry>> _byTh = {};
   final Map<int, String> _themes = {};
@@ -124,6 +153,10 @@ class VocabService {
 
   /// 태국 교육부 기초 단어(ป.1~3) 풀 — 이미 단어장에 있는 단어는 그 항목을 재사용.
   List<VocabEntry> get obecEntries => _obec;
+
+  /// 표현학습(문장·표현) 목록과 주제.
+  List<VocabEntry> get expressions => _expressions;
+  List<VocabTopic> get expressionTopics => _expressionTopics;
 
   /// 빈도 Top1000 풀.
   List<VocabEntry> get top1000Entries =>
@@ -163,7 +196,25 @@ class VocabService {
       // 에셋 없이도 동작
     }
     await _loadObec();
+    await _loadExpressions();
     _loaded = true;
+  }
+
+  Future<void> _loadExpressions() async {
+    try {
+      final raw = await rootBundle.loadString(
+        'assets/data/vocab/th_expressions.json',
+      );
+      final data = json.decode(raw) as Map<String, dynamic>;
+      for (final t in (data['topics'] as List? ?? []).whereType<Map>()) {
+        _expressionTopics.add(VocabTopic.fromJson(t));
+      }
+      for (final e in (data['entries'] as List? ?? [])) {
+        _expressions.add(VocabEntry.fromJson(e as Map<String, dynamic>));
+      }
+    } catch (_) {
+      // 에셋 없이도 동작
+    }
   }
 
   Future<void> _loadObec() async {

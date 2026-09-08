@@ -245,7 +245,7 @@ def body_words():
                 if r.get("template"):
                     continue
                 rows.append({"ko": r["ko"], "th": r["th"], "reading": r.get("reading", ""),
-                             "page": g["page"], "group": g["label"], "topic": t["title"],
+                             "page": g["page"], "group": g["label"], "topic": t["title"], "section": t.get("section", ""),
                              "uncertain": r.get("uncertain", False)})
     return rows
 

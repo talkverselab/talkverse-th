@@ -108,9 +108,22 @@ def load_captures():
                 src="capture",
                 pages=pages,
                 order=len(entries),
+                topic="core",
+                part="핵심어휘 " + ko_initial_group((e.get("ko") or "").strip()),
                 **({"uncertain": True} if e.get("uncertain") else {}),
             ))
     return entries, len(files)
+
+
+def _body_part(title, group):
+    """편 이름: 페이지 제목. LOOK(사진 그리드)·제목 없음이면 그룹 라벨(괄호 안 태국어 제거)."""
+    t = re.sub(r"[.!♪]+$", "", title or "").strip()
+    g = re.sub(r"\s*\([^)]*\)", "", group or "").strip()
+    if not t or t.upper().startswith("LOOK"):
+        return g or "그림 단어"
+    if g in ("도움이 되는 단어장", "") or g.startswith("LOOK"):
+        return t
+    return t
 
 
 def load_body():
@@ -137,6 +150,8 @@ def load_body():
             group=r["group"],
             theme=r["topic"],
             uncertain=bool(r.get("uncertain")),
+            topic=body_topic(r.get("section", ""), int(r.get("page") or 0)),
+            part=_body_part(r["topic"], r["group"]),
         ))
     return entries, len(entries)
 
@@ -184,7 +199,68 @@ def load_book():
         themes.setdefault(1, "왕초보 필수 문법")
     for e in entries:
         e["theme"] = themes.get(e["day"], "")
+        e["topic"] = DAY_TOPIC.get(e["day"], "life")
+        e["part"] = f"{e['day']}일 {e['theme']}".strip()
     return entries, len(files), themes
+
+
+# ───────── 주제별 단어 분류 ─────────
+TOPICS = [  # (id, 이름, 이모지)
+    ("basic", "기본회화", "🙏"), ("food", "맛집·음식", "🍜"), ("shop", "쇼핑", "🛍️"),
+    ("beauty", "뷰티·마사지", "💆"), ("tour", "관광", "🏛️"), ("enter", "엔터테인먼트", "🎤"),
+    ("hotel", "호텔", "🏨"), ("transport", "교통·공항", "✈️"), ("daily", "생활 편의", "📮"),
+    ("health", "긴급·건강", "🚨"), ("basicwords", "기본 단어", "🔢"), ("life", "생활·일상", "🏠"),
+    ("core", "회화 핵심어휘", "💬"),
+]
+# 나혼자 30일 테마(일차) → 주제
+DAY_TOPIC = {
+    1: "basicwords", 2: "life", 3: "basicwords", 4: "basicwords", 5: "life", 6: "life", 7: "health",
+    8: "life", 9: "life", 10: "basicwords", 11: "life", 12: "hotel", 13: "food", 14: "shop", 15: "transport",
+    16: "shop", 17: "transport", 18: "transport", 19: "hotel", 20: "tour", 21: "beauty", 22: "food",
+    23: "daily", 24: "health", 25: "enter", 26: "enter", 27: "daily", 28: "daily", 29: "life", 30: "basicwords",
+}
+# 회화집 본문 '기본정보' 섹션은 쪽수로 세분
+def body_topic(section, page):
+    if section != "info":
+        return {"basic": "basic", "food": "food", "shop": "shop", "beauty": "beauty", "tour": "tour",
+                "enter": "enter", "hotel": "hotel", "transport": "transport"}.get(section, "core")
+    if page < 140:
+        return "daily"
+    if page < 146:
+        return "health"
+    if page < 150:
+        return "basic"
+    return "basicwords"
+
+
+CHOSEONG = "ㄱㄲㄴㄷㄸㄹㅁㅂㅃㅅㅆㅇㅈㅉㅊㅋㅌㅍㅎ"
+CHO_GROUP = {"ㄱ": "ㄱ", "ㄲ": "ㄱ", "ㄴ": "ㄴ", "ㄷ": "ㄷ", "ㄸ": "ㄷ", "ㄹ": "ㄹ", "ㅁ": "ㅁ", "ㅂ": "ㅂ", "ㅃ": "ㅂ",
+             "ㅅ": "ㅅ", "ㅆ": "ㅅ", "ㅇ": "ㅇ", "ㅈ": "ㅈ", "ㅉ": "ㅈ", "ㅊ": "ㅊ", "ㅋ": "ㅋ", "ㅌ": "ㅌ", "ㅍ": "ㅍ", "ㅎ": "ㅎ"}
+
+
+def ko_initial_group(ko):
+    for ch in ko:
+        if "가" <= ch <= "힣":
+            return CHO_GROUP[CHOSEONG[(ord(ch) - 0xAC00) // 588]]
+    return "기타"
+
+
+EXPR_KO = re.compile(r"(세요|니다|어요|아요|해요|예요|이에요|죠|까요|나요|네요|래요|을까|ㄹ까|주세요|습니까|십시오)[.?!]*(,|$)")
+
+
+def is_expression(e):
+    """문장·표현(단어가 아닌 것) 판정 — 표현학습 메뉴로 분리."""
+    th = e["th"].split("/")[0].strip()
+    ko = e.get("ko", "")
+    if "~" in ko:
+        return False
+    if EXPR_KO.search(ko) and (len(th) >= 8 or " " in th):
+        return True
+    if re.search(r"[.?!]$", ko) and len(ko) >= 4 and len(th) >= 8:
+        return True
+    if th.count(" ") >= 2 and len(th) >= 12:
+        return True
+    return False
 
 
 STOP_ROOTS = set("ที่ ใน ไป มา ไม่ ได้ จะ และ กับ แล้ว ก็ ของ ให้ อยู่ เป็น มี คน การ ความ นี้ นั้น ว่า ๆ ครับ ค่ะ คะ ยัง อีก ด้วย ต้อง ถ้า หรือ แต่ จาก ถึง ตาม เมื่อ กว่า เท่า ไหน อะไร ใคร ทำ ดู เอา ขอ ช่วย".split())
@@ -234,6 +310,8 @@ def load_freq(known):
                     ko=m["ko"].strip(),
                     src="freq",
                     order=rank,
+                    topic="core",
+                    part="빈도 단어",
                 ))
     except OSError:
         pass
@@ -275,6 +353,8 @@ def merge_same_th(entries):
             item["day"] = e["day"]
             item["theme"] = e.get("theme", "")
             item["kind"] = e.get("kind", "")
+        if item.get("topic", "core") == "core" and e.get("topic", "core") != "core":
+            item["topic"], item["part"] = e["topic"], e.get("part", "")
         if e.get("uncertain") and item is not e:
             item["uncertain"] = True
     out = []
@@ -318,6 +398,12 @@ def main():
     fill = json.load(open(mp, encoding="utf-8")) if os.path.exists(mp) else {}
     fill.update(READING_FIX)
     entries = [e for e in entries if not re.search(r"\d{4}", e["th"])]  # 날짜 등 서식 행 제외
+    expressions = [e for e in entries if is_expression(e)]
+    entries = [e for e in entries if not is_expression(e)]
+    for i, e in enumerate(expressions):
+        e["order"] = i
+        e.pop("rank", None)
+        e.pop("level", None)
     for i, e in enumerate(entries):
         e["order"] = i
         if not e.get("reading") and e["th"] in fill:
@@ -374,6 +460,41 @@ def main():
             ),
             entries=entries,
         ), f, ensure_ascii=False, indent=0)
+    # 주제별 단어 요약 (편 목록·개수)
+    topic_parts = OrderedDict((t[0], OrderedDict()) for t in TOPICS)
+    for e in entries:
+        t = e.get("topic", "core")
+        p = e.get("part", "")
+        topic_parts.setdefault(t, OrderedDict())
+        topic_parts[t][p] = topic_parts[t].get(p, 0) + 1
+    topics_doc = []
+    for tid, name, emoji in TOPICS:
+        parts = topic_parts.get(tid, {})
+        def part_key(kv):
+            m = re.match(r"(\d+)일", kv[0])
+            return (0, int(m.group(1))) if m else (1, kv[0])
+        topics_doc.append(OrderedDict(
+            id=tid, name=name, emoji=emoji, count=sum(parts.values()),
+            parts=[OrderedDict(name=k, count=v) for k, v in sorted(parts.items(), key=part_key)],
+        ))
+    # 표현학습 — 문장·표현만 따로 (주제·편 태그 동일)
+    expr_topics = OrderedDict()
+    for e in expressions:
+        expr_topics.setdefault(e.get("topic", "core"), OrderedDict())
+        expr_topics[e["topic"]][e.get("part", "")] = expr_topics[e["topic"]].get(e.get("part", ""), 0) + 1
+    with open(os.path.join(OUT_DIR, "th_expressions.json"), "w", encoding="utf-8") as f:
+        json.dump(OrderedDict(
+            meta=OrderedDict(note="표현학습 — 단어장에서 분리한 문장·표현 (topic/part 는 th_topics.json 과 동일 체계)",
+                             count=len(expressions)),
+            topics=[OrderedDict(id=tid, name=name, emoji=emoji, count=sum(expr_topics.get(tid, {}).values()),
+                                parts=[OrderedDict(name=k, count=v) for k, v in expr_topics.get(tid, {}).items()])
+                    for tid, name, emoji in TOPICS if expr_topics.get(tid)],
+            entries=expressions,
+        ), f, ensure_ascii=False, indent=0)
+    print(f"expressions: {len(expressions)} → th_expressions.json")
+    with open(os.path.join(OUT_DIR, "th_topics.json"), "w", encoding="utf-8") as f:
+        json.dump(OrderedDict(meta=OrderedDict(note="주제별 단어 — entries[].topic/part 로 연결"), topics=topics_doc),
+                  f, ensure_ascii=False, indent=1)
     with open(os.path.join(OUT_DIR, "th_roots.json"), "w", encoding="utf-8") as f:
         json.dump(OrderedDict(meta=OrderedDict(note="루트 단어 — 파생어는 앱에서 포함 관계로 계산"), roots=roots),
                   f, ensure_ascii=False, indent=1)
