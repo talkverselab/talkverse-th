@@ -174,6 +174,33 @@ void main() {
     expect((data['upper'] as Map).keys.toSet(), {'4', '5', '6'});
   });
 
+  test('주제별 단어 — th_topics.json 과 entries[].topic 일치', () async {
+    final raw = await rootBundle.loadString('assets/data/vocab/th_topics.json');
+    final topics = ((json.decode(raw) as Map)['topics'] as List).cast<Map>();
+    expect(topics.length, greaterThanOrEqualTo(12));
+    final ids = topics.map((t) => t['id']).toSet();
+    final vraw = await rootBundle.loadString('assets/data/vocab/th_vocab.json');
+    final entries = ((json.decode(vraw) as Map)['entries'] as List).cast<Map>();
+    for (final e in entries) {
+      expect(ids.contains(e['topic']), isTrue, reason: '${e['th']} topic=${e['topic']}');
+      expect((e['part'] as String).isNotEmpty, isTrue, reason: '${e['th']}');
+    }
+    final total = topics.fold<int>(0, (s, t) => s + (t['count'] as int));
+    expect(total, entries.length);
+  });
+
+  test('표현학습 에셋 — 단어장과 분리, 문장만', () async {
+    final raw = await rootBundle.loadString('assets/data/vocab/th_expressions.json');
+    final data = json.decode(raw) as Map<String, dynamic>;
+    final entries = (data['entries'] as List).cast<Map>();
+    expect(entries.length, greaterThan(50));
+    final vraw = await rootBundle.loadString('assets/data/vocab/th_vocab.json');
+    final vths = ((json.decode(vraw) as Map)['entries'] as List).cast<Map>().map((e) => e['th']).toSet();
+    for (final e in entries) {
+      expect(vths.contains(e['th']), isFalse, reason: '단어장과 중복: ${e['th']}');
+    }
+  });
+
   test('루트 단어 에셋 + 경계 규칙', () async {
     final raw = await rootBundle.loadString('assets/data/vocab/th_roots.json');
     final roots = (json.decode(raw) as Map<String, dynamic>)['roots'] as List;

@@ -9,6 +9,7 @@ import 'chunk_search_screen.dart';
 import 'conversation_screen.dart';
 import 'english_manual_screen.dart';
 import 'episode_screen.dart';
+import 'expressions_screen.dart';
 import 'flashcard_screen.dart';
 import 'grammar_lesson_screen.dart';
 import 'keyboard_practice_screen.dart';
@@ -20,7 +21,7 @@ import 'script_quiz_screen.dart';
 import 'speaking_practice_screen.dart';
 import 'thai_roots_screen.dart';
 import 'tones_screen.dart';
-import 'vocab_screen.dart';
+import 'topic_vocab_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -279,7 +280,8 @@ class _QuickMenuRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final items = <(String, String, bool, WidgetBuilder)>[
       ('⚡', '바로 문장', true, (_) => const QuickPhrasesScreen()),
-      ('📖', '단어장', false, (_) => const VocabScreen()),
+      ('📖', '단어장', false, (_) => const TopicVocabScreen()),
+      ('🗣️', '표현학습', false, (_) => const ExpressionsScreen()),
       ('💬', '회화', false, (_) => const ConversationScreen()),
       ('🎙️', '문장 말하기', false, (_) => const SpeakingPracticeScreen()),
       ('⌨️', '키보드연습', false, (_) => const KeyboardPracticeScreen()),
@@ -360,10 +362,10 @@ class _MenuGrid extends StatelessWidget {
           builder: (_) => const GrammarLessonScreen()),
       _MenuItem(
           label: '단어장',
-          sub: '통합 · 빈도 · 30일 코스',
+          sub: '주제별 · 플래시카드',
           emblem: 'ศัพท์',
           color: AppColors.kluayMaiDeep,
-          builder: (_) => const VocabScreen()),
+          builder: (_) => const TopicVocabScreen()),
       _MenuItem(
           label: 'Manual for English',
           sub: 'RTGS vs ours · 장음 밑줄',
@@ -376,6 +378,12 @@ class _MenuGrid extends StatelessWidget {
           emblem: 'ทับ',
           color: const Color(0xFF00897B),
           builder: (_) => const LoanwordScreen()),
+      _MenuItem(
+          label: '표현학습',
+          sub: '주제별 문장·표현',
+          emblem: 'วลี',
+          color: AppColors.morakot,
+          builder: (_) => const ExpressionsScreen()),
       _MenuItem(
           label: '루트 단어',
           sub: 'น้ำ → น้ำแข็ง',

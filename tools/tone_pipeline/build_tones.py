@@ -40,6 +40,12 @@ def collect():
         add(e['th'])
         for part in e['th'].split('/'):
             add(part)
+    xp = os.path.join(ROOT, 'assets/data/vocab/th_expressions.json')
+    if os.path.exists(xp):
+        for e in json.load(io.open(xp, encoding='utf-8'))['entries']:
+            add(e['th'])
+            for part in e['th'].split('/'):
+                add(part)
     r = json.load(io.open(os.path.join(ROOT, 'assets/data/vocab/th_roots.json'), encoding='utf-8'))
     for x in r['roots']:
         add(x['th'])
