@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import '../core/theme.dart';
 import '../data/models/alphabet.dart';
 import '../data/repositories/alphabet_repository.dart';
+import '../services/tts_service.dart';
+import '../services/vocab_service.dart';
+import '../widgets/vocab_sheet.dart';
 import 'consonant_class_screen.dart';
 
 class AlphabetScreen extends StatefulWidget {
@@ -28,8 +31,10 @@ class _AlphabetScreenState extends State<AlphabetScreen> {
       child: Scaffold(
         backgroundColor: AppColors.creamDeep,
         appBar: AppBar(
-          title: const Text('문자 44 · อักษรไทย',
-              style: TextStyle(fontWeight: FontWeight.w800)),
+          title: const Text(
+            '문자 44 · อักษรไทย',
+            style: TextStyle(fontWeight: FontWeight.w800),
+          ),
           bottom: const TabBar(
             indicatorColor: AppColors.brand,
             labelColor: AppColors.brand,
@@ -49,8 +54,7 @@ class _AlphabetScreenState extends State<AlphabetScreen> {
               return const Center(child: CircularProgressIndicator());
             }
             if (snap.hasError || !snap.hasData) {
-              return Center(
-                  child: Text('데이터를 불러오지 못했어요\n${snap.error ?? ''}'));
+              return Center(child: Text('데이터를 불러오지 못했어요\n${snap.error ?? ''}'));
             }
             final data = snap.data!;
             return TabBarView(
@@ -103,10 +107,9 @@ class _ConsonantTab extends StatelessWidget {
         const SizedBox(height: 16),
         Text(
           '※ ฃ·ฅ 두 글자는 현재 쓰이지 않는 폐자(廢字)지만 전통적으로 44자에 포함합니다.',
-          style: Theme.of(context)
-              .textTheme
-              .bodySmall
-              ?.copyWith(color: Colors.black45),
+          style: Theme.of(
+            context,
+          ).textTheme.bodySmall?.copyWith(color: Colors.black45),
         ),
       ],
     );
@@ -180,11 +183,12 @@ class _ClassSection extends StatelessWidget {
           children: [
             Container(width: 4, height: 18, color: color),
             const SizedBox(width: 8),
-            Text(title,
-                style: Theme.of(context)
-                    .textTheme
-                    .titleMedium
-                    ?.copyWith(fontWeight: FontWeight.w800)),
+            Text(
+              title,
+              style: Theme.of(
+                context,
+              ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
+            ),
             const Spacer(),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
@@ -192,11 +196,14 @@ class _ClassSection extends StatelessWidget {
                 color: color.withValues(alpha: 0.14),
                 borderRadius: BorderRadius.circular(20),
               ),
-              child: Text(ko,
-                  style: TextStyle(
-                      color: color,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w700)),
+              child: Text(
+                ko,
+                style: TextStyle(
+                  color: color,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
             ),
           ],
         ),
@@ -265,85 +272,203 @@ void _showConsonantDetail(BuildContext context, ThaiConsonant c, Color color) {
   showModalBottomSheet<void>(
     context: context,
     backgroundColor: Colors.white,
+    isScrollControlled: true,
+    constraints: BoxConstraints(
+      maxHeight: MediaQuery.of(context).size.height * 0.88,
+    ),
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
     ),
-    builder: (ctx) => Padding(
-      padding: const EdgeInsets.fromLTRB(24, 18, 24, 32),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Center(
-            child: Container(
-              width: 40,
-              height: 4,
-              decoration: BoxDecoration(
-                color: Colors.black12,
-                borderRadius: BorderRadius.circular(2),
-              ),
-            ),
-          ),
-          const SizedBox(height: 16),
-          Row(
-            children: [
-              Container(
-                width: 84,
-                height: 84,
+    builder: (ctx) => SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(24, 18, 24, 32),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: Container(
+                width: 40,
+                height: 4,
                 decoration: BoxDecoration(
-                  color: color.withValues(alpha: 0.12),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                alignment: Alignment.center,
-                child: Text(c.char,
-                    style: TextStyle(
-                        fontSize: 52,
-                        fontWeight: FontWeight.w700,
-                        color: color)),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(c.acrophonic,
-                        style: const TextStyle(
-                            fontSize: 22, fontWeight: FontWeight.w800)),
-                    const SizedBox(height: 2),
-                    Text('${c.roman} · ${c.meaning}',
-                        style: const TextStyle(color: Colors.black54)),
-                    const SizedBox(height: 8),
-                    _ClassBadge(c: c, color: color),
-                  ],
+                  color: Colors.black12,
+                  borderRadius: BorderRadius.circular(2),
                 ),
               ),
-            ],
-          ),
-          const SizedBox(height: 20),
-          _DetailRow('초성(앞소리)', c.initial),
-          _DetailRow('종성(받침)', c.finalSound == '-' ? '받침 없음' : c.finalSound),
-          _DetailRow('한국어 근사', c.ko),
-          const SizedBox(height: 16),
-          SizedBox(
-            width: double.infinity,
-            child: FilledButton.icon(
-              style: FilledButton.styleFrom(backgroundColor: color),
-              onPressed: () {
-                ScaffoldMessenger.of(ctx).showSnackBar(
-                  const SnackBar(
-                    content: Text('발음 오디오 — 준비 중 (합성 예정)'),
-                    duration: Duration(milliseconds: 1000),
-                  ),
-                );
-              },
-              icon: const Icon(Icons.volume_up_rounded),
-              label: const Text('발음 듣기'),
             ),
-          ),
-        ],
+            const SizedBox(height: 16),
+            Row(
+              children: [
+                Container(
+                  width: 84,
+                  height: 84,
+                  decoration: BoxDecoration(
+                    color: color.withValues(alpha: 0.12),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  alignment: Alignment.center,
+                  child: Text(
+                    c.char,
+                    style: TextStyle(
+                      fontSize: 52,
+                      fontWeight: FontWeight.w700,
+                      color: color,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 16),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        c.acrophonic,
+                        style: const TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        '${c.roman} · ${c.meaning}',
+                        style: const TextStyle(color: Colors.black54),
+                      ),
+                      const SizedBox(height: 8),
+                      _ClassBadge(c: c, color: color),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
+            _DetailRow('초성(앞소리)', c.initial),
+            _DetailRow('종성(받침)', c.finalSound == '-' ? '받침 없음' : c.finalSound),
+            _DetailRow('한국어 근사', c.ko),
+            const SizedBox(height: 12),
+            _ExampleWords(char: c.char, color: color),
+            const SizedBox(height: 12),
+            SizedBox(
+              width: double.infinity,
+              child: FilledButton.icon(
+                style: FilledButton.styleFrom(backgroundColor: color),
+                onPressed: () => TtsService.instance.speak(
+                  c.acrophonic.split(' ').length > 1
+                      ? c.acrophonic.split(' ').sublist(1).join(' ')
+                      : c.char,
+                ),
+                icon: const Icon(Icons.volume_up_rounded),
+                label: const Text('발음 듣기 (예시 단어)'),
+              ),
+            ),
+          ],
+        ),
       ),
     ),
   );
+}
+
+/// 이 자음으로 시작하는 단어 — 빈도순 최대 5개 (탭하면 단어 상세).
+class _ExampleWords extends StatelessWidget {
+  final String char;
+  final Color color;
+  const _ExampleWords({required this.char, required this.color});
+
+  static const _leadingVowels = 'เแโใไ';
+
+  static String _firstConsonant(String w) {
+    var i = 0;
+    while (i < w.length && _leadingVowels.contains(w[i])) {
+      i++;
+    }
+    return i < w.length ? w[i] : '';
+  }
+
+  Future<List<VocabEntry>> _load() async {
+    await VocabService.instance.ensureLoaded();
+    final hits =
+        VocabService.instance.entries
+            .where((e) => !e.th.contains(' ') && !e.th.contains('/'))
+            .where((e) => _firstConsonant(e.th) == char)
+            .toList()
+          ..sort((a, b) {
+            final ra = a.rank == 0 ? 1 << 20 : a.rank;
+            final rb = b.rank == 0 ? 1 << 20 : b.rank;
+            if (ra != rb) return ra.compareTo(rb);
+            return a.th.length.compareTo(b.th.length);
+          });
+    return hits.take(5).toList();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<List<VocabEntry>>(
+      future: _load(),
+      builder: (context, snap) {
+        final words = snap.data ?? const <VocabEntry>[];
+        if (words.isEmpty) return const SizedBox.shrink();
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              '예시 단어 · 빈도순',
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w800,
+                color: color,
+                letterSpacing: 1.5,
+              ),
+            ),
+            const SizedBox(height: 6),
+            for (final e in words)
+              InkWell(
+                onTap: () => showVocabSheet(context, e),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 4),
+                  child: Row(
+                    children: [
+                      Text(
+                        e.th,
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w800,
+                          color: AppColors.khram,
+                          fontFamilyFallback: AppTheme.fontFallback,
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: Text(
+                          '${e.reading}  ·  ${e.ko}',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            fontSize: 12.5,
+                            color: AppColors.khramLight,
+                          ),
+                        ),
+                      ),
+                      if (e.level > 0)
+                        Text(
+                          e.levelStars,
+                          style: const TextStyle(
+                            fontSize: 9,
+                            color: AppColors.thongDeep,
+                          ),
+                        ),
+                      IconButton(
+                        visualDensity: VisualDensity.compact,
+                        icon: Icon(Icons.volume_up, size: 18, color: color),
+                        onPressed: () => TtsService.instance.speak(e.speakable),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+          ],
+        );
+      },
+    );
+  }
 }
 
 class _ClassBadge extends StatelessWidget {
@@ -356,17 +481,22 @@ class _ClassBadge extends StatelessWidget {
     final label = c.isMid
         ? '중자음 · กลาง'
         : c.isHigh
-            ? '고자음 · สูง'
-            : '저자음 · ต่ำ';
+        ? '고자음 · สูง'
+        : '저자음 · ต่ำ';
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.14),
         borderRadius: BorderRadius.circular(20),
       ),
-      child: Text(label,
-          style: TextStyle(
-              color: color, fontWeight: FontWeight.w700, fontSize: 12.5)),
+      child: Text(
+        label,
+        style: TextStyle(
+          color: color,
+          fontWeight: FontWeight.w700,
+          fontSize: 12.5,
+        ),
+      ),
     );
   }
 }
@@ -390,10 +520,9 @@ class _VowelTab extends StatelessWidget {
         const SizedBox(height: 14),
         Text(
           '※ – 자리에 자음이 들어갑니다. 모음 길이(단·장)는 성조 결정에도 영향을 줍니다.',
-          style: Theme.of(context)
-              .textTheme
-              .bodySmall
-              ?.copyWith(color: Colors.black45),
+          style: Theme.of(
+            context,
+          ).textTheme.bodySmall?.copyWith(color: Colors.black45),
         ),
       ],
     );
@@ -414,11 +543,12 @@ class _VowelGroup extends StatelessWidget {
           children: [
             Container(width: 4, height: 18, color: AppColors.morakot),
             const SizedBox(width: 8),
-            Text(title,
-                style: Theme.of(context)
-                    .textTheme
-                    .titleMedium
-                    ?.copyWith(fontWeight: FontWeight.w800)),
+            Text(
+              title,
+              style: Theme.of(
+                context,
+              ).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
+            ),
           ],
         ),
         const SizedBox(height: 10),
@@ -453,14 +583,19 @@ class _VowelCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(v.form,
-                style: const TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    color: AppColors.morakot)),
+            Text(
+              v.form,
+              style: const TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.w700,
+                color: AppColors.morakot,
+              ),
+            ),
             const SizedBox(height: 4),
-            Text('독음 ${v.ko}',
-                style: const TextStyle(fontSize: 11.5, color: Colors.black54)),
+            Text(
+              '독음 ${v.ko}',
+              style: const TextStyle(fontSize: 11.5, color: Colors.black54),
+            ),
           ],
         ),
       ),
@@ -482,11 +617,14 @@ void _showVowelDetail(BuildContext context, ThaiVowel v) {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Center(
-            child: Text(v.form,
-                style: const TextStyle(
-                    fontSize: 56,
-                    fontWeight: FontWeight.w800,
-                    color: AppColors.morakot)),
+            child: Text(
+              v.form,
+              style: const TextStyle(
+                fontSize: 56,
+                fontWeight: FontWeight.w800,
+                color: AppColors.morakot,
+              ),
+            ),
           ),
           const SizedBox(height: 12),
           _DetailRow('독음', v.ko),
@@ -512,13 +650,16 @@ class _DetailRow extends StatelessWidget {
         children: [
           SizedBox(
             width: 110,
-            child: Text(label,
-                style: const TextStyle(color: Colors.black45, fontSize: 13)),
+            child: Text(
+              label,
+              style: const TextStyle(color: Colors.black45, fontSize: 13),
+            ),
           ),
           Expanded(
-            child: Text(value,
-                style:
-                    const TextStyle(fontWeight: FontWeight.w600, fontSize: 15)),
+            child: Text(
+              value,
+              style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 15),
+            ),
           ),
         ],
       ),
