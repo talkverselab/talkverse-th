@@ -43,7 +43,8 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
       final root = RootService.instance.lookup(focus);
       if (root != null) {
         WidgetsBinding.instance.addPostFrameCallback(
-            (_) => _openFamily(root, highlight: widget.fromWord ?? ''));
+          (_) => _openFamily(root, highlight: widget.fromWord ?? ''),
+        );
       }
     }
   }
@@ -52,8 +53,9 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
     if (_query.trim().isEmpty) return _roots;
     final q = _query.trim();
     return _roots
-        .where((r) =>
-            r.th.contains(q) || r.reading.contains(q) || r.ko.contains(q))
+        .where(
+          (r) => r.th.contains(q) || r.reading.contains(q) || r.ko.contains(q),
+        )
         .toList();
   }
 
@@ -81,7 +83,9 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
   @override
   Widget build(BuildContext context) {
     final total = _roots.fold<int>(
-        0, (s, r) => s + RootService.instance.familyOf(r).count);
+      0,
+      (s, r) => s + RootService.instance.familyOf(r).count,
+    );
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
@@ -89,14 +93,17 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text('루트 단어'),
-            Text('핵심 형태소 → 파생어 가족',
-                style: TextStyle(fontSize: 10, letterSpacing: 1)),
+            Text(
+              '핵심 형태소 → 파생어 가족',
+              style: TextStyle(fontSize: 10, letterSpacing: 1),
+            ),
           ],
         ),
       ),
       body: _loading
           ? const Center(
-              child: CircularProgressIndicator(color: AppColors.kluayMai))
+              child: CircularProgressIndicator(color: AppColors.kluayMai),
+            )
           : Column(
               children: [
                 Padding(
@@ -112,9 +119,13 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
                     decoration: InputDecoration(
                       hintText: 'น้ำ · 남 · 물',
                       hintStyle: const TextStyle(
-                          color: AppColors.khramLight, fontSize: 14),
-                      prefixIcon: const Icon(Icons.search,
-                          color: AppColors.kluayMai),
+                        color: AppColors.khramLight,
+                        fontSize: 14,
+                      ),
+                      prefixIcon: const Icon(
+                        Icons.search,
+                        color: AppColors.kluayMai,
+                      ),
                       isDense: true,
                       filled: true,
                       fillColor: AppColors.creamDeep,
@@ -124,15 +135,19 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
                       ),
                       focusedBorder: const OutlineInputBorder(
                         borderRadius: BorderRadius.zero,
-                        borderSide:
-                            BorderSide(color: AppColors.kluayMai, width: 1.5),
+                        borderSide: BorderSide(
+                          color: AppColors.kluayMai,
+                          width: 1.5,
+                        ),
                       ),
                     ),
                   ),
                 ),
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 6,
+                  ),
                   child: Row(
                     children: [
                       const GoldEmblem(text: 'ราก', size: 22),
@@ -147,9 +162,13 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
                         ),
                       ),
                       const Spacer(),
-                      const Text('탭 → 파생어 가족',
-                          style: TextStyle(
-                              fontSize: 10, color: AppColors.khramLight)),
+                      const Text(
+                        '탭 → 파생어 가족',
+                        style: TextStyle(
+                          fontSize: 10,
+                          color: AppColors.khramLight,
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -159,11 +178,11 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
                     padding: const EdgeInsets.fromLTRB(16, 10, 16, 24),
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 8,
-                      crossAxisSpacing: 8,
-                      childAspectRatio: 1.9,
-                    ),
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 8,
+                          crossAxisSpacing: 8,
+                          childAspectRatio: 1.9,
+                        ),
                     itemCount: _filtered.length,
                     itemBuilder: (context, i) {
                       final r = _filtered[i];
@@ -185,8 +204,11 @@ class _RootCard extends StatelessWidget {
   final RootInfo root;
   final int count;
   final VoidCallback onTap;
-  const _RootCard(
-      {required this.root, required this.count, required this.onTap});
+  const _RootCard({
+    required this.root,
+    required this.count,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -223,12 +245,16 @@ class _RootCard extends StatelessWidget {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
-                          fontSize: 11, color: AppColors.khramLight),
+                        fontSize: 11,
+                        color: AppColors.khramLight,
+                      ),
                     ),
                     const SizedBox(height: 4),
                     Container(
                       padding: const EdgeInsets.symmetric(
-                          horizontal: 6, vertical: 2),
+                        horizontal: 6,
+                        vertical: 2,
+                      ),
                       decoration: BoxDecoration(
                         color: AppColors.thong.withValues(alpha: 0.18),
                         border: Border.all(color: AppColors.thong),
@@ -236,16 +262,20 @@ class _RootCard extends StatelessWidget {
                       child: Text(
                         '파생 $count개',
                         style: const TextStyle(
-                            fontSize: 9,
-                            color: AppColors.khram,
-                            fontWeight: FontWeight.w700),
+                          fontSize: 9,
+                          color: AppColors.khram,
+                          fontWeight: FontWeight.w700,
+                        ),
                       ),
                     ),
                   ],
                 ),
               ),
-              const Icon(Icons.chevron_right,
-                  color: AppColors.khramLight, size: 18),
+              const Icon(
+                Icons.chevron_right,
+                color: AppColors.khramLight,
+                size: 18,
+              ),
             ],
           ),
         ),
@@ -254,7 +284,7 @@ class _RootCard extends StatelessWidget {
   }
 }
 
-/// 루트 가족 시트 — 루트 헤더 + 파생어 목록 (확실/후보).
+/// 루트 가족 시트 — 루트 헤더 + 앞/뒤/가운데/후보 섹션의 타일 그리드 (zh 발음부 스타일).
 class RootFamilySheet extends StatelessWidget {
   final RootFamily family;
   final String highlight;
@@ -305,15 +335,20 @@ class RootFamilySheet extends StatelessWidget {
                 ),
               ),
               IconButton(
-                icon: const Icon(Icons.volume_up,
-                    color: AppColors.kluayMai, size: 28),
+                icon: const Icon(
+                  Icons.volume_up,
+                  color: AppColors.kluayMai,
+                  size: 28,
+                ),
                 onPressed: () => TtsService.instance.speak(root.th),
               ),
               if (selfEntry != null)
                 IconButton(
                   tooltip: '단어 상세',
-                  icon: const Icon(Icons.info_outline,
-                      color: AppColors.khramLight),
+                  icon: const Icon(
+                    Icons.info_outline,
+                    color: AppColors.khramLight,
+                  ),
                   onPressed: () => showVocabSheet(context, selfEntry),
                 ),
             ],
@@ -335,24 +370,22 @@ class RootFamilySheet extends StatelessWidget {
           padding: EdgeInsets.fromLTRB(20, 12, 20, 4),
           child: LaiThaiDivider(height: 10),
         ),
-        _SectionLabel('파생어 ${family.strong.length}개'),
-        for (final e in family.strong)
-          VocabRow(
-            entry: e,
-            highlightRoot: root.th,
-            dense: true,
-          ),
-        if (family.weak.isNotEmpty) ...[
-          _SectionLabel('후보 ${family.weak.length}개 · 철자만 포함'),
-          for (final e in family.weak)
-            VocabRow(entry: e, highlightRoot: root.th, dense: true),
-        ],
+        ..._sections(context, root),
         if (family.count == 0)
           const Padding(
             padding: EdgeInsets.all(20),
-            child: Text('아직 단어장에 파생어가 없어요.',
-                style: TextStyle(color: AppColors.khramLight)),
+            child: Text(
+              '아직 단어장에 파생어가 없어요.',
+              style: TextStyle(color: AppColors.khramLight),
+            ),
           ),
+        const Padding(
+          padding: EdgeInsets.fromLTRB(20, 12, 20, 0),
+          child: Text(
+            '💡 같은 루트 = 뜻이 이어지는 경향. 앞에 붙으면 "루트+수식", 뒤에 붙으면 "수식+루트"로 읽어 보세요.',
+            style: TextStyle(fontSize: 11.5, color: AppColors.khramLight),
+          ),
+        ),
         if (highlight.isNotEmpty)
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
@@ -368,23 +401,224 @@ class RootFamilySheet extends StatelessWidget {
       ],
     );
   }
+
+  List<Widget> _sections(BuildContext context, RootInfo root) {
+    final r = root.th;
+    final prefix = <VocabEntry>[];
+    final suffix = <VocabEntry>[];
+    final middle = <VocabEntry>[];
+    for (final e in family.strong) {
+      final v = e.variants.first.trim();
+      if (v.startsWith(r)) {
+        prefix.add(e);
+      } else if (v.endsWith(r)) {
+        suffix.add(e);
+      } else {
+        middle.add(e);
+      }
+    }
+    return [
+      if (prefix.isNotEmpty)
+        _FamilySection(
+          label: '앞에 붙음',
+          sub: '$r + ○○',
+          color: AppColors.morakot,
+          root: r,
+          entries: prefix,
+        ),
+      if (suffix.isNotEmpty)
+        _FamilySection(
+          label: '뒤에 붙음',
+          sub: '○○ + $r',
+          color: AppColors.thongDeep,
+          root: r,
+          entries: suffix,
+        ),
+      if (middle.isNotEmpty)
+        _FamilySection(
+          label: '가운데',
+          sub: '○ + $r + ○',
+          color: const Color(0xFFC62828),
+          root: r,
+          entries: middle,
+        ),
+      if (family.weak.isNotEmpty)
+        _FamilySection(
+          label: '후보',
+          sub: '철자만 포함 · 뜻 연결은 확인 필요',
+          color: AppColors.khramLight,
+          root: r,
+          entries: family.weak,
+        ),
+    ];
+  }
 }
 
-class _SectionLabel extends StatelessWidget {
-  final String text;
-  const _SectionLabel(this.text);
+/// 색상 섹션 — 라벨 + 타일 그리드(3열).
+class _FamilySection extends StatelessWidget {
+  final String label;
+  final String sub;
+  final Color color;
+  final String root;
+  final List<VocabEntry> entries;
+  const _FamilySection({
+    required this.label,
+    required this.sub,
+    required this.color,
+    required this.root,
+    required this.entries,
+  });
+
   @override
-  Widget build(BuildContext context) => Container(
-        color: AppColors.creamDeep,
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 6),
-        child: Text(
-          text,
-          style: const TextStyle(
-            fontSize: 11,
-            fontWeight: FontWeight.w800,
-            color: AppColors.khramLight,
-            letterSpacing: 1.5,
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(16, 10, 16, 0),
+      padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: 0.05),
+        border: Border.all(color: color.withValues(alpha: 0.6)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                color: color,
+                child: Text(
+                  label,
+                  style: const TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                    letterSpacing: 1.5,
+                  ),
+                ),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  sub,
+                  style: const TextStyle(
+                    fontSize: 11.5,
+                    color: AppColors.khramLight,
+                    fontFamilyFallback: AppTheme.fontFallback,
+                  ),
+                ),
+              ),
+              Text(
+                '${entries.length}개',
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w900,
+                  color: color,
+                ),
+              ),
+            ],
           ),
+          const SizedBox(height: 8),
+          LayoutBuilder(
+            builder: (context, box) {
+              final w = (box.maxWidth - 12) / 3;
+              return Wrap(
+                spacing: 6,
+                runSpacing: 6,
+                children: [
+                  for (final e in entries)
+                    SizedBox(
+                      width: w,
+                      child: _WordTile(entry: e, root: root, color: color),
+                    ),
+                ],
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// 파생어 타일 — 태국어(루트 강조)·독음·뜻·스피커. 탭하면 단어 상세.
+class _WordTile extends StatelessWidget {
+  final VocabEntry entry;
+  final String root;
+  final Color color;
+  const _WordTile({
+    required this.entry,
+    required this.root,
+    required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final th = entry.variants.first.trim();
+    final idx = th.indexOf(root);
+    const base = TextStyle(
+      fontSize: 19,
+      fontWeight: FontWeight.w900,
+      color: AppColors.khram,
+      fontFamilyFallback: AppTheme.fontFallback,
+      height: 1.3,
+    );
+    return InkWell(
+      onTap: () => showVocabSheet(context, entry),
+      child: Container(
+        padding: const EdgeInsets.fromLTRB(8, 8, 4, 8),
+        decoration: BoxDecoration(
+          color: AppColors.cream,
+          border: Border.all(color: color.withValues(alpha: 0.5)),
         ),
-      );
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: idx < 0
+                      ? Text(th, style: base)
+                      : RichText(
+                          text: TextSpan(
+                            style: base,
+                            children: [
+                              TextSpan(text: th.substring(0, idx)),
+                              TextSpan(
+                                text: root,
+                                style: TextStyle(color: color),
+                              ),
+                              TextSpan(text: th.substring(idx + root.length)),
+                            ],
+                          ),
+                        ),
+                ),
+                GestureDetector(
+                  onTap: () => TtsService.instance.speak(entry.speakable),
+                  child: Icon(Icons.volume_up, size: 16, color: color),
+                ),
+              ],
+            ),
+            if (entry.reading.isNotEmpty)
+              Text(
+                entry.reading,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: 11.5,
+                  fontWeight: FontWeight.w700,
+                  color: color,
+                ),
+              ),
+            Text(
+              entry.ko,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(fontSize: 11, color: AppColors.khram),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
