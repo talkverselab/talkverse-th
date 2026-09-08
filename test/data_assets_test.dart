@@ -157,6 +157,23 @@ void main() {
     }
   });
 
+  test('교육부 표준 단어(OBEC) 에셋 — ป.1~3 표준 2,600+', () async {
+    final raw =
+        await rootBundle.loadString('assets/data/wordsets/th_obec_basic.json');
+    final data = json.decode(raw) as Map<String, dynamic>;
+    final std = (data['standard'] as List).cast<Map>();
+    expect(std.length, greaterThan(2500));
+    expect(std.map((w) => w['th']).toSet().length, std.length);
+    expect(std.every((w) => [1, 2, 3].contains(w['grade'])), isTrue);
+    final withKo = std.where((w) => (w['ko'] as String).isNotEmpty).length;
+    expect(withKo, greaterThan(900));
+    for (final w in std) {
+      expect(RegExp(r'[A-Za-z]').hasMatch(w['reading'] as String), isFalse,
+          reason: '${w['th']}');
+    }
+    expect((data['upper'] as Map).keys.toSet(), {'4', '5', '6'});
+  });
+
   test('루트 단어 에셋 + 경계 규칙', () async {
     final raw = await rootBundle.loadString('assets/data/vocab/th_roots.json');
     final roots = (json.decode(raw) as Map<String, dynamic>)['roots'] as List;

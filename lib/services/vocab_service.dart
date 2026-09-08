@@ -52,8 +52,7 @@ class VocabEntry {
       th.split('/').map((s) => s.trim()).where((s) => s.isNotEmpty).toList();
 
   /// TTS 용 첫 변형 (괄호 제거).
-  String get speakable =>
-      variants.first.replaceAll(RegExp(r'[()]'), '').trim();
+  String get speakable => variants.first.replaceAll(RegExp(r'[()]'), '').trim();
 
   /// 분류 라벨 — 30일 코스 일차/테마만. 출처(책명·쪽수)는 노출하지 않는다.
   String get sourceLabel =>
@@ -95,13 +94,17 @@ class VocabExample {
   final String th;
   final String reading;
   final String ko;
-  const VocabExample({required this.th, required this.reading, required this.ko});
+  const VocabExample({
+    required this.th,
+    required this.reading,
+    required this.ko,
+  });
 
   factory VocabExample.fromJson(Map<String, dynamic> m) => VocabExample(
-        th: (m['th'] as String?) ?? '',
-        reading: (m['reading'] as String?) ?? '',
-        ko: (m['ko'] as String?) ?? '',
-      );
+    th: (m['th'] as String?) ?? '',
+    reading: (m['reading'] as String?) ?? '',
+    ko: (m['ko'] as String?) ?? '',
+  );
 }
 
 /// 통합 단어장 로더/검색.
@@ -110,6 +113,7 @@ class VocabService {
   static final VocabService instance = VocabService._();
 
   final List<VocabEntry> _entries = [];
+  final List<VocabEntry> _obec = []; // 교육부 표준(ป.1~3) — 단어장 화면에는 노출하지 않음
   final Map<String, VocabEntry> _byId = {};
   final Map<String, List<VocabEntry>> _byTh = {};
   final Map<int, String> _themes = {};
@@ -117,6 +121,13 @@ class VocabService {
   Future<void>? _loading;
 
   List<VocabEntry> get entries => _entries;
+
+  /// 태국 교육부 기초 단어(ป.1~3) 풀 — 이미 단어장에 있는 단어는 그 항목을 재사용.
+  List<VocabEntry> get obecEntries => _obec;
+
+  /// 빈도 Top1000 풀.
+  List<VocabEntry> get top1000Entries =>
+      _entries.where((e) => e.rank > 0).toList();
   Map<int, String> get themes => _themes;
   bool get isLoaded => _loaded;
   int get count => _entries.length;
@@ -128,7 +139,9 @@ class VocabService {
 
   Future<void> _load() async {
     try {
-      final raw = await rootBundle.loadString('assets/data/vocab/th_vocab.json');
+      final raw = await rootBundle.loadString(
+        'assets/data/vocab/th_vocab.json',
+      );
       final data = json.decode(raw) as Map<String, dynamic>;
       final meta = data['meta'] as Map<String, dynamic>?;
       final themes = meta?['themes'] as Map<String, dynamic>?;
@@ -149,7 +162,46 @@ class VocabService {
     } catch (_) {
       // 에셋 없이도 동작
     }
+    await _loadObec();
     _loaded = true;
+  }
+
+  Future<void> _loadObec() async {
+    try {
+      final raw = await rootBundle.loadString(
+        'assets/data/wordsets/th_obec_basic.json',
+      );
+      final data = json.decode(raw) as Map<String, dynamic>;
+      var i = 0;
+      for (final m in (data['standard'] as List? ?? []).whereType<Map>()) {
+        final th = '${m['th'] ?? ''}'.trim();
+        if (th.isEmpty) continue;
+        final existing = _byTh[th];
+        if (existing != null && existing.isNotEmpty) {
+          _obec.add(existing.first);
+          continue;
+        }
+        final ko = '${m['ko'] ?? ''}'.trim();
+        if (ko.isEmpty) continue; // 뜻 없는 항목은 아직 제외
+        _obec.add(
+          VocabEntry(
+            id: 'o${i++}',
+            th: th,
+            reading: '${m['reading'] ?? ''}',
+            readingRaw: '',
+            ko: ko,
+            src: 'obec',
+            order: 100000 + i,
+            day: 0,
+            theme: 'ป.${m['grade'] ?? ''}',
+            rank: (m['rank'] as num?)?.toInt() ?? 0,
+            level: (m['level'] as num?)?.toInt() ?? 0,
+          ),
+        );
+      }
+    } catch (_) {
+      // 에셋 없이도 동작
+    }
   }
 
   VocabEntry? byId(String id) => _byId[id];
@@ -181,10 +233,12 @@ class VocabService {
     if (_hangul.hasMatch(q)) {
       final compact = q.replaceAll(' ', '');
       return pool
-          .where((e) =>
-              e.ko.contains(q) ||
-              e.reading.contains(q) ||
-              e.reading.replaceAll(' ', '').contains(compact))
+          .where(
+            (e) =>
+                e.ko.contains(q) ||
+                e.reading.contains(q) ||
+                e.reading.replaceAll(' ', '').contains(compact),
+          )
           .toList();
     }
     final lq = q.toLowerCase();

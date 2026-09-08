@@ -24,6 +24,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
   bool _loading = true;
   List<RootInfo> _roots = [];
   String _query = '';
+  RootStage _stage = RootStage.one;
 
   @override
   void initState() {
@@ -72,7 +73,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
         initialChildSize: 0.78,
         maxChildSize: 0.95,
         builder: (context, controller) => RootFamilySheet(
-          family: RootService.instance.familyOf(root),
+          family: RootService.instance.familyOf(root, stage: _stage),
           highlight: highlight,
           controller: controller,
         ),
@@ -84,7 +85,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
   Widget build(BuildContext context) {
     final total = _roots.fold<int>(
       0,
-      (s, r) => s + RootService.instance.familyOf(r).count,
+      (s, r) => s + RootService.instance.familyOf(r, stage: _stage).count,
     );
     return Scaffold(
       backgroundColor: AppColors.cream,
@@ -172,6 +173,34 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
                     ],
                   ),
                 ),
+                Container(
+                  color: AppColors.creamDeep,
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+                  child: Row(
+                    children: [
+                      _StageButton(
+                        label: '1단계',
+                        sub: '빈도 1000',
+                        selected: _stage == RootStage.one,
+                        onTap: () => setState(() => _stage = RootStage.one),
+                      ),
+                      const SizedBox(width: 6),
+                      _StageButton(
+                        label: '2단계',
+                        sub: '표준 ${VocabService.instance.obecEntries.length}',
+                        selected: _stage == RootStage.two,
+                        onTap: () => setState(() => _stage = RootStage.two),
+                      ),
+                      const SizedBox(width: 6),
+                      _StageButton(
+                        label: '전체',
+                        sub: '단어장 ${VocabService.instance.count}',
+                        selected: _stage == RootStage.all,
+                        onTap: () => setState(() => _stage = RootStage.all),
+                      ),
+                    ],
+                  ),
+                ),
                 const LaiThaiDivider(height: 8),
                 Expanded(
                   child: GridView.builder(
@@ -188,7 +217,9 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
                       final r = _filtered[i];
                       return _RootCard(
                         root: r,
-                        count: RootService.instance.familyOf(r).count,
+                        count: RootService.instance
+                            .familyOf(r, stage: _stage)
+                            .count,
                         onTap: () => _openFamily(r),
                       );
                     },
@@ -196,6 +227,60 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
                 ),
               ],
             ),
+    );
+  }
+}
+
+/// 단계 선택 버튼 — 1단계(빈도 1000) / 2단계(교육부 표준) / 전체.
+class _StageButton extends StatelessWidget {
+  final String label;
+  final String sub;
+  final bool selected;
+  final VoidCallback onTap;
+  const _StageButton({
+    required this.label,
+    required this.sub,
+    required this.selected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: InkWell(
+        onTap: onTap,
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 6),
+          decoration: BoxDecoration(
+            color: selected ? AppColors.kluayMai : AppColors.cream,
+            border: Border.all(
+              color: selected ? AppColors.kluayMaiDeep : AppColors.thong,
+              width: selected ? 1.5 : 0.8,
+            ),
+          ),
+          child: Column(
+            children: [
+              Text(
+                label,
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w900,
+                  color: selected ? Colors.white : AppColors.khram,
+                ),
+              ),
+              Text(
+                sub,
+                style: TextStyle(
+                  fontSize: 10,
+                  color: selected
+                      ? Colors.white.withValues(alpha: 0.85)
+                      : AppColors.khramLight,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
