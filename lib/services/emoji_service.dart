@@ -9,6 +9,7 @@ class EmojiService {
   static final EmojiService instance = EmojiService._();
 
   final Map<String, String> _keywords = {};
+  final Map<String, String> _words = {}; // 태국어 표제어 → 그림 (검토본, 최우선)
   List<String> _keywordOrder = []; // 긴 키워드 우선
   final Map<String, List<String>> _pools = {};
   bool _loaded = false;
@@ -29,6 +30,11 @@ class EmojiService {
       (data['keywords'] as Map<String, dynamic>? ?? {}).forEach((k, v) {
         if (k.trim().isNotEmpty && '$v'.trim().isNotEmpty) {
           _keywords[k.trim()] = '$v'.trim();
+        }
+      });
+      (data['words'] as Map<String, dynamic>? ?? {}).forEach((k, v) {
+        if (k.trim().isNotEmpty && '$v'.trim().isNotEmpty) {
+          _words[k.trim()] = '$v'.trim();
         }
       });
       (data['pools'] as Map<String, dynamic>? ?? {}).forEach((k, v) {
@@ -54,18 +60,54 @@ class EmojiService {
   String? byKeyword(String ko) {
     if (ko.isEmpty) return null;
     for (final k in _keywordOrder) {
-      if (ko.contains(k)) return _keywords[k];
+      if (!ko.contains(k)) continue;
+      // 짧은 키워드(3자 이하)는 낱말 경계에서만 — '만약'의 '약', '강조'의 '강' 방지
+      if (k.length <= 3 && !_wholeWord(ko, k)) continue;
+      return _keywords[k];
     }
     return null;
   }
 
+  static bool _wholeWord(String ko, String k) {
+    var start = 0;
+    while (true) {
+      final i = ko.indexOf(k, start);
+      if (i < 0) return false;
+      final before = i == 0 ? null : ko.codeUnitAt(i - 1);
+      final afterIdx = i + k.length;
+      final after = afterIdx >= ko.length ? null : ko.codeUnitAt(afterIdx);
+      if (!_isHangul(before) && !_isHangul(after)) return true;
+      start = i + 1;
+    }
+  }
+
+  static bool _isHangul(int? c) => c != null && c >= 0xAC00 && c <= 0xD7A3;
+
+  /// 표제어로 직접 지정된 그림 (없으면 null).
+  String? byTh(String th) {
+    final t = th.trim();
+    return _words[t] ?? _words[t.split('/').first.trim()];
+  }
+
   /// 한 화면의 단어 목록에 그림을 배정 — 같은 화면 안에서는 같은 그림이 나오지 않게.
   /// [kos] 순서대로 이모지 목록을 돌려준다.
-  List<String> assign(List<String> kos, {String topic = 'core'}) {
+  List<String> assign(
+    List<String> kos, {
+    List<String>? ths,
+    String topic = 'core',
+  }) {
     final used = <String>{};
     final out = List<String>.filled(kos.length, '');
-    // 1) 키워드 매칭 먼저
+    // 0) 표제어 직접 지정 먼저
+    if (ths != null) {
+      for (var i = 0; i < kos.length && i < ths.length; i++) {
+        final e = byTh(ths[i]);
+        if (e != null && used.add(e)) out[i] = e;
+      }
+    }
+    // 1) 키워드 매칭
     for (var i = 0; i < kos.length; i++) {
+      if (out[i].isNotEmpty) continue;
       final e = byKeyword(kos[i]);
       if (e != null && used.add(e)) out[i] = e;
     }

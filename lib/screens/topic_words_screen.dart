@@ -58,6 +58,7 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
     final list = _visible;
     final emojis = EmojiService.instance.assign(
       list.map((e) => e.ko).toList(),
+      ths: list.map((e) => e.th).toList(),
       topic: widget.entries == null ? widget.topic.id : widget.emojiTopic,
     );
     _emoji.clear();
