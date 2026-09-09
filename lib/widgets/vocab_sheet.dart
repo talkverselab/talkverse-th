@@ -308,7 +308,7 @@ class _PieceLine extends StatelessWidget {
     final pieces = RootService.instance.breakdown(word, root);
     if (pieces.length < 2) return const SizedBox.shrink();
     final text = pieces
-        .map((p) => p.ko == null || p.ko!.isEmpty ? p.th : '${p.th}(${p.ko})')
+        .map((p) => '${p.th}(${RootService.instance.pieceLabel(p)})')
         .join(' + ');
     return Padding(
       padding: const EdgeInsets.only(top: 2),

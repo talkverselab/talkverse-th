@@ -503,9 +503,16 @@ def main():
     with open(os.path.join(OUT_DIR, "th_topics.json"), "w", encoding="utf-8") as f:
         json.dump(OrderedDict(meta=OrderedDict(note="주제별 단어 — entries[].topic/part 로 연결"), topics=topics_doc),
                   f, ensure_ascii=False, indent=1)
+    pieces, reject = {}, []
+    pieces_path = os.path.join(HERE, "root_pieces.json")
+    if os.path.exists(pieces_path):
+        with open(pieces_path, encoding="utf-8") as f:
+            rp = json.load(f)
+        pieces, reject = rp.get("pieces", {}), rp.get("reject", [])
     with open(os.path.join(OUT_DIR, "th_roots.json"), "w", encoding="utf-8") as f:
-        json.dump(OrderedDict(meta=OrderedDict(note="루트 단어 — 파생어는 앱에서 포함 관계로 계산"), roots=roots),
-                  f, ensure_ascii=False, indent=1)
+        json.dump(OrderedDict(
+            meta=OrderedDict(note="루트 단어 — 파생어는 앱에서 포함 관계로 계산. pieces=조각 뜻, reject=우연 일치(root|word)"),
+            roots=roots, pieces=pieces, reject=reject), f, ensure_ascii=False, indent=1)
 
     print(f"captures: {ncap} files, {len(caps)} entries")
     print(f"body: {nbody} entries (회화집 본문 단어)")
