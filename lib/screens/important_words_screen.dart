@@ -7,7 +7,7 @@ import '../widgets/thai_decor.dart';
 import 'topic_words_screen.dart';
 import 'word_flashcard_screen.dart';
 
-/// 중요 단어 단계 — 중요 1000단어 + 표준(최대).
+/// 중요 단어 단계 — 중요 1,000단어 + 표준(최대).
 class ImportantStage {
   final String id;
   final String badge; // 큰 숫자 칸
@@ -37,13 +37,17 @@ class ImportantWordsScreen extends StatelessWidget {
           .toList()
         ..sort((a, b) => a.rank.compareTo(b.rank));
 
+  /// 중요 1,000단어 안의 편: 1단계 = 1~500위, 2단계 = 501~1000위.
+  static const tierParts = ['1단계 · 1~500위', '2단계 · 501~1000위'];
+  static String tierName(int level) => level <= 3 ? tierParts[0] : tierParts[1];
+
   static final stages = <ImportantStage>[
     ImportantStage(
       id: 'top1000',
-      badge: '1000',
-      label: '중요 1000단어',
+      badge: '1,000',
+      label: '중요 1,000단어',
       range: '회화 빈도 1 ~ 1000위',
-      desc: '영화·드라마 회화에서 가장 자주 쓰는 단어 — 빈도 순서로',
+      desc: '영화·드라마 회화에서 가장 자주 쓰는 단어. 1단계(1~500위) · 2단계(501~1000위)',
       stars: '★★★★★',
       entries: () => _levels(1, 5),
     ),
@@ -75,9 +79,10 @@ class ImportantWordsScreen extends StatelessWidget {
             name,
             '⭐',
             list.length,
-            const [],
+            stage?.id == 'top1000' ? tierParts : const [],
           ),
           entries: list,
+          partOf: stage?.id == 'top1000' ? (e) => tierName(e.level) : null,
         ),
       ),
     );
@@ -110,7 +115,7 @@ class ImportantWordsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 2),
             Text(
-              '중요 1000단어 + 표준 단어 · $total단어',
+              '중요 1,000단어 + 표준 단어 · $total단어',
               style: const TextStyle(fontSize: 10, letterSpacing: 2),
             ),
           ],
@@ -222,8 +227,9 @@ class _StageCard extends StatelessWidget {
           child: Row(
             children: [
               Container(
-                width: 52,
-                height: 52,
+                width: 56,
+                height: 56,
+                padding: const EdgeInsets.all(6),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: (isStd ? AppColors.thongDeep : AppColors.kluayMai)
@@ -233,12 +239,17 @@ class _StageCard extends StatelessWidget {
                     width: 1.2,
                   ),
                 ),
-                child: Text(
-                  stage.badge,
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w900,
-                    color: isStd ? AppColors.thongDeep : AppColors.kluayMaiDeep,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    stage.badge,
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w900,
+                      color: isStd
+                          ? AppColors.thongDeep
+                          : AppColors.kluayMaiDeep,
+                    ),
                   ),
                 ),
               ),
@@ -249,12 +260,16 @@ class _StageCard extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Text(
-                          stage.label,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w900,
-                            color: AppColors.khram,
+                        Flexible(
+                          child: Text(
+                            stage.label,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w900,
+                              color: AppColors.khram,
+                            ),
                           ),
                         ),
                         if (stage.stars.isNotEmpty) ...[
@@ -267,16 +282,15 @@ class _StageCard extends StatelessWidget {
                             ),
                           ),
                         ],
-                        const Spacer(),
-                        Text(
-                          stage.range,
-                          style: const TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w700,
-                            color: AppColors.kluayMaiDeep,
-                          ),
-                        ),
                       ],
+                    ),
+                    Text(
+                      stage.range,
+                      style: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w700,
+                        color: AppColors.kluayMaiDeep,
+                      ),
                     ),
                     const SizedBox(height: 3),
                     Text(
@@ -298,11 +312,15 @@ class _StageCard extends StatelessWidget {
                           ),
                         ),
                         const SizedBox(width: 8),
-                        Text(
-                          '${entries.length}단어 · 아는 단어 $known',
-                          style: const TextStyle(
-                            fontSize: 11,
-                            color: AppColors.khramLight,
+                        Flexible(
+                          child: Text(
+                            '${entries.length}단어 · 아는 단어 $known',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(
+                              fontSize: 11,
+                              color: AppColors.khramLight,
+                            ),
                           ),
                         ),
                       ],
