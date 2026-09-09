@@ -24,7 +24,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
   bool _loading = true;
   List<RootInfo> _roots = [];
   String _query = '';
-  RootStage _stage = RootStage.upTo2;
+  RootStage _stage = RootStage.upTo5;
 
   @override
   void initState() {
@@ -81,15 +81,12 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
     );
   }
 
-  /// 절벽 구간 누적 단계 버튼 — (단계, 라벨, 단어 수).
+  /// 단계 버튼 — 중요 1000단어 / 표준(최대). (단계, 라벨, 단어 수)
   List<(RootStage, String, String)> _stages(BuildContext context) {
     final vs = VocabService.instance;
     return [
-      (RootStage.upTo2, '1~2단계', '~250위 ${vs.entriesUpToLevel(2).length}'),
-      (RootStage.upTo3, '3단계', '~500위 ${vs.entriesUpToLevel(3).length}'),
-      (RootStage.upTo4, '4단계', '~750위 ${vs.entriesUpToLevel(4).length}'),
-      (RootStage.upTo5, '5단계', '~1000위 ${vs.entriesUpToLevel(5).length}'),
-      (RootStage.standard, '표준', '누적 ${vs.standardEntries.length}'),
+      (RootStage.upTo5, '중요 1000단어', '빈도 ${vs.entriesUpToLevel(5).length}'),
+      (RootStage.standard, '표준 단어', '누적 ${vs.standardEntries.length}'),
     ];
   }
 
@@ -233,7 +230,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
   }
 }
 
-/// 단계 선택 버튼 — 절벽 구간 누적(1~2 / 3 / 4 / 5) / 표준(최대).
+/// 단계 선택 버튼 — 중요 1000단어 / 표준(최대).
 class _StageButton extends StatelessWidget {
   final String label;
   final String sub;
@@ -265,7 +262,7 @@ class _StageButton extends StatelessWidget {
               Text(
                 label,
                 style: TextStyle(
-                  fontSize: 12,
+                  fontSize: 13,
                   fontWeight: FontWeight.w900,
                   color: selected ? Colors.white : AppColors.khram,
                 ),
@@ -273,7 +270,7 @@ class _StageButton extends StatelessWidget {
               Text(
                 sub,
                 style: TextStyle(
-                  fontSize: 9,
+                  fontSize: 10,
                   color: selected
                       ? Colors.white.withValues(alpha: 0.85)
                       : AppColors.khramLight,

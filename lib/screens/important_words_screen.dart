@@ -7,7 +7,7 @@ import '../widgets/thai_decor.dart';
 import 'topic_words_screen.dart';
 import 'word_flashcard_screen.dart';
 
-/// 중요 단어 단계 — 중요 1000단어(절벽 구간은 안에서 칩으로) + 표준(최대).
+/// 중요 단어 단계 — 중요 1000단어 + 표준(최대).
 class ImportantStage {
   final String id;
   final String badge; // 큰 숫자 칸
@@ -37,23 +37,13 @@ class ImportantWordsScreen extends StatelessWidget {
           .toList()
         ..sort((a, b) => a.rank.compareTo(b.rank));
 
-  /// 빈도 단계 → 편 이름 (중요 1000단어 안의 칩).
-  static String tierName(int level) => switch (level) {
-    1 || 2 => '1~2단계 · ~250위',
-    3 => '3단계 · ~500위',
-    4 => '4단계 · ~750위',
-    _ => '5단계 · ~1000위',
-  };
-
-  static const tierParts = ['1~2단계 · ~250위', '3단계 · ~500위', '4단계 · ~750위', '5단계 · ~1000위'];
-
   static final stages = <ImportantStage>[
     ImportantStage(
       id: 'top1000',
       badge: '1000',
       label: '중요 1000단어',
       range: '회화 빈도 1 ~ 1000위',
-      desc: '영화·드라마 회화에서 가장 자주 쓰는 단어. 안에서 절벽 구간(1~2 / 3 / 4 / 5단계)별로 볼 수 있어요',
+      desc: '영화·드라마 회화에서 가장 자주 쓰는 단어 — 빈도 순서로',
       stars: '★★★★★',
       entries: () => _levels(1, 5),
     ),
@@ -85,12 +75,9 @@ class ImportantWordsScreen extends StatelessWidget {
             name,
             '⭐',
             list.length,
-            stage?.id == 'top1000' ? tierParts : const [],
+            const [],
           ),
           entries: list,
-          partOf: stage?.id == 'top1000'
-              ? (e) => tierName(e.level)
-              : null,
         ),
       ),
     );
@@ -161,8 +148,8 @@ class ImportantWordsScreen extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(vertical: 6),
                 child: Text(
-                  '영화·드라마 회화 빈도 순위를 절벽 구간으로 나눴어요. '
-                  '중요 1000단어를 먼저 익히고, 표준 단어까지가 이 앱의 최대 범위입니다.',
+                  '영화·드라마 회화 빈도 상위 1000단어를 먼저 익히고, '
+                  '표준 단어까지가 이 앱의 최대 범위입니다.',
                   style: TextStyle(
                     fontSize: 12.5,
                     color: AppColors.khramLight,
