@@ -16,7 +16,18 @@ import 'word_flashcard_screen.dart';
 /// 체크된 단어만 플래시카드로 연습. 한→태 / 태→한 전환, 독음 표시 토글.
 class TopicWordsScreen extends StatefulWidget {
   final VocabTopic topic;
-  const TopicWordsScreen({super.key, required this.topic});
+
+  /// 지정하면 주제 필터 대신 이 목록을 그대로 쓴다(중요 단어 절벽 단계 등).
+  final List<VocabEntry>? entries;
+
+  /// 그림 배정에 쓸 주제 풀 id (entries 지정 시).
+  final String emojiTopic;
+  const TopicWordsScreen({
+    super.key,
+    required this.topic,
+    this.entries,
+    this.emojiTopic = 'core',
+  });
 
   @override
   State<TopicWordsScreen> createState() => _TopicWordsScreenState();
@@ -31,9 +42,11 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
   @override
   void initState() {
     super.initState();
-    _all = VocabService.instance.entries
-        .where((e) => e.topic == widget.topic.id)
-        .toList();
+    _all =
+        widget.entries ??
+        VocabService.instance.entries
+            .where((e) => e.topic == widget.topic.id)
+            .toList();
     _assignEmoji();
   }
 
@@ -41,7 +54,7 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
     final list = _visible;
     final emojis = EmojiService.instance.assign(
       list.map((e) => e.ko).toList(),
-      topic: widget.topic.id,
+      topic: widget.entries == null ? widget.topic.id : widget.emojiTopic,
     );
     _emoji.clear();
     for (var i = 0; i < list.length; i++) {

@@ -21,7 +21,7 @@ import 'script_quiz_screen.dart';
 import 'speaking_practice_screen.dart';
 import 'thai_roots_screen.dart';
 import 'tones_screen.dart';
-import 'topic_vocab_screen.dart';
+import 'vocab_hub_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -280,7 +280,7 @@ class _QuickMenuRow extends StatelessWidget {
   Widget build(BuildContext context) {
     final items = <(String, String, bool, WidgetBuilder)>[
       ('⚡', '바로 문장', true, (_) => const QuickPhrasesScreen()),
-      ('📖', '단어장', false, (_) => const TopicVocabScreen()),
+      ('📖', '단어장', false, (_) => const VocabHubScreen()),
       ('🗣️', '표현학습', false, (_) => const ExpressionsScreen()),
       ('💬', '회화', false, (_) => const ConversationScreen()),
       ('🎙️', '문장 말하기', false, (_) => const SpeakingPracticeScreen()),
@@ -362,10 +362,10 @@ class _MenuGrid extends StatelessWidget {
           builder: (_) => const GrammarLessonScreen()),
       _MenuItem(
           label: '단어장',
-          sub: '주제별 · 플래시카드',
+          sub: '주제별 · 중요 단어(절벽 구간)',
           emblem: 'ศัพท์',
           color: AppColors.kluayMaiDeep,
-          builder: (_) => const TopicVocabScreen()),
+          builder: (_) => const VocabHubScreen()),
       _MenuItem(
           label: 'Manual for English',
           sub: 'RTGS vs ours · 장음 밑줄',
