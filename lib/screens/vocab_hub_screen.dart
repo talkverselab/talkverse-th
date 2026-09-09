@@ -97,7 +97,7 @@ class _VocabHubScreenState extends State<VocabHubScreen> {
                 _HubCard(
                   emoji: '⭐',
                   title: '중요 단어',
-                  sub: '중요 1000단어 + 표준 단어 · 최대 $important단어',
+                  sub: '중요 1,000단어 + 표준 단어 · 최대 $important단어',
                   desc: '회화 빈도 1000단어 → 교육부 표준 단어 순서로.',
                   color: AppColors.thongDeep,
                   onTap: () => Navigator.push(

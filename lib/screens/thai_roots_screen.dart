@@ -81,11 +81,11 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
     );
   }
 
-  /// 단계 버튼 — 중요 1000단어 / 표준(최대). (단계, 라벨, 단어 수)
+  /// 단계 버튼 — 중요 1,000단어 / 표준(최대). (단계, 라벨, 단어 수)
   List<(RootStage, String, String)> _stages(BuildContext context) {
     final vs = VocabService.instance;
     return [
-      (RootStage.upTo5, '중요 1000단어', '빈도 ${vs.entriesUpToLevel(5).length}'),
+      (RootStage.upTo5, '중요 1,000단어', '빈도 ${vs.entriesUpToLevel(5).length}'),
       (RootStage.standard, '표준 단어', '누적 ${vs.standardEntries.length}'),
     ];
   }
@@ -230,7 +230,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
   }
 }
 
-/// 단계 선택 버튼 — 중요 1000단어 / 표준(최대).
+/// 단계 선택 버튼 — 중요 1,000단어 / 표준(최대).
 class _StageButton extends StatelessWidget {
   final String label;
   final String sub;
