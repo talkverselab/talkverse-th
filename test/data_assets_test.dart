@@ -157,6 +157,23 @@ void main() {
     }
   });
 
+  test('단어 그림 — 중요 1000단어 1단계(1~500위)는 표제어별 그림 지정', () async {
+    final raw = await rootBundle.loadString('assets/data/vocab/th_emoji_map.json');
+    final words = (json.decode(raw) as Map<String, dynamic>)['words'] as Map;
+    final vocab = json.decode(
+      await rootBundle.loadString('assets/data/vocab/th_vocab.json'),
+    ) as Map<String, dynamic>;
+    final tier1 = (vocab['entries'] as List).whereType<Map>().where(
+      (e) => (e['level'] as num? ?? 0) >= 1 && (e['level'] as num) <= 3,
+    );
+    final missing = [
+      for (final e in tier1)
+        if (!words.containsKey(e['th'])) e['th'],
+    ];
+    expect(missing, isEmpty, reason: '그림 미지정: $missing');
+    expect(words['ไม่'], '❌');
+  });
+
   test('교육부 표준 단어(OBEC) 에셋 — ป.1~3 표준 2,600+', () async {
     final raw =
         await rootBundle.loadString('assets/data/wordsets/th_obec_basic.json');
