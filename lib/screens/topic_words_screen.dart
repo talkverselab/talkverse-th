@@ -236,7 +236,7 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
                           crossAxisCount: 3,
                           mainAxisSpacing: 8,
                           crossAxisSpacing: 8,
-                          childAspectRatio: 0.78,
+                          childAspectRatio: 0.66,
                         ),
                     itemCount: list.length,
                     itemBuilder: (context, i) => _WordTile(
@@ -384,7 +384,8 @@ class _WordTile extends StatelessWidget {
     overflow: TextOverflow.ellipsis,
     textAlign: TextAlign.center,
     style: TextStyle(
-      fontSize: big ? 14 : 11.5,
+      fontSize: big ? 13.5 : 11.5,
+      height: 1.2,
       fontWeight: big ? FontWeight.w900 : FontWeight.w600,
       color: AppColors.khram,
     ),
