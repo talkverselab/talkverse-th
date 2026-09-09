@@ -42,7 +42,7 @@ class _VocabHubScreenState extends State<VocabHubScreen> {
         .map((e) => e.topic)
         .where((t) => t.isNotEmpty)
         .toSet();
-    final important = entries.where((e) => e.level > 0).length;
+    final important = VocabService.instance.standardEntries.length;
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
@@ -97,8 +97,8 @@ class _VocabHubScreenState extends State<VocabHubScreen> {
                 _HubCard(
                   emoji: '⭐',
                   title: '중요 단어',
-                  sub: '회화 빈도 절벽 구간 5단계 · $important단어',
-                  desc: '1단계(1~100위)부터 5단계(~1000위)까지 순서대로.',
+                  sub: '중요 1000단어 + 표준 단어 · 최대 $important단어',
+                  desc: '회화 빈도 1000단어(절벽 구간별) → 교육부 표준 단어 순서로.',
                   color: AppColors.thongDeep,
                   onTap: () => Navigator.push(
                     context,

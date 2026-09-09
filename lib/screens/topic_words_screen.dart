@@ -22,11 +22,15 @@ class TopicWordsScreen extends StatefulWidget {
 
   /// 그림 배정에 쓸 주제 풀 id (entries 지정 시).
   final String emojiTopic;
+
+  /// 편 칩 필터에 쓸 편 이름 계산(지정하면 entry.part 대신 사용).
+  final String Function(VocabEntry)? partOf;
   const TopicWordsScreen({
     super.key,
     required this.topic,
     this.entries,
     this.emojiTopic = 'core',
+    this.partOf,
   });
 
   @override
@@ -62,8 +66,10 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
     }
   }
 
+  String _partOf(VocabEntry e) => widget.partOf?.call(e) ?? e.part;
+
   List<VocabEntry> get _visible =>
-      _part == null ? _all : _all.where((e) => e.part == _part).toList();
+      _part == null ? _all : _all.where((e) => _partOf(e) == _part).toList();
 
   List<VocabEntry> get _checked =>
       _visible.where((e) => KnownWordsStore.isChecked(e.th)).toList();
