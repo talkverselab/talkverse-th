@@ -206,6 +206,9 @@ void main() {
     final roots = (json.decode(raw) as Map<String, dynamic>)['roots'] as List;
     expect(roots.length, greaterThan(100));
     expect(roots.any((r) => (r as Map)['th'] == 'น้ำ'), isTrue);
+    final doc = json.decode(raw) as Map<String, dynamic>;
+    expect((doc['pieces'] as Map).length, greaterThan(150));
+    expect((doc['reject'] as List).contains('ยา|ยาว'), isTrue);
     expect(RootService.containsAtBoundary('น้ำแข็ง', 'น้ำ'), isTrue);
     expect(RootService.containsAtBoundary('แม่น้ำ', 'น้ำ'), isTrue);
     expect(RootService.containsAtBoundary('น้ำ', 'น้ำ'), isFalse);

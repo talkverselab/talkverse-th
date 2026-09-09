@@ -24,7 +24,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
   bool _loading = true;
   List<RootInfo> _roots = [];
   String _query = '';
-  RootStage _stage = RootStage.one;
+  RootStage _stage = RootStage.upTo2;
 
   @override
   void initState() {
@@ -79,6 +79,18 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
         ),
       ),
     );
+  }
+
+  /// 절벽 구간 누적 단계 버튼 — (단계, 라벨, 단어 수).
+  List<(RootStage, String, String)> _stages(BuildContext context) {
+    final vs = VocabService.instance;
+    return [
+      (RootStage.upTo2, '1~2단계', '~250위 ${vs.entriesUpToLevel(2).length}'),
+      (RootStage.upTo3, '3단계', '~500위 ${vs.entriesUpToLevel(3).length}'),
+      (RootStage.upTo4, '4단계', '~750위 ${vs.entriesUpToLevel(4).length}'),
+      (RootStage.upTo5, '5단계', '~1000위 ${vs.entriesUpToLevel(5).length}'),
+      (RootStage.standard, '표준', '누적 ${vs.standardEntries.length}'),
+    ];
   }
 
   @override
@@ -178,26 +190,16 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
                   padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
                   child: Row(
                     children: [
-                      _StageButton(
-                        label: '1단계',
-                        sub: '빈도 1000',
-                        selected: _stage == RootStage.one,
-                        onTap: () => setState(() => _stage = RootStage.one),
-                      ),
-                      const SizedBox(width: 6),
-                      _StageButton(
-                        label: '2단계',
-                        sub: '표준 ${VocabService.instance.obecEntries.length}',
-                        selected: _stage == RootStage.two,
-                        onTap: () => setState(() => _stage = RootStage.two),
-                      ),
-                      const SizedBox(width: 6),
-                      _StageButton(
-                        label: '전체',
-                        sub: '단어장 ${VocabService.instance.count}',
-                        selected: _stage == RootStage.all,
-                        onTap: () => setState(() => _stage = RootStage.all),
-                      ),
+                      for (final (stage, label, sub) in _stages(context)) ...[
+                        _StageButton(
+                          label: label,
+                          sub: sub,
+                          selected: _stage == stage,
+                          onTap: () => setState(() => _stage = stage),
+                        ),
+                        if (stage != RootStage.standard)
+                          const SizedBox(width: 4),
+                      ],
                     ],
                   ),
                 ),
@@ -231,7 +233,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
   }
 }
 
-/// 단계 선택 버튼 — 1단계(빈도 1000) / 2단계(교육부 표준) / 전체.
+/// 단계 선택 버튼 — 절벽 구간 누적(1~2 / 3 / 4 / 5) / 표준(최대).
 class _StageButton extends StatelessWidget {
   final String label;
   final String sub;
@@ -263,7 +265,7 @@ class _StageButton extends StatelessWidget {
               Text(
                 label,
                 style: TextStyle(
-                  fontSize: 13,
+                  fontSize: 12,
                   fontWeight: FontWeight.w900,
                   color: selected ? Colors.white : AppColors.khram,
                 ),
@@ -271,7 +273,7 @@ class _StageButton extends StatelessWidget {
               Text(
                 sub,
                 style: TextStyle(
-                  fontSize: 10,
+                  fontSize: 9,
                   color: selected
                       ? Colors.white.withValues(alpha: 0.85)
                       : AppColors.khramLight,
@@ -369,7 +371,7 @@ class _RootCard extends StatelessWidget {
   }
 }
 
-/// 루트 가족 시트 — 루트 헤더 + 앞/뒤/가운데/후보 섹션의 타일 그리드 (zh 발음부 스타일).
+/// 루트 가족 시트 — 루트 헤더 + 앞/뒤/가운데 섹션의 타일 그리드 (zh 발음부 스타일). 타일에 분해 공식(방 + 물 ⇒ 화장실).
 class RootFamilySheet extends StatelessWidget {
   final RootFamily family;
   final String highlight;
@@ -526,14 +528,6 @@ class RootFamilySheet extends StatelessWidget {
           color: const Color(0xFFC62828),
           root: r,
           entries: middle,
-        ),
-      if (family.weak.isNotEmpty)
-        _FamilySection(
-          label: '후보',
-          sub: '철자만 포함 · 뜻 연결은 확인 필요',
-          color: AppColors.khramLight,
-          root: r,
-          entries: family.weak,
         ),
     ];
   }
@@ -696,10 +690,14 @@ class _WordTile extends StatelessWidget {
                 ),
               ),
             Text(
-              entry.ko,
-              maxLines: 1,
+              RootService.instance.formula(entry.th, root, entry.ko),
+              maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(fontSize: 11, color: AppColors.khram),
+              style: const TextStyle(
+                fontSize: 11,
+                color: AppColors.khram,
+                height: 1.25,
+              ),
             ),
           ],
         ),

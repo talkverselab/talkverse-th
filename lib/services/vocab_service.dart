@@ -161,6 +161,23 @@ class VocabService {
   /// 빈도 Top1000 풀.
   List<VocabEntry> get top1000Entries =>
       _entries.where((e) => e.rank > 0).toList();
+
+  /// 절벽 구간 누적 풀 — 빈도 1단계부터 [level]단계까지 (1 = 최상위).
+  List<VocabEntry> entriesUpToLevel(int level) =>
+      _entries.where((e) => e.level > 0 && e.level <= level).toList();
+
+  /// 표준 풀(최대 범위) — 빈도 1000 + 교육부 표준(ป.1~3), 표제어 중복 없음.
+  List<VocabEntry> get standardEntries {
+    final seen = <String>{};
+    return [
+      for (final e in [...top1000Entries, ..._obec])
+        if (seen.add(e.th)) e,
+    ];
+  }
+
+  /// 교육부 표준 단어 중 빈도 1000 밖의 단어 (단어장 '표준 단어' 단계).
+  List<VocabEntry> get standardExtraEntries =>
+      _obec.where((e) => e.level == 0).toList();
   Map<int, String> get themes => _themes;
   bool get isLoaded => _loaded;
   int get count => _entries.length;

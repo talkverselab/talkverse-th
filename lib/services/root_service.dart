@@ -36,9 +36,12 @@ class RootPiece {
 
 /// 루트 파생어를 어느 단어 풀에서 찾을지.
 enum RootStage {
-  all, // 통합 단어장 전체
-  one, // 1단계 — 빈도 Top1000
-  two, // 2단계 — 교육부 표준 단어(ป.1~3)
+  all, // 통합 단어장 전체 (단어 행 링크용 기본)
+  upTo2, // 1~2단계 누적 — 회화 빈도 1~250위
+  upTo3, // ~3단계 누적 — ~500위
+  upTo4, // ~4단계 누적 — ~750위
+  upTo5, // ~5단계 누적 — ~1000위
+  standard, // 표준 — 빈도 1000 + 교육부 표준 단어(ป.1~3), 최대 범위
 }
 
 /// 루트 가족 — 확실한 파생(strong)과 후보(weak).
@@ -68,6 +71,11 @@ class RootService {
   final Map<String, RootInfo> _byTh = {};
   final Map<String, RootFamily> _familyCache = {};
   final Map<RootStage, Map<String, RootFamily>> _stageCache = {};
+  final Map<String, String> _pieces = {}; // 루트가 아닌 조각의 뜻 (검토본)
+  final Set<String> _reject = {}; // 'root|word' — 철자만 우연히 포함
+
+  /// 뜻을 못 찾은 조각의 표시 라벨.
+  static const unknownLabel = '어원불명확';
   final Map<String, List<RootInfo>> _rootsOfCache = {};
   bool _loaded = false;
   Future<void>? _loading;
@@ -93,6 +101,12 @@ class RootService {
         if (_byTh.containsKey(info.th)) continue;
         _roots.add(info);
         _byTh[info.th] = info;
+      }
+      for (final e in ((data['pieces'] as Map?) ?? {}).entries) {
+        _pieces['${e.key}'] = '${e.value}';
+      }
+      for (final r in (data['reject'] as List? ?? [])) {
+        _reject.add('$r');
       }
     } catch (_) {}
     // 파생 수 기준 정렬 (많은 순)
@@ -139,11 +153,39 @@ class RootService {
 
   /// 조각의 뜻 — 단어장 → 루트 → (없으면 null). 조각 안에 다른 루트가 있으면 그 루트로 재분해.
   String? _pieceKo(String piece) {
+    final curated = _pieces[piece];
+    if (curated != null) return curated;
+    final r = _byTh[piece];
+    if (r != null) return r.ko.split(',').first.trim();
     final v = VocabService.instance.lookup(piece);
     if (v != null) return v.ko.split(',').first.trim();
-    final r = _byTh[piece];
-    if (r != null) return r.ko;
     return null;
+  }
+
+  /// 조각 뜻 (없으면 [unknownLabel]).
+  String pieceLabel(RootPiece p) =>
+      (p.ko == null || p.ko!.isEmpty) ? unknownLabel : p.ko!;
+
+  /// 분해 공식 — 예: '방 + 물 ⇒ 화장실'. 루트 자체면 뜻만.
+  String formula(String word, String root, String ko) {
+    final w = word.split('/').first.trim();
+    final first = ko.split(RegExp(r'[,;·]')).first.trim();
+    if (w == root) return first;
+    final parts = breakdown(w, root);
+    if (parts.length < 2) return first;
+    return '${parts.map(pieceLabel).join(' + ')} ⇒ $first';
+  }
+
+  /// 조각이 홀로 설 수 없는 파편(자음 하나, 부호로 시작, 괄호 등)이면 우연 일치.
+  static bool isFragment(String piece) {
+    final p = piece.trim();
+    if (p.isEmpty) return false;
+    if (p.contains(')') || p.contains('(') || p.contains('/')) return true;
+    final c = p.codeUnitAt(0);
+    if (_isCombining(c) || _isTrailingVowel(c)) return true;
+    if (p.length == 1 && c >= 0x0E01 && c <= 0x0E2E) return true; // 자음 하나
+    if (p.length <= 2 && p.contains('\u0E4C')) return true; // ย์ ห์ ต์ ษ์
+    return false;
   }
 
   /// 단어를 루트와 나머지 조각으로 분해하고 각 조각의 뜻을 붙인다.
@@ -180,50 +222,41 @@ class RootService {
     return out;
   }
 
-  /// 나머지 조각이 알려진 단어면 '확실한 파생'.
-  bool _isKnownPiece(String piece) {
-    if (piece.isEmpty) return true;
-    final p = piece.trim();
-    if (p.isEmpty) return true;
-    if (VocabService.instance.hasTh(p)) return true;
-    if (ThaiDictService.instance.lookup(p) != null) return true;
-    if (_byTh.containsKey(p)) return true;
-    // 남은 조각 안에 다른 루트가 경계에 맞게 들어있으면 인정
-    for (final r in _roots) {
-      if (p == r.th) return true;
-    }
-    return false;
-  }
-
   RootFamily familyOf(RootInfo root, {RootStage stage = RootStage.all}) {
     final cache = stage == RootStage.all
         ? _familyCache
         : _stageCache.putIfAbsent(stage, () => {});
     return cache.putIfAbsent(root.th, () {
+      final vs = VocabService.instance;
       final pool = switch (stage) {
-        RootStage.all => VocabService.instance.entries,
-        RootStage.one => VocabService.instance.top1000Entries,
-        RootStage.two => VocabService.instance.obecEntries,
+        RootStage.all => vs.entries,
+        RootStage.upTo2 => vs.entriesUpToLevel(2),
+        RootStage.upTo3 => vs.entriesUpToLevel(3),
+        RootStage.upTo4 => vs.entriesUpToLevel(4),
+        RootStage.upTo5 => vs.entriesUpToLevel(5),
+        RootStage.standard => vs.standardEntries,
       };
       final strong = <VocabEntry>[];
       final weak = <VocabEntry>[];
       final seen = <String>{};
       for (final e in pool) {
         var matched = false;
-        var isStrong = false;
         for (final v in e.variants) {
           if (!containsAtBoundary(v, root.th)) continue;
           matched = true;
-          final idx = v.indexOf(root.th);
-          final left = v.substring(0, idx);
-          final right = v.substring(idx + root.th.length);
-          if (_isKnownPiece(left) && _isKnownPiece(right)) isStrong = true;
-          if (root.th.length >= 4) isStrong = true; // 긴 루트는 우연 일치 드묾
         }
         if (!matched) continue;
         final key = '${e.th}|${e.ko}';
         if (!seen.add(key)) continue;
-        (isStrong ? strong : weak).add(e);
+        final w = e.th.split('/').first.trim();
+        if (_reject.contains('${root.th}|$w') || _reject.contains('${root.th}|${e.th}')) {
+          continue;
+        }
+        // 나머지 조각이 파편이면 철자만 우연히 겹친 것 — 가족에서 제외
+        final pieces = breakdown(w, root.th);
+        if (pieces.any((p) => !p.isRoot && isFragment(p.th))) continue;
+        // 검토 완료: 후보 구분 없이 모두 가족으로 (뜻 없는 조각은 '어원불명확')
+        strong.add(e);
       }
       int cmp(VocabEntry a, VocabEntry b) => a.th.length.compareTo(b.th.length);
       strong.sort(cmp);

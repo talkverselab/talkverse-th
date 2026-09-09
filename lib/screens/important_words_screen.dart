@@ -7,35 +7,103 @@ import '../widgets/thai_decor.dart';
 import 'topic_words_screen.dart';
 import 'word_flashcard_screen.dart';
 
-/// 중요 단어 — 회화 빈도 절벽 구간별 5단계. 단계를 고르면 단어 타일 화면.
+/// 중요 단어 단계 — 회화 빈도 절벽 구간(1~2 / 3 / 4 / 5) + 표준(최대).
+class ImportantStage {
+  final String id;
+  final String badge; // 큰 숫자 칸
+  final String label;
+  final String range;
+  final String desc;
+  final String stars;
+  final List<VocabEntry> Function() entries;
+  const ImportantStage({
+    required this.id,
+    required this.badge,
+    required this.label,
+    required this.range,
+    required this.desc,
+    required this.stars,
+    required this.entries,
+  });
+}
+
+/// 중요 단어 — 회화 빈도 절벽 구간별 단계. 단계를 고르면 단어 타일 화면.
 class ImportantWordsScreen extends StatelessWidget {
   const ImportantWordsScreen({super.key});
 
-  /// 절벽 구간: (단계, 순위 범위 라벨, 설명)
-  static const stages = <(int, String, String)>[
-    (1, '1 ~ 100위', '회화의 절반 이상을 차지하는 핵심 중의 핵심'),
-    (2, '101 ~ 250위', '이 구간까지 알면 일상 회화 대부분이 들려요'),
-    (3, '251 ~ 500위', '자막·드라마 대사의 뼈대가 되는 단어'),
-    (4, '501 ~ 750위', '상황별 회화를 넓혀 주는 단어'),
-    (5, '751 ~ 1000위', '절벽 아래 — 알면 표현이 풍부해지는 단어'),
+  static List<VocabEntry> _levels(int from, int to) =>
+      VocabService.instance.entries
+          .where((e) => e.level >= from && e.level <= to)
+          .toList()
+        ..sort((a, b) => a.rank.compareTo(b.rank));
+
+  static final stages = <ImportantStage>[
+    ImportantStage(
+      id: 'lv12',
+      badge: '1·2',
+      label: '1~2단계',
+      range: '1 ~ 250위',
+      desc: '회화의 대부분을 차지하는 핵심 중의 핵심',
+      stars: '★★★★★',
+      entries: () => _levels(1, 2),
+    ),
+    ImportantStage(
+      id: 'lv3',
+      badge: '3',
+      label: '3단계',
+      range: '251 ~ 500위',
+      desc: '자막·드라마 대사의 뼈대가 되는 단어',
+      stars: '★★★☆☆',
+      entries: () => _levels(3, 3),
+    ),
+    ImportantStage(
+      id: 'lv4',
+      badge: '4',
+      label: '4단계',
+      range: '501 ~ 750위',
+      desc: '상황별 회화를 넓혀 주는 단어',
+      stars: '★★☆☆☆',
+      entries: () => _levels(4, 4),
+    ),
+    ImportantStage(
+      id: 'lv5',
+      badge: '5',
+      label: '5단계',
+      range: '751 ~ 1000위',
+      desc: '절벽 아래 — 알면 표현이 풍부해지는 단어',
+      stars: '★☆☆☆☆',
+      entries: () => _levels(5, 5),
+    ),
+    ImportantStage(
+      id: 'std',
+      badge: '표준',
+      label: '표준 단어',
+      range: '1000위 밖',
+      desc: '교육부 기초 단어(ป.1~3) 중 빈도 1000에 없는 단어 — 여기까지가 최대',
+      stars: '',
+      entries: () =>
+          VocabService.instance.standardExtraEntries
+            ..sort((a, b) => a.order.compareTo(b.order)),
+    ),
   ];
 
-  static List<VocabEntry> entriesOf(int level) =>
-      VocabService.instance.entries.where((e) => e.level == level).toList()
-        ..sort((a, b) => a.rank.compareTo(b.rank));
+  /// 전체(최대 범위) — 빈도 1000 + 표준.
+  static List<VocabEntry> get all => VocabService.instance.standardEntries;
 
-  static List<VocabEntry> get all =>
-      VocabService.instance.entries.where((e) => e.level > 0).toList()
-        ..sort((a, b) => a.rank.compareTo(b.rank));
-
-  void _open(BuildContext context, int level) {
-    final list = level == 0 ? all : entriesOf(level);
-    final name = level == 0 ? '중요 단어 전체' : '중요 단어 $level단계';
+  void _open(BuildContext context, ImportantStage? stage) {
+    final list = stage == null ? all : stage.entries();
+    final name = stage == null ? '중요 단어 전체' : '중요 단어 ${stage.label}';
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (_) => TopicWordsScreen(
-          topic: VocabTopic('level$level', name, '⭐', list.length, const []),
+          topic: VocabTopic(
+            stage?.id ?? 'std_all',
+            name,
+            '⭐',
+            list.length,
+            const [],
+          ),
           entries: list,
         ),
       ),
@@ -69,7 +137,7 @@ class ImportantWordsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 2),
             Text(
-              '회화 빈도 절벽 구간 · $total단어',
+              '회화 빈도 절벽 구간 + 표준 · $total단어',
               style: const TextStyle(fontSize: 10, letterSpacing: 2),
             ),
           ],
@@ -108,7 +176,7 @@ class ImportantWordsScreen extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 6),
                 child: Text(
                   '영화·드라마 회화 빈도 순위를 절벽 구간으로 나눴어요. '
-                  '1단계부터 차례로 익히면 가장 적은 단어로 가장 많이 알아듣습니다.',
+                  '1~2단계부터 차례로 익히고, 마지막 표준 단어까지가 이 앱의 최대 범위입니다.',
                   style: TextStyle(
                     fontSize: 12.5,
                     color: AppColors.khramLight,
@@ -117,13 +185,11 @@ class ImportantWordsScreen extends StatelessWidget {
                 ),
               ),
               const LaiThaiDivider(height: 8),
-              for (final (level, range, desc) in stages)
+              for (final stage in stages)
                 _StageCard(
-                  level: level,
-                  range: range,
-                  desc: desc,
-                  entries: entriesOf(level),
-                  onTap: () => _open(context, level),
+                  stage: stage,
+                  entries: stage.entries(),
+                  onTap: () => _open(context, stage),
                 ),
               const SizedBox(height: 6),
               OutlinedButton.icon(
@@ -133,10 +199,10 @@ class ImportantWordsScreen extends StatelessWidget {
                   shape: const RoundedRectangleBorder(),
                   padding: const EdgeInsets.symmetric(vertical: 12),
                 ),
-                onPressed: () => _open(context, 0),
+                onPressed: () => _open(context, null),
                 icon: const Icon(Icons.list),
                 label: Text(
-                  '전체 1~5단계 한눈에 · $total단어',
+                  '전체 한눈에 · $total단어',
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w800,
@@ -152,15 +218,11 @@ class ImportantWordsScreen extends StatelessWidget {
 }
 
 class _StageCard extends StatelessWidget {
-  final int level;
-  final String range;
-  final String desc;
+  final ImportantStage stage;
   final List<VocabEntry> entries;
   final VoidCallback onTap;
   const _StageCard({
-    required this.level,
-    required this.range,
-    required this.desc,
+    required this.stage,
     required this.entries,
     required this.onTap,
   });
@@ -168,8 +230,8 @@ class _StageCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final known = entries.where((e) => KnownWordsStore.isKnown(e.th)).length;
-    final stars = '★' * (6 - level) + '☆' * (level - 1);
     final progress = entries.isEmpty ? 0.0 : known / entries.length;
+    final isStd = stage.id == 'std';
     return Padding(
       padding: const EdgeInsets.only(top: 10),
       child: InkWell(
@@ -179,7 +241,8 @@ class _StageCard extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.cream,
             border: Border.all(
-              color: AppColors.kluayMai.withValues(alpha: 0.7),
+              color: (isStd ? AppColors.thongDeep : AppColors.kluayMai)
+                  .withValues(alpha: 0.7),
               width: 1.2,
             ),
           ),
@@ -190,15 +253,19 @@ class _StageCard extends StatelessWidget {
                 height: 52,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                  color: AppColors.kluayMai.withValues(alpha: 0.12),
-                  border: Border.all(color: AppColors.kluayMai, width: 1.2),
+                  color: (isStd ? AppColors.thongDeep : AppColors.kluayMai)
+                      .withValues(alpha: 0.12),
+                  border: Border.all(
+                    color: isStd ? AppColors.thongDeep : AppColors.kluayMai,
+                    width: 1.2,
+                  ),
                 ),
                 child: Text(
-                  '$level',
-                  style: const TextStyle(
-                    fontSize: 24,
+                  stage.badge,
+                  style: TextStyle(
+                    fontSize: isStd ? 15 : 22,
                     fontWeight: FontWeight.w900,
-                    color: AppColors.kluayMaiDeep,
+                    color: isStd ? AppColors.thongDeep : AppColors.kluayMaiDeep,
                   ),
                 ),
               ),
@@ -210,24 +277,26 @@ class _StageCard extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          '$level단계',
+                          stage.label,
                           style: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w900,
                             color: AppColors.khram,
                           ),
                         ),
-                        const SizedBox(width: 8),
-                        Text(
-                          stars,
-                          style: const TextStyle(
-                            fontSize: 12,
-                            color: AppColors.thongDeep,
+                        if (stage.stars.isNotEmpty) ...[
+                          const SizedBox(width: 8),
+                          Text(
+                            stage.stars,
+                            style: const TextStyle(
+                              fontSize: 12,
+                              color: AppColors.thongDeep,
+                            ),
                           ),
-                        ),
+                        ],
                         const Spacer(),
                         Text(
-                          range,
+                          stage.range,
                           style: const TextStyle(
                             fontSize: 12,
                             fontWeight: FontWeight.w700,
@@ -238,7 +307,7 @@ class _StageCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 3),
                     Text(
-                      desc,
+                      stage.desc,
                       style: const TextStyle(
                         fontSize: 12,
                         color: AppColors.khramLight,
