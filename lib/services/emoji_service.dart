@@ -89,7 +89,8 @@ class EmojiService {
     return _words[t] ?? _words[t.split('/').first.trim()];
   }
 
-  /// 한 화면의 단어 목록에 그림을 배정 — 같은 화면 안에서는 같은 그림이 나오지 않게.
+  /// 한 화면의 단어 목록에 그림을 배정 — 표제어로 직접 지정한 그림을 먼저 쓰고,
+  /// 나머지(키워드, 풀)는 같은 화면 안에서 같은 그림이 나오지 않게.
   /// [kos] 순서대로 이모지 목록을 돌려준다.
   List<String> assign(
     List<String> kos, {
@@ -98,11 +99,15 @@ class EmojiService {
   }) {
     final used = <String>{};
     final out = List<String>.filled(kos.length, '');
-    // 0) 표제어 직접 지정 먼저
+    // 0) 표제어 직접 지정 먼저 — 검토된 그림이므로 겹쳐도 그대로 쓴다
+    //    (키워드, 풀 배정만 화면 안에서 중복을 피한다)
     if (ths != null) {
       for (var i = 0; i < kos.length && i < ths.length; i++) {
         final e = byTh(ths[i]);
-        if (e != null && used.add(e)) out[i] = e;
+        if (e != null) {
+          out[i] = e;
+          used.add(e);
+        }
       }
     }
     // 1) 키워드 매칭
