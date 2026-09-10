@@ -1,10 +1,28 @@
 import 'package:flutter/material.dart';
 
 import '../core/theme.dart';
+import '../services/update_service.dart';
 import '../widgets/thai_decor.dart';
+import 'update_screen.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
+
+  @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
+  @override
+  void initState() {
+    super.initState();
+    _loadVersion();
+  }
+
+  Future<void> _loadVersion() async {
+    await UpdateService.instance.loadCurrent();
+    if (mounted) setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -67,6 +85,14 @@ class ProfileScreen extends StatelessWidget {
           const SizedBox(height: 8),
           _SettingsGroup(items: [
             _SettingItem(
+                icon: Icons.system_update,
+                title: '앱 업데이트',
+                subtitle: 'GitHub 최신 빌드 확인 · 내려받아 설치',
+                onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const UpdateScreen()),
+                    )),
+            _SettingItem(
                 icon: Icons.volume_up,
                 title: 'TTS 음성',
                 subtitle: '시스템 th-TH 보이스'),
@@ -88,7 +114,7 @@ class ProfileScreen extends StatelessWidget {
             _SettingItem(
                 icon: Icons.info_outline,
                 title: '앱 버전',
-                subtitle: '0.2.0 · alpha 방콕 모던'),
+                subtitle: UpdateService.instance.currentText),
             _SettingItem(
                 icon: Icons.code,
                 title: 'Stack',
@@ -137,6 +163,7 @@ class _SettingsGroup extends StatelessWidget {
         children: [
           for (var i = 0; i < items.length; i++) ...[
             ListTile(
+              onTap: items[i].onTap,
               leading: Container(
                 width: 32,
                 height: 32,
@@ -172,6 +199,10 @@ class _SettingItem {
   final IconData icon;
   final String title;
   final String subtitle;
+  final VoidCallback? onTap;
   _SettingItem(
-      {required this.icon, required this.title, required this.subtitle});
+      {required this.icon,
+      required this.title,
+      required this.subtitle,
+      this.onTap});
 }

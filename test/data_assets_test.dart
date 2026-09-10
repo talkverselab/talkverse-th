@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_test/flutter_test.dart';
+
+import 'package:thai_universe/services/update_service.dart';
 import 'package:thai_universe/services/root_service.dart';
 import 'package:thai_universe/screens/sentence_flashcard_screen.dart';
 import 'package:thai_universe/services/thai_dict_service.dart';
@@ -9,6 +11,7 @@ import 'package:thai_universe/services/thai_dict_service.dart';
 /// 에셋 데이터 무결성 + 분절 서비스 스모크 테스트.
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  _updateTests();
 
   test('단어 사전 로드 + 최장일치 분절', () async {
     final dict = ThaiDictService.instance;
@@ -248,4 +251,34 @@ class _HintTest {
     });
   }
 
+}
+
+void _updateTests() {
+  group('앱 업데이트', () {
+    test('latest.json 파싱', () {
+      final info = UpdateInfo.parse(
+        '{"version":"0.2.0","build":26,"sha":"34958c0",'
+        '"date":"2026-09-10T10:20:00Z","notes":"단어 그림 2단계","size":52428800}',
+      );
+      expect(info.version, '0.2.0');
+      expect(info.build, 26);
+      expect(info.sha, '34958c0');
+      expect(info.notes, '단어 그림 2단계');
+      expect(info.builtAt, isNotNull);
+      expect(info.sizeText, '50.0 MB');
+    });
+
+    test('필드가 빠져도 견딘다', () {
+      final info = UpdateInfo.parse('{"version":"0.2.0"}');
+      expect(info.build, 0);
+      expect(info.sizeText, '');
+      expect(info.builtAt, isNull);
+    });
+
+    test('빌드 번호가 클 때만 새 버전', () {
+      expect(UpdateService.isNewer(current: 2, latest: 26), isTrue);
+      expect(UpdateService.isNewer(current: 26, latest: 26), isFalse);
+      expect(UpdateService.isNewer(current: 27, latest: 26), isFalse);
+    });
+  });
 }
