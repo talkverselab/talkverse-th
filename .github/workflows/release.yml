@@ -38,10 +38,22 @@ jobs:
 
       - run: flutter test
 
-      - run: flutter build apk --release
+      # 빌드 번호 = 워크플로 실행 번호 → 앱이 자기 빌드와 견주어 새 빌드를 판단한다
+      - name: Build APK
+        run: flutter build apk --release --build-number=${{ github.run_number }}
 
-      - name: Rename APK
-        run: cp build/app/outputs/flutter-apk/app-release.apk thai-universe-latest.apk
+      - name: Collect release files
+        id: meta
+        run: |
+          cp build/app/outputs/flutter-apk/app-release.apk thai-universe-latest.apk
+          VER=$(grep '^version:' pubspec.yaml | sed 's/version: *//' | cut -d+ -f1)
+          NOTES=$(git log -1 --pretty=%s)
+          SIZE=$(stat -c%s thai-universe-latest.apk)
+          DATE=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          jq -n --arg version "$VER" --argjson build ${{ github.run_number }} --arg sha "${GITHUB_SHA:0:7}" --arg date "$DATE" --arg notes "$NOTES" --argjson size "$SIZE" '{version:$version, build:$build, sha:$sha, date:$date, notes:$notes, size:$size}' > latest.json
+          cat latest.json
+          echo "ver=$VER" >> "$GITHUB_OUTPUT"
+          echo "notes=$NOTES" >> "$GITHUB_OUTPUT"
 
       - name: Update rolling "latest" release
         uses: softprops/action-gh-release@v2
@@ -49,7 +61,12 @@ jobs:
           tag_name: latest
           name: 태국어유니버스 — 최신 빌드
           body: |
-            master 푸시마다 자동 갱신되는 서명된 릴리스 APK.
-            폰에서 이 페이지를 열고 `thai-universe-latest.apk`를 받아 설치하세요.
+            버전 ${{ steps.meta.outputs.ver }} · 빌드 ${{ github.run_number }}
+            ${{ steps.meta.outputs.notes }}
+
+            앱의 「프로필 · 설정 → 앱 업데이트」에서 바로 받아 설치할 수 있습니다.
+            직접 받으려면 아래 `thai-universe-latest.apk`를 폰에서 내려받아 설치하세요.
           make_latest: true
-          files: thai-universe-latest.apk
+          files: |
+            thai-universe-latest.apk
+            latest.json
