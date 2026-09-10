@@ -3,6 +3,10 @@ name: Release APK
 on:
   push:
     branches: [master]
+    # 문서만 고친 푸시는 빌드하지 않는다 (앱에 헛된 "새 빌드" 알림 방지)
+    paths-ignore:
+      - '**.md'
+      - '.gitignore'
   workflow_dispatch:
 
 permissions:
