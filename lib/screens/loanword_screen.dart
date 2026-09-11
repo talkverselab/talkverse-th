@@ -23,7 +23,11 @@ class _Group {
   final String emoji;
   final String rule;
   final String examples;
-  const _Group(this.id, this.name, this.emoji, this.rule, this.examples);
+
+  /// 대응표 행: [영어, 소리, 태국어 표기, 한글, 예]. 모음 그룹에만 있다.
+  final List<List<String>> table;
+  const _Group(this.id, this.name, this.emoji, this.rule, this.examples,
+      [this.table = const []]);
 }
 
 class _Word {
@@ -72,6 +76,10 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
             '${g['emoji'] ?? '🔤'}',
             '${g['rule'] ?? ''}',
             '${g['examples'] ?? ''}',
+            [
+              for (final row in (g['table'] as List? ?? []).whereType<List>())
+                [for (final c in row) '$c'],
+            ],
           ),
       ];
       _words = [
@@ -244,6 +252,99 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
   }
 }
 
+/// 영어 모음 → 태국어 모음 대응표. 같은 영어 모음은 첫 행에만 글자를 쓴다.
+class _VowelTable extends StatelessWidget {
+  final List<List<String>> rows;
+  final Color color;
+  const _VowelTable({required this.rows, required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    const head = TextStyle(
+      fontSize: 11,
+      fontWeight: FontWeight.w900,
+      color: AppColors.khramLight,
+      letterSpacing: 1,
+    );
+    const cell = TextStyle(
+      fontSize: 12.5,
+      height: 1.35,
+      color: AppColors.khram,
+      fontFamilyFallback: AppTheme.fontFallback,
+    );
+    final thStyle = TextStyle(
+      fontSize: 15,
+      fontWeight: FontWeight.w900,
+      color: color,
+      fontFamilyFallback: AppTheme.fontFallback,
+    );
+    const koStyle = TextStyle(
+      fontSize: 15,
+      fontWeight: FontWeight.w900,
+      color: AppColors.thongDeep,
+    );
+
+    final line = BorderSide(color: AppColors.thong.withValues(alpha: 0.5));
+    String prev = '';
+    return Table(
+      columnWidths: const {
+        0: FixedColumnWidth(26),
+        1: FlexColumnWidth(1.25),
+        2: FixedColumnWidth(58),
+        3: FixedColumnWidth(36),
+        4: FlexColumnWidth(2.2),
+      },
+      defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+      border: TableBorder(
+        horizontalInside: line,
+        top: line,
+        bottom: line,
+      ),
+      children: [
+        const TableRow(children: [
+          Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text('', style: head)),
+          Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text('영어 소리', style: head)),
+          Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text('태국어', style: head)),
+          Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text('한글', style: head)),
+          Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text('예', style: head)),
+        ]),
+        for (final r in rows)
+          TableRow(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 7),
+                child: Text(
+                  r[0] == prev ? '' : (prev = r[0]),
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w900,
+                    color: color,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 7, 6, 7),
+                child: Text(r[1], style: cell),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 7),
+                child: Text(r[2], style: thStyle),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 7),
+                child: Text(r[3], style: koStyle),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(4, 7, 0, 7),
+                child: Text(r[4], style: cell),
+              ),
+            ],
+          ),
+      ],
+    );
+  }
+}
+
 class _RuleCard extends StatelessWidget {
   final _Group group;
   const _RuleCard({required this.group});
@@ -296,6 +397,10 @@ class _RuleCard extends StatelessWidget {
                 fontFamilyFallback: AppTheme.fontFallback,
               ),
             ),
+          ],
+          if (group.table.isNotEmpty) ...[
+            const SizedBox(height: 10),
+            _VowelTable(rows: group.table, color: color),
           ],
         ],
       ),
