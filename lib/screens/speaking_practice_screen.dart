@@ -20,8 +20,9 @@ import 'episode_screen.dart';
 // ─────────────────────────────────────────────────────────────
 // 문장 말하기 — 한국어를 보고 제한 시간 안에 태국어로 말하기
 //   1) 선택: 회화 + 단계(7초/4초/2초) + 판정 기준
-//   2) 연습: 8문장 자동 진행 · 문장마다 음성 인식
-//   3) 결과: 통과/미통과 · 인식 텍스트 · 빠진 단어 · 원어민 듣기
+//   2) 연습: 4문장씩 자동 진행 · 문장마다 음성 인식
+//   3) 평가: 4문장마다 아쉬워요 / 원썸 👍 / 투썸 👍👍 · 「다음 문장」으로 이어감
+//   4) 결과: 전체 요약 · 인식 텍스트 · 빠진 단어 · 원어민 듣기
 // ─────────────────────────────────────────────────────────────
 
 /// 단계별 문장당 제한 시간(초).
@@ -30,7 +31,8 @@ const String _kPrefStage = 'speak_stage';
 const String _kPrefThreshold = 'speak_threshold';
 const String _kPrefHint = 'speak_hint';
 const Duration _kGap = Duration(milliseconds: 600);
-const String _kPassRule = '시간 안에 빠진 단어 없이 말하면 통과';
+const int _kBatch = 4; // 이만큼 말하고 나서 평가
+const String _kPassRule = '빠진 단어 없이 말하면 👍👍 투썸 · 기준을 넘으면 👍 원썸';
 
 int _secondsOf(int stage) => _kStageSeconds[(stage - 1).clamp(0, 2)];
 
@@ -443,7 +445,7 @@ class _EpisodeTile extends StatelessWidget {
 // 2) 연습 화면
 // ─────────────────────────────────────────────────────────────
 
-enum _Phase { loading, ready, recording, gap, paused, finishing }
+enum _Phase { loading, ready, recording, gap, paused, finishing, review }
 
 class _PracticeScreen extends StatefulWidget {
   final EpisodeMeta meta;
@@ -671,13 +673,31 @@ class _PracticeScreenState extends State<_PracticeScreen>
 
     _recognized[num] = _speechReady ? _currentText : null;
 
-    if (last) {
-      _goResult();
+    // 4문장마다(또는 마지막 문장 뒤) 평가 화면
+    if (last || (_index + 1) % _kBatch == 0) {
+      setState(() => _phase = _Phase.review);
     } else {
       setState(() => _index++);
       await _beginSentence();
     }
   }
+
+  int get _batchStart => _index - (_index % _kBatch);
+
+  /// 평가 화면의 「다음 문장」: 다음 묶음으로, 마지막이면 전체 결과로.
+  Future<void> _nextBatch() async {
+    if (_index >= _turns.length - 1) {
+      _goResult();
+      return;
+    }
+    setState(() => _index++);
+    await _beginSentence();
+  }
+
+  Future<void> _playReference(TurnRow turn) => TtsService.instance.speakAs(
+        turn.th,
+        gender: turn.speaker == 'A' ? 'male' : 'female',
+      );
 
   Future<void> _pause() async {
     if (_phase != _Phase.recording) return;
@@ -785,6 +805,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
               child: Text('문장이 없어요',
                   style: TextStyle(color: AppColors.khramLight))),
           _Phase.ready => _buildReady(),
+          _Phase.review => _buildReview(),
           _ => _buildPractice(),
         },
       ),
@@ -839,6 +860,122 @@ class _PracticeScreenState extends State<_PracticeScreen>
                   ),
                 ),
               ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  /// 4문장 평가 — 문장마다 아쉬워요/원썸/투썸, 아래 「다음 문장」.
+  Widget _buildReview() {
+    final start = _batchStart;
+    final batch = _turns.sublist(start, _index + 1);
+    final judged = <int, SpeechJudgeResult?>{
+      for (final t in batch)
+        t.num: _recognized[t.num] == null
+            ? null
+            : SpeechJudge.evaluate(
+                t.th,
+                _recognized[t.num]!,
+                _segmentThai,
+                threshold: widget.threshold,
+              ),
+    };
+    int count(SpeechRating r) =>
+        judged.values.where((j) => j != null && j.rating == r).length;
+    final last = _index >= _turns.length - 1;
+    final nextEnd = _index + 1 + _kBatch > _turns.length
+        ? _turns.length
+        : _index + 1 + _kBatch;
+
+    return Column(
+      children: [
+        const LaiThaiDivider(height: 8),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
+          child: Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              color: AppColors.kluayMai.withValues(alpha: 0.08),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: AppColors.kluayMai, width: 1.2),
+            ),
+            child: Column(
+              children: [
+                Text(
+                  '문장 ${start + 1}~${_index + 1} 평가',
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w900,
+                    color: AppColors.khram,
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 6,
+                  alignment: WrapAlignment.center,
+                  children: [
+                    _Badge(
+                        label:
+                            '${SpeechRating.two.badge} ${count(SpeechRating.two)}',
+                        color: AppColors.morakot),
+                    _Badge(
+                        label:
+                            '${SpeechRating.one.badge} ${count(SpeechRating.one)}',
+                        color: AppColors.thongDeep),
+                    _Badge(
+                        label:
+                            '${SpeechRating.weak.badge} ${count(SpeechRating.weak)}',
+                        color: AppColors.kluayMai),
+                  ],
+                ),
+                const SizedBox(height: 6),
+                const Text(
+                  _kPassRule,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 11, color: AppColors.khramLight),
+                ),
+              ],
+            ),
+          ),
+        ),
+        Expanded(
+          child: ListView.builder(
+            padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
+            itemCount: batch.length,
+            itemBuilder: (context, i) {
+              final turn = batch[i];
+              return _ResultCard(
+                turn: turn,
+                recognized: _recognized[turn.num],
+                judge: judged[turn.num],
+                onPlayReference: () => _playReference(turn),
+              );
+            },
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20, 8, 20, 26),
+          child: SizedBox(
+            width: double.infinity,
+            child: FilledButton.icon(
+              style: FilledButton.styleFrom(
+                backgroundColor:
+                    last ? AppColors.morakot : AppColors.kluayMai,
+                foregroundColor: AppColors.cream,
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12)),
+              ),
+              onPressed: _nextBatch,
+              icon: Icon(last ? Icons.flag : Icons.arrow_forward, size: 18),
+              label: Text(
+                last ? '결과 보기' : '다음 문장 (${_index + 2}~$nextEnd)',
+                style: const TextStyle(fontWeight: FontWeight.w800),
+              ),
             ),
           ),
         ),
@@ -1133,6 +1270,9 @@ class _ResultScreenState extends State<_ResultScreen> {
   int get _passCount =>
       _judged.values.where((r) => r != null && r.passed).length;
 
+  int _countOf(SpeechRating r) =>
+      _judged.values.where((j) => j != null && j.rating == r).length;
+
   Future<void> _playReference(TurnRow turn) async {
     await TtsService.instance.speakAs(
       turn.th,
@@ -1235,9 +1375,30 @@ class _ResultScreenState extends State<_ResultScreen> {
                       color: allPassed ? AppColors.morakot : AppColors.kluayMai,
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 6),
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 6,
+                    alignment: WrapAlignment.center,
+                    children: [
+                      _Badge(
+                          label:
+                              '${SpeechRating.two.badge} ${_countOf(SpeechRating.two)}',
+                          color: AppColors.morakot),
+                      _Badge(
+                          label:
+                              '${SpeechRating.one.badge} ${_countOf(SpeechRating.one)}',
+                          color: AppColors.thongDeep),
+                      _Badge(
+                          label:
+                              '${SpeechRating.weak.badge} ${_countOf(SpeechRating.weak)}',
+                          color: AppColors.kluayMai),
+                    ],
+                  ),
+                  const SizedBox(height: 6),
                   const Text(
                     _kPassRule,
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 12,
                       color: AppColors.khramLight,
@@ -1330,9 +1491,11 @@ class _ResultCard extends StatelessWidget {
     final j = judge;
     final (badge, badgeColor) = j == null
         ? ('판정 불가', AppColors.khramLight)
-        : j.passed
-            ? ('통과', AppColors.morakot)
-            : ('미통과', AppColors.kluayMai);
+        : switch (j.rating) {
+            SpeechRating.two => (SpeechRating.two.badge, AppColors.morakot),
+            SpeechRating.one => (SpeechRating.one.badge, AppColors.thongDeep),
+            SpeechRating.weak => (SpeechRating.weak.badge, AppColors.kluayMai),
+          };
 
     return Container(
       margin: const EdgeInsets.only(bottom: 10),
