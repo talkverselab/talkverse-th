@@ -9,8 +9,11 @@ class SpeechJudge {
   /// 퍼지 매칭 최소 유사도 (낮을수록 관대).
   static const double fuzzyRatio = 0.5;
 
-  /// 판정 기준 기본값 (coverage ≥ 이 값이면 통과).
+  /// 판정 기준 기본값 (coverage ≥ 이 값이면 통과 = 원썸).
   static const double defaultThreshold = 0.5;
+
+  /// 이 이상이면 투썸 (빠진 단어가 거의 없음).
+  static const double twoThumbsCoverage = 0.9;
 
   /// 판정에서 제외하는 어말 조사·감탄사.
   static const Set<String> particles = {
@@ -141,4 +144,25 @@ class SpeechJudgeResult {
   });
 
   int get missedCount => said.where((s) => !s).length;
+
+  /// 3단계 평가 — 아쉬워요 / 원썸 👍 / 투썸 👍👍.
+  SpeechRating get rating => !passed
+      ? SpeechRating.weak
+      : coverage >= SpeechJudge.twoThumbsCoverage
+          ? SpeechRating.two
+          : SpeechRating.one;
+}
+
+/// 문장 평가 3단계.
+enum SpeechRating {
+  weak('아쉬워요', ''),
+  one('원썸', '👍'),
+  two('투썸', '👍👍');
+
+  final String label;
+  final String thumbs;
+  const SpeechRating(this.label, this.thumbs);
+
+  /// 배지 문구: "👍👍 투썸" / "👍 원썸" / "아쉬워요"
+  String get badge => thumbs.isEmpty ? label : '$thumbs $label';
 }
