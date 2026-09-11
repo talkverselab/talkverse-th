@@ -33,6 +33,17 @@ INSTALL_FAILED_UPDATE_INCOMPATIBLE: signatures do not match
 apksigner verify --print-certs <apk> | grep SHA-1   # 9cc4bc932638be43a3982df20b71c4750288476b 여야 한다
 ```
 
+## 폰에 설치할 때 (PC에서 케이블로)
+
+폰에 **듀얼 메신저 프로필(user 95)** 과 보안 폴더(user 150)가 있다. `adb install` 은 프로필을 지정하지 않으면
+**모든 프로필에 설치**해서 앱 아이콘이 두 개(파란 말풍선 배지 달린 복제본)가 생긴다. 반드시 기본 프로필만 지정한다:
+
+```bash
+adb -s R3CY20HDN2K install --user 0 -r <apk>
+```
+
+(2026-09-11에 24개 앱이 전부 두 개씩 깔려 있던 것을 정리함. 앱 안의 「앱 업데이트」로 설치하면 이 문제는 생기지 않는다.)
+
 ## 2. 배포 흐름
 
 - `master`(또는 기본 브랜치) 푸시 → GitHub Actions(`.github/workflows/release.yml`)가
