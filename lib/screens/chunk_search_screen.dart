@@ -171,7 +171,7 @@ class _ChunkSearchScreenState extends State<ChunkSearchScreen> {
             style: TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w800,
-              color: AppColors.kluayMai,
+              color: AppColors.kluayMaiDeep,
               letterSpacing: 2,
             ),
           ),
@@ -245,7 +245,7 @@ class _ChunkCardState extends State<_ChunkCard> {
                             style: const TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w700,
-                              color: AppColors.kluayMai,
+                              color: AppColors.kluayMaiDeep,
                             ),
                           ),
                         if (info != null && info.domain.isNotEmpty)

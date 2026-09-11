@@ -217,7 +217,7 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
                     style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w900,
-                      color: AppColors.kluayMai,
+                      color: AppColors.kluayMaiDeep,
                     ),
                   ),
                 ],
@@ -309,7 +309,7 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
                   style: const TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w800,
-                    color: AppColors.kluayMai,
+                    color: AppColors.kluayMaiDeep,
                     letterSpacing: 1,
                   ),
                 ),
@@ -769,7 +769,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
                   child: Text(
                     '${_index + 1} / ${_turns.length}',
                     style: const TextStyle(
-                      color: AppColors.kluayMai,
+                      color: AppColors.kluayMaiDeep,
                       fontWeight: FontWeight.w900,
                       fontSize: 14,
                     ),
@@ -901,7 +901,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
                         style: const TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.w900,
-                          color: AppColors.kluayMai,
+                          color: AppColors.kluayMaiDeep,
                         ),
                       ),
                     ],
@@ -1391,7 +1391,7 @@ class _ResultCard extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w700,
-                color: AppColors.kluayMai,
+                color: AppColors.kluayMaiDeep,
               ),
             ),
           ],

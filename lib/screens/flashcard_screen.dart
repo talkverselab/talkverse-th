@@ -183,7 +183,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
                             style: const TextStyle(
                               fontSize: 100,
                               fontWeight: FontWeight.w900,
-                              color: AppColors.kluayMai,
+                              color: AppColors.kluayMaiDeep,
                               height: 1.2,
                               fontFamilyFallback: AppTheme.fontFallback,
                             ),

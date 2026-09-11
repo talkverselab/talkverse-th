@@ -100,7 +100,7 @@ class HomeScreen extends StatelessWidget {
                                 style: TextStyle(
                                   fontSize: 26,
                                   fontWeight: FontWeight.w900,
-                                  color: AppColors.kluayMai,
+                                  color: AppColors.kluayMaiDeep,
                                   fontFamilyFallback: AppTheme.fontFallback,
                                 ),
                               ),
@@ -658,7 +658,7 @@ class _LessonRow extends StatelessWidget {
               style: const TextStyle(
                 fontSize: 11,
                 fontWeight: FontWeight.w800,
-                color: AppColors.kluayMai,
+                color: AppColors.kluayMaiDeep,
               ),
             ),
           ],

@@ -339,7 +339,7 @@ class _ExampleRow extends StatelessWidget {
                               TextSpan(
                                 text: th.substring(idx, idx + sfp.length),
                                 style: const TextStyle(
-                                  color: AppColors.kluayMai,
+                                  color: AppColors.kluayMaiDeep,
                                   fontWeight: FontWeight.w900,
                                 ),
                               ),
