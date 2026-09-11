@@ -252,11 +252,11 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
   }
 }
 
-/// 영어 모음 → 태국어 모음 대응표. 같은 영어 모음은 첫 행에만 글자를 쓴다.
-class _VowelTable extends StatelessWidget {
+/// 영어 → 태국어 대응표(자음·모음). 같은 영어 글자는 첫 행에만 쓴다.
+class _MapTable extends StatelessWidget {
   final List<List<String>> rows;
   final Color color;
-  const _VowelTable({required this.rows, required this.color});
+  const _MapTable({required this.rows, required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -290,8 +290,8 @@ class _VowelTable extends StatelessWidget {
       columnWidths: const {
         0: FixedColumnWidth(26),
         1: FlexColumnWidth(1.25),
-        2: FixedColumnWidth(58),
-        3: FixedColumnWidth(36),
+        2: FixedColumnWidth(62),
+        3: FixedColumnWidth(46),
         4: FlexColumnWidth(2.2),
       },
       defaultVerticalAlignment: TableCellVerticalAlignment.middle,
@@ -400,7 +400,7 @@ class _RuleCard extends StatelessWidget {
           ],
           if (group.table.isNotEmpty) ...[
             const SizedBox(height: 10),
-            _VowelTable(rows: group.table, color: color),
+            _MapTable(rows: group.table, color: color),
           ],
         ],
       ),
