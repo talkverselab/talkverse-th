@@ -227,7 +227,7 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
               child: Text(
                 '$_learnedCount/${_turns.length}',
                 style: const TextStyle(
-                  color: AppColors.kluayMai,
+                  color: AppColors.kluayMaiDeep,
                   fontWeight: FontWeight.w900,
                   fontSize: 14,
                 ),

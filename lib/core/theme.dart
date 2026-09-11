@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 /// 태국풍 컬러 팔레트 — 방콕 모던.
 ///
-/// 난초(กล้วยไม้)의 마젠타를 메인으로, 사원·승복의 골드(ทอง),
+/// 태국어 하늘색(talkverse.uk 태국어 카드 #3F9FD6→#79CDF0)을 메인으로, 사원·승복의 골드(ทอง),
 /// 에메랄드 사원(มรกต)의 틸, 방콕 야경의 인디고(คราม)를 조합한다.
 class AppColors {
-  // 主色 — 난초 마젠타 (กล้วยไม้, 태국 국화·방콕 네온)
-  static const Color kluayMai = Color(0xFFE6007E);
-  static const Color kluayMaiDeep = Color(0xFFA80058);
-  static const Color kluayMaiLight = Color(0xFFFF4DA6);
+  // 主色 — 태국어 하늘색 (talkverse.uk 태국어 카드 색. 이름은 옛 난초색 시절 그대로)
+  static const Color kluayMai = Color(0xFF3F9FD6); // 사이트 --lc
+  static const Color kluayMaiDeep = Color(0xFF2A7DB0); // 크림 위 글자용(대비 4.5)
+  static const Color kluayMaiLight = Color(0xFF79CDF0); // 사이트 --lc2
 
   // 副色 — 골드 (ทอง, 왓 아룬·사원 금박·승복 사프란)
   static const Color thong = Color(0xFFDBA514);

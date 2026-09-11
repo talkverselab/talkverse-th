@@ -375,7 +375,7 @@ class _WordRow extends StatelessWidget {
                     th: w.th,
                     style: const TextStyle(
                         fontSize: 13,
-                        color: AppColors.kluayMai,
+                        color: AppColors.kluayMaiDeep,
                         fontWeight: FontWeight.w700),
                   ),
                   Text(

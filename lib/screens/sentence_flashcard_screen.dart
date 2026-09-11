@@ -247,7 +247,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                 style: const TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w900,
-                  color: AppColors.kluayMai,
+                  color: AppColors.kluayMaiDeep,
                 ),
               ),
             ),
@@ -268,7 +268,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                 child: Text(
                   '${_index + 1}/${_cards.length}',
                   style: const TextStyle(
-                    color: AppColors.kluayMai,
+                    color: AppColors.kluayMaiDeep,
                     fontWeight: FontWeight.w900,
                     fontSize: 14,
                   ),
@@ -385,7 +385,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                             style: const TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w700,
-                              color: AppColors.kluayMai,
+                              color: AppColors.kluayMaiDeep,
                             ),
                           ),
                         if (_flipped && turn.ko != null) ...[

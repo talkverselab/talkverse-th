@@ -92,7 +92,7 @@ class _WordFlashcardScreenState extends State<WordFlashcardScreen> {
                 style: const TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w900,
-                  color: AppColors.kluayMai,
+                  color: AppColors.kluayMaiDeep,
                 ),
               ),
             ),
@@ -103,7 +103,7 @@ class _WordFlashcardScreenState extends State<WordFlashcardScreen> {
               child: Text(
                 '${_idx + 1}/${widget.words.length}',
                 style: const TextStyle(
-                  color: AppColors.kluayMai,
+                  color: AppColors.kluayMaiDeep,
                   fontWeight: FontWeight.w900,
                   fontSize: 14,
                 ),
@@ -159,7 +159,7 @@ class _WordFlashcardScreenState extends State<WordFlashcardScreen> {
                             style: const TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.w800,
-                              color: AppColors.kluayMai,
+                              color: AppColors.kluayMaiDeep,
                             ),
                           ),
                         if (_koFirst || _flipped) ...[

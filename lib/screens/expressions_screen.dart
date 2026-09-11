@@ -247,7 +247,7 @@ class _TopicExpressionsScreenState extends State<_TopicExpressionsScreen> {
                 style: const TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w900,
-                  color: AppColors.kluayMai,
+                  color: AppColors.kluayMaiDeep,
                 ),
               ),
             ),
@@ -466,7 +466,7 @@ class _ExprCard extends StatelessWidget {
           style: const TextStyle(
             fontSize: 12.5,
             fontWeight: FontWeight.w700,
-            color: AppColors.kluayMai,
+            color: AppColors.kluayMaiDeep,
           ),
         );
 }

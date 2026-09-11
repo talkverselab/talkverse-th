@@ -336,7 +336,7 @@ class _StatBox extends StatelessWidget {
             style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w900,
-              color: AppColors.kluayMai,
+              color: AppColors.kluayMaiDeep,
             ),
           ),
           const SizedBox(height: 2),

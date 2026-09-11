@@ -144,7 +144,7 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
                 style: const TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w900,
-                  color: AppColors.kluayMai,
+                  color: AppColors.kluayMaiDeep,
                 ),
               ),
             ),

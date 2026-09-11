@@ -99,7 +99,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             _SettingItem(
                 icon: Icons.palette,
                 title: '테마',
-                subtitle: '낮 · 방콕 모던 #E6007E'),
+                subtitle: '낮 · 태국어 하늘색 #3F9FD6'),
           ]),
           const SizedBox(height: 16),
           const Text('정보',

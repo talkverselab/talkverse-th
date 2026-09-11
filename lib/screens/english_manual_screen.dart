@@ -157,7 +157,7 @@ class _Intro extends StatelessWidget {
                   fontSize: 10,
                   letterSpacing: 1.5,
                   fontWeight: FontWeight.w800,
-                  color: AppColors.kluayMai,
+                  color: AppColors.kluayMaiDeep,
                 ),
               ),
             ),

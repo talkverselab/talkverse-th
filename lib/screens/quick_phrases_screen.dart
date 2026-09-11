@@ -278,7 +278,7 @@ class _PhraseCardState extends State<_PhraseCard> {
                           th: phrase.th,
                           style: const TextStyle(
                             fontSize: 13,
-                            color: AppColors.kluayMai,
+                            color: AppColors.kluayMaiDeep,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
