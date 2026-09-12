@@ -8,6 +8,10 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>태국어유니버스</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>문장 말하기 연습에서 발음을 녹음해 판정합니다.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>말한 태국어를 인식해 빠진 단어를 알려 줍니다.</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

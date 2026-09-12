@@ -1,0 +1,48 @@
+name: iOS Build (unsigned)
+
+# GitHub 의 macOS 러너로 iOS 앱을 빌드한다 (Xcode·CocoaPods 내장, 공개 리포는 무료).
+# 서명은 하지 않는다 — 결과물 Runner.app / unsigned .ipa 는 사이드로딩(Sideloadly 등)이나
+# 개발자 계정이 준비된 뒤 TestFlight 서명 단계의 입력으로 쓴다.
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'lib/**'
+      - 'ios/**'
+      - 'assets/**'
+      - 'pubspec.yaml'
+      - 'pubspec.lock'
+      - '.github/workflows/ios-build.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - run: flutter --version
+      - run: flutter pub get
+
+      - name: Build iOS (release, no codesign)
+        run: flutter build ios --release --no-codesign --build-number=${{ github.run_number }}
+
+      - name: Package unsigned IPA
+        run: |
+          cd build/ios/iphoneos
+          mkdir -p Payload
+          cp -R Runner.app Payload/
+          zip -qr thai-universe-unsigned.ipa Payload
+          ls -la thai-universe-unsigned.ipa
+          du -sh Runner.app
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: thai-universe-ios-unsigned-${{ github.run_number }}
+          path: build/ios/iphoneos/thai-universe-unsigned.ipa
+          retention-days: 14
