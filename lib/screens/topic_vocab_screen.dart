@@ -13,6 +13,7 @@ import 'topic_words_screen.dart';
 import 'vocab_screen.dart';
 import 'word_flashcard_screen.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 주제별 단어 — 주제 타일 그리드 + 맨 위 플래시카드 연습 버튼.
 class TopicVocabScreen extends StatefulWidget {
@@ -146,7 +147,7 @@ class _TopicVocabScreenState extends State<TopicVocabScreen> {
                 ),
                 Expanded(
                   child: GridView.builder(
-                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                    padding: EdgeInsets.fromLTRB(16, 8, 16, 24 + bottomInset(context)),
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,

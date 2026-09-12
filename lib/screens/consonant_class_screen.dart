@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../core/theme.dart';
 import '../data/models/alphabet.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 고/중/저 자음 분류 심화 — 문자 44 화면의 '3분류' 탭 본문.
 /// 각 그룹의 글자 구성과, 그 분류가 성조에 어떤 영향을 주는지 설명한다.
@@ -13,7 +14,7 @@ class ConsonantClassBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 28),
+      padding: EdgeInsets.fromLTRB(16, 12, 16, 28 + bottomInset(context)),
       children: [
         const _IntroCard(),
         const SizedBox(height: 20),

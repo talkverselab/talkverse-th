@@ -8,6 +8,7 @@ import '../services/vocab_service.dart';
 import '../widgets/vocab_sheet.dart';
 import 'consonant_class_screen.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 class AlphabetScreen extends StatefulWidget {
   const AlphabetScreen({super.key});
@@ -81,7 +82,7 @@ class _ConsonantTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      padding: const EdgeInsets.fromLTRB(16, 12, 16, 28),
+      padding: EdgeInsets.fromLTRB(16, 12, 16, 28 + bottomInset(context)),
       children: [
         const _ClassExplainerCard(),
         const SizedBox(height: 16),
@@ -282,7 +283,7 @@ void _showConsonantDetail(BuildContext context, ThaiConsonant c, Color color) {
     ),
     builder: (ctx) => SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(24, 18, 24, 32),
+        padding: EdgeInsets.fromLTRB(24, 18, 24, 32 + bottomInset(context)),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -513,7 +514,7 @@ class _VowelTab extends StatelessWidget {
     final shortV = vowels.where((v) => !v.isLong).toList(growable: false);
     final longV = vowels.where((v) => v.isLong).toList(growable: false);
     return ListView(
-      padding: const EdgeInsets.fromLTRB(16, 14, 16, 28),
+      padding: EdgeInsets.fromLTRB(16, 14, 16, 28 + bottomInset(context)),
       children: [
         _VowelGroup(title: tr('단모음 · สระเสียงสั้น'), vowels: shortV),
         const SizedBox(height: 20),
@@ -612,7 +613,7 @@ void _showVowelDetail(BuildContext context, ThaiVowel v) {
       borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
     ),
     builder: (ctx) => Padding(
-      padding: const EdgeInsets.fromLTRB(24, 20, 24, 32),
+      padding: EdgeInsets.fromLTRB(24, 20, 24, 32 + bottomInset(context)),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,

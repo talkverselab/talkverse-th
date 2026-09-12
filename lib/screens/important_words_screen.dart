@@ -7,6 +7,7 @@ import '../widgets/thai_decor.dart';
 import 'topic_words_screen.dart';
 import 'word_flashcard_screen.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 중요 단어 단계 — 중요 1,000단어 + 표준(최대).
 class ImportantStage {
@@ -129,7 +130,7 @@ class ImportantWordsScreen extends StatelessWidget {
               .where((e) => KnownWordsStore.isChecked(e.th))
               .length;
           return ListView(
-            padding: const EdgeInsets.fromLTRB(16, 10, 16, 24),
+            padding: EdgeInsets.fromLTRB(16, 10, 16, 24 + bottomInset(context)),
             children: [
               SizedBox(
                 width: double.infinity,

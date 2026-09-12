@@ -10,6 +10,7 @@ import '../widgets/thai_decor.dart';
 import '../widgets/vocab_sheet.dart';
 import 'word_flashcard_screen.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 표현학습 — 단어장에서 분리한 문장·표현을 주제별로. 주제 타일 → 표현 카드 목록.
 class ExpressionsScreen extends StatefulWidget {
@@ -103,7 +104,7 @@ class _ExpressionsScreenState extends State<ExpressionsScreen> {
                 ),
                 Expanded(
                   child: GridView.builder(
-                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+                    padding: EdgeInsets.fromLTRB(16, 8, 16, 24 + bottomInset(context)),
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
@@ -316,7 +317,7 @@ class _TopicExpressionsScreenState extends State<_TopicExpressionsScreen> {
           const LaiThaiDivider(height: 8),
           Expanded(
             child: ListView.separated(
-              padding: const EdgeInsets.fromLTRB(14, 8, 14, 24),
+              padding: EdgeInsets.fromLTRB(14, 8, 14, 24 + bottomInset(context)),
               itemCount: list.length,
               separatorBuilder: (_, _) => const SizedBox(height: 8),
               itemBuilder: (context, i) =>

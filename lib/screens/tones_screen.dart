@@ -4,6 +4,7 @@ import '../core/theme.dart';
 import '../data/models/tone.dart';
 import '../data/repositories/tone_repository.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 class TonesScreen extends StatefulWidget {
   const TonesScreen({super.key});
@@ -40,7 +41,7 @@ class _TonesScreenState extends State<TonesScreen> {
           }
           final data = snap.data!;
           return ListView(
-            padding: const EdgeInsets.fromLTRB(16, 14, 16, 28),
+            padding: EdgeInsets.fromLTRB(16, 14, 16, 28 + bottomInset(context)),
             children: [
               const _IntroCard(),
               const SizedBox(height: 20),

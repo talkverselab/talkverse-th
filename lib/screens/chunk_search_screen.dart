@@ -7,6 +7,7 @@ import '../services/tts_service.dart';
 import '../widgets/selectable_thai.dart';
 import '../widgets/thai_decor.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 청크(단어) 기준 문장 검색.
 /// 예: 'อร่อย' / '아러이' / '맛있' → 청크 목록 → 청크별 문장 → 문장 안 청크 탐색.
@@ -160,7 +161,7 @@ class _ChunkSearchScreenState extends State<ChunkSearchScreen> {
       );
     }
     return ListView(
-      padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+      padding: EdgeInsets.fromLTRB(16, 8, 16, 24 + bottomInset(context)),
       children: [
         ..._hits
             .take(50)

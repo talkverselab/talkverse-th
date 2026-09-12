@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider/path_provider.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// GitHub 릴리스로 앱을 업데이트한다.
 /// master에 푸시하면 CI가 서명된 APK와 `latest.json`을 `latest` 태그에 올린다.
@@ -139,6 +140,7 @@ class UpdateService {
 
   /// 내려받은 APK의 설치 화면을 띄운다 (안드로이드 전용).
   Future<InstallResult> install(String path) async {
+    if (!isAndroid) return InstallResult.missing; // iOS 는 TestFlight 로 배포
     final r = await _channel.invokeMethod<String>('installApk', {'path': path});
     switch (r) {
       case 'need_permission':

@@ -12,6 +12,7 @@ import '../widgets/vocab_sheet.dart';
 import 'thai_roots_screen.dart';
 import 'word_flashcard_screen.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 한 주제의 단어 타일(3열) — 그림·태국어(루트 밑줄)·독음·뜻·체크박스.
 /// 체크된 단어만 플래시카드로 연습. 한→태 / 태→한 전환, 독음 표시 토글.
@@ -232,7 +233,7 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
                     ),
                   )
                 : GridView.builder(
-                    padding: const EdgeInsets.fromLTRB(10, 6, 10, 24),
+                    padding: EdgeInsets.fromLTRB(10, 6, 10, 24 + bottomInset(context)),
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 3,

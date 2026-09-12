@@ -8,6 +8,7 @@ import '../services/ko_reading.dart';
 import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 영어 유래 단어 — 영어가 태국어로 음차되는 8가지 줄기와 최다 사용 200단어.
 /// 줄기 칩 → 규칙 설명 카드 → 단어 목록(재생 버튼, 예외 표시).
@@ -220,7 +221,7 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
                 const LaiThaiDivider(height: 8),
                 Expanded(
                   child: ListView(
-                    padding: const EdgeInsets.fromLTRB(14, 8, 14, 32),
+                    padding: EdgeInsets.fromLTRB(14, 8, 14, 32 + bottomInset(context)),
                     children: [
                       if (cur != null) _RuleCard(group: cur),
                       if (cur == null)

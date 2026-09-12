@@ -14,6 +14,7 @@ import '../widgets/selectable_thai.dart';
 import '../widgets/thai_decor.dart';
 import 'sentence_flashcard_screen.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 에피소드/다이얼로그 메타 (Learn 탭·회화 허브·홈 공용).
 class EpisodeMeta {
@@ -247,7 +248,7 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
                 Expanded(
                   child: ListView.builder(
                     controller: _listCtrl,
-                    padding: const EdgeInsets.fromLTRB(12, 10, 12, 90),
+                    padding: EdgeInsets.fromLTRB(12, 10, 12, 90 + bottomInset(context)),
                     itemCount: _turns.length,
                     itemBuilder: (context, i) {
                       final t = _turns[i];

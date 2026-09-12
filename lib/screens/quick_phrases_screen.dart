@@ -9,6 +9,7 @@ import '../services/memorized_store.dart';
 import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 바로 문장 — 태국인이 가장 많이 쓰는 표현 모음.
 /// 카테고리 칩 + 큰 카드 + TTS. 여행·일상에서 바로 꺼내 쓰는 코너.
@@ -189,7 +190,7 @@ class _QuickPhrasesScreenState extends State<QuickPhrasesScreen> {
                 const LaiThaiDivider(height: 10),
                 Expanded(
                   child: ListView.separated(
-                    padding: const EdgeInsets.fromLTRB(16, 10, 16, 24),
+                    padding: EdgeInsets.fromLTRB(16, 10, 16, 24 + bottomInset(context)),
                     itemCount: _categories[_catIdx].phrases.length,
                     separatorBuilder: (_, _) => const SizedBox(height: 10),
                     itemBuilder: (context, i) => _PhraseCard(

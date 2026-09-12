@@ -10,6 +10,7 @@ import 'important_words_screen.dart';
 import 'topic_vocab_screen.dart';
 import 'vocab_screen.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 단어장 — 주제별 / 중요 단어(절벽 구간별) 두 갈래.
 class VocabHubScreen extends StatefulWidget {
@@ -77,7 +78,7 @@ class _VocabHubScreenState extends State<VocabHubScreen> {
               child: CircularProgressIndicator(color: AppColors.kluayMai),
             )
           : ListView(
-              padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
+              padding: EdgeInsets.fromLTRB(16, 12, 16, 24 + bottomInset(context)),
               children: [
                 const LaiThaiDivider(height: 8),
                 const SizedBox(height: 8),

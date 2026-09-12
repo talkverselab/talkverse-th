@@ -1,5 +1,7 @@
 import 'package:flutter_tts/flutter_tts.dart';
 
+import '../core/platform.dart';
+
 /// flutter_tts 기반 — 시스템 th-TH voice 사용.
 ///
 /// 화자별 음성: 기기에 남/여 th 보이스가 있으면 voice 전환,
@@ -18,6 +20,18 @@ class TtsService {
 
   Future<void> _ensureInit() async {
     if (_initialized) return;
+    if (isIOS) {
+      // 무음 스위치가 켜져 있어도 재생되게, 다른 앱 소리는 잠시 줄이게
+      await _tts.setSharedInstance(true);
+      await _tts.setIosAudioCategory(
+        IosTextToSpeechAudioCategory.playback,
+        [
+          IosTextToSpeechAudioCategoryOptions.duckOthers,
+          IosTextToSpeechAudioCategoryOptions.defaultToSpeaker,
+        ],
+        IosTextToSpeechAudioMode.spokenAudio,
+      );
+    }
     await _tts.setLanguage('th-TH');
     await _tts.setSpeechRate(0.45);
     await _tts.setPitch(1.0);
@@ -42,13 +56,16 @@ class TtsService {
         if (!locale.toLowerCase().startsWith('th')) continue;
         final lower = name.toLowerCase();
         final voice = {'name': name, 'locale': locale};
-        if (_maleVoice == null &&
-            (lower.contains('male') && !lower.contains('female'))) {
-          _maleVoice = voice;
-        }
-        if (_femaleVoice == null && lower.contains('female')) {
-          _femaleVoice = voice;
-        }
+        // 안드로이드는 이름에 male/female 이 들어 있고, iOS 는 사람 이름(Kanya 등)이다.
+        final gender = (v['gender'] ?? '').toString().toLowerCase();
+        final isFemale = gender == 'female' ||
+            lower.contains('female') ||
+            lower.contains('kanya') ||
+            lower.contains('narisa');
+        final isMale = gender == 'male' ||
+            (lower.contains('male') && !lower.contains('female'));
+        if (_maleVoice == null && isMale) _maleVoice = voice;
+        if (_femaleVoice == null && isFemale) _femaleVoice = voice;
       }
     } catch (_) {
       // 보이스 목록 실패 시 피치 폴백만 사용

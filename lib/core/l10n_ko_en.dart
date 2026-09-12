@@ -267,6 +267,7 @@ const Map<String, String> kKoEn = {
   'Day 1 · 입문': 'Day 1 · Beginner',
   '앱 업데이트': 'App update',
   'GitHub 최신 빌드 확인 · 내려받아 설치': 'Check the latest build on GitHub · download and install',
+  '아이폰은 TestFlight 앱에서 새 빌드를 받습니다': 'On iPhone, new builds arrive through the TestFlight app',
   'TTS 음성': 'TTS voice',
   '시스템 th-TH 보이스': 'System th-TH voice',
   '테마': 'Theme',
