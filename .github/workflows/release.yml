@@ -8,7 +8,9 @@ on:
       - '**.md'
       - '.gitignore'
       - 'ios/**'
-      - '.github/workflows/ios-build.yml'
+      - '.github/workflows/ios-*.yml'
+      - 'tools/**'
+      - 'docs/**'
   workflow_dispatch:
 
 permissions:
