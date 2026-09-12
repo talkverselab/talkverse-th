@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider/path_provider.dart';
+import '../core/l10n.dart';
 
 /// GitHub 릴리스로 앱을 업데이트한다.
 /// master에 푸시하면 CI가 서명된 APK와 `latest.json`을 `latest` 태그에 올린다.
@@ -73,8 +74,8 @@ class UpdateService {
   String get currentVersion => _currentVersion;
 
   String get currentText => _currentVersion.isEmpty
-      ? '확인 중'
-      : '$_currentVersion · 빌드 $_currentBuild';
+      ? tr('확인 중')
+      : trf('{0} · 빌드 {1}', [_currentVersion, _currentBuild]);
 
   Future<void> loadCurrent() async {
     final info = await PackageInfo.fromPlatform();
@@ -94,7 +95,7 @@ class UpdateService {
       final req = await client.getUrl(url);
       final res = await req.close();
       if (res.statusCode != HttpStatus.ok) {
-        throw HttpException('서버 응답 ${res.statusCode}', uri: url);
+        throw HttpException(trf('서버 응답 {0}', [res.statusCode]), uri: url);
       }
       final out = <int>[];
       await for (final chunk in res) {
@@ -116,7 +117,7 @@ class UpdateService {
       final req = await client.getUrl(Uri.parse('$_base/$apkName'));
       final res = await req.close();
       if (res.statusCode != HttpStatus.ok) {
-        throw HttpException('내려받기 실패 (${res.statusCode})');
+        throw HttpException(trf('내려받기 실패 ({0})', [res.statusCode]));
       }
       final total = res.contentLength;
       var received = 0;

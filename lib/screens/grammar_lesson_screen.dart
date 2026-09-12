@@ -7,6 +7,7 @@ import '../core/theme.dart';
 import '../services/tts_service.dart';
 import '../widgets/memo_toggle.dart';
 import '../widgets/thai_decor.dart';
+import '../core/l10n.dart';
 
 /// 어말조사(คำลงท้าย) 레슨 — 태국어 말맛의 핵심.
 /// 실제 구어 예문 기반.
@@ -22,12 +23,12 @@ class _GrammarLessonScreenState extends State<GrammarLessonScreen> {
   bool _loading = true;
   String _filter = 'ALL';
 
-  static const Map<String, (String, Color)> _registers = {
-    'ALL': ('전체', AppColors.khram),
-    'grammar': ('문법', Color(0xFFAD1457)),
-    'polite': ('공손', AppColors.morakot),
-    'neutral': ('중립', AppColors.thongDeep),
-    'casual': ('구어', AppColors.kluayMai),
+  static final Map<String, (String, Color)> _registers = {
+    'ALL': (tr('전체'), AppColors.khram),
+    'grammar': (tr('문법'), Color(0xFFAD1457)),
+    'polite': (tr('공손'), AppColors.morakot),
+    'neutral': (tr('중립'), AppColors.thongDeep),
+    'casual': (tr('구어'), AppColors.kluayMai),
   };
 
   @override
@@ -72,10 +73,10 @@ class _GrammarLessonScreenState extends State<GrammarLessonScreen> {
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
-        title: const Column(
+        title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('문법 · 어말조사',
+            Text(tr('문법 · 어말조사'),
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
             SizedBox(height: 2),
             Text('คำลงท้าย',
@@ -180,10 +181,10 @@ class _SfpCardState extends State<_SfpCard> {
       };
 
   String get _registerLabel => switch (widget.item.register) {
-        'grammar' => '문법',
-        'polite' => '공손',
-        'casual' => '구어',
-        _ => '중립',
+        'grammar' => tr('문법'),
+        'polite' => tr('공손'),
+        'casual' => tr('구어'),
+        _ => tr('중립'),
       };
 
   @override

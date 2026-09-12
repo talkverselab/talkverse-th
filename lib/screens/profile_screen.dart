@@ -4,6 +4,7 @@ import '../core/theme.dart';
 import '../services/update_service.dart';
 import '../widgets/thai_decor.dart';
 import 'update_screen.dart';
+import '../core/l10n.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -28,7 +29,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.cream,
-      appBar: AppBar(title: const Text('프로필 · 설정')),
+      appBar: AppBar(title: Text(tr('프로필 · 설정'))),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
@@ -41,7 +42,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               borderRadius: BorderRadius.circular(14),
               border: Border.all(color: AppColors.thong, width: 1.5),
             ),
-            child: const Row(
+            child: Row(
               children: [
                 GoldEmblem(text: 'เรียน', size: 60),
                 SizedBox(width: 14),
@@ -50,7 +51,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '학습자',
+                        tr('학습자'),
                         style: TextStyle(
                           color: AppColors.cream,
                           fontSize: 20,
@@ -60,7 +61,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       SizedBox(height: 4),
                       Text(
-                        'Day 1 · 입문',
+                        tr('Day 1 · 입문'),
                         style: TextStyle(
                           color: AppColors.thongBright,
                           fontSize: 13,
@@ -75,7 +76,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
           ),
           const SizedBox(height: 18),
-          const Text('설정',
+          Text(tr('설정'),
               style: TextStyle(
                 fontWeight: FontWeight.w800,
                 fontSize: 15,
@@ -85,24 +86,31 @@ class _ProfileScreenState extends State<ProfileScreen> {
           const SizedBox(height: 8),
           _SettingsGroup(items: [
             _SettingItem(
+                icon: Icons.language,
+                title: tr('언어 / Language'),
+                subtitle: AppLangPrefs.isEn
+                    ? 'English  (tap: 한국어)'
+                    : '한국어  (탭: English)',
+                onTap: AppLangPrefs.toggle),
+            _SettingItem(
                 icon: Icons.system_update,
-                title: '앱 업데이트',
-                subtitle: 'GitHub 최신 빌드 확인 · 내려받아 설치',
+                title: tr('앱 업데이트'),
+                subtitle: tr('GitHub 최신 빌드 확인 · 내려받아 설치'),
                 onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(builder: (_) => const UpdateScreen()),
                     )),
             _SettingItem(
                 icon: Icons.volume_up,
-                title: 'TTS 음성',
-                subtitle: '시스템 th-TH 보이스'),
+                title: tr('TTS 음성'),
+                subtitle: tr('시스템 th-TH 보이스')),
             _SettingItem(
                 icon: Icons.palette,
-                title: '테마',
-                subtitle: '낮 · 태국어 하늘색 #3F9FD6'),
+                title: tr('테마'),
+                subtitle: tr('낮 · 태국어 하늘색 #3F9FD6')),
           ]),
           const SizedBox(height: 16),
-          const Text('정보',
+          Text(tr('정보'),
               style: TextStyle(
                 fontWeight: FontWeight.w800,
                 fontSize: 15,
@@ -113,7 +121,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           _SettingsGroup(items: [
             _SettingItem(
                 icon: Icons.info_outline,
-                title: '앱 버전',
+                title: tr('앱 버전'),
                 subtitle: UpdateService.instance.currentText),
             _SettingItem(
                 icon: Icons.code,
@@ -121,17 +129,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 subtitle: 'Flutter · Material 3 · SQLite'),
             _SettingItem(
                 icon: Icons.copyright,
-                title: '저작권',
-                subtitle: '태국어유니버스 · 2026'),
+                title: tr('저작권'),
+                subtitle: tr('태국어유니버스 · 2026')),
           ]),
           const SizedBox(height: 20),
           const SilkDivider(),
           const SizedBox(height: 12),
           const Center(child: Lotus(size: 30)),
           const SizedBox(height: 6),
-          const Center(
+          Center(
             child: Text(
-              'ค่อยๆ ไป · 천천히 꾸준히',
+              tr('ค่อยๆ ไป · 천천히 꾸준히'),
               style: TextStyle(
                 color: AppColors.khramLight,
                 fontSize: 11,

@@ -8,6 +8,7 @@ import '../services/ko_reading.dart';
 import '../services/memorized_store.dart';
 import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
+import '../core/l10n.dart';
 
 /// 바로 문장 — 태국인이 가장 많이 쓰는 표현 모음.
 /// 카테고리 칩 + 큰 카드 + TTS. 여행·일상에서 바로 꺼내 쓰는 코너.
@@ -56,9 +57,9 @@ class _QuickPhrasesScreenState extends State<QuickPhrasesScreen> {
   }
 
   String get _modeLabel => switch (_mode) {
-        StudyMode.all => '전체',
-        StudyMode.hideTh => '태국어가림',
-        StudyMode.hideKo => '뜻가림',
+        StudyMode.all => tr('전체'),
+        StudyMode.hideTh => tr('태국어가림'),
+        StudyMode.hideKo => tr('뜻가림'),
       };
 
   Future<void> _load() async {
@@ -93,10 +94,10 @@ class _QuickPhrasesScreenState extends State<QuickPhrasesScreen> {
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
-        title: const Column(
+        title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('바로 문장',
+            Text(tr('바로 문장'),
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
             SizedBox(height: 2),
             Text('ประโยคใช้บ่อย',
@@ -106,7 +107,7 @@ class _QuickPhrasesScreenState extends State<QuickPhrasesScreen> {
         actions: [
           const KoReadingToggleAction(),
           IconButton(
-            tooltip: '외우기 모드: $_modeLabel (탭하여 전환)',
+            tooltip: trf('외우기 모드: {0} (탭하여 전환)', [_modeLabel]),
             onPressed: _cycleMode,
             icon: Container(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
@@ -297,7 +298,7 @@ class _PhraseCardState extends State<_PhraseCard> {
                 const SizedBox(width: 8),
                 if (study || memorized)
                   IconButton(
-                    tooltip: memorized ? '외움 해제' : '외웠어요',
+                    tooltip: memorized ? tr('외움 해제') : tr('외웠어요'),
                     onPressed: () => MemorizedStore.toggle(phrase.th),
                     icon: Icon(
                       memorized

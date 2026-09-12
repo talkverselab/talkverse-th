@@ -13,6 +13,7 @@ import '../services/tts_service.dart';
 import '../widgets/selectable_thai.dart';
 import '../widgets/thai_decor.dart';
 import 'sentence_flashcard_screen.dart';
+import '../core/l10n.dart';
 
 /// 에피소드/다이얼로그 메타 (Learn 탭·회화 허브·홈 공용).
 class EpisodeMeta {
@@ -20,7 +21,7 @@ class EpisodeMeta {
   final String id;
   final String title;
   final String emoji;
-  const EpisodeMeta(this.level, this.id, this.title, this.emoji);
+  EpisodeMeta(this.level, this.id, this.title, this.emoji);
 }
 
 /// L1~L3 JSON에서 에피소드 목록을 1회 로드해 공유.
@@ -31,10 +32,10 @@ class EpisodeCatalog {
   final Map<String, List<EpisodeMeta>> _byLevel = {};
   bool _loaded = false;
 
-  static const Map<String, String> levelLabels = {
-    'L1': 'L1 스토리 — 방콕 첫걸음',
-    'L2': 'L2 연애 챗 — 썸부터 고백까지',
-    'L3': 'L3 여행 회화 — 상황별 실전',
+  static Map<String, String> levelLabels = {
+    'L1': tr('L1 스토리 — 방콕 첫걸음'),
+    'L2': tr('L2 연애 챗 — 썸부터 고백까지'),
+    'L3': tr('L3 여행 회화 — 상황별 실전'),
   };
 
   List<EpisodeMeta> forLevel(String level) => _byLevel[level] ?? const [];
@@ -186,7 +187,7 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
             ),
             const SizedBox(height: 2),
             Text(
-              '${meta.level} · 민호 & ฟ้า',
+              trf('{0} · 민호 & ฟ้า', [meta.level]),
               style: const TextStyle(
                 color: AppColors.khramLight,
                 fontSize: 10,
@@ -197,7 +198,7 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
         ),
         actions: [
           IconButton(
-            tooltip: _playingIdx >= 0 ? '전체 재생 정지' : '전체 재생',
+            tooltip: _playingIdx >= 0 ? tr('전체 재생 정지') : tr('전체 재생'),
             icon: Icon(
               _playingIdx >= 0
                   ? Icons.stop_circle
@@ -209,7 +210,7 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
           ),
           const KoReadingToggleAction(),
           IconButton(
-            tooltip: '이 에피소드 플래시카드',
+            tooltip: tr('이 에피소드 플래시카드'),
             icon: const Icon(Icons.style, color: AppColors.kluayMai),
             onPressed: () async {
               await Navigator.push(

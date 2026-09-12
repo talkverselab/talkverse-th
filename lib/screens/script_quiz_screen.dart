@@ -6,6 +6,7 @@ import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/theme.dart';
 import '../services/tts_service.dart';
+import '../core/l10n.dart';
 
 /// 문자 퀴즈 — 자음 44자 4지선다 (문자 → 이름·뜻 고르기).
 class ScriptQuizScreen extends StatefulWidget {
@@ -95,9 +96,9 @@ class _ScriptQuizScreenState extends State<ScriptQuizScreen> {
       barrierDismissible: false,
       builder: (_) => AlertDialog(
         backgroundColor: AppColors.cream,
-        title: const Text('퀴즈 완료 🎉',
+        title: Text(tr('퀴즈 완료 🎉'),
             style: TextStyle(fontWeight: FontWeight.w900)),
-        content: Text('$_rounds문제 중 $_correct개 정답!'),
+        content: Text(trf('{0}문제 중 {1}개 정답!', [_rounds, _correct])),
         actions: [
           TextButton(
             onPressed: () {
@@ -108,7 +109,7 @@ class _ScriptQuizScreenState extends State<ScriptQuizScreen> {
                 _nextRound();
               });
             },
-            child: const Text('다시 풀기'),
+            child: Text(tr('다시 풀기')),
           ),
           FilledButton(
             style: FilledButton.styleFrom(
@@ -117,7 +118,7 @@ class _ScriptQuizScreenState extends State<ScriptQuizScreen> {
               Navigator.pop(context);
               Navigator.pop(context);
             },
-            child: const Text('종료'),
+            child: Text(tr('종료')),
           ),
         ],
       ),
@@ -129,7 +130,7 @@ class _ScriptQuizScreenState extends State<ScriptQuizScreen> {
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
-        title: const Text('문자 퀴즈'),
+        title: Text(tr('문자 퀴즈')),
         actions: [
           Center(
             child: Padding(
@@ -205,10 +206,10 @@ class _ScriptQuizScreenState extends State<ScriptQuizScreen> {
                 ),
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(bottom: 8),
               child: Text(
-                '이 글자의 이름은?',
+                tr('이 글자의 이름은?'),
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w700,

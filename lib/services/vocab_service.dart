@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 
 import 'thai_dict_service.dart';
+import '../core/l10n.dart';
 
 /// 통합 단어장 항목 — 표제어 기준으로 병합된 단어 (출처는 노출하지 않는다).
 class VocabEntry {
@@ -60,12 +61,12 @@ class VocabEntry {
 
   /// 분류 라벨 — 30일 코스 일차/테마만. 출처(책명·쪽수)는 노출하지 않는다.
   String get sourceLabel =>
-      isBook ? '$day일차${theme.isNotEmpty ? ' · $theme' : ''}' : '';
+      isBook ? trf('{0}일차{1}', [day, theme.isNotEmpty ? ' · $theme' : '']) : '';
 
   /// 빈도 단계 별 표시 — 1단계(최상위) = ★★★★★. level 0 이면 빈 문자열.
   String get levelStars =>
       level == 0 ? '' : '★' * (6 - level) + '☆' * (level - 1);
-  String get levelLabel => level == 0 ? '' : '빈도 $level단계 $levelStars';
+  String get levelLabel => level == 0 ? '' : trf('빈도 {0}단계 {1}', [level, levelStars]);
 
   factory VocabEntry.fromJson(Map<String, dynamic> m) {
     final exm = m['ex'] as Map<String, dynamic>?;

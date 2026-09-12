@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../core/theme.dart';
 import 'tone_service.dart';
+import '../core/l10n.dart';
 
 /// 독음 표시 방식 — 한글 / 한글+성조 / 로마자(우리 표기)+성조 / 숨김.
 enum ReadingStyle { ko, koTone, roman, off }
@@ -47,17 +48,17 @@ class KoReadingPrefs {
       .values[(style.value.index + 1) % ReadingStyle.values.length]);
 
   static String label(ReadingStyle s) => switch (s) {
-        ReadingStyle.ko => '한',
-        ReadingStyle.koTone => '한ˊ',
+        ReadingStyle.ko => tr('한'),
+        ReadingStyle.koTone => tr('한ˊ'),
         ReadingStyle.roman => 'ABC',
-        ReadingStyle.off => '한',
+        ReadingStyle.off => tr('한'),
       };
 
   static String tooltip(ReadingStyle s) => switch (s) {
-        ReadingStyle.ko => '한글 독음 (탭: 성조 표시)',
-        ReadingStyle.koTone => '한글 독음 + 성조 (탭: 로마자)',
-        ReadingStyle.roman => '로마자 + 성조 (탭: 독음 숨기기)',
-        ReadingStyle.off => '독음 숨김 (탭: 한글 독음)',
+        ReadingStyle.ko => tr('한글 독음 (탭: 성조 표시)'),
+        ReadingStyle.koTone => tr('한글 독음 + 성조 (탭: 로마자)'),
+        ReadingStyle.roman => tr('로마자 + 성조 (탭: 독음 숨기기)'),
+        ReadingStyle.off => tr('독음 숨김 (탭: 한글 독음)'),
       };
 }
 
@@ -124,17 +125,19 @@ class KoReadingText extends StatelessWidget {
       valueListenable: KoReadingPrefs.style,
       builder: (context, s, _) {
         if (s == ReadingStyle.off) return const SizedBox.shrink();
-        if (s == ReadingStyle.ko || th == null) {
+        // 영어 모드: 한글 독음 대신 로마자 (성조 DB가 아는 문자열만, 모르면 원래 독음)
+        final wantRoman = s == ReadingStyle.roman || AppLangPrefs.isEn;
+        if ((s == ReadingStyle.ko && !wantRoman) || th == null) {
           return Text(reading, textAlign: textAlign, style: style);
         }
-        final tr = ToneService.instance.lookup(th!);
-        if (tr == null) {
+        final tone = ToneService.instance.lookup(th!);
+        if (tone == null) {
           return Text(reading, textAlign: textAlign, style: style);
         }
-        if (s == ReadingStyle.koTone) {
-          return Text(tr.ko, textAlign: textAlign, style: style);
+        if (s == ReadingStyle.koTone && !wantRoman) {
+          return Text(tone.ko, textAlign: textAlign, style: style);
         }
-        return RomanText(tr.ro, textAlign: textAlign, style: style);
+        return RomanText(tone.ro, textAlign: textAlign, style: style);
       },
     );
   }

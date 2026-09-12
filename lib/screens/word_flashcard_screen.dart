@@ -7,6 +7,7 @@ import '../services/tts_service.dart';
 import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
 import '../widgets/vocab_sheet.dart';
+import '../core/l10n.dart';
 
 /// 단어 플래시카드 — 한→태(기본) / 태→한, 독음 토글, 탭해서 뒤집기, 알아요 = 체크 해제.
 class WordFlashcardScreen extends StatefulWidget {
@@ -66,8 +67,8 @@ class _WordFlashcardScreenState extends State<WordFlashcardScreen> {
               style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800),
             ),
             const SizedBox(height: 2),
-            const Text(
-              '단어 플래시카드',
+            Text(
+              tr('단어 플래시카드'),
               style: TextStyle(fontSize: 10, letterSpacing: 2),
             ),
           ],
@@ -75,7 +76,7 @@ class _WordFlashcardScreenState extends State<WordFlashcardScreen> {
         actions: [
           const KoReadingToggleAction(),
           IconButton(
-            tooltip: _koFirst ? '한→태 (탭: 태→한)' : '태→한 (탭: 한→태)',
+            tooltip: _koFirst ? tr('한→태 (탭: 태→한)') : tr('태→한 (탭: 한→태)'),
             onPressed: () => setState(() {
               _koFirst = !_koFirst;
               _flipped = false;
@@ -88,7 +89,7 @@ class _WordFlashcardScreenState extends State<WordFlashcardScreen> {
                 color: AppColors.kluayMai.withValues(alpha: 0.08),
               ),
               child: Text(
-                _koFirst ? '한→태' : '태→한',
+                _koFirst ? tr('한→태') : tr('태→한'),
                 style: const TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w900,
@@ -174,10 +175,10 @@ class _WordFlashcardScreenState extends State<WordFlashcardScreen> {
                             ),
                           ),
                         ] else
-                          const Padding(
+                          Padding(
                             padding: EdgeInsets.only(top: 14),
                             child: Text(
-                              '탭해서 뜻 보기',
+                              tr('탭해서 뜻 보기'),
                               style: TextStyle(
                                 fontSize: 12,
                                 color: AppColors.khramLight,
@@ -205,8 +206,8 @@ class _WordFlashcardScreenState extends State<WordFlashcardScreen> {
                           ),
                         ),
                         const SizedBox(height: 18),
-                        const Text(
-                          '탭해서 뒤집기',
+                        Text(
+                          tr('탭해서 뒤집기'),
                           style: TextStyle(
                             fontSize: 12,
                             color: AppColors.khramLight,
@@ -223,7 +224,7 @@ class _WordFlashcardScreenState extends State<WordFlashcardScreen> {
             padding: const EdgeInsets.fromLTRB(16, 4, 16, 20),
             child: Row(
               children: [
-                _NavBtn(label: '← 이전', enabled: _idx > 0, onTap: () => _go(-1)),
+                _NavBtn(label: tr('← 이전'), enabled: _idx > 0, onTap: () => _go(-1)),
                 const SizedBox(width: 8),
                 Expanded(
                   child: FilledButton(
@@ -233,8 +234,8 @@ class _WordFlashcardScreenState extends State<WordFlashcardScreen> {
                       padding: const EdgeInsets.symmetric(vertical: 14),
                     ),
                     onPressed: _markKnown,
-                    child: const Text(
-                      '알아요 ✓ (체크 해제)',
+                    child: Text(
+                      tr('알아요 ✓ (체크 해제)'),
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w900,
@@ -244,7 +245,7 @@ class _WordFlashcardScreenState extends State<WordFlashcardScreen> {
                 ),
                 const SizedBox(width: 8),
                 _NavBtn(
-                  label: '다음 →',
+                  label: tr('다음 →'),
                   enabled: _idx < widget.words.length - 1,
                   onTap: () => _go(1),
                 ),

@@ -7,6 +7,7 @@ import '../core/theme.dart';
 import '../services/ko_reading.dart';
 import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
+import '../core/l10n.dart';
 
 /// 영어 유래 단어 — 영어가 태국어로 음차되는 8가지 줄기와 최다 사용 200단어.
 /// 줄기 칩 → 규칙 설명 카드 → 단어 목록(재생 버튼, 예외 표시).
@@ -125,18 +126,18 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final list = _loading ? const <_Word>[] : _list;
+    final list = _loading ? <_Word>[] : _list;
     final cur = _current;
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
-        title: const Column(
+        title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('영어 유래 단어',
+            Text(tr('영어 유래 단어'),
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
             SizedBox(height: 2),
-            Text('คำทับศัพท์ · 음차 규칙 8줄기',
+            Text(tr('คำทับศัพท์ · 음차 규칙 8줄기'),
                 style: TextStyle(fontSize: 10, letterSpacing: 2)),
           ],
         ),
@@ -159,7 +160,7 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
                       fontFamilyFallback: AppTheme.fontFallback,
                     ),
                     decoration: InputDecoration(
-                      hintText: '태국어 · 영어 · 뜻 · 독음',
+                      hintText: tr('태국어 · 영어 · 뜻 · 독음'),
                       hintStyle: const TextStyle(
                           color: AppColors.khramLight, fontSize: 13),
                       prefixIcon: const Icon(Icons.search,
@@ -198,7 +199,7 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
                       scrollDirection: Axis.horizontal,
                       children: [
                         _Chip(
-                          label: '전체 ${_words.length}',
+                          label: trf('전체 {0}', [_words.length]),
                           selected: _group == 'ALL',
                           onTap: () => setState(() => _group = 'ALL'),
                         ),
@@ -223,10 +224,10 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
                     children: [
                       if (cur != null) _RuleCard(group: cur),
                       if (cur == null)
-                        const Padding(
+                        Padding(
                           padding: EdgeInsets.fromLTRB(2, 2, 2, 10),
                           child: Text(
-                            '영어 단어가 태국어에 들어올 때 소리가 바뀌는 규칙을 8가지 줄기로 나눴어요. 줄기를 고르면 규칙 설명과 해당 단어가 보입니다. 규칙에서 벗어나는 단어는 "예외"로 표시했습니다.',
+                            tr('영어 단어가 태국어에 들어올 때 소리가 바뀌는 규칙을 8가지 줄기로 나눴어요. 줄기를 고르면 규칙 설명과 해당 단어가 보입니다. 규칙에서 벗어나는 단어는 "예외"로 표시했습니다.'),
                             style: TextStyle(
                                 fontSize: 12.5,
                                 height: 1.45,
@@ -234,10 +235,10 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
                           ),
                         ),
                       if (list.isEmpty)
-                        const Padding(
+                        Padding(
                           padding: EdgeInsets.all(24),
                           child: Center(
-                            child: Text('단어가 없어요',
+                            child: Text(tr('단어가 없어요'),
                                 style:
                                     TextStyle(color: AppColors.khramLight)),
                           ),
@@ -287,7 +288,7 @@ class _MapTable extends StatelessWidget {
     final line = BorderSide(color: AppColors.thong.withValues(alpha: 0.5));
     String prev = '';
     return Table(
-      columnWidths: const {
+      columnWidths: {
         0: FixedColumnWidth(26),
         1: FlexColumnWidth(1.25),
         2: FixedColumnWidth(62),
@@ -301,12 +302,12 @@ class _MapTable extends StatelessWidget {
         bottom: line,
       ),
       children: [
-        const TableRow(children: [
+        TableRow(children: [
           Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text('', style: head)),
-          Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text('영어 소리', style: head)),
-          Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text('태국어', style: head)),
-          Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text('한글', style: head)),
-          Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text('예', style: head)),
+          Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text(tr('영어 소리'), style: head)),
+          Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text(tr('태국어'), style: head)),
+          Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text(tr('한글'), style: head)),
+          Padding(padding: EdgeInsets.symmetric(vertical: 6), child: Text(tr('예'), style: head)),
         ]),
         for (final r in rows)
           TableRow(
@@ -389,7 +390,7 @@ class _RuleCard extends StatelessWidget {
           if (group.examples.isNotEmpty) ...[
             const SizedBox(height: 6),
             Text(
-              '예) ${group.examples}',
+              trf('예) {0}', [group.examples]),
               style: TextStyle(
                 fontSize: 12.5,
                 fontWeight: FontWeight.w700,
@@ -466,7 +467,7 @@ class _WordRow extends StatelessWidget {
                           padding: const EdgeInsets.symmetric(
                               horizontal: 5, vertical: 1),
                           color: exColor,
-                          child: const Text('예외',
+                          child: Text(tr('예외'),
                               style: TextStyle(
                                   fontSize: 10,
                                   fontWeight: FontWeight.w900,

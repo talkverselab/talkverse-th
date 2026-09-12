@@ -6,6 +6,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import '../core/theme.dart';
 import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
+import '../core/l10n.dart';
 
 /// 복습 카드 — 태국 자음 44자 플래시카드 (TTS 발음 포함).
 class FlashcardScreen extends StatefulWidget {
@@ -56,8 +57,8 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
       setState(() => _index++);
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('🎉 복습 세션 완료!'),
+        SnackBar(
+          content: Text(tr('🎉 복습 세션 완료!')),
           backgroundColor: AppColors.morakot,
         ),
       );
@@ -79,10 +80,10 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
         backgroundColor: AppColors.cream,
         foregroundColor: AppColors.khram,
         elevation: 0,
-        title: const Column(
+        title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('복습 카드',
+            Text(tr('복습 카드'),
                 style: TextStyle(
                     color: AppColors.khram,
                     fontWeight: FontWeight.w800,
@@ -109,9 +110,9 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
     final total = _cards.length;
     final clsColor = consonantClassColor(card.cls);
     final clsLabel = switch (card.cls) {
-      'high' => '고자음 สูง',
-      'mid' => '중자음 กลาง',
-      'low' => '저자음 ต่ำ',
+      'high' => tr('고자음 สูง'),
+      'mid' => tr('중자음 กลาง'),
+      'low' => tr('저자음 ต่ำ'),
       _ => card.cls,
     };
     return Column(
@@ -251,19 +252,19 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
             children: [
               _SrsButton(
                 icon: Icons.close,
-                label: '몰라요',
+                label: tr('몰라요'),
                 color: const Color(0xFFE53935),
                 onTap: () => _answer(0),
               ),
               _SrsButton(
                 icon: Icons.refresh,
-                label: '보통이에요',
+                label: tr('보통이에요'),
                 color: AppColors.thong,
                 onTap: () => _answer(1),
               ),
               _SrsButton(
                 icon: Icons.check,
-                label: '알아요',
+                label: tr('알아요'),
                 color: AppColors.morakot,
                 onTap: () => _answer(2),
               ),

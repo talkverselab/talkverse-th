@@ -12,6 +12,7 @@ import '../widgets/thai_decor.dart';
 import 'topic_words_screen.dart';
 import 'vocab_screen.dart';
 import 'word_flashcard_screen.dart';
+import '../core/l10n.dart';
 
 /// 주제별 단어 — 주제 타일 그리드 + 맨 위 플래시카드 연습 버튼.
 class TopicVocabScreen extends StatefulWidget {
@@ -70,7 +71,7 @@ class _TopicVocabScreenState extends State<TopicVocabScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => WordFlashcardScreen(title: '전체 단어', words: words),
+        builder: (_) => WordFlashcardScreen(title: tr('전체 단어'), words: words),
       ),
     );
   }
@@ -84,20 +85,20 @@ class _TopicVocabScreenState extends State<TopicVocabScreen> {
         title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text(
-              '주제별 단어',
+            Text(
+              tr('주제별 단어'),
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
             ),
             const SizedBox(height: 2),
             Text(
-              '태국어 · $total항목',
+              trf('태국어 · {0}항목', [total]),
               style: const TextStyle(fontSize: 10, letterSpacing: 2),
             ),
           ],
         ),
         actions: [
           IconButton(
-            tooltip: '전체 검색',
+            tooltip: tr('전체 검색'),
             icon: const Icon(Icons.search),
             onPressed: () => Navigator.push(
               context,
@@ -132,7 +133,7 @@ class _TopicVocabScreenState extends State<TopicVocabScreen> {
                           onPressed: _practiceAll,
                           icon: const Icon(Icons.style),
                           label: Text(
-                            '플래시카드 연습 · 체크된 단어 $n개',
+                            trf('플래시카드 연습 · 체크된 단어 {0}개', [n]),
                             style: const TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.w900,
@@ -191,7 +192,7 @@ class _TopicVocabScreenState extends State<TopicVocabScreen> {
                               ),
                               const SizedBox(height: 2),
                               Text(
-                                '${t.parts.length}편 · ${t.count}단어',
+                                trf('{0}편 · {1}단어', [t.parts.length, t.count]),
                                 style: const TextStyle(
                                   fontSize: 12.5,
                                   color: AppColors.khramLight,

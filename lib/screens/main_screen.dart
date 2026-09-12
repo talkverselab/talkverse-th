@@ -22,6 +22,7 @@ import 'speaking_practice_screen.dart';
 import 'thai_roots_screen.dart';
 import 'tones_screen.dart';
 import 'vocab_hub_screen.dart';
+import '../core/l10n.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -33,30 +34,30 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   int _index = 0;
 
-  static const List<Widget> _screens = [
+  static final List<Widget> _screens = [
     HomeScreen(),
     LearnScreen(),
     ProgressScreen(),
     ProfileScreen(),
   ];
 
-  static const List<NavigationDestination> _tabs = [
+  static final List<NavigationDestination> _tabs = [
     NavigationDestination(
         icon: Icon(Icons.home_outlined),
         selectedIcon: Icon(Icons.home),
-        label: '홈'),
+        label: tr('홈')),
     NavigationDestination(
         icon: Icon(Icons.menu_book_outlined),
         selectedIcon: Icon(Icons.menu_book),
-        label: '학습'),
+        label: tr('학습')),
     NavigationDestination(
         icon: Icon(Icons.bar_chart_outlined),
         selectedIcon: Icon(Icons.bar_chart),
-        label: '진행'),
+        label: tr('진행')),
     NavigationDestination(
         icon: Icon(Icons.person_outline),
         selectedIcon: Icon(Icons.person),
-        label: '프로필'),
+        label: tr('프로필')),
   ];
 
   @override
@@ -110,7 +111,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                           const SizedBox(height: 2),
                           Text(
-                            '한국 학습자, 오늘도 방콕 한 걸음',
+                            tr('한국 학습자, 오늘도 방콕 한 걸음'),
                             style: TextStyle(
                               fontSize: 13,
                               color: AppColors.khramLight,
@@ -136,8 +137,8 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 18),
-                const Text(
-                  '오늘의 학습',
+                Text(
+                  tr('오늘의 학습'),
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w800,
@@ -148,12 +149,12 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 8),
                 const _TodayMission(),
                 const SizedBox(height: 22),
-                const Row(
+                Row(
                   children: [
                     GoldEmblem(text: 'เร็ว', size: 22),
                     SizedBox(width: 8),
                     Text(
-                      '퀵메뉴',
+                      tr('퀵메뉴'),
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w800,
@@ -166,12 +167,12 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 10),
                 const _QuickMenuRow(),
                 const SizedBox(height: 22),
-                const Row(
+                Row(
                   children: [
                     GoldEmblem(text: 'เมนู', size: 22),
                     SizedBox(width: 8),
                     Text(
-                      '메인 메뉴',
+                      tr('메인 메뉴'),
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w800,
@@ -186,9 +187,9 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 28),
                 const SilkDivider(),
                 const SizedBox(height: 12),
-                const Center(
+                Center(
                   child: Text(
-                    '태국어유니버스 · 2026',
+                    tr('태국어유니버스 · 2026'),
                     style: TextStyle(
                       color: AppColors.khramLight,
                       fontSize: 11,
@@ -258,7 +259,7 @@ class _TodayMissionState extends State<_TodayMission> {
     return TodayMissionCard(
       level: meta.level == 'L1' ? 'BEGINNER 1' : meta.level,
       lessonTitle: '${meta.level} · ${meta.title}',
-      lessonSubtitle: '민호 & ฟ้า 스토리 ${meta.emoji}',
+      lessonSubtitle: trf('민호 & ฟ้า 스토리 {0}', [meta.emoji]),
       progress: _learned,
       total: _total,
       onTap: () async {
@@ -279,14 +280,14 @@ class _QuickMenuRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final items = <(String, String, bool, WidgetBuilder)>[
-      ('⚡', '바로 문장', true, (_) => const QuickPhrasesScreen()),
-      ('📖', '단어장', false, (_) => const VocabHubScreen()),
-      ('🗣️', '표현학습', false, (_) => const ExpressionsScreen()),
-      ('💬', '회화', false, (_) => const ConversationScreen()),
-      ('🎙️', '문장 말하기', false, (_) => const SpeakingPracticeScreen()),
-      ('⌨️', '키보드연습', false, (_) => const KeyboardPracticeScreen()),
-      ('🔍', '청크 검색', false, (_) => const ChunkSearchScreen()),
-      ('🎴', '복습', false, (_) => const FlashcardScreen()),
+      ('⚡', tr('바로 문장'), true, (_) => const QuickPhrasesScreen()),
+      ('📖', tr('단어장'), false, (_) => const VocabHubScreen()),
+      ('🗣️', tr('표현학습'), false, (_) => const ExpressionsScreen()),
+      ('💬', tr('회화'), false, (_) => const ConversationScreen()),
+      ('🎙️', tr('문장 말하기'), false, (_) => const SpeakingPracticeScreen()),
+      ('⌨️', tr('키보드연습'), false, (_) => const KeyboardPracticeScreen()),
+      ('🔍', tr('청크 검색'), false, (_) => const ChunkSearchScreen()),
+      ('🎴', tr('복습'), false, (_) => const FlashcardScreen()),
     ];
     return SizedBox(
       height: 42,
@@ -331,79 +332,79 @@ class _MenuGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     final items = <_MenuItem>[
       _MenuItem(
-          label: '회화',
+          label: tr('회화'),
           sub: 'Dialogue',
           emblem: 'คุย',
           color: AppColors.kluayMai,
           builder: (_) => const ConversationScreen()),
       _MenuItem(
-          label: '문장 말하기',
-          sub: '한글 보고 태국어로 · 7초/4초/2초',
+          label: tr('문장 말하기'),
+          sub: tr('한글 보고 태국어로 · 7초/4초/2초'),
           emblem: 'พูด',
           color: const Color(0xFFD84315),
           builder: (_) => const SpeakingPracticeScreen()),
       _MenuItem(
-          label: '문자 44',
-          sub: '자음 · 3분류 · 모음',
+          label: tr('문자 44'),
+          sub: tr('자음 · 3분류 · 모음'),
           emblem: 'ก',
           color: const Color(0xFFC62828),
           builder: (_) => const AlphabetScreen()),
       _MenuItem(
-          label: '성조 5',
+          label: tr('성조 5'),
           sub: 'วรรณยุกต์',
           emblem: 'เสียง',
           color: const Color(0xFF1565C0),
           builder: (_) => const TonesScreen()),
       _MenuItem(
-          label: '문법',
-          sub: 'การ · ที่ · 어말조사',
+          label: tr('문법'),
+          sub: tr('การ · ที่ · 어말조사'),
           emblem: 'นะ',
           color: const Color(0xFFAD1457),
-          builder: (_) => const GrammarLessonScreen()),
+          builder: (_) => GrammarLessonScreen()),
       _MenuItem(
-          label: '단어장',
-          sub: '주제별 · 중요 단어(절벽 구간)',
+          label: tr('단어장'),
+          sub: tr('주제별 · 중요 단어(절벽 구간)'),
           emblem: 'ศัพท์',
           color: AppColors.kluayMaiDeep,
           builder: (_) => const VocabHubScreen()),
       _MenuItem(
           label: 'Manual for English',
-          sub: 'RTGS vs ours · 장음 밑줄',
+          sub: tr('RTGS vs ours · 장음 밑줄'),
           emblem: 'ABC',
           color: const Color(0xFF3949AB),
           builder: (_) => const EnglishManualScreen()),
       _MenuItem(
-          label: '영어 유래 단어',
-          sub: '음차 규칙 8줄기 · 200',
+          label: tr('영어 유래 단어'),
+          sub: tr('음차 규칙 8줄기 · 200'),
           emblem: 'ทับ',
           color: const Color(0xFF00897B),
           builder: (_) => const LoanwordScreen()),
       _MenuItem(
-          label: '표현학습',
-          sub: '주제별 문장·표현',
+          label: tr('표현학습'),
+          sub: tr('주제별 문장·표현'),
           emblem: 'วลี',
           color: AppColors.morakot,
           builder: (_) => const ExpressionsScreen()),
       _MenuItem(
-          label: '루트 단어',
+          label: tr('루트 단어'),
           sub: 'น้ำ → น้ำแข็ง',
           emblem: 'ราก',
           color: AppColors.morakot,
           builder: (_) => const ThaiRootsScreen()),
       _MenuItem(
-          label: '문자 퀴즈',
-          sub: '4지선다',
+          label: tr('문자 퀴즈'),
+          sub: tr('4지선다'),
           emblem: '?',
           color: const Color(0xFF6A1B9A),
           builder: (_) => const ScriptQuizScreen()),
       _MenuItem(
-          label: '키보드연습',
+          label: tr('키보드연습'),
           sub: 'Kedmanee',
           emblem: 'พิมพ์',
           color: const Color(0xFF00897B),
           builder: (_) => const KeyboardPracticeScreen()),
       _MenuItem(
-          label: '복습',
+          label: tr('복습'),
           sub: 'Flashcard',
           emblem: 'ทวน',
           color: AppColors.thong,
@@ -567,7 +568,7 @@ class _LearnScreenState extends State<LearnScreen> {
         backgroundColor: AppColors.cream,
         foregroundColor: AppColors.khram,
         elevation: 0,
-        title: const Text('학습', style: TextStyle(color: AppColors.khram)),
+        title: Text(tr('학습'), style: TextStyle(color: AppColors.khram)),
         centerTitle: true,
         actions: [
           IconButton(
@@ -654,7 +655,7 @@ class _LessonRow extends StatelessWidget {
               ),
             ),
             Text(
-              '${lesson.total}편',
+              trf('{0}편', [lesson.total]),
               style: const TextStyle(
                 fontSize: 11,
                 fontWeight: FontWeight.w800,

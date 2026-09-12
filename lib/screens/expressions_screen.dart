@@ -9,6 +9,7 @@ import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
 import '../widgets/vocab_sheet.dart';
 import 'word_flashcard_screen.dart';
+import '../core/l10n.dart';
 
 /// 표현학습 — 단어장에서 분리한 문장·표현을 주제별로. 주제 타일 → 표현 카드 목록.
 class ExpressionsScreen extends StatefulWidget {
@@ -44,7 +45,7 @@ class _ExpressionsScreenState extends State<ExpressionsScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => WordFlashcardScreen(title: '전체 표현', words: items),
+        builder: (_) => WordFlashcardScreen(title: tr('전체 표현'), words: items),
       ),
     );
   }
@@ -59,13 +60,13 @@ class _ExpressionsScreenState extends State<ExpressionsScreen> {
         title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text(
-              '표현학습',
+            Text(
+              tr('표현학습'),
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
             ),
             const SizedBox(height: 2),
             Text(
-              '주제별 문장·표현 · ${svc.expressions.length}개',
+              trf('주제별 문장·표현 · {0}개', [svc.expressions.length]),
               style: const TextStyle(fontSize: 10, letterSpacing: 2),
             ),
           ],
@@ -90,8 +91,8 @@ class _ExpressionsScreenState extends State<ExpressionsScreen> {
                       ),
                       onPressed: _practiceAll,
                       icon: const Icon(Icons.style),
-                      label: const Text(
-                        '플래시카드 연습 · 체크된 표현',
+                      label: Text(
+                        tr('플래시카드 연습 · 체크된 표현'),
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w900,
@@ -148,7 +149,7 @@ class _ExpressionsScreenState extends State<ExpressionsScreen> {
                               ),
                               const SizedBox(height: 2),
                               Text(
-                                '${t.parts.length}편 · ${t.count}표현',
+                                trf('{0}편 · {1}표현', [t.parts.length, t.count]),
                                 style: const TextStyle(
                                   fontSize: 12.5,
                                   color: AppColors.khramLight,
@@ -194,7 +195,7 @@ class _TopicExpressionsScreenState extends State<_TopicExpressionsScreen> {
     if (items.isEmpty) {
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(const SnackBar(content: Text('체크된 표현이 없어요')));
+      ).showSnackBar(SnackBar(content: Text(tr('체크된 표현이 없어요'))));
       return;
     }
     Navigator.push(
@@ -225,7 +226,7 @@ class _TopicExpressionsScreenState extends State<_TopicExpressionsScreen> {
             ),
             const SizedBox(height: 2),
             Text(
-              '표현 ${_all.length}개',
+              trf('표현 {0}개', [_all.length]),
               style: const TextStyle(fontSize: 10, letterSpacing: 2),
             ),
           ],
@@ -233,7 +234,7 @@ class _TopicExpressionsScreenState extends State<_TopicExpressionsScreen> {
         actions: [
           const KoReadingToggleAction(),
           IconButton(
-            tooltip: _koFirst ? '한→태 (탭: 태→한)' : '태→한 (탭: 한→태)',
+            tooltip: _koFirst ? tr('한→태 (탭: 태→한)') : tr('태→한 (탭: 한→태)'),
             onPressed: () => setState(() => _koFirst = !_koFirst),
             icon: Container(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
@@ -243,7 +244,7 @@ class _TopicExpressionsScreenState extends State<_TopicExpressionsScreen> {
                 color: AppColors.kluayMai.withValues(alpha: 0.08),
               ),
               child: Text(
-                _koFirst ? '한→태' : '태→한',
+                _koFirst ? tr('한→태') : tr('태→한'),
                 style: const TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w900,
@@ -260,8 +261,8 @@ class _TopicExpressionsScreenState extends State<_TopicExpressionsScreen> {
             width: double.infinity,
             color: AppColors.thongBright.withValues(alpha: 0.18),
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-            child: const Text(
-              '아는 표현의 체크는 없애주세요 — 체크된 표현만 플래시카드로 연습합니다',
+            child: Text(
+              tr('아는 표현의 체크는 없애주세요 — 체크된 표현만 플래시카드로 연습합니다'),
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w700,
@@ -281,8 +282,8 @@ class _TopicExpressionsScreenState extends State<_TopicExpressionsScreen> {
                 ),
                 onPressed: _practice,
                 icon: const Icon(Icons.style),
-                label: const Text(
-                  '플래시카드 연습',
+                label: Text(
+                  tr('플래시카드 연습'),
                   style: TextStyle(fontSize: 14, fontWeight: FontWeight.w900),
                 ),
               ),
@@ -298,7 +299,7 @@ class _TopicExpressionsScreenState extends State<_TopicExpressionsScreen> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     _Chip(
-                      label: '전체 ${_all.length}',
+                      label: trf('전체 {0}', [_all.length]),
                       selected: _part == null,
                       onTap: () => setState(() => _part = null),
                     ),

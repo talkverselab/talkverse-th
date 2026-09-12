@@ -16,6 +16,7 @@ import '../services/thai_dict_service.dart';
 import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
 import 'episode_screen.dart';
+import '../core/l10n.dart';
 
 // ─────────────────────────────────────────────────────────────
 // 문장 말하기 — 한국어를 보고 제한 시간 안에 태국어로 말하기
@@ -32,14 +33,14 @@ const String _kPrefThreshold = 'speak_threshold';
 const String _kPrefHint = 'speak_hint';
 const Duration _kGap = Duration(milliseconds: 600);
 const int _kBatch = 4; // 이만큼 말하고 나서 평가
-const String _kPassRule = '빠진 단어 없이 말하면 👍👍 투썸 · 기준을 넘으면 👍 원썸';
+String get _kPassRule => tr('빠진 단어 없이 말하면 👍👍 투썸 · 기준을 넘으면 👍 원썸');
 
 int _secondsOf(int stage) => _kStageSeconds[(stage - 1).clamp(0, 2)];
 
 String _stageHint(int stage) => switch (stage) {
-      1 => '천천히 떠올리며 말하기',
-      2 => '익숙하게 말하기',
-      _ => '반사적으로 말하기',
+      1 => tr('천천히 떠올리며 말하기'),
+      2 => tr('익숙하게 말하기'),
+      _ => tr('반사적으로 말하기'),
     };
 
 /// 힌트: 태국어 첫 어절 + 독음 첫 어절만 (그 이상은 절대 노출하지 않음).
@@ -147,11 +148,11 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
         foregroundColor: AppColors.khram,
         elevation: 0,
         centerTitle: true,
-        title: const Column(
+        title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              '문장 말하기',
+              tr('문장 말하기'),
               style: TextStyle(
                   color: AppColors.khram,
                   fontSize: 16,
@@ -159,7 +160,7 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
             ),
             SizedBox(height: 2),
             Text(
-              '한국어 보고 태국어로 말하기',
+              tr('한국어 보고 태국어로 말하기'),
               style: TextStyle(
                   color: AppColors.khramLight, fontSize: 10, letterSpacing: 2),
             ),
@@ -187,7 +188,7 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
           child: ListView(
             padding: const EdgeInsets.fromLTRB(16, 12, 16, 30),
             children: [
-              const _SectionLabel('단계'),
+              _SectionLabel(tr('단계')),
               const SizedBox(height: 8),
               Row(
                 children: [
@@ -205,14 +206,14 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
               ),
               const SizedBox(height: 8),
               Text(
-                '$_stage단계 · 문장당 ${_secondsOf(_stage)}초 — ${_stageHint(_stage)}',
+                trf('{0}단계 · 문장당 {1}초 — {2}', [_stage, _secondsOf(_stage), _stageHint(_stage)]),
                 style: const TextStyle(
                     fontSize: 12, color: AppColors.khramLight, height: 1.4),
               ),
               const SizedBox(height: 22),
               Row(
                 children: [
-                  const _SectionLabel('판정 기준 (낮을수록 관대)'),
+                  _SectionLabel(tr('판정 기준 (낮을수록 관대)')),
                   const Spacer(),
                   Text(
                     '$pct%',
@@ -241,8 +242,8 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
                   onChanged: _setThreshold,
                 ),
               ),
-              const Text(
-                '$_kPassRule · 인식된 단어 비율이 기준 이상이면 통과 · 발음 품질은 보지 않아요',
+              Text(
+                trf('{0} · 인식된 단어 비율이 기준 이상이면 통과 · 발음 품질은 보지 않아요', [_kPassRule]),
                 style: TextStyle(
                     fontSize: 12, color: AppColors.khramLight, height: 1.4),
               ),
@@ -270,15 +271,15 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
                             ? AppColors.thongDeep
                             : AppColors.khramLight,
                       ),
-                      const SizedBox(width: 10),
-                      const Expanded(
+                      SizedBox(width: 10),
+                      Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            _SectionLabel('힌트 표시'),
+                            _SectionLabel(tr('힌트 표시')),
                             SizedBox(height: 2),
                             Text(
-                              '태국어 첫 어절과 독음만 살짝 보여줘요',
+                              tr('태국어 첫 어절과 독음만 살짝 보여줘요'),
                               style: TextStyle(
                                   fontSize: 12, color: AppColors.khramLight),
                             ),
@@ -295,12 +296,12 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
                 ),
               ),
               const SizedBox(height: 22),
-              const _SectionLabel('회화 선택'),
+              _SectionLabel(tr('회화 선택')),
               if (levels.isEmpty)
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(top: 24),
                   child: Center(
-                    child: Text('회화 데이터가 없어요',
+                    child: Text(tr('회화 데이터가 없어요'),
                         style: TextStyle(color: AppColors.khramLight)),
                   ),
                 ),
@@ -373,7 +374,7 @@ class _StageChip extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              '$stage단계',
+              trf('{0}단계', [stage]),
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w900,
@@ -382,7 +383,7 @@ class _StageChip extends StatelessWidget {
             ),
             const SizedBox(height: 2),
             Text(
-              '${_secondsOf(stage)}초',
+              trf('{0}초', [_secondsOf(stage)]),
               style: TextStyle(
                 fontSize: 11,
                 fontWeight: FontWeight.w700,
@@ -558,8 +559,8 @@ class _PracticeScreenState extends State<_PracticeScreen>
     }
     if (!_speechReady && mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('음성 인식을 쓸 수 없어요 (권한/기기 미지원) — 판정 없이 진행해요'),
+        SnackBar(
+          content: Text(tr('음성 인식을 쓸 수 없어요 (권한/기기 미지원) — 판정 없이 진행해요')),
           backgroundColor: AppColors.thongDeep,
         ),
       );
@@ -764,7 +765,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
               ),
               const SizedBox(height: 2),
               Text(
-                '${meta.level} · ${widget.stage}단계 · 문장당 $_seconds초',
+                trf('{0} · {1}단계 · 문장당 {2}초', [meta.level, widget.stage, _seconds]),
                 style: const TextStyle(
                     color: AppColors.khramLight,
                     fontSize: 10,
@@ -774,7 +775,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
           ),
           actions: [
             IconButton(
-              tooltip: _hint ? '힌트 켜짐' : '힌트 꺼짐',
+              tooltip: _hint ? tr('힌트 켜짐') : tr('힌트 꺼짐'),
               onPressed: _toggleHint,
               icon: Icon(
                 _hint ? Icons.lightbulb : Icons.lightbulb_outline,
@@ -801,8 +802,8 @@ class _PracticeScreenState extends State<_PracticeScreen>
         body: switch (_phase) {
           _Phase.loading => const Center(
               child: CircularProgressIndicator(color: AppColors.kluayMai)),
-          _ when _turns.isEmpty => const Center(
-              child: Text('문장이 없어요',
+          _ when _turns.isEmpty => Center(
+              child: Text(tr('문장이 없어요'),
                   style: TextStyle(color: AppColors.khramLight))),
           _Phase.ready => _buildReady(),
           _Phase.review => _buildReview(),
@@ -825,7 +826,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
                 const GoldEmblem(text: '🎤', size: 72),
                 const SizedBox(height: 24),
                 Text(
-                  '한국어 문장이 나오면\n$_seconds초 안에 태국어로 말해요',
+                  trf('한국어 문장이 나오면\n{0}초 안에 태국어로 말해요', [_seconds]),
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 18,
@@ -836,7 +837,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  '$_kPassRule · 총 ${_turns.length}문장',
+                  trf('{0} · 총 {1}문장', [_kPassRule, _turns.length]),
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                       fontSize: 13, color: AppColors.khramLight),
@@ -854,7 +855,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
                     ),
                     onPressed: _beginSentence,
                     icon: const Icon(Icons.play_arrow),
-                    label: const Text('시작',
+                    label: Text(tr('시작'),
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.w900)),
                   ),
@@ -905,7 +906,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
             child: Column(
               children: [
                 Text(
-                  '문장 ${start + 1}~${_index + 1} 평가',
+                  trf('문장 {0}~{1} 평가', [start + 1, _index + 1]),
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w900,
@@ -933,7 +934,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
                   ],
                 ),
                 const SizedBox(height: 6),
-                const Text(
+                Text(
                   _kPassRule,
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 11, color: AppColors.khramLight),
@@ -973,7 +974,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
               onPressed: _nextBatch,
               icon: Icon(last ? Icons.flag : Icons.arrow_forward, size: 18),
               label: Text(
-                last ? '결과 보기' : '다음 문장 (${_index + 2}~$nextEnd)',
+                last ? tr('결과 보기') : trf('다음 문장 ({0}~{1})', [_index + 2, nextEnd]),
                 style: const TextStyle(fontWeight: FontWeight.w800),
               ),
             ),
@@ -1019,12 +1020,12 @@ class _PracticeScreenState extends State<_PracticeScreen>
                       const SizedBox(width: 6),
                       Text(
                         paused
-                            ? '일시정지'
+                            ? tr('일시정지')
                             : waiting
-                                ? '다음 문장…'
+                                ? tr('다음 문장…')
                                 : _speechReady
-                                    ? '듣는 중'
-                                    : '말하기',
+                                    ? tr('듣는 중')
+                                    : tr('말하기'),
                         style: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w800,
@@ -1034,7 +1035,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
                       ),
                       const Spacer(),
                       Text(
-                        '${remain.ceil()}초',
+                        trf('{0}초', [remain.ceil()]),
                         style: const TextStyle(
                           fontSize: 22,
                           fontWeight: FontWeight.w900,
@@ -1116,7 +1117,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
                     ],
                     const SizedBox(height: 22),
                     Text(
-                      paused ? '재개하면 이 문장을 처음부터 다시' : '태국어로 말해 보세요',
+                      paused ? tr('재개하면 이 문장을 처음부터 다시') : tr('태국어로 말해 보세요'),
                       style: const TextStyle(
                         fontSize: 11,
                         color: AppColors.khramLight,
@@ -1160,7 +1161,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
                   ),
                   onPressed: _stop,
                   icon: const Icon(Icons.stop, size: 18),
-                  label: const Text('정지',
+                  label: Text(tr('정지'),
                       style: TextStyle(fontWeight: FontWeight.w800)),
                 ),
               ),
@@ -1182,7 +1183,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
                           : null,
                   icon: Icon(paused ? Icons.play_arrow : Icons.pause,
                       size: 18),
-                  label: Text(paused ? '재개' : '일시정지',
+                  label: Text(paused ? tr('재개') : tr('일시정지'),
                       style: const TextStyle(fontWeight: FontWeight.w800)),
                 ),
               ),
@@ -1331,7 +1332,7 @@ class _ResultScreenState extends State<_ResultScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              '${meta.emoji} ${meta.title} 결과',
+              trf('{0} {1} 결과', [meta.emoji, meta.title]),
               style: const TextStyle(
                   color: AppColors.khram,
                   fontSize: 16,
@@ -1339,7 +1340,7 @@ class _ResultScreenState extends State<_ResultScreen> {
             ),
             const SizedBox(height: 2),
             Text(
-              '${meta.level} · ${widget.stage}단계 · 기준 ${(widget.threshold * 100).round()}%',
+              trf('{0} · {1}단계 · 기준 {2}%', [meta.level, widget.stage, (widget.threshold * 100).round()]),
               style: const TextStyle(
                   color: AppColors.khramLight, fontSize: 10, letterSpacing: 2),
             ),
@@ -1368,7 +1369,7 @@ class _ResultScreenState extends State<_ResultScreen> {
               child: Column(
                 children: [
                   Text(
-                    '통과 $pass / $total',
+                    trf('통과 {0} / {1}', [pass, total]),
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w900,
@@ -1396,7 +1397,7 @@ class _ResultScreenState extends State<_ResultScreen> {
                     ],
                   ),
                   const SizedBox(height: 6),
-                  const Text(
+                  Text(
                     _kPassRule,
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -1438,7 +1439,7 @@ class _ResultScreenState extends State<_ResultScreen> {
                     ),
                     onPressed: _retry,
                     icon: const Icon(Icons.replay, size: 18),
-                    label: const Text('다시 하기',
+                    label: Text(tr('다시 하기'),
                         style: TextStyle(fontWeight: FontWeight.w800)),
                   ),
                 ),
@@ -1458,7 +1459,7 @@ class _ResultScreenState extends State<_ResultScreen> {
                     icon: Icon(hasNext ? Icons.arrow_forward : Icons.done,
                         size: 18),
                     label: Text(
-                      hasNext ? '다음 단계로 (${widget.stage + 1}단계)' : '완료',
+                      hasNext ? trf('다음 단계로 ({0}단계)', [widget.stage + 1]) : tr('완료'),
                       style: const TextStyle(fontWeight: FontWeight.w800),
                     ),
                   ),
@@ -1490,7 +1491,7 @@ class _ResultCard extends StatelessWidget {
     final isA = turn.speaker == 'A';
     final j = judge;
     final (badge, badgeColor) = j == null
-        ? ('판정 불가', AppColors.khramLight)
+        ? (tr('판정 불가'), AppColors.khramLight)
         : switch (j.rating) {
             SpeechRating.two => (SpeechRating.two.badge, AppColors.morakot),
             SpeechRating.one => (SpeechRating.one.badge, AppColors.thongDeep),
@@ -1565,8 +1566,8 @@ class _ResultCard extends StatelessWidget {
           const SizedBox(height: 6),
           Text(
             j == null
-                ? '인식: (음성 인식 불가)'
-                : '인식: ${(recognized ?? '').trim().isEmpty ? '(없음)' : recognized}',
+                ? tr('인식: (음성 인식 불가)')
+                : trf('인식: {0}', [(recognized ?? '').trim().isEmpty ? tr('(없음)') : recognized]),
             style: const TextStyle(
               fontSize: 12,
               color: AppColors.khramLight,
@@ -1589,8 +1590,8 @@ class _ResultCard extends StatelessWidget {
               ),
               onPressed: onPlayReference,
               icon: const Icon(Icons.volume_up, size: 16),
-              label: const Text(
-                '원어민',
+              label: Text(
+                tr('원어민'),
                 style: TextStyle(fontSize: 12, fontWeight: FontWeight.w800),
               ),
             ),
@@ -1636,8 +1637,8 @@ class _WordCoverage extends StatelessWidget {
         const SizedBox(height: 4),
         Text(
           missed == 0
-              ? '빠진 단어 없음 · 인식 ${(judge.coverage * 100).round()}%'
-              : '빠진 단어 $missed개 · 인식 ${(judge.coverage * 100).round()}%',
+              ? trf('빠진 단어 없음 · 인식 {0}%', [(judge.coverage * 100).round()])
+              : trf('빠진 단어 {0}개 · 인식 {1}%', [missed, (judge.coverage * 100).round()]),
           style: TextStyle(
             fontSize: 11,
             color: missed == 0 ? AppColors.morakot : Colors.red,

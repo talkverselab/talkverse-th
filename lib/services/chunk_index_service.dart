@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/services.dart' show rootBundle;
 
 import 'thai_dict_service.dart';
+import '../core/l10n.dart';
 
 /// 인덱싱된 문장 하나. 앱의 모든 문장 소스(대화·문법·코퍼스 청크)를 통합한 단위.
 class IndexedSentence {
@@ -86,7 +87,7 @@ class ChunkIndexService {
             th: th,
             roman: m['roman'] as String?,
             ko: m['ko'] as String?,
-            source: '대화 $level',
+            source: trf('대화 {0}', [level]),
             tokens: _segment(th),
           ));
         }
@@ -112,7 +113,7 @@ class ChunkIndexService {
         _sentences.add(IndexedSentence(
           th: th,
           ko: m['ko'] as String?,
-          source: '어말조사 ${item['sfp']}',
+          source: trf('어말조사 {0}', [item['sfp']]),
           tokens: _segment(th),
         ));
       }
@@ -136,7 +137,7 @@ class ChunkIndexService {
       _sentences.add(IndexedSentence(
         th: th,
         ko: m['ko'] as String?,
-        source: '코퍼스 ${m['level'] ?? ''}'.trim(),
+        source: trf('코퍼스 {0}', [m['level'] ?? '']).trim(),
         tokens: _segment(th),
       ));
     }

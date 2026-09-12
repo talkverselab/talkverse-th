@@ -6,6 +6,7 @@ import '../services/ko_reading.dart';
 import '../services/tts_service.dart';
 import '../widgets/selectable_thai.dart';
 import '../widgets/thai_decor.dart';
+import '../core/l10n.dart';
 
 /// 청크(단어) 기준 문장 검색.
 /// 예: 'อร่อย' / '아러이' / '맛있' → 청크 목록 → 청크별 문장 → 문장 안 청크 탐색.
@@ -57,7 +58,7 @@ class _ChunkSearchScreenState extends State<ChunkSearchScreen> {
         backgroundColor: AppColors.cream,
         foregroundColor: AppColors.khram,
         elevation: 0,
-        title: const Text('청크 검색', style: TextStyle(color: AppColors.khram)),
+        title: Text(tr('청크 검색'), style: TextStyle(color: AppColors.khram)),
         centerTitle: true,
         actions: const [KoReadingToggleAction()],
       ),
@@ -76,7 +77,7 @@ class _ChunkSearchScreenState extends State<ChunkSearchScreen> {
                 fontFamilyFallback: AppTheme.fontFallback,
               ),
               decoration: InputDecoration(
-                hintText: 'อร่อย · 아러이 · 맛있다',
+                hintText: tr('อร่อย · 아러이 · 맛있다'),
                 hintStyle: const TextStyle(
                     color: AppColors.khramLight, fontSize: 15),
                 prefixIcon:
@@ -114,13 +115,13 @@ class _ChunkSearchScreenState extends State<ChunkSearchScreen> {
 
   Widget _buildBody() {
     if (!_ready) {
-      return const Center(
+      return Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             CircularProgressIndicator(color: AppColors.kluayMai),
             SizedBox(height: 12),
-            Text('사전·문장 인덱스 준비 중…',
+            Text(tr('사전·문장 인덱스 준비 중…'),
                 style: TextStyle(color: AppColors.khramLight, fontSize: 13)),
           ],
         ),
@@ -135,13 +136,13 @@ class _ChunkSearchScreenState extends State<ChunkSearchScreen> {
             const GoldEmblem(text: 'หา', size: 56),
             const SizedBox(height: 16),
             Text(
-              '문장 ${svc.sentenceCount}개 · 청크 ${svc.chunkCount}개 인덱스',
+              trf('문장 {0}개 · 청크 {1}개 인덱스', [svc.sentenceCount, svc.chunkCount]),
               style: const TextStyle(
                   color: AppColors.khramLight, fontSize: 13),
             ),
             const SizedBox(height: 6),
-            const Text(
-              '태국어·한글 독음·한국어로 검색하세요',
+            Text(
+              tr('태국어·한글 독음·한국어로 검색하세요'),
               style: TextStyle(
                 color: AppColors.khram,
                 fontSize: 15,
@@ -153,8 +154,8 @@ class _ChunkSearchScreenState extends State<ChunkSearchScreen> {
       );
     }
     if (_hits.isEmpty && _koFallback.isEmpty) {
-      return const Center(
-        child: Text('일치하는 청크가 없어요',
+      return Center(
+        child: Text(tr('일치하는 청크가 없어요'),
             style: TextStyle(color: AppColors.khramLight, fontSize: 14)),
       );
     }
@@ -166,8 +167,8 @@ class _ChunkSearchScreenState extends State<ChunkSearchScreen> {
             .map((h) => _ChunkCard(hit: h, key: ValueKey('c:${h.chunk}'))),
         if (_koFallback.isNotEmpty) ...[
           const SizedBox(height: 14),
-          const Text(
-            '문장 번역 일치',
+          Text(
+            tr('문장 번역 일치'),
             style: TextStyle(
               fontSize: 12,
               fontWeight: FontWeight.w800,
@@ -241,7 +242,7 @@ class _ChunkCardState extends State<_ChunkCard> {
                       children: [
                         if (info != null)
                           Text(
-                            '빈도 #${info.rank} · ${info.tier}',
+                            trf('빈도 #{0} · {1}', [info.rank, info.tier]),
                             style: const TextStyle(
                               fontSize: 13,
                               fontWeight: FontWeight.w700,
@@ -275,7 +276,7 @@ class _ChunkCardState extends State<_ChunkCard> {
                       border: Border.all(color: AppColors.thong),
                     ),
                     child: Text(
-                      '문장 ${h.sentences.length}',
+                      trf('문장 {0}', [h.sentences.length]),
                       style: const TextStyle(
                         fontSize: 11,
                         fontWeight: FontWeight.w800,

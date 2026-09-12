@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../core/theme.dart';
 import '../services/memo_service.dart';
+import '../core/l10n.dart';
 
 /// 문장별 메모 토글. 작은 아이콘 → 탭하면 입력 영역 펼침.
 class MemoToggle extends StatefulWidget {
@@ -73,7 +74,7 @@ class _MemoToggleState extends State<MemoToggle> {
                 ),
                 const SizedBox(width: 4),
                 Text(
-                  hasMemo ? '메모 있음' : '메모',
+                  hasMemo ? tr('메모 있음') : tr('메모'),
                   style: TextStyle(
                     fontSize: 10,
                     color: hasMemo ? AppColors.kluayMai : AppColors.khramLight,
@@ -88,7 +89,7 @@ class _MemoToggleState extends State<MemoToggle> {
                 ],
                 const Spacer(),
                 Text(
-                  _open ? '닫기 ▴' : '▾',
+                  _open ? tr('닫기 ▴') : '▾',
                   style: const TextStyle(fontSize: 10, color: AppColors.khramLight),
                 ),
               ],
@@ -115,11 +116,11 @@ class _MemoToggleState extends State<MemoToggle> {
                           maxLines: null,
                           minLines: 2,
                           style: const TextStyle(fontSize: 12, color: AppColors.khram, height: 1.4),
-                          decoration: const InputDecoration(
+                          decoration: InputDecoration(
                             isDense: true,
                             contentPadding: EdgeInsets.symmetric(vertical: 4),
                             border: InputBorder.none,
-                            hintText: '예: 이 문장 진짜야? 너무 짧음. 발음 더 듣고 싶음.',
+                            hintText: tr('예: 이 문장 진짜야? 너무 짧음. 발음 더 듣고 싶음.'),
                             hintStyle: TextStyle(
                               fontSize: 11,
                               color: AppColors.khramLight,

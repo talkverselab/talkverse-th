@@ -1,3 +1,4 @@
+import '../core/l10n.dart';
 /// 문장 말하기 판정 — 순수 Dart (Flutter 의존 없음, 단위 테스트 가능).
 ///
 /// 목표 태국어 문장을 단어로 분절한 뒤, 음성 인식 결과 안에
@@ -136,7 +137,7 @@ class SpeechJudgeResult {
   final List<bool> said;
   final double coverage;
   final bool passed;
-  const SpeechJudgeResult({
+  SpeechJudgeResult({
     required this.words,
     required this.said,
     required this.coverage,
@@ -159,9 +160,12 @@ enum SpeechRating {
   one('원썸', '👍'),
   two('투썸', '👍👍');
 
-  final String label;
+  final String _label;
   final String thumbs;
-  const SpeechRating(this.label, this.thumbs);
+  const SpeechRating(this._label, this.thumbs);
+
+  /// 표시 언어에 맞춘 이름.
+  String get label => tr(_label);
 
   /// 배지 문구: "👍👍 투썸" / "👍 원썸" / "아쉬워요"
   String get badge => thumbs.isEmpty ? label : '$thumbs $label';

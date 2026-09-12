@@ -4,6 +4,7 @@ import 'package:flutter/services.dart' show rootBundle;
 
 import 'thai_dict_service.dart';
 import 'vocab_service.dart';
+import '../core/l10n.dart';
 
 /// 루트 단어 — 여러 단어에 공통으로 들어가는 핵심 형태소 (예: น้ำ 남 '물').
 class RootInfo {
@@ -75,7 +76,7 @@ class RootService {
   final Set<String> _reject = {}; // 'root|word' — 철자만 우연히 포함
 
   /// 뜻을 못 찾은 조각의 표시 라벨.
-  static const unknownLabel = '어원불명확';
+  static String get unknownLabel => tr('어원불명확');
   final Map<String, List<RootInfo>> _rootsOfCache = {};
   bool _loaded = false;
   Future<void>? _loading;

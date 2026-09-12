@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../core/theme.dart';
 import '../main.dart';
 import '../widgets/thai_decor.dart';
+import '../core/l10n.dart';
 
 /// 학습 진행 — Turns/UserProgress 실데이터 기반.
 class ProgressScreen extends StatefulWidget {
@@ -101,10 +102,10 @@ class _ProgressScreenState extends State<ProgressScreen> {
         backgroundColor: AppColors.cream,
         foregroundColor: AppColors.khram,
         elevation: 0,
-        title: const Column(
+        title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('학습 진행',
+            Text(tr('학습 진행'),
                 style: TextStyle(
                     color: AppColors.khram,
                     fontWeight: FontWeight.w800,
@@ -144,30 +145,30 @@ class _ProgressScreenState extends State<ProgressScreen> {
                   children: [
                     Expanded(
                         child: _StatBox(
-                            label: '완료 에피소드',
+                            label: tr('완료 에피소드'),
                             value: '$_doneEpisodes',
                             emblem: 'จบ')),
                     const SizedBox(width: 8),
                     Expanded(
                         child: _StatBox(
-                            label: '학습한 문장',
+                            label: tr('학습한 문장'),
                             value: '$_learnedTotal',
                             emblem: 'คำ')),
                     const SizedBox(width: 8),
                     Expanded(
                         child: _StatBox(
-                            label: '연속 학습',
-                            value: '$_streakDays일',
+                            label: tr('연속 학습'),
+                            value: trf('{0}일', [_streakDays]),
                             emblem: 'วัน')),
                   ],
                 ),
                 const SizedBox(height: 18),
-                const Row(
+                Row(
                   children: [
                     GoldEmblem(text: 'สัปดาห์', size: 22),
                     SizedBox(width: 8),
                     Text(
-                      '이번 주 학습',
+                      tr('이번 주 학습'),
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w800,
@@ -182,12 +183,12 @@ class _ProgressScreenState extends State<ProgressScreen> {
                 const SizedBox(height: 18),
                 const SilkDivider(),
                 const SizedBox(height: 14),
-                const Row(
+                Row(
                   children: [
                     GoldEmblem(text: 'บท', size: 22),
                     SizedBox(width: 8),
                     Text(
-                      '레벨별 회화 진행',
+                      tr('레벨별 회화 진행'),
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.w800,
@@ -199,7 +200,7 @@ class _ProgressScreenState extends State<ProgressScreen> {
                 ),
                 const SizedBox(height: 10),
                 ..._levels.map((s) => _CategoryBar(
-                      label: '${s.level} 스토리 (${s.learned}/${s.total})',
+                      label: trf('{0} 스토리 ({1}/{2})', [s.level, s.learned, s.total]),
                       percent: s.pct,
                       color: switch (s.level) {
                         'L1' => AppColors.kluayMai,
@@ -208,8 +209,8 @@ class _ProgressScreenState extends State<ProgressScreen> {
                       },
                     )),
                 const SizedBox(height: 8),
-                const Text(
-                  '문자·성조·키보드 진행 기록은 준비 중이에요.',
+                Text(
+                  tr('문자·성조·키보드 진행 기록은 준비 중이에요.'),
                   style: TextStyle(fontSize: 11, color: AppColors.khramLight),
                 ),
               ],
@@ -246,7 +247,7 @@ class _OverallCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  '회화 전체 진행률 · $learned/$total문장',
+                  trf('회화 전체 진행률 · {0}/{1}문장', [learned, total]),
                   style: const TextStyle(
                     color: AppColors.thongBright,
                     fontWeight: FontWeight.w700,
@@ -359,7 +360,7 @@ class _WeeklyRow extends StatelessWidget {
   final List<bool> active;
   const _WeeklyRow({required this.active});
 
-  static const _days = ['월', '화', '수', '목', '금', '토', '일'];
+  static List<String> get _days => [tr('월'), tr('화'), tr('수'), tr('목'), tr('금'), tr('토'), tr('일')];
 
   @override
   Widget build(BuildContext context) {

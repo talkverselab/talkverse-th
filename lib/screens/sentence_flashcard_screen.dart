@@ -11,6 +11,7 @@ import '../services/tts_service.dart';
 import '../widgets/selectable_thai.dart';
 import '../widgets/thai_decor.dart';
 import 'episode_screen.dart';
+import '../core/l10n.dart';
 
 /// 힌트: 독음의 첫 어절만 (전체 문장 노출 방지)
 class SentenceFlashcardHint {
@@ -172,7 +173,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
       if (!mounted) return;
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('🎉 마지막 카드! ${_cards.length}장 중 알아요 $known장'),
+          content: Text(trf('🎉 마지막 카드! {0}장 중 알아요 {1}장', [_cards.length, known])),
           backgroundColor: AppColors.morakot,
         ),
       );
@@ -206,7 +207,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              meta == null ? '문장 플래시카드' : '${meta.emoji} ${meta.title} 카드',
+              meta == null ? tr('문장 플래시카드') : trf('{0} {1} 카드', [meta.emoji, meta.title]),
               style: const TextStyle(
                 color: AppColors.khram,
                 fontSize: 16,
@@ -215,7 +216,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
             ),
             const SizedBox(height: 2),
             Text(
-              meta == null ? '전 레벨 랜덤 20 · 이어서' : '${meta.level} 회화',
+              meta == null ? tr('전 레벨 랜덤 20 · 이어서') : trf('{0} 회화', [meta.level]),
               style: const TextStyle(
                 color: AppColors.khramLight,
                 fontSize: 10,
@@ -228,12 +229,12 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
           const KoReadingToggleAction(),
           if (meta == null)
             IconButton(
-              tooltip: '새 랜덤 20문장',
+              tooltip: tr('새 랜덤 20문장'),
               onPressed: _reshuffle,
               icon: const Icon(Icons.shuffle, color: AppColors.kluayMai),
             ),
           IconButton(
-            tooltip: _koFirst ? '한국어 먼저 (탭: 태국어 먼저)' : '태국어 먼저 (탭: 한국어 먼저)',
+            tooltip: _koFirst ? tr('한국어 먼저 (탭: 태국어 먼저)') : tr('태국어 먼저 (탭: 한국어 먼저)'),
             onPressed: _toggleDirection,
             icon: Container(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
@@ -243,7 +244,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                 color: AppColors.kluayMai.withValues(alpha: 0.08),
               ),
               child: Text(
-                _koFirst ? '한→태' : '태→한',
+                _koFirst ? tr('한→태') : tr('태→한'),
                 style: const TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w900,
@@ -253,7 +254,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
             ),
           ),
           IconButton(
-            tooltip: _showHint ? '힌트 켜짐' : '힌트 꺼짐',
+            tooltip: _showHint ? tr('힌트 켜짐') : tr('힌트 꺼짐'),
             onPressed: _toggleHint,
             icon: Icon(
               _showHint ? Icons.lightbulb : Icons.lightbulb_outline,
@@ -282,9 +283,9 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
               child: CircularProgressIndicator(color: AppColors.kluayMai),
             )
           : _cards.isEmpty
-          ? const Center(
+          ? Center(
               child: Text(
-                '카드가 없어요',
+                tr('카드가 없어요'),
                 style: TextStyle(color: AppColors.khramLight),
               ),
             )
@@ -464,7 +465,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
                       ],
                       const SizedBox(height: 18),
                       Text(
-                        _flipped ? '탭해서 앞면 보기' : '탭해서 뒤집기',
+                        _flipped ? tr('탭해서 앞면 보기') : tr('탭해서 뒤집기'),
                         style: const TextStyle(
                           fontSize: 11,
                           color: AppColors.khramLight,
@@ -485,14 +486,14 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
             children: [
               _NavButton(
                 icon: Icons.arrow_back,
-                label: '이전',
+                label: tr('이전'),
                 enabled: _index > 0,
                 onTap: () => _go(-1),
               ),
               const Spacer(),
               _NavButton(
                 icon: Icons.arrow_forward,
-                label: '다음',
+                label: tr('다음'),
                 trailingIcon: true,
                 enabled: _index < _cards.length - 1,
                 onTap: () => _go(1),
@@ -507,7 +508,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
             children: [
               Expanded(
                 child: _AnswerButton(
-                  label: '몰라요',
+                  label: tr('몰라요'),
                   color: AppColors.kluayMai,
                   selected: state == CardState.unknown,
                   onTap: () => _mark(CardState.unknown),
@@ -516,7 +517,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
               const SizedBox(width: 8),
               Expanded(
                 child: _AnswerButton(
-                  label: '공부중',
+                  label: tr('공부중'),
                   color: AppColors.thongDeep,
                   selected: state == CardState.studying,
                   onTap: () => _mark(CardState.studying),
@@ -525,7 +526,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
               const SizedBox(width: 8),
               Expanded(
                 child: _AnswerButton(
-                  label: '알아요 ✓',
+                  label: tr('알아요 ✓'),
                   color: AppColors.morakot,
                   selected: state == CardState.known,
                   onTap: () => _mark(CardState.known),
@@ -546,9 +547,9 @@ class _StateChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final (label, color) = switch (state) {
-      CardState.known => ('알아요', AppColors.morakot),
-      CardState.studying => ('공부중', AppColors.thongDeep),
-      CardState.unknown => ('몰라요', AppColors.khramLight),
+      CardState.known => (tr('알아요'), AppColors.morakot),
+      CardState.studying => (tr('공부중'), AppColors.thongDeep),
+      CardState.unknown => (tr('몰라요'), AppColors.khramLight),
     };
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),

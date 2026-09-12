@@ -9,6 +9,7 @@ import '../widgets/thai_decor.dart';
 import 'important_words_screen.dart';
 import 'topic_vocab_screen.dart';
 import 'vocab_screen.dart';
+import '../core/l10n.dart';
 
 /// 단어장 — 주제별 / 중요 단어(절벽 구간별) 두 갈래.
 class VocabHubScreen extends StatefulWidget {
@@ -49,20 +50,20 @@ class _VocabHubScreenState extends State<VocabHubScreen> {
         title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text(
-              '단어장',
+            Text(
+              tr('단어장'),
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
             ),
             const SizedBox(height: 2),
             Text(
-              '태국어 · ${entries.length}항목',
+              trf('태국어 · {0}항목', [entries.length]),
               style: const TextStyle(fontSize: 10, letterSpacing: 2),
             ),
           ],
         ),
         actions: [
           IconButton(
-            tooltip: '전체 검색',
+            tooltip: tr('전체 검색'),
             icon: const Icon(Icons.search),
             onPressed: () => Navigator.push(
               context,
@@ -82,9 +83,9 @@ class _VocabHubScreenState extends State<VocabHubScreen> {
                 const SizedBox(height: 8),
                 _HubCard(
                   emoji: '📚',
-                  title: '주제별 단어',
-                  sub: '${topics.length}주제 · 편별 타일 · 그림·체크박스',
-                  desc: '기본·음식·쇼핑·여행·교통… 상황별로 묶어 익혀요.',
+                  title: tr('주제별 단어'),
+                  sub: trf('{0}주제 · 편별 타일 · 그림·체크박스', [topics.length]),
+                  desc: tr('기본·음식·쇼핑·여행·교통… 상황별로 묶어 익혀요.'),
                   color: AppColors.kluayMaiDeep,
                   onTap: () => Navigator.push(
                     context,
@@ -96,9 +97,9 @@ class _VocabHubScreenState extends State<VocabHubScreen> {
                 const SizedBox(height: 12),
                 _HubCard(
                   emoji: '⭐',
-                  title: '중요 단어',
-                  sub: '중요 1,000단어 + 표준 단어 · 최대 $important단어',
-                  desc: '회화 빈도 1000단어 → 교육부 표준 단어 순서로.',
+                  title: tr('중요 단어'),
+                  sub: trf('중요 1,000단어 + 표준 단어 · 최대 {0}단어', [important]),
+                  desc: tr('회화 빈도 1000단어 → 교육부 표준 단어 순서로.'),
                   color: AppColors.thongDeep,
                   onTap: () => Navigator.push(
                     context,

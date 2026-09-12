@@ -5,6 +5,7 @@ import '../services/root_service.dart';
 import '../services/tts_service.dart';
 import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
+import '../core/l10n.dart';
 
 /// 키보드연습 — 태국어 Kedmanee 자판.
 ///
@@ -89,11 +90,11 @@ class _Course {
   final String name;
   final String desc;
   final List<String> targets;
-  const _Course(this.name, this.desc, this.targets);
+  _Course(this.name, this.desc, this.targets);
 }
 
-const List<_Course> _baseCourses = [
-  _Course('준비 · 자리 익히기', '기본 열(홈 로우)부터 자모 위치', [
+List<_Course> _baseCourses = [
+  _Course(tr('준비 · 자리 익히기'), tr('기본 열(홈 로우)부터 자모 위치'), [
     'ฟหกด',
     'สวาง',
     'เ้่า',
@@ -103,7 +104,7 @@ const List<_Course> _baseCourses = [
     'ิืทม',
     'คตจข',
   ]),
-  _Course('2단계 · 빈도 단어', '빈도 1~2단계(상위 250) 단어 — 로딩 중', [
+  _Course(tr('2단계 · 빈도 단어'), tr('빈도 1~2단계(상위 250) 단어 — 로딩 중'), [
     'สวัสดี',
     'ขอบคุณ',
     'อร่อย',
@@ -113,7 +114,7 @@ const List<_Course> _baseCourses = [
     'กินข้าว',
     'คิดถึง',
   ]),
-  _Course('3단계 · 실전 문장', '회화 문장 그대로', [
+  _Course(tr('3단계 · 실전 문장'), tr('회화 문장 그대로'), [
     'สวัสดีครับ',
     'ผมชื่อมินโฮครับ',
     'ยินดีที่ได้รู้จักนะคะ',
@@ -200,9 +201,9 @@ class _KeyboardPracticeScreenState extends State<KeyboardPracticeScreen> {
     setState(() {
       _courses = [
         _baseCourses[0],
-        _Course('1단계 · 루트 단어', '루트 단어 ${roots.length}개 전부',
+        _Course(tr('1단계 · 루트 단어'), trf('루트 단어 {0}개 전부', [roots.length]),
             roots.isEmpty ? _baseCourses[1].targets : roots),
-        _Course('2단계 · 빈도 단어', '빈도 1~2단계(상위 250) 단어 ${freqWords.length}개',
+        _Course(tr('2단계 · 빈도 단어'), trf('빈도 1~2단계(상위 250) 단어 {0}개', [freqWords.length]),
             freqWords.isEmpty ? _baseCourses[1].targets : freqWords),
         _baseCourses[2],
       ];
@@ -251,7 +252,7 @@ class _KeyboardPracticeScreenState extends State<KeyboardPracticeScreen> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-            '🎉 「${_courses[_courseIdx].name}」 코스 완료! 정확도 $acc%'),
+            trf('🎉 「{0}」 코스 완료! 정확도 {1}%', [_courses[_courseIdx].name, acc])),
         backgroundColor: AppColors.morakot,
       ),
     );
@@ -262,10 +263,10 @@ class _KeyboardPracticeScreenState extends State<KeyboardPracticeScreen> {
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
-        title: const Column(
+        title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('키보드연습',
+            Text(tr('키보드연습'),
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
             SizedBox(height: 2),
             Text('แป้นพิมพ์ เกษมณี',
@@ -291,7 +292,7 @@ class _KeyboardPracticeScreenState extends State<KeyboardPracticeScreen> {
               fontFamilyFallback: AppTheme.fontFallback,
             ),
             decoration: InputDecoration(
-              hintText: '태국어 자판으로 입력하세요…',
+              hintText: tr('태국어 자판으로 입력하세요…'),
               hintStyle: const TextStyle(
                   fontSize: 14, color: AppColors.khramLight),
               filled: true,
@@ -320,10 +321,10 @@ class _KeyboardPracticeScreenState extends State<KeyboardPracticeScreen> {
           const LaiThaiDivider(height: 10),
           const SizedBox(height: 8),
           _keyboard(),
-          const SizedBox(height: 10),
-          const Text(
-            '💡 Windows: 한/영 전환처럼 Win+Space 로 태국어 자판을 추가·전환할 수 있어요.\n'
-            '모바일: 키보드 설정에서 태국어(Kedmanee)를 추가하세요.',
+          SizedBox(height: 10),
+          Text(
+            tr('💡 Windows: 한/영 전환처럼 Win+Space 로 태국어 자판을 추가·전환할 수 있어요.\n') +
+            tr('모바일: 키보드 설정에서 태국어(Kedmanee)를 추가하세요.'),
             style: TextStyle(
                 fontSize: 11, color: AppColors.khramLight, height: 1.5),
           ),
@@ -439,15 +440,15 @@ class _KeyboardPracticeScreenState extends State<KeyboardPracticeScreen> {
     final hint = next == null ? null : _reverse[next];
     return Row(
       children: [
-        _chip('정확도 $acc%', AppColors.morakot),
+        _chip(trf('정확도 {0}%', [acc]), AppColors.morakot),
         const SizedBox(width: 6),
-        _chip('입력 $_typedTotal자', AppColors.thongDeep),
+        _chip(trf('입력 {0}자', [_typedTotal]), AppColors.thongDeep),
         const Spacer(),
         if (next != null)
           _chip(
             hint == null
-                ? '다음: $next'
-                : '다음: $next  (${hint.$2 ? 'Shift+' : ''}${hint.$1})',
+                ? trf('다음: {0}', [next])
+                : trf('다음: {0}  ({1}{2})', [next, hint.$2 ? 'Shift+' : '', hint.$1]),
             AppColors.kluayMai,
           ),
       ],

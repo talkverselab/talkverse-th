@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart' show rootBundle;
+import '../core/l10n.dart';
 
 /// 음절 하나의 성조 정보.
 class ToneSyllable {
@@ -32,19 +33,19 @@ class ToneService {
   bool get isLoaded => _loaded;
   int get count => _map.length;
 
-  static const Map<String, String> toneKoMark = {
+  static Map<String, String> toneKoMark = {
     'mid': '',
     'low': 'ˋ',
     'falling': 'ˆ',
     'high': 'ˊ',
     'rising': 'ˇ',
   };
-  static const Map<String, String> toneNameKo = {
-    'mid': '평성',
-    'low': '저성',
-    'falling': '하성',
-    'high': '고성',
-    'rising': '상성',
+  static Map<String, String> toneNameKo = {
+    'mid': tr('평성'),
+    'low': tr('저성'),
+    'falling': tr('하성'),
+    'high': tr('고성'),
+    'rising': tr('상성'),
   };
 
   Future<void> ensureLoaded() {

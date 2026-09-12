@@ -11,6 +11,7 @@ import '../widgets/thai_decor.dart';
 import '../widgets/vocab_sheet.dart';
 import 'thai_roots_screen.dart';
 import 'word_flashcard_screen.dart';
+import '../core/l10n.dart';
 
 /// 한 주제의 단어 타일(3열) — 그림·태국어(루트 밑줄)·독음·뜻·체크박스.
 /// 체크된 단어만 플래시카드로 연습. 한→태 / 태→한 전환, 독음 표시 토글.
@@ -80,7 +81,7 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
     if (words.isEmpty) {
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(const SnackBar(content: Text('체크된 단어가 없어요')));
+      ).showSnackBar(SnackBar(content: Text(tr('체크된 단어가 없어요'))));
       return;
     }
     Navigator.push(
@@ -120,7 +121,7 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
                 ),
                 const SizedBox(height: 2),
                 Text(
-                  '${_all.length}단어 · 아는 단어 $known',
+                  trf('{0}단어 · 아는 단어 {1}', [_all.length, known]),
                   style: const TextStyle(fontSize: 10, letterSpacing: 2),
                 ),
               ],
@@ -130,7 +131,7 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
         actions: [
           const KoReadingToggleAction(),
           IconButton(
-            tooltip: _koFirst ? '한→태 (탭: 태→한)' : '태→한 (탭: 한→태)',
+            tooltip: _koFirst ? tr('한→태 (탭: 태→한)') : tr('태→한 (탭: 한→태)'),
             onPressed: () => setState(() => _koFirst = !_koFirst),
             icon: Container(
               padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
@@ -140,7 +141,7 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
                 color: AppColors.kluayMai.withValues(alpha: 0.08),
               ),
               child: Text(
-                _koFirst ? '한→태' : '태→한',
+                _koFirst ? tr('한→태') : tr('태→한'),
                 style: const TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w900,
@@ -157,8 +158,8 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
             width: double.infinity,
             color: AppColors.thongBright.withValues(alpha: 0.18),
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-            child: const Text(
-              '아는 단어의 체크는 없애주세요 — 체크된 단어만 플래시카드로 연습합니다',
+            child: Text(
+              tr('아는 단어의 체크는 없애주세요 — 체크된 단어만 플래시카드로 연습합니다'),
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w700,
@@ -181,7 +182,7 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
                   onPressed: _practice,
                   icon: const Icon(Icons.style),
                   label: Text(
-                    '플래시카드 연습 · ${_checked.length}개',
+                    trf('플래시카드 연습 · {0}개', [_checked.length]),
                     style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w900,
@@ -201,7 +202,7 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
                   scrollDirection: Axis.horizontal,
                   children: [
                     _PartChip(
-                      label: '전체 ${_all.length}',
+                      label: trf('전체 {0}', [_all.length]),
                       selected: _part == null,
                       onTap: () => setState(() {
                         _part = null;
@@ -224,9 +225,9 @@ class _TopicWordsScreenState extends State<TopicWordsScreen> {
           const LaiThaiDivider(height: 8),
           Expanded(
             child: list.isEmpty
-                ? const Center(
+                ? Center(
                     child: Text(
-                      '단어가 없어요',
+                      tr('단어가 없어요'),
                       style: TextStyle(color: AppColors.khramLight),
                     ),
                   )
