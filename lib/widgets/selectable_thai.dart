@@ -8,6 +8,7 @@ import '../services/tts_service.dart';
 import '../services/vocab_service.dart';
 import 'thai_decor.dart';
 import 'vocab_sheet.dart';
+import '../core/l10n.dart';
 
 /// 태국어 문장을 청크(단어) 단위로 탭할 수 있게 렌더링.
 ///
@@ -198,7 +199,7 @@ class _ChunkSheet extends StatelessWidget {
               Wrap(
                 spacing: 6,
                 children: [
-                  _InfoChip('빈도 ${_stars(info.rank)}', AppColors.kluayMai),
+                  _InfoChip(trf('빈도 {0}', [_stars(info.rank)]), AppColors.kluayMai),
                 ],
               ),
             ],
@@ -206,8 +207,8 @@ class _ChunkSheet extends StatelessWidget {
               const SizedBox(height: 14),
               const LaiThaiDivider(height: 10),
               const SizedBox(height: 8),
-              const Text(
-                '용례',
+              Text(
+                tr('용례'),
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w800,
@@ -267,7 +268,7 @@ String _stars(int rank) {
       ? 4
       : 5;
   if (level == 0) return '';
-  return '$level단계 ${'★' * (6 - level)}${'☆' * (level - 1)}';
+  return trf('{0}단계 {1}', [level, '${'★' * (6 - level)}${'☆' * (level - 1)}']);
 }
 
 class _InfoChip extends StatelessWidget {

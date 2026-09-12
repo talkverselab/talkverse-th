@@ -6,6 +6,7 @@ import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
 import 'topic_words_screen.dart';
 import 'word_flashcard_screen.dart';
+import '../core/l10n.dart';
 
 /// 중요 단어 단계 — 중요 1,000단어 + 표준(최대).
 class ImportantStage {
@@ -38,25 +39,25 @@ class ImportantWordsScreen extends StatelessWidget {
         ..sort((a, b) => a.rank.compareTo(b.rank));
 
   /// 중요 1,000단어 안의 편: 1단계 = 1~500위, 2단계 = 501~1000위.
-  static const tierParts = ['1단계 · 1~500위', '2단계 · 501~1000위'];
+  static List<String> get tierParts => [tr('1단계 · 1~500위'), tr('2단계 · 501~1000위')];
   static String tierName(int level) => level <= 3 ? tierParts[0] : tierParts[1];
 
   static final stages = <ImportantStage>[
     ImportantStage(
       id: 'top1000',
       badge: '1,000',
-      label: '중요 1,000단어',
-      range: '회화 빈도 1 ~ 1000위',
-      desc: '영화·드라마 회화에서 가장 자주 쓰는 단어. 1단계(1~500위) · 2단계(501~1000위)',
+      label: tr('중요 1,000단어'),
+      range: tr('회화 빈도 1 ~ 1000위'),
+      desc: tr('영화·드라마 회화에서 가장 자주 쓰는 단어. 1단계(1~500위) · 2단계(501~1000위)'),
       stars: '★★★★★',
       entries: () => _levels(1, 5),
     ),
     ImportantStage(
       id: 'std',
-      badge: '표준',
-      label: '표준 단어',
-      range: '1000위 밖',
-      desc: '교육부 기초 단어(ป.1~3) 중 빈도 1000에 없는 단어 — 여기까지가 최대',
+      badge: tr('표준'),
+      label: tr('표준 단어'),
+      range: tr('1000위 밖'),
+      desc: tr('교육부 기초 단어(ป.1~3) 중 빈도 1000에 없는 단어 — 여기까지가 최대'),
       stars: '',
       entries: () =>
           VocabService.instance.standardExtraEntries
@@ -69,7 +70,7 @@ class ImportantWordsScreen extends StatelessWidget {
 
   void _open(BuildContext context, ImportantStage? stage) {
     final list = stage == null ? all : stage.entries();
-    final name = stage == null ? '중요 단어 전체' : stage.label;
+    final name = stage == null ? tr('중요 단어 전체') : stage.label;
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -95,7 +96,7 @@ class ImportantWordsScreen extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => WordFlashcardScreen(title: '중요 단어', words: words),
+        builder: (_) => WordFlashcardScreen(title: tr('중요 단어'), words: words),
       ),
     );
   }
@@ -109,13 +110,13 @@ class ImportantWordsScreen extends StatelessWidget {
         title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text(
-              '중요 단어',
+            Text(
+              tr('중요 단어'),
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800),
             ),
             const SizedBox(height: 2),
             Text(
-              '중요 1,000단어 + 표준 단어 · $total단어',
+              trf('중요 1,000단어 + 표준 단어 · {0}단어', [total]),
               style: const TextStyle(fontSize: 10, letterSpacing: 2),
             ),
           ],
@@ -141,7 +142,7 @@ class ImportantWordsScreen extends StatelessWidget {
                   onPressed: () => _practice(context),
                   icon: const Icon(Icons.style),
                   label: Text(
-                    '플래시카드 연습 · 체크된 단어 $checked개',
+                    trf('플래시카드 연습 · 체크된 단어 {0}개', [checked]),
                     style: const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.w900,
@@ -149,12 +150,12 @@ class ImportantWordsScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 6),
-              const Padding(
+              SizedBox(height: 6),
+              Padding(
                 padding: EdgeInsets.symmetric(vertical: 6),
                 child: Text(
-                  '영화·드라마 회화 빈도 상위 1000단어를 먼저 익히고, '
-                  '표준 단어까지가 이 앱의 최대 범위입니다.',
+                  tr('영화·드라마 회화 빈도 상위 1000단어를 먼저 익히고, ') +
+                  tr('표준 단어까지가 이 앱의 최대 범위입니다.'),
                   style: TextStyle(
                     fontSize: 12.5,
                     color: AppColors.khramLight,
@@ -180,7 +181,7 @@ class ImportantWordsScreen extends StatelessWidget {
                 onPressed: () => _open(context, null),
                 icon: const Icon(Icons.list),
                 label: Text(
-                  '전체 한눈에 · $total단어',
+                  trf('전체 한눈에 · {0}단어', [total]),
                   style: const TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w800,
@@ -314,7 +315,7 @@ class _StageCard extends StatelessWidget {
                         const SizedBox(width: 8),
                         Flexible(
                           child: Text(
-                            '${entries.length}단어 · 아는 단어 $known',
+                            trf('{0}단어 · 아는 단어 {1}', [entries.length, known]),
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: const TextStyle(

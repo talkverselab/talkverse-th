@@ -7,6 +7,7 @@ import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
 import '../widgets/vocab_sheet.dart';
 import 'thai_roots_screen.dart';
+import '../core/l10n.dart';
 
 enum _Source { all, book, ranked }
 
@@ -74,10 +75,10 @@ class _VocabScreenState extends State<VocabScreen> {
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
-        title: const Text('단어장'),
+        title: Text(tr('단어장')),
         actions: [
           IconButton(
-            tooltip: '루트 단어',
+            tooltip: tr('루트 단어'),
             icon: const Icon(Icons.account_tree_outlined),
             onPressed: () => Navigator.push(context,
                 MaterialPageRoute(builder: (_) => const ThaiRootsScreen())),
@@ -101,7 +102,7 @@ class _VocabScreenState extends State<VocabScreen> {
                       fontFamilyFallback: AppTheme.fontFallback,
                     ),
                     decoration: InputDecoration(
-                      hintText: '태국어 · 한글 독음 · 뜻',
+                      hintText: tr('태국어 · 한글 독음 · 뜻'),
                       hintStyle: const TextStyle(
                           color: AppColors.khramLight, fontSize: 14),
                       prefixIcon: const Icon(Icons.search,
@@ -140,7 +141,7 @@ class _VocabScreenState extends State<VocabScreen> {
                       scrollDirection: Axis.horizontal,
                       children: [
                         _Chip(
-                          label: '전체 ${svc.count}',
+                          label: trf('전체 {0}', [svc.count]),
                           selected: _source == _Source.all,
                           onTap: () => setState(() {
                             _source = _Source.all;
@@ -148,7 +149,7 @@ class _VocabScreenState extends State<VocabScreen> {
                           }),
                         ),
                         _Chip(
-                          label: '빈도순 ${svc.rankedEntries.length}',
+                          label: trf('빈도순 {0}', [svc.rankedEntries.length]),
                           selected: _source == _Source.ranked,
                           color: AppColors.thongDeep,
                           onTap: () => setState(() {
@@ -157,14 +158,14 @@ class _VocabScreenState extends State<VocabScreen> {
                           }),
                         ),
                         _Chip(
-                          label: '30일 코스 ${svc.bookEntries.length}',
+                          label: trf('30일 코스 {0}', [svc.bookEntries.length]),
                           selected: _source == _Source.book,
                           onTap: () => setState(() {
                             _source = _Source.book;
                           }),
                         ),
                         _Chip(
-                          label: '안 외운 것만',
+                          label: tr('안 외운 것만'),
                           selected: _onlyUnmemorized,
                           color: AppColors.morakot,
                           onTap: () => setState(
@@ -184,7 +185,7 @@ class _VocabScreenState extends State<VocabScreen> {
                         scrollDirection: Axis.horizontal,
                         children: [
                           _Chip(
-                            label: '전체',
+                            label: tr('전체'),
                             selected: _day == null,
                             color: AppColors.thongDeep,
                             small: true,
@@ -192,7 +193,7 @@ class _VocabScreenState extends State<VocabScreen> {
                           ),
                           for (final d in days)
                             _Chip(
-                              label: '$d일 ${svc.themes[d]}',
+                              label: trf('{0}일 {1}', [d, svc.themes[d]]),
                               selected: _day == d,
                               color: AppColors.thongDeep,
                               small: true,
@@ -205,8 +206,8 @@ class _VocabScreenState extends State<VocabScreen> {
                 const LaiThaiDivider(),
                 Expanded(
                   child: list.isEmpty
-                      ? const Center(
-                          child: Text('검색 결과가 없어요',
+                      ? Center(
+                          child: Text(tr('검색 결과가 없어요'),
                               style: TextStyle(color: AppColors.khramLight)))
                       : ListView.separated(
                           itemCount: list.length,

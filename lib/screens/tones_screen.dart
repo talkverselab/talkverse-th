@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../core/theme.dart';
 import '../data/models/tone.dart';
 import '../data/repositories/tone_repository.dart';
+import '../core/l10n.dart';
 
 class TonesScreen extends StatefulWidget {
   const TonesScreen({super.key});
@@ -25,7 +26,7 @@ class _TonesScreenState extends State<TonesScreen> {
     return Scaffold(
       backgroundColor: AppColors.creamDeep,
       appBar: AppBar(
-        title: const Text('성조 · วรรณยุกต์',
+        title: Text(tr('성조 · วรรณยุกต์'),
             style: TextStyle(fontWeight: FontWeight.w800)),
       ),
       body: FutureBuilder<ToneData>(
@@ -35,7 +36,7 @@ class _TonesScreenState extends State<TonesScreen> {
             return const Center(child: CircularProgressIndicator());
           }
           if (snap.hasError || !snap.hasData) {
-            return Center(child: Text('데이터를 불러오지 못했어요\n${snap.error ?? ''}'));
+            return Center(child: Text(trf('데이터를 불러오지 못했어요\n{0}', [snap.error ?? ''])));
           }
           final data = snap.data!;
           return ListView(
@@ -43,12 +44,12 @@ class _TonesScreenState extends State<TonesScreen> {
             children: [
               const _IntroCard(),
               const SizedBox(height: 20),
-              const _SectionHeader('5성조 · 최소대립쌍 “카”'),
+              _SectionHeader(tr('5성조 · 최소대립쌍 “카”')),
               const SizedBox(height: 4),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.symmetric(horizontal: 2),
                 child: Text(
-                  '같은 “카” 발음도 성조에 따라 뜻이 완전히 달라집니다. 카드를 눌러 들어보세요.',
+                  tr('같은 “카” 발음도 성조에 따라 뜻이 완전히 달라집니다. 카드를 눌러 들어보세요.'),
                   style: TextStyle(color: Colors.black54, fontSize: 12.5),
                 ),
               ),
@@ -58,23 +59,23 @@ class _TonesScreenState extends State<TonesScreen> {
                 const SizedBox(height: 10),
               ],
               const SizedBox(height: 12),
-              const _SectionHeader('성조 부호 · รูปวรรณยุกต์'),
+              _SectionHeader(tr('성조 부호 · รูปวรรณยุกต์')),
               const SizedBox(height: 10),
               _ToneMarkRow(marks: data.marks),
               const SizedBox(height: 22),
-              const _SectionHeader('성조 규칙표 · 자음 분류별'),
+              _SectionHeader(tr('성조 규칙표 · 자음 분류별')),
               const SizedBox(height: 4),
-              const Padding(
+              Padding(
                 padding: EdgeInsets.symmetric(horizontal: 2),
                 child: Text(
-                  '자음 분류 × 음절 종류 × 성조부호 → 성조. 태국어 읽기의 핵심 규칙입니다.',
+                  tr('자음 분류 × 음절 종류 × 성조부호 → 성조. 태국어 읽기의 핵심 규칙입니다.'),
                   style: TextStyle(color: Colors.black54, fontSize: 12.5),
                 ),
               ),
               const SizedBox(height: 12),
               _ToneRuleTable(rules: data.rules),
               const SizedBox(height: 14),
-              const _LegendCard(),
+              _LegendCard(),
             ],
           );
         },
@@ -101,15 +102,15 @@ class _IntroCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text('태국어는 5성조 언어',
+          Text(tr('태국어는 5성조 언어'),
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w800,
                   fontSize: 18)),
           const SizedBox(height: 8),
           Text(
-            '평성·저성·하강성·고성·상승성 5개. 성조는 글자에 늘 적혀 있지 않고, '
-            '자음 분류(고·중·저)와 모음 길이·받침·성조부호의 조합으로 정해집니다.',
+            tr('평성·저성·하강성·고성·상승성 5개. 성조는 글자에 늘 적혀 있지 않고, ') +
+            tr('자음 분류(고·중·저)와 모음 길이·받침·성조부호의 조합으로 정해집니다.'),
             style: TextStyle(
                 color: Colors.white.withValues(alpha: 0.95),
                 height: 1.5,
@@ -166,7 +167,7 @@ class _ToneCard extends StatelessWidget {
         onTap: () {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
-              content: Text('${tone.sample} (${tone.nameKo}) — 발음 오디오 준비 중'),
+              content: Text(trf('{0} ({1}) — 발음 오디오 준비 중', [tone.sample, tone.nameKo])),
               duration: const Duration(milliseconds: 1000),
             ),
           );
@@ -225,7 +226,7 @@ class _ToneCard extends StatelessWidget {
                         style: const TextStyle(
                             fontSize: 12, color: Colors.black54, height: 1.3)),
                     const SizedBox(height: 3),
-                    Text('뜻: ${tone.meaning}',
+                    Text(trf('뜻: {0}', [tone.meaning]),
                         style: TextStyle(
                             fontSize: 12,
                             color: color,
@@ -351,7 +352,7 @@ class _ToneRuleTable extends StatelessWidget {
           BoxShadow(
             color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
-            offset: const Offset(0, 4),
+            offset: Offset(0, 4),
           ),
         ],
       ),
@@ -361,16 +362,16 @@ class _ToneRuleTable extends StatelessWidget {
         child: DataTable(
           headingRowColor: WidgetStatePropertyAll(
               AppColors.khram.withValues(alpha: 0.06)),
-          headingTextStyle: const TextStyle(
+          headingTextStyle: TextStyle(
               fontWeight: FontWeight.w800, fontSize: 12.5, color: Colors.black87),
-          dataTextStyle: const TextStyle(fontSize: 12.5, color: Colors.black87),
+          dataTextStyle: TextStyle(fontSize: 12.5, color: Colors.black87),
           columnSpacing: 18,
           horizontalMargin: 14,
-          columns: const [
-            DataColumn(label: Text('자음 분류')),
-            DataColumn(label: Text('평음절\n(무표)')),
-            DataColumn(label: Text('사음절\n단모음')),
-            DataColumn(label: Text('사음절\n장모음')),
+          columns: [
+            DataColumn(label: Text(tr('자음 분류'))),
+            DataColumn(label: Text(tr('평음절\n(무표)'))),
+            DataColumn(label: Text(tr('사음절\n단모음'))),
+            DataColumn(label: Text(tr('사음절\n장모음'))),
             DataColumn(label: Text('ไม้เอก\n◌่')),
             DataColumn(label: Text('ไม้โท\n◌้')),
           ],
@@ -439,7 +440,7 @@ class _LegendCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(14),
+      padding: EdgeInsets.all(14),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(14),
@@ -447,15 +448,15 @@ class _LegendCard extends StatelessWidget {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          Text('용어',
+        children: [
+          Text(tr('용어'),
               style: TextStyle(fontWeight: FontWeight.w800, fontSize: 13.5)),
           SizedBox(height: 8),
-          Text('• 평음절(생음절): 장모음으로 끝나거나 ㅇ·ㄴ·ㅁ·이·오 받침으로 끝나는 음절',
+          Text(tr('• 평음절(생음절): 장모음으로 끝나거나 ㅇ·ㄴ·ㅁ·이·오 받침으로 끝나는 음절'),
               style: TextStyle(fontSize: 12.5, color: Colors.black54, height: 1.5)),
-          Text('• 사음절: 단모음으로 끝나거나 ㄱ·ㄷ·ㅂ 받침으로 끝나는 음절',
+          Text(tr('• 사음절: 단모음으로 끝나거나 ㄱ·ㄷ·ㅂ 받침으로 끝나는 음절'),
               style: TextStyle(fontSize: 12.5, color: Colors.black54, height: 1.5)),
-          Text('• 저자음 단독으로는 5성조를 다 못 만들어, ห·อ 선도자음으로 보완합니다.',
+          Text(tr('• 저자음 단독으로는 5성조를 다 못 만들어, ห·อ 선도자음으로 보완합니다.'),
               style: TextStyle(fontSize: 12.5, color: Colors.black54, height: 1.5)),
         ],
       ),

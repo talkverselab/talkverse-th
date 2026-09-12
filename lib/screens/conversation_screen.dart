@@ -7,6 +7,7 @@ import 'chunk_search_screen.dart';
 import 'episode_screen.dart';
 import 'grammar_lesson_screen.dart';
 import 'sentence_flashcard_screen.dart';
+import '../core/l10n.dart';
 
 /// 회화(다이얼로그) 허브 — 스토리·연애 챗·여행 회화 + 실전 문장.
 class ConversationScreen extends StatefulWidget {
@@ -36,10 +37,10 @@ class _ConversationScreenState extends State<ConversationScreen> {
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
-        title: const Column(
+        title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('회화',
+            Text(tr('회화'),
                 style: TextStyle(
                     color: AppColors.khram,
                     fontSize: 16,
@@ -90,7 +91,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
                   const SizedBox(width: 8),
                   Expanded(
                     child: Text(
-                      '${EpisodeCatalog.levelLabels[level]} · ${catalog.forLevel(level).length}편',
+                      trf('{0} · {1}편', [EpisodeCatalog.levelLabels[level], catalog.forLevel(level).length]),
                       style: const TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w800,
@@ -161,12 +162,12 @@ class _ConversationScreenState extends State<ConversationScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const Row(
+          Row(
             children: [
               GoldEmblem(text: 'เรียน', size: 22),
               SizedBox(width: 8),
               Text(
-                '우리 콘텐츠 (자체 제작)',
+                tr('우리 콘텐츠 (자체 제작)'),
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w800,
@@ -178,16 +179,16 @@ class _ConversationScreenState extends State<ConversationScreen> {
           ),
           const SizedBox(height: 8),
           _HubCard(
-            title: '어말조사 (คำลงท้าย)',
-            sub: 'นะ·ครับ·ค่ะ·ไหม… 말맛의 핵심 12개',
+            title: tr('어말조사 (คำลงท้าย)'),
+            sub: tr('นะ·ครับ·ค่ะ·ไหม… 말맛의 핵심 12개'),
             emblem: 'นะ',
             color: const Color(0xFFAD1457),
-            builder: (_) => const GrammarLessonScreen(),
+            builder: (_) => GrammarLessonScreen(),
           ),
           const SizedBox(height: 8),
           _HubCard(
-            title: '문장 플래시카드',
-            sub: '전 레벨 랜덤 20문장 · 뜻 뒤집기 · 남/녀 음성',
+            title: tr('문장 플래시카드'),
+            sub: tr('전 레벨 랜덤 20문장 · 뜻 뒤집기 · 남/녀 음성'),
             emblem: 'ทวน',
             color: AppColors.morakot,
             builder: (_) => const SentenceFlashcardScreen(),
@@ -208,8 +209,8 @@ class _ConversationScreenState extends State<ConversationScreen> {
             children: [
               const GoldEmblem(text: 'คุย', size: 22),
               const SizedBox(width: 8),
-              const Text(
-                '실전 구어 문장',
+              Text(
+                tr('실전 구어 문장'),
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w800,
@@ -226,7 +227,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
                   borderRadius: BorderRadius.circular(6),
                 ),
                 child: Text(
-                  '문장 $count',
+                  trf('문장 {0}', [count]),
                   style: const TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.w800,
@@ -238,8 +239,8 @@ class _ConversationScreenState extends State<ConversationScreen> {
           ),
           const SizedBox(height: 8),
           _HubCard(
-            title: '청크 검색',
-            sub: '태국어·로마자·한국어로 실전 문장 검색',
+            title: tr('청크 검색'),
+            sub: tr('태국어·로마자·한국어로 실전 문장 검색'),
             emblem: 'หา',
             color: AppColors.kluayMai,
             builder: (_) => const ChunkSearchScreen(),

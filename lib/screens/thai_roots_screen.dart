@@ -6,6 +6,8 @@ import '../services/tts_service.dart';
 import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
 import '../widgets/vocab_sheet.dart';
+import '../core/l10n.dart';
+import '../services/ko_reading.dart';
 
 /// 루트 단어 탐색 — zh 의 발음부(声旁) 화면에 대응.
 /// 카드를 탭하면 그 루트를 공유하는 파생어 가족 시트가 열린다.
@@ -85,8 +87,8 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
   List<(RootStage, String, String)> _stages(BuildContext context) {
     final vs = VocabService.instance;
     return [
-      (RootStage.upTo5, '중요 1,000단어', '빈도 ${vs.entriesUpToLevel(5).length}'),
-      (RootStage.standard, '표준 단어', '누적 ${vs.standardEntries.length}'),
+      (RootStage.upTo5, tr('중요 1,000단어'), trf('빈도 {0}', [vs.entriesUpToLevel(5).length])),
+      (RootStage.standard, tr('표준 단어'), trf('누적 {0}', [vs.standardEntries.length])),
     ];
   }
 
@@ -99,12 +101,12 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
-        title: const Column(
+        title: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('루트 단어'),
+            Text(tr('루트 단어')),
             Text(
-              '핵심 형태소 → 파생어 가족',
+              tr('핵심 형태소 → 파생어 가족'),
               style: TextStyle(fontSize: 10, letterSpacing: 1),
             ),
           ],
@@ -127,7 +129,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
                       fontFamilyFallback: AppTheme.fontFallback,
                     ),
                     decoration: InputDecoration(
-                      hintText: 'น้ำ · 남 · 물',
+                      hintText: tr('น้ำ · 남 · 물'),
                       hintStyle: const TextStyle(
                         color: AppColors.khramLight,
                         fontSize: 14,
@@ -163,7 +165,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
                       const GoldEmblem(text: 'ราก', size: 22),
                       const SizedBox(width: 8),
                       Text(
-                        '루트 ${_roots.length}개 · 파생어 $total개',
+                        trf('루트 {0}개 · 파생어 {1}개', [_roots.length, total]),
                         style: const TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w800,
@@ -172,8 +174,8 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
                         ),
                       ),
                       const Spacer(),
-                      const Text(
-                        '탭 → 파생어 가족',
+                      Text(
+                        tr('탭 → 파생어 가족'),
                         style: TextStyle(
                           fontSize: 10,
                           color: AppColors.khramLight,
@@ -314,10 +316,9 @@ class _RootCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    KoReadingText(
                       root.reading,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
+                      th: root.th,
                       style: const TextStyle(
                         fontWeight: FontWeight.w800,
                         fontSize: 15,
@@ -344,7 +345,7 @@ class _RootCard extends StatelessWidget {
                         border: Border.all(color: AppColors.thong),
                       ),
                       child: Text(
-                        '파생 $count개',
+                        trf('파생 {0}개', [count]),
                         style: const TextStyle(
                           fontSize: 9,
                           color: AppColors.khram,
@@ -428,7 +429,7 @@ class RootFamilySheet extends StatelessWidget {
               ),
               if (selfEntry != null)
                 IconButton(
-                  tooltip: '단어 상세',
+                  tooltip: tr('단어 상세'),
                   icon: const Icon(
                     Icons.info_outline,
                     color: AppColors.khramLight,
@@ -456,17 +457,17 @@ class RootFamilySheet extends StatelessWidget {
         ),
         ..._sections(context, root),
         if (family.count == 0)
-          const Padding(
+          Padding(
             padding: EdgeInsets.all(20),
             child: Text(
-              '아직 단어장에 파생어가 없어요.',
+              tr('아직 단어장에 파생어가 없어요.'),
               style: TextStyle(color: AppColors.khramLight),
             ),
           ),
-        const Padding(
+        Padding(
           padding: EdgeInsets.fromLTRB(20, 12, 20, 0),
           child: Text(
-            '💡 같은 루트 = 뜻이 이어지는 경향. 앞에 붙으면 "루트+수식", 뒤에 붙으면 "수식+루트"로 읽어 보세요.',
+            tr('💡 같은 루트 = 뜻이 이어지는 경향. 앞에 붙으면 "루트+수식", 뒤에 붙으면 "수식+루트"로 읽어 보세요.'),
             style: TextStyle(fontSize: 11.5, color: AppColors.khramLight),
           ),
         ),
@@ -474,7 +475,7 @@ class RootFamilySheet extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
             child: Text(
-              '← $highlight 에서 이동',
+              trf('← {0} 에서 이동', [highlight]),
               style: const TextStyle(
                 fontSize: 11,
                 color: AppColors.khramLight,
@@ -504,7 +505,7 @@ class RootFamilySheet extends StatelessWidget {
     return [
       if (prefix.isNotEmpty)
         _FamilySection(
-          label: '앞에 붙음',
+          label: tr('앞에 붙음'),
           sub: '$r + ○○',
           color: AppColors.morakot,
           root: r,
@@ -512,7 +513,7 @@ class RootFamilySheet extends StatelessWidget {
         ),
       if (suffix.isNotEmpty)
         _FamilySection(
-          label: '뒤에 붙음',
+          label: tr('뒤에 붙음'),
           sub: '○○ + $r',
           color: AppColors.thongDeep,
           root: r,
@@ -520,7 +521,7 @@ class RootFamilySheet extends StatelessWidget {
         ),
       if (middle.isNotEmpty)
         _FamilySection(
-          label: '가운데',
+          label: tr('가운데'),
           sub: '○ + $r + ○',
           color: const Color(0xFFC62828),
           root: r,
@@ -584,7 +585,7 @@ class _FamilySection extends StatelessWidget {
                 ),
               ),
               Text(
-                '${entries.length}개',
+                trf('{0}개', [entries.length]),
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w900,
@@ -676,10 +677,9 @@ class _WordTile extends StatelessWidget {
               ],
             ),
             if (entry.reading.isNotEmpty)
-              Text(
+              KoReadingText(
                 entry.reading,
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
+                th: entry.th,
                 style: TextStyle(
                   fontSize: 11.5,
                   fontWeight: FontWeight.w700,

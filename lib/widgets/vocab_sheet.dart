@@ -8,6 +8,7 @@ import '../services/root_service.dart';
 import '../services/tts_service.dart';
 import '../services/vocab_service.dart';
 import 'thai_decor.dart';
+import '../core/l10n.dart';
 
 /// 단어에 들어있는 루트 단어 칩 — 탭하면 루트 가족 화면으로.
 class RootChips extends StatelessWidget {
@@ -32,8 +33,8 @@ class RootChips extends StatelessWidget {
       crossAxisAlignment: WrapCrossAlignment.center,
       children: [
         if (showLabel)
-          const Text(
-            '루트',
+          Text(
+            tr('루트'),
             style: TextStyle(
               fontSize: 10,
               fontWeight: FontWeight.w800,
@@ -164,7 +165,7 @@ class VocabDetail extends StatelessWidget {
                   builder: (context, _, _) {
                     final on = MemorizedStore.contains(e.th);
                     return IconButton(
-                      tooltip: on ? '외움 해제' : '외웠어요',
+                      tooltip: on ? tr('외움 해제') : tr('외웠어요'),
                       onPressed: () => MemorizedStore.toggle(e.th),
                       icon: Icon(
                         on ? Icons.check_circle : Icons.radio_button_unchecked,
@@ -200,7 +201,7 @@ class VocabDetail extends StatelessWidget {
               [
                 if (e.level > 0) e.levelLabel,
                 if (e.sourceLabel.isNotEmpty) e.sourceLabel,
-                if (e.uncertain) '판독 불확실',
+                if (e.uncertain) tr('판독 불확실'),
               ].join('  ·  '),
               style: const TextStyle(fontSize: 11, color: AppColors.khramLight),
             ),
@@ -272,7 +273,7 @@ class VocabRow extends StatelessWidget {
                 final on = MemorizedStore.contains(e.th);
                 return IconButton(
                   visualDensity: VisualDensity.compact,
-                  tooltip: on ? '외움 해제' : '외웠어요',
+                  tooltip: on ? tr('외움 해제') : tr('외웠어요'),
                   onPressed: () => MemorizedStore.toggle(e.th),
                   icon: Icon(
                     on ? Icons.check_circle : Icons.radio_button_unchecked,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../core/theme.dart';
 import '../data/models/alphabet.dart';
+import '../core/l10n.dart';
 
 /// 고/중/저 자음 분류 심화 — 문자 44 화면의 '3분류' 탭 본문.
 /// 각 그룹의 글자 구성과, 그 분류가 성조에 어떤 영향을 주는지 설명한다.
@@ -17,33 +18,33 @@ class ConsonantClassBody extends StatelessWidget {
         const _IntroCard(),
         const SizedBox(height: 20),
         _ClassBlock(
-          title: '중자음',
+          title: tr('중자음'),
           thai: 'อักษรกลาง',
           color: AppColors.classMid,
           count: data.mid.length,
-          tagline: '소리가 막히지 않는 안정된 자음. 5성조를 모두 만들 수 있는 기준.',
+          tagline: tr('소리가 막히지 않는 안정된 자음. 5성조를 모두 만들 수 있는 기준.'),
           consonants: data.mid,
-          mnemonic: '“ไก่ จิก เด็ก ตาย บน ปาก โอ่ง” 같은 암기 문장으로 9자를 외웁니다.',
+          mnemonic: tr('“ไก่ จิก เด็ก ตาย บน ปาก โอ่ง” 같은 암기 문장으로 9자를 외웁니다.'),
         ),
         const SizedBox(height: 18),
         _ClassBlock(
-          title: '고자음',
+          title: tr('고자음'),
           thai: 'อักษรสูง',
           color: AppColors.classHigh,
           count: data.high.length,
-          tagline: '높은 곳에서 시작하는 무성·기식음. 무표시일 때 상승성이 된다.',
+          tagline: tr('높은 곳에서 시작하는 무성·기식음. 무표시일 때 상승성이 된다.'),
           consonants: data.high,
-          mnemonic: '대부분 ㅋ·ㅊ·ㅌ·ㅍ·ㅅ·ㅎ 계열의 거센소리/마찰음입니다.',
+          mnemonic: tr('대부분 ㅋ·ㅊ·ㅌ·ㅍ·ㅅ·ㅎ 계열의 거센소리/마찰음입니다.'),
         ),
         const SizedBox(height: 18),
         _ClassBlock(
-          title: '저자음',
+          title: tr('저자음'),
           thai: 'อักษรต่ำ',
           color: AppColors.classLow,
           count: data.low.length,
-          tagline: '가장 많은 24자. 무표시일 때 평성, 비음·유음이 다수.',
+          tagline: tr('가장 많은 24자. 무표시일 때 평성, 비음·유음이 다수.'),
           consonants: data.low,
-          mnemonic: '고자음과 짝(같은 음가)을 이루는 글자가 많아 함께 외우면 효율적입니다.',
+          mnemonic: tr('고자음과 짝(같은 음가)을 이루는 글자가 많아 함께 외우면 효율적입니다.'),
         ),
         const SizedBox(height: 22),
         const _ToneHintCard(),
@@ -70,35 +71,35 @@ class _IntroCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
-            'ไตรยางศ์ (뜨라이양)',
+          Text(
+            tr('ไตรยางศ์ (뜨라이양)'),
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w800,
               fontSize: 18,
             ),
           ),
-          const SizedBox(height: 8),
+          SizedBox(height: 8),
           Text(
-            '태국어 44개 자음은 고(สูง)·중(กลาง)·저(ต่ำ) 세 그룹으로 나뉩니다. '
-            '같은 모음·받침이라도 어느 그룹 자음으로 시작하느냐에 따라 음절의 성조가 달라지므로, '
-            '이 분류는 태국어 읽기의 출발점입니다.',
+            tr('태국어 44개 자음은 고(สูง)·중(กลาง)·저(ต่ำ) 세 그룹으로 나뉩니다. ') +
+            tr('같은 모음·받침이라도 어느 그룹 자음으로 시작하느냐에 따라 음절의 성조가 달라지므로, ') +
+            tr('이 분류는 태국어 읽기의 출발점입니다.'),
             style: TextStyle(
               color: Colors.white.withValues(alpha: 0.92),
               height: 1.5,
               fontSize: 13.5,
             ),
           ),
-          const SizedBox(height: 14),
+          SizedBox(height: 14),
           Row(
-            children: const [
-              _CountPill('중 9'),
+            children: [
+              _CountPill(tr('중 9')),
               SizedBox(width: 8),
-              _CountPill('고 11'),
+              _CountPill(tr('고 11')),
               SizedBox(width: 8),
-              _CountPill('저 24'),
+              _CountPill(tr('저 24')),
               SizedBox(width: 8),
-              _CountPill('합 44'),
+              _CountPill(tr('합 44')),
             ],
           ),
         ],
@@ -284,18 +285,18 @@ class _ToneHintCard extends StatelessWidget {
       child: Row(
         children: [
           const Text('🎵', style: TextStyle(fontSize: 24)),
-          const SizedBox(width: 14),
+          SizedBox(width: 14),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Text(
-                  '다음 단계: 성조',
+                  tr('다음 단계: 성조'),
                   style: TextStyle(fontWeight: FontWeight.w800, fontSize: 14.5),
                 ),
                 SizedBox(height: 3),
                 Text(
-                  '자음 분류를 익혔다면, 하단 “성조” 탭에서 분류별 성조 규칙표로 넘어가세요.',
+                  tr('자음 분류를 익혔다면, 하단 “성조” 탭에서 분류별 성조 규칙표로 넘어가세요.'),
                   style: TextStyle(color: Colors.black54, fontSize: 12.5),
                 ),
               ],

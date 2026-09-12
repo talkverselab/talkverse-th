@@ -7,6 +7,7 @@ import '../services/tts_service.dart';
 import '../services/vocab_service.dart';
 import '../widgets/vocab_sheet.dart';
 import 'consonant_class_screen.dart';
+import '../core/l10n.dart';
 
 class AlphabetScreen extends StatefulWidget {
   const AlphabetScreen({super.key});
@@ -31,19 +32,19 @@ class _AlphabetScreenState extends State<AlphabetScreen> {
       child: Scaffold(
         backgroundColor: AppColors.creamDeep,
         appBar: AppBar(
-          title: const Text(
-            '문자 44 · อักษรไทย',
+          title: Text(
+            tr('문자 44 · อักษรไทย'),
             style: TextStyle(fontWeight: FontWeight.w800),
           ),
-          bottom: const TabBar(
+          bottom: TabBar(
             indicatorColor: AppColors.brand,
             labelColor: AppColors.brand,
             unselectedLabelColor: Colors.black45,
             labelStyle: TextStyle(fontWeight: FontWeight.w700),
             tabs: [
-              Tab(text: '자음 44'),
-              Tab(text: '3분류'),
-              Tab(text: '모음'),
+              Tab(text: tr('자음 44')),
+              Tab(text: tr('3분류')),
+              Tab(text: tr('모음')),
             ],
           ),
         ),
@@ -54,7 +55,7 @@ class _AlphabetScreenState extends State<AlphabetScreen> {
               return const Center(child: CircularProgressIndicator());
             }
             if (snap.hasError || !snap.hasData) {
-              return Center(child: Text('데이터를 불러오지 못했어요\n${snap.error ?? ''}'));
+              return Center(child: Text(trf('데이터를 불러오지 못했어요\n{0}', [snap.error ?? ''])));
             }
             final data = snap.data!;
             return TabBarView(
@@ -85,28 +86,28 @@ class _ConsonantTab extends StatelessWidget {
         const _ClassExplainerCard(),
         const SizedBox(height: 16),
         _ClassSection(
-          title: '중자음 · อักษรกลาง',
-          ko: '9자',
+          title: tr('중자음 · อักษรกลาง'),
+          ko: tr('9자'),
           color: AppColors.classMid,
           consonants: data.mid,
         ),
         const SizedBox(height: 20),
         _ClassSection(
-          title: '고자음 · อักษรสูง',
-          ko: '11자',
+          title: tr('고자음 · อักษรสูง'),
+          ko: tr('11자'),
           color: AppColors.classHigh,
           consonants: data.high,
         ),
         const SizedBox(height: 20),
         _ClassSection(
-          title: '저자음 · อักษรต่ำ',
-          ko: '24자',
+          title: tr('저자음 · อักษรต่ำ'),
+          ko: tr('24자'),
           color: AppColors.classLow,
           consonants: data.low,
         ),
         const SizedBox(height: 16),
         Text(
-          '※ ฃ·ฅ 두 글자는 현재 쓰이지 않는 폐자(廢字)지만 전통적으로 44자에 포함합니다.',
+          tr('※ ฃ·ฅ 두 글자는 현재 쓰이지 않는 폐자(廢字)지만 전통적으로 44자에 포함합니다.'),
           style: Theme.of(
             context,
           ).textTheme.bodySmall?.copyWith(color: Colors.black45),
@@ -132,13 +133,13 @@ class _ClassExplainerCard extends StatelessWidget {
           child: Row(
             children: [
               const Text('🔑', style: TextStyle(fontSize: 26)),
-              const SizedBox(width: 14),
-              const Expanded(
+              SizedBox(width: 14),
+              Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '왜 자음을 3그룹으로 나눌까?',
+                      tr('왜 자음을 3그룹으로 나눌까?'),
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w800,
@@ -147,7 +148,7 @@ class _ClassExplainerCard extends StatelessWidget {
                     ),
                     SizedBox(height: 3),
                     Text(
-                      '자음 분류가 음절의 성조를 결정합니다. 자세히 보기 →',
+                      tr('자음 분류가 음절의 성조를 결정합니다. 자세히 보기 →'),
                       style: TextStyle(color: Colors.white70, fontSize: 12.5),
                     ),
                   ],
@@ -341,9 +342,9 @@ void _showConsonantDetail(BuildContext context, ThaiConsonant c, Color color) {
               ],
             ),
             const SizedBox(height: 20),
-            _DetailRow('초성(앞소리)', c.initial),
-            _DetailRow('종성(받침)', c.finalSound == '-' ? '받침 없음' : c.finalSound),
-            _DetailRow('한국어 근사', c.ko),
+            _DetailRow(tr('초성(앞소리)'), c.initial),
+            _DetailRow(tr('종성(받침)'), c.finalSound == '-' ? tr('받침 없음') : c.finalSound),
+            _DetailRow(tr('한국어 근사'), c.ko),
             const SizedBox(height: 12),
             _ExampleWords(char: c.char, color: color),
             const SizedBox(height: 12),
@@ -357,7 +358,7 @@ void _showConsonantDetail(BuildContext context, ThaiConsonant c, Color color) {
                       : c.char,
                 ),
                 icon: const Icon(Icons.volume_up_rounded),
-                label: const Text('발음 듣기 (예시 단어)'),
+                label: Text(tr('발음 듣기 (예시 단어)')),
               ),
             ),
           ],
@@ -410,7 +411,7 @@ class _ExampleWords extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              '예시 단어 · 빈도순',
+              tr('예시 단어 · 빈도순'),
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w800,
@@ -479,10 +480,10 @@ class _ClassBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final label = c.isMid
-        ? '중자음 · กลาง'
+        ? tr('중자음 · กลาง')
         : c.isHigh
-        ? '고자음 · สูง'
-        : '저자음 · ต่ำ';
+        ? tr('고자음 · สูง')
+        : tr('저자음 · ต่ำ');
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
@@ -514,12 +515,12 @@ class _VowelTab extends StatelessWidget {
     return ListView(
       padding: const EdgeInsets.fromLTRB(16, 14, 16, 28),
       children: [
-        _VowelGroup(title: '단모음 · สระเสียงสั้น', vowels: shortV),
+        _VowelGroup(title: tr('단모음 · สระเสียงสั้น'), vowels: shortV),
         const SizedBox(height: 20),
-        _VowelGroup(title: '장모음 · สระเสียงยาว', vowels: longV),
+        _VowelGroup(title: tr('장모음 · สระเสียงยาว'), vowels: longV),
         const SizedBox(height: 14),
         Text(
-          '※ – 자리에 자음이 들어갑니다. 모음 길이(단·장)는 성조 결정에도 영향을 줍니다.',
+          tr('※ – 자리에 자음이 들어갑니다. 모음 길이(단·장)는 성조 결정에도 영향을 줍니다.'),
           style: Theme.of(
             context,
           ).textTheme.bodySmall?.copyWith(color: Colors.black45),
@@ -593,7 +594,7 @@ class _VowelCard extends StatelessWidget {
             ),
             const SizedBox(height: 4),
             Text(
-              '독음 ${v.ko}',
+              trf('독음 {0}', [v.ko]),
               style: const TextStyle(fontSize: 11.5, color: Colors.black54),
             ),
           ],
@@ -627,9 +628,9 @@ void _showVowelDetail(BuildContext context, ThaiVowel v) {
             ),
           ),
           const SizedBox(height: 12),
-          _DetailRow('독음', v.ko),
-          _DetailRow('길이', v.isLong ? '장모음 (길게)' : '단모음 (짧게)'),
-          _DetailRow('예시', '${v.example}  ·  ${v.exampleKo}'),
+          _DetailRow(tr('독음'), v.ko),
+          _DetailRow(tr('길이'), v.isLong ? tr('장모음 (길게)') : tr('단모음 (짧게)')),
+          _DetailRow(tr('예시'), '${v.example}  ·  ${v.exampleKo}'),
         ],
       ),
     ),
