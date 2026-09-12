@@ -6,6 +6,7 @@ import '../core/theme.dart';
 import '../services/update_service.dart';
 import '../widgets/thai_decor.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 앱 업데이트 — GitHub 릴리스(master 푸시마다 갱신)에서 최신 빌드를 받아 설치.
 class UpdateScreen extends StatefulWidget {
@@ -140,7 +141,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
         ),
       ),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(16, 12, 16, 28),
+        padding: EdgeInsets.fromLTRB(16, 12, 16, 28 + bottomInset(context)),
         children: [
           const LaiThaiDivider(height: 8),
           const SizedBox(height: 10),

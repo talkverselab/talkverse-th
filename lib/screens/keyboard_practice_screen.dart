@@ -6,6 +6,7 @@ import '../services/tts_service.dart';
 import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 키보드연습 — 태국어 Kedmanee 자판.
 ///
@@ -275,7 +276,7 @@ class _KeyboardPracticeScreenState extends State<KeyboardPracticeScreen> {
         ),
       ),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(14, 10, 14, 24),
+        padding: EdgeInsets.fromLTRB(14, 10, 14, 24 + bottomInset(context)),
         children: [
           _courseChips(),
           const SizedBox(height: 12),

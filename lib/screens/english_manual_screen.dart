@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/theme.dart';
+import '../core/platform.dart';
 import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
 
@@ -228,7 +229,7 @@ class _ConsonantTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final rows = (data['consonants'] as List? ?? []).cast<Map>();
     return ListView(
-      padding: const EdgeInsets.fromLTRB(14, 10, 14, 32),
+      padding: EdgeInsets.fromLTRB(14, 10, 14, 32 + bottomInset(context)),
       children: [
         _Intro(data: data),
         for (final c in rows) _ConsonantRow(c: c),
@@ -375,7 +376,7 @@ class _VowelTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final rows = (data['vowels'] as List? ?? []).cast<Map>();
     return ListView(
-      padding: const EdgeInsets.fromLTRB(14, 10, 14, 32),
+      padding: EdgeInsets.fromLTRB(14, 10, 14, 32 + bottomInset(context)),
       children: [
         _Intro(data: data),
         for (final v in rows) _VowelRow(v: v),
@@ -518,7 +519,7 @@ class _ToneTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final rows = (data['tones'] as List? ?? []).cast<Map>();
     return ListView(
-      padding: const EdgeInsets.fromLTRB(14, 10, 14, 32),
+      padding: EdgeInsets.fromLTRB(14, 10, 14, 32 + bottomInset(context)),
       children: [
         _Intro(data: data),
         const Padding(

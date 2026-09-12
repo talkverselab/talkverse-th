@@ -44,10 +44,12 @@ class AppColors {
 
 class AppTheme {
   static const fontFallback = <String>[
-    'Noto Sans Thai',
-    'Leelawadee UI',
+    'Noto Sans Thai', // Android
+    'Thonburi', // iOS 태국어
+    'Leelawadee UI', // Windows
     'Noto Sans',
-    'Noto Sans KR',
+    'Noto Sans KR', // Android 한국어
+    'Apple SD Gothic Neo', // iOS 한국어
     'Segoe UI',
     'Malgun Gothic',
   ];

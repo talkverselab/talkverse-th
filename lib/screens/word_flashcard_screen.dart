@@ -8,6 +8,7 @@ import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
 import '../widgets/vocab_sheet.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 단어 플래시카드 — 한→태(기본) / 태→한, 독음 토글, 탭해서 뒤집기, 알아요 = 체크 해제.
 class WordFlashcardScreen extends StatefulWidget {
@@ -221,7 +222,7 @@ class _WordFlashcardScreenState extends State<WordFlashcardScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(16, 4, 16, 20),
+            padding: EdgeInsets.fromLTRB(16, 4, 16, 20 + bottomInset(context)),
             child: Row(
               children: [
                 _NavBtn(label: tr('← 이전'), enabled: _idx > 0, onTap: () => _go(-1)),

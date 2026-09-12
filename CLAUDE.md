@@ -87,3 +87,14 @@ adb -s R3CY20HDN2K install --user 0 -r <apk>
 - 영어 모드에서는 `KoReadingText` 가 한글 독음 대신 **로마자**(`th_tones.json` 의 `ro`)를 보여 준다.
   성조 DB 가 모르는 문자열은 한글 독음이 그대로 나온다.
 - **콘텐츠(단어 뜻·회화 번역·문법 설명)는 아직 한국어**다. 영어 뜻은 만들지 않았다.
+
+## 6. 갤럭시·아이폰 공용 인터페이스 — 2026-09-12
+
+- 플랫폼 판단은 `lib/core/platform.dart` 의 `isIOS` / `isAndroid` 만 쓴다(`dart:io` Platform 직접 호출 금지 — 웹·테스트에서 깨짐).
+- **화면 아래 고정 버튼·목록 바닥 여백은 `bottomInset(context)` 를 더한다**
+  (`EdgeInsets.fromLTRB(20, 8, 20, 26 + bottomInset(context))`). 아이폰 홈 인디케이터(34pt)·갤럭시 제스처 바에 가려지지 않게.
+  새 화면을 만들 때도 같은 규칙.
+- 글자 확대 상한 1.2배(`main.dart` builder) — 아이폰 Dynamic Type 로 타일이 깨지는 것 방지.
+- iOS 오디오: `TtsService` 와 `AudioService` 가 iOS 에서 재생 카테고리(playback)를 잡는다 — 무음 스위치에서도 소리가 난다. 지우지 말 것.
+- 「앱 업데이트」 메뉴는 Android 전용(APK 설치 채널). iOS 는 TestFlight 안내 타일이 대신 나온다. `UpdateService.install` 은 Android 에서만 호출.
+- 폰트 폴백에 iOS 서체(Thonburi·Apple SD Gothic Neo) 포함. 없는 서체 이름은 무시되므로 양쪽에 다 적어 둔다.

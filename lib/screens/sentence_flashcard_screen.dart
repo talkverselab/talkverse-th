@@ -12,6 +12,7 @@ import '../widgets/selectable_thai.dart';
 import '../widgets/thai_decor.dart';
 import 'episode_screen.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 힌트: 독음의 첫 어절만 (전체 문장 노출 방지)
 class SentenceFlashcardHint {
@@ -503,7 +504,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
         ),
         // ── 3단계 평가 ──
         Padding(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 26),
+          padding: EdgeInsets.fromLTRB(20, 8, 20, 26 + bottomInset(context)),
           child: Row(
             children: [
               Expanded(

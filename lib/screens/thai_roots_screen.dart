@@ -7,6 +7,7 @@ import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
 import '../widgets/vocab_sheet.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 import '../services/ko_reading.dart';
 
 /// 루트 단어 탐색 — zh 의 발음부(声旁) 화면에 대응.
@@ -205,7 +206,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
                 const LaiThaiDivider(height: 8),
                 Expanded(
                   child: GridView.builder(
-                    padding: const EdgeInsets.fromLTRB(16, 10, 16, 24),
+                    padding: EdgeInsets.fromLTRB(16, 10, 16, 24 + bottomInset(context)),
                     gridDelegate:
                         const SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
@@ -387,7 +388,7 @@ class RootFamilySheet extends StatelessWidget {
     final selfEntry = VocabService.instance.lookup(root.th);
     return ListView(
       controller: controller,
-      padding: const EdgeInsets.fromLTRB(0, 12, 0, 24),
+      padding: EdgeInsets.fromLTRB(0, 12, 0, 24 + bottomInset(context)),
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),

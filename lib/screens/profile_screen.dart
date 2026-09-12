@@ -5,6 +5,7 @@ import '../services/update_service.dart';
 import '../widgets/thai_decor.dart';
 import 'update_screen.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -92,14 +93,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ? 'English  (tap: 한국어)'
                     : '한국어  (탭: English)',
                 onTap: AppLangPrefs.toggle),
-            _SettingItem(
-                icon: Icons.system_update,
-                title: tr('앱 업데이트'),
-                subtitle: tr('GitHub 최신 빌드 확인 · 내려받아 설치'),
-                onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (_) => const UpdateScreen()),
-                    )),
+            if (isIOS)
+              _SettingItem(
+                  icon: Icons.flight_takeoff,
+                  title: tr('앱 업데이트'),
+                  subtitle: tr('아이폰은 TestFlight 앱에서 새 빌드를 받습니다'))
+            else
+              _SettingItem(
+                  icon: Icons.system_update,
+                  title: tr('앱 업데이트'),
+                  subtitle: tr('GitHub 최신 빌드 확인 · 내려받아 설치'),
+                  onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const UpdateScreen()),
+                      )),
             _SettingItem(
                 icon: Icons.volume_up,
                 title: tr('TTS 음성'),

@@ -8,6 +8,7 @@ import '../services/tts_service.dart';
 import '../widgets/memo_toggle.dart';
 import '../widgets/thai_decor.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 /// 어말조사(คำลงท้าย) 레슨 — 태국어 말맛의 핵심.
 /// 실제 구어 예문 기반.
@@ -133,7 +134,7 @@ class _GrammarLessonScreenState extends State<GrammarLessonScreen> {
                 const LaiThaiDivider(height: 10),
                 Expanded(
                   child: ListView.separated(
-                    padding: const EdgeInsets.fromLTRB(16, 10, 16, 24),
+                    padding: EdgeInsets.fromLTRB(16, 10, 16, 24 + bottomInset(context)),
                     itemCount: filtered.length,
                     separatorBuilder: (_, _) => const SizedBox(height: 10),
                     itemBuilder: (context, i) => _SfpCard(item: filtered[i]),

@@ -17,6 +17,7 @@ import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
 import 'episode_screen.dart';
 import '../core/l10n.dart';
+import '../core/platform.dart';
 
 // ─────────────────────────────────────────────────────────────
 // 문장 말하기 — 한국어를 보고 제한 시간 안에 태국어로 말하기
@@ -186,7 +187,7 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
         const LaiThaiDivider(height: 8),
         Expanded(
           child: ListView(
-            padding: const EdgeInsets.fromLTRB(16, 12, 16, 30),
+            padding: EdgeInsets.fromLTRB(16, 12, 16, 30 + bottomInset(context)),
             children: [
               _SectionLabel(tr('단계')),
               const SizedBox(height: 8),
@@ -959,7 +960,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 26),
+          padding: EdgeInsets.fromLTRB(20, 8, 20, 26 + bottomInset(context)),
           child: SizedBox(
             width: double.infinity,
             child: FilledButton.icon(
@@ -1147,7 +1148,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
         ),
         // ── 일시정지 / 정지 ──
         Padding(
-          padding: const EdgeInsets.fromLTRB(20, 8, 20, 26),
+          padding: EdgeInsets.fromLTRB(20, 8, 20, 26 + bottomInset(context)),
           child: Row(
             children: [
               Expanded(
@@ -1425,7 +1426,7 @@ class _ResultScreenState extends State<_ResultScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 8, 20, 26),
+            padding: EdgeInsets.fromLTRB(20, 8, 20, 26 + bottomInset(context)),
             child: Row(
               children: [
                 Expanded(
