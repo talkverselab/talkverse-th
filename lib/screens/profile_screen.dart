@@ -89,10 +89,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             _SettingItem(
                 icon: Icons.language,
                 title: tr('언어 / Language'),
-                subtitle: AppLangPrefs.isEn
-                    ? 'English  (tap: 한국어)'
-                    : '한국어  (탭: English)',
-                onTap: AppLangPrefs.toggle),
+                subtitle:
+                    '${AppLangPrefs.lang.value.label}  →  ${AppLangPrefs.peekNext().label}',
+                onTap: AppLangPrefs.next),
             if (isIOS)
               _SettingItem(
                   icon: Icons.flight_takeoff,

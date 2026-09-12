@@ -40,7 +40,7 @@ class ToneService {
     'high': 'ˊ',
     'rising': 'ˇ',
   };
-  static Map<String, String> toneNameKo = {
+  static Map<String, String> get toneNameKo => {
     'mid': tr('평성'),
     'low': tr('저성'),
     'falling': tr('하성'),

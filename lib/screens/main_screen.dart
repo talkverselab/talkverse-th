@@ -41,7 +41,7 @@ class _MainScreenState extends State<MainScreen> {
     ProfileScreen(),
   ];
 
-  static final List<NavigationDestination> _tabs = [
+  static List<NavigationDestination> get _tabs => [
     NavigationDestination(
         icon: Icon(Icons.home_outlined),
         selectedIcon: Icon(Icons.home),

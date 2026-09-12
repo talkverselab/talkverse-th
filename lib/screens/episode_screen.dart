@@ -33,7 +33,7 @@ class EpisodeCatalog {
   final Map<String, List<EpisodeMeta>> _byLevel = {};
   bool _loaded = false;
 
-  static Map<String, String> levelLabels = {
+  static Map<String, String> get levelLabels => {
     'L1': tr('L1 스토리 — 방콕 첫걸음'),
     'L2': tr('L2 연애 챗 — 썸부터 고백까지'),
     'L3': tr('L3 여행 회화 — 상황별 실전'),

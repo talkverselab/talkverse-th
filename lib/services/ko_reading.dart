@@ -126,7 +126,7 @@ class KoReadingText extends StatelessWidget {
       builder: (context, s, _) {
         if (s == ReadingStyle.off) return const SizedBox.shrink();
         // 영어 모드: 한글 독음 대신 로마자 (성조 DB가 아는 문자열만, 모르면 원래 독음)
-        final wantRoman = s == ReadingStyle.roman || AppLangPrefs.isEn;
+        final wantRoman = s == ReadingStyle.roman || !AppLangPrefs.isKo;
         if ((s == ReadingStyle.ko && !wantRoman) || th == null) {
           return Text(reading, textAlign: textAlign, style: style);
         }
