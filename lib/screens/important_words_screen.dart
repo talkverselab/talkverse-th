@@ -43,7 +43,7 @@ class ImportantWordsScreen extends StatelessWidget {
   static List<String> get tierParts => [tr('1단계 · 1~500위'), tr('2단계 · 501~1000위')];
   static String tierName(int level) => level <= 3 ? tierParts[0] : tierParts[1];
 
-  static final stages = <ImportantStage>[
+  static List<ImportantStage> get stages => <ImportantStage>[
     ImportantStage(
       id: 'top1000',
       badge: '1,000',
