@@ -444,6 +444,22 @@ const Map<String, String> kDictEn = {
   '완료 · 다음 편 열기': 'Done · unlock the next episode',
   '완료하고 닫기': 'Done',
   '코스를 불러오지 못했어요\n{0}': 'Could not load the course\n{0}',
+  // 계정
+  '계정': 'Account',
+  '로그인 · Google · Kakao': 'Sign in · Google · Kakao',
+  '로그인하면 학습 기록과 코스가 기기와 상관없이 이어져요.': 'Sign in to keep your progress and course across devices.',
+  'Google로 계속하기': 'Continue with Google',
+  '카카오로 계속하기': 'Continue with Kakao',
+  '네이버로 계속하기': 'Continue with Naver',
+  '로그인에 실패했어요': 'Sign-in failed',
+  '동기화에 실패했어요': 'Sync failed',
+  '이용권': 'Plan',
+  '태국어 · {0}까지': 'Thai · until {0}',
+  '이용권이 없어요': 'No active plan',
+  '구매는 talkverse.uk 또는 앱 스토어에서 · 준비 중': 'Buy on talkverse.uk or the app store · coming soon',
+  '지금 동기화': 'Sync now',
+  '로그아웃': 'Sign out',
+  '준비 중': 'Coming soon',
 };
 
 const Map<String, String> kDictJa = {
@@ -574,6 +590,22 @@ const Map<String, String> kDictJa = {
   '완료 · 다음 편 열기': '完了 · 次の話を開く',
   '완료하고 닫기': '完了して閉じる',
   '코스를 불러오지 못했어요\n{0}': 'コースを読み込めませんでした\n{0}',
+  // 계정
+  '계정': 'アカウント',
+  '로그인 · Google · Kakao': 'ログイン · Google · Kakao',
+  '로그인하면 학습 기록과 코스가 기기와 상관없이 이어져요.': 'ログインすると学習記録とコースが端末をまたいで続きます。',
+  'Google로 계속하기': 'Google で続ける',
+  '카카오로 계속하기': 'Kakao で続ける',
+  '네이버로 계속하기': 'Naver で続ける',
+  '로그인에 실패했어요': 'ログインに失敗しました',
+  '동기화에 실패했어요': '同期に失敗しました',
+  '이용권': 'プラン',
+  '태국어 · {0}까지': 'タイ語 · {0} まで',
+  '이용권이 없어요': '有効なプランがありません',
+  '구매는 talkverse.uk 또는 앱 스토어에서 · 준비 중': '購入は talkverse.uk またはアプリストアで · 準備中',
+  '지금 동기화': '今すぐ同期',
+  '로그아웃': 'ログアウト',
+  '준비 중': '準備中',
 };
 
 const Map<String, String> kDictZh = {
@@ -704,4 +736,20 @@ const Map<String, String> kDictZh = {
   '완료 · 다음 편 열기': '完成 · 解锁下一集',
   '완료하고 닫기': '完成并关闭',
   '코스를 불러오지 못했어요\n{0}': '无法加载课程\n{0}',
+  // 계정
+  '계정': '账号',
+  '로그인 · Google · Kakao': '登录 · Google · Kakao',
+  '로그인하면 학습 기록과 코스가 기기와 상관없이 이어져요.': '登录后学习记录和课程可跨设备延续。',
+  'Google로 계속하기': '使用 Google 继续',
+  '카카오로 계속하기': '使用 Kakao 继续',
+  '네이버로 계속하기': '使用 Naver 继续',
+  '로그인에 실패했어요': '登录失败',
+  '동기화에 실패했어요': '同步失败',
+  '이용권': '套餐',
+  '태국어 · {0}까지': '泰语 · 至 {0}',
+  '이용권이 없어요': '没有有效套餐',
+  '구매는 talkverse.uk 또는 앱 스토어에서 · 준비 중': '可在 talkverse.uk 或应用商店购买 · 即将推出',
+  '지금 동기화': '立即同步',
+  '로그아웃': '退出登录',
+  '준비 중': '即将推出',
 };

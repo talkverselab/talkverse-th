@@ -50,9 +50,9 @@ tv_subscriptions  유효 기간이 있는 권리   status·starts_at·ends_at·a
 - 스토어 규정: 앱 안에서 디지털 상품을 팔면 그 스토어 결제를 써야 한다. 웹 결제 유도 문구를 앱에 넣지 말 것(한국은 2022년 법 개정으로 외부 결제 고지 가능하지만 수수료 차이가 작다).
 - 같은 사용자가 두 채널에서 겹쳐 사면 `tv_entitlements` 가 `max(ends_at)` 로 합친다 — 손해는 없고 환불 처리는 관리자가.
 
-## 5. 앱에 붙일 때 (다음 단계)
+## 5. 앱에 붙인 것 (태국어 앱, 2026-09-21) — 나머지 앱은 같은 코드
 
-1. `supabase_flutter` + `app_links`. `Supabase.initialize(url, anonKey)` — url·anon 키는 공개 가능(RLS 가 지킨다). 서비스 키는 절대 앱에 넣지 않는다.
+1. `supabase_flutter`(딥링크 처리 내장). `Supabase.initialize(url, anonKey)` — url·anon 키는 공개 가능(RLS 가 지킨다). 서비스 키는 절대 앱에 넣지 않는다.
 2. 프로필 화면: 「로그인」 타일(Google · Kakao · Naver 버튼; `market` 이 global 이면 Google 만) / 로그인 후 이름·이용권 표시.
 3. 로그인하면 `tv_course_answers`·`tv_course_progress` 를 서버와 맞춘다(서버 updated_at 이 새로우면 내려받고, 아니면 올린다). 오프라인은 지금처럼 폰 저장.
 4. 잠금: `tv_has_access(appLang)` 를 앱 시작 때 한 번 + 하루 한 번 확인, 결과를 폰에 저장(오프라인 유예 7일).
