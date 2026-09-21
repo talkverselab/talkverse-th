@@ -63,5 +63,6 @@ flutter:
     - assets/data/grammar/
     - assets/data/phrases/
     - assets/data/vocab/
+    - assets/data/course/
     - assets/audio/
     - assets/images/
