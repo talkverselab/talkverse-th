@@ -7,6 +7,7 @@ import '../widgets/today_mission.dart';
 import 'alphabet_screen.dart';
 import 'chunk_search_screen.dart';
 import 'conversation_screen.dart';
+import 'course_screen.dart';
 import 'english_manual_screen.dart';
 import 'episode_screen.dart';
 import 'expressions_screen.dart';
@@ -280,7 +281,8 @@ class _QuickMenuRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final items = <(String, String, bool, WidgetBuilder)>[
-      ('⚡', tr('바로 문장'), true, (_) => const QuickPhrasesScreen()),
+      ('🎯', tr('내 코스'), true, (_) => const CourseScreen()),
+      ('⚡', tr('바로 문장'), false, (_) => const QuickPhrasesScreen()),
       ('📖', tr('단어장'), false, (_) => const VocabHubScreen()),
       ('🗣️', tr('표현학습'), false, (_) => const ExpressionsScreen()),
       ('💬', tr('회화'), false, (_) => const ConversationScreen()),

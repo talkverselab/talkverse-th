@@ -98,3 +98,11 @@ adb -s R3CY20HDN2K install --user 0 -r <apk>
 - iOS 오디오: `TtsService` 와 `AudioService` 가 iOS 에서 재생 카테고리(playback)를 잡는다 — 무음 스위치에서도 소리가 난다. 지우지 말 것.
 - 「앱 업데이트」 메뉴는 Android 전용(APK 설치 채널). iOS 는 TestFlight 안내 타일이 대신 나온다. `UpdateService.install` 은 Android 에서만 호출.
 - 폰트 폴백에 iOS 서체(Thonburi·Apple SD Gothic Neo) 포함. 없는 서체 이름은 무시되므로 양쪽에 다 적어 둔다.
+
+## 7. 내 코스 (질문 → 스크립트) — 2026-09-21
+
+- 질문 13개의 답으로 미리 써 둔 스크립트에 점수를 매겨 재생 목록을 만든다. **런타임에 글을 생성하지 않는다** — 같은 답이면 같은 목록.
+- 원본은 `drafts/script_engine/scripts_src.txt`(한 줄 = 한 턴). 고친 뒤 `python build_scripts.py` → `python publish_to_app.py` 로 `assets/data/course/` 를 갱신한다. 에셋 JSON 을 직접 고치지 말 것.
+- 성별판은 `variants.py` 가 규칙으로 만들고 `variants.json` 의 overrides 로 보정한다. 검수표: `REVIEW.md`(기본판) · `REVIEW_variants.md`(달라진 줄만).
+- 선택 규칙은 `select_playlist.py`(기준)와 `lib/services/course_service.dart`(이식) 두 곳 — 한쪽을 고치면 다른 쪽과 `test/course_service_test.dart` 기대값도 고친다.
+- 스크립트는 전부 자체 제작이고 **사람 검수 전 초안**이다. 수위 기준·설계는 `drafts/script_engine/00_DESIGN.md`.
