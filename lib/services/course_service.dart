@@ -107,6 +107,7 @@ class CourseService {
 
   static const _kAnswers = 'course_answers_v1';
   static const _kDone = 'course_done_v1';
+  static const _kAnswersAt = 'course_answers_at_v1';
   static const playlistSize = 12;
 
   List<CourseQuestion> questions = const [];
@@ -114,6 +115,7 @@ class CourseService {
   Map<String, String> driveLabels = const {};
   List<CourseScript> _all = const [];
   Map<String, dynamic> answers = {};
+  DateTime? answersUpdatedAt;
   Set<String> done = {};
   bool _loaded = false;
 
@@ -131,16 +133,35 @@ class CourseService {
     final raw = p.getString(_kAnswers);
     if (raw != null) answers = json.decode(raw) as Map<String, dynamic>;
     done = {...(p.getStringList(_kDone) ?? const [])};
+    final at = p.getInt(_kAnswersAt);
+    if (at != null) answersUpdatedAt = DateTime.fromMillisecondsSinceEpoch(at);
     _loaded = true;
   }
 
-  Future<void> saveAnswers(Map<String, dynamic> a) async {
+  /// [touch] = 지금 시각을 갱신 시각으로 기록(서버에서 내려받을 때는 false).
+  Future<void> saveAnswers(Map<String, dynamic> a, {bool touch = true}) async {
     answers = a;
-    (await SharedPreferences.getInstance()).setString(_kAnswers, json.encode(a));
+    final p = await SharedPreferences.getInstance();
+    await p.setString(_kAnswers, json.encode(a));
+    if (touch) {
+      answersUpdatedAt = DateTime.now();
+      await p.setInt(_kAnswersAt, answersUpdatedAt!.millisecondsSinceEpoch);
+      onAnswersChanged?.call();
+    }
   }
+
+  /// 로그인 상태면 AuthService 가 여기에 서버 반영 훅을 건다.
+  void Function()? onAnswersChanged;
+  void Function(String scriptKey)? onDone;
 
   Future<void> markDone(CourseScript s) async {
     done.add(s.progressId);
+    (await SharedPreferences.getInstance()).setStringList(_kDone, done.toList());
+    onDone?.call(s.progressId);
+  }
+
+  Future<void> mergeDone(Set<String> keys) async {
+    done.addAll(keys);
     (await SharedPreferences.getInstance()).setStringList(_kDone, done.toList());
   }
 

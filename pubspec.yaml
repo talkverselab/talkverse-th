@@ -16,6 +16,7 @@ dependencies:
 
   # Storage
   shared_preferences: ^2.3.2
+  supabase_flutter: ^2.9.0
   path_provider: ^2.1.4
 
   # Util

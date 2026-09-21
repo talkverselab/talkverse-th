@@ -106,3 +106,11 @@ adb -s R3CY20HDN2K install --user 0 -r <apk>
 - 성별판은 `variants.py` 가 규칙으로 만들고 `variants.json` 의 overrides 로 보정한다. 검수표: `REVIEW.md`(기본판) · `REVIEW_variants.md`(달라진 줄만).
 - 선택 규칙은 `select_playlist.py`(기준)와 `lib/services/course_service.dart`(이식) 두 곳 — 한쪽을 고치면 다른 쪽과 `test/course_service_test.dart` 기대값도 고친다.
 - 스크립트는 전부 자체 제작이고 **사람 검수 전 초안**이다. 수위 기준·설계는 `drafts/script_engine/00_DESIGN.md`.
+
+## 8. 계정 · 이용권 (Supabase) — 2026-09-21
+
+- 모든 언어 앱이 **Supabase 프로젝트 `Talkverse` 하나**를 쓴다. 접속값은 `lib/core/backend.dart`(공개 가능한 publishable 키). 서비스 키는 앱에 넣지 않는다.
+- Supabase 는 `lib/services/auth_service.dart` 에서만 만진다: Google·Kakao 로그인(브라우저 → 딥링크 복귀), 프로필, `tv_has_access('th')` 이용권(폰에 저장, 오프라인 유예), 코스 답·완료 회차 동기화.
+- 딥링크 `io.supabase.talkverse.th://login-callback/` — AndroidManifest(intent-filter, launchMode singleTask)·Info.plist(CFBundleURLTypes) 에 있고, **Supabase Auth → Redirect URLs 에 등록돼 있어야 로그인이 돌아온다.** 다른 앱은 스킴 끝을 그 앱 언어 코드로.
+- 표·함수·결제 채널 설계: `docs/accounts-billing-design.md`, SQL `docs/sql/tv_accounts_billing.sql`. 새 요금제는 `tv_products`·`tv_plans` 행 추가 — 앱 코드는 안 바뀐다.
+- 잠금(무료/유료 구간)은 아직 안 걸었다. 계정 화면에 이용권 상태만 보여 준다.

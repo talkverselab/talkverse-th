@@ -6,6 +6,8 @@ import '../widgets/thai_decor.dart';
 import 'update_screen.dart';
 import '../core/l10n.dart';
 import '../core/platform.dart';
+import '../services/auth_service.dart';
+import 'account_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -86,6 +88,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
               )),
           const SizedBox(height: 8),
           _SettingsGroup(items: [
+            _SettingItem(
+                icon: Icons.person_outline,
+                title: tr('계정'),
+                subtitle: AuthService.instance.user.value?.email ?? tr('로그인 · Google · Kakao'),
+                onTap: () async {
+                  await Navigator.push(context, MaterialPageRoute(builder: (_) => const AccountScreen()));
+                  if (mounted) setState(() {});
+                }),
             _SettingItem(
                 icon: Icons.language,
                 title: tr('언어 / Language'),
