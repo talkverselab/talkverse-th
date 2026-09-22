@@ -212,9 +212,9 @@ class CourseService {
     final scored = <(int, CourseScript)>[];
     for (final s in _all) {
       if (s.variant != me && s.variant != '$me$pt') continue;
+      if (!domains.contains(s.domain)) continue; // 고른 도메인(무대)만 — 점수가 아니라 필터
       if (s.ep != 1 || blocked(s)) continue;
-      final pts = (domains.contains(s.domain) ? 3 : 0) +
-          (ds[s.drive] ?? 0) +
+      final pts = (ds[s.drive] ?? 0) +
           tag(s, 'stage', 'q7_stage', 2) +
           tag(s, 'style', 'q8_style', 1) +
           tag(s, 'persona', 'q9_persona', 1) +
