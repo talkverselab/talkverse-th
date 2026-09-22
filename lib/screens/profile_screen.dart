@@ -8,6 +8,8 @@ import '../core/l10n.dart';
 import '../core/platform.dart';
 import '../services/auth_service.dart';
 import 'account_screen.dart';
+import 'course_domain_screen.dart';
+import '../services/course_service.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -25,6 +27,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Future<void> _loadVersion() async {
     await UpdateService.instance.loadCurrent();
+    await CourseService.instance.ensureLoaded();
     if (mounted) setState(() {});
   }
 
@@ -94,6 +97,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 subtitle: AuthService.instance.user.value?.email ?? tr('로그인 · Google · Kakao'),
                 onTap: () async {
                   await Navigator.push(context, MaterialPageRoute(builder: (_) => const AccountScreen()));
+                  if (mounted) setState(() {});
+                }),
+            _SettingItem(
+                icon: Icons.flag_outlined,
+                title: tr('학습 목적'),
+                subtitle: CourseService.instance.hasAnswers
+                    ? CourseService.instance.domainLabels.join(' · ')
+                    : tr('내 코스에서 먼저 질문에 답해 주세요'),
+                onTap: () async {
+                  await CourseService.instance.ensureLoaded();
+                  if (!context.mounted || !CourseService.instance.hasAnswers) return;
+                  await Navigator.push(context, MaterialPageRoute(builder: (_) => const CourseDomainScreen()));
                   if (mounted) setState(() {});
                 }),
             _SettingItem(

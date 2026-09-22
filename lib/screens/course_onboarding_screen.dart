@@ -4,6 +4,7 @@ import '../core/l10n.dart';
 import '../core/platform.dart';
 import '../core/theme.dart';
 import '../services/course_service.dart';
+import '../widgets/domain_chips.dart';
 
 /// 코스 질문 — 한 화면에 질문 하나. 답은 저장되고, 같은 답이면 항상 같은 코스가 나온다.
 class CourseOnboardingScreen extends StatefulWidget {
@@ -94,6 +95,13 @@ class _CourseOnboardingScreenState extends State<CourseOnboardingScreen> {
                 style: const TextStyle(fontSize: 12, color: AppColors.khramLight)),
           ],
           const SizedBox(height: 18),
+          if (_q.multi > 0)
+            DomainChips(
+              question: _q,
+              selected: {...((_ans[_q.id] as List?)?.cast<String>() ?? const <String>[])},
+              onToggle: (id) => _pick(_q.options.firstWhere((o) => o.id == id)),
+            )
+          else
           for (final o in _q.options)
             Padding(
               padding: const EdgeInsets.only(bottom: 10),

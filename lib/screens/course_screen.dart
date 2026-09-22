@@ -5,7 +5,9 @@ import '../core/platform.dart';
 import '../core/theme.dart';
 import '../services/course_service.dart';
 import 'course_episode_screen.dart';
+import 'course_domain_screen.dart';
 import 'course_onboarding_screen.dart';
+import '../widgets/domain_chips.dart';
 
 /// 「내 코스」 — 질문 답에 맞춰 늘어놓은 스크립트 목록. 앞 회차를 끝내야 다음 회차가 열린다.
 class CourseScreen extends StatefulWidget {
@@ -39,6 +41,11 @@ class _CourseScreenState extends State<CourseScreen> {
 
   Future<void> _ask() async {
     await Navigator.push(context, MaterialPageRoute(builder: (_) => const CourseOnboardingScreen()));
+    if (mounted) setState(() {});
+  }
+
+  Future<void> _pickDomain() async {
+    await Navigator.push(context, MaterialPageRoute(builder: (_) => const CourseDomainScreen()));
     if (mounted) setState(() {});
   }
 
@@ -84,9 +91,22 @@ class _CourseScreenState extends State<CourseScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(trf('내 답에 맞춘 {0}편', [items.length]),
-                    style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: AppColors.khram)),
-                const SizedBox(height: 4),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(trf('내 답에 맞춘 {0}편', [items.length]),
+                          style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: AppColors.khram)),
+                    ),
+                    TextButton.icon(
+                      onPressed: _pickDomain,
+                      icon: const Icon(Icons.edit, size: 15),
+                      label: Text(tr('학습 목적 바꾸기'), style: const TextStyle(fontSize: 12)),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 6),
+                DomainSummary(question: _svc.domainQuestion, ids: _svc.domains),
+                const SizedBox(height: 8),
                 Text('${tr('속마음')} · $drive   ${trf('완료 {0} / {1}', [doneCount, items.length])}',
                     style: const TextStyle(fontSize: 12, color: AppColors.khramLight)),
               ],
