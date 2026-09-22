@@ -121,6 +121,14 @@ class CourseService {
 
   bool get hasAnswers => questions.isNotEmpty && questions.every((q) => answers.containsKey(q.id));
 
+  CourseQuestion get domainQuestion => questions.firstWhere((q) => q.id == 'q3_domain');
+  List<String> get domains => ((answers['q3_domain'] as List?) ?? const []).cast<String>();
+  List<String> get domainLabels =>
+      [for (final id in domains) domainQuestion.options.firstWhere((o) => o.id == id).label];
+
+  /// 도메인만 바꾼다(나머지 답은 그대로). 언제든 다시 고를 수 있게.
+  Future<void> setDomains(List<String> ids) => saveAnswers({...answers, 'q3_domain': ids});
+
   Future<void> ensureLoaded() async {
     if (_loaded) return;
     final q = json.decode(await rootBundle.loadString('assets/data/course/questions.json')) as Map<String, dynamic>;
