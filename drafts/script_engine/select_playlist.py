@@ -39,10 +39,12 @@ def playlist(ans, top=12):
     for s in CAT:
         if s["ep"] != 1:
             continue  # 이어지는 회차는 1편 뒤에 붙인다
+        if s["domain"] not in ans["domains"]:
+            continue  # 고른 도메인(무대)만 — 점수가 아니라 필터
         if s["heat"] > max_heat or (ans["alcohol"] == "no" and "alcohol" in s["flags"]):
             continue
         t = s["tags"]
-        pts = (3 if s["domain"] in ans["domains"] else 0) + ds[s["drive"]]
+        pts = ds[s["drive"]]
         pts += 2 if t.get("stage") == ans["stage"] else 0
         pts += 1 if t.get("style") == ans["style"] else 0
         pts += 1 if t.get("persona") == ans["persona"] else 0

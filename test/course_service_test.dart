@@ -49,14 +49,14 @@ void main() {
         me: 'm', domains: ['biz'], moment: 'a', scene: 'a', friend: 'a', stage: 'first',
         style: 'direct', persona: 'mature', conflict: 'polite', reg: 'polite', alcohol: 'yes', heat: 'hot'));
     final ids = [for (final e in svc.playlist()) e.$2.id];
-    expect(ids.take(5), [
+    expect(ids.take(4), [
       'biz.romance.dinner#1@mf',
       'biz.romance.dinner#2@mf',
-      'stay.romance.elevator#1@mf',
-      'stay.romance.elevator#2@mf',
-      'stay.romance.teacher#1@mf',
+      'biz.win.golf#1@m',
+      'biz.thrill.exclient#1@mf',
     ]);
-    expect(ids.length, 16);
+    expect(ids.length, 8);
+    expect(ids.every((id) => id.startsWith('biz.')), isTrue, reason: '고른 도메인만 나온다');
     expect(svc.topDrive(), 'romance');
   });
 
