@@ -14,6 +14,9 @@ ALL = json.load(io.open(os.path.join(D, "scripts_th.json"), encoding="utf-8"))["
 QS = {q["id"]: q for q in Q["questions"]}
 
 
+NEAR = {"beg": ("beg", "mid"), "mid": ("beg", "mid", "adv"), "adv": ("mid", "adv")}
+
+
 def drive_scores(ans):
     sc = {d: 0 for d in Q["meta"]["drive_order"]}
     for qid, key in (("q4_moment", "moment"), ("q5_scene", "scene"), ("q6_friend", "friend")):
@@ -40,11 +43,13 @@ def playlist(ans, top=12):
         if s["ep"] != 1:
             continue  # 이어지는 회차는 1편 뒤에 붙인다
         if s["domain"] not in ans["domains"]:
-            continue  # 고른 도메인(무대)만 — 점수가 아니라 필터
+            continue  # 고른 무대만 — 점수가 아니라 필터
+        if s["level"] not in NEAR[ans["level"]]:
+            continue  # 고른 레벨과 이웃 레벨까지만
         if s["heat"] > max_heat or (ans["alcohol"] == "no" and "alcohol" in s["flags"]):
             continue
         t = s["tags"]
-        pts = ds[s["drive"]]
+        pts = ds[s["drive"]] + (3 if s["level"] == ans["level"] else 0)
         pts += 2 if t.get("stage") == ans["stage"] else 0
         pts += 1 if t.get("style") == ans["style"] else 0
         pts += 1 if t.get("persona") == ans["persona"] else 0
@@ -67,14 +72,14 @@ def playlist(ans, top=12):
 
 
 DEMO = {
-    "겉은 출장, 속은 설렘 (직진·어른스러운 상대·첫 만남)": {
-        "me": "m", "domains": ["biz"], "moment": "a", "scene": "a", "friend": "a",
+    "겉은 일, 속은 설렘 (중급·직진·어른스러운 상대·첫 만남)": {
+        "me": "m", "domains": ["work"], "level": "mid", "moment": "a", "scene": "a", "friend": "a",
         "stage": "first", "style": "direct", "persona": "mature", "conflict": "polite", "reg": "polite", "alcohol": "yes", "heat": "hot"},
-    "겉은 여행, 속은 승부 (웃어넘김·술 제외·순한 맛)": {
-        "me": "m", "domains": ["travel", "stay"], "moment": "b", "scene": "b", "friend": "b",
+    "초급 여행자, 속은 승부 (웃어넘김·술 제외·순한 맛)": {
+        "me": "m", "domains": ["trip", "move"], "level": "beg", "moment": "b", "scene": "b", "friend": "b",
         "stage": "first", "style": "joke", "persona": "playful", "conflict": "laugh", "reg": "polite", "alcohol": "no", "heat": "mild"},
-    "겉은 채팅, 속은 재회 (여자 학습자 × 남자 상대·돌려 말하기·반말)": {
-        "me": "f", "partner": "m", "domains": ["chat", "night"], "moment": "a", "scene": "d", "friend": "a",
+    "폰 속·밤, 속은 재회 (고급·여자 학습자 × 남자 상대·돌려 말하기·반말)": {
+        "me": "f", "partner": "m", "domains": ["phone", "night"], "level": "adv", "moment": "a", "scene": "d", "friend": "a",
         "stage": "ex", "style": "indirect", "persona": "tsundere", "conflict": "escape", "reg": "casual", "alcohol": "yes", "heat": "hot"},
 }
 
@@ -83,4 +88,4 @@ if __name__ == "__main__":
     for name, ans in profiles.items():
         print("\n■ " + name)
         for i, (pts, s) in enumerate(playlist(ans), 1):
-            print("  %2d. [%2d점] %s %s%s" % (i, pts, s["emoji"], s["title"], "  (%d편)" % s["ep"] if s["ep"] > 1 else ""))
+            print("  %2d. [%2d점] %s %s [%s] %s%s" % (i, pts, s["emoji"], s["id"], s["level"], s["title"], "  (%d편)" % s["ep"] if s["ep"] > 1 else ""))

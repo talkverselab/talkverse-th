@@ -29,7 +29,7 @@
   ]
  ],
  "scripts": {
-  "biz.romance.dinner": {
+  "work.romance.dinner": {
    "partner": true,
    "b_male": [
     [
@@ -42,7 +42,7 @@
     ]
    ]
   },
-  "biz.thrill.exclient": {
+  "work.thrill.exclient": {
    "partner": true,
    "b_male": [
     [
@@ -55,7 +55,7 @@
     ]
    ]
   },
-  "travel.romance.cafe": {
+  "trip.romance.cafe": {
    "partner": true,
    "b_male": [
     [
@@ -68,7 +68,7 @@
     ]
    ]
   },
-  "travel.thrill.island": {
+  "trip.thrill.island": {
    "partner": true,
    "b_male": [
     [
@@ -81,7 +81,7 @@
     ]
    ]
   },
-  "travel.win.lostfight": {
+  "move.win.lostfight": {
    "partner": true,
    "b_male": [
     [
@@ -94,7 +94,7 @@
     ]
    ]
   },
-  "stay.romance.elevator": {
+  "home.romance.elevator": {
    "partner": true,
    "b_male": [
     [
@@ -107,7 +107,7 @@
     ]
    ]
   },
-  "stay.romance.teacher": {
+  "us.romance.teacher": {
    "partner": true,
    "b_male": [
     [
@@ -120,7 +120,7 @@
     ]
    ]
   },
-  "stay.romance.meetmom": {
+  "us.romance.meetmom": {
    "partner": true,
    "b_fixed": true,
    "i_f": "หนู",
@@ -136,10 +136,10 @@
     ]
    ]
   },
-  "stay.thrill.midnightbike": {
+  "move.thrill.midnightbike": {
    "partner": true
   },
-  "fan.romance.fanmeet": {
+  "trip.romance.fanmeet": {
    "partner": true,
    "b_male": [
     [
@@ -152,7 +152,7 @@
     ]
    ]
   },
-  "fan.romance.exseries": {
+  "phone.romance.exseries": {
    "partner": true,
    "b_male": [
     [
@@ -198,7 +198,7 @@
     ]
    ]
   },
-  "chat.romance.readnoreply": {
+  "phone.romance.readnoreply": {
    "partner": true,
    "b_male": [
     [
@@ -207,7 +207,7 @@
     ]
    ]
   },
-  "chat.romance.eaten": {
+  "phone.romance.eaten": {
    "partner": true,
    "b_male": [
     [
@@ -220,7 +220,7 @@
     ]
    ]
   },
-  "chat.romance.ex": {
+  "phone.romance.ex": {
    "partner": true,
    "b_male": [
     [
@@ -233,7 +233,7 @@
     ]
    ]
   },
-  "chat.win.story": {
+  "phone.win.story": {
    "partner": true,
    "b_male": [
     [
@@ -246,7 +246,7 @@
     ]
    ]
   },
-  "chat.win.moneyask": {
+  "phone.win.moneyask": {
    "partner": true,
    "b_male": [
     [
@@ -259,7 +259,7 @@
     ]
    ]
   },
-  "chat.thrill.2am": {
+  "phone.thrill.2am": {
    "partner": true,
    "b_male": [
     [
@@ -272,20 +272,20 @@
     ]
    ]
   },
-  "travel.win.tuktuk": {
+  "move.win.tuktuk": {
    "i_f": "หนู",
    "i_f_ro": "누",
    "b_gender": "m"
   },
-  "travel.status.somtam": {
+  "eat.status.somtam": {
    "i_f": "หนู",
    "i_f_ro": "누"
   },
-  "stay.win.deposit": {
+  "home.win.deposit": {
    "i_f": "หนู",
    "i_f_ro": "누"
   },
-  "stay.status.soi": {
+  "home.status.soi": {
    "i_f": "หนู",
    "i_f_ro": "누",
    "b_gender": "m"
@@ -295,30 +295,30 @@
    "i_f_ro": "누",
    "b_gender": "m"
   },
-  "biz.win.golf": {
+  "work.win.golf": {
    "i_f": "หนู",
    "i_f_ro": "누",
    "b_gender": "m"
   },
-  "biz.win.price": {
+  "work.win.price": {
    "b_gender": "m"
   },
-  "biz.status.toast": {
+  "work.status.toast": {
    "b_gender": "m"
   },
-  "biz.thrill.lastnight": {
+  "work.thrill.lastnight": {
    "b_gender": "m"
   },
-  "travel.win.tout": {
+  "trip.win.tout": {
    "b_gender": "m"
   },
-  "travel.win.closedtoday": {
+  "trip.win.closedtoday": {
    "b_gender": "m"
   },
-  "stay.win.noise": {
+  "home.win.noise": {
    "b_gender": "m"
   },
-  "fan.status.nosub": {
+  "us.status.nosub": {
    "b_gender": "m"
   },
   "night.win.bill": {
@@ -327,31 +327,327 @@
   "night.status.liver": {
    "b_gender": "m"
   },
-  "chat.win.pushy": {
+  "phone.win.pushy": {
    "b_gender": "opp"
+  },
+  "eat.romance.order": {
+   "partner": true,
+   "b_male": [
+    [
+     "น้ำ",
+     "บอส"
+    ],
+    [
+     "남",
+     "벗"
+    ]
+   ]
+  },
+  "eat.win.bill": {
+   "b_gender": "f"
+  },
+  "eat.status.spicy": {
+   "b_gender": "f"
+  },
+  "eat.thrill.late": {
+   "partner": true,
+   "b_male": [
+    [
+     "ฝน",
+     "ต้น"
+    ],
+    [
+     "폰",
+     "똔"
+    ]
+   ]
+  },
+  "move.romance.motosai": {
+   "partner": true,
+   "b_male": [
+    [
+     "เมย์",
+     "มาร์ค"
+    ],
+    [
+     "메이",
+     "막"
+    ]
+   ]
+  },
+  "move.win.meter": {
+   "b_gender": "m"
+  },
+  "move.status.direction": {
+   "partner": true,
+   "b_male": [
+    [
+     "พลอย",
+     "ภูมิ"
+    ],
+    [
+     "플러이",
+     "품"
+    ]
+   ]
+  },
+  "move.thrill.lastbts": {
+   "partner": true,
+   "b_male": [
+    [
+     "น้ำ",
+     "บอส"
+    ],
+    [
+     "남",
+     "벗"
+    ]
+   ]
+  },
+  "home.romance.neighbor": {
+   "partner": true,
+   "b_male": [
+    [
+     "แพร",
+     "พีท"
+    ],
+    [
+     "프래",
+     "핏"
+    ]
+   ]
+  },
+  "home.win.landlord": {
+   "b_gender": "f"
+  },
+  "home.status.pharmacy": {
+   "b_gender": "f"
+  },
+  "home.thrill.sevenbeer": {
+   "partner": true,
+   "b_male": [
+    [
+     "มิ้นท์",
+     "มิว"
+    ],
+    [
+     "밍",
+     "미우"
+    ]
+   ]
+  },
+  "work.romance.intro": {
+   "partner": true,
+   "b_male": [
+    [
+     "พลอย",
+     "ภูมิ"
+    ],
+    [
+     "플러이",
+     "품"
+    ]
+   ]
+  },
+  "work.win.schedule": {
+   "b_gender": "m"
+  },
+  "work.status.thai": {
+   "b_gender": "f"
+  },
+  "work.thrill.afterwork": {
+   "partner": true,
+   "b_male": [
+    [
+     "มิ้นท์",
+     "มิว"
+    ],
+    [
+     "밍",
+     "미우"
+    ]
+   ]
+  },
+  "trip.romance.hotel": {
+   "partner": true,
+   "b_male": [
+    [
+     "เมย์",
+     "มาร์ค"
+    ],
+    [
+     "메이",
+     "막"
+    ]
+   ]
+  },
+  "trip.win.market": {
+   "b_gender": "f"
+  },
+  "trip.status.tour": {
+   "b_gender": "f"
+  },
+  "trip.thrill.lastboat": {
+   "partner": true,
+   "b_male": [
+    [
+     "บัว",
+     "ปอ"
+    ],
+    [
+     "부어",
+     "뻐"
+    ]
+   ]
+  },
+  "night.romance.bar": {
+   "partner": true,
+   "b_male": [
+    [
+     "น้ำ",
+     "บอส"
+    ],
+    [
+     "남",
+     "벗"
+    ]
+   ]
+  },
+  "night.win.extraglass": {
+   "b_gender": "f"
+  },
+  "night.status.toast": {
+   "b_gender": "m"
+  },
+  "night.thrill.after": {
+   "partner": true,
+   "b_male": [
+    [
+     "ฝน",
+     "ต้น"
+    ],
+    [
+     "폰",
+     "똔"
+    ]
+   ]
+  },
+  "phone.romance.firstline": {
+   "partner": true,
+   "b_male": [
+    [
+     "แพร",
+     "พีท"
+    ],
+    [
+     "프래",
+     "핏"
+    ]
+   ]
+  },
+  "phone.win.unread": {
+   "partner": true,
+   "b_male": [
+    [
+     "น้ำ",
+     "บอส"
+    ],
+    [
+     "남",
+     "벗"
+    ]
+   ]
+  },
+  "phone.status.voice": {
+   "partner": true,
+   "b_male": [
+    [
+     "เมย์",
+     "มาร์ค"
+    ],
+    [
+     "메이",
+     "막"
+    ]
+   ]
+  },
+  "phone.thrill.latecall": {
+   "partner": true,
+   "b_male": [
+    [
+     "ฝน",
+     "ต้น"
+    ],
+    [
+     "폰",
+     "똔"
+    ]
+   ]
+  },
+  "us.romance.date": {
+   "partner": true,
+   "b_male": [
+    [
+     "พลอย",
+     "ภูมิ"
+    ],
+    [
+     "플러이",
+     "품"
+    ]
+   ]
+  },
+  "us.win.late": {
+   "partner": true,
+   "b_male": [
+    [
+     "น้ำ",
+     "บอส"
+    ],
+    [
+     "남",
+     "벗"
+    ]
+   ]
+  },
+  "us.status.family": {
+   "b_gender": "f"
+  },
+  "us.thrill.home": {
+   "partner": true,
+   "b_male": [
+    [
+     "แพร",
+     "พีท"
+    ],
+    [
+     "프래",
+     "핏"
+    ]
+   ]
   }
  },
  "overrides": {
-  "biz.thrill.lastnight#1@f": {
+  "work.thrill.lastnight#1@f": {
    "1": {
     "ko": "민지 누나, 부장님 주무시죠?"
    }
   },
-  "travel.romance.cafe#1@mm": {
+  "trip.romance.cafe#1@mm": {
    "5": {
     "th": "ไม่ได้จีบครับ พูดความจริง คุณยิ้มน่ารักมาก",
     "roman": "마이 다이 찝 크랍, 풋 쾀찡, 쿤 임 나락 막",
     "ko": "작업 아니에요. 사실을 말한 거죠. 웃는 게 정말 멋져요."
    }
   },
-  "travel.romance.cafe#1@fm": {
+  "trip.romance.cafe#1@fm": {
    "5": {
     "th": "ไม่ได้จีบค่ะ พูดความจริง คุณยิ้มน่ารักมาก",
     "roman": "마이 다이 찝 카, 풋 쾀찡, 쿤 임 나락 막",
     "ko": "작업 아니에요. 사실을 말한 거죠. 웃는 게 정말 멋져요."
    }
   },
-  "travel.win.tout#1@f": {
+  "trip.win.tout#1@f": {
    "2": {
     "ko": "진품이 500밧이요, 사장님? 어디서 온 진품이에요?"
    },
@@ -359,12 +655,12 @@
     "ko": "그건 살게요. 마침 더웠는데. 두 개요. 사장님도 같이 드세요."
    }
   },
-  "travel.win.tuktuk#1@f": {
+  "move.win.tuktuk#1@f": {
    "2": {
     "ko": "300? 너무 비싸요 기사님. 요만큼 가까운데."
    }
   },
-  "travel.thrill.island#1@fm": {
+  "trip.thrill.island#1@fm": {
    "5": {
     "speaker": "B",
     "th": "คุณไม่กลัวเหรอครับ อยู่กับคนแปลกหน้า",
@@ -386,7 +682,7 @@
     "roman": "쓰 비아, 빠이 낭 림 핫, 래우 라오 쾀랍 깐 콘 라 르앙, 끌라 마이 카"
    }
   },
-  "stay.romance.meetmom#1@*m": {
+  "us.romance.meetmom#1@*m": {
    "2": {
     "ko": "어서 와요. 태국어도 해요? 핌이 말을 안 하던데."
    },
@@ -397,7 +693,7 @@
     "ko": "오래 있을 생각입니다. 핌이 저를 내쫓지 않는 한은요."
    }
   },
-  "stay.status.soi#1@f": {
+  "home.status.soi#1@f": {
    "2": {
     "ko": "늘 가던 데요 아저씨. 골목 입구. 늘 그렇듯 20밧이죠?"
    },
@@ -447,34 +743,34 @@
     "ko": "약한 거 맞습니다, 인정. 이 가게에서 제일 세세요. 저는 먼저 실례하겠습니다."
    }
   },
-  "chat.romance.ex#1@f*": {
+  "phone.romance.ex#1@f*": {
    "5": {
     "th": "ยังเปิดอยู่ ป้ายังถามถึงเธอเลย ว่าสาวเกาหลีหายไปไหน",
     "roman": "양 쁫 유, 빠 양 탐 틍 터 러이, 와 싸오 까올리 하이 빠이 나이",
     "ko": "아직 해. 이모가 네 안부도 묻더라. 그 한국 아가씨 어디 갔냐고."
    }
   },
-  "chat.romance.readnoreply#1@fm": {
+  "phone.romance.readnoreply#1@fm": {
    "6": {
     "th": "หึงก็บอกว่าหึงสิ น่ารักดี เพื่อนผู้ชายน่ะ สบายใจได้",
     "roman": "흥 꺼 복 와 흥 씨, 나락 디, 프안 푸차이 나, 싸바이짜이 다이",
     "ko": "질투 나면 난다고 해. 귀엽네. 남자애들이야, 안심해."
    }
   },
-  "chat.romance.readnoreply#1@mm": {
+  "phone.romance.readnoreply#1@mm": {
    "6": {
     "th": "หึงก็บอกว่าหึงสิ น่ารักดี เพื่อนผู้หญิงน่ะ สบายใจได้",
     "roman": "흥 꺼 복 와 흥 씨, 나락 디, 프안 푸잉 나, 싸바이짜이 다이"
    }
   },
-  "chat.romance.readnoreply#1@ff": {
+  "phone.romance.readnoreply#1@ff": {
    "6": {
     "th": "หึงก็บอกว่าหึงสิ น่ารักดี เพื่อนผู้ชายจ้ะ สบายใจได้",
     "roman": "흥 꺼 복 와 흥 씨, 나락 디, 프안 푸차이 짜, 싸바이짜이 다이",
     "ko": "질투 나면 난다고 해. 귀엽네. 남자애들이야, 안심해."
    }
   },
-  "chat.win.story#1@f*": {
+  "phone.win.story#1@f*": {
    "meta": {
     "title": "스토리 속 그 여자 누구야"
    },
@@ -484,7 +780,7 @@
     "ko": "어젯밤 스토리 사진, 그 여자 누구야?"
    }
   },
-  "chat.status.igcaption#1@f": {
+  "phone.status.igcaption#1@f": {
    "meta": {
     "characters": {
      "A": "민지(인스타에 태국어 쓰는 여자)",
@@ -492,7 +788,7 @@
     }
    }
   },
-  "chat.thrill.2am#2@*m": {
+  "phone.thrill.2am#2@*m": {
    "8": {
     "th": "บ้าไปแล้ว! รอแป๊บ ยังไม่ได้อาบน้ำเลย",
     "roman": "바 빠이 래우! 러 뺍, 양 마이 다이 압 남 러이",
