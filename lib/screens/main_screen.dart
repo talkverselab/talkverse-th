@@ -12,7 +12,7 @@ import 'english_manual_screen.dart';
 import 'episode_screen.dart';
 import 'expressions_screen.dart';
 import 'flashcard_screen.dart';
-import 'grammar_lesson_screen.dart';
+import 'grammar_hub_screen.dart';
 import 'keyboard_practice_screen.dart';
 import 'loanword_screen.dart';
 import 'profile_screen.dart';
@@ -359,10 +359,10 @@ class _MenuGrid extends StatelessWidget {
           builder: (_) => const TonesScreen()),
       _MenuItem(
           label: tr('문법'),
-          sub: tr('การ · ที่ · 어말조사'),
-          emblem: 'นะ',
+          sub: tr('초급 코스 16과 · เป็น · ได้ · ขึ้น/ลง'),
+          emblem: 'ได้',
           color: const Color(0xFFAD1457),
-          builder: (_) => GrammarLessonScreen()),
+          builder: (_) => const GrammarHubScreen()),
       _MenuItem(
           label: tr('단어장'),
           sub: tr('주제별 · 중요 단어(절벽 구간)'),

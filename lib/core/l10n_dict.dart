@@ -467,6 +467,10 @@ const Map<String, String> kDictEn = {
   '저장': 'Save',
   '{0}개까지 고르면 그 상황의 스크립트만 코스에 들어와요. 언제든 바꿀 수 있어요.': 'Pick up to {0}. Only scripts for those situations go into your course. Change anytime.',
   '내 코스에서 먼저 질문에 답해 주세요': 'Answer the questions in My course first',
+  '초급 문법 코스': 'Beginner grammar course',
+  '초급 코스 16과 · เป็น · ได้ · ขึ้น/ลง': '16 beginner lessons · เป็น · ได้ · ขึ้น/ลง',
+  '기초 교재들이 공통으로 가르치는 순서예요. 위에서부터 차례로 보면 초급이 끝나요.': 'The order shared by beginner textbooks. Go top to bottom and you have covered beginner grammar.',
+  '문장 끝 어조사': 'Sentence-final particles',
 };
 
 const Map<String, String> kDictJa = {
@@ -620,6 +624,10 @@ const Map<String, String> kDictJa = {
   '저장': '保存',
   '{0}개까지 고르면 그 상황의 스크립트만 코스에 들어와요. 언제든 바꿀 수 있어요.': '{0}つまで選べます。その場面のスクリプトだけがコースに入ります。いつでも変更できます。',
   '내 코스에서 먼저 질문에 답해 주세요': 'まずマイコースで質問に答えてください',
+  '초급 문법 코스': '初級文法コース',
+  '초급 코스 16과 · เป็น · ได้ · ขึ้น/ลง': '初級16課 · เป็น · ได้ · ขึ้น/ลง',
+  '기초 교재들이 공통으로 가르치는 순서예요. 위에서부터 차례로 보면 초급이 끝나요.': '入門教材に共通する順番です。上から順に見れば初級文法が一通り終わります。',
+  '문장 끝 어조사': '文末助詞',
 };
 
 const Map<String, String> kDictZh = {
@@ -773,4 +781,8 @@ const Map<String, String> kDictZh = {
   '저장': '保存',
   '{0}개까지 고르면 그 상황의 스크립트만 코스에 들어와요. 언제든 바꿀 수 있어요.': '最多选 {0} 个，只有这些场景的脚本会进入课程。随时可以更改。',
   '내 코스에서 먼저 질문에 답해 주세요': '请先在我的课程中回答问题',
+  '초급 문법 코스': '初级语法课程',
+  '초급 코스 16과 · เป็น · ได้ · ขึ้น/ลง': '初级16课 · เป็น · ได้ · ขึ้น/ลง',
+  '기초 교재들이 공통으로 가르치는 순서예요. 위에서부터 차례로 보면 초급이 끝나요.': '入门教材共同的教学顺序。从上到下看完，初级语法就学完了。',
+  '문장 끝 어조사': '句末助词',
 };
