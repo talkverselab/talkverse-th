@@ -1,11 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/l10n.dart';
 import '../core/platform.dart';
 import '../core/theme.dart';
+import '../services/content_store.dart';
+import '../services/dev_notes.dart';
 import '../widgets/thai_decor.dart';
 import 'grammar_lesson_screen.dart';
 import 'grammar_topic_screen.dart';
@@ -30,7 +31,7 @@ class _GrammarHubScreenState extends State<GrammarHubScreen> {
   }
 
   Future<void> _load() async {
-    final raw = await rootBundle.loadString('assets/data/grammar/lessons.json');
+    final raw = await ContentStore.instance.loadString('assets/data/grammar/lessons.json');
     final data = json.decode(raw) as Map<String, dynamic>;
     final list = (data['lessons'] as List?) ?? [];
     if (!mounted) return;
@@ -74,7 +75,7 @@ class _GrammarHubScreenState extends State<GrammarHubScreen> {
                     onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(builder: (_) => GrammarTopicScreen(lesson: _lessons[i], index: i)),
-                    ),
+                    ).then((_) => DevNotes.instance.clearContext('grammar')),
                   ),
                   const SizedBox(height: 8),
                 ],

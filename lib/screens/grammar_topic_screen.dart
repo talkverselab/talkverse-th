@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../core/l10n.dart';
 import '../core/platform.dart';
 import '../core/theme.dart';
+import '../services/dev_notes.dart';
 import '../services/tts_service.dart';
 import '../widgets/memo_toggle.dart';
 import '../widgets/thai_decor.dart';
@@ -87,6 +88,7 @@ class GrammarTopicScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    DevNotes.instance.setContext('grammar', {'lesson': lesson.id, 'no': index + 1, 'title': lesson.title});
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(

@@ -10,6 +10,8 @@ import '../services/auth_service.dart';
 import 'account_screen.dart';
 import 'course_domain_screen.dart';
 import '../services/course_service.dart';
+import '../services/dev_notes.dart';
+import 'dev_notes_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -19,6 +21,17 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  int _versionTaps = 0;
+
+  Future<void> _tapVersion() async {
+    if (DevNotes.instance.unlocked.value) return;
+    if (++_versionTaps < 7) return;
+    await DevNotes.instance.unlock();
+    if (!mounted) return;
+    setState(() {});
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(tr('개발자 메모가 열렸어요'))));
+  }
+
   @override
   void initState() {
     super.initState();
@@ -153,7 +166,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
             _SettingItem(
                 icon: Icons.info_outline,
                 title: tr('앱 버전'),
-                subtitle: UpdateService.instance.currentText),
+                subtitle: UpdateService.instance.currentText,
+                onTap: _tapVersion),
+            if (DevNotes.instance.unlocked.value)
+              _SettingItem(
+                  icon: Icons.edit_note,
+                  title: tr('개발자 메모'),
+                  subtitle: DevNotes.instance.enabled.value ? tr('켜짐 · 보낸 메모와 처리 결과') : tr('꺼짐 · 눌러서 설정'),
+                  onTap: () async {
+                    await Navigator.push(context, MaterialPageRoute(builder: (_) => const DevNotesScreen()));
+                    if (mounted) setState(() {});
+                  }),
             _SettingItem(
                 icon: Icons.code,
                 title: 'Stack',

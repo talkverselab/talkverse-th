@@ -65,5 +65,6 @@ flutter:
     - assets/data/phrases/
     - assets/data/vocab/
     - assets/data/course/
+    - assets/data/content_manifest.json
     - assets/audio/
     - assets/images/
