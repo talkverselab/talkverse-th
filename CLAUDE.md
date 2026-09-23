@@ -106,6 +106,12 @@ adb -s R3CY20HDN2K install --user 0 -r <apk>
 - 성별판은 `variants.py` 가 규칙으로 만들고 `variants.json` 의 overrides 로 보정한다. 검수표: `REVIEW.md`(기본판) · `REVIEW_variants.md`(달라진 줄만).
 - 선택 규칙은 `select_playlist.py`(기준)와 `lib/services/course_service.dart`(이식) 두 곳 — 한쪽을 고치면 다른 쪽과 `test/course_service_test.dart` 기대값도 고친다.
 - 스크립트는 전부 자체 제작이고 **사람 검수 전 초안**이다. 수위 기준·설계는 `drafts/script_engine/00_DESIGN.md`.
+- **초급 스크립트**(2026-09-23)는 `scripts_src_beginner.txt` — 새 무대 8개(`01_DOMAINS_RESEARCH.md`) × 욕구 4 = 32편. 문법 기준은 `02_BEGINNER_GRAMMAR.md`(기초 교재 15종 공통 요소), 검사는 `python check_beginner.py`(→ `REVIEW_beginner.md`). 아직 앱 카탈로그에는 안 넣었다(무대 개편 결정 후 `build_scripts.py` 에 합칠 것).
+
+## 7-1. 문법 메뉴 — 2026-09-23
+
+- 홈 「문법」 → `grammar_hub_screen.dart`(초급 문법 코스 16과 목록) → `grammar_topic_screen.dart`(과 하나). 내용은 `assets/data/grammar/lessons.json`(15과 128항목, 예문 전부 자체 제작·한글 독음). 16과 「문장 끝 어조사」는 기존 `grammar_lesson_screen.dart`(`sfp.json`).
+- 과 순서 = 기초 교재 공통 순서(존댓말·대명사 → 기본 문장 → 질문 → 숫자 → 시간 → 있다 → 전치사 → 시제 → 조동사·요청 → ได้ → เป็น → ไป/มา → ขึ้น/ลง → 비교 → 접속사 → 어조사). 항목을 더할 때는 JSON 에만 넣으면 된다(코드 무변경). 출처(교재·강사)는 적지 않는다.
 
 ## 8. 계정 · 이용권 (Supabase) — 2026-09-21
 
