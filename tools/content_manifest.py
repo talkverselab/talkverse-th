@@ -22,7 +22,7 @@ OUT = os.path.join(ROOT, "assets", "data", "content_manifest.json")
 def main():
     files = {}
     for f in FILES:
-        b = io.open(os.path.join(ROOT, f), "rb").read()
+        b = io.open(os.path.join(ROOT, f), "rb").read().replace(b"\r\n", b"\n")  # 저장소(LF) 기준
         files[f] = hashlib.sha1(b).hexdigest()
     old = {}
     if os.path.exists(OUT):
