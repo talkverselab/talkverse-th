@@ -114,6 +114,9 @@ def make_variants(scripts, cfg, warn):
                         s.update(patch)
                     else:
                         s["turns"][int(num) - 1].update(patch)
+                        if "th" in patch:  # 사람이 고친 줄 — 그 줄의 자동 경고는 해소됨
+                            tag = "%s 턴%s:" % (s["id"], num)
+                            warn[:] = [w for w in warn if not w.startswith(tag)]
             s["changed"] = [t["num"] for t, b in zip(s["turns"], base["turns"])
                             if any(t.get(k) != b.get(k) for k in ("th", "roman", "ko", "note"))]
             out.append(s)

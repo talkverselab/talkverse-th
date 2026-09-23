@@ -625,6 +625,87 @@
      "핏"
     ]
    ]
+  },
+  "eat.romance.cooking": {
+   "partner": true,
+   "b_male": [
+    [
+     "ปราง",
+     "โอม"
+    ],
+    [
+     "쁘랑",
+     "옴"
+    ]
+   ]
+  },
+  "eat.win.delivery": {
+   "b_gender": "f"
+  },
+  "eat.thrill.bugs": {
+   "b_gender": "m"
+  },
+  "move.romance.grab": {
+   "partner": true,
+   "b_male": [
+    [
+     "จูน",
+     "เจมส์"
+    ],
+    [
+     "쭌",
+     "젬"
+    ]
+   ]
+  },
+  "move.status.bts": {
+   "b_gender": "f",
+   "i_f": "หนู",
+   "i_f_ro": "누"
+  },
+  "home.thrill.pool": {
+   "partner": true,
+   "b_male": [
+    [
+     "ขิม",
+     "ไบรท์"
+    ],
+    [
+     "킴",
+     "브라이"
+    ]
+   ]
+  },
+  "trip.status.temple": {
+   "b_gender": "m",
+   "i_f": "หนู",
+   "i_f_ro": "누"
+  },
+  "us.win.phone": {
+   "partner": true,
+   "b_male": [
+    [
+     "แนน",
+     "นนท์"
+    ],
+    [
+     "낸",
+     "논"
+    ]
+   ]
+  },
+  "us.thrill.roadtrip": {
+   "partner": true,
+   "b_male": [
+    [
+     "จูน",
+     "เจมส์"
+    ],
+    [
+     "쭌",
+     "젬"
+    ]
+   ]
   }
  },
  "overrides": {
@@ -793,6 +874,11 @@
     "th": "บ้าไปแล้ว! รอแป๊บ ยังไม่ได้อาบน้ำเลย",
     "roman": "바 빠이 래우! 러 뺍, 양 마이 다이 압 남 러이",
     "ko": "미쳤어! 잠깐만, 아직 씻지도 않았단 말이야."
+   }
+  },
+  "home.thrill.pool#1@*m": {
+   "7": {
+    "ko": "브라이예요. 1203호. 바로 옆이네요."
    }
   }
  }

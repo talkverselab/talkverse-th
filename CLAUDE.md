@@ -106,7 +106,7 @@ adb -s R3CY20HDN2K install --user 0 -r <apk>
 - 성별판은 `variants.py` 가 규칙으로 만들고 `variants.json` 의 overrides 로 보정한다. 검수표: `REVIEW.md`(기본판) · `REVIEW_variants.md`(달라진 줄만).
 - 선택 규칙은 `select_playlist.py`(기준)와 `lib/services/course_service.dart`(이식) 두 곳 — 한쪽을 고치면 다른 쪽과 `test/course_service_test.dart` 기대값도 고친다.
 - 스크립트는 전부 자체 제작이고 **사람 검수 전 초안**이다. 수위 기준·설계는 `drafts/script_engine/00_DESIGN.md`.
-- **초급 스크립트**(2026-09-23)는 `scripts_src_beginner.txt` — 새 무대 8개(`01_DOMAINS_RESEARCH.md`) × 욕구 4 = 32편. 문법 기준은 `02_BEGINNER_GRAMMAR.md`(기초 교재 15종 공통 요소), 검사는 `python check_beginner.py`(→ `REVIEW_beginner.md`). `build_scripts.py` 가 두 파일을 합쳐 빌드한다(기본판 77 · 성별판 244). 중·고급이 빈 칸 9개는 빌더가 안내로 출력한다.
+- **초급 스크립트**(2026-09-23)는 `scripts_src_beginner.txt` — 새 무대 8개(`01_DOMAINS_RESEARCH.md`) × 욕구 4 = 32편. 문법 기준은 `02_BEGINNER_GRAMMAR.md`(기초 교재 15종 공통 요소), 검사는 `python check_beginner.py`(→ `REVIEW_beginner.md`). `build_scripts.py` 가 두 파일을 합쳐 빌드한다(기본판 86 · 성별판 272). 무대 8 × 욕구 4 모든 칸에 초급과 중·고급이 있다. 빈 칸이 생기면 빌더가 안내로 출력한다.
 
 ## 7-1. 문법 메뉴 — 2026-09-23
 
