@@ -7,6 +7,10 @@ import 'screens/main_screen.dart';
 import 'services/ko_reading.dart';
 import 'core/l10n.dart';
 import 'services/auth_service.dart';
+import 'services/content_store.dart';
+import 'services/dev_notes.dart';
+import 'services/update_service.dart';
+import 'widgets/dev_note_overlay.dart';
 
 late final AppDatabase appDb;
 
@@ -16,8 +20,14 @@ void main() async {
   await SeedLoader(appDb).seedIfNeeded();
   await KoReadingPrefs.load();
   await AppLangPrefs.load();
+  await ContentStore.instance.init();
+  await DevNotes.instance.load();
   await AuthService.instance.init(); // 실패해도 앱은 뜬다(오프라인)
+  UpdateService.instance.loadCurrent();
   runApp(const ThaiUniverseApp());
+  // 콘텐츠만 바뀐 수정은 APK 없이 받는다 — 받으면 화면들이 revision 을 듣고 다시 읽는다.
+  ContentStore.instance.refresh();
+  DevNotes.instance.flushQueue();
 }
 
 class ThaiUniverseApp extends StatelessWidget {
@@ -32,6 +42,8 @@ class ThaiUniverseApp extends StatelessWidget {
         key: ValueKey(lang),
         title: tr('태국어유니버스'),
         debugShowCheckedModeBanner: false,
+        navigatorKey: DevNotes.instance.navigatorKey,
+        navigatorObservers: [DevNotes.instance.observer],
         theme: AppTheme.light(),
         darkTheme: AppTheme.dark(),
         themeMode: ThemeMode.light,
@@ -42,7 +54,7 @@ class ThaiUniverseApp extends StatelessWidget {
             data: mq.copyWith(
               textScaler: mq.textScaler.clamp(maxScaleFactor: 1.2),
             ),
-            child: child ?? const SizedBox.shrink(),
+            child: DevNoteOverlay(child: child ?? const SizedBox.shrink()),
           );
         },
         home: const MainScreen(),

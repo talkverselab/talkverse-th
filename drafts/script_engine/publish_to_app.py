@@ -11,4 +11,6 @@ s = json.load(io.open(os.path.join(D, "scripts_th.json"), encoding="utf-8"))
 for x in s["scripts"]:
     x.pop("changed", None)
 json.dump(s, io.open(os.path.join(OUT, "scripts_th.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+import subprocess, sys
+subprocess.run([sys.executable, os.path.join(D, "..", "..", "tools", "content_manifest.py")], check=True)
 print("앱 에셋 갱신:", len(s["scripts"]), "편,", os.path.getsize(os.path.join(OUT, "scripts_th.json")) // 1024, "KB")

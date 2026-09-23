@@ -6,6 +6,7 @@ import '../core/theme.dart';
 import '../services/course_service.dart';
 import '../services/ko_reading.dart';
 import '../services/tts_service.dart';
+import '../services/dev_notes.dart';
 
 /// 코스 스크립트 1편(8턴) — 채팅 버블. 화자 성별에 맞는 음성으로 읽는다.
 class CourseEpisodeScreen extends StatefulWidget {
@@ -23,7 +24,14 @@ class _CourseEpisodeScreenState extends State<CourseEpisodeScreen> {
   String _gender(String speaker) => s.voices[speaker] == 'm' ? 'male' : 'female';
 
   @override
+  void initState() {
+    super.initState();
+    DevNotes.instance.setContext('script', {'id': s.id, 'title': s.title, 'level': s.level});
+  }
+
+  @override
   void dispose() {
+    DevNotes.instance.clearContext('script');
     TtsService.instance.stop();
     super.dispose();
   }

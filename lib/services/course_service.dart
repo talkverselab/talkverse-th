@@ -1,7 +1,8 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'content_store.dart';
 
 /// 「내 코스」 — 질문 답으로 미리 써 둔 스크립트에 점수를 매겨 재생 목록을 만든다.
 ///
@@ -155,10 +156,15 @@ class CourseService {
     return {...a, 'q3_domain': ids};
   }
 
+  int _rev = -1;
+
   Future<void> ensureLoaded() async {
-    if (_loaded) return;
-    final q = json.decode(await rootBundle.loadString('assets/data/course/questions.json')) as Map<String, dynamic>;
-    final s = json.decode(await rootBundle.loadString('assets/data/course/scripts_th.json')) as Map<String, dynamic>;
+    // 원격 콘텐츠를 새로 받았으면 다시 읽는다.
+    if (_loaded && _rev == ContentStore.instance.revision.value) return;
+    _rev = ContentStore.instance.revision.value;
+    final cs = ContentStore.instance;
+    final q = json.decode(await cs.loadString('assets/data/course/questions.json')) as Map<String, dynamic>;
+    final s = json.decode(await cs.loadString('assets/data/course/scripts_th.json')) as Map<String, dynamic>;
     questions = [for (final x in (q['questions'] as List).cast<Map<String, dynamic>>()) CourseQuestion.fromJson(x)];
     driveOrder = [...((q['meta'] as Map)['drive_order'] as List).cast<String>()];
     driveLabels = (q['drives'] as Map).map((k, v) => MapEntry(k as String, (v as Map)['label'] as String));

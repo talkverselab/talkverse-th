@@ -120,3 +120,9 @@ adb -s R3CY20HDN2K install --user 0 -r <apk>
 - 딥링크 `io.supabase.talkverse.th://login-callback/` — AndroidManifest(intent-filter, launchMode singleTask)·Info.plist(CFBundleURLTypes) 에 있고, **Supabase Auth → Redirect URLs 에 등록돼 있어야 로그인이 돌아온다.** 다른 앱은 스킴 끝을 그 앱 언어 코드로.
 - 표·함수·결제 채널 설계: `docs/accounts-billing-design.md`, SQL `docs/sql/tv_accounts_billing.sql`. 새 요금제는 `tv_products`·`tv_plans` 행 추가 — 앱 코드는 안 바뀐다.
 - 잠금(무료/유료 구간)은 아직 안 걸었다. 계정 화면에 이용권 상태만 보여 준다.
+
+## 9. 개발자 메모 · 콘텐츠 무선 갱신 — 2026-09-23
+
+- **개발자 메모**: 프로필 → 「앱 버전」 7번 탭 → 「개발자 메모」 → 스위치. 모든 화면에 끌 수 있는 메모 버튼이 뜨고, 누르면 그 화면 캡처 + 화면 이름 + 맥락(코스 스크립트 id·문법 과) + 빌드·콘텐츠 판이 Supabase `tv_dev_notes`(캡처는 비공개 버킷 `dev-notes/<uid>/`)로 간다. 로그인 전·오프라인이면 폰에 모아 두었다 보낸다. SQL `docs/sql/tv_dev_notes.sql`.
+- **처리 흐름(Claude 세션)**: `select * from tv_dev_notes where status='open' order by created_at` → 고친 뒤 `update … set status='done', resolution='무엇을 고쳤는지', resolved_at=now()`. 사용자는 앱의 「개발자 메모」 화면에서 결과를 본다. 화면 맥락을 더 넘기려면 `DevNotes.instance.setContext(key, {...})`.
+- **콘텐츠 무선 갱신**: `assets/data/course/*`, `assets/data/grammar/lessons.json`·`sfp.json` 은 앱이 켜질 때 GitHub master 의 `assets/data/content_manifest.json` 과 sha1 을 비교해 바뀐 파일만 받는다(`lib/services/content_store.dart`). 문장만 고쳤으면 `python drafts/script_engine/build_scripts.py && python drafts/script_engine/publish_to_app.py`(manifest 자동 갱신) 또는 `python tools/content_manifest.py` 후 커밋·푸시 — **APK 빌드 안 돌고**(release.yml paths-ignore) 앱을 다시 열면 반영된다. 새 파일을 무선 대상에 넣으려면 `tools/content_manifest.py` 의 FILES 와 앱의 읽기(`ContentStore.loadString`)를 같이 고친다. 코드 변경은 여전히 APK.
