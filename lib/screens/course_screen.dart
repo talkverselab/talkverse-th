@@ -72,6 +72,14 @@ class _CourseScreenState extends State<CourseScreen> {
     );
   }
 
+  String _levelLabel() {
+    final id = _svc.level;
+    for (final o in _svc.levelQuestion.options) {
+      if (o.id == id) return '${o.emoji ?? ''} ${o.label}';
+    }
+    return '';
+  }
+
   Widget _list() {
     final items = _svc.playlist();
     final doneCount = items.where((e) => _svc.isDone(e.$2)).length;
@@ -100,12 +108,14 @@ class _CourseScreenState extends State<CourseScreen> {
                     TextButton.icon(
                       onPressed: _pickDomain,
                       icon: const Icon(Icons.edit, size: 15),
-                      label: Text(tr('학습 목적 바꾸기'), style: const TextStyle(fontSize: 12)),
+                      label: Text(tr('무대 · 레벨 바꾸기'), style: const TextStyle(fontSize: 12)),
                     ),
                   ],
                 ),
                 const SizedBox(height: 6),
                 DomainSummary(question: _svc.domainQuestion, ids: _svc.domains),
+                const SizedBox(height: 6),
+                Text(_levelLabel(), style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: AppColors.kluayMaiDeep)),
                 const SizedBox(height: 8),
                 Text('${tr('속마음')} · $drive   ${trf('완료 {0} / {1}', [doneCount, items.length])}',
                     style: const TextStyle(fontSize: 12, color: AppColors.khramLight)),

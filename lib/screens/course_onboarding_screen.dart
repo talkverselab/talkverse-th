@@ -17,7 +17,11 @@ class CourseOnboardingScreen extends StatefulWidget {
 class _CourseOnboardingScreenState extends State<CourseOnboardingScreen> {
   final _svc = CourseService.instance;
   late final Map<String, dynamic> _ans = {..._svc.answers};
-  int _i = 0;
+  // 새로 생긴 질문만 비어 있으면 거기서부터(예: 레벨 질문 추가). 다 답했으면 처음부터.
+  late int _i = () {
+    final k = _svc.questions.indexWhere((q) => !_ans.containsKey(q.id));
+    return k < 0 ? 0 : k;
+  }();
 
   CourseQuestion get _q => _svc.questions[_i];
 

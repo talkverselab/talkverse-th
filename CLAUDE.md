@@ -101,12 +101,12 @@ adb -s R3CY20HDN2K install --user 0 -r <apk>
 
 ## 7. 내 코스 (질문 → 스크립트) — 2026-09-21
 
-- 질문 13개의 답으로 미리 써 둔 스크립트에 점수를 매겨 재생 목록을 만든다. **런타임에 글을 생성하지 않는다** — 같은 답이면 같은 목록.
-- 원본은 `drafts/script_engine/scripts_src.txt`(한 줄 = 한 턴). 고친 뒤 `python build_scripts.py` → `python publish_to_app.py` 로 `assets/data/course/` 를 갱신한다. 에셋 JSON 을 직접 고치지 말 것.
+- 질문 14개의 답으로 미리 써 둔 스크립트에 점수를 매겨 재생 목록을 만든다. **무대 8개**(eat·move·home·work·trip·night·phone·us, 3개까지, 필터) × **레벨 3**(beg·mid·adv — 고른 레벨 +3, 이웃 레벨까지만) × 욕구 4 (2026-09-23 개편, 옛 답 biz·travel·stay·fan·chat 은 앱이 자동으로 새 id 로 옮김). **런타임에 글을 생성하지 않는다** — 같은 답이면 같은 목록.
+- 원본은 `drafts/script_engine/scripts_src.txt`(중·고급) + `scripts_src_beginner.txt`(초급 32편) — 한 줄 = 한 턴, 머리줄 tags 에 `level:` 필수. 고친 뒤 `python build_scripts.py` → `python publish_to_app.py` 로 `assets/data/course/` 를 갱신한다. 에셋 JSON 을 직접 고치지 말 것.
 - 성별판은 `variants.py` 가 규칙으로 만들고 `variants.json` 의 overrides 로 보정한다. 검수표: `REVIEW.md`(기본판) · `REVIEW_variants.md`(달라진 줄만).
 - 선택 규칙은 `select_playlist.py`(기준)와 `lib/services/course_service.dart`(이식) 두 곳 — 한쪽을 고치면 다른 쪽과 `test/course_service_test.dart` 기대값도 고친다.
 - 스크립트는 전부 자체 제작이고 **사람 검수 전 초안**이다. 수위 기준·설계는 `drafts/script_engine/00_DESIGN.md`.
-- **초급 스크립트**(2026-09-23)는 `scripts_src_beginner.txt` — 새 무대 8개(`01_DOMAINS_RESEARCH.md`) × 욕구 4 = 32편. 문법 기준은 `02_BEGINNER_GRAMMAR.md`(기초 교재 15종 공통 요소), 검사는 `python check_beginner.py`(→ `REVIEW_beginner.md`). 아직 앱 카탈로그에는 안 넣었다(무대 개편 결정 후 `build_scripts.py` 에 합칠 것).
+- **초급 스크립트**(2026-09-23)는 `scripts_src_beginner.txt` — 새 무대 8개(`01_DOMAINS_RESEARCH.md`) × 욕구 4 = 32편. 문법 기준은 `02_BEGINNER_GRAMMAR.md`(기초 교재 15종 공통 요소), 검사는 `python check_beginner.py`(→ `REVIEW_beginner.md`). `build_scripts.py` 가 두 파일을 합쳐 빌드한다(기본판 77 · 성별판 244). 중·고급이 빈 칸 9개는 빌더가 안내로 출력한다.
 
 ## 7-1. 문법 메뉴 — 2026-09-23
 

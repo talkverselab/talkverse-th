@@ -23,6 +23,7 @@ class CourseScript {
   final int ep;
   final int seriesLen;
   final String domain;
+  final String level; // beg · mid · adv
   final String drive;
   final int heat;
   final String emoji;
@@ -45,6 +46,7 @@ class CourseScript {
         ep = j['ep'] as int,
         seriesLen = (j['series_len'] as int?) ?? 1,
         domain = j['domain'] as String,
+        level = (j['level'] as String?) ?? 'mid',
         drive = j['drive'] as String,
         heat = j['heat'] as int,
         emoji = j['emoji'] as String,
@@ -129,6 +131,30 @@ class CourseService {
   /// 도메인만 바꾼다(나머지 답은 그대로). 언제든 다시 고를 수 있게.
   Future<void> setDomains(List<String> ids) => saveAnswers({...answers, 'q3_domain': ids});
 
+  CourseQuestion get levelQuestion => questions.firstWhere((q) => q.id == 'q3b_level');
+  String? get level => answers['q3b_level'] as String?;
+  Future<void> setLevel(String id) => saveAnswers({...answers, 'q3b_level': id});
+
+  /// 고른 레벨과 함께 목록에 드는 레벨 — 이웃 한 칸까지.
+  static const nearLevels = {
+    'beg': ['beg', 'mid'],
+    'mid': ['beg', 'mid', 'adv'],
+    'adv': ['mid', 'adv'],
+  };
+
+  /// 2026-09-23 무대 개편(6 → 8) 전의 답을 새 무대 id 로 옮긴다.
+  static const _oldDomain = {'biz': 'work', 'travel': 'trip', 'stay': 'home', 'fan': 'us', 'chat': 'phone'};
+  static Map<String, dynamic> migrate(Map<String, dynamic> a) {
+    final d = a['q3_domain'];
+    if (d is! List) return a;
+    final ids = <String>[];
+    for (final x in d.cast<String>()) {
+      final n = _oldDomain[x] ?? x;
+      if (!ids.contains(n)) ids.add(n);
+    }
+    return {...a, 'q3_domain': ids};
+  }
+
   Future<void> ensureLoaded() async {
     if (_loaded) return;
     final q = json.decode(await rootBundle.loadString('assets/data/course/questions.json')) as Map<String, dynamic>;
@@ -139,7 +165,7 @@ class CourseService {
     _all = [for (final x in (s['scripts'] as List).cast<Map<String, dynamic>>()) CourseScript.fromJson(x)];
     final p = await SharedPreferences.getInstance();
     final raw = p.getString(_kAnswers);
-    if (raw != null) answers = json.decode(raw) as Map<String, dynamic>;
+    if (raw != null) answers = migrate(json.decode(raw) as Map<String, dynamic>);
     done = {...(p.getStringList(_kDone) ?? const [])};
     final at = p.getInt(_kAnswersAt);
     if (at != null) answersUpdatedAt = DateTime.fromMillisecondsSinceEpoch(at);
@@ -148,6 +174,7 @@ class CourseService {
 
   /// [touch] = 지금 시각을 갱신 시각으로 기록(서버에서 내려받을 때는 false).
   Future<void> saveAnswers(Map<String, dynamic> a, {bool touch = true}) async {
+    a = migrate(a);
     answers = a;
     final p = await SharedPreferences.getInstance();
     await p.setString(_kAnswers, json.encode(a));
@@ -211,6 +238,8 @@ class CourseService {
     var pt = _one('q2_partner');
     if (pt == 'any') pt = me == 'm' ? 'f' : 'm';
     final domains = (answers['q3_domain'] as List).cast<String>();
+    final lv = _one('q3b_level');
+    final near = nearLevels[lv] ?? const ['beg', 'mid', 'adv'];
     final ds = driveScores();
     final maxHeat = _opt('q13_heat').maxHeat ?? 3;
     final noAlcohol = _one('q12_alcohol') == 'no';
@@ -220,9 +249,11 @@ class CourseService {
     final scored = <(int, CourseScript)>[];
     for (final s in _all) {
       if (s.variant != me && s.variant != '$me$pt') continue;
-      if (!domains.contains(s.domain)) continue; // 고른 도메인(무대)만 — 점수가 아니라 필터
+      if (!domains.contains(s.domain)) continue; // 고른 무대만 — 점수가 아니라 필터
+      if (!near.contains(s.level)) continue; // 고른 레벨과 이웃 레벨까지만
       if (s.ep != 1 || blocked(s)) continue;
       final pts = (ds[s.drive] ?? 0) +
+          (s.level == lv ? 3 : 0) +
           tag(s, 'stage', 'q7_stage', 2) +
           tag(s, 'style', 'q8_style', 1) +
           tag(s, 'persona', 'q9_persona', 1) +

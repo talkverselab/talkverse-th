@@ -101,7 +101,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 }),
             _SettingItem(
                 icon: Icons.flag_outlined,
-                title: tr('학습 목적'),
+                title: tr('무대 · 레벨'),
                 subtitle: CourseService.instance.hasAnswers
                     ? CourseService.instance.domainLabels.join(' · ')
                     : tr('내 코스에서 먼저 질문에 답해 주세요'),

@@ -13,12 +13,16 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from variants import make_variants  # noqa: E402
 
 D = os.path.dirname(os.path.abspath(__file__))
-DOMAINS = ["biz", "travel", "stay", "fan", "night", "chat"]
+DOMAINS = ["eat", "move", "home", "work", "trip", "night", "phone", "us"]
+LEVELS = ["beg", "mid", "adv"]
+LEVEL_KO = {"beg": "초급", "mid": "중급", "adv": "고급"}
 DRIVES = ["romance", "win", "status", "thrill"]
-DOMAIN_KO = {"biz": "비즈니스", "travel": "여행", "stay": "살아 보기", "fan": "드라마·팬", "night": "밤", "chat": "채팅"}
+DOMAIN_KO = {"eat": "먹고 마시기", "move": "이동·거리", "home": "살림", "work": "일", "trip": "여행", "night": "밤", "phone": "폰 속", "us": "둘만의 시간"}
 DRIVE_KO = {"romance": "설렘", "win": "승부", "status": "인정", "thrill": "일탈"}
 
-src = io.open(os.path.join(D, "scripts_src.txt"), encoding="utf-8").read().split("\n")
+src = []
+for fn in ("scripts_src.txt", "scripts_src_beginner.txt"):
+    src += io.open(os.path.join(D, fn), encoding="utf-8").read().split("\n")
 scripts, cur, errs = [], None, []
 for ln, line in enumerate(src, 1):
     if not line.strip() or (line.startswith("#") and not line.startswith("###")):
@@ -37,9 +41,14 @@ for ln, line in enumerate(src, 1):
             "characters": {"A": p[4].split("=", 1)[1], "B": p[5].split("=", 1)[1]},
             "flags": [f for f in p[6].split("=", 1)[1].split(",") if f],
             "tags": dict(t.split(":", 1) for t in p[7].split("=", 1)[1].split(",") if t),
-            "recap": "", "hook": "", "prev": None, "next": None,
+            "level": "mid", "recap": "", "hook": "", "prev": None, "next": None,
             "review": {"status": "draft", "reviewer": None}, "turns": [],
         }
+        cur["level"] = cur["tags"].pop("level", "mid")
+        if cur["level"] not in LEVELS:
+            errs.append("%d: 모르는 level %s" % (ln, cur["level"]))
+        if dom not in DOMAINS or drv not in DRIVES:
+            errs.append("%d: 모르는 무대·욕구 %s" % (ln, key))
         scripts.append(cur)
     elif line.startswith("<"):
         cur["recap"] = line[1:].strip()
@@ -67,11 +76,20 @@ for s in scripts:
 cell = {}
 for key, eps in series.items():
     cell.setdefault(key.rsplit(".", 1)[0], []).append(key)
+lvcell = {}
+for s in scripts:
+    if s["ep"] == 1:
+        lvcell.setdefault((s["level"], s["domain"], s["drive"]), []).append(s["key"])
+gaps = []
 for d in DOMAINS:
     for r in DRIVES:
-        if "%s.%s" % (d, r) not in cell:
-            errs.append("빠진 조합: %s.%s" % (d, r))
-TAGS = {"stage": {"first", "talking", "couple", "ex"}, "style": {"direct", "indirect", "joke", "listener"},
+        if ("beg", d, r) not in lvcell:
+            errs.append("초급 칸 비어 있음: %s.%s" % (d, r))
+        if ("mid", d, r) not in lvcell and ("adv", d, r) not in lvcell:
+            gaps.append("%s.%s" % (d, r))
+if gaps:
+    print("[안내] 중·고급이 아직 없는 칸 %d: %s" % (len(gaps), ", ".join(gaps)))
+TAGS = {"stage": {"first", "talking", "couple", "ex"}, "style": {"direct", "indirect", "joke", "listener", "drama"},
         "persona": {"sweet", "tsundere", "playful", "mature"}, "conflict": {"confront", "laugh", "polite", "escape"},
         "reg": {"polite", "casual"}}
 for s in scripts:
@@ -97,12 +115,12 @@ if errs:
     print("\n".join(errs))
     sys.exit(1)
 
-scripts.sort(key=lambda s: (DOMAINS.index(s["domain"]), DRIVES.index(s["drive"]), s["key"], s["ep"]))
+scripts.sort(key=lambda s: (LEVELS.index(s["level"]), DOMAINS.index(s["domain"]), DRIVES.index(s["drive"]), s["key"], s["ep"]))
 base_scripts = scripts
 warn = []
 cfg = json.load(io.open(os.path.join(D, "variants.json"), encoding="utf-8"))
 scripts = make_variants(base_scripts, cfg, warn)
-json.dump({"meta": {"version": "draft-4", "lang": "th", "turns_per_script": 8,
+json.dump({"meta": {"version": "draft-5", "lang": "th", "turns_per_script": 8,
                     "lookup": "질문 답으로 전체에 점수를 매겨 재생 목록을 만든다(select_playlist.py). 앞 회차를 끝내야 next 가 열린다.",
                     "variants": "id 끝의 @판: 연애 상대가 나오는 스크립트 = mf·fm·mm·ff(나·상대), 그 밖 = m·f(나). voices = 화자별 음성 성별.",
                     "note": "roman = 한글 근사 독음. 전부 자체 제작, 사람 검수 전(review.status=draft)."},
@@ -118,7 +136,7 @@ for d in DOMAINS:
         items = []
         for key in sorted(cell["%s.%s" % (d, r)]):
             eps = series[key]
-            items.append("%s%s" % (eps[0]["title"], (" (%d)" % len(eps)) if len(eps) > 1 else ""))
+            items.append("%s%s [%s]" % (eps[0]["title"], (" (%d)" % len(eps)) if len(eps) > 1 else "", LEVEL_KO[eps[0]["level"]]))
         cells.append("<br>".join(items))
     md.append("| **%s** | " % DOMAIN_KO[d] + " | ".join(cells) + " |")
 md.append("")
@@ -134,7 +152,7 @@ for k in ("stage", "style", "persona", "conflict", "reg"):
 md.append("")
 for s in base_scripts:
     ep = (" · %d편/%d" % (s["ep"], s["series_len"])) if s["series_len"] > 1 else ""
-    md.append("## %s %s — %s · %s%s  %s" % (s["emoji"], s["title"], DOMAIN_KO[s["domain"]], DRIVE_KO[s["drive"]], ep, "🌶" * s["heat"]))
+    md.append("## %s %s — %s · %s · %s%s  %s" % (s["emoji"], s["title"], DOMAIN_KO[s["domain"]], DRIVE_KO[s["drive"]], LEVEL_KO[s["level"]], ep, "🌶" * s["heat"]))
     md.append("`%s` · A = %s · B = %s%s · 태그: %s  " % (s["id"], s["characters"]["A"], s["characters"]["B"],
                                               (" · 표시: " + ", ".join(s["flags"])) if s["flags"] else "",
                                               ", ".join("%s:%s" % kv for kv in s["tags"].items())))
