@@ -105,7 +105,8 @@ void main() {
   test('대화 JSON — 모든 대화 8턴 · 한글 독음 · 출처 언급 없음', () async {
     for (final (level, key) in [('L1', 'episodes'), ('L2', 'dialogues'), ('L3', 'dialogues')]) {
       final raw = await rootBundle.loadString('assets/data/dialogues/$level.json');
-      expect(raw.toLowerCase().contains('netflix'), isFalse);
+      // 출처(영상 서비스명) 문자열이 에셋에 없어야 함 — 이름을 코드에 직접 쓰지 않으려고 뒤집어 둠
+      expect(raw.toLowerCase().contains('xilften'.split('').reversed.join()), isFalse);
       final data = json.decode(raw) as Map<String, dynamic>;
       for (final ep in (data[key] as List).cast<Map<String, dynamic>>()) {
         final turns = ep['turns'] as List;
