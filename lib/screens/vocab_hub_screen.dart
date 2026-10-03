@@ -6,13 +6,14 @@ import '../services/known_words_store.dart';
 import '../services/root_service.dart';
 import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
+import 'extra_edu_words_screen.dart';
 import 'important_words_screen.dart';
 import 'topic_vocab_screen.dart';
 import 'vocab_screen.dart';
 import '../core/l10n.dart';
 import '../core/platform.dart';
 
-/// 단어장 — 주제별 / 중요 단어(절벽 구간별) 두 갈래.
+/// 단어장 — 주제별 / 중요 단어(절벽 구간별) 두 갈래 + 추가 교육 단어(참고용, 가르치지 않음).
 class VocabHubScreen extends StatefulWidget {
   const VocabHubScreen({super.key});
 
@@ -45,6 +46,7 @@ class _VocabHubScreenState extends State<VocabHubScreen> {
         .where((t) => t.isNotEmpty)
         .toSet();
     final important = VocabService.instance.standardEntries.length;
+    final extra = VocabService.instance.extraEduEntries.length;
     return Scaffold(
       backgroundColor: AppColors.cream,
       appBar: AppBar(
@@ -109,6 +111,22 @@ class _VocabHubScreenState extends State<VocabHubScreen> {
                     ),
                   ),
                 ),
+                if (extra > 0) ...[
+                  const SizedBox(height: 12),
+                  _HubCard(
+                    emoji: '📎',
+                    title: tr('추가 교육 단어'),
+                    sub: trf('교육부 기초 단어 중 단어장에 없는 {0}단어 · 참고용', [extra]),
+                    desc: tr('회화에 거의 안 나와 본 과정에서는 일부러 가르치지 않는 단어예요.'),
+                    color: AppColors.khramLight,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const ExtraEduWordsScreen(),
+                      ),
+                    ),
+                  ),
+                ],
               ],
             ),
     );

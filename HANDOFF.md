@@ -15,6 +15,7 @@
 | 기능 | 핵심 파일 | CLAUDE.md |
 |---|---|---|
 | 내 코스(질문 14개 → 스크립트 재생 목록, 무대 8 × 레벨 3 × 욕구 4) | `drafts/script_engine/`, `lib/services/course_service.dart` | §7 |
+| 추가 교육 단어(교육부 기초 단어 ป.1~3 중 단어장에 없는 1,631개, 학년별 참고 목록 — 가르치지 않음, `standardEntries` 에서 제외) | `lib/screens/extra_edu_words_screen.dart`, `VocabService.extraEduEntries` | — |
 | 초급 문법 16과 | `assets/data/grammar/lessons.json`, `grammar_hub_screen.dart` | §7-1 |
 | 계정·이용권(Google·Kakao 로그인, Supabase `tv_*`) | `lib/services/auth_service.dart` | §8 |
 | 개발자 메모(모든 화면 캡처+맥락 → Supabase `tv_dev_notes`) | `lib/services/dev_notes.dart` | §9 |

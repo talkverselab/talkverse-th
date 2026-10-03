@@ -167,18 +167,23 @@ class VocabService {
   List<VocabEntry> entriesUpToLevel(int level) =>
       _entries.where((e) => e.level > 0 && e.level <= level).toList();
 
-  /// 표준 풀(최대 범위) — 빈도 1000 + 교육부 표준(ป.1~3), 표제어 중복 없음.
+  /// 표준 풀(최대 범위) — 빈도 1000 + 교육부 표준(ป.1~3) 중 단어장에 있는 단어, 표제어 중복 없음.
   List<VocabEntry> get standardEntries {
     final seen = <String>{};
     return [
       for (final e in [...top1000Entries, ..._obec])
-        if (seen.add(e.th)) e,
+        if (e.src != 'obec' && seen.add(e.th)) e,
     ];
   }
 
-  /// 교육부 표준 단어 중 빈도 1000 밖의 단어 (단어장 '표준 단어' 단계).
+  /// 교육부 표준 단어 중 빈도 1000 밖이면서 단어장에 있는 단어 (단어장 '표준 단어' 단계).
   List<VocabEntry> get standardExtraEntries =>
-      _obec.where((e) => e.level == 0).toList();
+      _obec.where((e) => e.level == 0 && e.src != 'obec').toList();
+
+  /// 추가 교육 단어 — 교육부 표준(ป.1~3) 중 우리 단어장에 없는 단어.
+  /// 회화에 거의 안 나와 본 과정에서는 가르치지 않고 참고용으로만 나열한다. theme = 'ป.1'~'ป.3'.
+  List<VocabEntry> get extraEduEntries =>
+      _obec.where((e) => e.src == 'obec').toList();
   Map<int, String> get themes => _themes;
   bool get isLoaded => _loaded;
   int get count => _entries.length;
