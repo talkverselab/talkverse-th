@@ -61,6 +61,12 @@ adb -s R3CY20HDN2K install --user 0 -r <apk>
 
 구현 안내서: https://github.com/talkverselab/talkverse-th/blob/master/docs/in-app-update-via-github.md
 
+## 2-1. Zealot 무선 설치 — 2026-10-11
+
+- **Zealot 앱이름: 태국어유니버스** (고정 — 이름이 바뀌면 Zealot 에 다른 앱으로 새로 생긴다). 설치 페이지 `https://apps.talkverse.uk`.
+- 올리기: `tools/zealot_push.sh ["변경 한 줄"]` — GitHub `latest` 릴리스의 APK 를 받아 올린다(메모를 안 주면 릴리스 메모). 로컬 빌드를 올릴 때만 `--local`(메모를 안 주면 최근 커밋 제목). 맥미니에서만 동작.
+- 덮어 설치 조건(2026-10-11 실측): 서명 키 = 로컬 `android/app/upload-keystore.jks` 와 릴리스 APK(빌드 46)가 같은 인증서(SHA-1 `fa0e4ef9…6353e56`, CN=ThaiUniverse) · 버전 코드 = 릴리스는 워크플로 실행 번호(현재 46), `pubspec.yaml` 은 `0.2.0+2` 라 **로컬 빌드는 `--build-number` 를 릴리스보다 크게 줘야** 덮어 설치된다(스크립트가 낮으면 거부).
+
 ## 3. 리포
 
 - 이름은 **`talkverselab/talkverse-<언어코드>`** 로 통일(2026-09-10). 옛 이름(`th-universe` 등)은 리다이렉트되지만
