@@ -1,3 +1,11 @@
+# 2026-10-26 마감 메모
+
+- 끝: 아이콘 「ก」·talkverse.uk 화면 톤(빌드 48, Zealot 「태국어유니버스」 첫 업로드) · Supabase 이관 조사·Talkverse ID 설계(`docs/CLOUDFLARE_MIGRATION.md`) · 원본 보관 R2 `supabase-archive/talkverse/`(16개) · D1 적재용 SQL PC `D:\backup\supabase_talkverse_20261026\`.
+- 다음: Workers 요금제 결정 뒤 D1 `talkverse-accounts`·`talkverse-db` 생성·적재 → `talkverse-auth`·`talkverse-api` 구현 → 앱 `auth_service.dart`·`dev_notes.dart` 교체(설계 §2-8) → 배포 후 talkverse.uk 세션에 알림. 사용자 몫: `auth.talkverse.uk` 도메인, Google·Kakao 콜백 등록, Resend 가입·키, 시크릿 입력.
+- 주의: M6 에는 wrangler 로그인이 없다 — R2·D1 작업은 M4(`ssh macmini4`, `~/talkverse-uk` 에서 `npx wrangler`). 폰에서 화면 톤 미확인.
+
+---
+
 # Zealot 설정 — 확인 필요 (2026-10-11)
 
 설정만 했다(빌드·업로드·커밋·푸시 안 함). 바뀐 파일: `tools/zealot_push.sh`(새 파일), `CLAUDE.md` §2-1, 이 메모.
