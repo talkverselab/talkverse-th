@@ -81,9 +81,10 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.cream,
-      body: ColoredBox(
-        color: AppColors.cream,
-        child: SafeArea(
+      body: Stack(
+        children: [
+          const Positioned(top: 0, left: 0, right: 0, height: 260, child: MeshBackdrop()),
+          SafeArea(
             child: ListView(
               padding:
                   const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -100,9 +101,10 @@ class HomeScreen extends StatelessWidget {
                               Text(
                                 'สวัสดี!',
                                 style: TextStyle(
-                                  fontSize: 26,
-                                  fontWeight: FontWeight.w900,
-                                  color: AppColors.kluayMaiDeep,
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.w700,
+                                  color: AppColors.khram,
+                                  letterSpacing: -1,
                                   fontFamilyFallback: AppTheme.fontFallback,
                                 ),
                               ),
@@ -142,9 +144,9 @@ class HomeScreen extends StatelessWidget {
                   tr('오늘의 학습'),
                   style: TextStyle(
                     fontSize: 14,
-                    fontWeight: FontWeight.w800,
-                    color: AppColors.khram,
-                    letterSpacing: 1.5,
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.kluayMai,
+                    letterSpacing: -0.1,
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -158,9 +160,9 @@ class HomeScreen extends StatelessWidget {
                       tr('퀵메뉴'),
                       style: TextStyle(
                         fontSize: 14,
-                        fontWeight: FontWeight.w800,
+                        fontWeight: FontWeight.w600,
                         color: AppColors.khram,
-                        letterSpacing: 2,
+                        letterSpacing: -0.1,
                       ),
                     ),
                   ],
@@ -176,9 +178,9 @@ class HomeScreen extends StatelessWidget {
                       tr('메인 메뉴'),
                       style: TextStyle(
                         fontSize: 14,
-                        fontWeight: FontWeight.w800,
+                        fontWeight: FontWeight.w600,
                         color: AppColors.khram,
-                        letterSpacing: 2,
+                        letterSpacing: -0.1,
                       ),
                     ),
                   ],
@@ -201,7 +203,8 @@ class HomeScreen extends StatelessWidget {
                 const SizedBox(height: 24),
               ],
             ),
-        ),
+          ),
+        ],
       ),
     );
   }
@@ -409,7 +412,7 @@ class _MenuGrid extends StatelessWidget {
           label: tr('복습'),
           sub: 'Flashcard',
           emblem: 'ทวน',
-          color: AppColors.thong,
+          color: AppColors.thongDeep,
           builder: (_) => const FlashcardScreen()),
     ];
 
@@ -455,14 +458,11 @@ class _MenuTile extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.cream,
-          border:
-              Border.all(color: AppColors.thong.withValues(alpha: 0.5)),
-          boxShadow: [
-            BoxShadow(
-              color: AppColors.khram.withValues(alpha: 0.06),
-              blurRadius: 6,
-              offset: const Offset(1, 2),
-            ),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: AppColors.thong),
+          boxShadow: const [
+            BoxShadow(color: Color(0x1A32325D), blurRadius: 5, offset: Offset(0, 2), spreadRadius: -1),
+            BoxShadow(color: Color(0x14000000), blurRadius: 3, offset: Offset(0, 1), spreadRadius: -1),
           ],
         ),
         child: Padding(

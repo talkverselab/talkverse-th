@@ -81,7 +81,7 @@ class _CourseOnboardingScreenState extends State<CourseOnboardingScreen> {
             value: (_i + 1) / n,
             minHeight: 3,
             backgroundColor: AppColors.creamDeep,
-            color: AppColors.thong,
+            color: AppColors.kluayMai,
           ),
         ),
       ),

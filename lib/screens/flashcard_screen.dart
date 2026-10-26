@@ -259,7 +259,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
               _SrsButton(
                 icon: Icons.refresh,
                 label: tr('보통이에요'),
-                color: AppColors.thong,
+                color: AppColors.thongDeep,
                 onTap: () => _answer(1),
               ),
               _SrsButton(
