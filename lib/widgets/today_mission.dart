@@ -29,12 +29,13 @@ class TodayMissionCard extends StatelessWidget {
       child: Container(
         clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(18),
           gradient: const LinearGradient(
             colors: [AppColors.kluayMaiDeep, AppColors.kluayMai],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
-          border: Border.all(color: AppColors.thong, width: 1.5),
+          border: Border.all(color: Colors.white.withValues(alpha: 0.25), width: 1),
         ),
         child: Stack(
           children: [

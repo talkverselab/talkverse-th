@@ -1208,7 +1208,7 @@ class _SpeakerBadge extends StatelessWidget {
       height: size,
       alignment: Alignment.center,
       decoration: BoxDecoration(
-        color: isA ? AppColors.kluayMai : AppColors.thong,
+        color: isA ? AppColors.kluayMai : AppColors.thongDeep,
         shape: BoxShape.circle,
       ),
       child: Text(

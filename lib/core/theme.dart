@@ -1,30 +1,35 @@
 import 'package:flutter/material.dart';
 
-/// 태국풍 컬러 팔레트 — 방콕 모던.
+/// 컬러 팔레트 — talkverse.uk 톤(2026-10-26).
 ///
-/// 태국어 하늘색(talkverse.uk 태국어 카드 #3F9FD6→#79CDF0)을 메인으로, 사원·승복의 골드(ทอง),
-/// 에메랄드 사원(มรกต)의 틸, 방콕 야경의 인디고(คราม)를 조합한다.
+/// 흰 바탕 + 남색 글자 + 인디고 포인트 하나, 그 밖의 색은 절제한다.
+/// 이름(kluayMai·thong·khram…)은 옛 "방콕 모던" 팔레트에서 온 것이라
+/// 화면 코드가 그대로 쓰고, 값만 사이트 토큰(`--ink`·`--body`·`--accent`…)에 맞췄다.
+/// 자음 분류·성조 색은 학습용이라 그대로 둔다.
 class AppColors {
-  // 主色 — 태국어 하늘색 (talkverse.uk 태국어 카드 색. 이름은 옛 난초색 시절 그대로)
-  static const Color kluayMai = Color(0xFF3F9FD6); // 사이트 --lc
-  static const Color kluayMaiDeep = Color(0xFF2A7DB0); // 크림 위 글자용(대비 4.5)
-  static const Color kluayMaiLight = Color(0xFF79CDF0); // 사이트 --lc2
+  // 주색 — 사이트 `--accent` 인디고
+  static const Color kluayMai = Color(0xFF635BFF);
+  static const Color kluayMaiDeep = Color(0xFF4B44D6); // `--accent-ink`
+  static const Color kluayMaiLight = Color(0xFFA9A4FF);
 
-  // 副色 — 골드 (ทอง, 왓 아룬·사원 금박·승복 사프란)
-  static const Color thong = Color(0xFFDBA514);
-  static const Color thongBright = Color(0xFFF7C948);
-  static const Color thongDeep = Color(0xFF8F6A0A);
+  // 보조 — 옛 골드 자리. 테두리는 사이트 `--line` 계열, 밝은 강조는 히어로 피치
+  static const Color thong = Color(0xFFDDE3EC);
+  static const Color thongBright = Color(0xFFFFD39B);
+  static const Color thongDeep = Color(0xFF6B7C93); // `--muted`
 
-  // 인디고 (คราม, 방콕 야경·짙은 텍스트)
-  static const Color khram = Color(0xFF241A3E);
-  static const Color khramLight = Color(0xFF544A6E);
+  // 글자 — `--ink` / `--body`
+  static const Color khram = Color(0xFF0A2540);
+  static const Color khramLight = Color(0xFF425466);
 
-  // 크림 (실크·코코넛 크림 배경)
-  static const Color cream = Color(0xFFFFF8EE);
-  static const Color creamDeep = Color(0xFFF4E8D2);
+  // 바탕 — 흰색 / `--soft`
+  static const Color cream = Color(0xFFFFFFFF);
+  static const Color creamDeep = Color(0xFFF6F9FC);
 
-  // 에메랄드 (มรกต, 에메랄드 사원·보조 강조)
-  static const Color morakot = Color(0xFF0FA98E);
+  // 보조 강조 — 차분한 청록(완료·학습됨)
+  static const Color morakot = Color(0xFF0E7C8C);
+
+  // 태국어 카드색 — talkverse.uk 언어 카드의 `--c` (언어 배지 한 곳에만)
+  static const Color thai = Color(0xFF3F9FD6);
 
   // 자음 3분류 컬러 (고/중/저)
   static const Color classHigh = Color(0xFFE6007E); // 고자음 — 마젠타
@@ -60,16 +65,16 @@ class AppTheme {
       colorScheme: ColorScheme(
         brightness: Brightness.light,
         primary: AppColors.kluayMai,
-        onPrimary: AppColors.cream,
+        onPrimary: Colors.white,
         primaryContainer: AppColors.kluayMaiLight,
         onPrimaryContainer: AppColors.khram,
-        secondary: AppColors.thong,
-        onSecondary: AppColors.khram,
+        secondary: AppColors.khramLight,
+        onSecondary: Colors.white,
         secondaryContainer: AppColors.thongBright,
         onSecondaryContainer: AppColors.khram,
         tertiary: AppColors.morakot,
         onTertiary: AppColors.cream,
-        tertiaryContainer: const Color(0xFFB7E4D8),
+        tertiaryContainer: const Color(0xFFCDEFF2),
         onTertiaryContainer: AppColors.khram,
         error: const Color(0xFFB00020),
         onError: Colors.white,
@@ -78,64 +83,89 @@ class AppTheme {
         surfaceContainerHighest: AppColors.creamDeep,
         onSurfaceVariant: AppColors.khramLight,
         outline: AppColors.thongDeep,
-        outlineVariant: const Color(0xFFE2D3AE),
+        outlineVariant: AppColors.thong,
       ),
       scaffoldBackgroundColor: AppColors.cream,
       fontFamilyFallback: fontFallback,
     );
 
     return base.copyWith(
+      textTheme: base.textTheme.apply(
+        bodyColor: AppColors.khramLight,
+        displayColor: AppColors.khram,
+      ),
       appBarTheme: const AppBarTheme(
         centerTitle: true,
         elevation: 0,
-        backgroundColor: AppColors.kluayMai,
-        foregroundColor: AppColors.cream,
+        scrolledUnderElevation: 0,
+        backgroundColor: AppColors.cream,
+        surfaceTintColor: Colors.transparent,
+        foregroundColor: AppColors.khram,
+        shape: Border(bottom: BorderSide(color: AppColors.thong, width: 1)),
         titleTextStyle: TextStyle(
-          color: AppColors.cream,
-          fontSize: 18,
-          fontWeight: FontWeight.w700,
-          letterSpacing: 1.2,
+          color: AppColors.khram,
+          fontSize: 17,
+          fontWeight: FontWeight.w600,
+          letterSpacing: -0.3,
           fontFamilyFallback: fontFallback,
         ),
       ),
       cardTheme: CardThemeData(
         elevation: 0,
         color: AppColors.cream,
+        shadowColor: const Color(0x1A32325D),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-          side: const BorderSide(color: AppColors.thong, width: 0.8),
+          borderRadius: BorderRadius.circular(14),
+          side: const BorderSide(color: AppColors.thong, width: 1),
         ),
       ),
       navigationBarTheme: NavigationBarThemeData(
-        backgroundColor: AppColors.khram,
-        indicatorColor: AppColors.kluayMai,
+        backgroundColor: AppColors.cream,
+        surfaceTintColor: Colors.transparent,
+        indicatorColor: const Color(0xFFEFEEFE),
         labelTextStyle: WidgetStateProperty.resolveWith((states) {
           final selected = states.contains(WidgetState.selected);
           return TextStyle(
-            color: selected ? AppColors.thongBright : AppColors.creamDeep,
+            color: selected ? AppColors.kluayMai : AppColors.thongDeep,
             fontSize: 11,
-            fontWeight: FontWeight.w600,
+            fontWeight: selected ? FontWeight.w600 : FontWeight.w500,
           );
         }),
         iconTheme: WidgetStateProperty.resolveWith((states) {
           final selected = states.contains(WidgetState.selected);
           return IconThemeData(
-            color: selected ? AppColors.cream : AppColors.creamDeep,
+            color: selected ? AppColors.kluayMai : AppColors.thongDeep,
             size: 24,
           );
         }),
+      ),
+      filledButtonTheme: FilledButtonThemeData(
+        style: FilledButton.styleFrom(
+          backgroundColor: AppColors.khram,
+          foregroundColor: Colors.white,
+          shape: const StadiumBorder(),
+          textStyle: const TextStyle(fontWeight: FontWeight.w600),
+        ),
+      ),
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          foregroundColor: AppColors.khram,
+          side: const BorderSide(color: AppColors.thong),
+          shape: const StadiumBorder(),
+        ),
       ),
       chipTheme: ChipThemeData(
         backgroundColor: AppColors.creamDeep,
         labelStyle:
             const TextStyle(color: AppColors.khram, fontWeight: FontWeight.w600),
         side: const BorderSide(color: AppColors.thong),
+        shape: const StadiumBorder(),
         selectedColor: AppColors.kluayMai,
-        secondaryLabelStyle: const TextStyle(color: AppColors.cream),
+        secondaryLabelStyle: const TextStyle(color: Colors.white),
       ),
       dividerTheme: const DividerThemeData(
         color: AppColors.thong,
-        thickness: 0.5,
+        thickness: 1,
       ),
       listTileTheme: const ListTileThemeData(
         iconColor: AppColors.kluayMai,
