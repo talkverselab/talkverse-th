@@ -1,3 +1,5 @@
+> **폐기(2026-11-02)** — Supabase 판 설계. 지금은 Talkverse ID(auth.talkverse.uk) — `CLAUDE.md` §8, `docs/CLOUDFLARE_MIGRATION.md` §2.
+
 # Talkverse 회원 · 로그인 · 결제 · 이용권 — 설계 (2026-09-21)
 
 > 모든 언어 앱(th·zh·ja·…)과 talkverse.uk 가 **Supabase 프로젝트 `Talkverse` 하나**를 쓴다.

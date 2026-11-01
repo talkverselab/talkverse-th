@@ -19,7 +19,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>io.supabase.talkverse.th</string>
+				<string>talkverse.th</string>
 			</array>
 		</dict>
 	</array>

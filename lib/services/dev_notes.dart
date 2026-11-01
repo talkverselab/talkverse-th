@@ -7,14 +7,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 
 import '../core/backend.dart';
 import '../core/platform.dart';
+import '../data/learn_api.dart';
 import 'content_store.dart';
 import 'update_service.dart';
 
-/// 검수용 개발자 메모 — 어느 화면에서든 메모 + 화면 캡처 + 맥락을 Supabase `tv_dev_notes` 에 남긴다.
+/// 검수용 개발자 메모 — 어느 화면에서든 메모 + 화면 캡처 + 맥락을 남긴다.
+/// 서버 = 공용 학습 API POST /v1/th/dev-notes(2026-11-02 Supabase 에서 이전). 캡처 이미지 업로드는 서버에 아직 없어 폰에만 남긴다.
 ///
 /// 켜는 법: 프로필 → 「앱 버전」을 7번 탭 → 「개발자 메모」 스위치. 켜면 모든 화면 오른쪽 아래에 버튼이 뜬다.
 /// 로그인이 안 됐거나 오프라인이면 폰에 모아 두었다가 다음에 보낸다.
@@ -118,26 +119,18 @@ class DevNotes {
     await p.setStringList(_kQueue, left);
   }
 
+  /// 서버 전송 — 로그인 안 됐거나 실패하면 false(큐에 남김).
   Future<bool> _send(Map<String, dynamic> item) async {
     try {
-      final sb = Supabase.instance.client;
-      final uid = sb.auth.currentUser?.id;
-      if (uid == null) return false;
       final row = Map<String, dynamic>.from(item['row'] as Map);
-      final shotFile = item['shot'] as String?;
-      if (shotFile != null && await File(shotFile).exists()) {
-        final path = '$uid/${shotFile.split(RegExp(r'[\\/]')).last}';
-        await sb.storage.from('dev-notes').uploadBinary(path, await File(shotFile).readAsBytes(),
-            fileOptions: const FileOptions(contentType: 'image/png', upsert: true));
-        row['shot_path'] = path;
-      }
-      await sb.from('tv_dev_notes').insert(row);
-      if (shotFile != null) {
-        try {
-          await File(shotFile).delete();
-        } catch (_) {}
-      }
-      return true;
+      final r = await LearnApi.call('POST', '/dev-notes', {
+        'note': row['note'],
+        'screen': row['screen'],
+        'app_build': row['app_build'],
+        'platform': row['platform'],
+        'context': {...?row['context'] as Map?, if (item['shot'] != null) 'shot_local': true},
+      });
+      return r != null && (r.$1 == 200 || r.$1 == 201);
     } catch (e) {
       debugPrint('DevNotes._send: $e');
       return false;
@@ -146,12 +139,9 @@ class DevNotes {
 
   /// 내가 남긴 메모 목록(처리 결과 포함).
   Future<List<Map<String, dynamic>>> mine() async {
-    final rows = await Supabase.instance.client
-        .from('tv_dev_notes')
-        .select('id, created_at, screen, note, status, resolution, resolved_at')
-        .order('created_at', ascending: false)
-        .limit(100);
-    return (rows as List).cast<Map<String, dynamic>>();
+    final r = await LearnApi.call('GET', '/dev-notes/mine');
+    if (r == null || r.$1 != 200) return const [];
+    return ((r.$2['items'] ?? r.$2['notes'] ?? const []) as List).cast<Map<String, dynamic>>();
   }
 }
 

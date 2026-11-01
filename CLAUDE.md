@@ -119,16 +119,15 @@ adb -s R3CY20HDN2K install --user 0 -r <apk>
 - 홈 「문법」 → `grammar_hub_screen.dart`(초급 문법 코스 16과 목록) → `grammar_topic_screen.dart`(과 하나). 내용은 `assets/data/grammar/lessons.json`(15과 128항목, 예문 전부 자체 제작·한글 독음). 16과 「문장 끝 어조사」는 기존 `grammar_lesson_screen.dart`(`sfp.json`).
 - 과 순서 = 기초 교재 공통 순서(존댓말·대명사 → 기본 문장 → 질문 → 숫자 → 시간 → 있다 → 전치사 → 시제 → 조동사·요청 → ได้ → เป็น → ไป/มา → ขึ้น/ลง → 비교 → 접속사 → 어조사). 항목을 더할 때는 JSON 에만 넣으면 된다(코드 무변경). 출처(교재·강사)는 적지 않는다.
 
-## 8. 계정 · 이용권 (Supabase) — 2026-09-21
+## 8. 계정 · 이용권 · 학습 동기화 (Talkverse ID) — 2026-11-02
 
-- 모든 언어 앱이 **Supabase 프로젝트 `Talkverse` 하나**를 쓴다. 접속값은 `lib/core/backend.dart`(공개 가능한 publishable 키). 서비스 키는 앱에 넣지 않는다.
-- Supabase 는 `lib/services/auth_service.dart` 에서만 만진다: Google·Kakao 로그인(브라우저 → 딥링크 복귀), 프로필, `tv_has_access('th')` 이용권(폰에 저장, 오프라인 유예), 코스 답·완료 회차 동기화.
-- 딥링크 `io.supabase.talkverse.th://login-callback/` — AndroidManifest(intent-filter, launchMode singleTask)·Info.plist(CFBundleURLTypes) 에 있고, **Supabase Auth → Redirect URLs 에 등록돼 있어야 로그인이 돌아온다.** 다른 앱은 스킴 끝을 그 앱 언어 코드로.
-- 표·함수·결제 채널 설계: `docs/accounts-billing-design.md`, SQL `docs/sql/tv_accounts_billing.sql`. 새 요금제는 `tv_products`·`tv_plans` 행 추가 — 앱 코드는 안 바뀐다.
-- 잠금(무료/유료 구간)은 아직 안 걸었다. 계정 화면에 이용권 상태만 보여 준다.
+- **Supabase 는 쓰지 않는다**(2026-11-02 제거). 계정은 언어앱·한자 앱·talkverse.uk 공용 **Talkverse ID** — `https://auth.talkverse.uk`(Worker `talkverse-auth`, D1 `talkverse-auth`, 담당 talkverse.uk 세션; 설계 talkverse-uk `docs/talkverse-id/README.md`).
+- 클라이언트 `lib/data/account.dart`(한자 앱 공용판, `clientId = 'th'`, 딥링크 `talkverse.th://auth`) · `lib/data/purchase.dart`(스토어 결제, 아직 configure 안 함). 화면은 `lib/services/auth_service.dart` 만 본다. 로그인: 브라우저 PKCE(flutter_web_auth_2, AndroidManifest `CallbackActivity`) + iOS Apple 네이티브(`ios/Runner/Runner.entitlements`). 계정 삭제 버튼 있음(스토어 심사).
+- 이용권 = 토큰 응답 entitlements 에 `th`. 학습 동기화(코스 답·완료 회차)·개발자 메모 = 공용 학습 API `lib/data/learn_api.dart` → `/v1/th/course/answers|progress`·`/v1/th/dev-notes`(D1 `talkverse-db`).
+- 옛 Supabase 설계 `docs/accounts-billing-design.md` 는 참고용(폐기).
 
-## 9. 개발자 메모 · 콘텐츠 무선 갱신 — 2026-09-23
+## 9. 개발자 메모 · 콘텐츠 무선 갱신 — 2026-09-23 (서버 2026-11-02 교체)
 
-- **개발자 메모**: 프로필 → 「앱 버전」 7번 탭 → 「개발자 메모」 → 스위치. 모든 화면에 끌 수 있는 메모 버튼이 뜨고, 누르면 그 화면 캡처 + 화면 이름 + 맥락(코스 스크립트 id·문법 과) + 빌드·콘텐츠 판이 Supabase `tv_dev_notes`(캡처는 비공개 버킷 `dev-notes/<uid>/`)로 간다. 로그인 전·오프라인이면 폰에 모아 두었다 보낸다. SQL `docs/sql/tv_dev_notes.sql`.
-- **처리 흐름(Claude 세션)**: `select * from tv_dev_notes where status='open' order by created_at` → 고친 뒤 `update … set status='done', resolution='무엇을 고쳤는지', resolved_at=now()`. 사용자는 앱의 「개발자 메모」 화면에서 결과를 본다. 화면 맥락을 더 넘기려면 `DevNotes.instance.setContext(key, {...})`.
+- **개발자 메모**: 프로필 → 「앱 버전」 7번 탭 → 「개발자 메모」 → 스위치. 모든 화면에 끌 수 있는 메모 버튼이 뜨고, 누르면 화면 이름 + 맥락(코스 스크립트 id·문법 과) + 빌드·콘텐츠 판이 공용 학습 API `POST /v1/th/dev-notes` 로 간다(캡처 이미지 업로드는 서버에 아직 없어 폰에만 남음). 로그인 전·오프라인이면 폰에 모아 두었다 보낸다.
+- **처리 흐름(Claude 세션)**: 열린 메모 조회·처리 결과 기록은 talkverse.uk 세션이 만든 관리 경로(X-Admin-Key)로 한다 — 키 값은 Doppler, 문서에 적지 않는다. 사용자는 앱의 「개발자 메모」 화면에서 결과를 본다. 화면 맥락을 더 넘기려면 `DevNotes.instance.setContext(key, {...})`.
 - **콘텐츠 무선 갱신**: `assets/data/course/*`, `assets/data/grammar/lessons.json`·`sfp.json` 은 앱이 켜질 때 GitHub master 의 `assets/data/content_manifest.json` 과 sha1 을 비교해 바뀐 파일만 받는다(`lib/services/content_store.dart`). 문장만 고쳤으면 `python drafts/script_engine/build_scripts.py && python drafts/script_engine/publish_to_app.py`(manifest 자동 갱신) 또는 `python tools/content_manifest.py` 후 커밋·푸시 — **APK 빌드 안 돌고**(release.yml paths-ignore) 앱을 다시 열면 반영된다. 새 파일을 무선 대상에 넣으려면 `tools/content_manifest.py` 의 FILES 와 앱의 읽기(`ContentStore.loadString`)를 같이 고친다. 코드 변경은 여전히 APK.

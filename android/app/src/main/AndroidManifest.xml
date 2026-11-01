@@ -28,12 +28,16 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-            <!-- Supabase OAuth 로그인 뒤 브라우저 → 앱 복귀 딥링크 (앱마다 스킴이 다르다: …talkverse.th) -->
-            <intent-filter android:autoVerify="false">
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:scheme="io.supabase.talkverse.th" android:host="login-callback"/>
+        </activity>
+        <!-- Talkverse 로그인 콜백 talkverse.th://auth (flutter_web_auth_2) -->
+        <activity
+            android:name="com.linusu.flutter_web_auth_2.CallbackActivity"
+            android:exported="true">
+            <intent-filter android:label="flutter_web_auth_2">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="talkverse.th" />
             </intent-filter>
         </activity>
         <!-- 내려받은 APK를 설치 화면에 넘기기 위한 FileProvider -->

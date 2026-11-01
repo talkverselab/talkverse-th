@@ -107,7 +107,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             _SettingItem(
                 icon: Icons.person_outline,
                 title: tr('계정'),
-                subtitle: AuthService.instance.user.value?.email ?? tr('로그인 · Google · Kakao'),
+                subtitle: AuthService.instance.user.value?['email'] as String? ?? tr('로그인 · Google · Kakao'),
                 onTap: () async {
                   await Navigator.push(context, MaterialPageRoute(builder: (_) => const AccountScreen()));
                   if (mounted) setState(() {});
