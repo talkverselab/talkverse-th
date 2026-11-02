@@ -84,20 +84,22 @@ class _VocabHubScreenState extends State<VocabHubScreen> {
               children: [
                 const LaiThaiDivider(height: 8),
                 const SizedBox(height: 8),
-                _HubCard(
-                  emoji: '📚',
-                  title: tr('주제별 단어'),
-                  sub: trf('{0}주제 · 편별 타일 · 그림·체크박스', [topics.length]),
-                  desc: tr('기본·음식·쇼핑·여행·교통… 상황별로 묶어 익혀요.'),
-                  color: AppColors.kluayMaiDeep,
-                  onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => const TopicVocabScreen(),
+                if (topics.length > 1) ...[
+                  _HubCard(
+                    emoji: '📚',
+                    title: tr('주제별 단어'),
+                    sub: trf('{0}주제 · 편별 타일 · 그림·체크박스', [topics.length]),
+                    desc: tr('기본·음식·쇼핑·여행·교통… 상황별로 묶어 익혀요.'),
+                    color: AppColors.kluayMaiDeep,
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const TopicVocabScreen(),
+                      ),
                     ),
                   ),
-                ),
-                const SizedBox(height: 12),
+                  const SizedBox(height: 12),
+                ],
                 _HubCard(
                   emoji: '⭐',
                   title: tr('중요 단어'),

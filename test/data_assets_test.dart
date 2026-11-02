@@ -67,26 +67,19 @@ void main() {
     expect(items.length, 14);
     expect(items.any((i) => (i as Map)['sfp'] == 'การ'), isTrue);
     expect(items.any((i) => (i as Map)['sfp'] == 'ที่'), isTrue);
+    // 2026-11-02 저작권 정리 — 자막과 같은 예문은 지워 일부 항목은 예문이 비어 있다(설명만).
     for (final i in items.cast<Map<String, dynamic>>()) {
-      expect((i['examples'] as List), isNotEmpty,
-          reason: '${i['sfp']} 예문 없음');
+      expect(i['desc'], isNotEmpty, reason: '${i['sfp']} 설명 없음');
     }
   });
 
   _HintTest.run();
 
-  test('청크 JSON — 2200문장', () async {
-    final raw =
-        await rootBundle.loadString('assets/data/chunks/th_chunks.json');
-    final data = json.decode(raw) as Map<String, dynamic>;
-    expect((data['chunks'] as List).length, 2200);
-  });
-
   test('통합 단어장 에셋 스키마', () async {
     final raw = await rootBundle.loadString('assets/data/vocab/th_vocab.json');
     final data = json.decode(raw) as Map<String, dynamic>;
     final entries = data['entries'] as List;
-    expect(entries.length, greaterThan(3000));
+    expect(entries.length, greaterThan(500)); // 빈도 단어만(2026-11-02 책 출처 단어 삭제)
     for (final e in entries.take(200)) {
       final m = e as Map<String, dynamic>;
       expect(m['th'], isNotEmpty);
@@ -216,7 +209,7 @@ void main() {
     final raw = await rootBundle.loadString('assets/data/vocab/th_expressions.json');
     final data = json.decode(raw) as Map<String, dynamic>;
     final entries = (data['entries'] as List).cast<Map>();
-    expect(entries.length, greaterThan(50));
+    expect(entries, isEmpty); // 2026-11-02 저작권 정리로 표현학습 문장 삭제(메뉴 숨김)
     final vraw = await rootBundle.loadString('assets/data/vocab/th_vocab.json');
     final vths = ((json.decode(vraw) as Map)['entries'] as List).cast<Map>().map((e) => e['th']).toSet();
     for (final e in entries) {

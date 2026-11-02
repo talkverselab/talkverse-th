@@ -10,7 +10,6 @@ import 'conversation_screen.dart';
 import 'course_screen.dart';
 import 'english_manual_screen.dart';
 import 'episode_screen.dart';
-import 'expressions_screen.dart';
 import 'flashcard_screen.dart';
 import 'grammar_hub_screen.dart';
 import 'keyboard_practice_screen.dart';
@@ -287,7 +286,6 @@ class _QuickMenuRow extends StatelessWidget {
       ('🎯', tr('내 코스'), true, (_) => const CourseScreen()),
       ('⚡', tr('바로 문장'), false, (_) => const QuickPhrasesScreen()),
       ('📖', tr('단어장'), false, (_) => const VocabHubScreen()),
-      ('🗣️', tr('표현학습'), false, (_) => const ExpressionsScreen()),
       ('💬', tr('회화'), false, (_) => const ConversationScreen()),
       ('🎙️', tr('문장 말하기'), false, (_) => const SpeakingPracticeScreen()),
       ('⌨️', tr('키보드연습'), false, (_) => const KeyboardPracticeScreen()),
@@ -384,12 +382,6 @@ class _MenuGrid extends StatelessWidget {
           emblem: 'ทับ',
           color: const Color(0xFF00897B),
           builder: (_) => const LoanwordScreen()),
-      _MenuItem(
-          label: tr('표현학습'),
-          sub: tr('주제별 문장·표현'),
-          emblem: 'วลี',
-          color: AppColors.morakot,
-          builder: (_) => const ExpressionsScreen()),
       _MenuItem(
           label: tr('루트 단어'),
           sub: 'น้ำ → น้ำแข็ง',

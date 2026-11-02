@@ -23,7 +23,7 @@
 | 자음 3분류 | `consonant_class_screen` | 고(สูง)·중(กลาง)·저(ต่ำ) 심화 |
 | 성조 5 | `tones_screen` | 5성조 곡선·성조부호·자음 분류별 성조 규칙표 |
 | 어말조사 | `grammar_lesson_screen` | คำลงท้าย 12종 (นะ·ครับ·ค่ะ·ไหม…) — 코퍼스 실예문 |
-| 단어장 | `vocab_screen` | 통합 단어장 4,700+ (빈도 1~5단계 · 30일 코스 · 루트 링크) |
+| 단어장 | `vocab_screen` | 회화 빈도 단어 577 (빈도 1~5단계 · 루트 링크) |
 | 문자 퀴즈 | `script_quiz_screen` | 자음 4지선다 10라운드 |
 | **키보드연습** | `keyboard_practice_screen` | **Kedmanee 자판** — 다음 키 하이라이트(Shift층 포함), 자모→단어→문장 코스, 정확도 |
 | 복습 | `flashcard_screen` `sentence_flashcard_screen` | 자음 카드 + 문장 플래시카드(한↔태 뒤집기, 남/녀 TTS) |

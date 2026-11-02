@@ -157,13 +157,14 @@ class _VocabScreenState extends State<VocabScreen> {
                             _day = null;
                           }),
                         ),
-                        _Chip(
-                          label: trf('30일 코스 {0}', [svc.bookEntries.length]),
-                          selected: _source == _Source.book,
-                          onTap: () => setState(() {
-                            _source = _Source.book;
-                          }),
-                        ),
+                        if (svc.bookEntries.isNotEmpty)
+                          _Chip(
+                            label: trf('30일 코스 {0}', [svc.bookEntries.length]),
+                            selected: _source == _Source.book,
+                            onTap: () => setState(() {
+                              _source = _Source.book;
+                            }),
+                          ),
                         _Chip(
                           label: tr('안 외운 것만'),
                           selected: _onlyUnmemorized,
