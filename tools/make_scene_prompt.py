@@ -51,7 +51,9 @@ def main():
         text = (f"[{ep['id']}] 태국어 학습 앱 회화 「{ep['title']}」의 장면 컷 4장을 그려 주세요.\n"
                 f"장면: {ep['scene']}. 장소: {ep.get('where','')}. A = {a_role}, B = {b_role}"
                 + (f", C = {role(who['C'])}" if who.get('C') else '') + ".\n"
-                f"{CHAR}\n{RULES}\n\n컷 구성(대사는 참고용 — 그림에 쓰지 마세요):\n" + '\n'.join(cuts) + "\n")
+                f"{CHAR}\n{RULES}\n"
+                + ("⑦ 채팅 편: 두 사람은 **각자 다른 장소**(각자 자기 방·침대)에서 폰을 보고 있다 — 같은 공간·같은 소파에 함께 그리지 말 것. 각 컷은 화면을 세로로 반 나눈 분할 구도(왼쪽 = 한 사람의 방, 오른쪽 = 다른 사람의 방), 폰 화면에 글자 없음.\n" if ep.get('kind') == 'chat' else '')
+                + "\n컷 구성(대사는 참고용 — 그림에 쓰지 마세요):\n" + '\n'.join(cuts) + "\n")
         p = OUT / f"{ep['id']}_scene_prompt.md"
         p.write_text(text, encoding='utf-8')
         print(p)
