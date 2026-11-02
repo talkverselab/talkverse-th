@@ -1,7 +1,7 @@
 rank,word,reading,ko,en,pos,level,picturable
 2,นะ,ná,~요(부드러운 어조사),soft particle,particle,R1,N
 4,แล้ว,láew,"이미, ~했다(완료), 그리고 나서",already,adv,R1,N
-5,ก็,gaw,"~도, 그러면, 역시",also,conj,R1,N
+5,ก็,gaw,"~도, 그러면, 역시",also,adv,R1,N
 6,จะ,jà,~할 것이다(미래),will,aux,R1,N
 8,ได้,dâi,"~할 수 있다, 얻다",can,aux,R1,N
 9,เลย,lery,"전혀(부정 강조), 아주, 지나서",at all,adv,R1,N
@@ -45,7 +45,7 @@ rank,word,reading,ko,en,pos,level,picturable
 74,ลูก,lûk,"자식, 아이, 개(둥근 것 단위)",child,noun,R1,Y
 75,เรื่อง,rêuang,"이야기, 사안, ~에 관하여",story,noun,R1,Y
 76,แค่,kâe,"단지, ~만큼",only,adv,R1,N
-77,เปล่า,bplào,"아니, 아무것도 아님, 비어 있다",no / empty,adj,R1,N
+77,เปล่า,bplào,"아니, 아무것도 아님, 비어 있다",no,adj,R1,N
 81,เอง,eng,"스스로, 자신이",oneself,adv,R1,N
 83,ยู,yu,너(영어 you 차용),you,pron,R1,N
 84,งั้น,ngán,"그럼, 그렇다면(อย่างนั้น 구어)",then,conj,R1,N
@@ -55,7 +55,7 @@ rank,word,reading,ko,en,pos,level,picturable
 91,เห็น,hěn,"보다, 보이다, 생각하다",see,verb,R1,Y
 92,นั้น,nán,"그, 그것",that,det,R1,N
 94,โอเค,o ke,"오케이, 괜찮다",okay,interj,R1,Y
-96,เค้า,káo,"그 사람, 걔(เขา 구어)",he / she,pron,R1,N
+96,เค้า,káo,"그 사람, 걔(เขา 구어)",he or she,pron,R1,N
 99,ใช่ไหม,châi mǎi,"그렇지?, 맞지?",right?,particle,R1,N
 100,อย่าง,yàng,"~처럼, 종류, ~하게(부사화)",like,prep,R1,N
 101,กว่า,gwà,"~보다(비교), 더",more than,prep,R1,N
@@ -68,7 +68,7 @@ rank,word,reading,ko,en,pos,level,picturable
 113,ดิ,dì,"~해(권유 어말조사, สิ 구어)",urging particle,particle,R2,N
 114,เคย,kery,~한 적이 있다(경험),ever,aux,R2,N
 115,หมด,mòt,"다 떨어지다, 모두, 전부",all gone,verb,R2,Y
-116,นาย,nai,"~씨(남성 존칭), 주인, 상사",boss / Mr.,noun,R2,Y
+116,นาย,nai,"~씨(남성 존칭), 주인, 상사",boss,noun,R2,Y
 117,บ้าง,bâng,"조금, 일부, 어떤 것들",some,det,R2,N
 119,ว่ะ,wâ,"~야(거친 어말조사, วะ 변형)",rough particle,particle,R2,N
 123,คุย,kuy,"이야기하다, 수다 떨다",chat,verb,R2,Y
@@ -121,7 +121,7 @@ rank,word,reading,ko,en,pos,level,picturable
 218,จัง,jang,"정말, 엄청(강조)",so (very),adv,R3,N
 219,จ้ะ,jâ,"네, ~요(친근 공손 어말조사)",yes (friendly),particle,R3,N
 222,เข้าไป,kâo bpai,들어가다,go in,verb,R3,Y
-228,สัก,sàk,"약 ~쯤, 한 ~(수량 앞), 문신하다",about / tattoo,adv,R3,N
+228,สัก,sàk,"약 ~쯤, 한 ~(수량 앞), 문신하다",about,adv,R3,N
 229,แน่,nâe,"확실히, 분명히",sure,adj,R3,N
 230,หรือ,rěu,"또는, ~입니까?(의문)",or,conj,R3,N
 233,เพื่อ,pêua,~를 위해,for,prep,R3,N
@@ -133,7 +133,7 @@ rank,word,reading,ko,en,pos,level,picturable
 248,เจอกัน,jer gan,"만나자, 또 봐",see you,phrase,R3,Y
 249,ตั้ง,dtâng,"세우다, 설립하다, 설정하다",set up,verb,R3,Y
 251,แฟน,faen,애인,boyfriend / girlfriend,noun,R3,Y
-255,ตอน,dtawn,"때, 부분, 회(에피소드)",time / episode,noun,R3,N
+255,ตอน,dtawn,"때, 부분, 회(에피소드)",time,noun,R3,N
 256,เกม,gem,게임,game,noun,R3,Y
 257,มั้ย,mái,~니?(의문 어말조사 ไหม 구어),question particle (casual),particle,R3,N
 258,อาจจะ,àt jà,아마 ~일 것이다,maybe,adv,R3,N
@@ -165,7 +165,7 @@ rank,word,reading,ko,en,pos,level,picturable
 305,เอ็ง,eng,"너(구어, 사극, 손아래에게)",you (archaic),pron,R4,N
 306,ทุก,túk,"모든, 매~",every,det,R4,N
 310,ร้าน,rán,"가게, 상점",shop,noun,R4,Y
-311,โทษ,tôt,"벌, 죄, 미안(ขอโทษ 축약)",blame / sorry,noun,R4,N
+311,โทษ,tôt,"벌, 죄, 미안(ขอโทษ 축약)",blame,noun,R4,N
 312,สิ่ง,sìng,"것, 사물",thing,noun,R4,N
 313,คนอื่น,kon èun,"다른 사람, 남",other people,pron,R4,Y
 314,ทุกอย่าง,túk yàng,"모든 것, 전부",everything,pron,R4,N
@@ -178,7 +178,7 @@ rank,word,reading,ko,en,pos,level,picturable
 326,ติด,dtìt,"붙다, 걸리다, 중독되다",stick / stuck,verb,R4,Y
 328,มีเรื่อง,mi rêuang,"일이 있다, 문제가 생기다, 싸움 붙다",get into trouble,phrase,R4,Y
 329,อันนี้,an ní,이것,this one,pron,R4,N
-330,ค่า,kâ,"값, 요금, 비용",cost / fee,noun,R4,Y
+330,ค่า,kâ,"값, 요금, 비용",fee,noun,R4,Y
 334,ฝาก,fàk,"맡기다, 부탁하다, 예금하다",entrust,verb,R4,Y
 335,ผิด,pìt,"틀리다, 잘못된",wrong,adj,R4,Y
 337,เมื่อกี้,mêua gî,"방금, 아까",a moment ago,adv,R4,N
@@ -187,7 +187,7 @@ rank,word,reading,ko,en,pos,level,picturable
 346,แค่นี้,kâe ní,"이만큼, 이것뿐",just this much,phrase,R4,N
 347,หาย,hǎi,"사라지다, 낫다, 잃어버리다",disappear,verb,R4,Y
 348,หรือยัง,rěu yang,"~했어?, 아직?(완료 여부 의문)",yet?,particle,R4,N
-349,ต้น,dtôn,"나무(류별사), 처음, 근원",tree (classifier) / beginning,noun,R4,Y
+349,ต้น,dtôn,"나무(류별사), 처음, 근원",tree,noun,R4,Y
 353,นี้แหละ,ní làe,바로 이거야,this is it,phrase,R4,N
 355,ปกติ,bpòk dtì,"보통, 정상적인",normal,adj,R4,N
 356,ควร,kuan,"~해야 마땅하다, ~하는 것이 좋다",should,aux,R4,N
@@ -196,7 +196,7 @@ rank,word,reading,ko,en,pos,level,picturable
 365,อีกแล้ว,ìk láew,"또, 또다시",again,adv,R4,N
 366,มั้ง,máng,"~인가 봐, 아마(추측 어말조사)",maybe (particle),particle,R4,N
 367,ทัน,tan,"제때 맞추다, 따라잡다",in time,verb,R4,Y
-368,ลา,la,"작별하다, 휴가 내다, 당나귀",say goodbye / donkey,verb,R4,Y
+368,ลา,la,"작별하다, 휴가 내다, 당나귀",say goodbye,verb,R4,Y
 369,อุ๊ย,úy,"어머!, 앗(놀람)",oops!,interj,R4,Y
 370,ให้ได้,hâi dâi,"반드시 ~하도록, 꼭",no matter what,adv,R4,N
 371,ล้าน,lán,백만,million,num,R4,Y
@@ -209,7 +209,7 @@ rank,word,reading,ko,en,pos,level,picturable
 386,ที่จะ,tî jà,~할(관계사+미래),to (do),phrase,R4,N
 387,สู้,sû,"싸우다, 맞서다, 힘내다",fight,verb,R4,Y
 389,หลอก,làwk,"속이다, 놀리다",trick,verb,R4,Y
-392,เรียบร้อย,rîap ráwy,"완료됨, 단정하다",all done / neat,adj,R4,Y
+392,เรียบร้อย,rîap ráwy,"완료됨, 단정하다",all done,adj,R4,Y
 394,สำหรับ,sǎm ràp,"~을 위한, ~에게",for,prep,R4,N
 395,มอง,mawng,"바라보다, 여기다",look at,verb,R4,Y
 398,เล่า,lâo,"이야기하다, 말해 주다",tell (a story),verb,R4,Y
@@ -237,7 +237,7 @@ rank,word,reading,ko,en,pos,level,picturable
 438,อยากได้,yàk dâi,"갖고 싶다, 원하다",want (to have),verb,R4,Y
 439,เมื่อ,mêua,~할 때,when,conj,R4,N
 440,ค่อย,kâwy,"천천히, 차차, 그다음에",gradually,adv,R4,N
-441,สุด,sùt,"끝, 가장, 최~",most / end,adv,R4,N
+441,สุด,sùt,"끝, 가장, 최~",most,adv,R4,N
 442,ยิง,ying,쏘다,shoot,verb,R4,Y
 443,ฝัน,fǎn,"꿈, 꿈꾸다",dream,noun,R4,Y
 445,สิง,sǐng,"빙의하다, 깃들다(귀신)",possess (spirit),verb,R4,N
@@ -268,13 +268,13 @@ rank,word,reading,ko,en,pos,level,picturable
 497,เดอะ,dèr,더(영어 관사 음역),the,det,R4,N
 498,เฉย,chěry,"가만히 있다, 무덤덤하다",indifferent,adj,R4,Y
 502,ตรงไหน,dtrong nǎi,"어디, 어느 부분",where exactly,pron,R4,N
-503,ไทย,tai,"태국, 태국의",Thai / Thailand,noun,R4,Y
+503,ไทย,tai,"태국, 태국의",Thai,noun,R4,Y
 505,โอ,o,오(영문자 O 음역),letter O,noun,R4,Y
 506,รึ,réu,~야?(หรือ 구어),or? (casual),particle,R4,N
 507,กระผม,grà pǒm,저(남성 겸양 1인칭),"I (male, humble)",pron,R4,N
 509,ยินดี,yin di,"기쁘다, 환영하다, 축하하다",glad,adj,R4,Y
 511,เป็นเพื่อน,bpen pêuan,"친구가 되다, 함께 있어 주다",be friends,phrase,R4,Y
-512,เหยื่อ,yèua,"먹이, 희생자, 미끼",victim / bait,noun,R4,N
+512,เหยื่อ,yèua,"먹이, 희생자, 미끼",victim,noun,R4,N
 513,หมายความว่า,mǎi kwam wâ,"~라는 뜻이다, 의미하다",that means,phrase,R4,N
 514,ฆาตกร,kât graw,살인자,murderer,noun,R4,N
 516,ก็ดี,gaw di,"~도 좋다, 괜찮네",that's good too,phrase,R4,N
@@ -305,7 +305,7 @@ rank,word,reading,ko,en,pos,level,picturable
 555,โอ้,ô,오!(감탄),oh!,interj,R4,N
 557,จ๊ะ,já,"~요?, 응?(친근 의문 어말조사)",question particle (friendly),particle,R4,N
 559,ดีแล้ว,di láew,"잘됐다, 그게 좋아",that's good,phrase,R4,N
-560,พัน,pan,"천(1,000), 감다",thousand / wrap,num,R4,Y
+560,พัน,pan,"천(1,000), 감다",thousand,num,R4,Y
 567,ตังค์,dtang,돈(구어),money (casual),noun,R4,Y
 569,เสือก,sèuak,"참견하다, 오지랖 떨다(속어)",nosy (slang),verb,R4,N
 570,มีปัญหา,mi bpan hǎ,문제가 있다,have a problem,phrase,R4,Y
@@ -342,7 +342,7 @@ rank,word,reading,ko,en,pos,level,picturable
 612,สักที,sàk ti,"드디어, 좀 (해라)(재촉, 완료 강조)",finally,adv,R4,N
 614,แทน,taen,"대신하다, 대신에",instead,adv,R4,N
 618,กำลังจะ,gam lang jà,막 ~하려던 참이다,about to,aux,R4,N
-619,ร้อง,ráwng,"노래하다, 소리치다, 청원하다",sing / cry out,verb,R4,Y
+619,ร้อง,ráwng,"노래하다, 소리치다, 청원하다",sing,verb,R4,Y
 620,มาหา,ma hǎ,"찾아오다, 만나러 오다",come to see,verb,R4,Y
 622,อ้อ,âw,"아하, 아 그렇구나(깨달음)","ah, I see",interj,R4,N
 623,จูบ,jùp,"키스하다, 뽀뽀하다",kiss,verb,R4,Y
