@@ -12,6 +12,7 @@ import 'account_screen.dart';
 import 'course_domain_screen.dart';
 import '../services/course_service.dart';
 import '../services/dev_notes.dart';
+import '../services/learner_prefs.dart';
 import 'dev_notes_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -105,6 +106,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
               )),
           const SizedBox(height: 8),
           _SettingsGroup(items: [
+            _SettingItem(
+                icon: Icons.badge_outlined,
+                title: tr('나 · 이름과 성별'),
+                subtitle: LearnerPrefs.name.value.isEmpty
+                    ? tr('이름을 정하면 회화와 홈 인사에 나와요')
+                    : '${LearnerPrefs.name.value} · ${LearnerPrefs.isFemale ? tr('여성') : tr('남성')}',
+                onTap: () async {
+                  await _editLearner(context);
+                  if (mounted) setState(() {});
+                }),
             _SettingItem(
                 icon: Icons.person_outline,
                 title: tr('계정'),
@@ -272,4 +283,41 @@ class _SettingItem {
       required this.title,
       required this.subtitle,
       this.onTap});
+}
+
+/// 학습자 이름·성별 — 회화의 화자 A(나)와 홈 인사에 쓰인다. 글로벌 버전이라 이름을 고정하지 않는다.
+Future<void> _editLearner(BuildContext context) async {
+  final ctl = TextEditingController(text: LearnerPrefs.name.value);
+  var female = LearnerPrefs.isFemale;
+  final ok = await showDialog<bool>(
+    context: context,
+    builder: (c) => StatefulBuilder(
+      builder: (c, set) => AlertDialog(
+        title: Text(tr('나 · 이름과 성별')),
+        content: Column(mainAxisSize: MainAxisSize.min, children: [
+          TextField(controller: ctl, decoration: InputDecoration(hintText: tr('이름')), textInputAction: TextInputAction.done),
+          const SizedBox(height: 14),
+          SegmentedButton<bool>(
+            segments: [
+              ButtonSegment(value: false, label: Text(tr('남성'))),
+              ButtonSegment(value: true, label: Text(tr('여성'))),
+            ],
+            selected: {female},
+            onSelectionChanged: (s) => set(() => female = s.first),
+          ),
+          const SizedBox(height: 8),
+          Text(tr('성별에 따라 태국어 1인칭·어미(ผม/ฉัน · ครับ/ค่ะ)가 달라져요'),
+              style: const TextStyle(fontSize: 12, color: AppColors.khramLight)),
+        ]),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(c, false), child: Text(tr('취소'))),
+          FilledButton(onPressed: () => Navigator.pop(c, true), child: Text(tr('저장'))),
+        ],
+      ),
+    ),
+  );
+  if (ok == true) {
+    await LearnerPrefs.setName(ctl.text);
+    await LearnerPrefs.setGender(female ? 'female' : 'male');
+  }
 }

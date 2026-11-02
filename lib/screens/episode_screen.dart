@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/theme.dart';
+import '../services/learner_prefs.dart';
 import '../data/db/app_database.dart';
 import '../main.dart';
 import '../services/chunk_index_service.dart';
@@ -189,7 +190,7 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
             ),
             const SizedBox(height: 2),
             Text(
-              trf('{0} · 민호 & ฟ้า', [meta.level]),
+              trf('{0} · {1} & 태국 친구', [meta.level, LearnerPrefs.name.value.isEmpty ? tr('나') : LearnerPrefs.name.value]),
               style: const TextStyle(
                 color: AppColors.khramLight,
                 fontSize: 10,

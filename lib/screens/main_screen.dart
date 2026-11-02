@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../core/pane.dart';
 import '../core/platform.dart';
 import '../core/theme.dart';
+import '../services/learner_prefs.dart';
 import '../main.dart';
 import '../widgets/thai_decor.dart';
 import '../widgets/today_mission.dart';
@@ -125,19 +126,29 @@ class _MainScreenState extends State<MainScreen> {
   }
 }
 
-/// 오른쪽 칸 빈 자리 안내.
+/// 오른쪽 칸 첫 화면 — 오늘의 장면(점토 톤 그림, Grok UXUI 시안 02). 메뉴를 고르면 이 자리에 열린다.
 class _PaneEmpty extends StatelessWidget {
   const _PaneEmpty();
 
   @override
   Widget build(BuildContext context) => ColoredBox(
-        color: AppColors.creamDeep,
-        child: Center(
+        color: AppColors.cream,
+        child: Padding(
+          padding: const EdgeInsets.all(24),
           child: Column(
-            mainAxisSize: MainAxisSize.min,
             children: [
-              const Text('สวัสดี', style: TextStyle(fontSize: 34, fontWeight: FontWeight.w700, color: AppColors.thong)),
-              const SizedBox(height: 10),
+              Expanded(
+                child: Center(
+                  child: AspectRatio(
+                    aspectRatio: 470 / 645, // 그림 비율 그대로(잘리지 않게)
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(24),
+                      child: Image.asset('assets/images/scene_home.jpg', fit: BoxFit.cover),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 14),
               Text(tr('왼쪽에서 메뉴를 고르면 여기에 열려요'),
                   style: const TextStyle(fontSize: 13, color: AppColors.thongDeep)),
             ],
@@ -185,12 +196,15 @@ class HomeScreen extends StatelessWidget {
                             ],
                           ),
                           const SizedBox(height: 2),
-                          Text(
-                            tr('한국 학습자, 오늘도 방콕 한 걸음'),
-                            style: TextStyle(
-                              fontSize: 13,
-                              color: AppColors.khramLight,
-                              fontWeight: FontWeight.w500,
+                          ValueListenableBuilder<String>(
+                            valueListenable: LearnerPrefs.name,
+                            builder: (_, n, _) => Text(
+                              n.isEmpty ? tr('오늘도 태국어 한 걸음') : trf('{0}님, 오늘도 태국어 한 걸음', [n]),
+                              style: const TextStyle(
+                                fontSize: 13,
+                                color: AppColors.khramLight,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                           ),
                         ],
@@ -223,6 +237,8 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 const _TodayMission(),
+                const SizedBox(height: 12),
+                const _TodayTasks(),
                 const SizedBox(height: 22),
                 Row(
                   children: [
@@ -335,13 +351,58 @@ class _TodayMissionState extends State<_TodayMission> {
     return TodayMissionCard(
       level: meta.level == 'L1' ? 'BEGINNER 1' : meta.level,
       lessonTitle: '${meta.level} · ${meta.title}',
-      lessonSubtitle: trf('민호 & ฟ้า 스토리 {0}', [meta.emoji]),
+      lessonSubtitle: trf('{0} & 태국 친구 스토리 {1}', [LearnerPrefs.name.value.isEmpty ? tr('나') : LearnerPrefs.name.value, meta.emoji]),
+      cta: tr('학습 시작하기'),
       progress: _learned,
       total: _total,
       onTap: () async {
         await openFull(context, (_) => EpisodeScreen(meta: meta));
         _load();
       },
+    );
+  }
+}
+
+/// 오늘 할 일 3장 — 이어하기 · 바로 문장 · 복습 (Grok UXUI 시안 02).
+class _TodayTasks extends StatelessWidget {
+  const _TodayTasks();
+
+  @override
+  Widget build(BuildContext context) {
+    final items = <(IconData, Color, String, String, WidgetBuilder, bool)>[
+      (Icons.menu_book_rounded, AppColors.kluayMai, tr('이어하기'), tr('회화'), (_) => const ConversationScreen(), false),
+      (Icons.chat_bubble_rounded, AppColors.sunset, tr('바로 문장'), tr('자주 쓰는 말'), (_) => const QuickPhrasesScreen(), false),
+      (Icons.sync_rounded, AppColors.morakot, tr('복습'), tr('최근 학습'), (_) => const FlashcardScreen(), true),
+    ];
+    return Row(
+      children: [
+        for (var i = 0; i < items.length; i++) ...[
+          if (i > 0) const SizedBox(width: 10),
+          Expanded(
+            child: InkWell(
+              borderRadius: BorderRadius.circular(16),
+              onTap: () => items[i].$6 ? openFull(context, items[i].$5) : openPane(context, items[i].$5),
+              child: Container(
+                padding: const EdgeInsets.fromLTRB(8, 14, 8, 12),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: AppColors.thong),
+                  boxShadow: const [BoxShadow(color: Color(0x1A5A3E28), blurRadius: 5, offset: Offset(0, 2), spreadRadius: -1)],
+                ),
+                child: Column(children: [
+                  CircleAvatar(radius: 22, backgroundColor: items[i].$2, child: Icon(items[i].$1, color: Colors.white, size: 22)),
+                  const SizedBox(height: 8),
+                  Text(items[i].$3, maxLines: 1, overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(fontSize: 13.5, fontWeight: FontWeight.w700, color: AppColors.khram)),
+                  Text(items[i].$4, maxLines: 1, overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(fontSize: 11, color: AppColors.khramLight)),
+                ]),
+              ),
+            ),
+          ),
+        ],
+      ],
     );
   }
 }

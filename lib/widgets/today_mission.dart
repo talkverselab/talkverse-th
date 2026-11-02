@@ -11,6 +11,8 @@ class TodayMissionCard extends StatelessWidget {
   final int progress;
   final int total;
   final VoidCallback? onTap;
+  /// 카드 아래 큰 시작 버튼 문구(없으면 버튼 없음) — Grok UXUI 시안 02.
+  final String? cta;
 
   const TodayMissionCard({
     super.key,
@@ -20,6 +22,7 @@ class TodayMissionCard extends StatelessWidget {
     required this.progress,
     required this.total,
     this.onTap,
+    this.cta,
   });
 
   @override
@@ -123,6 +126,21 @@ class TodayMissionCard extends StatelessWidget {
                       ],
                     ),
                   ),
+                  if (cta != null) ...[
+                    const SizedBox(height: 14),
+                    SizedBox(
+                      width: double.infinity,
+                      child: FilledButton.icon(
+                        style: FilledButton.styleFrom(
+                          backgroundColor: AppColors.kluayMaiDeep,
+                          minimumSize: const Size.fromHeight(46),
+                        ),
+                        onPressed: onTap,
+                        icon: const Icon(Icons.star_rounded, size: 20),
+                        label: Text(cta!, style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
+                      ),
+                    ),
+                  ],
                 ],
               ),
             ),

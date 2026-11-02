@@ -6,6 +6,7 @@ import 'data/db/seed_loader.dart';
 import 'data/entitlement.dart';
 import 'screens/main_screen.dart';
 import 'services/ko_reading.dart';
+import 'services/learner_prefs.dart';
 import 'core/l10n.dart';
 import 'services/auth_service.dart';
 import 'services/content_store.dart';
@@ -21,6 +22,7 @@ void main() async {
   await SeedLoader(appDb).seedIfNeeded();
   await KoReadingPrefs.load();
   await AppLangPrefs.load();
+  await LearnerPrefs.load();
   await ContentStore.instance.init();
   await DevNotes.instance.load();
   await AuthService.instance.init(); // 실패해도 앱은 뜬다(오프라인)
