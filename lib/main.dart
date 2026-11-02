@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'core/theme.dart';
 import 'data/db/app_database.dart';
 import 'data/db/seed_loader.dart';
+import 'data/entitlement.dart';
 import 'screens/main_screen.dart';
 import 'services/ko_reading.dart';
 import 'core/l10n.dart';
@@ -23,6 +24,7 @@ void main() async {
   await ContentStore.instance.init();
   await DevNotes.instance.load();
   await AuthService.instance.init(); // 실패해도 앱은 뜬다(오프라인)
+  Entitlement.configure(); // 스토어 평생 이용권(기다리지 않음) — 한자 앱과 같은 공용 클라이언트
   UpdateService.instance.loadCurrent();
   runApp(const ThaiUniverseApp());
   // 콘텐츠만 바뀐 수정은 APK 없이 받는다 — 받으면 화면들이 revision 을 듣고 다시 읽는다.

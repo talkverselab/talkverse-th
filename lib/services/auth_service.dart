@@ -2,9 +2,10 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 
-import '../core/backend.dart';
 import '../data/account.dart';
+import '../data/entitlement.dart';
 import '../data/learn_api.dart';
+import '../data/purchase.dart';
 import 'course_service.dart';
 
 /// 로그인 · 프로필 · 이용권 · 코스 동기화 — 화면은 여기만 본다.
@@ -31,6 +32,7 @@ class AuthService {
     if (_ready) return;
     Account.entitlements.addListener(_syncAccess);
     Account.user.addListener(_syncAccess);
+    Purchase.owned.addListener(_syncAccess);
     try {
       await Account.load();
     } catch (e) {
@@ -47,7 +49,8 @@ class AuthService {
   }
 
   void _syncAccess() {
-    hasAccess.value = Account.signedIn ? Account.has(Backend.appLang) : null;
+    // 이용권 = 계정 이용권 OR 이 기기 스토어 구매. 로그인 안 했고 산 것도 없으면 null(모름).
+    hasAccess.value = Entitlement.premium ? true : (Account.signedIn ? false : null);
   }
 
   /// 서버에 설정된 로그인 수단(apple·google·kakao·naver 순). 실패하면 플랫폼 기본값.

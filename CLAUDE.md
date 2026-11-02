@@ -126,7 +126,7 @@ adb -s R3CY20HDN2K install --user 0 -r <apk>
 ## 8. 계정 · 이용권 · 학습 동기화 (Talkverse ID) — 2026-11-02
 
 - **Supabase 는 쓰지 않는다**(2026-11-02 제거). 계정은 언어앱·한자 앱·talkverse.uk 공용 **Talkverse ID** — `https://auth.talkverse.uk`(Worker `talkverse-auth`, D1 `talkverse-auth`, 담당 talkverse.uk 세션; 설계 talkverse-uk `docs/talkverse-id/README.md`).
-- 클라이언트 `lib/data/account.dart`(한자 앱 공용판, `clientId = 'th'`, 딥링크 `talkverse.th://auth`) · `lib/data/purchase.dart`(스토어 결제, 아직 configure 안 함). 화면은 `lib/services/auth_service.dart` 만 본다. 로그인: 브라우저 PKCE(flutter_web_auth_2, AndroidManifest `CallbackActivity`) + iOS Apple 네이티브(`ios/Runner/Runner.entitlements`). 계정 삭제 버튼 있음(스토어 심사).
+- 클라이언트 `lib/data/account.dart`(한자 앱 공용판, `clientId = 'th'`, 딥링크 `talkverse.th://auth`) · `lib/data/purchase.dart`(스토어 결제) · `lib/data/entitlement.dart`(이용권 = 계정 `th` OR 스토어 구매, 상품 iOS `com.talkverse.thaiUniverse.lifetime` / Android `lang_th`, `main.dart` 에서 configure) · 화면 `login_screen.dart`(Google·Naver·Kakao·Apple + 심사용 이메일)·`paywall_screen.dart`(평생 이용권 시트)·`account_screen.dart`. 가이드 `~/talkverse/TALKVERSE_ID_APP_GUIDE.md`, 심사 문안 `docs/store/review_notes.md`. **아직 잠근 콘텐츠 없음**(무료/유료 구간 미정). 화면은 `lib/services/auth_service.dart` 만 본다. 로그인: 브라우저 PKCE(flutter_web_auth_2, AndroidManifest `CallbackActivity`) + iOS Apple 네이티브(`ios/Runner/Runner.entitlements`). 계정 삭제 버튼 있음(스토어 심사).
 - 이용권 = 토큰 응답 entitlements 에 `th`. 학습 동기화(코스 답·완료 회차)·개발자 메모 = 공용 학습 API `lib/data/learn_api.dart` → `/v1/th/course/answers|progress`·`/v1/th/dev-notes`(D1 `talkverse-db`).
 - 옛 Supabase 설계 `docs/accounts-billing-design.md` 는 참고용(폐기).
 
