@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../core/theme.dart';
 import '../services/emoji_service.dart';
+import '../widgets/word_art_thumb.dart';
 import '../services/known_words_store.dart';
 import '../services/ko_reading.dart';
 import '../services/root_service.dart';
@@ -353,7 +354,13 @@ class _WordTile extends StatelessWidget {
                     ),
                   ],
                 ),
-                Text(emoji, style: const TextStyle(fontSize: 30)),
+                // uk 단어 그림(점토 톤)이 있으면 그림, 없으면 이모지 — 2026-11-02
+                WordArtThumb(
+                  word: e.th,
+                  rank: e.rank,
+                  size: 48,
+                  fallback: Text(emoji, style: const TextStyle(fontSize: 30)),
+                ),
                 const SizedBox(height: 4),
                 Expanded(
                   child: Column(
