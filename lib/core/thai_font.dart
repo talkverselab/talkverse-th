@@ -16,16 +16,15 @@ class ThaiFontPrefs {
   ThaiFontPrefs._();
   static const _k = 'thai_font_v1';
 
+  /// Grok 추천(2026-11-02, 느낌이 서로 크게 다르면서 많이 쓰이는 3종) + 기기 기본.
   static const options = <ThaiFont>[
+    ThaiFont('sarabun', 'Sarabun', '사라분', '고리 있는 표준형 — 교과서·공문서 느낌, 글자 모양 익히기 좋아요'),
+    ThaiFont('kanit', 'Kanit', '깐잇', '고리 없는 현대형 — 간판·광고·SNS 느낌'),
+    ThaiFont('baijamjuree', 'BaiJamjuree', '바이짬쭈리', '부드러운 손글씨 느낌 — 분위기 전환용'),
     ThaiFont('system', null, '기기 기본', '폰에 들어 있는 태국어 글꼴'),
-    ThaiFont('looped', 'NotoSansThaiLooped', '고리형 표준', '교과서·표지판처럼 고리가 있는 글꼴 — 처음 배울 때 추천'),
-    ThaiFont('sarabun', 'Sarabun', '사라분', '공문서·신문에 많이 쓰는 고리형'),
-    ThaiFont('serif', 'NotoSerifThai', '전통 세리프', '책 본문 같은 고전적인 느낌'),
-    ThaiFont('kanit', 'Kanit', '깐잇', '광고·간판에 흔한 고리 없는 현대형'),
-    ThaiFont('prompt', 'Prompt', '프롬', '둥글고 친근한 고리 없는 현대형'),
   ];
 
-  static final ValueNotifier<String> id = ValueNotifier('system');
+  static final ValueNotifier<String> id = ValueNotifier('sarabun'); // 기본 = 고리형(초보에게 유리, Grok 추천)
 
   static ThaiFont get current => options.firstWhere((o) => o.id == id.value, orElse: () => options.first);
   static String? get family => current.family;
@@ -33,6 +32,12 @@ class ThaiFontPrefs {
   static Future<void> load() async {
     final v = (await SharedPreferences.getInstance()).getString(_k);
     if (v != null && options.any((o) => o.id == v)) id.value = v;
+  }
+
+  /// 다음 글꼴로(회화 화면 앱바의 글꼴 버튼 — 바로 바꿔 보기).
+  static Future<void> next() {
+    final i = options.indexWhere((o) => o.id == id.value);
+    return set(options[(i + 1) % options.length].id);
   }
 
   static Future<void> set(String v) async {

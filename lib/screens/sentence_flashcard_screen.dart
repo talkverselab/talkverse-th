@@ -8,6 +8,7 @@ import '../main.dart';
 import '../services/chunk_index_service.dart';
 import '../services/ko_reading.dart';
 import '../services/tts_service.dart';
+import '../widgets/thai_font_action.dart';
 import '../widgets/selectable_thai.dart';
 import '../widgets/thai_decor.dart';
 import 'episode_screen.dart';
@@ -234,6 +235,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
         ),
         actions: [
           const KoReadingToggleAction(),
+          const ThaiFontAction(),
           if (meta == null)
             IconButton(
               tooltip: tr('새 랜덤 20문장'),

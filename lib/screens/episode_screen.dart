@@ -11,6 +11,7 @@ import '../main.dart';
 import '../services/chunk_index_service.dart';
 import '../services/ko_reading.dart';
 import '../services/tts_service.dart';
+import '../widgets/thai_font_action.dart';
 import '../widgets/selectable_thai.dart';
 import '../widgets/thai_decor.dart';
 import 'sentence_flashcard_screen.dart';
@@ -212,6 +213,7 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
             onPressed: _turns.isEmpty ? null : _togglePlayAll,
           ),
           const KoReadingToggleAction(),
+          const ThaiFontAction(),
           IconButton(
             tooltip: tr('이 에피소드 플래시카드'),
             icon: const Icon(Icons.style, color: AppColors.kluayMai),

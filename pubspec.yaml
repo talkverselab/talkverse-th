@@ -54,13 +54,7 @@ flutter:
   uses-material-design: true
 
   fonts:
-    # 태국어 글꼴 선택(lib/core/thai_font.dart) — 모두 OFL, 라이선스 assets/fonts/OFL_*.txt
-    - family: NotoSansThaiLooped
-      fonts:
-        - asset: assets/fonts/NotoSansThaiLooped.ttf
-    - family: NotoSerifThai
-      fonts:
-        - asset: assets/fonts/NotoSerifThai.ttf
+    # 태국어 글꼴 선택(lib/core/thai_font.dart) — Grok 추천 3종(2026-11-02), 모두 OFL(assets/fonts/OFL_*.txt)
     - family: Sarabun
       fonts:
         - asset: assets/fonts/Sarabun-Regular.ttf
@@ -71,10 +65,10 @@ flutter:
         - asset: assets/fonts/Kanit-Regular.ttf
         - asset: assets/fonts/Kanit-SemiBold.ttf
           weight: 600
-    - family: Prompt
+    - family: BaiJamjuree
       fonts:
-        - asset: assets/fonts/Prompt-Regular.ttf
-        - asset: assets/fonts/Prompt-SemiBold.ttf
+        - asset: assets/fonts/BaiJamjuree-Regular.ttf
+        - asset: assets/fonts/BaiJamjuree-SemiBold.ttf
           weight: 600
 
   assets:

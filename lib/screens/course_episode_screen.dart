@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/thai_font_action.dart';
 import '../core/l10n.dart';
 import '../core/platform.dart';
 import '../core/theme.dart';
@@ -64,6 +65,7 @@ class _CourseEpisodeScreenState extends State<CourseEpisodeScreen> {
         title: Text(s.title, overflow: TextOverflow.ellipsis),
         actions: [
           const KoReadingToggleAction(),
+          const ThaiFontAction(),
           IconButton(
             tooltip: seqOn ? tr('전체 재생 정지') : tr('전체 재생'),
             icon: Icon(seqOn ? Icons.stop_circle_outlined : Icons.play_circle_outline),
