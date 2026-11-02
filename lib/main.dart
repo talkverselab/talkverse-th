@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'core/theme.dart';
+import 'core/thai_font.dart';
 import 'data/db/app_database.dart';
 import 'data/db/seed_loader.dart';
 import 'data/entitlement.dart';
@@ -23,6 +24,7 @@ void main() async {
   await KoReadingPrefs.load();
   await AppLangPrefs.load();
   await LearnerPrefs.load();
+  await ThaiFontPrefs.load();
   await ContentStore.instance.init();
   await DevNotes.instance.load();
   await AuthService.instance.init(); // 실패해도 앱은 뜬다(오프라인)
@@ -42,13 +44,16 @@ class ThaiUniverseApp extends StatelessWidget {
     // 표시 언어가 바뀌면 key 가 바뀌어 앱 전체가 새로 그려진다 (홈으로 돌아감).
     return ValueListenableBuilder<AppLang>(
       valueListenable: AppLangPrefs.lang,
-      builder: (context, lang, _) => MaterialApp(
+      builder: (context, lang, _) => ValueListenableBuilder<String>(
+        // 태국어 글꼴이 바뀌면 테마만 바뀐다(화면 위치는 그대로)
+        valueListenable: ThaiFontPrefs.id,
+        builder: (context, _, _) => MaterialApp(
         key: ValueKey(lang),
         title: tr('태국어유니버스'),
         debugShowCheckedModeBanner: false,
         navigatorKey: DevNotes.instance.navigatorKey,
         navigatorObservers: [DevNotes.instance.observer],
-        theme: AppTheme.light(),
+        theme: AppTheme.light(fontFamily: ThaiFontPrefs.family),
         darkTheme: AppTheme.dark(),
         themeMode: ThemeMode.light,
         // 아이폰 Dynamic Type·갤럭시 글자 크기 설정이 커도 타일이 깨지지 않게 1.2배까지만
@@ -62,6 +67,7 @@ class ThaiUniverseApp extends StatelessWidget {
           );
         },
         home: const MainScreen(),
+      ),
       ),
     );
   }

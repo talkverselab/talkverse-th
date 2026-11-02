@@ -53,6 +53,30 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
+  fonts:
+    # 태국어 글꼴 선택(lib/core/thai_font.dart) — 모두 OFL, 라이선스 assets/fonts/OFL_*.txt
+    - family: NotoSansThaiLooped
+      fonts:
+        - asset: assets/fonts/NotoSansThaiLooped.ttf
+    - family: NotoSerifThai
+      fonts:
+        - asset: assets/fonts/NotoSerifThai.ttf
+    - family: Sarabun
+      fonts:
+        - asset: assets/fonts/Sarabun-Regular.ttf
+        - asset: assets/fonts/Sarabun-SemiBold.ttf
+          weight: 600
+    - family: Kanit
+      fonts:
+        - asset: assets/fonts/Kanit-Regular.ttf
+        - asset: assets/fonts/Kanit-SemiBold.ttf
+          weight: 600
+    - family: Prompt
+      fonts:
+        - asset: assets/fonts/Prompt-Regular.ttf
+        - asset: assets/fonts/Prompt-SemiBold.ttf
+          weight: 600
+
   assets:
     - assets/data/alphabet/
     - assets/data/tones/

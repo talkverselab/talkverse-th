@@ -13,6 +13,7 @@ import 'course_domain_screen.dart';
 import '../services/course_service.dart';
 import '../services/dev_notes.dart';
 import '../services/learner_prefs.dart';
+import '../core/thai_font.dart';
 import 'dev_notes_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -134,6 +135,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   await CourseService.instance.ensureLoaded();
                   if (!context.mounted || !CourseService.instance.hasAnswers) return;
                   await openPane(context, (_) => const CourseDomainScreen());
+                  if (mounted) setState(() {});
+                }),
+            _SettingItem(
+                icon: Icons.font_download_outlined,
+                title: tr('태국어 글꼴'),
+                subtitle: tr(ThaiFontPrefs.current.label),
+                onTap: () async {
+                  await _pickThaiFont(context);
                   if (mounted) setState(() {});
                 }),
             _SettingItem(
@@ -321,3 +330,54 @@ Future<void> _editLearner(BuildContext context) async {
     await LearnerPrefs.setGender(female ? 'female' : 'male');
   }
 }
+
+/// 태국어 글꼴 고르기 — 글꼴마다 같은 문장을 그 글꼴로 보여 준다(고리형·고리 없는 현대형 비교).
+Future<void> _pickThaiFont(BuildContext context) => showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      showDragHandle: true,
+      backgroundColor: AppColors.cream,
+      builder: (c) => SafeArea(
+        top: false,
+        child: ValueListenableBuilder<String>(
+          valueListenable: ThaiFontPrefs.id,
+          builder: (c, cur, _) => ListView(
+            shrinkWrap: true,
+            padding: EdgeInsets.fromLTRB(16, 0, 16, 16 + bottomInset(c)),
+            children: [
+              Text(tr('태국어 글꼴'), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w700, color: AppColors.khram)),
+              const SizedBox(height: 4),
+              Text(tr('같은 글자도 글꼴에 따라 느낌이 많이 달라요. 처음엔 고리형을, 간판·광고에 익숙해지려면 현대형을 써 보세요.'),
+                  style: const TextStyle(fontSize: 12.5, color: AppColors.khramLight, height: 1.4)),
+              const SizedBox(height: 12),
+              for (final f in ThaiFontPrefs.options)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(14),
+                    onTap: () => ThaiFontPrefs.set(f.id),
+                    child: Container(
+                      padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(14),
+                        border: Border.all(color: cur == f.id ? AppColors.kluayMai : AppColors.thong, width: cur == f.id ? 2 : 1),
+                      ),
+                      child: Row(children: [
+                        Expanded(
+                          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                            Text('สวัสดีครับ ภาษาไทย กขค',
+                                style: TextStyle(fontFamily: f.family, fontSize: 24, color: AppColors.khram, height: 1.5)),
+                            Text('${tr(f.label)} · ${tr(f.desc)}', style: const TextStyle(fontSize: 12, color: AppColors.khramLight)),
+                          ]),
+                        ),
+                        if (cur == f.id) const Icon(Icons.check_circle, color: AppColors.kluayMai),
+                      ]),
+                    ),
+                  ),
+                ),
+            ],
+          ),
+        ),
+      ),
+    );

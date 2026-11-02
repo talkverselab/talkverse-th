@@ -82,7 +82,7 @@ class AppTheme {
     'Malgun Gothic',
   ];
 
-  static ThemeData light() {
+  static ThemeData light({String? fontFamily}) {
     final base = ThemeData(
       useMaterial3: true,
       colorScheme: ColorScheme(
@@ -109,6 +109,7 @@ class AppTheme {
         outlineVariant: AppColors.thong,
       ),
       scaffoldBackgroundColor: AppColors.cream,
+      fontFamily: fontFamily, // 태국어 글꼴 선택(ThaiFontPrefs) — null 이면 기기 기본
       fontFamilyFallback: fontFallback,
     );
 
