@@ -95,7 +95,7 @@ class _MainScreenState extends State<MainScreen> {
                   onDestinationSelected: (i) => setState(() => _index = i),
                   labelType: w >= 900 ? NavigationRailLabelType.all : NavigationRailLabelType.selected,
                   backgroundColor: AppColors.creamDeep,
-                  indicatorColor: const Color(0xFFEFEEFE),
+                  indicatorColor: const Color(0xFFF4E4C8),
                   selectedIconTheme: const IconThemeData(color: AppColors.kluayMai),
                   unselectedIconTheme: const IconThemeData(color: AppColors.thongDeep),
                   selectedLabelTextStyle: const TextStyle(color: AppColors.kluayMai, fontSize: 11, fontWeight: FontWeight.w600),
@@ -376,7 +376,7 @@ class _QuickMenuRow extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 14),
               alignment: Alignment.center,
               decoration: BoxDecoration(
-                color: primary ? AppColors.kluayMai : AppColors.cream,
+                color: primary ? AppColors.kluayMaiDeep : Colors.white,
                 border: Border.all(
                   color: primary
                       ? AppColors.kluayMaiDeep
@@ -407,73 +407,73 @@ class _MenuGrid extends StatelessWidget {
           label: tr('회화'),
           sub: 'Dialogue',
           emblem: 'คุย',
-          color: AppColors.kluayMai,
+          color: AppColors.badges[0],
           builder: (_) => const ConversationScreen()),
       _MenuItem(
           label: tr('문장 말하기'),
           sub: tr('한글 보고 태국어로 · 7초/4초/2초'),
           emblem: 'พูด',
-          color: const Color(0xFFD84315),
+          color: AppColors.badges[1],
           builder: (_) => const SpeakingPracticeScreen()),
       _MenuItem(
           label: tr('문자 44'),
           sub: tr('자음 · 3분류 · 모음'),
           emblem: 'ก',
-          color: const Color(0xFFC62828),
+          color: AppColors.badges[2],
           builder: (_) => const AlphabetScreen()),
       _MenuItem(
           label: tr('성조 5'),
           sub: 'วรรณยุกต์',
           emblem: 'เสียง',
-          color: const Color(0xFF1565C0),
+          color: AppColors.badges[3],
           builder: (_) => const TonesScreen()),
       _MenuItem(
           label: tr('문법'),
           sub: tr('초급 코스 16과 · เป็น · ได้ · ขึ้น/ลง'),
           emblem: 'ได้',
-          color: const Color(0xFFAD1457),
+          color: AppColors.badges[4],
           builder: (_) => const GrammarHubScreen()),
       _MenuItem(
           label: tr('단어장'),
           sub: tr('주제별 · 중요 단어(절벽 구간)'),
           emblem: 'ศัพท์',
-          color: AppColors.kluayMaiDeep,
+          color: AppColors.badges[5],
           builder: (_) => const VocabHubScreen()),
       _MenuItem(
           label: 'Manual for English',
           sub: tr('RTGS vs ours · 장음 밑줄'),
           emblem: 'ABC',
-          color: const Color(0xFF3949AB),
+          color: AppColors.badges[6],
           builder: (_) => const EnglishManualScreen()),
       _MenuItem(
           label: tr('영어 유래 단어'),
           sub: tr('음차 규칙 8줄기 · 200'),
           emblem: 'ทับ',
-          color: const Color(0xFF00897B),
+          color: AppColors.badges[7],
           builder: (_) => const LoanwordScreen()),
       _MenuItem(
           label: tr('루트 단어'),
           sub: 'น้ำ → น้ำแข็ง',
           emblem: 'ราก',
-          color: AppColors.morakot,
+          color: AppColors.badges[8],
           builder: (_) => const ThaiRootsScreen()),
       _MenuItem(
           label: tr('문자 퀴즈'),
           sub: tr('4지선다'),
           emblem: '?',
-          color: const Color(0xFF6A1B9A),
+          color: AppColors.badges[9],
           builder: (_) => const ScriptQuizScreen()),
       _MenuItem(
           label: tr('키보드연습'),
           sub: 'Kedmanee',
           emblem: 'พิมพ์',
-          color: const Color(0xFF00897B),
+          color: AppColors.badges[10],
           builder: (_) => const KeyboardPracticeScreen()),
       _MenuItem(
           label: tr('복습'),
           sub: 'Flashcard',
           emblem: 'ทวน',
-          color: AppColors.thongDeep,
+          color: AppColors.badges[11],
           builder: (_) => const FlashcardScreen()),
     ];
 
@@ -522,7 +522,7 @@ class _MenuTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(14),
           border: Border.all(color: AppColors.thong),
           boxShadow: const [
-            BoxShadow(color: Color(0x1A32325D), blurRadius: 5, offset: Offset(0, 2), spreadRadius: -1),
+            BoxShadow(color: Color(0x1A5A3E28), blurRadius: 5, offset: Offset(0, 2), spreadRadius: -1),
             BoxShadow(color: Color(0x14000000), blurRadius: 3, offset: Offset(0, 1), spreadRadius: -1),
           ],
         ),

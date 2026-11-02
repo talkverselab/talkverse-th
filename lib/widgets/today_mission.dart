@@ -31,11 +31,11 @@ class TodayMissionCard extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(18),
           gradient: const LinearGradient(
-            colors: [AppColors.kluayMaiDeep, AppColors.kluayMai],
+            colors: AppColors.todayCard,
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
-          border: Border.all(color: Colors.white.withValues(alpha: 0.25), width: 1),
+          border: Border.all(color: AppColors.thongBright.withValues(alpha: 0.6), width: 1),
         ),
         child: Stack(
           children: [
@@ -43,7 +43,7 @@ class TodayMissionCard extends StatelessWidget {
             const Positioned(
               right: 0,
               bottom: 0,
-              child: ChediSilhouette(size: 96),
+              child: ChediSilhouette(size: 96, color: Color(0x40A85A3A)),
             ),
             Padding(
               padding: const EdgeInsets.fromLTRB(18, 16, 18, 16),
@@ -56,9 +56,8 @@ class TodayMissionCard extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(
                             horizontal: 8, vertical: 3),
                         decoration: BoxDecoration(
-                          color: AppColors.thongBright,
-                          border:
-                              Border.all(color: AppColors.thongDeep, width: 0.6),
+                          color: Colors.white.withValues(alpha: 0.7),
+                          borderRadius: BorderRadius.circular(6),
                         ),
                         child: Text(
                           level,
@@ -79,8 +78,8 @@ class TodayMissionCard extends StatelessWidget {
                     lessonTitle,
                     style: const TextStyle(
                       fontSize: 22,
-                      fontWeight: FontWeight.w900,
-                      color: AppColors.cream,
+                      fontWeight: FontWeight.w800,
+                      color: AppColors.khram,
                       height: 1.1,
                     ),
                   ),
@@ -89,7 +88,7 @@ class TodayMissionCard extends StatelessWidget {
                     lessonSubtitle,
                     style: TextStyle(
                       fontSize: 13,
-                      color: AppColors.cream.withValues(alpha: 0.85),
+                      color: AppColors.khramLight,
                       letterSpacing: 0.5,
                     ),
                   ),
@@ -99,7 +98,7 @@ class TodayMissionCard extends StatelessWidget {
                     style: const TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w700,
-                      color: AppColors.thongBright,
+                      color: AppColors.kluayMaiDeep,
                       letterSpacing: 1.5,
                     ),
                   ),
@@ -110,16 +109,15 @@ class TodayMissionCard extends StatelessWidget {
                         Container(
                           height: 8,
                           decoration: BoxDecoration(
-                            color: AppColors.cream.withValues(alpha: 0.25),
-                            border:
-                                Border.all(color: AppColors.thong, width: 0.6),
+                            color: Colors.white.withValues(alpha: 0.6),
+                            borderRadius: BorderRadius.circular(4),
                           ),
                         ),
                         FractionallySizedBox(
                           widthFactor: total > 0 ? progress / total : 0,
                           child: Container(
                             height: 8,
-                            color: AppColors.thongBright,
+                            color: AppColors.kluayMaiDeep,
                           ),
                         ),
                       ],

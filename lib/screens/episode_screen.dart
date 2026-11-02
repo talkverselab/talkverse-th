@@ -327,8 +327,8 @@ class _EpisodeBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isA = turn.speaker == 'A';
-    final bubbleColor = isA ? AppColors.kluayMai : AppColors.thong;
-    final bubbleText = isA ? AppColors.cream : AppColors.khram;
+    final bubbleColor = isA ? AppColors.bubbleA : AppColors.bubbleB;
+    final bubbleText = isA ? AppColors.bubbleAText : AppColors.bubbleBText;
     final th = turn.th;
 
     final bubble = GestureDetector(
@@ -442,12 +442,12 @@ class _EpisodeBubble extends StatelessWidget {
         Container(
           width: 30,
           height: 30,
-          decoration: BoxDecoration(color: bubbleColor, shape: BoxShape.circle),
+          decoration: BoxDecoration(color: isA ? AppColors.kluayMaiDeep : AppColors.sunsetDeep, shape: BoxShape.circle),
           alignment: Alignment.center,
           child: Text(
             isA ? 'M' : 'ฟ',
             style: const TextStyle(
-              color: AppColors.cream,
+              color: Colors.white,
               fontWeight: FontWeight.w900,
               fontSize: 12,
               fontFamilyFallback: AppTheme.fontFallback,
