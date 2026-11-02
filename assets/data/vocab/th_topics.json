@@ -1,0 +1,103 @@
+{
+ "meta": {
+  "note": "주제별 단어 — entries[].topic/part 로 연결"
+ },
+ "topics": [
+  {
+   "id": "basic",
+   "name": "기본회화",
+   "emoji": "🙏",
+   "count": 0,
+   "parts": []
+  },
+  {
+   "id": "food",
+   "name": "맛집·음식",
+   "emoji": "🍜",
+   "count": 0,
+   "parts": []
+  },
+  {
+   "id": "shop",
+   "name": "쇼핑",
+   "emoji": "🛍️",
+   "count": 0,
+   "parts": []
+  },
+  {
+   "id": "beauty",
+   "name": "뷰티·마사지",
+   "emoji": "💆",
+   "count": 0,
+   "parts": []
+  },
+  {
+   "id": "tour",
+   "name": "관광",
+   "emoji": "🏛️",
+   "count": 0,
+   "parts": []
+  },
+  {
+   "id": "enter",
+   "name": "엔터테인먼트",
+   "emoji": "🎤",
+   "count": 0,
+   "parts": []
+  },
+  {
+   "id": "hotel",
+   "name": "호텔",
+   "emoji": "🏨",
+   "count": 0,
+   "parts": []
+  },
+  {
+   "id": "transport",
+   "name": "교통·공항",
+   "emoji": "✈️",
+   "count": 0,
+   "parts": []
+  },
+  {
+   "id": "daily",
+   "name": "생활 편의",
+   "emoji": "📮",
+   "count": 0,
+   "parts": []
+  },
+  {
+   "id": "health",
+   "name": "긴급·건강",
+   "emoji": "🚨",
+   "count": 0,
+   "parts": []
+  },
+  {
+   "id": "basicwords",
+   "name": "기본 단어",
+   "emoji": "🔢",
+   "count": 0,
+   "parts": []
+  },
+  {
+   "id": "life",
+   "name": "생활·일상",
+   "emoji": "🏠",
+   "count": 0,
+   "parts": []
+  },
+  {
+   "id": "core",
+   "name": "회화 핵심어휘",
+   "emoji": "💬",
+   "count": 577,
+   "parts": [
+    {
+     "name": "빈도 단어",
+     "count": 577
+    }
+   ]
+  }
+ ]
+}

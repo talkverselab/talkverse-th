@@ -1,0 +1,422 @@
+[
+ {
+  "th": "ที",
+  "derived": 14,
+  "reading": "티",
+  "ko": "번, 차례, 때",
+  "inTop1000": true
+ },
+ {
+  "th": "เอ",
+  "derived": 13,
+  "reading": "에",
+  "ko": "에이(영문자 A 음역)",
+  "inTop1000": true
+ },
+ {
+  "th": "ดี",
+  "derived": 13,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "เด",
+  "derived": 11,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "เจ",
+  "derived": 10,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "แล้",
+  "derived": 10,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ใจ",
+  "derived": 9,
+  "reading": "짜이",
+  "ko": "마음, 심장",
+  "inTop1000": true
+ },
+ {
+  "th": "อา",
+  "derived": 9,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "เร",
+  "derived": 9,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "เห",
+  "derived": 9,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ย่า",
+  "derived": 7,
+  "reading": "야",
+  "ko": "친할머니",
+  "inTop1000": true
+ },
+ {
+  "th": "เก",
+  "derived": 7,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "อะ",
+  "derived": 6,
+  "reading": "아",
+  "ko": "~야, ~네(구어 어말조사, นะ 축약)",
+  "inTop1000": true
+ },
+ {
+  "th": "กัน",
+  "derived": 6,
+  "reading": "깐",
+  "ko": "서로, 함께",
+  "inTop1000": true
+ },
+ {
+  "th": "อย่า",
+  "derived": 6,
+  "reading": "야",
+  "ko": "~하지 마라",
+  "inTop1000": true
+ },
+ {
+  "th": "โอ",
+  "derived": 6,
+  "reading": "오",
+  "ko": "오(영문자 O 음역)",
+  "inTop1000": true
+ },
+ {
+  "th": "นา",
+  "derived": 6,
+  "reading": "나",
+  "ko": "논, ~잖아(어말조사 นะ 변형)",
+  "inTop1000": true
+ },
+ {
+  "th": "คุณ",
+  "derived": 6,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "หา",
+  "derived": 6,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "เม",
+  "derived": 6,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ละ",
+  "derived": 6,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ยา",
+  "derived": 6,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "นะ",
+  "derived": 5,
+  "reading": "나",
+  "ko": "~요(부드러운 어조사)",
+  "inTop1000": true
+ },
+ {
+  "th": "อย่าง",
+  "derived": 5,
+  "reading": "양",
+  "ko": "~처럼, 종류, ~하게(부사화)",
+  "inTop1000": true
+ },
+ {
+  "th": "จ้า",
+  "derived": 5,
+  "reading": "짜",
+  "ko": "네~, 응~(다정한 대답, 어말조사)",
+  "inTop1000": true
+ },
+ {
+  "th": "น้า",
+  "derived": 5,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "สิ",
+  "derived": 4,
+  "reading": "씨",
+  "ko": "~해(권유, 강조 어말조사)",
+  "inTop1000": true
+ },
+ {
+  "th": "ยู",
+  "derived": 4,
+  "reading": "유",
+  "ko": "너(영어 you 차용)",
+  "inTop1000": true
+ },
+ {
+  "th": "ดิ",
+  "derived": 4,
+  "reading": "디",
+  "ko": "~해(권유 어말조사, สิ 구어)",
+  "inTop1000": true
+ },
+ {
+  "th": "หน้า",
+  "derived": 4,
+  "reading": "나",
+  "ko": "얼굴, 앞, 페이지",
+  "inTop1000": true
+ },
+ {
+  "th": "แหละ",
+  "derived": 4,
+  "reading": "래",
+  "ko": "바로 ~야(강조 어말조사)",
+  "inTop1000": true
+ },
+ {
+  "th": "เจ้า",
+  "derived": 4,
+  "reading": "짜오",
+  "ko": "너(사극, 친밀), 주인, 왕족",
+  "inTop1000": true
+ },
+ {
+  "th": "ล่า",
+  "derived": 4,
+  "reading": "라",
+  "ko": "사냥하다, 뒤쫓다",
+  "inTop1000": true
+ },
+ {
+  "th": "สน",
+  "derived": 4,
+  "reading": "손",
+  "ko": "관심 있다(สนใจ 축약), 소나무",
+  "inTop1000": true
+ },
+ {
+  "th": "นี่",
+  "derived": 4,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "รอ",
+  "derived": 4,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "รับ",
+  "derived": 4,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ตา",
+  "derived": 4,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "เค",
+  "derived": 4,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ไง",
+  "derived": 3,
+  "reading": "응아이",
+  "ko": "어때?, 어떻게(อย่างไร 구어), ~잖아(어말)",
+  "inTop1000": true
+ },
+ {
+  "th": "เรื่อง",
+  "derived": 3,
+  "reading": "르앙",
+  "ko": "이야기, 사안, ~에 관하여",
+  "inTop1000": true
+ },
+ {
+  "th": "แน่",
+  "derived": 3,
+  "reading": "내",
+  "ko": "확실히, 분명히",
+  "inTop1000": true
+ },
+ {
+  "th": "โห",
+  "derived": 3,
+  "reading": "호",
+  "ko": "우와, 헐(놀람)",
+  "inTop1000": true
+ },
+ {
+  "th": "ตอน",
+  "derived": 3,
+  "reading": "떤",
+  "ko": "때, 부분, 회(에피소드)",
+  "inTop1000": true
+ },
+ {
+  "th": "ข้า",
+  "derived": 3,
+  "reading": "카",
+  "ko": "나(고어, 사극 1인칭), 종",
+  "inTop1000": true
+ },
+ {
+  "th": "กา",
+  "derived": 3,
+  "reading": "까",
+  "ko": "까마귀, 주전자, 표시하다(체크)",
+  "inTop1000": true
+ },
+ {
+  "th": "จอ",
+  "derived": 3,
+  "reading": "쩌",
+  "ko": "화면, 스크린",
+  "inTop1000": true
+ },
+ {
+  "th": "รู้",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "มาก",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ออก",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ขึ้น",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "บอ",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ตัว",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ยาก",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "มือ",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ริ",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ติ",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "แค",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "ลิ",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ },
+ {
+  "th": "เย",
+  "derived": 3,
+  "reading": "",
+  "ko": "",
+  "inTop1000": true
+ }
+]

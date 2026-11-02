@@ -137,7 +137,7 @@ void main() {
     final raw = await rootBundle.loadString('assets/data/vocab/th_tones.json');
     final data = json.decode(raw) as Map<String, dynamic>;
     final entries = data['entries'] as Map<String, dynamic>;
-    expect(entries.length, greaterThan(5000));
+    expect(entries.length, greaterThan(3000)); // 2026-11-02 책 출처 단어 삭제 뒤 다시 계산
     final kai = entries['ไก่'] as Map<String, dynamic>;
     expect((kai['syl'] as List).first['t'], 'low');
     expect(kai['ko'], '까이ˋ');
