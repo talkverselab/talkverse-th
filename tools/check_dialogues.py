@@ -72,6 +72,8 @@ def check_file(path, exprs, rank, cum_vocab, fix_rd, forbidden):
         E(f'twist 턴 {ep["twist"]} 없음')
     if not ep.get('twist'):
         E('반전(twist) 없음')
+    if ep.get('twist_type') not in TWIST_TYPES:
+        E(f'twist_type 없음/잘못됨: {ep.get("twist_type")} (허용 {"·".join(TWIST_TYPES)})')
     text_all = ' '.join(t.get('th', '') for t in turns)
     hit = [e for e in exprs if e.replace('…', '') and (e in text_all if '…' not in e else all(p in text_all for p in e.split('…') if p.strip()))]
     if len(set(hit)) < 2:
@@ -120,6 +122,11 @@ def check_file(path, exprs, rank, cum_vocab, fix_rd, forbidden):
     return errs, warns
 
 
+# 반전 종류(모든 언어앱 공통, 사용자 지시 2026-11-03 한국어앱 경유): chaos 30% 이상 목표
+TWIST_TYPES = ('chaos', 'slip', 'reveal', 'emotion', 'ignore')
+CHAOS_MIN = 0.30
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     fix = 'force' if '--fix-rd=force' in sys.argv else ('--fix-rd' in sys.argv)
@@ -137,6 +144,14 @@ def main():
             print('  ERR ', e)
         print(f'{f.relative_to(ROOT)}: 오류 {len(errs)} 경고 {len(warns)}')
         total_e += len(errs)
+    # 반전 비율(묶음 전체)
+    from collections import Counter
+    tt = Counter(json.load(open(f, encoding='utf-8')).get('twist_type', '?') for f in files)
+    n = sum(tt.values())
+    if n:
+        print('반전 비율:', ' · '.join(f'{k} {v}({v * 100 // n}%)' for k, v in tt.most_common()))
+        if n >= 5 and tt.get('chaos', 0) / n < CHAOS_MIN:
+            print(f'  warn 카오스 {tt.get("chaos", 0) * 100 // n}% < {int(CHAOS_MIN * 100)}% — 끝 2~4턴을 카오스로 고칠 편을 고를 것')
     if '--dump-vocab' in sys.argv:
         print('누적 어휘', len(cum), sorted(cum)[:50])
     return 1 if total_e else 0

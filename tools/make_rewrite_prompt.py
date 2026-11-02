@@ -23,7 +23,7 @@ def main():
         roles = 'A = 학습자(외국인, 이름 비고정 {name}, 남성 기준), ' + (f"B = {who.get('B')}" if who.get('B') and who.get('B') != '{name}' else ROLE.get(ep.get('kind'), 'B = 태국 사람'))
         lines = '\n'.join(f"{t['num']} {t['speaker']}: {t['th']} / {t['ko']}" for t in ep['turns'])
         text = tpl.format(code=ep['id'], roles=roles, scene=ep.get('scene', ''), register=REG.get(ep.get('register'), ep.get('register', '')),
-                          n=len(ep['turns']), targets='·'.join(ep.get('expressions', [])[:5]), twist=ep.get('twist', ''), lines=lines)
+                          n=len(ep['turns']), targets='·'.join(ep.get('expressions', [])[:5]), twist=ep.get('twist', ''), twist_type=ep.get('twist_type', 'chaos'), lines=lines)
         p = OUT / f"{ep['id']}_grok_rewrite_prompt.md"
         p.write_text(text, encoding='utf-8')
         print(p)
