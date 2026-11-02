@@ -1,0 +1,5 @@
+file,rank,word,field,current,suggested,reason
+th.csv,29,ของ,reading,ka-ong,khong,RTGS 로마자 표기가 올바르지 않습니다.
+th.csv,40,ต้อง,reading,dta-ông,tong,RTGS 로마자 표기가 올바르지 않습니다.
+th.csv,85,ขอ,reading,kǎw,kho,RTGS 로마자 표기가 올바르지 않습니다.
+th_food.csv,-,-,-,-,-,문제 없음

@@ -1,0 +1,13 @@
+file,rank,word,field,current,suggested,reason
+th.csv,5,ก็,pos,conj,adv,부사로 분류하는 것이 더 정확합니다.
+th.csv,14,ว่า,pos,conj,verb,인용이나 명사절을 이끄는 동사 기능이 주를 이룹니다.
+th.csv,31,แต่,pos,conj,prep,전치사 또는 접속사이나 문법적으로 대등접속사보다는 접속사로 분류되기도 하나 명확히 확인이 필요합니다.
+th.csv,37,กับ,pos,prep,전치사보다는 접속사 또는 전치사 겸용으로 쓰입니다.
+th.csv,45,ถ้า,pos,conj,prep,조건을 나타내는 접속사입니다.
+th.csv,100,อย่าง,pos,prep,전치사보다는 명사 또는 부사 유도어로 쓰입니다.
+th.csv,101,กว่า,pos,prep,비교를 나타내는 전치사보다는 부사 또는 접속사 성격이 강합니다.
+th.csv,129,กะ,pos,prep,conj,전치사보다는 접속사 또는 회화체 연결어로 보는 것이 적절합니다.
+th.csv,160,การ,pos,prefix,noun,접두사보다는 명사 형성 접사가 붙는 명사 또는 접사로 분류되나 명사로 보는 것이 더 타당합니다.
+th.csv,201,น่า,pos,prefix,aux,접두사보다는 조동사 또는 보조사 성격을 가집니다.
+th.csv,233,เพื่อ,pos,prep,conj,목적을 나타내는 접속사 또는 전치사 기능을 합니다.
+th.csv,349,ต้น,en,tree (classifier) / beginning,tree,단어의 핵심 의미인 대표 영어 글스는 하나만 적는 것이 좋습니다.

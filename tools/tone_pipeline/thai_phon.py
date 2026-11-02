@@ -133,10 +133,15 @@ def analyze(syl):
         out.init, out.cls = 'y', 'mid'
     elif c1 == 'อ' and c2 == 'ร':
         out.init, out.cls, out.pre = 'r', 'mid', True
+    elif c2 == 'ร' and c1 in 'จทสศ' and body:
+        # ร 묵음 결합: จริง=jing, ทราบ=sâap, สร้าง=sâang, เสร็จ=sèt (2026-11-02)
+        out.init = 'j' if c1 == 'จ' else 's'
+        out.cls = 'mid' if c1 == 'จ' else ('low' if c1 == 'ท' else 'high')
     elif c2 and c1 + c2 in CLUSTERS and not (c2 == 'ว' and len(body) == 1 and body in CONS):
         out.init = INIT_PHON[c1] + INIT_PHON[c2]
         out.cls = 'high' if c1 in HIGH else ('mid' if c1 in MID else 'low')
-    elif c2 and c1 + c2 not in CLUSTERS and not (prefix and c2 in 'ยว' and not body) and (
+    elif c2 and c1 + c2 not in CLUSTERS and c2 != 'อ' and not (prefix and not body) and (
+            # c2 == 'อ' 는 모음(ของ·ต้อง·ก่อน), 앞모음 뒤에 자음 하나뿐이면 그것은 받침(เก่ง·แฟน·โดน) — 선행 음절이 아니다 (2026-11-02 수정)
             re.search(r'[ะัาิีึืุูำ]', body) or prefix or
             (body and body[0] in CONS and not (c2 == 'ว' and len(body) == 1))):
         # 선행 자음이 내재모음 'a'로 한 음절을 이룸: สวัส=sa-wàt, ถนน=ta-nǒn, ขนม=ka-nǒm, แสดง=sa-daeng

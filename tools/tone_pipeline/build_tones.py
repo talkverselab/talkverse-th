@@ -82,10 +82,12 @@ def syllables_of(text):
         if not THAI.search(chunk):
             out.append(chunk)
             continue
+        # han_solo(CRF, python-crfsuite 필요) → 없으면 dict. 둘 다 안 되면 멈춘다 —
+        # 통째로 넘기면 ของ→"카옹" 처럼 틀린 독음이 조용히 들어간다(2026-11-02 사고, Gemini 검수로 발견).
         try:
             sy = syllable_tokenize(chunk, engine='han_solo')
-        except Exception:  # noqa: BLE001
-            sy = [chunk]
+        except ImportError:
+            sy = syllable_tokenize(chunk, engine='dict')
         out.extend(sy)
     return out
 
