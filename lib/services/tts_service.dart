@@ -82,23 +82,30 @@ class TtsService {
   Future<void> speak(String text) => speakAs(text, gender: 'female');
 
   /// 화자 성별에 맞춰 읽기. gender: 'male' | 'female'
-  Future<void> speakAs(String text, {required String gender}) async {
+  Future<void> speakAs(String text, {required String gender, double? rate}) async {
     await _scanVoices();
     final male = gender == 'male';
     final voice = male ? _maleVoice : _femaleVoice;
     // 전용 보이스가 있으면 피치는 1.0, 없으면 피치로 성별 구분
     final pitch = voice != null ? 1.0 : (male ? 0.72 : 1.12);
-    await _speakWith(text, voice, pitch);
+    await _speakWith(text, voice, pitch, rate: rate);
   }
 
+  double _rate = 0.45;
+
   Future<void> _speakWith(
-      String text, Map<String, String>? voice, double pitch) async {
+      String text, Map<String, String>? voice, double pitch, {double? rate}) async {
     await _ensureInit();
     await _tts.stop();
     _speaking = null;
     final seq = ++_requestSeq;
     await Future.delayed(playDelay);
     if (seq != _requestSeq) return; // 지연 중 새 요청이 오면 이전 요청은 버린다
+    final r = rate ?? 0.45;
+    if (r != _rate) {
+      _rate = r;
+      await _tts.setSpeechRate(r);
+    }
     if (voice != null) {
       await _tts.setVoice(voice);
     } else {
@@ -108,6 +115,17 @@ class TtsService {
     await _tts.setPitch(pitch);
     _speaking = text;
     await _tts.speak(text);
+  }
+
+  /// 한 문장을 끝까지 읽고 돌아온다(회화 순차 재생용). stop() 으로 중단하면 바로 돌아온다.
+  Future<void> speakAndWait(String text, {required String gender, double? rate}) async {
+    await _ensureInit();
+    await _tts.awaitSpeakCompletion(true);
+    try {
+      await speakAs(text, gender: gender, rate: rate);
+    } finally {
+      await _tts.awaitSpeakCompletion(false);
+    }
   }
 
   int _seqToken = 0;

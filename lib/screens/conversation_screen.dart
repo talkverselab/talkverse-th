@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import '../core/theme.dart';
 import '../services/chunk_index_service.dart';
 import '../widgets/thai_decor.dart';
+import '../core/pane.dart';
+import '../services/dialogue_service.dart';
 import 'chunk_search_screen.dart';
+import 'dialogue_screen.dart';
 import 'episode_screen.dart';
 import 'grammar_lesson_screen.dart';
 import 'sentence_flashcard_screen.dart';
@@ -29,6 +32,7 @@ class _ConversationScreenState extends State<ConversationScreen> {
   Future<void> _load() async {
     await EpisodeCatalog.instance.ensureLoaded();
     await ChunkIndexService.instance.ensureLoaded();
+    await DialogueService.instance.ensureLoaded();
     if (mounted) setState(() => _loading = false);
   }
 
@@ -68,11 +72,39 @@ class _ConversationScreenState extends State<ConversationScreen> {
   Widget _buildBody() {
     return CustomScrollView(
       slivers: [
+        SliverToBoxAdapter(child: _newDialogues()),
         SliverToBoxAdapter(child: _storyHub()),
         SliverToBoxAdapter(child: _contentHub()),
         SliverToBoxAdapter(child: _corpusHub()),
         const SliverToBoxAdapter(child: SizedBox(height: 80)),
       ],
+    );
+  }
+
+  /// 새 회화(R0~R4 · 주제별, 만화책 읽기형) 입구 — 2026-11-03.
+  Widget _newDialogues() {
+    final svc = DialogueService.instance;
+    if (svc.total == 0) return const SizedBox.shrink();
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 12, 16, 4),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+        TodayCut(level: svc.level),
+        const SizedBox(height: 8),
+        OutlinedButton.icon(
+          onPressed: () async {
+            await openPane(context, (_) => const DialogueHomeScreen());
+            if (mounted) setState(() {});
+          },
+          style: OutlinedButton.styleFrom(
+            foregroundColor: AppColors.kluayMaiDeep,
+            side: const BorderSide(color: AppColors.kluayMai),
+            shape: const StadiumBorder(),
+            padding: const EdgeInsets.symmetric(vertical: 10),
+          ),
+          icon: const Icon(Icons.auto_stories_rounded, size: 18),
+          label: Text(trf('새 회화 전체 보기 · {0}편', [svc.total]), style: const TextStyle(fontWeight: FontWeight.w800)),
+        ),
+      ]),
     );
   }
 
