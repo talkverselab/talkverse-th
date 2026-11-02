@@ -13,7 +13,7 @@
 
 ## 고정 6인 (2026-11-03 사용자 확정 "이 6명으로 진행")
 
-시트(요청 중): `char_th_03_cast.jpg` — 프롬프트 `char_th_03_cast_prompt.md`, 1·2번은 `char_th_02_sheet.jpg` 그대로. 장면 그림은 이 시트를 첨부하고 번호로 지정(`tools/make_scene_prompt.py` 의 CAST).
+시트(2026-11-03 사용자 확정 "확정"): `char_th_03_cast.jpg`(Grok 1차, 원본보다 머리 큰 비율 — 이 비율로 통일) — 프롬프트 `char_th_03_cast_prompt.md`, 1·2번은 `char_th_02_sheet.jpg` 와 같은 인물(ฟ้า 의 테니스 차림은 02 시트에만 있으니 테니스 장면엔 두 시트를 함께 첨부). 장면 그림은 이 시트를 첨부하고 번호로 지정(`tools/make_scene_prompt.py` 의 CAST).
 
 | # | 인물 | 역 |
 |---|---|---|
