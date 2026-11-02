@@ -20,6 +20,8 @@ for ((i = 1; i <= $#; i++)); do [[ "${!i}" == "--build" ]] && { j=$((i + 1)); BU
 
 if [[ " $* " != *" --no-build "* ]]; then
   flutter build ipa --release --export-method app-store --no-codesign --build-number="$BUILD"
+  # --no-codesign 아카이브엔 entitlements 가 안 들어가 export 한 ipa 에서 Sign in with Apple 이 빠진다 → ad-hoc 서명으로 심어 둔다(APP_GUIDE §7, 한자 빌드 51 확인)
+  codesign --force --deep -s - --entitlements ios/Runner/Runner.entitlements "$ARCHIVE/Products/Applications/Runner.app" && echo "ad-hoc 서명 + entitlements 적용"
 fi
 [ -d "$ARCHIVE" ] || { echo "아카이브 없음: $ARCHIVE" >&2; exit 1; }
 # --no-build 때는 아카이브에 박힌 빌드 번호를 쓴다(백업 파일명·안내가 실제와 어긋나지 않게)
