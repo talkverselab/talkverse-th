@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../core/pane.dart';
+import '../core/platform.dart';
 import '../core/theme.dart';
 import '../main.dart';
 import '../widgets/thai_decor.dart';
@@ -60,17 +62,88 @@ class _MainScreenState extends State<MainScreen> {
         label: tr('프로필')),
   ];
 
+  final _pane = GlobalKey<NavigatorState>();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _screens[_index],
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _index,
-        onDestinationSelected: (i) => setState(() => _index = i),
-        destinations: _tabs,
+    // 폰(한 화면): 하단 탭 + 내용 전체 화면
+    if (!isWide(context)) {
+      return Scaffold(
+        body: _screens[_index],
+        bottomNavigationBar: NavigationBar(
+          selectedIndex: _index,
+          onDestinationSelected: (i) => setState(() => _index = i),
+          destinations: _tabs,
+        ),
+      );
+    }
+    // 넓은 화면(아이패드·안드로이드 태블릿·폴드 펼침): 레일 + 왼쪽 칸(탭 화면) | 오른쪽 칸(연 화면). 두 칸까지만.
+    // 일본어앱·한자앱과 같은 구조(docs/TWO_PANE_UX.md). 학습(에피소드)은 openFull 로 전체 화면.
+    final w = MediaQuery.sizeOf(context).width;
+    final left = (w * 0.38).clamp(320.0, 460.0);
+    return Pane(
+      navKey: _pane,
+      child: NavigatorPopHandler(
+        onPopWithResult: (_) => _pane.currentState?.maybePop(),
+        child: Scaffold(
+          body: SafeArea(
+            right: false,
+            child: Row(
+              children: [
+                NavigationRail(
+                  selectedIndex: _index,
+                  onDestinationSelected: (i) => setState(() => _index = i),
+                  labelType: w >= 900 ? NavigationRailLabelType.all : NavigationRailLabelType.selected,
+                  backgroundColor: AppColors.creamDeep,
+                  indicatorColor: const Color(0xFFEFEEFE),
+                  selectedIconTheme: const IconThemeData(color: AppColors.kluayMai),
+                  unselectedIconTheme: const IconThemeData(color: AppColors.thongDeep),
+                  selectedLabelTextStyle: const TextStyle(color: AppColors.kluayMai, fontSize: 11, fontWeight: FontWeight.w600),
+                  unselectedLabelTextStyle: const TextStyle(color: AppColors.thongDeep, fontSize: 11, fontWeight: FontWeight.w500),
+                  destinations: [
+                    for (final t in _tabs)
+                      NavigationRailDestination(icon: t.icon, selectedIcon: t.selectedIcon, label: Text(t.label)),
+                  ],
+                ),
+                const VerticalDivider(width: 1, color: AppColors.thong),
+                SizedBox(width: left, child: IndexedStack(index: _index, children: _screens)),
+                const VerticalDivider(width: 1, color: AppColors.thong),
+                Expanded(
+                  child: ClipRect(
+                    child: Navigator(
+                      key: _pane,
+                      onGenerateRoute: (_) => MaterialPageRoute(builder: (_) => const _PaneEmpty()),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
+}
+
+/// 오른쪽 칸 빈 자리 안내.
+class _PaneEmpty extends StatelessWidget {
+  const _PaneEmpty();
+
+  @override
+  Widget build(BuildContext context) => ColoredBox(
+        color: AppColors.creamDeep,
+        child: Center(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text('สวัสดี', style: TextStyle(fontSize: 34, fontWeight: FontWeight.w700, color: AppColors.thong)),
+              const SizedBox(height: 10),
+              Text(tr('왼쪽에서 메뉴를 고르면 여기에 열려요'),
+                  style: const TextStyle(fontSize: 13, color: AppColors.thongDeep)),
+            ],
+          ),
+        ),
+      );
 }
 
 class HomeScreen extends StatelessWidget {
@@ -266,10 +339,7 @@ class _TodayMissionState extends State<_TodayMission> {
       progress: _learned,
       total: _total,
       onTap: () async {
-        await Navigator.push(
-          context,
-          MaterialPageRoute(builder: (_) => EpisodeScreen(meta: meta)),
-        );
+        await openFull(context, (_) => EpisodeScreen(meta: meta));
         _load();
       },
     );
@@ -301,8 +371,7 @@ class _QuickMenuRow extends StatelessWidget {
         itemBuilder: (context, i) {
           final (emoji, label, primary, builder) = items[i];
           return InkWell(
-            onTap: () => Navigator.push(
-                context, MaterialPageRoute(builder: builder)),
+            onTap: () => openPane(context, builder),
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 14),
               alignment: Alignment.center,
@@ -415,7 +484,7 @@ class _MenuGrid extends StatelessWidget {
         crossAxisCount: 3,
         mainAxisSpacing: 10,
         crossAxisSpacing: 10,
-        childAspectRatio: 0.95,
+        mainAxisExtent: 150, // 폭이 좁은 칸(아이패드 왼쪽 칸)에서도 글자가 넘치지 않게 높이 고정
       ),
       itemCount: items.length,
       itemBuilder: (context, i) => _MenuTile(item: items[i]),
@@ -446,7 +515,7 @@ class _MenuTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () =>
-          Navigator.push(context, MaterialPageRoute(builder: item.builder)),
+          openPane(context, item.builder),
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.cream,
@@ -466,6 +535,9 @@ class _MenuTile extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 item.label,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w800,
@@ -475,6 +547,9 @@ class _MenuTile extends StatelessWidget {
               const SizedBox(height: 2),
               Text(
                 item.sub,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.center,
                 style: const TextStyle(
                   fontSize: 9,
                   color: AppColors.khramLight,
@@ -567,10 +642,7 @@ class _LearnScreenState extends State<LearnScreen> {
         actions: [
           IconButton(
             icon: const Icon(Icons.search, color: AppColors.khram),
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => const ChunkSearchScreen()),
-            ),
+            onPressed: () => openPane(context, (_) => const ChunkSearchScreen()),
           ),
         ],
       ),
@@ -689,11 +761,7 @@ class _LessonRow extends StatelessWidget {
       onTap: lesson.meta == null
           ? null
           : () async {
-              await Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (_) => EpisodeScreen(meta: lesson.meta!)),
-              );
+              await openFull(context, (_) => EpisodeScreen(meta: lesson.meta!));
               onReturn();
             },
       borderRadius: BorderRadius.circular(10),

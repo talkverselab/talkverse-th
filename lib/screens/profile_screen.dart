@@ -5,6 +5,7 @@ import '../services/update_service.dart';
 import '../widgets/thai_decor.dart';
 import 'update_screen.dart';
 import '../core/l10n.dart';
+import '../core/pane.dart';
 import '../core/platform.dart';
 import '../services/auth_service.dart';
 import 'account_screen.dart';
@@ -109,7 +110,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 title: tr('계정'),
                 subtitle: AuthService.instance.user.value?['email'] as String? ?? tr('로그인 · Google · Kakao'),
                 onTap: () async {
-                  await Navigator.push(context, MaterialPageRoute(builder: (_) => const AccountScreen()));
+                  await openPane(context, (_) => const AccountScreen());
                   if (mounted) setState(() {});
                 }),
             _SettingItem(
@@ -121,7 +122,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 onTap: () async {
                   await CourseService.instance.ensureLoaded();
                   if (!context.mounted || !CourseService.instance.hasAnswers) return;
-                  await Navigator.push(context, MaterialPageRoute(builder: (_) => const CourseDomainScreen()));
+                  await openPane(context, (_) => const CourseDomainScreen());
                   if (mounted) setState(() {});
                 }),
             _SettingItem(
@@ -140,9 +141,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   icon: Icons.system_update,
                   title: tr('앱 업데이트'),
                   subtitle: tr('GitHub 최신 빌드 확인 · 내려받아 설치'),
-                  onTap: () => Navigator.push(
+                  onTap: () => openPane(
                         context,
-                        MaterialPageRoute(builder: (_) => const UpdateScreen()),
+                        (_) => const UpdateScreen(),
                       )),
             _SettingItem(
                 icon: Icons.volume_up,
@@ -174,7 +175,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   title: tr('개발자 메모'),
                   subtitle: DevNotes.instance.enabled.value ? tr('켜짐 · 보낸 메모와 처리 결과') : tr('꺼짐 · 눌러서 설정'),
                   onTap: () async {
-                    await Navigator.push(context, MaterialPageRoute(builder: (_) => const DevNotesScreen()));
+                    await openPane(context, (_) => const DevNotesScreen());
                     if (mounted) setState(() {});
                   }),
             _SettingItem(
@@ -221,7 +222,10 @@ class _SettingsGroup extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: AppColors.thong.withValues(alpha: 0.5)),
       ),
-      child: Column(
+      // ListTile 잉크가 바탕색 위에 보이도록 투명 Material 을 한 겹 둔다(넓은 화면 확인 때 경고).
+      child: Material(
+        type: MaterialType.transparency,
+        child: Column(
         children: [
           for (var i = 0; i < items.length; i++) ...[
             ListTile(
@@ -252,6 +256,7 @@ class _SettingsGroup extends StatelessWidget {
                   color: AppColors.thong.withValues(alpha: 0.3)),
           ],
         ],
+      ),
       ),
     );
   }

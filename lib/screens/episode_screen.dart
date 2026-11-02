@@ -85,6 +85,7 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
   final Map<int, bool> _learned = {};
   bool _loading = true;
   int _playingIdx = -1; // 전체 재생 중인 줄 (-1 = 정지)
+  int? _cardIndex; // 넓은 화면 오른쪽 반에 띄운 문장 카드의 줄
   final _listCtrl = ScrollController();
 
   void _togglePlayAll() {
@@ -242,7 +243,10 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
           ? const Center(
               child: CircularProgressIndicator(color: AppColors.kluayMai),
             )
-          : Column(
+          : LayoutBuilder(builder: (context, box) {
+              // 넓은 화면(아이패드·태블릿·폴드 펼침): 왼쪽 = 대화, 오른쪽 = 고른 줄의 문장 카드(오른쪽 반만 바뀜). 일본어앱과 같다.
+              final split = box.maxWidth >= wideMin;
+              final list = Column(
               children: [
                 const LaiThaiDivider(height: 8),
                 Expanded(
@@ -256,8 +260,14 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
                         turn: t,
                         playing: i == _playingIdx,
                         learned: _learned[t.id] ?? false,
+                        highlighted: split && (_cardIndex ?? 0) == i,
+                        paneWidth: split ? (box.maxWidth - 1) / 2 : box.maxWidth,
                         onLearnedTap: () => _toggleLearned(t),
                         onCardTap: () async {
+                          if (split) {
+                            setState(() => _cardIndex = i);
+                            return;
+                          }
                           await Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -274,7 +284,23 @@ class _EpisodeScreenState extends State<EpisodeScreen> {
                   ),
                 ),
               ],
-            ),
+            );
+              if (!split) return list;
+              final idx = _cardIndex ?? 0;
+              return Row(children: [
+                Expanded(child: list),
+                const VerticalDivider(width: 1, thickness: 1, color: AppColors.thong),
+                Expanded(
+                  child: SentenceFlashcardScreen(
+                    key: ValueKey('card-$idx'),
+                    meta: widget.meta,
+                    initialIndex: idx,
+                    embedded: true,
+                    onProgress: _load,
+                  ),
+                ),
+              ]);
+            }),
     );
   }
 }
@@ -283,6 +309,8 @@ class _EpisodeBubble extends StatelessWidget {
   final TurnRow turn;
   final bool learned;
   final bool playing;
+  final bool highlighted; // 넓은 화면에서 오른쪽 카드에 띄운 줄
+  final double paneWidth; // 대화가 놓인 칸의 폭
   final VoidCallback onLearnedTap;
   final VoidCallback? onCardTap;
 
@@ -290,6 +318,8 @@ class _EpisodeBubble extends StatelessWidget {
     required this.turn,
     required this.learned,
     this.playing = false,
+    this.highlighted = false,
+    required this.paneWidth,
     required this.onLearnedTap,
     this.onCardTap,
   });
@@ -305,7 +335,8 @@ class _EpisodeBubble extends StatelessWidget {
       onTap: onCardTap,
       child: Container(
         constraints: BoxConstraints(
-          maxWidth: MediaQuery.of(context).size.width * 0.72,
+          // 실제 칸 폭 기준(넓은 화면에서는 반쪽 칸) — 일본어앱과 같다
+          maxWidth: paneWidth * 0.74,
         ),
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
@@ -317,10 +348,10 @@ class _EpisodeBubble extends StatelessWidget {
             bottomRight: Radius.circular(isA ? 14 : 4),
           ),
           border: Border.all(
-            color: playing
+            color: playing || highlighted
                 ? AppColors.khram
                 : (learned ? AppColors.morakot : AppColors.thongDeep),
-            width: playing ? 2.4 : (learned ? 1.6 : 0.5),
+            width: playing || highlighted ? 2.4 : (learned ? 1.6 : 0.5),
           ),
         ),
         child: Column(
