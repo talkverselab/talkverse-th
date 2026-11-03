@@ -34,12 +34,20 @@ def role(name):
     return f"{name}(시트 {CAST[name]})" if name in CAST else f"{name}(시트 밖 단역 — 시트 인물과 겹치지 않게)"
 
 
+FEMALE = '--female' in sys.argv[1:]  # 여자 학습자판(시트 4번) — 결과는 <편id>_f/ 폴더, 앱은 프로필 성별이 여자면 이쪽을 먼저 씀(2026-11-04)
+# 옷·머리색을 고정 묘사(흔들림 방지, 일본어앱과 같은 방식)
+A_MALE = '학습자(시트 3번 남자 — 짧은 갈색 머리, 하늘색 반팔 티셔츠·남색 반바지·올리브색 크로스백, 흰 운동화)'
+A_FEMALE = '학습자(시트 4번 여자 — 갈색 단발 보브, 민트색 반팔 티셔츠·연청 와이드 팬츠·크림색 토트백, 흰 운동화; 남자 학습자 대신 이 여자 학습자로)'
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     for a in sys.argv[1:]:
+        if a.startswith('--'):
+            continue
         ep = json.load(open(a, encoding='utf-8'))
         who = ep.get('speakers', {})
-        a_role = '학습자(시트 3번 — 남자판. 여자판 그림이 필요하면 4번)'
+        a_role = A_FEMALE if FEMALE else A_MALE
         b_role = role(who.get('B', '상대'))
         turns = ep['turns']
         cuts = []
@@ -48,13 +56,13 @@ def main():
             desc = ' / '.join(f"{'A' if t['speaker']=='A' else t['speaker']}: {t['ko']}" for t in pair)
             cuts.append(f"cut{len(cuts)+1} (턴 {pair[0]['num']}~{pair[-1]['num']}): {desc}")
         cuts = cuts[:4] if len(cuts) <= 4 else cuts[:3] + [f"cut4 (턴 {turns[6]['num']}~{turns[-1]['num']}): " + ' / '.join(f"{t['speaker']}: {t['ko']}" for t in turns[6:])]
-        text = (f"[{ep['id']}] 태국어 학습 앱 회화 「{ep['title']}」의 장면 컷 4장을 그려 주세요.\n"
+        text = (f"[{ep['id']}{'-F' if FEMALE else ''}] 태국어 학습 앱 회화 「{ep['title']}」의 장면 컷 4장을 그려 주세요.\n"
                 f"장면: {ep['scene']}. 장소: {ep.get('where','')}. A = {a_role}, B = {b_role}"
                 + (f", C = {role(who['C'])}" if who.get('C') else '') + ".\n"
                 f"{CHAR}\n{RULES}\n"
                 + ("⑦ 채팅 편: 두 사람은 **각자 다른 장소**(각자 자기 방·침대)에서 폰을 보고 있다 — 같은 공간·같은 소파에 함께 그리지 말 것. 각 컷은 화면을 세로로 반 나눈 분할 구도(왼쪽 = 한 사람의 방, 오른쪽 = 다른 사람의 방), 폰 화면에 글자 없음.\n" if ep.get('kind') == 'chat' else '')
                 + "\n컷 구성(대사는 참고용 — 그림에 쓰지 마세요):\n" + '\n'.join(cuts) + "\n")
-        p = OUT / f"{ep['id']}_scene_prompt.md"
+        p = OUT / f"{ep['id']}{'_f' if FEMALE else ''}_scene_prompt.md"
         p.write_text(text, encoding='utf-8')
         print(p)
 

@@ -5,6 +5,9 @@ import 'dart:io';
 import 'package:flutter/foundation.dart' show debugPrint;
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'content_sync.dart';
+import 'learner_prefs.dart';
+
 /// 단어 그림·회화 장면 컷(talkverse.uk 공용 그림 저장소) — 일본어앱 art_service.dart 이식(2026-11-02).
 ///
 /// talkverse.uk 세션이 Cloudflare 에 올린 공개 API(인증 없음):
@@ -61,15 +64,26 @@ class ArtService {
 
   /// 편의 장면 컷 URL(턴 번호 1부터 → 컷 (num+1)~/2). 없으면 null. 편당 한 번만 받아 둔다(실패해도 조용히 null).
   Future<String?> sceneCut(String episodeId, int turnNum, {bool large = false}) async {
+    final n = (turnNum + 1) ~/ 2;
+    // 학습자가 여자로 설정돼 있으면 여자판 컷(편id + '_f', 2026-11-04)을 먼저 — 없으면 기본 컷
+    if (LearnerPrefs.gender.value == 'female') {
+      final f = await _sceneCuts('${episodeId}_f', large: large);
+      if (f[n] != null) return f[n];
+    }
     final cuts = await _sceneCuts(episodeId, large: large);
     if (cuts.isEmpty) return null;
-    final n = (turnNum + 1) ~/ 2;
     return cuts[n] ?? cuts[cuts.keys.reduce((a, b) => (a - n).abs() <= (b - n).abs() ? a : b)];
   }
 
   Future<Map<int, String>> _sceneCuts(String episodeId, {bool large = false}) async {
     final key = '$episodeId${large ? ':L' : ''}';
     if (_scene.containsKey(key)) return _scene[key]!;
+    // 시작 때 받아 둔 전체 장면 매니페스트(ContentSync) — 편마다 네트워크를 타지 않는다(2026-11-04)
+    final idx = ContentSync.instance.sceneIndex[episodeId];
+    if (idx != null && idx.isNotEmpty) {
+      final b = ContentSync.instance.base;
+      return _scene[key] = {for (final e in idx.entries) e.key: '$b/${e.value}'};
+    }
     await (_sceneLoading[key] ??= () async {
       final out = <int, String>{};
       try {

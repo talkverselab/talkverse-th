@@ -8,20 +8,31 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'app_database.dart';
 
 class SeedLoader {
-  // v5: 모든 대화 8턴으로 정리 + L2 자체 제작 대화로 교체
-  static const _kSeededKey = 'db_seeded_th_v5';
-
   final AppDatabase db;
   SeedLoader(this.db);
 
+  /// 번들 `assets/data/version.json` 의 `db`(업데이트 번호)와 저장된 번호가 다르면 DB 를 전부 다시 채운다(사용자 지시 2026-11-04, 모든 언어앱 공통).
+  /// 옛 키(`db_seeded_th_v5`)는 더 쓰지 않는다 — 번호는 version.json 한 곳에서만 올린다.
+  static const _kDbVersion = 'db_version';
   Future<void> seedIfNeeded() async {
     final prefs = await SharedPreferences.getInstance();
-    if (prefs.getBool(_kSeededKey) == true) return;
+    final bundled = await bundledVersion();
+    if (prefs.getInt(_kDbVersion) == bundled) return;
 
+    await db.delete(db.words).go();
     await _seedWords();
     await _seedTurns();
 
-    await prefs.setBool(_kSeededKey, true);
+    await prefs.setInt(_kDbVersion, bundled);
+  }
+
+  static Future<int> bundledVersion() async {
+    try {
+      final j = json.decode(await rootBundle.loadString('assets/data/version.json')) as Map<String, dynamic>;
+      return (j['db'] as num).toInt();
+    } catch (_) {
+      return 0;
+    }
   }
 
   Future<void> _seedWords() async {

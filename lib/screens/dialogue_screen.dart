@@ -118,7 +118,7 @@ class TodayCut extends StatelessWidget {
         label: Text(tr('읽기 시작'), style: const TextStyle(fontWeight: FontWeight.w800)),
       ),
     ]);
-    final cut = SizedBox(height: wide ? 180 : 150, child: SceneCut(dialogue: d, turn: t, bubble: true));
+    final cut = SizedBox(height: wide ? 230 : 196, child: SceneCut(dialogue: d, turn: t, bubble: true)); // 그림 + 아래 대사 띠(2026-11-04)
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(color: AppColors.cream, border: Border.all(color: AppColors.thong), borderRadius: BorderRadius.circular(16), boxShadow: kCutShadow),

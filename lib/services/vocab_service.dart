@@ -272,6 +272,7 @@ class VocabService {
             level: (m['level'] as num?)?.toInt() ?? 0,
           ),
         );
+        _obecByTh[th] = _obec.last;
       }
     } catch (_) {
       // 에셋 없이도 동작
@@ -282,6 +283,16 @@ class VocabService {
 
   /// 태국어 표제어 완전일치 항목들.
   List<VocabEntry> byTh(String th) => _byTh[th.trim()] ?? const [];
+
+  /// 문장 레마 칩용(2026-11-04): 통합 단어장 → 교육부 표준 단어 순으로 한 항목. 없으면 null.
+  VocabEntry? byLemma(String th) {
+    final t = th.trim();
+    final list = _byTh[t];
+    if (list != null && list.isNotEmpty) return list.first;
+    return _obecByTh[t];
+  }
+
+  final Map<String, VocabEntry> _obecByTh = {};
 
   bool hasTh(String th) => _byTh.containsKey(th.trim());
 

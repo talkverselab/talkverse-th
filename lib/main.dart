@@ -6,11 +6,13 @@ import 'data/db/app_database.dart';
 import 'data/db/seed_loader.dart';
 import 'data/entitlement.dart';
 import 'screens/main_screen.dart';
+import 'screens/sync_screen.dart';
 import 'services/ko_reading.dart';
 import 'services/learner_prefs.dart';
 import 'core/l10n.dart';
 import 'services/auth_service.dart';
 import 'services/content_store.dart';
+import 'services/content_sync.dart';
 import 'services/dev_notes.dart';
 import 'services/update_service.dart';
 import 'widgets/dev_note_overlay.dart';
@@ -30,14 +32,28 @@ void main() async {
   await AuthService.instance.init(); // 실패해도 앱은 뜬다(오프라인)
   Entitlement.configure(); // 스토어 평생 이용권(기다리지 않음) — 한자 앱과 같은 공용 클라이언트
   UpdateService.instance.loadCurrent();
-  runApp(const ThaiUniverseApp());
+  // 그림(장면 컷·단어 그림) 기기 내려받기: 버전이 다르면 로딩 화면에서 받고 시작(사용자 지시 2026-11-04, 모든 언어앱 공통)
+  final needSync = await ContentSync.instance.init(large: _isTablet());
+  runApp(ThaiUniverseApp(syncFirst: needSync));
   // 콘텐츠만 바뀐 수정은 APK 없이 받는다 — 받으면 화면들이 revision 을 듣고 다시 읽는다.
   ContentStore.instance.refresh();
   DevNotes.instance.flushQueue();
 }
 
+/// 짧은 변 600 이상(태블릿·폴드 펼침)이면 큰 장면 컷(1168)을 받는다.
+bool _isTablet() {
+  try {
+    final v = WidgetsBinding.instance.platformDispatcher.views.first;
+    final s = v.physicalSize / v.devicePixelRatio;
+    return s.shortestSide >= 600;
+  } catch (_) {
+    return false;
+  }
+}
+
 class ThaiUniverseApp extends StatelessWidget {
-  const ThaiUniverseApp({super.key});
+  final bool syncFirst;
+  const ThaiUniverseApp({super.key, this.syncFirst = false});
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +82,7 @@ class ThaiUniverseApp extends StatelessWidget {
             child: DevNoteOverlay(child: child ?? const SizedBox.shrink()),
           );
         },
-        home: const MainScreen(),
+        home: syncFirst ? const SyncScreen(next: MainScreen()) : const MainScreen(),
       ),
       ),
     );

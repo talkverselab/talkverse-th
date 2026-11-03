@@ -10,6 +10,12 @@ import 'learner_prefs.dart';
 /// 파일: `assets/data/dialogues/R<레벨>/<주제>/<편id>.json` (구조는 `docs/DIALOGUE_WORKFLOW_TH.md`).
 /// 레벨: R0 왕초보 · R1 초보(기본) · R2 중급 · R3 고급 · R4 최상급 — 절벽 구간 기준.
 /// 사용자 레벨 모드(`dialogue_level`): 기본 R1, "너무 힘들면" R0. R2 이상은 주제 목록에서 그대로 열 수 있다.
+/// 문장 내용어 한 개: 표면형·기본형(태국어는 어형 변화가 없어 보통 표면형과 같음)·한글 독음. `tools/add_lemmas.py` 가 채운다.
+class Lemma {
+  final String surface, base, reading;
+  const Lemma(this.surface, this.base, this.reading);
+}
+
 class DialogueTurn {
   final int num;
   final String speaker; // A(학습자)·B·C·D
@@ -23,6 +29,7 @@ class DialogueTurn {
   final String? stamp; // 채팅 스탬프 이모지
   final bool bubble; // 채팅 말풍선 표시
   final String? art; // 장면 그림 URL(나중에 채움)
+  final List<Lemma> lemmas; // 문장 내용어(표면형·기본형·독음) — 단어장 연결(2026-11-04)
   const DialogueTurn({
     required this.num,
     required this.speaker,
@@ -31,6 +38,7 @@ class DialogueTurn {
     required this.ko,
     required this.note,
     required this.tags,
+    this.lemmas = const [],
     required this.newWords,
     this.at,
     this.stamp,
@@ -50,6 +58,7 @@ class DialogueTurn {
         stamp: j['stamp'] as String?,
         bubble: j['ui'] == 'bubble',
         art: j['art'] as String?,
+        lemmas: [for (final l in (j['lemmas'] as List? ?? const [])) if (l is List && l.length >= 2) Lemma('${l[0]}', '${l[1]}', l.length > 2 ? '${l[2]}' : '')],
       );
 
   /// 그림 조회용 핵심 단어 후보: new → expr 태그 → 없음.

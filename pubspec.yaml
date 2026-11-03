@@ -81,5 +81,6 @@ flutter:
     - assets/data/vocab/
     - assets/data/course/
     - assets/data/content_manifest.json
+    - assets/data/version.json
     - assets/audio/
     - assets/images/
