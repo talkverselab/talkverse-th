@@ -1,0 +1,122 @@
+{
+ "id": "r0_love_a6",
+ "region": "R0",
+ "island": "love",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "love"
+ ],
+ "domain": [
+  "love"
+ ],
+ "title": "매운 거 괜찮아?",
+ "emoji": "🌶️",
+ "scene": "ฟ้า 가 매운 걸 잘 먹냐고 묻는다",
+ "where": "쏨땀 가게",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "casual",
+ "twist": 5,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "เผ็ด",
+  "ไหว",
+  "น้ำ"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "B",
+   "th": "เผ็ดไหวไหม",
+   "rd": "펫 와이 마이",
+   "ko": "매운 거 괜찮아?",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 2,
+   "speaker": "A",
+   "th": "ไหวครับ!",
+   "rd": "와이 크랍!",
+   "ko": "괜찮아요!",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 3,
+   "speaker": "B",
+   "th": "เอาจริงดิ",
+   "rd": "아우찡 디",
+   "ko": "진짜?",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 4,
+   "speaker": "A",
+   "th": "จริง… เผ็ด! น้ำตาไหล!",
+   "rd": "찡… 펫! 남따라이!",
+   "ko": "진짜… 매워! 눈물 나!",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 5,
+   "speaker": "B",
+   "th": "555 น้ำมูกด้วย",
+   "rd": "555 남묵 두아",
+   "ko": "ㅋㅋ 콧물도 나네.",
+   "note": "",
+   "tags": [
+    "twist"
+   ],
+   "new": []
+  },
+  {
+   "num": 6,
+   "speaker": "A",
+   "th": "สะอึก! น้ำ! น้ำ!",
+   "rd": "싸윽! 남! 남!",
+   "ko": "딸꾹! 물! 물!",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 7,
+   "speaker": "B",
+   "th": "เอ้า ทิชชู่… น่ารักจัง",
+   "rd": "아우 팃 추… 나락 짱",
+   "ko": "자, 휴지… 귀엽네.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 8,
+   "speaker": "A",
+   "th": "…เผ็ดแต่ดีใจ",
+   "rd": "…펫 때 디짜이",
+   "ko": "…맵지만 좋아.",
+   "note": "",
+   "tags": [],
+   "new": []
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r0_love_a6_write.md",
+  "recommended": "น้ำหน่อย / 물 좀 · เผ็ดเว่อร์ / 매워 죽겠네"
+ },
+ "stats": {
+  "cliff_cover": 65
+ }
+}

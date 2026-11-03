@@ -1,0 +1,122 @@
+{
+ "id": "r0_love_a4",
+ "region": "R0",
+ "island": "love",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "love"
+ ],
+ "domain": [
+  "love"
+ ],
+ "title": "한 입만",
+ "emoji": "🍧",
+ "scene": "ฟ้า 가 학습자 빙수를 한 입 달라고 한다",
+ "where": "빙수 가게",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "casual",
+ "twist": 7,
+ "twist_type": "emotion",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "อร่อย",
+  "เอา",
+  "ไม่เป็นไร"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "B",
+   "th": "{name} ขอชิมหน่อย",
+   "rd": "{name} 커 침 너이",
+   "ko": "{name}, 한 입만.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 2,
+   "speaker": "A",
+   "th": "เอาครับ",
+   "rd": "아우 크랍",
+   "ko": "드세요.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 3,
+   "speaker": "B",
+   "th": "ไม่ต้องครับ 555",
+   "rd": "마이떵 크랍 555",
+   "ko": "크랍 안 해도 돼 ㅋㅋ",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 4,
+   "speaker": "A",
+   "th": "งั้น… เอาไปหมดเลย",
+   "rd": "응안… 아우 빠이 못 러이",
+   "ko": "그럼… 다 가져가.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 5,
+   "speaker": "B",
+   "th": "หมดเลยเหรอ 555",
+   "rd": "못 러이 러 555",
+   "ko": "다?? ㅋㅋ",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 6,
+   "speaker": "A",
+   "th": "อืม ให้หมด",
+   "rd": "음 하이 못",
+   "ko": "응, 다 줄게.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 7,
+   "speaker": "B",
+   "th": "…กินด้วยกัน ช้อนเดียว",
+   "rd": "…낀 두아깐 천 디아",
+   "ko": "…같이 먹자. 숟가락 하나로.",
+   "note": "",
+   "tags": [
+    "twist"
+   ],
+   "new": []
+  },
+  {
+   "num": 8,
+   "speaker": "A",
+   "th": "…อร่อยกว่าเดิม",
+   "rd": "…아러이 꽈 덤",
+   "ko": "…더 맛있다.",
+   "note": "",
+   "tags": [],
+   "new": []
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r0_love_a4_write.md",
+  "recommended": "ขอชิมหน่อย / 한 입 맛봐 · อร่อยเว่อร์ / 진짜 맛있다"
+ },
+ "stats": {
+  "cliff_cover": 92
+ }
+}

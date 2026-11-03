@@ -1,0 +1,122 @@
+{
+ "id": "r0_love_a2",
+ "region": "R0",
+ "island": "love",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "love"
+ ],
+ "domain": [
+  "love"
+ ],
+ "title": "꽃 한 송이",
+ "emoji": "🌹",
+ "scene": "꽃 노점에서 학습자가 ฟ้า 에게 꽃을 사 주려 한다",
+ "where": "꽃 노점",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "casual",
+ "twist": 5,
+ "twist_type": "slip",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "เท่าไหร่",
+  "สวย",
+  "ให้"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ดอกไม้สวยนะ",
+   "rd": "덕마이 쑤아 나",
+   "ko": "꽃 예쁘다.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ชอบป่ะ",
+   "rd": "첩 빠",
+   "ko": "좋아해?",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ชอบ… ซื้อให้นะ",
+   "rd": "첩… 쓰 하이 나",
+   "ko": "좋아… 사 줄게.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "จริงดิ",
+   "rd": "찡 디",
+   "ko": "진짜?",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "ดอกไหม้ให้เธอ",
+   "rd": "덕 마이 하이 터",
+   "ko": "탄 꽃, 너 줄게.",
+   "note": "",
+   "tags": [
+    "twist"
+   ],
+   "new": []
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 ดอกไหม้เหรอ",
+   "rd": "555 덕 마이 러",
+   "ko": "ㅋㅋ 탄 꽃이라고?",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "ไม่ใช่! ดอกไม้!",
+   "rd": "마이 차이! 덕마이!",
+   "ko": "아니야! 꽃!",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "…ดอกไหม้ก็รับนะ",
+   "rd": "…덕 마이 꺼 랍 나",
+   "ko": "…탄 꽃이어도 받을게.",
+   "note": "",
+   "tags": [],
+   "new": []
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r0_love_a2_write.md",
+  "recommended": "ลดได้ไหม / 깎아 줄 수 있어? · หอมจัง / 향기 좋다"
+ },
+ "stats": {
+  "cliff_cover": 68
+ }
+}
