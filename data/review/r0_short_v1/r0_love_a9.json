@@ -1,0 +1,122 @@
+{
+ "id": "r0_love_a9",
+ "region": "R0",
+ "island": "love",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "love"
+ ],
+ "domain": [
+  "love"
+ ],
+ "title": "태워 줄게",
+ "emoji": "🛵",
+ "scene": "ฟ้า 가 스쿠터 뒤에 타라고 한다",
+ "where": "캠퍼스 정문",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "casual",
+ "twist": 5,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ขึ้นมา",
+  "หมวก",
+  "จับ"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "B",
+   "th": "ขึ้นมาสิ",
+   "rd": "큰 마 씨",
+   "ko": "타.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 2,
+   "speaker": "A",
+   "th": "โอเคครับ",
+   "rd": "오케 크랍",
+   "ko": "오케이.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 3,
+   "speaker": "B",
+   "th": "หมวกนี่ ใส่ด้วย",
+   "rd": "무악 니 싸이 두아",
+   "ko": "헬멧 여기, 써.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 4,
+   "speaker": "A",
+   "th": "ใส่แล้ว!",
+   "rd": "싸이 래우!",
+   "ko": "썼어!",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 5,
+   "speaker": "B",
+   "th": "ใส่กลับหัว 555",
+   "rd": "싸이 끄랍후아 555",
+   "ko": "거꾸로 썼잖아 ㅋㅋ",
+   "note": "",
+   "tags": [
+    "twist"
+   ],
+   "new": []
+  },
+  {
+   "num": 6,
+   "speaker": "A",
+   "th": "มองไม่เห็นเลยครับ",
+   "rd": "멍마이헨 러이 크랍",
+   "ko": "하나도 안 보여요.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 7,
+   "speaker": "B",
+   "th": "ยามหัวเราะใหญ่เลย",
+   "rd": "얌 후아러 야이 러이",
+   "ko": "경비 아저씨 빵 터졌어.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "…จับแน่นๆ นะ",
+   "rd": "…짭 낸 낸 나",
+   "ko": "…꽉 잡아.",
+   "note": "",
+   "tags": [],
+   "new": []
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r0_love_a9_write.md",
+  "recommended": "นั่งหลัง / 뒤에 타 · ระวังนะ / 조심해"
+ },
+ "stats": {
+  "cliff_cover": 73
+ }
+}

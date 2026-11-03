@@ -1,0 +1,122 @@
+{
+ "id": "r0_love_a7",
+ "region": "R0",
+ "island": "love",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "love"
+ ],
+ "domain": [
+  "love"
+ ],
+ "title": "같이 써",
+ "emoji": "🌂",
+ "scene": "비. ฟ้า 가 먼저 우산을 내민다",
+ "where": "버스 정류장",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "casual",
+ "twist": 7,
+ "twist_type": "emotion",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ฝนตก",
+  "มา",
+  "ใกล้"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "B",
+   "th": "ฝนตก… ใช้ร่มด้วยกันไหม",
+   "rd": "폰똑… 차이 롬 두아깐 마이",
+   "ko": "비 온다… 우산 같이 쓸래?",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 2,
+   "speaker": "A",
+   "th": "ได้ครับ ขอบคุณครับ",
+   "rd": "다이 크랍 컵쿤 크랍",
+   "ko": "네, 고마워요.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 3,
+   "speaker": "B",
+   "th": "มาสิ",
+   "rd": "마 씨",
+   "ko": "와.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 4,
+   "speaker": "A",
+   "th": "ร่มเล็กนะ",
+   "rd": "롬 렉 나",
+   "ko": "우산 작다.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 5,
+   "speaker": "B",
+   "th": "ไหล่เปียกแล้ว 555",
+   "rd": "라이 삐악 래우 555",
+   "ko": "어깨 젖었어 ㅋㅋ",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 6,
+   "speaker": "A",
+   "th": "เธอก็เปียก",
+   "rd": "터 꺼 삐악",
+   "ko": "너도 젖었어.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 7,
+   "speaker": "B",
+   "th": "…มาใกล้กว่านี้สิ",
+   "rd": "…마 끄라이 꽈 니 씨",
+   "ko": "…더 가까이 와.",
+   "note": "",
+   "tags": [
+    "twist"
+   ],
+   "new": []
+  },
+  {
+   "num": 8,
+   "speaker": "A",
+   "th": "…ใกล้แล้ว",
+   "rd": "…끄라이 래우",
+   "ko": "…가까이 왔어.",
+   "note": "",
+   "tags": [],
+   "new": []
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r0_love_a7_write.md",
+  "recommended": "เปียกหมด / 완전히 젖었어 · ฝนตกหนัก / 비 세게 내린다"
+ },
+ "stats": {
+  "cliff_cover": 77
+ }
+}

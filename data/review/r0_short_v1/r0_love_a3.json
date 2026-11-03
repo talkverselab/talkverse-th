@@ -1,0 +1,123 @@
+{
+ "id": "r0_love_a3",
+ "region": "R0",
+ "island": "love",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "love"
+ ],
+ "domain": [
+  "love"
+ ],
+ "title": "사진 찍어 줄까?",
+ "emoji": "📸",
+ "scene": "ฟ้า 가 사진을 찍어 달라고 한다",
+ "where": "사원 앞",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า",
+  "C": "นักท่องเที่ยว"
+ },
+ "register": "casual",
+ "twist": 5,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ถ่ายรูป",
+  "อีกที",
+  "สวย"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "B",
+   "th": "ถ่ายรูปให้หน่อยสิ",
+   "rd": "타이룹 하이 너이 씨",
+   "ko": "사진 좀 찍어 줘.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 2,
+   "speaker": "A",
+   "th": "ได้เลย",
+   "rd": "다이 러이",
+   "ko": "그래.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 3,
+   "speaker": "B",
+   "th": "สวยไหม",
+   "rd": "쑤아 마이",
+   "ko": "예뻐?",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 4,
+   "speaker": "A",
+   "th": "สวย… เอ๊ะ มีคนมา",
+   "rd": "쑤아… 에 미 콘 마",
+   "ko": "예뻐… 어, 사람이 왔어.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 5,
+   "speaker": "C",
+   "th": "ขอถ่ายด้วยได้ไหม",
+   "rd": "커 타이 두아 다이 마이",
+   "ko": "같이 찍어도 돼요?",
+   "note": "",
+   "tags": [
+    "twist"
+   ],
+   "new": []
+  },
+  {
+   "num": 6,
+   "speaker": "A",
+   "th": "อีกคนมาแล้ว 555",
+   "rd": "익 콘 마 래우 555",
+   "ko": "또 한 명 왔어 ㅋㅋ",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 7,
+   "speaker": "B",
+   "th": "กลายเป็นรูปหมู่เลย",
+   "rd": "끄라이뻰 룹 무 러이",
+   "ko": "단체 사진이 됐네.",
+   "note": "",
+   "tags": [],
+   "new": []
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "…รอบนี้แค่เราสองคนนะ",
+   "rd": "…럽 니 캐 라우 썽 콘 나",
+   "ko": "…이번엔 우리 둘만.",
+   "note": "",
+   "tags": [],
+   "new": []
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r0_love_a3_write.md",
+  "recommended": "ป่ะ / ~할까, ยิ้มหน่อย / 웃어 봐"
+ },
+ "stats": {
+  "cliff_cover": 90
+ }
+}
