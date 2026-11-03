@@ -21,6 +21,8 @@ ROOT = Path(__file__).resolve().parents[1]
 EXPR_CSV = ROOT / 'data/expressions/top_expressions.csv'
 TOP_CSV = ROOT / 'assets/data/wordsets/th_top1000.csv'
 FORBIDDEN = ROOT / 'data/expressions/forbidden.txt'
+COVER = {'R0': 55, 'R1': 55, 'R2': 60, 'R3': 70, 'R4': 80}  # 절벽 정의 = 대사 덮는 비율
+NAMES = {'ฟ้า', 'ต้น', 'สุภา', 'วดี', 'ภรณ์'}  # 고유명사(통계 제외)
 CLIFF = {'R1': 109, 'R2': 149, 'R3': 295, 'R4': 642}  # 절벽 구간 = 빈도 순위 상한(2026-10-03 확정)
 TURNS = {('R1', 'survival'): (6, 8), ('R1', 'short'): (6, 8), ('R1', 'long'): (6, 8), ('R1', 'chat'): (6, 8),
          ('R0', None): (4, 8), ('R2', None): (8, 12), ('R3', None): (12, 16), ('R4', None): (12, 16)}
@@ -84,6 +86,9 @@ def check_file(path, exprs, rank, cum_vocab, fix_rd, forbidden):
     seen_ep = set()
     wlo, whi = WORDS.get(kind, (2, 9))
     over_rank = Counter()
+    in_tok, tot_tok = [0], [0]
+    names = set(w for v in ep.get('speakers', {}).values() for w in words_of(v))
+    free = set(exprs) | names | NAMES | {w for e in exprs for w in words_of(e)}
     for t in turns:
         n = t.get('num')
         th = t.get('th', '')
@@ -109,11 +114,22 @@ def check_file(path, exprs, rank, cum_vocab, fix_rd, forbidden):
         if len(new) > 3 and not t.get('new_ok'):
             W(f'턴 {n}: 새 단어 {len(new)}개 (>3): {new}')
         for w in ws:
+            if w in free and w not in rank:  # 순위 목록에 없는 구어 표현·이름만 통계에서 뺀다
+                continue
+            tot_tok[0] += 1
             r = rank.get(w)
-            if r is None or r > CLIFF.get(region, 642):
+            if r is not None and r <= CLIFF.get(region, 642):
+                in_tok[0] += 1
+            else:
                 over_rank[w] += 1
         if kind == 'chat' and t.get('ui') != 'bubble':
             E(f'턴 {n}: 채팅 편은 "ui":"bubble"')
+    if tot_tok[0]:
+        cov = in_tok[0] * 100 // tot_tok[0]
+        target = COVER.get(region, 0)
+        msg = f'{region} 절벽 안 단어 {cov}% (기준 {target}%)'
+        (W if cov < target - 10 else (lambda m: None))(msg + ' — 너무 어려움')
+        ep.setdefault('stats', {})['cliff_cover'] = cov
     if over_rank:
         W(f'{region} 절벽 밖 단어 {len(over_rank)}종(통계): {", ".join(list(over_rank)[:12])}')
     cum_vocab.update(seen_ep)
