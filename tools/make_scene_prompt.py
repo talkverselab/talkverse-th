@@ -30,8 +30,24 @@ CAST = {
 }
 
 
+# 반복 조연 시트(2026-11-04, cast_th_work_v1.jpg — 첨부 2로, 해당 조연이 나오는 편에만): 상사·동료·경비·관리실
+CAST_WORK = {
+    'พี่หัวหน้า': '조연 시트(첨부 2) 1번 상사(40대 여성, 낮게 묶은 흑발, 안경, 진남색 재킷·흰 블라우스·회색 슬랙스, 사원증)',
+    'หัวหน้า': '조연 시트(첨부 2) 1번 상사(40대 여성, 낮게 묶은 흑발, 안경, 진남색 재킷·흰 블라우스·회색 슬랙스, 사원증)',
+    'เพื่อนร่วมงาน': '조연 시트(첨부 2) 2번 동료(20대 남성, 짧은 흑발, 연보라 셔츠 소매 걷음·검정 슬랙스)',
+    'รปภ.': '조연 시트(첨부 2) 3번 경비(50대 남성, 희끗한 머리·콧수염, 하늘색 제복·남색 모자, 손전등)',
+    'นิติ': '조연 시트(첨부 2) 4번 관리실 직원(30대 여성, 갈색 단발, 민트색 폴로·베이지 바지, 태블릿)',
+}
+ATT_MAIN = '/tmp/grok_att/th/char_th_03_cast.jpg'  # M4 경로(브라우저가 있는 기계)
+ATT_WORK = '/tmp/grok_att/th/cast_th_work_v1.jpg'
+
+
 def role(name):
-    return f"{name}(시트 {CAST[name]})" if name in CAST else f"{name}(시트 밖 단역 — 시트 인물과 겹치지 않게)"
+    if name in CAST:
+        return f"{name}(시트 {CAST[name]})"
+    if name in CAST_WORK:
+        return f"{name}({CAST_WORK[name]})"
+    return f"{name}(시트 밖 단역 — 시트 인물과 겹치지 않게)"
 
 
 FEMALE = '--female' in sys.argv[1:]  # 여자 학습자판(시트 4번) — 결과는 <편id>_f/ 폴더, 앱은 프로필 성별이 여자면 이쪽을 먼저 씀(2026-11-04)
@@ -62,8 +78,13 @@ def main():
                 f"{CHAR}\n{RULES}\n"
                 + ("⑦ 채팅 편: 두 사람은 **각자 다른 장소**(각자 자기 방·침대)에서 폰을 보고 있다 — 같은 공간·같은 소파에 함께 그리지 말 것. 각 컷은 화면을 세로로 반 나눈 분할 구도(왼쪽 = 한 사람의 방, 오른쪽 = 다른 사람의 방), 폰 화면에 글자 없음.\n" if ep.get('kind') == 'chat' else '')
                 + "\n컷 구성(대사는 참고용 — 그림에 쓰지 마세요):\n" + '\n'.join(cuts) + "\n")
+        uses_work = any(v in CAST_WORK for v in who.values())
+        if uses_work:
+            text = text.replace('첨부한 캐릭터 시트(6인)의 인물만', '첨부 1 = 고정 6인 시트, 첨부 2 = 반복 조연 시트(왼쪽부터 1~4번). 두 시트의 인물만', 1)
         p = OUT / f"{ep['id']}{'_f' if FEMALE else ''}_scene_prompt.md"
         p.write_text(text, encoding='utf-8')
+        # 전송 때 붙일 첨부 목록(M4 경로) — batch 스크립트가 읽는다
+        p.with_suffix('.att').write_text(ATT_MAIN + (',' + ATT_WORK if uses_work else ''), encoding='utf-8')
         print(p)
 
 
