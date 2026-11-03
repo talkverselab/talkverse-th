@@ -188,5 +188,8 @@
  ],
  "review": {
   "enrich": "r2_love_b1_grok_rewrite.md: 10턴 교체"
+ },
+ "stats": {
+  "cliff_cover": 64
  }
 }
