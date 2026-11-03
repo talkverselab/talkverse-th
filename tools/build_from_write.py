@@ -8,25 +8,33 @@ p = plans[sys.argv[2]]
 ans = open(sys.argv[3], encoding='utf-8').read()
 region = p['id'].split('_')[0].upper()
 island = p['id'].split('_')[1]
-# 한 턴이 여러 줄로 오면(줄 머리가 '/') 앞 줄에 이어 붙인다
-_lines = []
+# 답 형식이 흔들려도 읽는다: ① 한 줄 `번호 화자: 태국어 / 한국어 / 해설 / 새 단어` ② 번호 없는 `화자: …`
+# ③ 다음 줄들이 '/' 로 시작 ④ `한국어:`·`해설:`·`새 단어:` 라벨 줄
+recs = []
 for raw in ans.splitlines():
-    if raw.strip().startswith('/') and _lines:
-        _lines[-1] += ' ' + raw.strip()
-    elif raw.strip():
-        _lines.append(raw.strip())
-turns = []
-for line in _lines:
-    m = re.match(r'^\s*\**(\d+)\**\.?\s*([A-D])\s*[:：]\s*(.+)$', line.strip())
-    if not m:
+    x = raw.strip()
+    if not x:
         continue
-    parts = [x.strip() for x in m.group(3).split(' / ')]
-    if len(parts) < 2:
+    m = re.match(r'^\**(\d+)?\**\.?\s*([A-D])\s*[:：]\s*(.+)$', x)
+    if m:
+        recs.append({'num': int(m.group(1)) if m.group(1) else None, 'sp': m.group(2), 'parts': [y.strip() for y in m.group(3).split(' / ')]})
+        continue
+    if not recs:
+        continue
+    lab = re.match(r'^(한국어|해설|새\s*단어)\s*[:：]\s*(.*)$', x)
+    if lab:
+        recs[-1]['parts'].append(lab.group(2).strip())
+    elif x.startswith('/'):
+        recs[-1]['parts'] += [y.strip() for y in x.lstrip('/').split(' / ')]
+turns = []
+for i, r in enumerate(recs, 1):
+    parts = [y for y in r['parts'] if y != '']
+    if len(parts) < 2 or re.match(r'^추천', parts[0]):
         continue
     th, ko = parts[0], parts[1]
-    note = parts[2] if len(parts) > 2 else ''
-    new = [w.strip() for w in re.split(r'[,，、]', parts[3])] if len(parts) > 3 else []
-    t = {'num': int(m.group(1)), 'speaker': m.group(2), 'th': th.replace('❓', '').strip(), 'rd': '', 'ko': ko, 'note': note, 'tags': [], 'new': [w for w in new if w][:3]}
+    note = re.sub(r'^해설\s*\(?|\)$', '', parts[2]).strip() if len(parts) > 2 else ''
+    new = [w.strip() for w in re.split(r'[,，、]', re.sub(r'^새\s*단어\s*[:：]?', '', parts[3]))] if len(parts) > 3 else []
+    t = {'num': len(turns) + 1, 'speaker': r['sp'], 'th': th.replace('❓', '').strip(), 'rd': '', 'ko': ko, 'note': note, 'tags': [], 'new': [w for w in new if w][:3]}
     if '❓' in th:
         t['check'] = True
     if p['kind'] == 'chat':
