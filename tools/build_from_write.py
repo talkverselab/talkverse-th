@@ -32,6 +32,10 @@ for i, r in enumerate(recs, 1):
     if len(parts) < 2 or re.match(r'^추천', parts[0]):
         continue
     th, ko = parts[0], parts[1]
+    # Grok 이 태국어 단어마다 띄어 쓴 줄(공백이 태국 글자 4자당 1개 이상)은 붙인다 — 555·숫자·{name} 앞뒤 공백은 둔다
+    thai_chars = len(re.findall(r'[\u0E00-\u0E7F]', th))
+    if thai_chars and th.count(' ') * 6 >= thai_chars:
+        th = re.sub(r'(?<=[\u0E00-\u0E7F]) (?=[\u0E00-\u0E7F])', '', th)
     note = re.sub(r'^해설\s*\(?|\)$', '', parts[2]).strip() if len(parts) > 2 else ''
     new = [w.strip() for w in re.split(r'[,，、]', re.sub(r'^새\s*단어\s*[:：]?', '', parts[3]))] if len(parts) > 3 else []
     t = {'num': len(turns) + 1, 'speaker': r['sp'], 'th': th.replace('❓', '').strip(), 'rd': '', 'ko': ko, 'note': note, 'tags': [], 'new': [w for w in new if w][:3]}
