@@ -1,7 +1,7 @@
 """scripts_src.txt → scripts_th.json(앱용) + REVIEW.md(검수표).
 
 검사: 도메인 6 × 욕구 4 = 24개 1편이 전부 있는지, 회차 번호가 1부터 빠짐없이 이어지는지,
-각 8턴인지, 독음에 로마자가 섞였는지, 태국어 칸이 비었는지.
+레벨별 턴 수(초·중급 8~12, 고급 12~16 — 공통 원칙 §3), 모든 편의 반전 턴·종류(§9), 독음에 로마자가 섞였는지, 태국어 칸이 비었는지.
 """
 import io
 import json
@@ -16,6 +16,9 @@ D = os.path.dirname(os.path.abspath(__file__))
 DOMAINS = ["eat", "move", "home", "work", "trip", "night", "phone", "us"]
 LEVELS = ["beg", "mid", "adv"]
 LEVEL_KO = {"beg": "초급", "mid": "중급", "adv": "고급"}
+REGION = {"beg": "R1", "mid": "R2", "adv": "R3"}  # 공통 원칙 §2: 표시 초급 = R1, 중급 = R2, 고급 = R3·R4
+TURNS = {"beg": (6, 8), "mid": (8, 12), "adv": (12, 16)}
+TWIST_TYPES = {"chaos", "slip", "reveal", "emotion", "ignore"}
 DRIVES = ["romance", "win", "status", "thrill"]
 DOMAIN_KO = {"eat": "먹고 마시기", "move": "이동·거리", "home": "살림", "work": "일", "trip": "여행", "night": "밤", "phone": "폰 속", "us": "둘만의 시간"}
 DRIVE_KO = {"romance": "설렘", "win": "승부", "status": "인정", "thrill": "일탈"}
@@ -45,6 +48,9 @@ for ln, line in enumerate(src, 1):
             "review": {"status": "draft", "reviewer": None}, "turns": [],
         }
         cur["level"] = cur["tags"].pop("level", "mid")
+        cur["region"] = REGION.get(cur["level"])
+        cur["twist"] = int(cur["tags"].pop("twist", 0))
+        cur["twist_type"] = cur["tags"].pop("tt", "")
         if cur["level"] not in LEVELS:
             errs.append("%d: 모르는 level %s" % (ln, cur["level"]))
         if dom not in DOMAINS or drv not in DRIVES:
@@ -109,8 +115,11 @@ for key, eps in series.items():
     for s in eps:
         s["series_len"] = len(eps)
 for s in scripts:
-    if len(s["turns"]) != 8:
-        errs.append("%s: %d턴" % (s["id"], len(s["turns"])))
+    lo, hi = TURNS[s["level"]]
+    if not lo <= len(s["turns"]) <= hi:
+        errs.append("%s: %d턴 (%s 기준 %d~%d)" % (s["id"], len(s["turns"]), s["region"], lo, hi))
+    if not 1 <= s["twist"] <= len(s["turns"]) or s["twist_type"] not in TWIST_TYPES:
+        errs.append("%s: 반전 표시 오류 twist=%s tt=%s" % (s["id"], s["twist"], s["twist_type"]))
 if errs:
     print("\n".join(errs))
     sys.exit(1)
@@ -120,7 +129,7 @@ base_scripts = scripts
 warn = []
 cfg = json.load(io.open(os.path.join(D, "variants.json"), encoding="utf-8"))
 scripts = make_variants(base_scripts, cfg, warn)
-json.dump({"meta": {"version": "draft-5", "lang": "th", "turns_per_script": 8,
+json.dump({"meta": {"version": "draft-6", "lang": "th", "turns": {REGION[k]: v for k, v in TURNS.items()},
                     "lookup": "질문 답으로 전체에 점수를 매겨 재생 목록을 만든다(select_playlist.py). 앞 회차를 끝내야 next 가 열린다.",
                     "variants": "id 끝의 @판: 연애 상대가 나오는 스크립트 = mf·fm·mm·ff(나·상대), 그 밖 = m·f(나). voices = 화자별 음성 성별.",
                     "note": "roman = 한글 근사 독음. 전부 자체 제작, 사람 검수 전(review.status=draft)."},
@@ -159,6 +168,7 @@ for s in base_scripts:
     if s["recap"]:
         md.append("지난 이야기: " + s["recap"] + "  ")
     md.append("> " + s["hook"] + "\n")
+    md.append("반전: %d턴 · %s\n" % (s["twist"], s["twist_type"]))
     md.append("| # | 화자 | 태국어 | 독음 | 한국어 | 노트 |")
     md.append("|---|---|---|---|---|---|")
     for t in s["turns"]:

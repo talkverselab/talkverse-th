@@ -9,7 +9,7 @@ import '../services/ko_reading.dart';
 import '../services/tts_service.dart';
 import '../services/dev_notes.dart';
 
-/// 코스 스크립트 1편(8턴) — 채팅 버블. 화자 성별에 맞는 음성으로 읽는다.
+/// 코스 스크립트 1편(레벨별 8~12턴) — 채팅 버블. 화자 성별에 맞는 음성으로 읽는다.
 class CourseEpisodeScreen extends StatefulWidget {
   final CourseScript script;
   const CourseEpisodeScreen({super.key, required this.script});

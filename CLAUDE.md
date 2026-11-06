@@ -109,7 +109,7 @@ adb -s R3CY20HDN2K install --user 0 -r <apk>
 
 > **회화 공통 원칙(2026-11-02 확정, 모든 언어앱)**: https://talkverse.uk/talkverse/dialogue-rules/ — 회화를 만들거나 고칠 때 이 원칙이 우선한다(레벨 = 절벽 R1~R4, 턴 수 R1 6~8 · R2 8~12 · R3·R4 12~16, 모든 편 반전 1회, 수위 12+, 검수 = 자동 검사 + 교차 검수). 절벽 기준표 https://talkverse.uk/cliff/18/ . 아래는 **태국어 특이점**과 지금 구현 상태다.
 > - 태국어 특이점: 독음은 한글만(성조 DB `th_tones.json`, 영·일·중 UI 는 그 `ro` 로마자) · 기본 변이 = 방콕 표준어 · 성별판 필수(1인칭 ผม/ฉัน/หนู, 어미 ครับ/ค่ะ·คะ — `variants.py` 규칙 + `variants.json` overrides, 판 mf·fm·mm·ff / m·f) · 턴 길이 = 초급 독음 20음절 이하 목표(`check_beginner.py`).
-> - 아직 옛 기준: 레벨 beg/mid/adv·전 편 8턴·반전 표시 없음 — 공통 원칙으로 옮기는 작업은 남아 있다.
+> - 내 코스 스크립트(2026-11-06 공통 원칙 반영): 표시 레벨 beg/mid/adv 는 앱 질문용으로 두고 `region` R1/R2/R3 을 함께 낸다. 턴 수 R1·R2 8, R3 12. 머리줄 tags 의 `twist:<턴>,tt:<종류>` 로 모든 편에 반전을 표시하고 `build_scripts.py` 가 턴 수·반전을 검사한다.
 
 - 질문 14개의 답으로 미리 써 둔 스크립트에 점수를 매겨 재생 목록을 만든다. **무대 8개**(eat·move·home·work·trip·night·phone·us, 3개까지, 필터) × **레벨 3**(beg·mid·adv — 고른 레벨 +3, 이웃 레벨까지만) × 욕구 4 (2026-09-23 개편, 옛 답 biz·travel·stay·fan·chat 은 앱이 자동으로 새 id 로 옮김). **런타임에 글을 생성하지 않는다** — 같은 답이면 같은 목록.
 - 원본은 `drafts/script_engine/scripts_src.txt`(중·고급) + `scripts_src_beginner.txt`(초급 32편) — 한 줄 = 한 턴, 머리줄 tags 에 `level:` 필수. 고친 뒤 `python build_scripts.py` → `python publish_to_app.py` 로 `assets/data/course/` 를 갱신한다. 에셋 JSON 을 직접 고치지 말 것.
