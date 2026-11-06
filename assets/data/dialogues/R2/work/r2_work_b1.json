@@ -22,7 +22,9 @@
  "register": "polite",
  "twist": 7,
  "twist_type": "reveal",
- "flags": [],
+ "flags": [
+  "alcohol"
+ ],
  "goal": "",
  "expressions": [
   "ชนแก้ว",

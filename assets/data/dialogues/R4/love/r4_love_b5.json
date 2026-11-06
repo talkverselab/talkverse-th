@@ -22,7 +22,9 @@
  "register": "casual",
  "twist": 11,
  "twist_type": "emotion",
- "flags": [],
+ "flags": [
+  "alcohol"
+ ],
  "goal": "",
  "expressions": [
   "แล้วยังไงต่อ",

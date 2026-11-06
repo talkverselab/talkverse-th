@@ -23,7 +23,9 @@
  "register": "polite",
  "twist": 5,
  "twist_type": "chaos",
- "flags": [],
+ "flags": [
+  "alcohol"
+ ],
  "goal": "",
  "expressions": [
   "ปวดท้อง",

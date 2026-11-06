@@ -21,7 +21,9 @@
  "register": "casual",
  "twist": 7,
  "twist_type": "emotion",
- "flags": [],
+ "flags": [
+  "alcohol"
+ ],
  "goal": "",
  "expressions": [
   "เมาแล้วเหรอ",
