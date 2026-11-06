@@ -1,0 +1,1732 @@
+[
+ {
+  "id": "r0_friends_a5",
+  "kind": "short",
+  "emoji": "🍕",
+  "title": "한 조각 남았어",
+  "where": "피자집",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "casual",
+  "twist_type": "chaos",
+  "twist": 5,
+  "scene": "마지막 피자 한 조각을 두고 학습자와 ต้น 이 서로 양보하는 척한다",
+  "chaos": "양보하다 옆 테이블 아이가 집어 가고 아이 엄마가 피자 한 판을 더 시켜 준다",
+  "heart": "ต้น \"다음엔 내가 양보 안 해\"",
+  "targets": [
+   "กินเลย",
+   "ไม่เป็นไร",
+   "อิ่มแล้ว"
+  ]
+ },
+ {
+  "id": "r0_friends_c2",
+  "kind": "chat",
+  "emoji": "📸",
+  "title": "사진 보내 줘",
+  "where": "채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "chat",
+  "twist_type": "slip",
+  "twist": 5,
+  "scene": "어제 찍은 사진을 보내 달라는데 학습자가 엉뚱한 사진을 보낸다",
+  "chaos": "ต้น 얼굴 대신 학습자의 자는 얼굴 사진을 보낸다",
+  "heart": "ต้น \"프로필로 쓴다 555\"",
+  "targets": [
+   "ส่งรูปหน่อย",
+   "รูปไหน",
+   "555"
+  ]
+ },
+ {
+  "id": "r0_study_a4",
+  "kind": "short",
+  "emoji": "📖",
+  "title": "어디까지 읽었어?",
+  "where": "학교 도서관",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "casual",
+  "twist_type": "emotion",
+  "twist": 5,
+  "scene": "ฟ้า 가 같은 책을 들고 옆자리에 앉는다",
+  "chaos": "서로 같은 쪽을 읽는 척하지만 둘 다 안 읽고 있었다",
+  "heart": "ฟ้า \"…사실 너 보고 있었어\"",
+  "targets": [
+   "อ่านถึงไหน",
+   "ยังไม่จบ",
+   "ง่วงแล้ว"
+  ]
+ },
+ {
+  "id": "r0_study_c1",
+  "kind": "chat",
+  "emoji": "✏️",
+  "title": "내일 시험?",
+  "where": "채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "chaos",
+  "twist": 5,
+  "scene": "내일 시험이 맞는지 묻는 짧은 채팅",
+  "chaos": "반 전체가 \"시험?\"만 보내 단톡방이 터진다",
+  "heart": "ฟ้า \"같이 공부할래?\"",
+  "targets": [
+   "พรุ่งนี้สอบ",
+   "จริงเหรอ",
+   "อ่านหนังสือ"
+  ]
+ },
+ {
+  "id": "r0_work_a3",
+  "kind": "short",
+  "emoji": "🍱",
+  "title": "점심 뭐 먹어?",
+  "where": "회사 앞",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "polite",
+  "twist_type": "ignore",
+  "twist": 5,
+  "scene": "점심 메뉴를 묻는데 동료는 계속 다른 말만 한다",
+  "chaos": "학습자가 뭘 물어도 ต้น 은 복권 얘기만 한다",
+  "heart": "복권이 맞아 점심을 사 준다",
+  "targets": [
+   "กินอะไรดี",
+   "อะไรก็ได้",
+   "ไปกัน"
+  ]
+ },
+ {
+  "id": "r0_life_a6",
+  "kind": "short",
+  "emoji": "🧺",
+  "title": "양말 한 짝",
+  "where": "콘도 복도",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "polite",
+  "twist_type": "reveal",
+  "twist": 5,
+  "scene": "복도에서 주운 양말을 이웃에게 건넨다",
+  "chaos": "양말 주인이 ฟ้า 라는 것이 드러나고 고양이가 다 물어 왔다",
+  "heart": "ฟ้า \"고마워요, 또 잃어버려도 돼요?\"",
+  "targets": [
+   "ของใคร",
+   "ขอบคุณ",
+   "อยู่ชั้นไหน"
+  ]
+ },
+ {
+  "id": "r0_travel_a5",
+  "kind": "short",
+  "emoji": "🧭",
+  "title": "지도가 거꾸로",
+  "where": "골목",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "casual",
+  "twist_type": "slip",
+  "twist": 5,
+  "scene": "둘이 지도를 보며 길을 찾는다",
+  "chaos": "지도를 거꾸로 들고 있었다",
+  "heart": "ฟ้า \"길 잃어도 너랑이면 괜찮아\"",
+  "targets": [
+   "ไปทางไหน",
+   "ซ้ายหรือขวา",
+   "หลงทาง"
+  ]
+ },
+ {
+  "id": "r0_love_c6",
+  "kind": "chat",
+  "emoji": "💘",
+  "title": "매칭됐어요",
+  "where": "데이팅 앱",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "emotion",
+  "twist": 5,
+  "scene": "앱에서 매칭되어 첫 인사를 나눈다",
+  "chaos": "서로 같은 카페에 앉아 있다는 걸 사진으로 알게 된다",
+  "heart": "ฟ้า \"뒤 돌아봐\"",
+  "targets": [
+   "สวัสดี",
+   "ทำอะไรอยู่",
+   "อยู่ไหน"
+  ]
+ },
+ {
+  "id": "r1_friends_a6",
+  "kind": "short",
+  "emoji": "🎳",
+  "title": "볼링 내기",
+  "where": "볼링장",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "casual",
+  "twist_type": "chaos",
+  "twist": 5,
+  "scene": "진 사람이 벌칙을 받는 볼링 내기",
+  "chaos": "학습자의 공이 옆 레인으로 가 다른 팀 스트라이크가 되고 그 팀이 합석을 청한다",
+  "heart": "ต้น \"벌칙은 네가 받아도 재밌어\"",
+  "targets": [
+   "พนันกัน",
+   "แพ้แล้ว",
+   "อีกตา"
+  ]
+ },
+ {
+  "id": "r1_friends_a7",
+  "kind": "short",
+  "emoji": "🐶",
+  "title": "강아지 맡아 줘",
+  "where": "ต้น 의 콘도",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "casual",
+  "twist_type": "chaos",
+  "twist": 5,
+  "scene": "ต้น 이 하루만 강아지를 맡긴다",
+  "chaos": "한 마리인 줄 알았는데 친구들 강아지까지 다섯 마리가 온다",
+  "heart": "ต้น \"네가 제일 믿을 만해서\"",
+  "targets": [
+   "ฝากหน่อย",
+   "วันเดียว",
+   "ไม่กัดนะ"
+  ]
+ },
+ {
+  "id": "r1_friends_c3",
+  "kind": "chat",
+  "emoji": "🍻",
+  "title": "오늘 나올 사람",
+  "where": "단톡방",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น",
+   "C": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "chaos",
+  "twist": 5,
+  "scene": "금요일 번개 약속을 잡는 단톡방",
+  "chaos": "모두 \"나 갈게\"라더니 시간 되자 전원이 핑계를 대고 둘만 남는다",
+  "heart": "ฟ้า \"그럼 둘이 볼까?\"",
+  "targets": [
+   "ใครว่างบ้าง",
+   "เจอกันกี่โมง",
+   "ขอโทษนะ"
+  ]
+ },
+ {
+  "id": "r1_friends_c4",
+  "kind": "chat",
+  "emoji": "🎂",
+  "title": "몰래 선물 모금",
+  "where": "단톡방(ต้น 몰래 만든 방)",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า",
+   "C": "ต้น"
+  },
+  "register": "chat",
+  "twist_type": "slip",
+  "twist": 5,
+  "scene": "ต้น 생일 선물 돈을 모으는 비밀방",
+  "chaos": "학습자가 ต้น 이 있는 방에 \"선물 뭐로 할까\"를 잘못 보낸다",
+  "heart": "ต้น \"모르는 척해 줄게\"",
+  "targets": [
+   "ลงขัน",
+   "ผิดกลุ่ม",
+   "เซอร์ไพรส์"
+  ]
+ },
+ {
+  "id": "r1_study_a5",
+  "kind": "short",
+  "emoji": "🎧",
+  "title": "듣기 평가",
+  "where": "어학당 교실",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "casual",
+  "twist_type": "slip",
+  "twist": 5,
+  "scene": "학습자가 듣기 평가에서 답을 말한다",
+  "chaos": "성조를 틀려 \"말\"을 \"개\"로 답해 교실이 웃는다",
+  "heart": "ฟ้า 가 몰래 정답 쪽지를 건넨다",
+  "targets": [
+   "ฟังอีกที",
+   "ตอบว่า",
+   "ผิดนิดเดียว"
+  ]
+ },
+ {
+  "id": "r1_study_a6",
+  "kind": "short",
+  "emoji": "🥤",
+  "title": "스터디 카페 규칙",
+  "where": "스터디 카페",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "polite",
+  "twist_type": "ignore",
+  "twist": 5,
+  "scene": "조용히 해야 하는 곳에서 학습자가 말을 건다",
+  "chaos": "ฟ้า 는 필담으로만 답하고 쪽지가 점점 길어진다",
+  "heart": "마지막 쪽지 \"끝나고 밥 먹자\"",
+  "targets": [
+   "เบาๆ หน่อย",
+   "เงียบๆ",
+   "เสร็จกี่โมง"
+  ]
+ },
+ {
+  "id": "r1_study_c2",
+  "kind": "chat",
+  "emoji": "📚",
+  "title": "과제 어디까지 했어",
+  "where": "채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "reveal",
+  "twist": 5,
+  "scene": "과제가 어디까지 됐는지 서로 떠본다",
+  "chaos": "둘 다 \"거의 다 했어\"라고 했는데 둘 다 시작도 안 했다",
+  "heart": "ฟ้า \"지금 영상통화로 같이 하자\"",
+  "targets": [
+   "ทำถึงไหนแล้ว",
+   "เกือบเสร็จ",
+   "ยังไม่เริ่ม"
+  ]
+ },
+ {
+  "id": "r1_work_a4",
+  "kind": "short",
+  "emoji": "🖨️",
+  "title": "복사기 전쟁",
+  "where": "사무실",
+  "speakers": {
+   "A": "{name}",
+   "B": "พี่หัวหน้า",
+   "C": "ต้น"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 5,
+  "scene": "마감 전 복사기가 고장 난다",
+  "chaos": "버튼을 누를 때마다 500장이 더 나와 사무실이 종이로 덮인다",
+  "heart": "선배 \"첫 달에 다 그래\"",
+  "targets": [
+   "เครื่องเสีย",
+   "กดอะไร",
+   "ช่วยด้วย"
+  ]
+ },
+ {
+  "id": "r1_work_a5",
+  "kind": "short",
+  "emoji": "🎁",
+  "title": "비밀 산타",
+  "where": "사무실 탕비실",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "polite",
+  "twist_type": "reveal",
+  "twist": 5,
+  "scene": "연말 선물 교환 제비를 뽑는다",
+  "chaos": "모두가 뽑은 이름이 학습자라는 것이 드러난다",
+  "heart": "선물 다섯 개가 다 태국어 사전",
+  "targets": [
+   "จับฉลาก",
+   "ได้ใคร",
+   "ของขวัญ"
+  ]
+ },
+ {
+  "id": "r1_work_c2",
+  "kind": "chat",
+  "emoji": "📞",
+  "title": "오늘 재택이에요?",
+  "where": "업무 채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "พี่หัวหน้า"
+  },
+  "register": "chat",
+  "twist_type": "slip",
+  "twist": 5,
+  "scene": "재택 여부를 묻는 업무 채팅",
+  "chaos": "상사에게 ครับ 대신 이모지 하트를 눌러 보낸다",
+  "heart": "상사도 하트로 답한다",
+  "targets": [
+   "ทำงานที่บ้าน",
+   "เข้าออฟฟิศ",
+   "รับทราบครับ"
+  ]
+ },
+ {
+  "id": "r1_life_a5",
+  "kind": "short",
+  "emoji": "🛵",
+  "title": "오토바이 택시 요금",
+  "where": "골목 입구",
+  "speakers": {
+   "A": "{name}",
+   "B": "พี่วิน"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 5,
+  "scene": "오토바이 택시 기사와 요금을 묻는다",
+  "chaos": "기사마다 친구를 불러 골목 기사 전원이 학습자 태국어를 구경한다",
+  "heart": "기사 \"내일부터 단골 요금\"",
+  "targets": [
+   "ไปซอยไหน",
+   "กี่บาท",
+   "ลดหน่อย"
+  ]
+ },
+ {
+  "id": "r1_life_c2",
+  "kind": "chat",
+  "emoji": "🛒",
+  "title": "장 볼 목록",
+  "where": "채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "chaos",
+  "twist": 5,
+  "scene": "ฟ้า 가 장 볼 목록을 보낸다",
+  "chaos": "목록이 계속 늘어 학습자가 카트 세 개를 끈다",
+  "heart": "ฟ้า \"내일 내가 다 요리해 줄게\"",
+  "targets": [
+   "ซื้อเพิ่ม",
+   "อีกอย่าง",
+   "พอแล้ว"
+  ]
+ },
+ {
+  "id": "r1_travel_a5",
+  "kind": "short",
+  "emoji": "🚤",
+  "title": "수상시장 흥정",
+  "where": "수상시장",
+  "speakers": {
+   "A": "{name}",
+   "B": "แม่ค้า"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 5,
+  "scene": "배 위 상인과 망고 값을 흥정한다",
+  "chaos": "깎을수록 배들이 모여들어 학습자 배가 시장 한가운데 갇힌다",
+  "heart": "상인 \"덤 하나 더\"",
+  "targets": [
+   "เท่าไหร่",
+   "แพงไป",
+   "แถมหน่อย"
+  ]
+ },
+ {
+  "id": "r1_travel_c1",
+  "kind": "chat",
+  "emoji": "🧳",
+  "title": "짐 어디 있어?",
+  "where": "채팅(공항)",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "reveal",
+  "twist": 5,
+  "scene": "공항에서 ฟ้า 를 기다리며 채팅한다",
+  "chaos": "ฟ้า 는 이미 짐까지 찾고 학습자 뒤에 서 있다",
+  "heart": "ฟ้า \"찾았다\"",
+  "targets": [
+   "ถึงแล้ว",
+   "รออยู่ตรงไหน",
+   "กระเป๋า"
+  ]
+ },
+ {
+  "id": "r1_culture_a5",
+  "kind": "short",
+  "emoji": "🙏",
+  "title": "스님 앞에서",
+  "where": "아침 탁발 길",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "polite",
+  "twist_type": "slip",
+  "twist": 5,
+  "scene": "처음 해 보는 탁발 공양",
+  "chaos": "스님께 건넨 말이 식당 주문 말투로 나온다",
+  "heart": "ฟ้า \"마음은 전해졌어\"",
+  "targets": [
+   "ใส่บาตร",
+   "ถอดรองเท้า",
+   "สาธุ"
+  ]
+ },
+ {
+  "id": "r1_culture_c2",
+  "kind": "chat",
+  "emoji": "🎵",
+  "title": "이 노래 뭐야?",
+  "where": "채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "emotion",
+  "twist": 5,
+  "scene": "ฟ้า 가 태국 노래를 추천한다",
+  "chaos": "가사를 번역해 보니 고백 가사다",
+  "heart": "ฟ้า \"번역 끝났어?\"",
+  "targets": [
+   "เพลงนี้",
+   "แปลว่าอะไร",
+   "ฟังยัง"
+  ]
+ },
+ {
+  "id": "r1_love_c8",
+  "kind": "chat",
+  "emoji": "🌧️",
+  "title": "데리러 갈까?",
+  "where": "채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "emotion",
+  "twist": 5,
+  "scene": "비 오는 밤 퇴근길 채팅",
+  "chaos": "우산 없다는 ฟ้า 에게 간다고 했더니 이미 회사 앞에 와 있었다는 걸 학습자가 고백한다",
+  "heart": "ฟ้า \"언제부터 있었어?\"",
+  "targets": [
+   "ฝนตก",
+   "ไปรับไหม",
+   "ถึงแล้ว"
+  ]
+ },
+ {
+  "id": "r1_love_c9",
+  "kind": "chat",
+  "emoji": "🗓️",
+  "title": "두 번째 데이트",
+  "where": "데이팅 앱",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "chaos",
+  "twist": 5,
+  "scene": "두 번째 약속을 잡는다",
+  "chaos": "일정을 맞출수록 후보가 늘어 결국 일주일 내내 만나기로 한다",
+  "heart": "ฟ้า \"매일 봐도 괜찮아?\"",
+  "targets": [
+   "ว่างวันไหน",
+   "นัดกัน",
+   "เจอกัน"
+  ]
+ },
+ {
+  "id": "r2_friends_b6",
+  "kind": "long",
+  "emoji": "🎮",
+  "title": "게임 팀 해체",
+  "where": "PC방",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "casual",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "학습자와 ต้น 의 게임 팀 첫 대회 날",
+  "chaos": "한 명씩 실수를 탓하다 PC방 전체가 편을 갈라 응원전이 된다",
+  "heart": "ต้น \"우리 팀은 너뿐이야\"",
+  "targets": [
+   "โทษกัน",
+   "อย่าโทษ",
+   "แพ้ก็แพ้"
+  ]
+ },
+ {
+  "id": "r2_friends_b7",
+  "kind": "long",
+  "emoji": "🏍️",
+  "title": "친구 전 애인과 마주치기",
+  "where": "쇼핑몰",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "casual",
+  "twist_type": "reveal",
+  "twist": 7,
+  "scene": "ต้น 이 전 애인을 피해 학습자 뒤에 숨는다",
+  "chaos": "전 애인이 학습자의 요가 선생님이었다",
+  "heart": "ต้น \"한 번만 말 걸어 줘\"",
+  "targets": [
+   "หลบก่อน",
+   "ทำเป็นไม่เห็น",
+   "แฟนเก่า"
+  ]
+ },
+ {
+  "id": "r2_friends_b8",
+  "kind": "long",
+  "emoji": "🏕️",
+  "title": "축구장 대타",
+  "where": "동네 풋살장",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "casual",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "사람이 모자라 학습자가 대타로 뛴다",
+  "chaos": "자책골 뒤 상대 팀까지 학습자를 자기 팀이라 부른다",
+  "heart": "ต้น \"넌 양쪽 팀 전설이야\"",
+  "targets": [
+   "ส่งบอล",
+   "ยิงเลย",
+   "ขาดคน"
+  ]
+ },
+ {
+  "id": "r2_friends_c1",
+  "kind": "chat",
+  "emoji": "💬",
+  "title": "인스타 댓글 전쟁",
+  "where": "인스타 댓글",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น",
+   "C": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "ต้น 의 셀카에 학습자가 단 댓글",
+  "chaos": "태국 친구들이 몰려와 댓글이 200개가 된다",
+  "heart": "ฟ้า 가 몰래 좋아요를 누른다",
+  "targets": [
+   "คอมเมนต์",
+   "แท็กเพื่อน",
+   "ปังมาก"
+  ]
+ },
+ {
+  "id": "r2_friends_c2",
+  "kind": "chat",
+  "emoji": "🫣",
+  "title": "친구한테만 말해",
+  "where": "DM",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "reveal",
+  "twist": 7,
+  "scene": "비밀을 말해 주는 DM",
+  "chaos": "비밀이 이미 다섯 명에게 돌았다",
+  "heart": "ฟ้า \"너한테만은 진짜야\"",
+  "targets": [
+   "อย่าบอกใคร",
+   "รู้กันทั้งกลุ่ม",
+   "สาบาน"
+  ]
+ },
+ {
+  "id": "r2_friends_c3",
+  "kind": "chat",
+  "emoji": "🧾",
+  "title": "N빵 정산",
+  "where": "단톡방",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น",
+   "C": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "여행 뒤 정산 단톡방",
+  "chaos": "계산이 맞지 않아 오히려 모두 서로 돈을 빚진 상태가 된다",
+  "heart": "ฟ้า \"난 네 몫 이미 냈어\"",
+  "targets": [
+   "หารกัน",
+   "โอนแล้วนะ",
+   "ขาดอีก"
+  ]
+ },
+ {
+  "id": "r2_study_b4",
+  "kind": "long",
+  "emoji": "🧪",
+  "title": "실험실 사고",
+  "where": "대학 실험실",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "조교 앞에서 첫 실험",
+  "chaos": "거품이 넘쳐 복도까지 흐르고 교수님이 그걸로 수업을 시작한다",
+  "heart": "ฟ้า 가 젖은 노트를 말려 준다",
+  "targets": [
+   "ระวังนะ",
+   "ทำไงดี",
+   "อาจารย์มา"
+  ]
+ },
+ {
+  "id": "r2_study_b5",
+  "kind": "long",
+  "emoji": "🎓",
+  "title": "장학금 면접",
+  "where": "학교 사무실",
+  "speakers": {
+   "A": "{name}",
+   "B": "อาจารย์"
+  },
+  "register": "polite",
+  "twist_type": "slip",
+  "twist": 7,
+  "scene": "장학금 면접",
+  "chaos": "\"돈이 필요합니다\"를 \"개가 필요합니다\"로 말해 면접관이 웃는다",
+  "heart": "교수 \"그 용기로 합격\"",
+  "targets": [
+   "ทุนการศึกษา",
+   "เหตุผล",
+   "ขอบคุณที่ให้โอกาส"
+  ]
+ },
+ {
+  "id": "r2_study_b6",
+  "kind": "long",
+  "emoji": "📝",
+  "title": "커닝 오해",
+  "where": "시험장",
+  "speakers": {
+   "A": "{name}",
+   "B": "อาจารย์",
+   "C": "ฟ้า"
+  },
+  "register": "polite",
+  "twist_type": "reveal",
+  "twist": 7,
+  "scene": "시험 중 사전 앱 알림이 울린다",
+  "chaos": "알림은 ฟ้า 의 응원 메시지였다",
+  "heart": "ฟ้า \"시험 끝나고 혼나러 가자\"",
+  "targets": [
+   "ปิดมือถือ",
+   "เข้าใจผิด",
+   "ขอโทษครับ"
+  ]
+ },
+ {
+  "id": "r2_study_c3",
+  "kind": "chat",
+  "emoji": "🧑‍🏫",
+  "title": "교수님 단톡방",
+  "where": "수업 단톡방",
+  "speakers": {
+   "A": "{name}",
+   "B": "อาจารย์",
+   "C": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "과제 공지가 오는 단톡방",
+  "chaos": "학습자가 교수 흉을 그 방에 올린다",
+  "heart": "ฟ้า 가 재빨리 다른 얘기로 덮어 준다",
+  "targets": [
+   "ลบข้อความ",
+   "ส่งผิด",
+   "ขอโทษอาจารย์"
+  ]
+ },
+ {
+  "id": "r2_study_c4",
+  "kind": "chat",
+  "emoji": "⏰",
+  "title": "모닝콜 약속",
+  "where": "채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "emotion",
+  "twist": 7,
+  "scene": "시험 날 깨워 주기로 한 ฟ้า",
+  "chaos": "ฟ้า 가 밤새 안 자고 기다렸다",
+  "heart": "ฟ้า \"일어나. 네가 잘되길 바라서\"",
+  "targets": [
+   "ปลุกด้วย",
+   "ตื่นยัง",
+   "สู้ๆ"
+  ]
+ },
+ {
+  "id": "r2_work_b5",
+  "kind": "long",
+  "emoji": "🧑‍💼",
+  "title": "거래처 이름 실수",
+  "where": "회의실",
+  "speakers": {
+   "A": "{name}",
+   "B": "พี่หัวหน้า"
+  },
+  "register": "polite",
+  "twist_type": "slip",
+  "twist": 7,
+  "scene": "거래처 사장 앞 인사",
+  "chaos": "사장 이름의 성조를 틀려 욕이 된다",
+  "heart": "사장 \"그 덕에 기억하겠네\"",
+  "targets": [
+   "ยินดีที่ได้รู้จัก",
+   "ขออภัย",
+   "ออกเสียงผิด"
+  ]
+ },
+ {
+  "id": "r2_work_b6",
+  "kind": "long",
+  "emoji": "🌙",
+  "title": "야근 야식 대란",
+  "where": "사무실",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "야근 중 야식을 한 건 주문한다",
+  "chaos": "부서마다 같은 주문을 넣어 치킨 40마리가 온다",
+  "heart": "ต้น \"내일 전 층에 영웅이야\"",
+  "targets": [
+   "สั่งอาหาร",
+   "ใครสั่ง",
+   "จ่ายยังไง"
+  ]
+ },
+ {
+  "id": "r2_work_b7",
+  "kind": "long",
+  "emoji": "🎤",
+  "title": "신입 환영 장기자랑",
+  "where": "회사 강당",
+  "speakers": {
+   "A": "{name}",
+   "B": "พี่หัวหน้า",
+   "C": "ต้น"
+  },
+  "register": "mixed",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "신입 환영회 무대",
+  "chaos": "학습자 태국어 노래를 사장이 따라 부르며 전 직원 합창이 된다",
+  "heart": "사장 \"이 친구 정규직 언제지?\"",
+  "targets": [
+   "ขึ้นเวที",
+   "ร้องได้ไหม",
+   "สนุกมาก"
+  ]
+ },
+ {
+  "id": "r2_work_c3",
+  "kind": "chat",
+  "emoji": "📧",
+  "title": "전체 메일 실수",
+  "where": "사내 메신저",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "chat",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "사내 메일 답장",
+  "chaos": "전체 답장으로 연차 사유를 보내 회사가 축하를 쏟아 낸다",
+  "heart": "ต้น \"이 메일 액자로 만든다\"",
+  "targets": [
+   "ตอบทุกคน",
+   "ลาพักร้อน",
+   "เรียกคืนไม่ได้"
+  ]
+ },
+ {
+  "id": "r2_work_c4",
+  "kind": "chat",
+  "emoji": "💼",
+  "title": "면접 결과 기다리기",
+  "where": "채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "emotion",
+  "twist": 7,
+  "scene": "면접 뒤 결과를 기다린다",
+  "chaos": "불합격 메일이 왔다고 거짓말하던 ฟ้า 가 합격 축하 케이크를 보낸다",
+  "heart": "ฟ้า \"내가 제일 먼저 알고 싶었어\"",
+  "targets": [
+   "ผลสัมภาษณ์",
+   "ได้งาน",
+   "ดีใจด้วย"
+  ]
+ },
+ {
+  "id": "r2_life_b6",
+  "kind": "long",
+  "emoji": "🏥",
+  "title": "병원 접수",
+  "where": "병원",
+  "speakers": {
+   "A": "{name}",
+   "B": "พยาบาล"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "배가 아파 병원에 간다",
+  "chaos": "증상을 말할수록 검사실이 늘어나 건강검진 전체를 받게 된다",
+  "heart": "간호사 \"다 정상이에요, 밥 드세요\"",
+  "targets": [
+   "ปวดท้อง",
+   "แพ้ยา",
+   "ตรวจเลือด"
+  ]
+ },
+ {
+  "id": "r2_life_b7",
+  "kind": "long",
+  "emoji": "🏦",
+  "title": "은행 계좌 만들기",
+  "where": "은행",
+  "speakers": {
+   "A": "{name}",
+   "B": "พนักงาน"
+  },
+  "register": "polite",
+  "twist_type": "ignore",
+  "twist": 7,
+  "scene": "계좌를 만들러 간 은행",
+  "chaos": "직원이 서류 대신 한국 드라마 얘기만 한다",
+  "heart": "직원 \"다음 화 얘기하러 또 오세요\"",
+  "targets": [
+   "เปิดบัญชี",
+   "ใช้เอกสาร",
+   "พาสปอร์ต"
+  ]
+ },
+ {
+  "id": "r2_life_c3",
+  "kind": "chat",
+  "emoji": "🏠",
+  "title": "콘도 주민방",
+  "where": "콘도 주민 단톡방",
+  "speakers": {
+   "A": "{name}",
+   "B": "นิติ",
+   "C": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "엘리베이터 고장 공지",
+  "chaos": "주민들이 민원을 쏟아 내다 번개 모임이 된다",
+  "heart": "ฟ้า \"몇 호 살아요?\"",
+  "targets": [
+   "แจ้งซ่อม",
+   "ลิฟต์เสีย",
+   "ใครอยู่ชั้นไหน"
+  ]
+ },
+ {
+  "id": "r2_travel_b5",
+  "kind": "long",
+  "emoji": "🚆",
+  "title": "침대 기차 표",
+  "where": "방콕 후알람퐁 역",
+  "speakers": {
+   "A": "{name}",
+   "B": "พนักงาน"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "치앙마이행 표를 산다",
+  "chaos": "표가 잘못 끊겨 반대 방향 해변행 기차를 탄다",
+  "heart": "ฟ้า 전화 \"거기서 만나\"",
+  "targets": [
+   "ตั๋วรถไฟ",
+   "เที่ยวเดียว",
+   "ไปผิดทาง"
+  ]
+ },
+ {
+  "id": "r2_travel_b6",
+  "kind": "long",
+  "emoji": "🧗",
+  "title": "동굴 투어",
+  "where": "깐짜나부리 동굴",
+  "speakers": {
+   "A": "{name}",
+   "B": "ไกด์"
+  },
+  "register": "polite",
+  "twist_type": "reveal",
+  "twist": 7,
+  "scene": "가이드를 따라 동굴에 간다",
+  "chaos": "가이드도 오늘이 첫날이었다",
+  "heart": "가이드 \"같이 나가요\"",
+  "targets": [
+   "ระวังหัว",
+   "ทางออก",
+   "หลงทาง"
+  ]
+ },
+ {
+  "id": "r2_travel_c2",
+  "kind": "chat",
+  "emoji": "🏖️",
+  "title": "숙소 후기",
+  "where": "숙소 채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "เจ้าของที่พัก"
+  },
+  "register": "chat",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "숙소 체크인 문의 채팅",
+  "chaos": "주인이 친절할수록 조식·픽업·낚시·결혼식까지 끼워 준다",
+  "heart": "주인 \"내년에도 와요\"",
+  "targets": [
+   "เช็กอินกี่โมง",
+   "มีรถรับไหม",
+   "ฟรี"
+  ]
+ },
+ {
+  "id": "r2_culture_b6",
+  "kind": "long",
+  "emoji": "🍲",
+  "title": "장례식 예절",
+  "where": "사원",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "polite",
+  "twist_type": "slip",
+  "twist": 7,
+  "scene": "동료 가족 장례에 간다",
+  "chaos": "위로말을 축하말로 바꿔 말한다",
+  "heart": "ต้น \"웃음을 줘서 고맙대\"",
+  "targets": [
+   "แสดงความเสียใจ",
+   "ใส่ชุดดำ",
+   "ทำบุญ"
+  ]
+ },
+ {
+  "id": "r2_culture_c1",
+  "kind": "chat",
+  "emoji": "🎬",
+  "title": "스포 금지",
+  "where": "단톡방",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น",
+   "C": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "chaos",
+  "twist": 7,
+  "scene": "드라마 마지막 화 단톡방",
+  "chaos": "스포일러를 피하다 이모지로만 대화하다 전원 오해한다",
+  "heart": "ฟ้า \"같이 볼 때까지 안 볼게\"",
+  "targets": [
+   "อย่าสปอยล์",
+   "ดูยัง",
+   "ตอนจบ"
+  ]
+ },
+ {
+  "id": "r2_love_c1",
+  "kind": "chat",
+  "emoji": "📍",
+  "title": "위치 공유",
+  "where": "채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "reveal",
+  "twist": 7,
+  "scene": "사귄 지 석 달, ฟ้า 가 위치 공유를 켠다",
+  "chaos": "학습자가 몰래 꽃집에 있는 게 보인다",
+  "heart": "ฟ้า \"그 꽃 나 주는 거지?\"",
+  "targets": [
+   "แชร์โลเคชัน",
+   "อยู่ไหนเนี่ย",
+   "แอบไป"
+  ]
+ },
+ {
+  "id": "r2_love_c2",
+  "kind": "chat",
+  "emoji": "🌙",
+  "title": "읽음 표시 끄기",
+  "where": "채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "emotion",
+  "twist": 7,
+  "scene": "다툰 뒤 하루가 지난 채팅",
+  "chaos": "서로 쓰다 지운 글자 수를 세다 웃음이 터진다",
+  "heart": "ฟ้า \"지운 말 다 말해 줘\"",
+  "targets": [
+   "พิมพ์ทำไมลบ",
+   "งอนอยู่",
+   "ขอโทษนะ"
+  ]
+ },
+ {
+  "id": "r3_friends_b4",
+  "kind": "long",
+  "emoji": "💸",
+  "title": "돈 빌려준 친구",
+  "where": "카페",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "casual",
+  "twist_type": "reveal",
+  "twist": 9,
+  "scene": "오래된 친구가 돈 얘기를 꺼낸다",
+  "chaos": "돈은 학습자 깜짝 파티 비용이었다",
+  "heart": "ต้น \"네가 떠나기 전에 해 주고 싶었어\"",
+  "targets": [
+   "พูดตรงๆ",
+   "อย่าคิดมาก",
+   "ลำบากใจ"
+  ]
+ },
+ {
+  "id": "r3_friends_b5",
+  "kind": "long",
+  "emoji": "🧳",
+  "title": "룸메이트와 헤어지는 밤",
+  "where": "콘도",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "casual",
+  "twist_type": "emotion",
+  "twist": 9,
+  "scene": "ต้น 이 이사 가기 전날",
+  "chaos": "짐을 싸다 서로 몰래 남긴 쪽지를 찾는다",
+  "heart": "ต้น \"내 방은 네 방이야\"",
+  "targets": [
+   "อย่าลืมกันนะ",
+   "คิดถึงแน่",
+   "แวะมา"
+  ]
+ },
+ {
+  "id": "r3_friends_c1",
+  "kind": "chat",
+  "emoji": "🔥",
+  "title": "단톡방 파벌",
+  "where": "단톡방",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น",
+   "C": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "chaos",
+  "twist": 9,
+  "scene": "여행 장소를 정하는 단톡방",
+  "chaos": "두 파로 갈려 탈퇴·재초대가 반복되고 방이 네 개가 된다",
+  "heart": "ฟ้า \"우리 둘만 가면 안 돼?\"",
+  "targets": [
+   "ออกจากกลุ่ม",
+   "เลือกข้าง",
+   "ใจเย็น"
+  ]
+ },
+ {
+  "id": "r3_study_b2",
+  "kind": "long",
+  "emoji": "🗣️",
+  "title": "토론 대회 결승",
+  "where": "대학 강당",
+  "speakers": {
+   "A": "{name}",
+   "B": "อาจารย์",
+   "C": "ฟ้า"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 9,
+  "scene": "태국어 토론 대회",
+  "chaos": "상대 논리를 반박하다 양쪽이 같은 말을 하고 있음을 관객이 지적한다",
+  "heart": "ฟ้า \"둘 다 이겼어\"",
+  "targets": [
+   "ผมขอแย้ง",
+   "ในความเห็นของผม",
+   "ประเด็นคือ"
+  ]
+ },
+ {
+  "id": "r3_study_b3",
+  "kind": "long",
+  "emoji": "🧑‍🎓",
+  "title": "논문 주제 바꾸기",
+  "where": "교수 연구실",
+  "speakers": {
+   "A": "{name}",
+   "B": "อาจารย์"
+  },
+  "register": "polite",
+  "twist_type": "reveal",
+  "twist": 9,
+  "scene": "지도교수에게 주제를 바꾸겠다고 말한다",
+  "chaos": "교수도 같은 고민을 30년 전에 했다",
+  "heart": "교수 \"내 노트를 줄게\"",
+  "targets": [
+   "ขอปรึกษา",
+   "เปลี่ยนหัวข้อ",
+   "ไม่แน่ใจ"
+  ]
+ },
+ {
+  "id": "r3_study_c1",
+  "kind": "chat",
+  "emoji": "🌏",
+  "title": "교환학생 합격",
+  "where": "가족·친구 채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "emotion",
+  "twist": 9,
+  "scene": "교환학생 합격 소식을 알린다",
+  "chaos": "ฟ้า 는 축하하면서 말끝을 흐린다",
+  "heart": "ฟ้า \"그래도 돌아오는 거지…?\"",
+  "targets": [
+   "ดีใจด้วยนะ",
+   "แล้วเราล่ะ",
+   "ไม่นานหรอก"
+  ]
+ },
+ {
+  "id": "r3_work_b3",
+  "kind": "long",
+  "emoji": "📉",
+  "title": "프로젝트 책임",
+  "where": "임원 회의실",
+  "speakers": {
+   "A": "{name}",
+   "B": "พี่หัวหน้า"
+  },
+  "register": "polite",
+  "twist_type": "reveal",
+  "twist": 9,
+  "scene": "실패한 프로젝트 보고",
+  "chaos": "상사가 학습자 대신 책임을 지고 있었다",
+  "heart": "상사 \"다음엔 네가 후배에게 해 줘\"",
+  "targets": [
+   "รับผิดชอบ",
+   "ขอชี้แจง",
+   "ไม่เป็นไปตามแผน"
+  ]
+ },
+ {
+  "id": "r3_work_b4",
+  "kind": "long",
+  "emoji": "🤝",
+  "title": "현지 직원 해고 통보",
+  "where": "사무실",
+  "speakers": {
+   "A": "{name}",
+   "B": "พี่หัวหน้า",
+   "C": "ต้น"
+  },
+  "register": "polite",
+  "twist_type": "emotion",
+  "twist": 9,
+  "scene": "태국 직원에게 나쁜 소식을 돌려 말해야 한다",
+  "chaos": "돌려 말하다 ต้น 이 먼저 사표를 꺼낸다",
+  "heart": "ต้น \"알고 있었어요. 고마웠어요\"",
+  "targets": [
+   "เรียนตามตรง",
+   "เสียใจด้วย",
+   "เข้าใจครับ"
+  ]
+ },
+ {
+  "id": "r3_work_c1",
+  "kind": "chat",
+  "emoji": "🕐",
+  "title": "주말 업무 지시",
+  "where": "업무 채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "พี่หัวหน้า"
+  },
+  "register": "chat",
+  "twist_type": "chaos",
+  "twist": 9,
+  "scene": "토요일 아침 상사의 \"잠깐만\"",
+  "chaos": "\"잠깐만\"이 문서 12개로 불어난다",
+  "heart": "상사 \"월요일 쉬어\"",
+  "targets": [
+   "ด่วนมาก",
+   "ขอแป๊บเดียว",
+   "วันหยุด"
+  ]
+ },
+ {
+  "id": "r3_life_b2",
+  "kind": "long",
+  "emoji": "⚖️",
+  "title": "집주인과 분쟁",
+  "where": "구청 상담실",
+  "speakers": {
+   "A": "{name}",
+   "B": "เจ้าของห้อง"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 9,
+  "scene": "보증금 조정을 받으러 간다",
+  "chaos": "서로의 증거 사진이 쌓이다 상담원 집주인 문제까지 터진다",
+  "heart": "상담원 \"같이 해결합시다\"",
+  "targets": [
+   "ตามสัญญา",
+   "มีหลักฐาน",
+   "ไกล่เกลี่ย"
+  ]
+ },
+ {
+  "id": "r3_life_c1",
+  "kind": "chat",
+  "emoji": "🧓",
+  "title": "이웃 할머니 메시지",
+  "where": "채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "คุณยาย"
+  },
+  "register": "chat",
+  "twist_type": "emotion",
+  "twist": 9,
+  "scene": "이웃 할머니가 음성 입력으로 메시지를 보낸다",
+  "chaos": "오타투성이 메시지가 사실 학습자의 안부 걱정이다",
+  "heart": "할머니 \"밥은 먹었니\"",
+  "targets": [
+   "กินข้าวยัง",
+   "พิมพ์ผิด",
+   "ดูแลตัวเอง"
+  ]
+ },
+ {
+  "id": "r3_travel_b2",
+  "kind": "long",
+  "emoji": "🚨",
+  "title": "여권 분실",
+  "where": "경찰서",
+  "speakers": {
+   "A": "{name}",
+   "B": "ตำรวจ"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 9,
+  "scene": "여권을 잃어버려 신고한다",
+  "chaos": "진술서 쓰는 사이 분실물 세 개가 더 늘어난다",
+  "heart": "경찰 \"오늘 밥은 내가\"",
+  "targets": [
+   "แจ้งความ",
+   "หายตอนไหน",
+   "ใบแจ้งความ"
+  ]
+ },
+ {
+  "id": "r3_culture_c1",
+  "kind": "chat",
+  "emoji": "📰",
+  "title": "뉴스 댓글 논쟁",
+  "where": "뉴스 댓글",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "chat",
+  "twist_type": "reveal",
+  "twist": 9,
+  "scene": "외국인 비판 기사에 학습자가 태국어 댓글을 단다",
+  "chaos": "논쟁 상대가 ต้น 의 부계정이었다",
+  "heart": "ต้น \"네 태국어 시험이었어\"",
+  "targets": [
+   "อ่านข่าว",
+   "ไม่เห็นด้วย",
+   "ใจเย็นๆ"
+  ]
+ },
+ {
+  "id": "r3_love_c1",
+  "kind": "chat",
+  "emoji": "🌉",
+  "title": "장거리 연애 시차",
+  "where": "영상 통화 채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "emotion",
+  "twist": 9,
+  "scene": "한국에 간 학습자와 시차가 나는 밤",
+  "chaos": "서로 재워 주려다 둘 다 잠을 못 잔다",
+  "heart": "ฟ้า \"끊지 마, 자는 소리 들을래\"",
+  "targets": [
+   "ไม่ต้องวาง",
+   "ง่วงแล้ว",
+   "ฝันดี"
+  ]
+ },
+ {
+  "id": "r4_friends_b4",
+  "kind": "long",
+  "emoji": "🪦",
+  "title": "친구 아버지 장례 조사",
+  "where": "사원",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "polite",
+  "twist_type": "emotion",
+  "twist": 10,
+  "scene": "ต้น 의 아버지 장례에서 외국인 친구로 말을 맡는다",
+  "chaos": "준비한 격식어가 무너지고 진심만 남는다",
+  "heart": "ต้น \"아버지가 들으셨을 거야\"",
+  "targets": [
+   "ขอแสดงความเสียใจ",
+   "ด้วยความเคารพ",
+   "จะไม่มีวันลืม"
+  ]
+ },
+ {
+  "id": "r4_friends_b5",
+  "kind": "long",
+  "emoji": "🥂",
+  "title": "동창회 허세 대결",
+  "where": "호텔 연회장",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "mixed",
+  "twist_type": "chaos",
+  "twist": 10,
+  "scene": "태국 대학 동창회",
+  "chaos": "누가 더 성공했는지 말을 부풀리다 모두 한 회사 하청이라는 게 드러난다",
+  "heart": "ต้น \"너만 진짜였어\"",
+  "targets": [
+   "ถ่อมตัว",
+   "ไม่เท่าไหร่หรอก",
+   "ขี้โม้"
+  ]
+ },
+ {
+  "id": "r4_friends_c1",
+  "kind": "chat",
+  "emoji": "🕯️",
+  "title": "10년 단톡방의 끝",
+  "where": "단톡방",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น",
+   "C": "ฟ้า"
+  },
+  "register": "chat",
+  "twist_type": "emotion",
+  "twist": 10,
+  "scene": "10년 된 단톡방에 누군가 나간다는 알림",
+  "chaos": "옛 메시지를 다시 읽으며 한 줄씩 추억이 돌아온다",
+  "heart": "ฟ้า \"우리 다시 만나자\"",
+  "targets": [
+   "จำได้ไหม",
+   "เวลาผ่านไปไว",
+   "ยังอยู่ตรงนี้"
+  ]
+ },
+ {
+  "id": "r4_study_b2",
+  "kind": "long",
+  "emoji": "🎖️",
+  "title": "박사 구술시험",
+  "where": "대학 심사실",
+  "speakers": {
+   "A": "{name}",
+   "B": "อาจารย์"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 10,
+  "scene": "심사위원 셋 앞의 구술시험",
+  "chaos": "위원끼리 학설 싸움이 나 학습자가 중재한다",
+  "heart": "교수 \"오늘 가장 좋은 답은 침묵이었네\"",
+  "targets": [
+   "ขออนุญาตเรียนว่า",
+   "ทั้งนี้ทั้งนั้น",
+   "ในแง่หนึ่ง"
+  ]
+ },
+ {
+  "id": "r4_study_c1",
+  "kind": "chat",
+  "emoji": "🧾",
+  "title": "표절 의혹 메일",
+  "where": "메일·채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "อาจารย์"
+  },
+  "register": "chat",
+  "twist_type": "reveal",
+  "twist": 10,
+  "scene": "표절 의심 메일을 받는다",
+  "chaos": "표절 대상이 3년 전 자기 글이었다",
+  "heart": "교수 \"자기 글을 잊을 만큼 많이 썼군\"",
+  "targets": [
+   "ขอชี้แจง",
+   "แนบไฟล์",
+   "ด้วยความนับถือ"
+  ]
+ },
+ {
+  "id": "r4_work_b3",
+  "kind": "long",
+  "emoji": "📺",
+  "title": "방송 인터뷰",
+  "where": "방송국",
+  "speakers": {
+   "A": "{name}",
+   "B": "พิธีกร"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 10,
+  "scene": "생방송 경제 인터뷰",
+  "chaos": "진행자의 돌발 질문에 답하다 실수로 회사 신제품을 발표한다",
+  "heart": "사장 문자 \"그대로 가자\"",
+  "targets": [
+   "ขอตอบแบบนี้",
+   "ยังไม่ยืนยัน",
+   "นอกรอบ"
+  ]
+ },
+ {
+  "id": "r4_work_b4",
+  "kind": "long",
+  "emoji": "🏛️",
+  "title": "계약서 한 단어",
+  "where": "법무법인 회의실",
+  "speakers": {
+   "A": "{name}",
+   "B": "ทนาย"
+  },
+  "register": "polite",
+  "twist_type": "slip",
+  "twist": 10,
+  "scene": "태국어 계약서 최종 검토",
+  "chaos": "단어 하나의 뜻을 착각해 \"대표\"를 \"신부\"로 썼다",
+  "heart": "변호사 \"결혼 축하드립니다\"",
+  "targets": [
+   "ข้อสัญญา",
+   "ตีความ",
+   "แก้ไขถ้อยคำ"
+  ]
+ },
+ {
+  "id": "r4_work_c1",
+  "kind": "chat",
+  "emoji": "📣",
+  "title": "사내 익명 게시판",
+  "where": "익명 채팅",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "chat",
+  "twist_type": "reveal",
+  "twist": 10,
+  "scene": "익명 게시판에 상사 칭찬 글이 올라온다",
+  "chaos": "글쓴이가 상사 본인이라는 흔적을 학습자가 찾아낸다",
+  "heart": "ต้น \"우리만 아는 걸로\"",
+  "targets": [
+   "นิรนาม",
+   "จับได้",
+   "เก็บเป็นความลับ"
+  ]
+ },
+ {
+  "id": "r4_life_b3",
+  "kind": "long",
+  "emoji": "🏘️",
+  "title": "마을 회의",
+  "where": "재개발 마을 회의",
+  "speakers": {
+   "A": "{name}",
+   "B": "ผู้ใหญ่บ้าน"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 10,
+  "scene": "외국인 주민으로 재개발 회의에 나간다",
+  "chaos": "찬반이 뒤섞여 학습자가 임시 의장이 된다",
+  "heart": "할머니 \"이방인이 우리보다 낫네\"",
+  "targets": [
+   "เห็นด้วยบางส่วน",
+   "ส่วนรวม",
+   "ขอพูดบ้าง"
+  ]
+ },
+ {
+  "id": "r4_travel_b2",
+  "kind": "long",
+  "emoji": "⛰️",
+  "title": "산악 마을 고립",
+  "where": "치앙라이 산마을",
+  "speakers": {
+   "A": "{name}",
+   "B": "ผู้ใหญ่บ้าน"
+  },
+  "register": "polite",
+  "twist_type": "emotion",
+  "twist": 10,
+  "scene": "산사태로 마을에 사흘 고립된다",
+  "chaos": "북부 말을 배우며 마을 사람이 된다",
+  "heart": "촌장 \"여기 네 집이 있다\"",
+  "targets": [
+   "อู้คำเมือง",
+   "ฝากตัวด้วย",
+   "กลับมาอีกนะ"
+  ]
+ },
+ {
+  "id": "r4_culture_b3",
+  "kind": "long",
+  "emoji": "🎭",
+  "title": "콘 공연 대타",
+  "where": "국립극장 분장실",
+  "speakers": {
+   "A": "{name}",
+   "B": "ครูสอนรำ"
+  },
+  "register": "polite",
+  "twist_type": "chaos",
+  "twist": 10,
+  "scene": "태국 가면극 뒤편 견학",
+  "chaos": "배우가 쓰러져 학습자가 가면을 쓰고 무대에 오른다",
+  "heart": "스승 \"가면 뒤 마음은 진짜였다\"",
+  "targets": [
+   "รำไม่เป็น",
+   "ตามน้ำ",
+   "ขึ้นเวที"
+  ]
+ },
+ {
+  "id": "r4_culture_c1",
+  "kind": "chat",
+  "emoji": "🎙️",
+  "title": "팟캐스트 악플",
+  "where": "DM",
+  "speakers": {
+   "A": "{name}",
+   "B": "ต้น"
+  },
+  "register": "chat",
+  "twist_type": "reveal",
+  "twist": 10,
+  "scene": "학습자의 태국어 팟캐스트에 악플이 달린다",
+  "chaos": "악플러가 학습자의 태국어 첫 선생님이었다",
+  "heart": "\"성조는 아직 멀었다\"는 답 뒤의 응원",
+  "targets": [
+   "ฟังทุกตอน",
+   "ติเพื่อก่อ",
+   "ภูมิใจ"
+  ]
+ }
+]
