@@ -368,5 +368,8 @@
  "review": {
   "grok_write": "data/review/r1_love_a6_write.md",
   "recommended": "อย่างอนนะ / 삐지지 마 · หายงอนยัง / 삐짐 풀렸어?"
+ },
+ "stats": {
+  "cliff_cover": 55
  }
 }

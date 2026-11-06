@@ -15,7 +15,6 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import rd_th  # noqa: E402
-from pythainlp.tokenize import word_tokenize  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 EXPR_CSV = ROOT / 'data/expressions/top_expressions.csv'
@@ -53,7 +52,7 @@ def load_rank():
 
 def words_of(text):
     t = VAR.sub(' ', text)
-    return [w for w in word_tokenize(t, engine='newmm') if THAI.search(w) and not PUNCT.match(w) and w != 'ๆ']
+    return [w for w in rd_th.tok(t) if THAI.search(w) and not PUNCT.match(w) and w != 'ๆ']
 
 
 def check_file(path, exprs, rank, cum_vocab, fix_rd, forbidden):

@@ -334,7 +334,7 @@ def to_hangul(o, tone=True):
             jung = W_VOWEL.get(o.vowel, 'ㅘ')
             blocks = [compose(base, jung)]
             return _finish_ko(o, blocks, tone)
-        cluster = compose(KO_INIT.get(first, 'ㅇ'), 'ㅡ')
+        cluster = compose(KO_INIT.get(first, 'ㅇ'), 'ㅡ', 'ㄹ' if second == 'l' else '')  # กลับ 끌랍 · กราบ 끄랍
         init = second
     base = KO_INIT.get(init, 'ㅇ')
     v = o.vowel
@@ -349,7 +349,7 @@ def to_hangul(o, tone=True):
         blocks.append(compose('ㅇ', W_VOWEL[v]))
         rest = KO_VOWEL[v][1:]
     else:
-        vs = KO_VOWEL.get(v, ['ㅏ'])
+        vs = ['ㅡ'] if v == 'er' and o.final else KO_VOWEL.get(v, ['ㅏ'])  # เดิน 든 · เธอ 터
         blocks.append(compose(base, vs[0]))
         rest = vs[1:]
     for j in rest:
@@ -364,7 +364,15 @@ def _finish_ko(o, blocks, tone):
     if o.glide == 'y':
         blocks.append('이')
     elif o.glide == 'w':
-        blocks.append('우' if o.vowel in ('a', 'e', 'ae', 'i') else '오')
+        short_a = o.vowel == 'a' and not o.long  # เรา 라오 · ข้าว 카우
+        blocks.append('오' if short_a or o.vowel not in ('a', 'e', 'ae', 'i') else '우')
+    # 이중모음 뒤 ย·ว 받침: ด้วย 두어이 · เดี๋ยว 디아우 · เหนื่อย 느아이
+    if o.final == 'y':
+        if o.vowel == 'ua':
+            blocks[-1] = '어'
+        blocks.append('이')
+    elif o.final == 'w':
+        blocks.append('우')
     # 받침
     fin = KO_FINAL.get(o.final, '')
     if fin:
