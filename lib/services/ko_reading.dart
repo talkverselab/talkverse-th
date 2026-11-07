@@ -18,9 +18,9 @@ class KoReadingPrefs {
   static const _styleKey = 'reading_style';
 
   /// 하위 호환: 표시 여부 (off 가 아니면 true).
-  static final ValueNotifier<bool> show = ValueNotifier<bool>(true);
+  static final ValueNotifier<bool> show = ValueNotifier<bool>(false);
   static final ValueNotifier<ReadingStyle> style =
-      ValueNotifier<ReadingStyle>(ReadingStyle.ko);
+      ValueNotifier<ReadingStyle>(ReadingStyle.off);
 
   static Future<void> load() async {
     final p = await SharedPreferences.getInstance();
@@ -29,7 +29,7 @@ class KoReadingPrefs {
       style.value = ReadingStyle.values[idx];
     } else {
       style.value =
-          (p.getBool(_key) ?? true) ? ReadingStyle.ko : ReadingStyle.off;
+          (p.getBool(_key) ?? false) ? ReadingStyle.ko : ReadingStyle.off; // 기본 미표시(사용자 지시 2026-11-07)
     }
     show.value = style.value != ReadingStyle.off;
     ToneService.instance.ensureLoaded();
@@ -46,6 +46,20 @@ class KoReadingPrefs {
   /// 한글 → 한글+성조 → 로마자 → 숨김 → 한글 … 순환.
   static Future<void> toggle() => set(ReadingStyle
       .values[(style.value.index + 1) % ReadingStyle.values.length]);
+
+  /// 켤 때 격려 안내(사용자 지시 2026-11-07) — 앱바 버튼·회화 칩·프로필이 함께 쓴다.
+  static void encourage(BuildContext context) {
+    ScaffoldMessenger.maybeOf(context)
+      ?..hideCurrentSnackBar()
+      ..showSnackBar(SnackBar(content: Text(tr('힘들어도 독음을 보지 않고 익혀보세요'))));
+  }
+
+  /// 켜기·끄기(켜면 한글 독음). 회화 칩·프로필 줄.
+  static Future<void> switchShown(BuildContext context) async {
+    final on = style.value == ReadingStyle.off;
+    if (on) encourage(context);
+    await set(on ? ReadingStyle.ko : ReadingStyle.off);
+  }
 
   static String label(ReadingStyle s) => switch (s) {
         ReadingStyle.ko => tr('한'),
@@ -77,7 +91,10 @@ class KoReadingToggleAction extends StatelessWidget {
         final color = on ? base : base.withValues(alpha: 0.35);
         return IconButton(
           tooltip: KoReadingPrefs.tooltip(s),
-          onPressed: KoReadingPrefs.toggle,
+          onPressed: () {
+            if (s == ReadingStyle.off) KoReadingPrefs.encourage(context);
+            KoReadingPrefs.toggle();
+          },
           icon: Container(
             padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
             decoration: BoxDecoration(

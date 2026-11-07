@@ -14,7 +14,9 @@ import '../services/dialogue_service.dart';
 import '../services/learner_prefs.dart';
 import '../services/tts_service.dart';
 import 'learner_setup_dialog.dart';
+import '../services/ko_reading.dart';
 import 'lemma_chips.dart';
+import 'lemma_text.dart';
 
 /// 태국어 본문 글꼴(설정의 태국어 폰트 적용) — 다른 위젯도 같은 헬퍼를 쓴다.
 TextStyle thStyle({double fontSize = 16, FontWeight fontWeight = FontWeight.w800, Color color = AppColors.khram, double height = 1.35}) =>
@@ -42,7 +44,7 @@ class _EpisodePlayPaneState extends State<EpisodePlayPane> {
   late int _i = widget.initialIndex;
   bool _playing = false;
   double _rate = 1.0; // 0.75 / 1.0 / 1.25
-  bool _showRd = true;
+  bool get _showRd => KoReadingPrefs.show.value; // 전역 독음 설정(기본 미표시)
   bool _showKo = true;
   int _session = 0; // 재생 루프 세대(중단 판별)
   bool _done = false; // 완주 연출 표시
@@ -52,9 +54,14 @@ class _EpisodePlayPaneState extends State<EpisodePlayPane> {
   Dialogue get d => widget.dialogue;
   DialogueTurn get turn => d.turns[_i];
 
+  void _onReading() {
+    if (mounted) setState(() {});
+  }
+
   @override
   void initState() {
     super.initState();
+    KoReadingPrefs.show.addListener(_onReading);
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       if (!mounted) return;
       // 대사에 {name} 자리가 있는데 이름이 없으면 먼저 묻는다(앱 켠 뒤 한 번, 2026-11-04)
@@ -66,6 +73,7 @@ class _EpisodePlayPaneState extends State<EpisodePlayPane> {
 
   @override
   void dispose() {
+    KoReadingPrefs.show.removeListener(_onReading);
     _session++;
     TtsService.instance.stop();
     super.dispose();
@@ -157,7 +165,7 @@ class _EpisodePlayPaneState extends State<EpisodePlayPane> {
       onPlay: _playing ? _pause : _play,
       onSeek: (v) => _goto(v),
       onRate: () => setState(() => _rate = _rate >= 1.25 ? 0.75 : (_rate + 0.25)),
-      onRd: () => setState(() => _showRd = !_showRd),
+      onRd: () => KoReadingPrefs.switchShown(context),
       onKo: () => setState(() => _showKo = !_showKo),
     );
     return LayoutBuilder(builder: (context, c) {
@@ -296,8 +304,8 @@ class _Script extends StatelessWidget {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                        Text(LearnerPrefs.fill(t.th), style: thStyle(fontSize: on ? 17 : 15.5)),
-                        if (showRd && t.rd.isNotEmpty) Text(LearnerPrefs.fill(t.rd, ko: true), style: const TextStyle(fontSize: 11.5, color: AppColors.thongDeep)),
+                        LemmaText(turn: t, text: LearnerPrefs.fill(t.th), style: thStyle(fontSize: on ? 17 : 15.5)),
+                        if (showRd && t.rd.isNotEmpty) KoReadingText(LearnerPrefs.fill(t.rd, ko: true), th: t.th, style: const TextStyle(fontSize: 11.5, color: AppColors.thongDeep)),
                         if (showKo) Text(LearnerPrefs.fill(t.ko, ko: true), style: const TextStyle(fontSize: 12.5, color: AppColors.khramLight, height: 1.35)),
                         if (on && t.note.isNotEmpty) Padding(padding: const EdgeInsets.only(top: 4), child: Text('💡 ${t.note}', style: const TextStyle(fontSize: 11, color: AppColors.kluayMaiDeep, height: 1.35))),
                       ]),
@@ -386,8 +394,8 @@ class _Caption extends StatelessWidget {
         child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
           Expanded(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(LearnerPrefs.fill(turn.th), style: thStyle(fontSize: wide ? 21 : 18)),
-              if (showRd && turn.rd.isNotEmpty) Text(LearnerPrefs.fill(turn.rd, ko: true), style: const TextStyle(fontSize: 12.5, color: AppColors.thongDeep)),
+              LemmaText(turn: turn, text: LearnerPrefs.fill(turn.th), style: thStyle(fontSize: wide ? 21 : 18)),
+              if (showRd && turn.rd.isNotEmpty) KoReadingText(LearnerPrefs.fill(turn.rd, ko: true), th: turn.th, style: const TextStyle(fontSize: 12.5, color: AppColors.thongDeep)),
               if (showKo) Padding(padding: const EdgeInsets.only(top: 2), child: Text(LearnerPrefs.fill(turn.ko, ko: true), style: const TextStyle(fontSize: 13.5, color: AppColors.khramLight, height: 1.35))),
               if (turn.lemmas.isNotEmpty) Padding(padding: const EdgeInsets.only(top: 8), child: LemmaChips(turn: turn, compact: !wide)),
             ]),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../services/ko_reading.dart';
+import '../widgets/lemma_text.dart';
 import '../core/l10n.dart';
 import '../core/pane.dart';
 import '../core/platform.dart';
@@ -309,7 +311,7 @@ class _PlayFull extends StatelessWidget {
           foregroundColor: AppColors.khram,
           elevation: 0,
           title: Text('${dialogue.emoji} ${dialogue.title}', style: const TextStyle(color: AppColors.khram, fontWeight: FontWeight.w800, fontSize: 15)),
-          actions: const [ThaiFontAction()],
+          actions: const [KoReadingToggleAction(), ThaiFontAction()],
         ),
         body: ValueListenableBuilder<String>(
           valueListenable: ThaiFontPrefs.id,
@@ -363,8 +365,8 @@ class _Bubble extends StatelessWidget {
                   InkWell(onTap: onPlayFrom, child: const Icon(Icons.play_circle_outline, size: 16, color: AppColors.sunset)),
                 ]),
                 const SizedBox(height: 4),
-                Text(LearnerPrefs.fill(t.th), style: thStyle(fontSize: 18, color: me ? AppColors.bubbleAText : AppColors.bubbleBText, height: 1.4)),
-                if (t.rd.isNotEmpty && !silent) Text(LearnerPrefs.fill(t.rd, ko: true), style: const TextStyle(fontSize: 12, color: AppColors.thongDeep)),
+                LemmaText(turn: t, text: LearnerPrefs.fill(t.th), style: thStyle(fontSize: 18, color: me ? AppColors.bubbleAText : AppColors.bubbleBText, height: 1.4)),
+                if (t.rd.isNotEmpty && !silent) KoReadingText(LearnerPrefs.fill(t.rd, ko: true), th: t.th, style: const TextStyle(fontSize: 12, color: AppColors.thongDeep)),
                 const SizedBox(height: 3),
                 Text(LearnerPrefs.fill(t.ko, ko: true), style: const TextStyle(fontSize: 13, color: AppColors.khramLight, height: 1.35)),
                 if (t.note.isNotEmpty) ...[

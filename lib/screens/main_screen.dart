@@ -7,6 +7,7 @@ import '../services/learner_prefs.dart';
 import '../main.dart';
 import '../widgets/thai_decor.dart';
 import '../widgets/today_mission.dart';
+import 'about_screen.dart';
 import 'alphabet_screen.dart';
 import 'chunk_search_screen.dart';
 import 'conversation_screen.dart';
@@ -25,6 +26,7 @@ import 'speaking_practice_screen.dart';
 import 'thai_roots_screen.dart';
 import 'tones_screen.dart';
 import 'vocab_hub_screen.dart';
+import 'word_freq_screen.dart';
 import '../core/l10n.dart';
 
 class MainScreen extends StatefulWidget {
@@ -105,6 +107,32 @@ class _MainScreenState extends State<MainScreen> {
                     for (final t in _tabs)
                       NavigationRailDestination(icon: t.icon, selectedIcon: t.selectedIcon, label: Text(t.label)),
                   ],
+                  // 맨 아래 「앱 소개」 — 절벽구간 설명(사용자 지시 2026-11-07)
+                  trailing: Expanded(
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Padding(
+                        padding: const EdgeInsets.only(bottom: 16),
+                        child: Builder(
+                          builder: (context) => InkWell(
+                            onTap: () => openPane(context, (_) => const AboutScreen()),
+                            borderRadius: BorderRadius.circular(8),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  const Icon(Icons.info_outline, color: AppColors.thongDeep, size: 22),
+                                  const SizedBox(height: 2),
+                                  Text(tr('앱 소개'), style: const TextStyle(color: AppColors.thongDeep, fontSize: 11, fontWeight: FontWeight.w600)),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
                 const VerticalDivider(width: 1, color: AppColors.thong),
                 SizedBox(width: left, child: IndexedStack(index: _index, children: _screens)),
@@ -463,92 +491,58 @@ class _QuickMenuRow extends StatelessWidget {
 class _MenuGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final items = <_MenuItem>[
-      _MenuItem(
-          label: tr('회화'),
-          sub: 'Dialogue',
-          emblem: 'คุย',
-          color: AppColors.badges[0],
-          builder: (_) => const ConversationScreen()),
-      _MenuItem(
-          label: tr('문장 말하기'),
-          sub: tr('한글 보고 태국어로 · 7초/4초/2초'),
-          emblem: 'พูด',
-          color: AppColors.badges[1],
-          builder: (_) => const SpeakingPracticeScreen()),
-      _MenuItem(
-          label: tr('문자 44'),
-          sub: tr('자음 · 3분류 · 모음'),
-          emblem: 'ก',
-          color: AppColors.badges[2],
-          builder: (_) => const AlphabetScreen()),
-      _MenuItem(
-          label: tr('성조 5'),
-          sub: 'วรรณยุกต์',
-          emblem: 'เสียง',
-          color: AppColors.badges[3],
-          builder: (_) => const TonesScreen()),
-      _MenuItem(
-          label: tr('문법'),
-          sub: tr('초급 코스 16과 · เป็น · ได้ · ขึ้น/ลง'),
-          emblem: 'ได้',
-          color: AppColors.badges[4],
-          builder: (_) => const GrammarHubScreen()),
-      _MenuItem(
-          label: tr('단어장'),
-          sub: tr('주제별 · 중요 단어(절벽 구간)'),
-          emblem: 'ศัพท์',
-          color: AppColors.badges[5],
-          builder: (_) => const VocabHubScreen()),
-      _MenuItem(
-          label: 'Manual for English',
-          sub: tr('RTGS vs ours · 장음 밑줄'),
-          emblem: 'ABC',
-          color: AppColors.badges[6],
-          builder: (_) => const EnglishManualScreen()),
-      _MenuItem(
-          label: tr('영어 유래 단어'),
-          sub: tr('음차 규칙 8줄기 · 200'),
-          emblem: 'ทับ',
-          color: AppColors.badges[7],
-          builder: (_) => const LoanwordScreen()),
-      _MenuItem(
-          label: tr('루트 단어'),
-          sub: 'น้ำ → น้ำแข็ง',
-          emblem: 'ราก',
-          color: AppColors.badges[8],
-          builder: (_) => const ThaiRootsScreen()),
-      _MenuItem(
-          label: tr('문자 퀴즈'),
-          sub: tr('4지선다'),
-          emblem: '?',
-          color: AppColors.badges[9],
-          builder: (_) => const ScriptQuizScreen()),
-      _MenuItem(
-          label: tr('키보드연습'),
-          sub: 'Kedmanee',
-          emblem: 'พิมพ์',
-          color: AppColors.badges[10],
-          builder: (_) => const KeyboardPracticeScreen()),
-      _MenuItem(
-          label: tr('복습'),
-          sub: 'Flashcard',
-          emblem: 'ทวน',
-          color: AppColors.badges[11],
-          builder: (_) => const FlashcardScreen()),
+    // 구역 순서: 기초 → 문법 → 회화 → 단어 → 복습 → 참고(맨 아래) — 사용자 지시 2026-11-07, 모든 언어앱 공통.
+    final sections = <(String, List<_MenuItem>)>[
+      (tr('기초'), [
+        _MenuItem(label: tr('문자 44'), sub: tr('자음 · 3분류 · 모음'), emblem: 'ก', color: AppColors.badges[2], builder: (_) => const AlphabetScreen()),
+        _MenuItem(label: tr('성조 5'), sub: 'วรรณยุกต์', emblem: 'เสียง', color: AppColors.badges[3], builder: (_) => const TonesScreen()),
+        _MenuItem(label: tr('문자 퀴즈'), sub: tr('4지선다'), emblem: '?', color: AppColors.badges[9], builder: (_) => const ScriptQuizScreen()),
+        _MenuItem(label: tr('키보드연습'), sub: 'Kedmanee', emblem: 'พิมพ์', color: AppColors.badges[10], builder: (_) => const KeyboardPracticeScreen()),
+      ]),
+      (tr('문법'), [
+        _MenuItem(label: tr('문법'), sub: tr('초급 코스 16과 · เป็น · ได้ · ขึ้น/ลง'), emblem: 'ได้', color: AppColors.badges[4], builder: (_) => const GrammarHubScreen()),
+      ]),
+      (tr('회화'), [
+        _MenuItem(label: tr('회화'), sub: 'Dialogue', emblem: 'คุย', color: AppColors.badges[0], builder: (_) => const ConversationScreen()),
+        _MenuItem(label: tr('문장 말하기'), sub: tr('한글 보고 태국어로 · 7초/4초/2초'), emblem: 'พูด', color: AppColors.badges[1], builder: (_) => const SpeakingPracticeScreen()),
+      ]),
+      (tr('단어'), [
+        _MenuItem(label: tr('절벽 단어'), sub: tr('R1~R5 · 20어 단원'), emblem: 'คำ', color: AppColors.badges[8], builder: (_) => const WordFreqScreen()),
+        _MenuItem(label: tr('단어장'), sub: tr('주제별 · 중요 단어'), emblem: 'ศัพท์', color: AppColors.badges[5], builder: (_) => const VocabHubScreen()),
+      ]),
+      (tr('복습'), [
+        _MenuItem(label: tr('복습'), sub: 'Flashcard', emblem: 'ทวน', color: AppColors.badges[11], builder: (_) => const FlashcardScreen()),
+      ]),
+      (tr('참고'), [
+        _MenuItem(label: tr('루트 단어'), sub: 'น้ำ → น้ำแข็ง', emblem: 'ราก', color: AppColors.badges[8], builder: (_) => const ThaiRootsScreen()),
+        _MenuItem(label: tr('영어 유래 단어'), sub: tr('음차 규칙 8줄기 · 200'), emblem: 'ทับ', color: AppColors.badges[7], builder: (_) => const LoanwordScreen()),
+        _MenuItem(label: 'Manual for English', sub: tr('RTGS vs ours · 장음 밑줄'), emblem: 'ABC', color: AppColors.badges[6], builder: (_) => const EnglishManualScreen()),
+      ]),
     ];
 
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
-        mainAxisSpacing: 10,
-        crossAxisSpacing: 10,
-        mainAxisExtent: 150, // 폭이 좁은 칸(아이패드 왼쪽 칸)에서도 글자가 넘치지 않게 높이 고정
-      ),
-      itemCount: items.length,
-      itemBuilder: (context, i) => _MenuTile(item: items[i]),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        for (final (title, items) in sections) ...[
+          Padding(
+            padding: const EdgeInsets.fromLTRB(2, 6, 2, 8),
+            child: Text(title, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: AppColors.khramLight, letterSpacing: 1)),
+          ),
+          GridView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 3,
+              mainAxisSpacing: 10,
+              crossAxisSpacing: 10,
+              mainAxisExtent: 150, // 폭이 좁은 칸(아이패드 왼쪽 칸)에서도 글자가 넘치지 않게 높이 고정
+            ),
+            itemCount: items.length,
+            itemBuilder: (context, i) => _MenuTile(item: items[i]),
+          ),
+          const SizedBox(height: 8),
+        ],
+      ],
     );
   }
 }

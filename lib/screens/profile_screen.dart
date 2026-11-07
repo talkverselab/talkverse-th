@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../core/theme.dart';
 import '../services/update_service.dart';
 import '../widgets/thai_decor.dart';
-import 'update_screen.dart';
+import 'about_screen.dart';
 import '../core/l10n.dart';
 import '../core/pane.dart';
 import '../core/platform.dart';
@@ -12,6 +12,7 @@ import 'account_screen.dart';
 import 'course_domain_screen.dart';
 import '../services/course_service.dart';
 import '../services/dev_notes.dart';
+import '../services/ko_reading.dart';
 import '../services/learner_prefs.dart';
 import '../core/thai_font.dart';
 import 'dev_notes_screen.dart';
@@ -51,7 +52,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.cream,
-      appBar: AppBar(title: Text(tr('프로필 · 설정'))),
+      appBar: AppBar(title: Text(tr('프로필'))),
       body: ListView(
         padding: const EdgeInsets.all(16),
         children: [
@@ -138,6 +139,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   if (mounted) setState(() {});
                 }),
             _SettingItem(
+                icon: Icons.translate,
+                title: tr('독음 표시'),
+                subtitle: KoReadingPrefs.show.value ? tr('켜짐') : tr('꺼짐 · 태국 글자만 보기'),
+                onTap: () async {
+                  await KoReadingPrefs.switchShown(context);
+                  if (mounted) setState(() {});
+                }),
+            _SettingItem(
                 icon: Icons.font_download_outlined,
                 title: tr('태국어 글꼴'),
                 subtitle: tr(ThaiFontPrefs.current.label),
@@ -151,28 +160,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 subtitle:
                     '${AppLangPrefs.lang.value.label}  →  ${AppLangPrefs.peekNext().label}',
                 onTap: AppLangPrefs.next),
-            if (isIOS)
-              _SettingItem(
-                  icon: Icons.flight_takeoff,
-                  title: tr('앱 업데이트'),
-                  subtitle: tr('아이폰은 TestFlight 앱에서 새 빌드를 받습니다'))
-            else
-              _SettingItem(
-                  icon: Icons.system_update,
-                  title: tr('앱 업데이트'),
-                  subtitle: tr('GitHub 최신 빌드 확인 · 내려받아 설치'),
-                  onTap: () => openPane(
-                        context,
-                        (_) => const UpdateScreen(),
-                      )),
-            _SettingItem(
-                icon: Icons.volume_up,
-                title: tr('TTS 음성'),
-                subtitle: tr('시스템 th-TH 보이스')),
-            _SettingItem(
-                icon: Icons.palette,
-                title: tr('테마'),
-                subtitle: tr('낮 · 태국어 하늘색 #3F9FD6')),
           ]),
           const SizedBox(height: 16),
           Text(tr('정보'),
@@ -184,6 +171,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
               )),
           const SizedBox(height: 8),
           _SettingsGroup(items: [
+            _SettingItem(
+                icon: Icons.landscape_outlined,
+                title: tr('앱 소개'),
+                subtitle: tr('절벽구간 — 이 앱이 단어를 나누는 기준'),
+                onTap: () => openPane(context, (_) => const AboutScreen())),
             _SettingItem(
                 icon: Icons.info_outline,
                 title: tr('앱 버전'),
@@ -198,10 +190,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     await openPane(context, (_) => const DevNotesScreen());
                     if (mounted) setState(() {});
                   }),
-            _SettingItem(
-                icon: Icons.code,
-                title: 'Stack',
-                subtitle: 'Flutter · Material 3 · SQLite'),
             _SettingItem(
                 icon: Icons.copyright,
                 title: tr('저작권'),

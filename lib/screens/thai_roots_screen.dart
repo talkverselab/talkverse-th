@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../core/theme.dart';
+import '../services/cliff_service.dart';
 import '../services/root_service.dart';
 import '../services/tts_service.dart';
 import '../services/vocab_service.dart';
@@ -27,7 +28,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
   bool _loading = true;
   List<RootInfo> _roots = [];
   String _query = '';
-  RootStage _stage = RootStage.upTo5;
+  String _filter = 'ALL'; // 절벽구간 필터(사용자 지시 2026-11-07: 루트도 회화 절벽구간 기준으로)
 
   @override
   void initState() {
@@ -37,6 +38,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
 
   Future<void> _load() async {
     await RootService.instance.ensureLoaded();
+    await CliffService.instance.ensureLoaded();
     if (!mounted) return;
     setState(() {
       _roots = RootService.instance.roots;
@@ -53,14 +55,28 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
     }
   }
 
+  /// 루트의 구간 = 루트 낱말 자체의 회화 빈도 구간(2,000위 밖이면 회화).
+  static String _regionOf(RootInfo r) => CliffService.instance.regionOf(r.th) ?? 'C';
+
   List<RootInfo> get _filtered {
-    if (_query.trim().isEmpty) return _roots;
     final q = _query.trim();
     return _roots
-        .where(
-          (r) => r.th.contains(q) || r.reading.contains(q) || r.ko.contains(q),
-        )
+        .where((r) => _filter == 'ALL' || _regionOf(r) == _filter)
+        .where((r) => q.isEmpty || r.th.contains(q) || r.reading.contains(q) || r.ko.contains(q))
         .toList();
+  }
+
+  /// 구간별 묶음(R1 → R5 → 회화), 구간 안은 빈도순.
+  List<(String, List<RootInfo>)> get _sections {
+    final by = <String, List<RootInfo>>{};
+    for (final r in _filtered) {
+      by.putIfAbsent(_regionOf(r), () => []).add(r);
+    }
+    final cs = CliffService.instance;
+    for (final l in by.values) {
+      l.sort((a, b) => (cs.rankOf(a.th) ?? 99999).compareTo(cs.rankOf(b.th) ?? 99999));
+    }
+    return [for (final g in CliffService.regions) if (by.containsKey(g)) (g, by[g]!)];
   }
 
   Future<void> _openFamily(RootInfo root, {String highlight = ''}) async {
@@ -76,7 +92,7 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
         initialChildSize: 0.78,
         maxChildSize: 0.95,
         builder: (context, controller) => RootFamilySheet(
-          family: RootService.instance.familyOf(root, stage: _stage),
+          family: RootService.instance.familyOf(root),
           highlight: highlight,
           controller: controller,
         ),
@@ -84,20 +100,11 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
     );
   }
 
-  /// 단계 버튼 — 중요 1,000단어 / 표준(최대). (단계, 라벨, 단어 수)
-  List<(RootStage, String, String)> _stages(BuildContext context) {
-    final vs = VocabService.instance;
-    return [
-      (RootStage.upTo5, tr('중요 1,000단어'), trf('빈도 {0}', [vs.entriesUpToLevel(5).length])),
-      (RootStage.standard, tr('표준 단어'), trf('누적 {0}', [vs.standardEntries.length])),
-    ];
-  }
-
   @override
   Widget build(BuildContext context) {
     final total = _roots.fold<int>(
       0,
-      (s, r) => s + RootService.instance.familyOf(r, stage: _stage).count,
+      (s, r) => s + RootService.instance.familyOf(r).count,
     );
     return Scaffold(
       backgroundColor: AppColors.cream,
@@ -185,46 +192,65 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
                     ],
                   ),
                 ),
-                Container(
-                  color: AppColors.creamDeep,
-                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
-                  child: Row(
+                SizedBox(
+                  height: 40,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                     children: [
-                      for (final (stage, label, sub) in _stages(context)) ...[
-                        _StageButton(
-                          label: label,
-                          sub: sub,
-                          selected: _stage == stage,
-                          onTap: () => setState(() => _stage = stage),
+                      for (final g in ['ALL', ...CliffService.regions])
+                        Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: _RegionChip(
+                            label: g == 'ALL' ? tr('전체') : CliffService.rangeLabel(g),
+                            color: g == 'ALL' ? AppColors.khram : CliffService.colorOf(g),
+                            count: g == 'ALL' ? _roots.length : _roots.where((r) => _regionOf(r) == g).length,
+                            selected: _filter == g,
+                            onTap: () => setState(() => _filter = g),
+                          ),
                         ),
-                        if (stage != RootStage.standard)
-                          const SizedBox(width: 4),
-                      ],
                     ],
                   ),
                 ),
                 const LaiThaiDivider(height: 8),
                 Expanded(
-                  child: GridView.builder(
+                  child: ListView(
                     padding: EdgeInsets.fromLTRB(16, 10, 16, 24 + bottomInset(context)),
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisSpacing: 8,
-                          crossAxisSpacing: 8,
-                          childAspectRatio: 1.9,
+                    children: [
+                      for (final (region, roots) in _sections) ...[
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(2, 6, 2, 8),
+                          child: Row(children: [
+                            RegionBadge(region, fontSize: 11),
+                            const SizedBox(width: 8),
+                            Text(CliffService.rangeLabel(region), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w800, color: AppColors.khram)),
+                            const Spacer(),
+                            Text(trf('루트 {0}개', [roots.length]), style: const TextStyle(fontSize: 11, color: AppColors.khramLight)),
+                          ]),
                         ),
-                    itemCount: _filtered.length,
-                    itemBuilder: (context, i) {
-                      final r = _filtered[i];
-                      return _RootCard(
-                        root: r,
-                        count: RootService.instance
-                            .familyOf(r, stage: _stage)
-                            .count,
-                        onTap: () => _openFamily(r),
-                      );
-                    },
+                        GridView.builder(
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2,
+                            mainAxisSpacing: 8,
+                            crossAxisSpacing: 8,
+                            childAspectRatio: 1.9,
+                          ),
+                          itemCount: roots.length,
+                          itemBuilder: (context, i) {
+                            final r = roots[i];
+                            return _RootCard(
+                              root: r,
+                              region: region,
+                              count: RootService.instance.familyOf(r).count,
+                              onTap: () => _openFamily(r),
+                            );
+                          },
+                        ),
+                        const SizedBox(height: 6),
+                      ],
+                    ],
                   ),
                 ),
               ],
@@ -233,66 +259,39 @@ class _ThaiRootsScreenState extends State<ThaiRootsScreen> {
   }
 }
 
-/// 단계 선택 버튼 — 중요 1,000단어 / 표준(최대).
-class _StageButton extends StatelessWidget {
+/// 구간 칩 — 전체 / R1~R5 / 회화 (루트 수).
+class _RegionChip extends StatelessWidget {
   final String label;
-  final String sub;
+  final Color color;
+  final int count;
   final bool selected;
   final VoidCallback onTap;
-  const _StageButton({
-    required this.label,
-    required this.sub,
-    required this.selected,
-    required this.onTap,
-  });
+  const _RegionChip({required this.label, required this.color, required this.count, required this.selected, required this.onTap});
 
   @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: InkWell(
+  Widget build(BuildContext context) => GestureDetector(
         onTap: onTap,
         child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 6),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
           decoration: BoxDecoration(
-            color: selected ? AppColors.kluayMai : AppColors.cream,
-            border: Border.all(
-              color: selected ? AppColors.kluayMaiDeep : AppColors.thong,
-              width: selected ? 1.5 : 0.8,
-            ),
+            color: selected ? color : AppColors.cream,
+            border: Border.all(color: color, width: selected ? 1.5 : 0.8),
+            borderRadius: BorderRadius.circular(6),
           ),
-          child: Column(
-            children: [
-              Text(
-                label,
-                style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w900,
-                  color: selected ? Colors.white : AppColors.khram,
-                ),
-              ),
-              Text(
-                sub,
-                style: TextStyle(
-                  fontSize: 10,
-                  color: selected
-                      ? Colors.white.withValues(alpha: 0.85)
-                      : AppColors.khramLight,
-                ),
-              ),
-            ],
-          ),
+          child: Text('$label · $count',
+              style: TextStyle(color: selected ? AppColors.onFill(color) : color, fontWeight: FontWeight.w700, fontSize: 12)),
         ),
-      ),
-    );
-  }
+      );
 }
 
 class _RootCard extends StatelessWidget {
   final RootInfo root;
+  final String region;
   final int count;
   final VoidCallback onTap;
   const _RootCard({
     required this.root,
+    required this.region,
     required this.count,
     required this.onTap,
   });
@@ -336,6 +335,9 @@ class _RootCard extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 4),
+                    Row(children: [
+                      RegionBadge(region),
+                      const SizedBox(width: 4),
                     Container(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 6,
@@ -354,6 +356,7 @@ class _RootCard extends StatelessWidget {
                         ),
                       ),
                     ),
+                    ]),
                   ],
                 ),
               ),
@@ -677,6 +680,7 @@ class _WordTile extends StatelessWidget {
                 ),
               ],
             ),
+            if (CliffService.instance.regionOf(entry.th) case final g?) Padding(padding: const EdgeInsets.only(bottom: 2), child: RegionBadge(g, fontSize: 8)),
             if (entry.reading.isNotEmpty)
               KoReadingText(
                 entry.reading,

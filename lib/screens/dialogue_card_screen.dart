@@ -9,7 +9,9 @@ import '../services/dialogue_service.dart';
 import '../services/learner_prefs.dart';
 import '../services/tts_service.dart';
 import '../widgets/episode_play_pane.dart' show thStyle, kCutShadow;
+import '../services/ko_reading.dart';
 import '../widgets/lemma_chips.dart';
+import '../widgets/lemma_text.dart';
 
 /// 편의 문장 플래시카드 — 앞면은 그림 + 한국어 뜻(「이 말을 태국어로 해 보세요」, 2026-11-04), 탭하면 태국어·독음·한국어·레마 칩.
 /// 그림 = 장면 컷 → 턴 art → 핵심 단어 그림 → 이모지. 틀림/맞음 2단계, 틀린 카드는 끝에 다시. (일본어앱 이식)
@@ -74,6 +76,7 @@ class _DialogueCardScreenState extends State<DialogueCardScreen> {
         backgroundColor: AppColors.cream,
         foregroundColor: AppColors.khram,
         elevation: 0,
+        actions: const [KoReadingToggleAction()],
         title: Column(mainAxisSize: MainAxisSize.min, children: [
           Text('${d.emoji} ${d.title}', style: const TextStyle(color: AppColors.khram, fontWeight: FontWeight.w800, fontSize: 15)),
           const SizedBox(height: 2),
@@ -158,8 +161,8 @@ class _CardText extends StatelessWidget {
               child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                 Text('$name · ${t.num}', style: const TextStyle(fontSize: 11, color: AppColors.thongDeep)),
                 const SizedBox(height: 8),
-                Text(LearnerPrefs.fill(t.th), style: thStyle(fontSize: 25, fontWeight: FontWeight.w900, color: AppColors.kluayMaiDeep, height: 1.35)),
-                if (t.rd.isNotEmpty) Padding(padding: const EdgeInsets.only(top: 4), child: Text(LearnerPrefs.fill(t.rd, ko: true), style: const TextStyle(fontSize: 13, color: AppColors.thongDeep))),
+                LemmaText(turn: t, text: LearnerPrefs.fill(t.th), style: thStyle(fontSize: 25, fontWeight: FontWeight.w900, color: AppColors.kluayMaiDeep, height: 1.35)),
+                if (t.rd.isNotEmpty) Padding(padding: const EdgeInsets.only(top: 4), child: KoReadingText(LearnerPrefs.fill(t.rd, ko: true), th: t.th, style: const TextStyle(fontSize: 13, color: AppColors.thongDeep))),
                 const SizedBox(height: 12),
                 const Divider(height: 2, color: AppColors.thong),
                 const SizedBox(height: 10),
