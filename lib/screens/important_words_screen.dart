@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../core/theme.dart';
 import '../services/known_words_store.dart';
+import '../services/cliff_service.dart';
 import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
 import 'topic_words_screen.dart';
@@ -29,44 +30,43 @@ class ImportantStage {
   });
 }
 
-/// 중요 단어 — 회화 빈도 절벽 구간별 단계. 단계를 고르면 단어 타일 화면.
+/// 중요 단어 — 회화 빈도 **절벽구간(R1~R5)** 단계 + 표준(절벽 밖). 단계를 고르면 단어 타일 화면.
+/// 구간은 `CliffService`(절벽 단어·루트 단어와 같은 기준, 사용자 지시 2026-11-07 "회화 기준 절벽구간으로 함께 구성").
 class ImportantWordsScreen extends StatelessWidget {
   const ImportantWordsScreen({super.key});
 
-  static List<VocabEntry> _levels(int from, int to) =>
-      VocabService.instance.entries
-          .where((e) => e.level >= from && e.level <= to)
-          .toList()
-        ..sort((a, b) => a.rank.compareTo(b.rank));
+  static List<VocabEntry> _region(String g) =>
+      VocabService.instance.entries.where((e) => CliffService.instance.regionOf(e.th) == g).toList()
+        ..sort((a, b) => (CliffService.instance.rankOf(a.th) ?? 99999).compareTo(CliffService.instance.rankOf(b.th) ?? 99999));
 
-  /// 중요 1,000단어 안의 편: 1단계 = 1~500위, 2단계 = 501~1000위.
-  static List<String> get tierParts => [tr('1단계 · 1~500위'), tr('2단계 · 501~1000위')];
-  static String tierName(int level) => level <= 3 ? tierParts[0] : tierParts[1];
+  static const _stars = {'R1': '★★★★★', 'R2': '★★★★', 'R3': '★★★', 'R4': '★★', 'R5': '★'};
+  static const _pct = {'R1': '55%', 'R2': '60%', 'R3': '70%', 'R4': '80%', 'R5': '92%'};
 
   static List<ImportantStage> get stages => <ImportantStage>[
-    ImportantStage(
-      id: 'top1000',
-      badge: '1,000',
-      label: tr('중요 1,000단어'),
-      range: tr('회화 빈도 1 ~ 1000위'),
-      desc: tr('영화·드라마 회화에서 가장 자주 쓰는 단어. 1단계(1~500위) · 2단계(501~1000위)'),
-      stars: '★★★★★',
-      entries: () => _levels(1, 5),
-    ),
+    for (var i = 1; i <= 5; i++)
+      ImportantStage(
+        id: 'R$i',
+        badge: 'R$i',
+        label: trf('절벽 R{0}', [i]),
+        range: CliffService.rangeLabel('R$i').substring(5),
+        desc: trf('회화 대사의 누적 {0}까지 덮는 구간', [_pct['R$i']!]),
+        stars: _stars['R$i']!,
+        entries: () => _region('R$i'),
+      ),
     ImportantStage(
       id: 'std',
       badge: tr('표준'),
       label: tr('표준 단어'),
-      range: tr('1000위 밖'),
-      desc: tr('교육부 기초 단어(ป.1~3) 중 빈도 1000에 없는 단어 — 여기까지가 최대'),
+      range: tr('2,000위 밖'),
+      desc: tr('교육부 기초 단어(ป.1~3) 중 절벽구간에 없는 단어 — 여기까지가 최대'),
       stars: '',
       entries: () =>
-          VocabService.instance.standardExtraEntries
+          VocabService.instance.standardEntries.where((e) => CliffService.instance.regionOf(e.th) == null || CliffService.instance.regionOf(e.th) == 'C').toList()
             ..sort((a, b) => a.order.compareTo(b.order)),
     ),
   ];
 
-  /// 전체(최대 범위) — 빈도 1000 + 표준.
+  /// 전체(최대 범위) — 빈도 + 표준.
   static List<VocabEntry> get all => VocabService.instance.standardEntries;
 
   void _open(BuildContext context, ImportantStage? stage) {
@@ -81,10 +81,10 @@ class ImportantWordsScreen extends StatelessWidget {
             name,
             '⭐',
             list.length,
-            stage?.id == 'top1000' ? tierParts : const [],
+            const [],
           ),
           entries: list,
-          partOf: stage?.id == 'top1000' ? (e) => tierName(e.level) : null,
+
         ),
       ),
     );
@@ -117,7 +117,7 @@ class ImportantWordsScreen extends StatelessWidget {
             ),
             const SizedBox(height: 2),
             Text(
-              trf('중요 1,000단어 + 표준 단어 · {0}단어', [total]),
+              trf('절벽구간 R1~R5 + 표준 단어 · {0}단어', [total]),
               style: const TextStyle(fontSize: 10, letterSpacing: 2),
             ),
           ],
@@ -155,7 +155,7 @@ class ImportantWordsScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 6),
                 child: Text(
-                  tr('영화·드라마 회화 빈도 상위 1000단어를 먼저 익히고, ') +
+                  tr('회화 빈도 절벽구간 R1부터 차례로 익히고, ') +
                   tr('표준 단어까지가 이 앱의 최대 범위입니다.'),
                   style: TextStyle(
                     fontSize: 12.5,

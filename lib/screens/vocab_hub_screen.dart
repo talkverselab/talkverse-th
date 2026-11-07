@@ -4,6 +4,7 @@ import '../core/theme.dart';
 import '../services/emoji_service.dart';
 import '../services/known_words_store.dart';
 import '../services/root_service.dart';
+import '../services/cliff_service.dart';
 import '../services/vocab_service.dart';
 import '../widgets/thai_decor.dart';
 import 'extra_edu_words_screen.dart';
@@ -35,6 +36,7 @@ class _VocabHubScreenState extends State<VocabHubScreen> {
     await RootService.instance.ensureLoaded();
     await EmojiService.instance.ensureLoaded();
     await KnownWordsStore.load();
+    await CliffService.instance.ensureLoaded();
     if (mounted) setState(() => _loading = false);
   }
 
@@ -103,8 +105,8 @@ class _VocabHubScreenState extends State<VocabHubScreen> {
                 _HubCard(
                   emoji: '⭐',
                   title: tr('중요 단어'),
-                  sub: trf('중요 1,000단어 + 표준 단어 · 최대 {0}단어', [important]),
-                  desc: tr('회화 빈도 1000단어 → 교육부 표준 단어 순서로.'),
+                  sub: trf('절벽구간 R1~R5 + 표준 단어 · 최대 {0}단어', [important]),
+                  desc: tr('회화 빈도 절벽구간 R1 → R5 → 교육부 표준 단어 순서로.'),
                   color: AppColors.thongDeep,
                   onTap: () => Navigator.push(
                     context,
