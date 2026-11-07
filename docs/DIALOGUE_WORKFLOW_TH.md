@@ -38,3 +38,7 @@ S1 편의점 「천천히 말해 주세요」 · S2 카페 「이거 태국어�
 ## 감정 열(2026-11-07, 사용자 지시 — 모든 언어앱)
 
 회화를 새로 쓸 때 턴마다 음성용 감정을 함께 쓴다. Grok 집필 답의 5번째 칸 `감정1|감정2` → `build_from_write.py` 가 턴의 `emotion`(첫 값)·`emotions`(둘 이상일 때)로 넣는다. 값은 `data/tts/PLAN_GUIDE.md` 의 16개(neutral polite stiff cheerful amused teasing excited surprised shout tsukkomi annoyed sad worried flustered shy gentle). neutral 만 쓰지 않는다. 감정 계획(`data/tts/plan/<편>.json`)의 `segs` 는 이 값에서 시작해 문장 단위로 나눈다. 기존 172편은 감정 계획을 쓸 때 채운다.
+
+## 어조사 이모지(2026-11-07, 사용자 지시 — 한·중·일·태·베)
+
+문장 끝 어조사(นะ สิ เถอะ เหรอ ล่ะ อะ ว่ะ จ้า เนี่ย ไง 등)로 감정을 나타내는 턴에만 어울리는 이모지를 턴의 `emoji` 칸에 둔다(`th` 본문에는 넣지 않는다 — 음성 본문에 안 들어가게). 새 편은 Grok 답의 태국어 줄 끝 이모지를 `build_from_write.py` 가 떼어 넣고, 기존 편은 `python3 tools/add_emoji.py` 가 감정 열·어조사·문장부호로 고른다. 앱(`LemmaText`)과 리뷰 페이지가 태국어 줄 끝에 보여 준다.

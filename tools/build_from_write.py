@@ -33,6 +33,11 @@ for i, r in enumerate(recs, 1):
     if len(parts) < 2 or re.match(r'^추천', parts[0]):
         continue
     th, ko = parts[0], parts[1]
+    # 태국어 줄 끝 이모지(어조사 감정, 2026-11-07) → emoji 칸으로 떼어 둔다(음성 본문에 안 들어가게)
+    em = re.search(r'\s*([\U0001F300-\U0001FAFF\u2600-\u27BF\u2B50\u2B55][\uFE0F\u200D\U0001F3FB-\U0001F3FF]*)+\s*$', th)
+    emoji = em.group(0).strip() if em else ''
+    if em:
+        th = th[:em.start()].rstrip()
     # Grok 이 태국어 단어마다 띄어 쓴 줄(공백이 태국 글자 4자당 1개 이상)은 붙인다 — 555·숫자·{name} 앞뒤 공백은 둔다
     thai_chars = len(re.findall(r'[\u0E00-\u0E7F]', th))
     if thai_chars and th.count(' ') * 6 >= thai_chars:
@@ -42,6 +47,8 @@ for i, r in enumerate(recs, 1):
     # 감정(음성 고려, 사용자 지시 2026-11-07 모든 언어앱): 5번째 칸 `감정1|감정2` → emotion(첫 값)·emotions(전부). 감정 계획(data/tts/plan)의 segs 는 이 값으로 시작한다.
     emos = [e for e in re.split(r'[|/,·\s]+', re.sub(r'^감정\s*[:：]?', '', parts[4]).strip().lower()) if e in EMOTIONS] if len(parts) > 4 else []
     t = {'num': len(turns) + 1, 'speaker': r['sp'], 'th': th.replace('❓', '').strip(), 'rd': '', 'ko': ko, 'note': note, 'tags': [], 'new': [w for w in new if w][:3]}
+    if emoji:
+        t['emoji'] = emoji
     if emos:
         t['emotion'] = emos[0]
         if len(emos) > 1:

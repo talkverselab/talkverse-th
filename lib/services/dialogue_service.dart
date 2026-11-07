@@ -28,6 +28,7 @@ class DialogueTurn {
   final List<String> newWords;
   final String? at; // 채팅 시각
   final String? stamp; // 채팅 스탬프 이모지
+  final String? emoji; // 문장 끝 어조사의 감정 이모지(태국어 줄 끝에 표시, 음성에는 없음 — 2026-11-07)
   final bool bubble; // 채팅 말풍선 표시
   final String? art; // 장면 그림 URL(나중에 채움)
   final List<Lemma> lemmas; // 문장 내용어(표면형·기본형·독음) — 단어장 연결(2026-11-04)
@@ -43,6 +44,7 @@ class DialogueTurn {
     required this.newWords,
     this.at,
     this.stamp,
+    this.emoji,
     this.bubble = false,
     this.art,
   });
@@ -57,6 +59,7 @@ class DialogueTurn {
         newWords: (j['new'] as List?)?.cast<String>() ?? const [],
         at: j['at'] as String?,
         stamp: j['stamp'] as String?,
+        emoji: j['emoji'] as String?,
         bubble: j['ui'] == 'bubble',
         art: j['art'] as String?,
         lemmas: [for (final l in (j['lemmas'] as List? ?? const [])) if (l is List && l.length >= 2) Lemma('${l[0]}', '${l[1]}', l.length > 2 ? '${l[2]}' : '')],
@@ -65,7 +68,7 @@ class DialogueTurn {
   /// 본문만 바꾼 복사(음성판 본문 표시용).
   DialogueTurn withText({required String th, required String rd, required String ko}) => DialogueTurn(
         num: num, speaker: speaker, th: th, rd: rd, ko: ko, note: note, tags: tags, lemmas: lemmas, newWords: newWords,
-        at: at, stamp: stamp, bubble: bubble, art: art);
+        at: at, stamp: stamp, emoji: emoji, bubble: bubble, art: art);
 
   /// 그림 조회용 핵심 단어 후보: new → expr 태그 → 없음.
   List<String> get pictureWords {

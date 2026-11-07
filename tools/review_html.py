@@ -82,7 +82,7 @@ for e in eps:
         key = f"{e['id']}:{t['num']}"
         if t['num'] % 2:
             parts.append(cuts(e, (t['num'] + 1) // 2))
-        parts.append(f"<div class='t {t['speaker']}'><div class=sp>{t['num']} {t['speaker']}{' · '+t['at'] if t.get('at') else ''}</div><div class=ja>{html.escape(t['th'])}</div><div class=rd>{html.escape(t.get('rd',''))}</div><div class=ko>{html.escape(t['ko'])}</div><div class=nt>{html.escape(t.get('note',''))}</div>{play(e['id'], t['num'])}"
+        parts.append(f"<div class='t {t['speaker']}'><div class=sp>{t['num']} {t['speaker']}{' · '+t['at'] if t.get('at') else ''}</div><div class=ja>{html.escape(t['th'])}{(' ' + t['emoji']) if t.get('emoji') else ''}</div><div class=rd>{html.escape(t.get('rd',''))}</div><div class=ko>{html.escape(t['ko'])}</div><div class=nt>{html.escape(t.get('note',''))}</div>{play(e['id'], t['num'])}"
                      f"<div class=rv><textarea data-k='{key}' placeholder='이 턴 리뷰…'></textarea><button onclick=\"sv(this)\">저장</button></div><div class=rs data-s='{key}'></div></div>")
     if e.get('review', {}).get('final'):
         parts.append(f"<div class=meta>최종: {html.escape(e['review']['final'])}</div>")
