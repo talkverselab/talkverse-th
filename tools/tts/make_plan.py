@@ -23,6 +23,7 @@ SPLIT = re.compile(r'(?<=[?!…。])\s*')
 def reading(s):
     s = re.sub(r'\([^)]*\)|（[^）]*）', '', s)
     s = re.sub(r'5{3,}', 'ฮ่าๆ', s).replace('LINE', 'ไลน์').replace('chill', 'ชิล')
+    s = re.sub(r'\s*…+\s*', ' ', s)   # 「…」는 읽기에서 뺀다(읽게 하면 늘어진다, §5) — 쉼은 pack 이 넣는다
     s = re.sub(r'[\U0001F300-\U0001FAFF☀-➿]', '', s).strip()
     if s and s[-1] not in '?!….': s += '.'
     return s
@@ -49,6 +50,8 @@ def segs_of(t, voice):
             merged.append(p)
     if merged and not re.search(r'[\u0E00-\u0E7F]', merged[0]) and len(merged) > 1:   # 맨 앞 '…' 는 다음 조각 앞에
         merged[1] = merged[0] + merged[1]; merged.pop(0)
+    if len(merged) > 1 and len(re.findall(r'[\u0E00-\u0E7F]', merged[0])) < 6:   # 짧은 첫 말(เอ๊ะ·โอเค)은 뒷문장과 한 조각(§5)
+        merged[1] = merged[0] + ' ' + merged[1]; merged.pop(0)
     parts = merged
     emos = t.get('emotions') or ([t['emotion']] if t.get('emotion') else [])
     if not emos:

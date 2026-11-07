@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """전편 회화 음성 생성 진행기(M6 에서 길게 돈다). 묶음마다: 작업 파일 → PC 생성 → 받아 오기 → 받아쓰기 검사·재생성(두 번까지) → mp4·R2·D1.
-  <venv>/bin/python tools/tts/run_all.py <작업폴더> [묶음 크기=12]     끝난 편은 <작업폴더>/done.txt 에 적히고 다시 돌리면 건너뛴다.
+  <venv>/bin/python tools/tts/run_all.py <작업폴더> [묶음 크기=12] [--refs]   참고 음성이 없으면(또는 --refs) 먼저 만들고 §5 검사·재생성. 끝난 편은 <작업폴더>/done.txt 에 적히고 다시 돌리면 건너뛴다.
 PC 쪽은 작업 스케줄러 'TTS job 2060'(run_job.sh)이 돈다 — 참고 음성 2060, 문장 3090. 중간에 멈춰도 있는 파일은 건너뛰고 이어서 한다."""
 import glob, json, os, subprocess, sys, time
 import ttslib as L
 PC = 'Administrator@100.127.143.37'; HERE = os.path.dirname(os.path.abspath(__file__))
-work = sys.argv[1]; N = int(sys.argv[2]) if len(sys.argv) > 2 else 12
+_a = [x for x in sys.argv[1:] if x != '--refs']; work = _a[0]; N = int(_a[1]) if len(_a) > 1 else 12
 os.makedirs(f'{work}/job', exist_ok=True); os.makedirs(f'{work}/wav', exist_ok=True)
 log = lambda *a: print(time.strftime('%H:%M:%S'), *a, flush=True)
 
@@ -14,12 +14,13 @@ def sh(*a, check=True, **k):
     return subprocess.run(a, check=check, capture_output=True, text=True, **k)
 
 
-def pc_run():
-    """작업 스케줄러를 돌리고 JOB_END 까지 기다린다."""
+def pc_run(kind='moss'):
+    """작업 스케줄러를 돌리고 JOB_END 까지 기다린다. kind = moss(문장 조각, 3090) | vox(참고 음성, 2060)."""
     while 'Ready' not in sh('ssh', PC, "(Get-ScheduledTask -TaskName 'TTS job 2060').State", check=False).stdout:
         time.sleep(30)                     # 앞선 작업(참고 음성 등)이 끝날 때까지
-    sh('scp', '-q', f'{work}/job/moss_jobs.json', f'{PC}:D:/tts_test/job/')
-    sh('ssh', PC, "Remove-Item D:\\tts_test\\job\\vox_jobs.json -ErrorAction SilentlyContinue; Start-ScheduledTask -TaskName 'TTS job 2060'")
+    other = 'vox' if kind == 'moss' else 'moss'
+    sh('scp', '-q', f'{work}/job/{kind}_jobs.json', f'{PC}:D:/tts_test/job/')
+    sh('ssh', PC, f"Remove-Item D:\\tts_test\\job\\{other}_jobs.json -ErrorAction SilentlyContinue; Start-ScheduledTask -TaskName 'TTS job 2060'")
     time.sleep(20)
     while True:
         r = sh('ssh', PC, "(Get-ScheduledTask -TaskName 'TTS job 2060').State", check=False).stdout
@@ -33,6 +34,27 @@ def fetch(path):
     sh('scp', '-q', '-r', f'{PC}:D:/tts_test/job/out/th/{path}', os.path.dirname(f'{work}/wav/{path}') + '/', check=False)
 
 
+def refs():
+    """참고 음성: 만들기 → 받아 오기 → 검사(잡음·음색, §5) → 미달분 seed 바꿔 재생성(두 번까지)."""
+    os.makedirs(f'{work}/ref_th', exist_ok=True)
+    sh(sys.executable, f'{HERE}/make_jobs.py', f'{work}/job', '--refs'); pc_run('vox')
+    for rnd in range(3):
+        sh('scp', '-q', '-r', f'{PC}:D:/tts_test/job/out/ref_th/*', f'{work}/ref_th/', check=False)
+        r = sh(sys.executable, f'{HERE}/check_refs.py', f'{work}/ref_th', '--jobs', f'{work}/job/vox_jobs.json', check=False)
+        log(r.stdout.strip().splitlines()[-2] if r.stdout.strip() else r.stderr[-200:])
+        jobs = json.load(open(f'{work}/job/vox_jobs.json'))
+        if not jobs or rnd == 2:
+            break
+        for j in jobs:
+            j['seed'] = 7 + 31 * (rnd + 1)
+        json.dump(jobs, open(f'{work}/job/vox_jobs.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
+        # PC 쪽 기존 파일을 지워야 다시 만든다(생성기가 있는 파일은 건너뜀)
+        sh('ssh', PC, '; '.join(f"Remove-Item 'D:\\tts_test\\job\\out\\{j['out'].replace('/', chr(92) * 2)}' -ErrorAction SilentlyContinue" for j in jobs), check=False)
+        pc_run('vox')
+
+
+if '--refs' in sys.argv or not glob.glob(f'{work}/ref_th/*.wav'):
+    refs()
 done = set(open(f'{work}/done.txt').read().split()) if os.path.exists(f'{work}/done.txt') else set()
 ids = [e for e in L.planned() if e not in done]
 log('남은 편', len(ids))
