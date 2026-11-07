@@ -12,6 +12,7 @@ import 'services/learner_prefs.dart';
 import 'core/l10n.dart';
 import 'services/auth_service.dart';
 import 'services/content_store.dart';
+import 'services/cliff_service.dart';
 import 'services/content_sync.dart';
 import 'services/dev_notes.dart';
 import 'services/update_service.dart';
@@ -28,6 +29,7 @@ void main() async {
   await LearnerPrefs.load();
   await ThaiFontPrefs.load();
   await ContentStore.instance.init();
+  CliffService.instance.ensureLoaded(); // 절벽구간 배지(단어 시트·타일) — 기다리지 않음
   await DevNotes.instance.load();
   await AuthService.instance.init(); // 실패해도 앱은 뜬다(오프라인)
   Entitlement.configure(); // 스토어 평생 이용권(기다리지 않음) — 한자 앱과 같은 공용 클라이언트

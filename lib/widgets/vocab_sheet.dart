@@ -6,6 +6,7 @@ import '../services/ko_reading.dart';
 import '../services/memorized_store.dart';
 import '../services/root_service.dart';
 import '../services/tts_service.dart';
+import '../services/cliff_service.dart';
 import '../services/vocab_service.dart';
 import 'thai_decor.dart';
 import '../core/l10n.dart';
@@ -199,7 +200,7 @@ class VocabDetail extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               [
-                if (e.level > 0) e.levelLabel,
+                if (CliffService.instance.regionOf(e.th) case final g?) trf('절벽 {0} · 회화 빈도 {1}위', [CliffService.labelOf(g), CliffService.instance.rankOf(e.th) ?? '-']),
                 if (e.sourceLabel.isNotEmpty) e.sourceLabel,
                 if (e.uncertain) tr('판독 불확실'),
               ].join('  ·  '),
@@ -252,12 +253,7 @@ class VocabRow extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
-                  if (e.level > 0)
-                    Text(
-                      e.levelStars,
-                      style: const TextStyle(
-                          fontSize: 9, color: AppColors.thongDeep),
-                    ),
+                  if (CliffService.instance.regionOf(e.th) case final g?) Padding(padding: const EdgeInsets.only(top: 2), child: RegionBadge(g, fontSize: 8)),
                   if (highlightRoot != null)
                     _PieceLine(word: e.variants.first, root: highlightRoot!),
                   if (!dense) ...[

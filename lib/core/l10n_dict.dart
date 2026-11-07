@@ -4,6 +4,7 @@
 // ignore_for_file: lines_longer_than_80_chars
 
 const Map<String, String> kDictEn = {
+  '절벽 {0} · 회화 빈도 {1}위': 'Cliff {0} · dialogue rank {1}',
   '절벽 R{0}': 'Cliff R{0}',
   '회화 대사의 누적 {0}까지 덮는 구간': 'Covers {0} of dialogue lines cumulatively',
   '2,000위 밖': 'Beyond rank 2,000',
@@ -662,6 +663,7 @@ const Map<String, String> kDictEn = {
 };
 
 const Map<String, String> kDictJa = {
+  '절벽 {0} · 회화 빈도 {1}위': '崖 {0} · 会話頻度{1}位',
   '절벽 R{0}': '崖 R{0}',
   '회화 대사의 누적 {0}까지 덮는 구간': '会話の台詞を累積{0}まで覆う区間',
   '2,000위 밖': '2,000位以降',
@@ -1007,6 +1009,7 @@ const Map<String, String> kDictJa = {
 };
 
 const Map<String, String> kDictZh = {
+  '절벽 {0} · 회화 빈도 {1}위': '断崖 {0} · 会话频率第{1}',
   '절벽 R{0}': '断崖 R{0}',
   '회화 대사의 누적 {0}까지 덮는 구간': '累计覆盖会话台词{0}的区间',
   '2,000위 밖': '2,000名以外',
