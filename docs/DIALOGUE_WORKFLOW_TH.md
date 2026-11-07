@@ -34,3 +34,7 @@ Chrome 9225 / `~/chrome-grok-th`(로그인 = 공용 프로필 쿠키 복사, 사
 
 ## 5. 샘플 6편(톤 확정용) → 그 뒤 R1 양산(서바이벌 3 + 주제 5 × 16)
 S1 편의점 「천천히 말해 주세요」 · S2 카페 「이거 태국어로 뭐예요?」 · 연애 R1 a1 「절하는 거야?」(ไหว้ 사건, 파가 먼저 말 걸기) · 연애 R1 c1 채팅 「작업 거는 거야?」(ชอบ 오해) · 연애 R2 b1 「막차, 놓쳐도 될까」(BTS) · 연애 R3 b1 「질투? …조금」(편의점 스탬프 콜백).
+
+## 감정 열(2026-11-07, 사용자 지시 — 모든 언어앱)
+
+회화를 새로 쓸 때 턴마다 음성용 감정을 함께 쓴다. Grok 집필 답의 5번째 칸 `감정1|감정2` → `build_from_write.py` 가 턴의 `emotion`(첫 값)·`emotions`(둘 이상일 때)로 넣는다. 값은 `data/tts/PLAN_GUIDE.md` 의 16개(neutral polite stiff cheerful amused teasing excited surprised shout tsukkomi annoyed sad worried flustered shy gentle). neutral 만 쓰지 않는다. 감정 계획(`data/tts/plan/<편>.json`)의 `segs` 는 이 값에서 시작해 문장 단위로 나눈다. 기존 172편은 감정 계획을 쓸 때 채운다.

@@ -3,6 +3,7 @@
 import json, re, sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
+EMOTIONS = {'neutral', 'polite', 'stiff', 'cheerful', 'amused', 'teasing', 'excited', 'surprised', 'shout', 'tsukkomi', 'annoyed', 'sad', 'worried', 'flustered', 'shy', 'gentle'}
 plans = {p['id']: p for p in json.load(open(sys.argv[1], encoding='utf-8'))}
 p = plans[sys.argv[2]]
 ans = open(sys.argv[3], encoding='utf-8').read()
@@ -38,7 +39,13 @@ for i, r in enumerate(recs, 1):
         th = re.sub(r'(?<=[\u0E00-\u0E7F]) (?=[\u0E00-\u0E7F])', '', th)
     note = re.sub(r'^해설\s*\((.*)\)$|^해설\s*', r'\1', parts[2]).strip() if len(parts) > 2 else ''  # 뜻풀이 끝 괄호는 두고 「해설 (…)」 껍질만 벗긴다
     new = [w.strip() for w in re.split(r'[,，、]', re.sub(r'^새\s*단어\s*[:：]?', '', parts[3]))] if len(parts) > 3 else []
+    # 감정(음성 고려, 사용자 지시 2026-11-07 모든 언어앱): 5번째 칸 `감정1|감정2` → emotion(첫 값)·emotions(전부). 감정 계획(data/tts/plan)의 segs 는 이 값으로 시작한다.
+    emos = [e for e in re.split(r'[|/,·\s]+', re.sub(r'^감정\s*[:：]?', '', parts[4]).strip().lower()) if e in EMOTIONS] if len(parts) > 4 else []
     t = {'num': len(turns) + 1, 'speaker': r['sp'], 'th': th.replace('❓', '').strip(), 'rd': '', 'ko': ko, 'note': note, 'tags': [], 'new': [w for w in new if w][:3]}
+    if emos:
+        t['emotion'] = emos[0]
+        if len(emos) > 1:
+            t['emotions'] = emos
     if '❓' in th:
         t['check'] = True
     if p['kind'] == 'chat':
