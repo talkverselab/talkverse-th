@@ -16,7 +16,8 @@
  "where": "야시장 골목",
  "speakers": {
   "A": "{name}",
-  "B": "ฟ้า"
+  "B": "ฟ้า",
+  "C": "แม่ค้า"
  },
  "register": "casual",
  "twist": 5,
