@@ -60,7 +60,8 @@
      "ใช่",
      "차이"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -112,6 +113,11 @@
      "จริง",
      "찡"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -145,7 +151,8 @@
      "마"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "🤩",
+   "emotion": "excited"
   },
   {
    "num": 4,
@@ -214,6 +221,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "amused"
    ]
   },
   {
@@ -261,7 +273,8 @@
      "툭"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 6,
@@ -322,6 +335,11 @@
      "ใหม่",
      "마이"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -388,6 +406,11 @@
      "จัง",
      "짱"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -441,7 +464,12 @@
      "크릉"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "shy"
+   ]
   }
  ],
  "review": {

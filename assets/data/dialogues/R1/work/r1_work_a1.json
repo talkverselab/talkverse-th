@@ -74,7 +74,8 @@
      "รู้จัก",
      "루짝"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 2,
@@ -136,7 +137,8 @@
      "업핏"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -177,7 +179,8 @@
      "จัง",
      "짱"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -240,7 +243,12 @@
      "깐"
     ]
    ],
-   "emoji": "🙌"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 5,
@@ -311,7 +319,8 @@
      "จริง",
      "찡"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 6,
@@ -374,6 +383,11 @@
      "น่ากลัว",
      "나끌루아"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -415,6 +429,11 @@
      "ตกใจ",
      "똑짜이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -461,7 +480,8 @@
      "เอง",
      "엥"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

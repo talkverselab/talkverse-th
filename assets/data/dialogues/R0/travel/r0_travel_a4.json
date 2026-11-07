@@ -68,7 +68,8 @@
      "มี",
      "미"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -110,7 +111,8 @@
      "난"
     ]
    ],
-   "emoji": "😉"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -156,7 +158,8 @@
      "เชียงใหม่",
      "치앙마이"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 4,
@@ -202,6 +205,11 @@
      "เอง",
      "엥"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "amused"
    ]
   },
   {
@@ -224,7 +232,8 @@
      "คุณป้า",
      "쿤빠"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 6,
@@ -273,7 +282,12 @@
      "터"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "gentle"
+   ]
   },
   {
    "num": 7,
@@ -309,6 +323,11 @@
      "รู้",
      "루"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -365,6 +384,11 @@
      "นั้นแหละ",
      "난래"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "amused"
    ]
   }
  ],

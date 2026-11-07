@@ -96,7 +96,12 @@
      "디"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "🙏",
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "polite"
+   ]
   },
   {
    "num": 2,
@@ -177,6 +182,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "stiff"
    ]
   },
   {
@@ -213,7 +223,8 @@
      "บ้าง",
      "방"
     ]
-   ]
+   ],
+   "emotion": "neutral"
   },
   {
    "num": 4,
@@ -299,6 +310,11 @@
      "อย่างนี้",
      "양니"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "polite"
    ]
   },
   {
@@ -345,6 +361,11 @@
      "ครอบครัว",
      "크럽크루아"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
    ]
   },
   {
@@ -396,6 +417,11 @@
      "แต่งงาน",
      "땡응안"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "shy"
    ]
   },
   {
@@ -428,7 +454,12 @@
      "두어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "cheerful"
+   ]
   },
   {
    "num": 8,
@@ -489,6 +520,11 @@
      "ดีขึ้น",
      "디큰"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "flustered"
    ]
   },
   {
@@ -566,7 +602,12 @@
      "꺼다이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 10,
@@ -629,6 +670,11 @@
      "เกินไป",
      "끈빠이"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "polite"
    ]
   },
   {
@@ -695,6 +741,11 @@
      "เงินเดือน",
      "응은드안"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   },
   {
@@ -726,6 +777,11 @@
      "รู้",
      "루"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "excited"
    ]
   },
   {
@@ -817,7 +873,8 @@
      "ไว้",
      "와이"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 14,
@@ -868,6 +925,11 @@
      "ที่สุด",
      "티쑷"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "excited"
    ]
   }
  ],

@@ -69,6 +69,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "stiff"
    ]
   },
   {
@@ -91,7 +96,8 @@
      "펫"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -116,7 +122,8 @@
      "เป็ด",
      "뻿"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -160,7 +167,12 @@
      "빠이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
+   ]
   },
   {
    "num": 5,
@@ -174,7 +186,8 @@
     "ได้",
     "ครับ"
    ],
-   "lemmas": []
+   "lemmas": [],
+   "emotion": "stiff"
   },
   {
    "num": 6,
@@ -220,7 +233,8 @@
      "สุด",
      "쑷"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 7,
@@ -256,6 +270,11 @@
      "น้ำตาไหล",
      "남따라이"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "amused"
    ]
   },
   {
@@ -287,7 +306,8 @@
      "마이뻰라이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

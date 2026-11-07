@@ -68,7 +68,8 @@
      "ไหว",
      "와이"
     ]
-   ]
+   ],
+   "emotion": "sad"
   },
   {
    "num": 2,
@@ -103,7 +104,8 @@
      "สู้",
      "쑤"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -143,7 +145,8 @@
      "ปิด",
      "삣"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 4,
@@ -193,6 +196,11 @@
      "หลักฐาน",
      "락탄"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "teasing"
    ]
   },
   {
@@ -229,7 +237,12 @@
      "너이"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😳",
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
+   ]
   },
   {
    "num": 6,
@@ -296,7 +309,8 @@
      "เอง",
      "엥"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -322,7 +336,8 @@
      "막"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 8,
@@ -352,6 +367,11 @@
      "ปลุก",
      "쁠룩"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "amused"
    ]
   }
  ],

@@ -77,7 +77,12 @@
      "캥랭"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "cheerful"
+   ]
   },
   {
    "num": 2,
@@ -128,6 +133,11 @@
      "เหมือนกัน",
      "므안깐"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -184,7 +194,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 4,
@@ -245,6 +256,11 @@
      "อาม่า",
      "아마"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "excited"
    ]
   },
   {
@@ -277,6 +293,11 @@
      "นั้น",
      "난"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -335,6 +356,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -381,7 +407,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 8,
@@ -433,7 +460,12 @@
      "쏜짜이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "gentle"
+   ]
   },
   {
    "num": 9,
@@ -479,6 +511,11 @@
      "อาม่า",
      "아마"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "polite"
    ]
   },
   {
@@ -515,6 +552,11 @@
      "เอง",
      "엥"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "amused"
    ]
   }
  ],

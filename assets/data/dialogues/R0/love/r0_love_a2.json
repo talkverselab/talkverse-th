@@ -68,7 +68,8 @@
      "เธอ",
      "터"
     ]
-   ]
+   ],
+   "emotion": "shy"
   },
   {
    "num": 2,
@@ -109,6 +110,11 @@
      "ดี",
      "디"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "cheerful"
    ]
   },
   {
@@ -155,7 +161,8 @@
      "เท่าไหร่",
      "타오라이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -189,7 +196,12 @@
      "덕마이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
+   ]
   },
   {
    "num": 5,
@@ -225,7 +237,8 @@
      "เท่าไหร่",
      "타오라이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 6,
@@ -262,7 +275,8 @@
      "밧"
     ]
    ],
-   "emoji": "😊"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -299,6 +313,11 @@
      "ไหม้",
      "마이"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "amused"
    ]
   },
   {
@@ -331,7 +350,12 @@
      "랍"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ]
   }
  ],
  "review": {

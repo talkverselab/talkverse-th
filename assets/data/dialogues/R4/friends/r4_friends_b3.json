@@ -95,7 +95,8 @@
      "จัง",
      "짱"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -182,7 +183,12 @@
      "너이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😬",
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "stiff"
+   ]
   },
   {
    "num": 3,
@@ -233,7 +239,8 @@
      "เยอะ",
      "여"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 4,
@@ -299,6 +306,11 @@
      "เหลือ",
      "르아"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "flustered"
    ]
   },
   {
@@ -350,7 +362,8 @@
      "너이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙂",
+   "emotion": "neutral"
   },
   {
    "num": 6,
@@ -393,7 +406,8 @@
      "여"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -444,6 +458,11 @@
      "ได้คืน",
      "다이큰"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "annoyed"
    ]
   },
   {
@@ -486,6 +505,11 @@
      "ไม่",
      "마이"
     ]
+   ],
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "gentle"
    ]
   },
   {
@@ -532,7 +556,8 @@
      "양"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😅",
+   "emotion": "neutral"
   },
   {
    "num": 10,
@@ -588,6 +613,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "annoyed"
    ]
   },
   {
@@ -643,6 +673,11 @@
      "ต่อเนื่อง",
      "떠느앙"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "amused"
    ]
   },
   {
@@ -699,6 +734,11 @@
      "ตรงๆ",
      "뜨롱 뜨롱"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "shy"
    ]
   },
   {
@@ -857,7 +897,8 @@
      "รู้",
      "루"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 14,
@@ -895,7 +936,12 @@
      "마이"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "🥰",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "gentle"
+   ]
   }
  ],
  "review": {

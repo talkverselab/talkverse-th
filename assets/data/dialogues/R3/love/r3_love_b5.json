@@ -96,6 +96,11 @@
      "ครึ่ง",
      "크릉"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -141,7 +146,8 @@
      "ดี",
      "디"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 3,
@@ -208,7 +214,8 @@
      "틍"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🤩",
+   "emotion": "excited"
   },
   {
    "num": 4,
@@ -280,7 +287,8 @@
      "너"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 5,
@@ -336,7 +344,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 6,
@@ -447,6 +456,11 @@
      "ก่อน",
      "껀"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "flustered"
    ]
   },
   {
@@ -504,6 +518,11 @@
      "เสร็จเลย",
      "쎗러이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "flustered"
    ]
   },
   {
@@ -539,6 +558,11 @@
      "ช่วยด้วย",
      "추어이두어이"
     ]
+   ],
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "amused"
    ]
   },
   {
@@ -600,6 +624,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
    ]
   },
   {
@@ -656,6 +685,11 @@
      "เว่อร์",
      "워"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -697,7 +731,8 @@
      "พอ",
      "퍼"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 12,
@@ -747,6 +782,11 @@
      "มา",
      "마"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   },
   {
@@ -798,6 +838,11 @@
      "ไม่เป็นไร",
      "마이뻰라이"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "amused"
    ]
   }
  ],

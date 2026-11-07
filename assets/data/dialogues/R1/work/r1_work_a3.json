@@ -91,7 +91,12 @@
      "너이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😳",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "flustered"
+   ]
   },
   {
    "num": 2,
@@ -132,7 +137,8 @@
      "เริ่ม",
      "름"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -173,7 +179,8 @@
      "ตาม",
      "땀"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -220,7 +227,12 @@
      "떠빠이"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😄",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "cheerful"
+   ]
   },
   {
    "num": 5,
@@ -271,7 +283,8 @@
      "พร้อมกัน",
      "프럼깐"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 6,
@@ -329,6 +342,11 @@
      "บ้าง",
      "방"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   },
   {
@@ -361,7 +379,12 @@
      "큰"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "☺️",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "shy"
+   ]
   },
   {
    "num": 8,
@@ -403,7 +426,8 @@
      "너"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "☺️",
+   "emotion": "shy"
   }
  ],
  "review": {

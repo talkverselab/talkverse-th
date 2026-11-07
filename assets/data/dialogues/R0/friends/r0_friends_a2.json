@@ -58,7 +58,8 @@
      "เท่าไหร่",
      "타오라이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -95,7 +96,8 @@
      "밧"
     ]
    ],
-   "emoji": "😊"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -136,7 +138,8 @@
      "ครั้งหนึ่ง",
      "크랑능"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -180,7 +183,12 @@
      "빠이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
+   ]
   },
   {
    "num": 5,
@@ -216,7 +224,8 @@
      "ครึ่งหนึ่ง",
      "크릉능"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 6,
@@ -238,6 +247,11 @@
      "ครึ่งหนึ่ง",
      "크릉능"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -264,7 +278,8 @@
      "หนัก",
      "낙"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 8,
@@ -301,7 +316,8 @@
      "엥"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

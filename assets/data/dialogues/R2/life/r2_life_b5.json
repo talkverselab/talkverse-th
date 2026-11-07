@@ -92,7 +92,12 @@
      "못"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😟",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
+   ]
   },
   {
    "num": 2,
@@ -143,6 +148,11 @@
      "เสีย",
      "씨아"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "amused"
    ]
   },
   {
@@ -198,7 +208,8 @@
      "กัน",
      "깐"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 4,
@@ -249,6 +260,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -309,6 +325,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "excited"
    ]
   },
   {
@@ -357,6 +378,11 @@
      "เว่อร์",
      "워"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
    ]
   },
   {
@@ -434,7 +460,12 @@
      "양미"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😄",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "cheerful"
+   ]
   },
   {
    "num": 8,
@@ -490,6 +521,11 @@
      "เอาจริง",
      "아오찡"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -536,7 +572,12 @@
      "두어이"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😲",
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "surprised"
+   ]
   },
   {
    "num": 10,
@@ -565,6 +606,11 @@
      "ดับ",
      "답"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   }
  ],

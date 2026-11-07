@@ -102,7 +102,8 @@
      "크럽크루아"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -153,6 +154,11 @@
      "เยอะแยะ",
      "여얘"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "cheerful"
    ]
   },
   {
@@ -229,6 +235,11 @@
      "ตามทัน",
      "땀탄"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "gentle"
    ]
   },
   {
@@ -295,6 +306,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "flustered"
    ]
   },
   {
@@ -371,6 +387,11 @@
      "สบายใจ",
      "싸바이짜이"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "gentle"
    ]
   },
   {
@@ -448,7 +469,8 @@
      "름"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -529,6 +551,11 @@
      "เช่นกัน",
      "첸깐"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "stiff"
    ]
   },
   {
@@ -590,6 +617,11 @@
      "ชิล",
      "친"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -744,7 +776,12 @@
      "두어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
+   ]
   },
   {
    "num": 10,
@@ -826,7 +863,12 @@
      "아러이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
+   ]
   },
   {
    "num": 11,
@@ -953,7 +995,12 @@
      "두래"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "gentle"
+   ]
   },
   {
    "num": 12,
@@ -1009,6 +1056,11 @@
      "รู้จัก",
      "루짝"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "gentle"
    ]
   }
  ],

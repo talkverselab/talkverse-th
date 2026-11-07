@@ -56,7 +56,8 @@
      "왕"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -123,7 +124,8 @@
      "โมง",
      "몽"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -166,7 +168,12 @@
      "찡 찡"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😢",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "sad"
+   ]
   },
   {
    "num": 4,
@@ -218,7 +225,8 @@
      "เต็ม",
      "뗌"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -253,7 +261,12 @@
      "큰"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "☺️",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "shy"
+   ]
   },
   {
    "num": 6,
@@ -294,6 +307,11 @@
      "จริง",
      "찡"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "excited"
    ]
   },
   {
@@ -321,6 +339,11 @@
      "โอเค",
      "오케"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -347,7 +370,8 @@
      "พรุ่งนี้",
      "프룽니"
     ]
-   ]
+   ],
+   "emotion": "excited"
   }
  ],
  "review": {

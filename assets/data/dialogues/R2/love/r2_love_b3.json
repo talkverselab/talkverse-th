@@ -65,6 +65,11 @@
      "ตาย",
      "따이"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "annoyed"
    ]
   },
   {
@@ -101,6 +106,11 @@
      "อันนี้",
      "안니"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "teasing"
    ]
   },
   {
@@ -137,7 +147,8 @@
      "น้อย",
      "너이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -188,6 +199,11 @@
      "เผ็ด",
      "펫"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -225,7 +241,12 @@
      "카우만까이"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "🥰",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "gentle"
+   ]
   },
   {
    "num": 6,
@@ -293,7 +314,8 @@
      "รอบ",
      "럽"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 7,
@@ -344,7 +366,8 @@
      "ส้มตำ",
      "쏨땀"
     ]
-   ]
+   ],
+   "emotion": "annoyed"
   },
   {
    "num": 8,
@@ -425,7 +448,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "tsukkomi"
   },
   {
    "num": 9,
@@ -496,6 +520,11 @@
      "ถูก",
      "툭"
     ]
+   ],
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "worried"
    ]
   },
   {
@@ -527,7 +556,8 @@
      "อร่อย",
      "아러이"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

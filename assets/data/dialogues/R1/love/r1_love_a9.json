@@ -53,7 +53,8 @@
      "วัน",
      "완"
     ]
-   ]
+   ],
+   "emotion": "neutral"
   },
   {
    "num": 2,
@@ -90,7 +91,8 @@
      "르응아이"
     ]
    ],
-   "emoji": "😉"
+   "emoji": "😒",
+   "emotion": "annoyed"
   },
   {
    "num": 3,
@@ -115,7 +117,8 @@
      "ชาติ",
      "찻"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -141,7 +144,12 @@
      "차이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 5,
@@ -167,7 +175,8 @@
      "เซลล์",
      "쎈"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 6,
@@ -199,6 +208,11 @@
      "ใส่",
      "싸이"
     ]
+   ],
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "gentle"
    ]
   },
   {
@@ -230,7 +244,8 @@
      "카야"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 8,
@@ -281,6 +296,11 @@
      "อยู่",
      "유"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   }
  ],

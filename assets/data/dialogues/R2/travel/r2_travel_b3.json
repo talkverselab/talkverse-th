@@ -77,7 +77,8 @@
      "와"
     ]
    ],
-   "emoji": "😤"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -119,7 +120,12 @@
      "레우"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😱",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "shout"
+   ]
   },
   {
    "num": 3,
@@ -160,6 +166,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "shout"
    ]
   },
   {
@@ -207,7 +218,12 @@
      "나락"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "gentle"
+   ]
   },
   {
    "num": 5,
@@ -249,7 +265,12 @@
      "두"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😟",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "worried"
+   ]
   },
   {
    "num": 6,
@@ -292,7 +313,8 @@
      "เร็ว",
      "레우"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "num": 7,
@@ -343,6 +365,11 @@
      "เร็ว",
      "레우"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
    ]
   },
   {
@@ -394,6 +421,11 @@
      "เว่อร์",
      "워"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "amused"
    ]
   },
   {
@@ -436,7 +468,8 @@
      "막"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 10,
@@ -477,6 +510,11 @@
      "คน",
      "콘"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   }
  ],

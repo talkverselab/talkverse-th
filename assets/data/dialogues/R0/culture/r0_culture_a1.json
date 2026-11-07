@@ -59,7 +59,8 @@
      "뱁니"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -84,7 +85,8 @@
      "แบบนี้",
      "뱁니"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -119,6 +121,11 @@
      "น่ารัก",
      "나락"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
    ]
   },
   {
@@ -156,7 +163,8 @@
      "สวัสดี",
      "싸왓디"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 5,
@@ -187,7 +195,12 @@
      "마"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 6,
@@ -237,7 +250,8 @@
      "ไหว้",
      "와이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -263,7 +277,12 @@
      "익크랑"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "☺️",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "shy"
+   ]
   },
   {
    "num": 8,
@@ -283,7 +302,8 @@
      "สวัสดี",
      "싸왓디"
     ]
-   ]
+   ],
+   "emotion": "shy"
   }
  ],
  "review": {

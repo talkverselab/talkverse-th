@@ -91,7 +91,12 @@
      "닛너이"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😟",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
+   ]
   },
   {
    "num": 2,
@@ -143,7 +148,8 @@
      "끄렝짜이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 3,
@@ -199,6 +205,11 @@
      "มา",
      "마"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
    ]
   },
   {
@@ -276,7 +287,8 @@
      "껀"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 5,
@@ -322,6 +334,11 @@
      "คุณแม่",
      "쿤매"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -379,7 +396,8 @@
      "얘"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -451,7 +469,8 @@
      "마이"
     ]
    ],
-   "emoji": "😊"
+   "emoji": "😱",
+   "emotion": "shout"
   },
   {
    "num": 8,
@@ -527,6 +546,11 @@
      "คิด",
      "킷"
     ]
+   ],
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "gentle"
    ]
   },
   {
@@ -595,7 +619,8 @@
      "เงิน",
      "응언"
     ]
-   ]
+   ],
+   "emotion": "surprised"
   },
   {
    "num": 10,
@@ -677,7 +702,8 @@
      "두어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 11,
@@ -738,6 +764,11 @@
      "ซีรีส์",
      "씨리"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -795,7 +826,8 @@
      "디"
     ]
    ],
-   "emoji": "🙌"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 13,
@@ -847,7 +879,12 @@
      "므안깐"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "gentle"
+   ]
   }
  ],
  "review": {

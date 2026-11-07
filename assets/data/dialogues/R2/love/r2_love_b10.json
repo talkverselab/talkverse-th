@@ -90,6 +90,11 @@
      "เอง",
      "엥"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "flustered"
    ]
   },
   {
@@ -171,6 +176,11 @@
      "เชื่อ",
      "츠아"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
    ]
   },
   {
@@ -233,7 +243,12 @@
      "티"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😟",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "worried"
+   ]
   },
   {
    "num": 4,
@@ -294,6 +309,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "excited"
    ]
   },
   {
@@ -330,6 +350,11 @@
      "เอาจริง",
      "아오찡"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -382,7 +407,8 @@
      "찡"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😬",
+   "emotion": "stiff"
   },
   {
    "num": 7,
@@ -434,7 +460,12 @@
      "롭"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "☺️",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "shy"
+   ]
   },
   {
    "num": 8,
@@ -472,7 +503,8 @@
      "อยาก",
      "약"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 9,
@@ -499,7 +531,8 @@
      "롭"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "☺️",
+   "emotion": "shy"
   },
   {
    "num": 10,
@@ -550,6 +583,11 @@
      "เอา",
      "아오"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   }
  ],

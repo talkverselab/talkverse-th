@@ -81,6 +81,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "flustered"
    ]
   },
   {
@@ -122,6 +127,11 @@
      "พอแล้ว",
      "퍼래우"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "amused"
    ]
   },
   {
@@ -193,6 +203,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "flustered"
    ]
   },
   {
@@ -239,7 +254,8 @@
      "พี่",
      "피"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 5,
@@ -290,7 +306,8 @@
      "ทุกวัน",
      "툭완"
     ]
-   ]
+   ],
+   "emotion": "shy"
   },
   {
    "num": 6,
@@ -331,7 +348,8 @@
      "แบบนี้",
      "뱁니"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -389,6 +407,11 @@
      "สุด",
      "쑷"
     ]
+   ],
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "flustered"
    ]
   },
   {
@@ -445,7 +468,8 @@
      "มา",
      "마"
     ]
-   ]
+   ],
+   "emotion": "amused"
   },
   {
    "num": 9,
@@ -511,6 +535,11 @@
      "ดีมาก",
      "디막"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
    ]
   },
   {
@@ -532,7 +561,8 @@
      "หมดเวลา",
      "못웨라"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "num": 11,
@@ -563,7 +593,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "num": 12,
@@ -623,7 +654,12 @@
      "익"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   }
  ],
  "review": {

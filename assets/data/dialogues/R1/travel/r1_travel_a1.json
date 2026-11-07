@@ -64,7 +64,8 @@
      "สวย",
      "쑤어이"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -95,7 +96,8 @@
      "깐"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -114,7 +116,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -135,7 +138,12 @@
      "친"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 5,
@@ -192,7 +200,8 @@
      "กัน",
      "깐"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 6,
@@ -238,7 +247,8 @@
      "깐"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 7,
@@ -273,7 +283,8 @@
      "ดี",
      "디"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 8,
@@ -319,7 +330,8 @@
      "티쑷"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

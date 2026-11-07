@@ -59,7 +59,8 @@
      "너이"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -90,7 +91,8 @@
      "ก่อน",
      "껀"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -112,7 +114,12 @@
      "마이떵"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 4,
@@ -139,7 +146,8 @@
      "쑤어이"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 5,
@@ -182,6 +190,11 @@
      "เข้ามา",
      "카오마"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "annoyed"
    ]
   },
   {
@@ -223,6 +236,11 @@
      "อีกแล้ว",
      "익래우"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "flustered"
    ]
   },
   {
@@ -264,7 +282,8 @@
      "พอ",
      "퍼"
     ]
-   ]
+   ],
+   "emotion": "shy"
   },
   {
    "num": 8,
@@ -286,6 +305,11 @@
      "คน",
      "콘"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   }
  ],

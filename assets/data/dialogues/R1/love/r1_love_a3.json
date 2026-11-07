@@ -78,7 +78,8 @@
      "เร็ว",
      "레우"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "speaker": "A",
@@ -100,7 +101,8 @@
      "ใช่ไหม",
      "차이마이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "speaker": "B",
@@ -129,7 +131,8 @@
      "หายใจไม่ออก",
      "하이짜이마이억"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "speaker": "A",
@@ -151,7 +154,8 @@
      "แบบนี้",
      "뱁니"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "speaker": "B",
@@ -207,6 +211,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "amused"
    ]
   },
   {
@@ -247,6 +256,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "shy"
    ]
   },
   {
@@ -270,7 +284,8 @@
      "떠"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "shy"
   },
   {
    "speaker": "B",
@@ -298,7 +313,12 @@
      "쁠러이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ]
   }
  ],
  "review": {

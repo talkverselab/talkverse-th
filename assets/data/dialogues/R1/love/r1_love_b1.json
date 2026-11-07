@@ -71,7 +71,8 @@
      "크랑랙"
     ]
    ],
-   "female_ok": true
+   "female_ok": true,
+   "emotion": "stiff"
   },
   {
    "num": 2,
@@ -98,7 +99,12 @@
      "나락"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😏",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "teasing"
+   ]
   },
   {
    "num": 3,
@@ -129,7 +135,12 @@
      "막"
     ]
    ],
-   "female_ok": true
+   "female_ok": true,
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "amused"
+   ]
   },
   {
    "num": 4,
@@ -172,6 +183,11 @@
      "ผม",
      "폼"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -205,7 +221,12 @@
      "익래우"
     ]
    ],
-   "female_ok": true
+   "female_ok": true,
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "flustered"
+   ]
   },
   {
    "num": 6,
@@ -260,6 +281,11 @@
      "หนู",
      "누"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -306,7 +332,8 @@
      "디"
     ]
    ],
-   "emoji": "😊"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 8,
@@ -348,7 +375,8 @@
      "꽈"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "shy"
   }
  ],
  "review": {

@@ -81,6 +81,11 @@
      "กล้า",
      "끌라"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "amused"
    ]
   },
   {
@@ -132,6 +137,11 @@
      "เกินไป",
      "끈빠이"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "worried"
    ]
   },
   {
@@ -178,7 +188,8 @@
      "มา",
      "마"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 4,
@@ -239,6 +250,11 @@
      "ออก",
      "억"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -285,6 +301,11 @@
      "ชิล",
      "친"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "gentle"
    ]
   },
   {
@@ -363,6 +384,11 @@
      "จริง",
      "찡"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -395,7 +421,8 @@
      "못"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "amused"
   },
   {
    "num": 8,
@@ -466,7 +493,8 @@
      "มา",
      "마"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 9,
@@ -522,6 +550,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "amused"
    ]
   },
   {
@@ -563,6 +596,11 @@
      "ดี",
      "디"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   }
  ],

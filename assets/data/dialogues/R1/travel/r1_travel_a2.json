@@ -70,7 +70,8 @@
      "디"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😬",
+   "emotion": "stiff"
   },
   {
    "num": 2,
@@ -111,6 +112,11 @@
      "อยู่เลย",
      "유러이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -147,7 +153,8 @@
      "ก็ได้",
      "꺼다이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -174,7 +181,12 @@
      "차이마이"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😟",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "worried"
+   ]
   },
   {
    "num": 5,
@@ -207,6 +219,11 @@
      "จัง",
      "짱"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
    ]
   },
   {
@@ -249,7 +266,8 @@
      "쁠러이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -280,6 +298,11 @@
      "จริงๆ",
      "찡 찡"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "worried"
    ]
   },
   {
@@ -316,7 +339,8 @@
      "ตรงนี้",
      "뜨롱니"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

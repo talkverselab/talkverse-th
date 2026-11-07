@@ -130,7 +130,8 @@
      "เอง",
      "엥"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -246,7 +247,8 @@
      "มากกว่า",
      "막꽈"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -298,7 +300,12 @@
      "뻰피쎗"
     ]
    ],
-   "emoji": "🤷"
+   "emoji": "🙏",
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "polite"
+   ]
   },
   {
    "num": 4,
@@ -394,7 +401,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "neutral"
   },
   {
    "num": 5,
@@ -476,7 +484,8 @@
      "유러이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙂",
+   "emotion": "neutral"
   },
   {
    "num": 6,
@@ -562,7 +571,8 @@
      "แยก",
      "얙"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 7,
@@ -648,7 +658,8 @@
      "กัน",
      "깐"
     ]
-   ]
+   ],
+   "emotion": "amused"
   },
   {
    "num": 8,
@@ -754,7 +765,8 @@
      "ผม",
      "폼"
     ]
-   ]
+   ],
+   "emotion": "neutral"
   },
   {
    "num": 9,
@@ -825,6 +837,11 @@
      "อยู่",
      "유"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "cheerful"
    ]
   },
   {
@@ -913,6 +930,11 @@
      "เกรงใจ",
      "끄렝짜이"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "flustered"
    ]
   },
   {
@@ -1024,6 +1046,11 @@
      "กัน",
      "깐"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "surprised"
    ]
   },
   {
@@ -1120,6 +1147,11 @@
      "จริง ๆ",
      "찡 찡"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "gentle"
    ]
   },
   {
@@ -1306,6 +1338,11 @@
      "วันนี้",
      "완니"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   }
  ],

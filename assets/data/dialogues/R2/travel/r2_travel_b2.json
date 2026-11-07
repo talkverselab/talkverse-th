@@ -86,6 +86,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "excited"
    ]
   },
   {
@@ -143,7 +148,8 @@
      "깐"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -194,6 +200,11 @@
      "หรู",
      "루"
     ]
+   ],
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "polite"
    ]
   },
   {
@@ -245,6 +256,11 @@
      "ลองดู",
      "렁두"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "teasing"
    ]
   },
   {
@@ -286,6 +302,11 @@
      "นี้",
      "니"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "cheerful"
    ]
   },
   {
@@ -322,7 +343,8 @@
      "ถ่ายรูป",
      "타이룹"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 7,
@@ -359,6 +381,11 @@
      "จัง",
      "짱"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "surprised"
    ]
   },
   {
@@ -422,6 +449,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "surprised"
    ]
   },
   {
@@ -469,7 +501,12 @@
      "너이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
+   ]
   },
   {
    "num": 10,
@@ -510,6 +547,11 @@
      "ล้อเล่น",
      "러렌"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   }
  ],

@@ -86,6 +86,11 @@
      "ตื่น",
      "뜬"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "flustered"
    ]
   },
   {
@@ -138,7 +143,8 @@
      "찡 찡"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 3,
@@ -199,7 +205,8 @@
      "ทนไม่ไหว",
      "톤마이와이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 4,
@@ -246,7 +253,12 @@
      "바오"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
+   ]
   },
   {
    "num": 5,
@@ -302,7 +314,8 @@
      "ชาเย็น",
      "차옌"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 6,
@@ -353,6 +366,11 @@
      "มั่ว",
      "무아"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -425,7 +443,12 @@
      "두어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "teasing"
+   ]
   },
   {
    "num": 8,
@@ -491,7 +514,8 @@
      "ฟ้าตก",
      "파똑"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 9,
@@ -564,6 +588,11 @@
      "ขยับ",
      "카얍"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   },
   {
@@ -610,6 +639,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "gentle"
    ]
   },
   {
@@ -672,7 +706,8 @@
      "차"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 12,
@@ -733,6 +768,11 @@
      "ผม",
      "폼"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "shy"
    ]
   },
   {
@@ -799,7 +839,8 @@
      "พอ",
      "퍼"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

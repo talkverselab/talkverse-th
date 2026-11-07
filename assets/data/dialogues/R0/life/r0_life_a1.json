@@ -67,7 +67,8 @@
      "ชื่อ",
      "츠"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -97,7 +98,8 @@
      "ช่วย",
      "추어이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -132,7 +134,8 @@
      "ผงชูรส",
      "퐁추롯"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -159,6 +162,11 @@
      "ผงซักฟอก",
      "퐁싹퍽"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   },
   {
@@ -194,7 +202,8 @@
      "หน่อย",
      "너이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 6,
@@ -220,7 +229,8 @@
      "빠이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 7,
@@ -255,7 +265,8 @@
      "จัง",
      "짱"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 8,
@@ -286,7 +297,12 @@
      "프리"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ]
   }
  ],
  "review": {

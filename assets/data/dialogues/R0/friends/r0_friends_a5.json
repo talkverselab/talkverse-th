@@ -58,7 +58,8 @@
      "อิ่ม",
      "임"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 2,
@@ -98,7 +99,8 @@
      "เหลือ",
      "르아"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 3,
@@ -133,7 +135,8 @@
      "เต็ม",
      "뗌"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -168,6 +171,11 @@
      "เต็ม",
      "뗌"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -206,7 +214,8 @@
      "와"
     ]
    ],
-   "emoji": "😤"
+   "emoji": "😲",
+   "emotion": "surprised"
   },
   {
    "num": 6,
@@ -251,7 +260,8 @@
      "ถาด",
      "탓"
     ]
-   ]
+   ],
+   "emotion": "surprised"
   },
   {
    "num": 7,
@@ -281,6 +291,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -316,7 +331,8 @@
      "ยอม",
      "염"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   }
  ],
  "review": {

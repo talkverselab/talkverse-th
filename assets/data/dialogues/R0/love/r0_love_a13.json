@@ -58,7 +58,8 @@
      "เจอกัน",
      "쩌깐"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 2,
@@ -89,7 +90,8 @@
      "바이"
     ]
    ],
-   "emoji": "😊"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -120,7 +122,8 @@
      "익"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "shy"
   },
   {
    "num": 4,
@@ -149,6 +152,11 @@
      "เจอกัน",
      "쩌깐"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "shy"
    ]
   },
   {
@@ -179,7 +187,8 @@
      "익티"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "shy"
   },
   {
    "num": 6,
@@ -214,6 +223,11 @@
      "ก่อน",
      "껀"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   },
   {
@@ -243,7 +257,8 @@
      "เจอกัน",
      "쩌깐"
     ]
-   ]
+   ],
+   "emotion": "shy"
   },
   {
    "num": 8,
@@ -273,7 +288,8 @@
      "쩌깐"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

@@ -65,6 +65,11 @@
      "ที่ไหน",
      "티나이"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
    ]
   },
   {
@@ -107,7 +112,8 @@
      "뜨롱난"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -154,7 +160,12 @@
      "니"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😟",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
+   ]
   },
   {
    "num": 4,
@@ -200,7 +211,8 @@
      "ขึ้น",
      "큰"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 5,
@@ -237,6 +249,11 @@
      "ชั้นล่าง",
      "찬랑"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "tsukkomi"
    ]
   },
   {
@@ -278,7 +295,8 @@
      "หมด",
      "못"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -334,7 +352,8 @@
      "บันได",
      "반다이"
     ]
-   ]
+   ],
+   "emotion": "tsukkomi"
   },
   {
    "num": 8,
@@ -375,6 +394,11 @@
      "เอง",
      "엥"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "polite"
    ]
   }
  ],

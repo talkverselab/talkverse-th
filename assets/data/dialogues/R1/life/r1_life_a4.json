@@ -60,7 +60,8 @@
      "히우"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 2,
@@ -106,7 +107,8 @@
      "ขอบคุณ",
      "컵쿤"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -163,7 +165,12 @@
      "너이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 4,
@@ -199,7 +206,8 @@
      "แน่นอน",
      "내넌"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -275,6 +283,11 @@
      "เพิ่ม",
      "픔"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   },
   {
@@ -319,7 +332,12 @@
      "빠이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😳",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "flustered"
+   ]
   },
   {
    "num": 7,
@@ -381,7 +399,8 @@
      "빠"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 8,
@@ -412,6 +431,11 @@
      "ขอบคุณ",
      "컵쿤"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   }
  ],

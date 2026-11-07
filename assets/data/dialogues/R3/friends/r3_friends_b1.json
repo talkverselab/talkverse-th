@@ -122,7 +122,8 @@
      "꺼다이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 2,
@@ -163,6 +164,11 @@
      "เกรงใจ",
      "끄렝짜이"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "flustered"
    ]
   },
   {
@@ -214,7 +220,8 @@
      "เอง",
      "엥"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 4,
@@ -255,6 +262,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -297,6 +309,11 @@
      "ใจ",
      "짜이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "stiff"
    ]
   },
   {
@@ -363,6 +380,11 @@
      "จริงๆ",
      "찡 찡"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -419,7 +441,8 @@
      "ชิล",
      "친"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 8,
@@ -455,7 +478,8 @@
      "ไม่ต้อง",
      "마이떵"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 9,
@@ -513,6 +537,11 @@
      "จริง",
      "찡"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -564,6 +593,11 @@
      "เกรงใจ",
      "끄렝짜이"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "shy"
    ]
   },
   {
@@ -625,7 +659,8 @@
      "อีก",
      "익"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 12,
@@ -725,6 +760,11 @@
      "พอ",
      "퍼"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "gentle"
    ]
   }
  ],

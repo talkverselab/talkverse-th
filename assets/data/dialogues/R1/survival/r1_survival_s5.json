@@ -94,7 +94,8 @@
      "ดี",
      "디"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 2,
@@ -170,7 +171,8 @@
      "ก๋วยเตี๋ยว",
      "꾸어이띠아우"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 3,
@@ -200,7 +202,8 @@
      "ใช่ไหม",
      "차이마이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -276,6 +279,11 @@
      "เจอ",
      "쩌"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   },
   {
@@ -306,6 +314,11 @@
      "ขอบคุณ",
      "컵쿤"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "stiff"
    ]
   },
   {
@@ -378,6 +391,11 @@
      "เหมือนกัน",
      "므안깐"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "sad"
    ]
   },
   {
@@ -408,6 +426,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "polite"
    ]
   },
   {
@@ -449,7 +472,8 @@
      "ลูก",
      "룩"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

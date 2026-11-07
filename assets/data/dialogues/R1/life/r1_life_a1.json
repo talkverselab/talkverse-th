@@ -70,7 +70,8 @@
      "หน่อย",
      "너이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -121,6 +122,11 @@
      "ดู",
      "두"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -174,6 +180,11 @@
      "แฟน",
      "팬"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -220,6 +231,11 @@
      "วันนี้",
      "완니"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "polite"
    ]
   },
   {
@@ -266,7 +282,8 @@
      "คอนโด",
      "컨도"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 6,
@@ -308,7 +325,12 @@
      "빠"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "teasing"
+   ]
   },
   {
    "num": 7,
@@ -338,6 +360,11 @@
      "แอร์",
      "애"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -389,6 +416,11 @@
      "ค่อย",
      "커이"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
    ]
   }
  ],

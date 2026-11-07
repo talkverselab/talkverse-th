@@ -82,7 +82,12 @@
      "끌랍"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😟",
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "worried"
+   ]
   },
   {
    "num": 2,
@@ -138,6 +143,11 @@
      "ก่อน",
      "껀"
     ]
+   ],
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "amused"
    ]
   },
   {
@@ -174,7 +184,8 @@
      "ดีกว่า",
      "디꽈"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -241,7 +252,8 @@
      "껀"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "amused"
   },
   {
    "num": 5,
@@ -297,6 +309,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "flustered"
    ]
   },
   {
@@ -348,6 +365,11 @@
      "เอาจริง",
      "아오찡"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -404,6 +426,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
    ]
   },
   {
@@ -458,7 +485,12 @@
      "친"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 9,
@@ -509,6 +541,11 @@
      "ตรงนี้",
      "뜨롱니"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "stiff"
    ]
   },
   {
@@ -576,7 +613,12 @@
      "끌랍"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😲",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "surprised"
+   ]
   },
   {
    "num": 11,
@@ -628,7 +670,12 @@
      "왕"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😟",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ]
   },
   {
    "num": 12,
@@ -702,6 +749,11 @@
      "เหมือนกัน",
      "므안깐"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   }
  ],

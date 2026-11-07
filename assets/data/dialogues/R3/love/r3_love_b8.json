@@ -96,7 +96,8 @@
      "두어이"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -153,7 +154,12 @@
      "약다이"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😟",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
+   ]
   },
   {
    "num": 3,
@@ -205,7 +211,8 @@
      "약루"
     ]
    ],
-   "emoji": "😉"
+   "emoji": "😏",
+   "emotion": "teasing"
   },
   {
    "num": 4,
@@ -251,6 +258,11 @@
      "เหมาะ",
      "머"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "annoyed"
    ]
   },
   {
@@ -293,7 +305,12 @@
      "난"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😲",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "surprised"
+   ]
   },
   {
    "num": 6,
@@ -364,7 +381,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "annoyed"
   },
   {
    "num": 7,
@@ -440,6 +458,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -491,6 +514,11 @@
      "เอง",
      "엥"
     ]
+   ],
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "shy"
    ]
   },
   {
@@ -513,7 +541,12 @@
      "뱁니"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😏",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "teasing"
+   ]
   },
   {
    "num": 10,
@@ -576,7 +609,8 @@
      "คนอื่น",
      "콘은"
     ]
-   ]
+   ],
+   "emotion": "shy"
   },
   {
    "num": 11,
@@ -613,7 +647,12 @@
      "옹"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "🥰",
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "gentle"
+   ]
   },
   {
    "num": 12,
@@ -650,7 +689,12 @@
      "옹"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😬",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "stiff"
+   ]
   },
   {
    "num": 13,
@@ -692,7 +736,12 @@
      "킷막"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "🥰",
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "gentle"
+   ]
   }
  ],
  "review": {

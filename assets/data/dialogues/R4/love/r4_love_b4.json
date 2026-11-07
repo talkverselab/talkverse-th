@@ -81,7 +81,8 @@
      "รวม",
      "루암"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -142,6 +143,11 @@
      "อยู่",
      "유"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
    ]
   },
   {
@@ -179,7 +185,12 @@
      "친"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "polite"
+   ]
   },
   {
    "num": 4,
@@ -225,7 +236,8 @@
      "ที่นั่ง",
      "티낭"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -296,6 +308,11 @@
      "ขอ",
      "커"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -337,6 +354,11 @@
      "บอก",
      "벅"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
    ]
   },
   {
@@ -388,6 +410,11 @@
      "บรรยากาศ",
      "브론야깟"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "gentle"
    ]
   },
   {
@@ -440,7 +467,12 @@
      "너"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😟",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
+   ]
   },
   {
    "num": 9,
@@ -476,7 +508,8 @@
      "เอง",
      "엥"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 10,
@@ -503,7 +536,8 @@
      "왕"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 11,
@@ -546,6 +580,11 @@
      "นั่ง",
      "낭"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   },
   {
@@ -588,7 +627,12 @@
      "따럿빠이"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "☺️",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "shy"
+   ]
   },
   {
    "num": 13,
@@ -640,7 +684,12 @@
      "폼"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ]
   }
  ],
  "review": {

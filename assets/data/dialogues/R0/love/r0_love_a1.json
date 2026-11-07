@@ -63,7 +63,8 @@
      "ว่าง",
      "왕"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -99,7 +100,8 @@
      "เก้าอี้",
      "까오이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -136,7 +138,12 @@
      "티니"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "polite"
+   ]
   },
   {
    "num": 4,
@@ -167,7 +174,8 @@
      "ชื่อ",
      "츠"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -199,7 +207,8 @@
      "루짝"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 6,
@@ -232,7 +241,8 @@
      "ดีใจ",
      "디짜이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 7,
@@ -258,7 +268,8 @@
      "두어이깐"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "☺️",
+   "emotion": "shy"
   },
   {
    "num": 8,
@@ -279,7 +290,12 @@
      "컵쿤"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "shy"
+   ]
   }
  ],
  "review": {

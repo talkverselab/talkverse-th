@@ -85,6 +85,11 @@
      "ครบ",
      "크롭"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
    ]
   },
   {
@@ -146,7 +151,8 @@
      "ที่นี่",
      "티니"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -207,6 +213,11 @@
      "ใหม่",
      "마이"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
    ]
   },
   {
@@ -269,7 +280,8 @@
      "두어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 5,
@@ -330,6 +342,11 @@
      "ดี",
      "디"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "flustered"
    ]
   },
   {
@@ -414,7 +431,8 @@
      "마이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 7,
@@ -465,6 +483,11 @@
      "ตรงนี้",
      "뜨롱니"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "excited"
    ]
   },
   {
@@ -527,7 +550,12 @@
      "너이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 9,
@@ -608,6 +636,11 @@
      "นาน",
      "난"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
    ]
   },
   {
@@ -660,7 +693,12 @@
      "익너이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😆",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "amused"
+   ]
   }
  ],
  "review": {

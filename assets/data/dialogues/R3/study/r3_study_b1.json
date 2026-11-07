@@ -100,7 +100,8 @@
      "อาจารย์",
      "아짠"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -137,7 +138,12 @@
      "이멘"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
+   ]
   },
   {
    "num": 3,
@@ -188,7 +194,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -259,7 +266,8 @@
      "ความเคารพ",
      "쾀카오롭"
     ]
-   ]
+   ],
+   "emotion": "tsukkomi"
   },
   {
    "num": 5,
@@ -321,7 +329,8 @@
      "오케"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😬",
+   "emotion": "stiff"
   },
   {
    "num": 6,
@@ -368,7 +377,12 @@
      "너"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "tsukkomi"
+   ]
   },
   {
    "num": 7,
@@ -421,6 +435,11 @@
      "ส่ง",
      "쏭"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "stiff"
    ]
   },
   {
@@ -488,7 +507,12 @@
      "니"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 9,
@@ -549,6 +573,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "surprised"
    ]
   },
   {
@@ -585,6 +614,11 @@
      "จริง",
      "찡"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "shout"
    ]
   },
   {
@@ -694,6 +728,11 @@
      "ไม่",
      "마이"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -730,6 +769,11 @@
      "จริงๆ",
      "찡 찡"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   }
  ],

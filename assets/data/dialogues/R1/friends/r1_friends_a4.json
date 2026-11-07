@@ -60,6 +60,11 @@
      "จัง",
      "짱"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -91,7 +96,8 @@
      "สุขสันต์",
      "쑥싼"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -133,7 +139,12 @@
      "응이압 응이압"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 4,
@@ -170,7 +181,12 @@
      "론"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😳",
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
+   ]
   },
   {
    "num": 5,
@@ -224,7 +240,12 @@
      "당"
     ]
    ],
-   "emoji": "😑"
+   "emoji": "😲",
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "surprised"
+   ]
   },
   {
    "num": 6,
@@ -270,6 +291,11 @@
      "ดี",
      "디"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
    ]
   },
   {
@@ -306,6 +332,11 @@
      "เอง",
      "엥"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "stiff"
    ]
   },
   {
@@ -367,6 +398,11 @@
      "ขอบใจ",
      "컵짜이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   }
  ],

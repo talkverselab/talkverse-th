@@ -87,7 +87,12 @@
      "너"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😒",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "annoyed"
+   ]
   },
   {
    "num": 2,
@@ -144,7 +149,12 @@
      "너이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🤩",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "excited"
+   ]
   },
   {
    "num": 3,
@@ -174,6 +184,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "stiff"
    ]
   },
   {
@@ -241,7 +256,12 @@
      "룻"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😟",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "worried"
+   ]
   },
   {
    "num": 5,
@@ -278,7 +298,12 @@
      "나이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😳",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
+   ]
   },
   {
    "num": 6,
@@ -326,6 +351,11 @@
      "เว่อร์",
      "워"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -377,6 +407,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -419,7 +454,12 @@
      "너"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😄",
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "cheerful"
+   ]
   },
   {
    "num": 9,
@@ -460,6 +500,11 @@
      "เพลง",
      "플렝"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -486,6 +531,11 @@
      "เลื่อนตำแหน่ง",
      "르안땀냉"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "amused"
    ]
   }
  ],

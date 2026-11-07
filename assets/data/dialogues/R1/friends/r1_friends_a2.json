@@ -54,7 +54,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 2,
@@ -100,7 +101,8 @@
      "썽마이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -130,7 +132,8 @@
      "ขอบคุณ",
      "컵쿤"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -180,6 +183,11 @@
      "นี้",
      "니"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "teasing"
    ]
   },
   {
@@ -217,6 +225,11 @@
      "จัง",
      "짱"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -277,6 +290,11 @@
      "แถม",
      "탬"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "teasing"
    ]
   },
   {
@@ -297,7 +315,8 @@
      "컵쿤"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 8,
@@ -338,6 +357,11 @@
      "เป็นลม",
      "뻰롬"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
    ]
   }
  ],

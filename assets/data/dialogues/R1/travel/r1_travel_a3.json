@@ -74,6 +74,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "annoyed"
    ]
   },
   {
@@ -126,7 +131,12 @@
      "콘디아우"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "cheerful"
+   ]
   },
   {
    "num": 3,
@@ -162,7 +172,8 @@
      "ตามมา",
      "땀마"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -199,7 +210,12 @@
      "친"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😆",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
+   ]
   },
   {
    "num": 5,
@@ -242,6 +258,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -288,6 +309,11 @@
      "เมท",
      "멧"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   },
   {
@@ -329,6 +355,11 @@
      "ได้ยิน",
      "다이인"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "teasing"
    ]
   },
   {
@@ -380,6 +411,11 @@
      "ชิล",
      "친"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "stiff"
    ]
   }
  ],

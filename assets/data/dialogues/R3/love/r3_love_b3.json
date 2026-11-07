@@ -90,6 +90,11 @@
      "เอง",
      "엥"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "excited"
    ]
   },
   {
@@ -166,6 +171,11 @@
      "มา",
      "마"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -202,7 +212,8 @@
      "กัน",
      "깐"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -254,7 +265,8 @@
      "크라이"
     ]
    ],
-   "emoji": "😑"
+   "emoji": "🙄",
+   "emotion": "tsukkomi"
   },
   {
    "num": 5,
@@ -301,7 +313,8 @@
      "너이"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😬",
+   "emotion": "stiff"
   },
   {
    "num": 6,
@@ -362,6 +375,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "annoyed"
    ]
   },
   {
@@ -408,7 +426,8 @@
      "เท่า",
      "타오"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 8,
@@ -474,6 +493,11 @@
      "มา",
      "마"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -530,7 +554,8 @@
      "โดยเฉพาะ",
      "도이차퍼"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 10,
@@ -583,6 +608,11 @@
      "อีกแล้ว",
      "익래우"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "tsukkomi"
    ]
   },
   {
@@ -680,7 +710,8 @@
      "락"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🤩",
+   "emotion": "excited"
   },
   {
    "num": 12,
@@ -746,6 +777,11 @@
      "พอ",
      "퍼"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "gentle"
    ]
   },
   {
@@ -759,7 +795,8 @@
    "new": [
     "ฟ้า"
    ],
-   "lemmas": []
+   "lemmas": [],
+   "emotion": "shy"
   }
  ],
  "review": {

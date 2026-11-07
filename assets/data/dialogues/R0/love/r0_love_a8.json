@@ -63,7 +63,8 @@
      "อยู่",
      "유"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 2,
@@ -99,7 +100,8 @@
      "นอน",
      "넌"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 3,
@@ -130,7 +132,8 @@
      "ตอนนี้",
      "떤니"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 4,
@@ -161,7 +164,8 @@
      "สุด",
      "쑷"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -200,7 +204,12 @@
      "니"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
+   ]
   },
   {
    "num": 6,
@@ -246,7 +255,8 @@
      "งวง",
      "응우앙"
     ]
-   ]
+   ],
+   "emotion": "tsukkomi"
   },
   {
    "num": 7,
@@ -302,6 +312,11 @@
      "ปลุก",
      "쁠룩"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "gentle"
    ]
   },
   {
@@ -328,7 +343,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

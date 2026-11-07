@@ -104,7 +104,8 @@
      "루"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😟",
+   "emotion": "worried"
   },
   {
    "num": 2,
@@ -195,6 +196,11 @@
      "นั้น",
      "난"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
    ]
   },
   {
@@ -242,7 +248,12 @@
      "킷"
     ]
    ],
-   "emoji": "😉"
+   "emoji": "😟",
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "worried"
+   ]
   },
   {
    "num": 4,
@@ -308,6 +319,11 @@
      "แน่ใจ",
      "내짜이"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "sad"
    ]
   },
   {
@@ -359,7 +375,8 @@
      "ขึ้น",
      "큰"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "num": 6,
@@ -410,6 +427,11 @@
      "ทัน",
      "탄"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
    ]
   },
   {
@@ -481,6 +503,11 @@
      "ยาก",
      "약"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "shy"
    ]
   },
   {
@@ -537,6 +564,11 @@
      "คุย",
      "쿠이"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "teasing"
    ]
   },
   {
@@ -603,6 +635,11 @@
      "อีกแล้ว",
      "익래우"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -696,6 +733,11 @@
      "เอง",
      "엥"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   },
   {
@@ -742,6 +784,11 @@
      "ผม",
      "폼"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "gentle"
    ]
   },
   {
@@ -778,7 +825,8 @@
      "ไว้",
      "와이"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 13,
@@ -819,6 +867,11 @@
      "พูด",
      "풋"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   }
  ],

@@ -108,7 +108,8 @@
      "นี้",
      "니"
     ]
-   ]
+   ],
+   "emotion": "annoyed"
   },
   {
    "num": 2,
@@ -152,7 +153,8 @@
      "มา",
      "마"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 3,
@@ -180,7 +182,8 @@
      "푸잉"
     ]
    ],
-   "emoji": "😑"
+   "emoji": "😒",
+   "emotion": "annoyed"
   },
   {
    "num": 4,
@@ -228,7 +231,8 @@
      "킷"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 5,
@@ -268,7 +272,8 @@
      "ได้คิด",
      "다이킷"
     ]
-   ]
+   ],
+   "emotion": "annoyed"
   },
   {
    "num": 6,
@@ -306,7 +311,8 @@
      "유"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "teasing"
   },
   {
    "num": 7,
@@ -360,7 +366,12 @@
      "피"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "☺️",
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "shy"
+   ]
   },
   {
    "num": 8,
@@ -404,7 +415,8 @@
      "กัน",
      "깐"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 9,
@@ -452,7 +464,8 @@
      "รับ",
      "랍"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 10,
@@ -492,6 +505,11 @@
      "ขอโทษ",
      "커톳"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
    ]
   },
   {
@@ -550,6 +568,11 @@
      "ภาษา",
      "파싸"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -583,7 +606,12 @@
      "차이마이"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😏",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "teasing"
+   ]
   },
   {
    "num": 13,
@@ -627,7 +655,12 @@
      "익"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ]
   }
  ],
  "review": {

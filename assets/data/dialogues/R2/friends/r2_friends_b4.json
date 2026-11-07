@@ -81,7 +81,8 @@
      "มา",
      "마"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -118,7 +119,12 @@
      "롯브론툭"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "🙄",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "tsukkomi"
+   ]
   },
   {
    "num": 3,
@@ -165,7 +171,12 @@
      "싸이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😳",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "flustered"
+   ]
   },
   {
    "num": 4,
@@ -211,7 +222,8 @@
      "ไม่",
      "마이"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 5,
@@ -254,7 +266,8 @@
      "หน่อย",
      "너이"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 6,
@@ -295,6 +308,11 @@
      "เอาจริง",
      "아오찡"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "annoyed"
    ]
   },
   {
@@ -346,6 +364,11 @@
      "ใหญ่",
      "야이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -388,7 +411,12 @@
      "닛"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😄",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "cheerful"
+   ]
   },
   {
    "num": 9,
@@ -444,6 +472,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "tsukkomi"
    ]
   },
   {
@@ -495,7 +528,8 @@
      "ก็ได้",
      "꺼다이"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

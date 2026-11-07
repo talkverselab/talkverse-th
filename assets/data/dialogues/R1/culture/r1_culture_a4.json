@@ -78,7 +78,8 @@
      "안"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "speaker": "B",
@@ -133,7 +134,8 @@
      "ข้าว",
      "카우"
     ]
-   ]
+   ],
+   "emotion": "tsukkomi"
   },
   {
    "speaker": "A",
@@ -156,7 +158,12 @@
      "뱁니"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😳",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
+   ]
   },
   {
    "speaker": "B",
@@ -183,6 +190,11 @@
      "กลับด้าน",
      "끌랍단"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -203,7 +215,12 @@
      "아러이"
     ]
    ],
-   "female_ok": true
+   "female_ok": true,
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "surprised"
+   ]
   },
   {
    "speaker": "B",
@@ -240,6 +257,11 @@
      "บ้าง",
      "방"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -294,7 +316,8 @@
      "ใหญ่",
      "야이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "speaker": "B",
@@ -334,7 +357,8 @@
      "껭"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

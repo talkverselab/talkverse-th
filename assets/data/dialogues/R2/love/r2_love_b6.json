@@ -81,7 +81,8 @@
      "차오"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -143,7 +144,12 @@
      "므안깐"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "polite"
+   ]
   },
   {
    "num": 3,
@@ -194,6 +200,11 @@
      "จัง",
      "짱"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   },
   {
@@ -240,6 +251,11 @@
      "เร็ว",
      "레우"
     ]
+   ],
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "stiff"
    ]
   },
   {
@@ -282,7 +298,12 @@
      "친"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 6,
@@ -338,7 +359,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -376,7 +398,8 @@
      "วิ่ง",
      "윙"
     ]
-   ]
+   ],
+   "emotion": "shy"
   },
   {
    "num": 8,
@@ -417,6 +440,11 @@
      "เร็ว",
      "레우"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "surprised"
    ]
   },
   {
@@ -464,7 +492,12 @@
      "친"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 10,
@@ -505,6 +538,11 @@
      "พอแล้ว",
      "퍼래우"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "cheerful"
    ]
   }
  ],

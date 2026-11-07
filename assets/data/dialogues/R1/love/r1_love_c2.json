@@ -54,7 +54,8 @@
      "ยัง",
      "양"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 2,
@@ -85,7 +86,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -127,7 +129,12 @@
      "넌"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 4,
@@ -158,7 +165,8 @@
      "คิดถึง",
      "킷틍"
     ]
-   ]
+   ],
+   "emotion": "shy"
   },
   {
    "num": 5,
@@ -184,7 +192,12 @@
      "크라이"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😏",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "teasing"
+   ]
   },
   {
    "num": 6,
@@ -247,7 +260,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -289,7 +303,8 @@
      "핏"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "shy"
   },
   {
    "num": 8,
@@ -315,7 +330,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "shy"
   }
  ],
  "review": {

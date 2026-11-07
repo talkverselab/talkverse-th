@@ -100,6 +100,11 @@
      "นอนไม่หลับ",
      "넌마이랍"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "annoyed"
    ]
   },
   {
@@ -130,6 +135,11 @@
      "เอง",
      "엥"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "polite"
    ]
   },
   {
@@ -185,6 +195,11 @@
      "จัง",
      "짱"
     ]
+   ],
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "gentle"
    ]
   },
   {
@@ -220,6 +235,11 @@
      "ม่ะ",
      "마"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -255,7 +275,8 @@
      "นี้",
      "니"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 6,
@@ -314,6 +335,11 @@
      "เธอ",
      "터"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "shy"
    ]
   },
   {
@@ -351,7 +377,8 @@
      "ผม",
      "폼"
     ]
-   ]
+   ],
+   "emotion": "surprised"
   },
   {
    "num": 8,
@@ -373,7 +400,8 @@
      "มี",
      "미"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 9,
@@ -418,6 +446,11 @@
      "ผม",
      "폼"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "surprised"
    ]
   },
   {
@@ -463,6 +496,11 @@
      "เอา",
      "아오"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
    ]
   }
  ],

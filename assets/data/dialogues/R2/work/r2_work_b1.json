@@ -88,7 +88,8 @@
      "ครั้งแรก",
      "크랑랙"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -129,6 +130,11 @@
      "พี่",
      "피"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
    ]
   },
   {
@@ -185,7 +191,8 @@
      "ปฏิเสธ",
      "빠띠쎗"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 4,
@@ -210,6 +217,11 @@
      "พี่",
      "피"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "shout"
    ]
   },
   {
@@ -240,6 +252,11 @@
      "กัน",
      "깐"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   },
   {
@@ -306,6 +323,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
    ]
   },
   {
@@ -344,7 +366,12 @@
      "여"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🤩",
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "excited"
+   ]
   },
   {
    "num": 8,
@@ -410,6 +437,11 @@
      "เหมือนกัน",
      "므안깐"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "gentle"
    ]
   },
   {
@@ -440,6 +472,11 @@
      "พี่",
      "피"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "polite"
    ]
   },
   {
@@ -480,7 +517,8 @@
      "ด้วยกัน",
      "두어이깐"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

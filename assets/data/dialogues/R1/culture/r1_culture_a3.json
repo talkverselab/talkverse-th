@@ -64,7 +64,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 2,
@@ -105,6 +106,11 @@
      "ก่อน",
      "껀"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "cheerful"
    ]
   },
   {
@@ -136,7 +142,8 @@
      "มีความสุข",
      "미쾀쑥"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -182,6 +189,11 @@
      "อีกแล้ว",
      "익래우"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "annoyed"
    ]
   },
   {
@@ -224,7 +236,12 @@
      "빠이"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😳",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
+   ]
   },
   {
    "num": 6,
@@ -287,6 +304,11 @@
      "เอง",
      "엥"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "shy"
    ]
   },
   {
@@ -313,7 +335,8 @@
      "จัง",
      "짱"
     ]
-   ]
+   ],
+   "emotion": "shy"
   },
   {
    "num": 8,
@@ -349,6 +372,11 @@
      "ทั้งคู่",
      "탕쿠"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   }
  ],

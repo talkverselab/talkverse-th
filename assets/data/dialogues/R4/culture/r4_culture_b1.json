@@ -91,7 +91,8 @@
      "ใช่",
      "차이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -187,7 +188,8 @@
      "หัว",
      "후아"
     ]
-   ]
+   ],
+   "emotion": "neutral"
   },
   {
    "num": 3,
@@ -253,6 +255,11 @@
      "ใช่ไหม",
      "차이마이"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "polite"
    ]
   },
   {
@@ -319,6 +326,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "worried"
    ]
   },
   {
@@ -395,6 +407,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "flustered"
    ]
   },
   {
@@ -476,6 +493,11 @@
      "อยู่แล้ว",
      "유래우"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   },
   {
@@ -533,7 +555,12 @@
      "하이다이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😢",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "sad"
+   ]
   },
   {
    "num": 8,
@@ -624,6 +651,11 @@
      "พอ",
      "퍼"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
    ]
   },
   {
@@ -691,7 +723,12 @@
      "싸투"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 10,
@@ -785,7 +822,12 @@
      "디"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "🤩",
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "excited"
+   ]
   },
   {
    "num": 11,
@@ -841,6 +883,11 @@
      "เข้า",
      "카오"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "surprised"
    ]
   },
   {
@@ -927,6 +974,11 @@
      "หัวเราะ",
      "후아러"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "amused"
    ]
   },
   {
@@ -994,7 +1046,12 @@
      "커톳"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😢",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "sad"
+   ]
   },
   {
    "num": 14,
@@ -1065,7 +1122,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

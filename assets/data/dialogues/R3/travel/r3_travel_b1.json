@@ -91,7 +91,8 @@
      "ยัง",
      "양"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 2,
@@ -142,6 +143,11 @@
      "ขึ้น",
      "큰"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "flustered"
    ]
   },
   {
@@ -198,7 +204,8 @@
      "เงียบสนิท",
      "응이압싸닛"
     ]
-   ]
+   ],
+   "emotion": "neutral"
   },
   {
    "num": 4,
@@ -234,6 +241,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
    ]
   },
   {
@@ -280,7 +292,8 @@
      "กรน",
      "끄론"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 6,
@@ -341,6 +354,11 @@
      "งง",
      "응옹"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
    ]
   },
   {
@@ -402,6 +420,11 @@
      "พูด",
      "풋"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "worried"
    ]
   },
   {
@@ -434,6 +457,11 @@
      "หัวเราะ",
      "후아러"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "flustered"
    ]
   },
   {
@@ -522,6 +550,11 @@
      "บานปลาย",
      "반쁠라이"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -584,7 +617,12 @@
      "익"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😳",
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "flustered"
+   ]
   },
   {
    "num": 11,
@@ -655,7 +693,8 @@
      "นั่งสมาธิ",
      "낭싸마티"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 12,
@@ -726,6 +765,11 @@
      "หัวเราะ",
      "후아러"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -772,7 +816,8 @@
      "โยม",
      "욤"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 14,
@@ -792,6 +837,11 @@
      "จริง",
      "찡"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "gentle"
    ]
   }
  ],

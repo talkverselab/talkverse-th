@@ -60,7 +60,8 @@
      "ว่าง",
      "왕"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -110,7 +111,8 @@
      "ไว้",
      "와이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -165,6 +167,11 @@
      "คน",
      "콘"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
    ]
   },
   {
@@ -202,6 +209,11 @@
      "คน",
      "콘"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "amused"
    ]
   },
   {
@@ -264,6 +276,11 @@
      "คน",
      "콘"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -297,7 +314,8 @@
      "낭"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 7,
@@ -332,7 +350,12 @@
      "컵쿤"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "cheerful"
+   ]
   },
   {
    "num": 8,
@@ -369,7 +392,8 @@
      "เธอ",
      "터"
     ]
-   ]
+   ],
+   "emotion": "shy"
   },
   {
    "num": 9,
@@ -396,7 +420,8 @@
      "เมื่อไหร่",
      "므아라이"
     ]
-   ]
+   ],
+   "emotion": "surprised"
   },
   {
    "num": 10,
@@ -433,6 +458,11 @@
      "อ่านหนังสือ",
      "안낭쓰"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "teasing"
    ]
   }
  ],

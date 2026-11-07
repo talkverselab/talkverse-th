@@ -131,7 +131,8 @@
      "แน่",
      "내"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 2,
@@ -208,7 +209,12 @@
      "란"
     ]
    ],
-   "emoji": "🤷"
+   "emoji": "🤩",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "excited"
+   ]
   },
   {
    "num": 3,
@@ -309,6 +315,11 @@
      "นิ้ว",
      "니우"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "excited"
    ]
   },
   {
@@ -385,6 +396,11 @@
      "ดี",
      "디"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
    ]
   },
   {
@@ -466,6 +482,11 @@
      "พอดี",
      "퍼디"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "excited"
    ]
   },
   {
@@ -532,6 +553,11 @@
      "ดี",
      "디"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
    ]
   },
   {
@@ -608,7 +634,8 @@
      "ปลุก",
      "쁠룩"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 8,
@@ -649,7 +676,8 @@
      "ระวัง",
      "라왕"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "num": 9,
@@ -701,7 +729,12 @@
      "른"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😒",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "annoyed"
+   ]
   },
   {
    "num": 10,
@@ -767,6 +800,11 @@
      "พอดี",
      "퍼디"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "stiff"
    ]
   },
   {
@@ -835,7 +873,8 @@
      "เก่ง",
      "껭"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 12,
@@ -881,6 +920,11 @@
      "เป็นความลับ",
      "뻰쾀랍"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -942,6 +986,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "flustered"
    ]
   },
   {
@@ -999,7 +1048,12 @@
      "뻰쾀랍"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ]
   }
  ],
  "review": {

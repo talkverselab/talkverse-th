@@ -75,7 +75,8 @@
      "껀"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -112,7 +113,8 @@
      "툭떵"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😬",
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -154,7 +156,12 @@
      "탕"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😆",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
+   ]
   },
   {
    "num": 4,
@@ -196,7 +203,8 @@
      "마이"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 5,
@@ -239,7 +247,8 @@
      "เว่อร์",
      "워"
     ]
-   ]
+   ],
+   "emotion": "amused"
   },
   {
    "num": 6,
@@ -280,6 +289,11 @@
      "ผิด",
      "핏"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
    ]
   },
   {
@@ -321,7 +335,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 8,
@@ -357,7 +372,8 @@
      "ชิล",
      "친"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   }
  ],
  "review": {

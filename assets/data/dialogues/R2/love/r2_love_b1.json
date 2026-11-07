@@ -87,7 +87,8 @@
      "끌라이"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😅",
+   "emotion": "neutral"
   },
   {
    "num": 2,
@@ -107,6 +108,11 @@
      "รู้",
      "루"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "stiff"
    ]
   },
   {
@@ -154,7 +160,12 @@
      "빠이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
+   ]
   },
   {
    "num": 4,
@@ -212,6 +223,11 @@
      "เยอะ",
      "여"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "shy"
    ]
   },
   {
@@ -249,7 +265,8 @@
      "จริง",
      "찡"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 6,
@@ -287,7 +304,8 @@
      "끌랍"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "☺️",
+   "emotion": "shy"
   },
   {
    "num": 7,
@@ -303,7 +321,8 @@
    "new": [],
    "len_ok": true,
    "one_word_ok": true,
-   "lemmas": []
+   "lemmas": [],
+   "emotion": "shy"
   },
   {
    "num": 8,
@@ -335,6 +354,11 @@
      "ต่อ",
      "떠"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
    ]
   },
   {
@@ -393,7 +417,12 @@
      "빠이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ]
   },
   {
    "num": 10,
@@ -437,7 +466,12 @@
      "너"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😄",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "cheerful"
+   ]
   }
  ],
  "review": {

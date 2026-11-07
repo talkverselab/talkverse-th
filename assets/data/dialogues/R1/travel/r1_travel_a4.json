@@ -70,7 +70,8 @@
      "อิน",
      "인"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -116,7 +117,8 @@
      "ห้อง",
      "헝"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -152,7 +154,8 @@
      "เดียว",
      "디아우"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -196,7 +199,12 @@
      "내남"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "cheerful"
+   ]
   },
   {
    "num": 5,
@@ -218,7 +226,12 @@
      "한니문"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😳",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
+   ]
   },
   {
    "num": 6,
@@ -269,7 +282,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "speaker": "A",
@@ -311,6 +325,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
    ]
   },
   {
@@ -337,6 +356,11 @@
      "กินกัน",
      "낀깐"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   }
  ],

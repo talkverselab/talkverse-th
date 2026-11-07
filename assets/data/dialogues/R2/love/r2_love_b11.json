@@ -67,7 +67,8 @@
      "친"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -104,7 +105,12 @@
      "마"
     ]
    ],
-   "emoji": "🤷"
+   "emoji": "😄",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "cheerful"
+   ]
   },
   {
    "num": 3,
@@ -145,6 +151,11 @@
      "จอ",
      "쩌"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "shout"
    ]
   },
   {
@@ -176,6 +187,11 @@
      "ผม",
      "폼"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
    ]
   },
   {
@@ -214,7 +230,8 @@
      "ลูก",
      "룩"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 6,
@@ -239,6 +256,11 @@
      "หรือยัง",
      "르양"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "flustered"
    ]
   },
   {
@@ -290,6 +312,11 @@
      "ทำงาน",
      "탐응안"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -341,6 +368,11 @@
      "บริษัท",
      "버리쌋"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "flustered"
    ]
   },
   {
@@ -377,7 +409,8 @@
      "ฉัน",
      "찬"
     ]
-   ]
+   ],
+   "emotion": "shy"
   }
  ],
  "review": {

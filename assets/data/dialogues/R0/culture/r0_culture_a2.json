@@ -74,7 +74,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 2,
@@ -110,7 +111,8 @@
      "น้ำ",
      "남"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -156,6 +158,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "excited"
    ]
   },
   {
@@ -190,7 +197,8 @@
      "잉"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🤩",
+   "emotion": "excited"
   },
   {
    "num": 5,
@@ -226,6 +234,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -267,7 +280,8 @@
      "มา",
      "마"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "num": 7,
@@ -313,6 +327,11 @@
      "เปียกโชก",
      "삐악촉"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "excited"
    ]
   },
   {
@@ -354,7 +373,8 @@
      "ที่สุด",
      "티쑷"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

@@ -156,7 +156,8 @@
      "ดำเนินคดี",
      "담는카디"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 2,
@@ -211,6 +212,11 @@
      "ขึ้น",
      "큰"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
    ]
   },
   {
@@ -317,6 +323,11 @@
      "ทันที",
      "탄티"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "annoyed"
    ]
   },
   {
@@ -382,7 +393,8 @@
      "ตรงนี้",
      "뜨롱니"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 5,
@@ -416,6 +428,11 @@
      "ต่อ",
      "떠"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
    ]
   },
   {
@@ -466,6 +483,11 @@
      "มา",
      "마"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -546,6 +568,11 @@
      "คอลเซ็นเตอร์",
      "컨쎈떠"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "annoyed"
    ]
   },
   {
@@ -611,7 +638,12 @@
      "컨쎈떠"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😬",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "stiff"
+   ]
   },
   {
    "num": 9,
@@ -715,7 +747,12 @@
      "두어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😱",
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "shout"
+   ]
   },
   {
    "num": 10,
@@ -784,7 +821,8 @@
      "เงิน",
      "응언"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 11,
@@ -835,7 +873,12 @@
      "탕난"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "gentle"
+   ]
   },
   {
    "num": 12,
@@ -890,6 +933,11 @@
      "รายละเอียด",
      "라이라이앗"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "teasing"
    ]
   },
   {
@@ -961,7 +1009,8 @@
      "껀"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 14,
@@ -1027,7 +1076,8 @@
      "껀"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

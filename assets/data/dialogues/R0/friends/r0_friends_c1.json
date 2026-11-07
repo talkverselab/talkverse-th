@@ -99,7 +99,8 @@
      "มา",
      "마"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 2,
@@ -131,7 +132,8 @@
      "เพื่อน",
      "프안"
     ]
-   ]
+   ],
+   "emotion": "amused"
   },
   {
    "num": 3,
@@ -168,7 +170,8 @@
      "พจนานุกรม",
      "폿짜나누끄롬"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -200,6 +203,11 @@
      "นิดนึง",
      "닛능"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -222,7 +230,8 @@
      "สุขสันต์วันเกิด",
      "쑥싼완끗"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 6,
@@ -261,7 +270,8 @@
      "เพื่อน",
      "프안"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -283,6 +293,11 @@
      "ยินดี",
      "인디"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "stiff"
    ]
   },
   {
@@ -316,7 +331,12 @@
      "꺼다이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   }
  ],
  "review": {

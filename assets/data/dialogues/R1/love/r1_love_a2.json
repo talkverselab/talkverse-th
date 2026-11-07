@@ -60,7 +60,8 @@
      "타오라이"
     ]
    ],
-   "emoji": "🤷"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -80,7 +81,8 @@
      "ผม",
      "폼"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -112,7 +114,8 @@
      "피"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😏",
+   "emotion": "teasing"
   },
   {
    "num": 4,
@@ -132,7 +135,8 @@
      "พี่",
      "피"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -168,6 +172,11 @@
      "ทหาร",
      "타한"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -189,7 +198,8 @@
      "พี่",
      "피"
     ]
-   ]
+   ],
+   "emotion": "shy"
   },
   {
    "num": 7,
@@ -226,7 +236,12 @@
      "너"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "☺️",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ]
   },
   {
    "num": 8,
@@ -256,7 +271,8 @@
      "นิดหน่อย",
      "닛너이"
     ]
-   ]
+   ],
+   "emotion": "shy"
   }
  ],
  "review": {

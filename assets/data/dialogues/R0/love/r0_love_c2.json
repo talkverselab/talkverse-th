@@ -65,7 +65,8 @@
      "넌"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 2,
@@ -117,6 +118,11 @@
      "ง่วง",
      "응우앙"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "amused"
    ]
   },
   {
@@ -149,6 +155,11 @@
      "ตาย",
      "따이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -180,7 +191,8 @@
      "นอน",
      "넌"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -222,6 +234,11 @@
      "นอน",
      "넌"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "shy"
    ]
   },
   {
@@ -252,7 +269,8 @@
      "판디"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -289,7 +307,8 @@
      "두어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "shy"
   },
   {
    "num": 8,
@@ -330,6 +349,11 @@
      "ฝันดี",
      "판디"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   }
  ],

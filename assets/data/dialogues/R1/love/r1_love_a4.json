@@ -61,7 +61,8 @@
      "막"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -92,7 +93,8 @@
      "찡"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -124,7 +126,8 @@
      "마나"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😬",
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -150,7 +153,12 @@
      "마이떵"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙄",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "tsukkomi"
+   ]
   },
   {
    "num": 5,
@@ -188,7 +196,8 @@
      "เอง",
      "엥"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 6,
@@ -228,7 +237,12 @@
      "매우"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
+   ]
   },
   {
    "num": 7,
@@ -259,6 +273,11 @@
      "เอง",
      "엥"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -315,6 +334,11 @@
      "ก่อน",
      "껀"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "gentle"
    ]
   }
  ],

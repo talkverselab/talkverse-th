@@ -87,7 +87,12 @@
      "빠띠"
     ]
    ],
-   "emoji": "😉"
+   "emoji": "😱",
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "shout"
+   ]
   },
   {
    "num": 2,
@@ -124,7 +129,12 @@
      "나이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😳",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
+   ]
   },
   {
    "num": 3,
@@ -205,6 +215,11 @@
      "ไหล",
      "라이"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "sad"
    ]
   },
   {
@@ -252,7 +267,12 @@
      "끌랍"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙄",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "tsukkomi"
+   ]
   },
   {
    "num": 5,
@@ -308,6 +328,11 @@
      "น้ำตาไหล",
      "남따라이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "sad"
    ]
   },
   {
@@ -364,6 +389,11 @@
      "ไหน",
      "나이"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "tsukkomi"
    ]
   },
   {
@@ -505,6 +535,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "amused"
    ]
   },
   {
@@ -599,7 +634,12 @@
      "떠"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "cheerful"
+   ]
   },
   {
    "num": 9,
@@ -690,6 +730,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
    ]
   },
   {
@@ -746,6 +791,11 @@
      "อยู่",
      "유"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "stiff"
    ]
   },
   {
@@ -842,6 +892,11 @@
      "ดี",
      "디"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -938,6 +993,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "amused"
    ]
   },
   {
@@ -994,6 +1054,11 @@
      "ที",
      "티"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "gentle"
    ]
   }
  ],

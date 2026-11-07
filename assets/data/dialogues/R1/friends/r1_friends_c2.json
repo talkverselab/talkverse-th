@@ -75,7 +75,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "annoyed"
   },
   {
    "num": 2,
@@ -113,7 +114,8 @@
      "떱"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "amused"
   },
   {
    "num": 3,
@@ -171,7 +173,12 @@
      "깐"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "teasing"
+   ]
   },
   {
    "num": 4,
@@ -209,7 +216,12 @@
      "너이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
+   ]
   },
   {
    "num": 5,
@@ -246,7 +258,8 @@
      "ตรงนี้",
      "뜨롱니"
     ]
-   ]
+   ],
+   "emotion": "annoyed"
   },
   {
    "num": 6,
@@ -295,7 +308,8 @@
      "มา",
      "마"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -327,6 +341,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "shy"
    ]
   },
   {
@@ -389,6 +408,11 @@
      "ตอบ",
      "떱"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
    ]
   }
  ],

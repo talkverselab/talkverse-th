@@ -101,7 +101,8 @@
      "ไกล",
      "끌라이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -182,7 +183,8 @@
      "ชิล",
      "친"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 3,
@@ -259,7 +261,8 @@
      "낀"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 4,
@@ -310,6 +313,11 @@
      "ลูก",
      "룩"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "surprised"
    ]
   },
   {
@@ -406,6 +414,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   },
   {
@@ -447,7 +460,8 @@
      "ร้อน",
      "런"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 7,
@@ -488,7 +502,8 @@
      "ขึ้น",
      "큰"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 8,
@@ -581,6 +596,11 @@
      "เต็ม",
      "뗌"
     ]
+   ],
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "flustered"
    ]
   },
   {
@@ -642,7 +662,8 @@
      "หมายความว่า",
      "마이쾀와"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 10,
@@ -679,7 +700,8 @@
      "อร่อย",
      "아러이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 11,
@@ -790,6 +812,11 @@
      "ถุง",
      "퉁"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "flustered"
    ]
   },
   {
@@ -841,6 +868,11 @@
      "ชั่วโมง",
      "추아몽"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "surprised"
    ]
   },
   {
@@ -897,7 +929,8 @@
      "ลูก",
      "룩"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

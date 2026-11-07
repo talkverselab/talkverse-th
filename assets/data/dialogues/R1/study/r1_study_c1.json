@@ -75,7 +75,8 @@
      "ดี",
      "디"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -96,7 +97,8 @@
      "ฝันดี",
      "판디"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 3,
@@ -133,6 +135,11 @@
      "อยู่เลย",
      "유러이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -186,7 +193,8 @@
      "ใช่",
      "차이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 5,
@@ -227,7 +235,8 @@
      "ตั้งใจ",
      "땅짜이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 6,
@@ -269,7 +278,8 @@
      "커톳"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -311,7 +321,12 @@
      "판디"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 8,
@@ -337,6 +352,11 @@
      "อาจารย์",
      "아짠"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "polite"
    ]
   }
  ],

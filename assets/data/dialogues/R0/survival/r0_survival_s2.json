@@ -58,7 +58,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -79,7 +80,8 @@
      "เดี๋ยว",
      "디아우"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -125,7 +127,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -148,6 +151,11 @@
      "ใบไม้",
      "바이마이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -165,7 +173,8 @@
      "ใบไม้",
      "바이마이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 6,
@@ -207,7 +216,12 @@
      "룩옴"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
+   ]
   },
   {
    "num": 7,
@@ -233,7 +247,8 @@
      "ใบเสร็จ",
      "바이쎗"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 8,
@@ -255,7 +270,12 @@
      "바이쎗"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "polite"
+   ]
   }
  ],
  "review": {

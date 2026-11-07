@@ -55,7 +55,8 @@
      "ลาออก",
      "라억"
     ]
-   ]
+   ],
+   "emotion": "neutral"
   },
   {
    "num": 2,
@@ -92,7 +93,12 @@
      "빠이"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😟",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
+   ]
   },
   {
    "num": 3,
@@ -153,6 +159,11 @@
      "จริงๆ",
      "찡 찡"
     ]
+   ],
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "sad"
    ]
   },
   {
@@ -209,6 +220,11 @@
      "เจ้านาย",
      "짜오나이"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "amused"
    ]
   },
   {
@@ -270,6 +286,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -326,6 +347,11 @@
      "จริง",
      "찡"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -379,6 +405,11 @@
      "คาเฟ่",
      "카페"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   },
   {
@@ -425,6 +456,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "excited"
    ]
   },
   {
@@ -491,6 +527,11 @@
      "เวลา",
      "웨라"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   },
   {
@@ -538,7 +579,12 @@
      "랙"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "cheerful"
+   ]
   }
  ],
  "review": {

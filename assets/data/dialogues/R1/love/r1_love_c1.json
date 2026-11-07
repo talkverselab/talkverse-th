@@ -67,7 +67,8 @@
      "루짝"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -117,7 +118,8 @@
      "อยู่",
      "유"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -154,7 +156,8 @@
      "유러이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "amused"
   },
   {
    "num": 4,
@@ -177,7 +180,8 @@
      "ชอบ",
      "첩"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -225,7 +229,12 @@
      "땅때랙"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "teasing"
+   ]
   },
   {
    "num": 6,
@@ -269,6 +278,11 @@
      "กิน",
      "낀"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
    ]
   },
   {
@@ -320,7 +334,12 @@
      "쏨땀"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😄",
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "cheerful"
+   ]
   },
   {
    "num": 8,
@@ -364,6 +383,11 @@
      "ไหน",
      "나이"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "shy"
    ]
   }
  ],

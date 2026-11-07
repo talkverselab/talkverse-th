@@ -63,7 +63,8 @@
      "จัง",
      "짱"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 2,
@@ -90,7 +91,8 @@
      "막"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -126,7 +128,8 @@
      "ใช่ไหม",
      "차이마이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -158,7 +161,12 @@
      "빠이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 5,
@@ -211,7 +219,8 @@
      "คิว",
      "키우"
     ]
-   ]
+   ],
+   "emotion": "surprised"
   },
   {
    "num": 6,
@@ -252,6 +261,11 @@
      "เว่อร์",
      "워"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "excited"
    ]
   },
   {
@@ -289,7 +303,12 @@
      "추어이두어이"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😟",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ]
   },
   {
    "num": 8,
@@ -331,6 +350,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "shy"
    ]
   }
  ],

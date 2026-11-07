@@ -71,7 +71,8 @@
      "두어이깐"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -85,7 +86,8 @@
     "🙏"
    ],
    "ui": "bubble",
-   "lemmas": []
+   "lemmas": [],
+   "emotion": "neutral"
   },
   {
    "num": 3,
@@ -112,6 +114,11 @@
      "ไม่เป็นไร",
      "마이뻰라이"
     ]
+   ],
+   "emotion": "sad",
+   "emotions": [
+    "sad",
+    "amused"
    ]
   },
   {
@@ -144,6 +151,11 @@
      "ใช่",
      "차이"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
    ]
   },
   {
@@ -179,7 +191,12 @@
      "응언"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "teasing"
+   ]
   },
   {
    "num": 6,
@@ -221,6 +238,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "excited"
    ]
   },
   {
@@ -284,7 +306,12 @@
      "캄"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "🙄",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "tsukkomi"
+   ]
   },
   {
    "num": 8,
@@ -306,7 +333,8 @@
      "컵쿤"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "shy"
   }
  ],
  "review": {

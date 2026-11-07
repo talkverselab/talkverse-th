@@ -64,7 +64,8 @@
      "โมง",
      "몽"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -91,7 +92,8 @@
      "เช้า",
      "차오"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -128,7 +130,8 @@
      "ดี",
      "디"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 4,
@@ -157,7 +160,8 @@
      "ชั่วโมง",
      "추아몽"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -189,6 +193,11 @@
      "จริง",
      "찡"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "surprised"
    ]
   },
   {
@@ -221,7 +230,8 @@
      "โมง",
      "몽"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -254,7 +264,12 @@
      "몽"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 8,
@@ -301,6 +316,11 @@
      "ชั่วโมง",
      "추아몽"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "amused"
    ]
   }
  ],

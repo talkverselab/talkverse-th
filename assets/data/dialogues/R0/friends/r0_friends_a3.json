@@ -63,7 +63,8 @@
      "หน่อย",
      "너이"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 2,
@@ -99,6 +100,11 @@
      "ไว้",
      "와이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "excited"
    ]
   },
   {
@@ -126,7 +132,8 @@
      "잉"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🤩",
+   "emotion": "excited"
   },
   {
    "num": 4,
@@ -174,6 +181,11 @@
      "แผง",
      "팽"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
    ]
   },
   {
@@ -210,6 +222,11 @@
      "จักรยาน",
      "짠얀"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "surprised"
    ]
   },
   {
@@ -246,7 +263,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "surprised"
   },
   {
    "num": 7,
@@ -273,6 +291,11 @@
      "ห่วง",
      "후앙"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "excited"
    ]
   },
   {
@@ -311,7 +334,12 @@
      "앗차리야"
     ]
    ],
-   "emoji": "😑"
+   "emoji": "🤩",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "excited"
+   ]
   }
  ],
  "review": {

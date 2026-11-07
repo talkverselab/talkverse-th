@@ -87,7 +87,8 @@
      "못"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -113,7 +114,8 @@
      "นั่ง",
      "낭"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -156,7 +158,8 @@
      "츠"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 4,
@@ -188,7 +191,8 @@
      "สวัสดี",
      "싸왓디"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -242,6 +246,11 @@
      "หก",
      "혹"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "surprised"
    ]
   },
   {
@@ -279,7 +288,8 @@
      "ขอโทษ",
      "커톳"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -333,6 +343,11 @@
      "รู้จัก",
      "루짝"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "gentle"
    ]
   },
   {
@@ -365,7 +380,8 @@
      "เหมือนกัน",
      "므안깐"
     ]
-   ]
+   ],
+   "emotion": "shy"
   }
  ],
  "review": {

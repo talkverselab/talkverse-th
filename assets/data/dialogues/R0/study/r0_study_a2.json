@@ -55,7 +55,8 @@
      "양"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -86,7 +87,8 @@
      "ทำ",
      "탐"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -117,6 +119,11 @@
      "ทำไม",
      "탐마이"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -158,7 +165,8 @@
      "탐"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 5,
@@ -202,7 +210,8 @@
      "므안깐"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😆",
+   "emotion": "amused"
   },
   {
    "num": 6,
@@ -244,7 +253,8 @@
      "못"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😱",
+   "emotion": "shout"
   },
   {
    "num": 7,
@@ -285,7 +295,8 @@
      "ดี",
      "디"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 8,
@@ -317,7 +328,12 @@
      "두어이깐"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   }
  ],
  "review": {

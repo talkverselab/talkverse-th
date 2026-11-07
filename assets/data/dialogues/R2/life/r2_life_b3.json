@@ -96,6 +96,11 @@
      "อีกแล้ว",
      "익래우"
     ]
+   ],
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "worried"
    ]
   },
   {
@@ -152,6 +157,11 @@
      "มา",
      "마"
     ]
+   ],
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "cheerful"
    ]
   },
   {
@@ -203,7 +213,8 @@
      "ก่อน",
      "껀"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 4,
@@ -284,6 +295,11 @@
      "มา",
      "마"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -350,6 +366,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "shout"
    ]
   },
   {
@@ -398,7 +419,8 @@
      "ผม",
      "폼"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 7,
@@ -454,6 +476,11 @@
      "ห้อง",
      "헝"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -520,7 +547,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "neutral"
   },
   {
    "num": 9,
@@ -581,6 +609,11 @@
      "จริง",
      "찡"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
    ]
   },
   {
@@ -627,6 +660,11 @@
      "เรา",
      "라오"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "amused"
    ]
   }
  ],

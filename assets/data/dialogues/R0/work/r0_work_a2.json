@@ -59,7 +59,8 @@
      "เรา",
      "라오"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 2,
@@ -101,7 +102,8 @@
      "버리쌋"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -137,7 +139,8 @@
      "คิดไม่ออก",
      "킷마이억"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 4,
@@ -185,7 +188,8 @@
      "นี้",
      "니"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "num": 5,
@@ -216,6 +220,11 @@
      "มี",
      "미"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "tsukkomi"
    ]
   },
   {
@@ -247,7 +256,8 @@
      "สักครู่",
      "싹크루"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -279,7 +289,12 @@
      "딸럿"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 8,
@@ -315,7 +330,8 @@
      "ด้วยกัน",
      "두어이깐"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

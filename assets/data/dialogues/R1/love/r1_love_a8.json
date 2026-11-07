@@ -67,6 +67,11 @@
      "สุดท้าย",
      "쑷타이"
     ]
+   ],
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "surprised"
    ]
   },
   {
@@ -94,7 +99,8 @@
      "เปิด",
      "쁫"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "speaker": "B",
@@ -142,6 +148,11 @@
      "รอบ",
      "럽"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -174,7 +185,8 @@
      "เอง",
      "엥"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "speaker": "B",
@@ -206,7 +218,8 @@
      "ชื่อ",
      "츠"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "speaker": "A",
@@ -240,7 +253,8 @@
      "ดี",
      "디"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "speaker": "B",
@@ -267,6 +281,11 @@
      "ข้อ",
      "커"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   },
   {
@@ -278,7 +297,12 @@
    "tags": [],
    "new": [],
    "num": 8,
-   "lemmas": []
+   "lemmas": [],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "excited"
+   ]
   }
  ],
  "review": {

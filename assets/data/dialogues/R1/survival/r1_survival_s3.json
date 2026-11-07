@@ -74,7 +74,8 @@
      "ใกล้",
      "끌라이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -111,7 +112,8 @@
      "탕두안"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙂",
+   "emotion": "neutral"
   },
   {
    "num": 3,
@@ -151,6 +153,11 @@
      "ใกล้",
      "끌라이"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "flustered"
    ]
   },
   {
@@ -189,6 +196,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -239,7 +251,8 @@
      "นี้",
      "니"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "num": 6,
@@ -279,6 +292,11 @@
      "จัง",
      "짱"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "annoyed"
    ]
   },
   {
@@ -314,6 +332,11 @@
      "ใกล้",
      "끌라이"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
    ]
   },
   {
@@ -364,6 +387,11 @@
      "ชิล",
      "친"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "gentle"
    ]
   }
  ],

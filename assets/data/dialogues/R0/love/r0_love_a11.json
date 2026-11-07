@@ -59,7 +59,8 @@
      "ดี",
      "디"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -96,7 +97,8 @@
      "완"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙂",
+   "emotion": "neutral"
   },
   {
    "num": 3,
@@ -131,6 +133,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "stiff"
    ]
   },
   {
@@ -166,7 +173,8 @@
      "ไหน",
      "나이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 5,
@@ -203,7 +211,8 @@
      "เยอะ",
      "여"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 6,
@@ -234,7 +243,8 @@
      "윳"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😱",
+   "emotion": "shout"
   },
   {
    "num": 7,
@@ -274,7 +284,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 8,
@@ -311,7 +322,12 @@
      "터"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   }
  ],
  "review": {

@@ -54,7 +54,8 @@
      "ข้างใน",
      "캉나이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -91,7 +92,8 @@
      "껀"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "speaker": "A",
@@ -141,7 +143,8 @@
      "เอง",
      "엥"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "speaker": "B",
@@ -177,7 +180,12 @@
      "론"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "speaker": "A",
@@ -228,7 +236,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "speaker": "B",
@@ -268,6 +277,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -297,6 +311,11 @@
      "มา",
      "마"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
    ]
   },
   {
@@ -337,7 +356,8 @@
      "엥"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

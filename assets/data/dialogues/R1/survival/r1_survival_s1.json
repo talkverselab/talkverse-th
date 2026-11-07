@@ -81,7 +81,8 @@
      "เอา",
      "아오"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -125,6 +126,11 @@
      "อีกที",
      "익티"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
    ]
   },
   {
@@ -171,6 +177,11 @@
      "อุ่น",
      "운"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "cheerful"
    ]
   },
   {
@@ -190,7 +201,8 @@
      "อุ่น",
      "운"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -228,7 +240,8 @@
      "เอา",
      "아오"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 6,
@@ -261,6 +274,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "surprised"
    ]
   },
   {
@@ -339,6 +357,11 @@
      "รับ",
      "랍"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "cheerful"
    ]
   },
   {
@@ -387,7 +410,12 @@
      "끌렁"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😲",
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "surprised"
+   ]
   }
  ],
  "review": {

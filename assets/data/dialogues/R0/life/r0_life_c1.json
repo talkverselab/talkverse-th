@@ -65,7 +65,8 @@
      "디"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -91,7 +92,8 @@
      "เธอ",
      "터"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -113,7 +115,12 @@
      "친"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
+   ]
   },
   {
    "num": 4,
@@ -134,7 +141,8 @@
      "ก็ได้",
      "꺼다이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -168,7 +176,8 @@
      "란"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "teasing"
   },
   {
    "num": 6,
@@ -204,7 +213,8 @@
      "จริง",
      "찡"
     ]
-   ]
+   ],
+   "emotion": "surprised"
   },
   {
    "num": 7,
@@ -250,6 +260,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -291,6 +306,11 @@
      "ชอบ",
      "첩"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "gentle"
    ]
   }
  ],

@@ -81,7 +81,8 @@
      "양"
     ]
    ],
-   "emoji": "😑"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 2,
@@ -142,7 +143,8 @@
      "มือถือ",
      "므트"
     ]
-   ]
+   ],
+   "emotion": "surprised"
   },
   {
    "num": 3,
@@ -214,7 +216,12 @@
      "란"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😲",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
+   ]
   },
   {
    "num": 4,
@@ -265,6 +272,11 @@
      "ดู",
      "두"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -346,7 +358,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "annoyed"
   },
   {
    "num": 6,
@@ -437,7 +450,8 @@
      "อีก",
      "익"
     ]
-   ]
+   ],
+   "emotion": "amused"
   },
   {
    "num": 7,
@@ -498,6 +512,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "worried"
    ]
   },
   {
@@ -554,6 +573,11 @@
      "ข่าวดี",
      "카아디"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "cheerful"
    ]
   },
   {
@@ -621,6 +645,11 @@
      "คลิป",
      "클립"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "shy"
    ]
   },
   {
@@ -663,7 +692,8 @@
      "เหมือนกัน",
      "므안깐"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 11,
@@ -708,6 +738,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "cheerful"
    ]
   },
   {
@@ -750,7 +785,8 @@
      "너"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😄",
+   "emotion": "cheerful"
   }
  ],
  "review": {

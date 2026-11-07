@@ -65,7 +65,8 @@
      "꾼째"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😟",
+   "emotion": "worried"
   },
   {
    "num": 2,
@@ -101,7 +102,8 @@
      "꾼째"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😲",
+   "emotion": "surprised"
   },
   {
    "num": 3,
@@ -128,7 +130,8 @@
      "너이"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😟",
+   "emotion": "worried"
   },
   {
    "num": 4,
@@ -160,7 +163,12 @@
      "라뽑."
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 5,
@@ -204,7 +212,8 @@
      "두어이"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 6,
@@ -255,7 +264,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 7,
@@ -287,6 +297,11 @@
      "เยอะ",
      "여"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -319,7 +334,8 @@
      "두어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

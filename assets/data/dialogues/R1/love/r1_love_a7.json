@@ -50,7 +50,8 @@
      "สวัสดี",
      "싸왓디"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 2,
@@ -86,7 +87,8 @@
      "บ้าง",
      "방"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -122,7 +124,8 @@
      "อยู่",
      "유"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -165,6 +168,11 @@
      "มา",
      "마"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "surprised"
    ]
   },
   {
@@ -201,6 +209,11 @@
      "จัง",
      "짱"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "teasing"
    ]
   },
   {
@@ -247,6 +260,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
    ]
   },
   {
@@ -283,6 +301,11 @@
      "จอ",
      "쩌"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -324,7 +347,8 @@
      "จริง ๆ",
      "찡 찡"
     ]
-   ]
+   ],
+   "emotion": "shy"
   }
  ],
  "review": {

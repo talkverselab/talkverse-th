@@ -81,6 +81,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "teasing"
    ]
   },
   {
@@ -127,6 +132,11 @@
      "ตั้งใจ",
      "땅짜이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -163,6 +173,11 @@
      "ไม่เป็นไร",
      "마이뻰라이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "polite"
    ]
   },
   {
@@ -219,6 +234,11 @@
      "แก้ว",
      "꽤"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
    ]
   },
   {
@@ -260,6 +280,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -309,7 +334,12 @@
      "큰"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😬",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "stiff"
+   ]
   },
   {
    "num": 7,
@@ -351,7 +381,12 @@
      "리앙두"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 8,
@@ -397,6 +432,11 @@
      "ใคร",
      "크라이"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
    ]
   },
   {
@@ -458,6 +498,11 @@
      "เละ",
      "레"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "shout"
    ]
   },
   {
@@ -490,7 +535,12 @@
      "큰"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "teasing"
+   ]
   }
  ],
  "review": {

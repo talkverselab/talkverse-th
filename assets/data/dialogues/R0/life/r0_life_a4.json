@@ -64,7 +64,8 @@
      "막"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😒",
+   "emotion": "annoyed"
   },
   {
    "num": 2,
@@ -110,7 +111,8 @@
      "เต็มตัว",
      "뗌뚜아"
     ]
-   ]
+   ],
+   "emotion": "annoyed"
   },
   {
    "num": 3,
@@ -146,7 +148,8 @@
      "หน่อย",
      "너이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -179,6 +182,11 @@
      "ผิด",
      "핏"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "teasing"
    ]
   },
   {
@@ -221,7 +229,8 @@
      "너이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 6,
@@ -258,7 +267,8 @@
      "유"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😒",
+   "emotion": "annoyed"
   },
   {
    "num": 7,
@@ -288,7 +298,8 @@
      "ขึ้น",
      "큰"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 8,
@@ -329,6 +340,11 @@
      "ไอศกรีม",
      "아이끄림"
     ]
+   ],
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "gentle"
    ]
   }
  ],

@@ -71,7 +71,12 @@
      "롭"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😳",
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
+   ]
   },
   {
    "num": 2,
@@ -99,7 +104,8 @@
      "못"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "teasing"
   },
   {
    "num": 3,
@@ -146,7 +152,8 @@
      "ประโยค",
      "쁘라욕"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 4,
@@ -210,7 +217,8 @@
      "ไหน",
      "나이"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 5,
@@ -248,7 +256,8 @@
      "안"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "☺️",
+   "emotion": "shy"
   },
   {
    "num": 6,
@@ -291,7 +300,12 @@
      "나락"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 7,
@@ -324,7 +338,12 @@
      "양난"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😒",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "annoyed"
+   ]
   },
   {
    "num": 8,
@@ -357,7 +376,8 @@
      "티썽"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "☺️",
+   "emotion": "shy"
   }
  ],
  "review": {

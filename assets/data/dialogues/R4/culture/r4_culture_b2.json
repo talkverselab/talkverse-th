@@ -116,7 +116,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 2,
@@ -203,6 +204,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -260,6 +266,11 @@
      "ปวดท้อง",
      "뿌앗텅"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -342,6 +353,11 @@
      "เอาจริง",
      "아오찡"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -389,7 +405,8 @@
      "ประทับใจ",
      "쁘라탑짜이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 6,
@@ -476,6 +493,11 @@
      "ถูก",
      "툭"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "worried"
    ]
   },
   {
@@ -544,7 +566,8 @@
      "삐"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😲",
+   "emotion": "surprised"
   },
   {
    "num": 8,
@@ -611,7 +634,8 @@
      "ฉัน",
      "찬"
     ]
-   ]
+   ],
+   "emotion": "shy"
   },
   {
    "num": 9,
@@ -670,6 +694,11 @@
      "บ้าง",
      "방"
     ]
+   ],
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "amused"
    ]
   },
   {
@@ -767,6 +796,11 @@
      "ฉัน",
      "찬"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "flustered"
    ]
   },
   {
@@ -804,7 +838,8 @@
      "ดี",
      "디"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 12,
@@ -861,6 +896,11 @@
      "สนใจ",
      "쏜짜이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   },
   {
@@ -933,6 +973,11 @@
      "เธอ",
      "터"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   },
   {
@@ -971,7 +1016,8 @@
      "막"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

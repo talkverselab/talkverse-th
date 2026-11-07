@@ -87,7 +87,12 @@
      "니"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😟",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
+   ]
   },
   {
    "num": 2,
@@ -143,7 +148,8 @@
      "แบบนี้",
      "뱁니"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -214,7 +220,8 @@
      "แน่ๆ",
      "내 내"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 4,
@@ -256,7 +263,12 @@
      "미"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😳",
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "flustered"
+   ]
   },
   {
    "num": 5,
@@ -323,7 +335,12 @@
      "봇"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😆",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "amused"
+   ]
   },
   {
    "num": 6,
@@ -375,7 +392,8 @@
      "두어이"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 7,
@@ -446,6 +464,11 @@
      "เกาะ",
      "꺼"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -518,7 +541,12 @@
      "껀"
     ]
    ],
-   "emoji": "🙌"
+   "emoji": "😟",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
+   ]
   },
   {
    "num": 9,
@@ -580,7 +608,12 @@
      "티니"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😳",
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "flustered"
+   ]
   },
   {
    "num": 10,
@@ -644,7 +677,12 @@
      "르안"
     ]
    ],
-   "emoji": "😑"
+   "emoji": "😒",
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "annoyed"
+   ]
   },
   {
    "num": 11,
@@ -730,6 +768,11 @@
      "เกิน",
      "끈"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
    ]
   },
   {
@@ -781,7 +824,8 @@
      "เปียก",
      "삐악"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 13,
@@ -832,6 +876,11 @@
      "แย่",
      "얘"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   },
   {
@@ -893,7 +942,8 @@
      "มือถือ",
      "므트"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

@@ -117,7 +117,12 @@
      "답"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😲",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "surprised"
+   ]
   },
   {
    "num": 2,
@@ -163,7 +168,12 @@
      "친"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 3,
@@ -209,7 +219,12 @@
      "막"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "🙏",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
+   ]
   },
   {
    "num": 4,
@@ -269,6 +284,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "annoyed"
    ]
   },
   {
@@ -324,7 +344,8 @@
      "ได้ยิน",
      "다이인"
     ]
-   ]
+   ],
+   "emotion": "surprised"
   },
   {
    "num": 6,
@@ -414,6 +435,11 @@
      "แทน",
      "탠"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
    ]
   },
   {
@@ -474,6 +500,11 @@
      "เข้าใจ",
      "카오짜이"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -547,7 +578,12 @@
      "억"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😱",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "shout"
+   ]
   },
   {
    "num": 9,
@@ -617,6 +653,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "excited"
    ]
   },
   {
@@ -697,6 +738,11 @@
      "สไลด์",
      "쌀라이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -762,7 +808,8 @@
      "อยู่",
      "유"
     ]
-   ]
+   ],
+   "emotion": "amused"
   },
   {
    "num": 12,
@@ -827,6 +874,11 @@
      "วุ่นวาย",
      "운와이"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "flustered"
    ]
   },
   {
@@ -868,7 +920,12 @@
      "터"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ]
   }
  ],
  "review": {

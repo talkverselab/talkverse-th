@@ -75,6 +75,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
    ]
   },
   {
@@ -102,7 +107,8 @@
      "마"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -148,6 +154,11 @@
      "ศุกร์",
      "쑥"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "worried"
    ]
   },
   {
@@ -183,7 +194,8 @@
      "มีธุระ",
      "미투라"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 5,
@@ -239,7 +251,8 @@
      "สนามบิน",
      "싸남빈"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 6,
@@ -295,7 +308,8 @@
      "ใช่",
      "차이"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 7,
@@ -332,7 +346,8 @@
      "ลาออก",
      "라억"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 8,
@@ -373,6 +388,11 @@
      "นะเนี่ย",
      "나니아"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "shout"
    ]
   },
   {
@@ -449,6 +469,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
    ]
   },
   {
@@ -515,6 +540,11 @@
      "พี่เลี้ยง",
      "피리앙"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "gentle"
    ]
   }
  ],

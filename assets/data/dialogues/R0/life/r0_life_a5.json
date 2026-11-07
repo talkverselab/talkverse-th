@@ -73,7 +73,8 @@
      "กลัว",
      "끌루아"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 2,
@@ -104,6 +105,11 @@
      "เอง",
      "엥"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   },
   {
@@ -155,7 +161,8 @@
      "ต่อ",
      "떠"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 4,
@@ -192,6 +199,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "amused"
    ]
   },
   {
@@ -223,7 +235,8 @@
      "จริง",
      "찡"
     ]
-   ]
+   ],
+   "emotion": "amused"
   },
   {
    "num": 6,
@@ -257,7 +270,8 @@
      "찬"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -283,6 +297,11 @@
      "ไม่เป็นไร",
      "마이뻰라이"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   },
   {
@@ -315,7 +334,8 @@
      "친"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

@@ -41,6 +41,15 @@ def segs_of(t, voice):
     if t.get('segs'):
         return [[s[0], s[1], reading(s[1])] for s in t['segs']]
     parts = [p for p in SPLIT.split(t['th']) if p.strip()] or [t['th']]
+    merged = []                                   # 태국 글자가 없는 조각('…'·'?'·'!')은 앞 조각에 붙인다
+    for p in parts:
+        if merged and not re.search(r'[\u0E00-\u0E7F]', p):
+            merged[-1] += p
+        else:
+            merged.append(p)
+    if merged and not re.search(r'[\u0E00-\u0E7F]', merged[0]) and len(merged) > 1:   # 맨 앞 '…' 는 다음 조각 앞에
+        merged[1] = merged[0] + merged[1]; merged.pop(0)
+    parts = merged
     emos = t.get('emotions') or ([t['emotion']] if t.get('emotion') else [])
     if not emos:
         emos = [guess(t['speaker'], voice, t['th'])]

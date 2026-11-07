@@ -67,7 +67,8 @@
      "끌라이"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -108,7 +109,8 @@
      "เท่าไหร่",
      "타오라이"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -164,6 +166,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "flustered"
    ]
   },
   {
@@ -196,7 +203,8 @@
      "난씨"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "👉",
+   "emotion": "neutral"
   },
   {
    "num": 5,
@@ -217,7 +225,8 @@
      "เลี้ยวซ้าย",
      "리아우싸이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 6,
@@ -270,6 +279,11 @@
      "เว่อร์",
      "워"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -332,7 +346,12 @@
      "나이"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "🙏",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
+   ]
   },
   {
    "num": 8,
@@ -379,7 +398,12 @@
      "짜오"
     ]
    ],
-   "emoji": "😊"
+   "emoji": "🥰",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "gentle"
+   ]
   },
   {
    "num": 9,
@@ -430,6 +454,11 @@
      "อีก",
      "익"
     ]
+   ],
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "amused"
    ]
   },
   {
@@ -462,7 +491,8 @@
      "마이레우"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

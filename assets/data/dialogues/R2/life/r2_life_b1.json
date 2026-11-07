@@ -86,7 +86,8 @@
      "นี้",
      "니"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -132,7 +133,8 @@
      "ไหน",
      "나이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -173,7 +175,8 @@
      "เท่าไหร่",
      "타오라이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 4,
@@ -220,7 +223,8 @@
      "두어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 5,
@@ -261,6 +265,11 @@
      "อีก",
      "익"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "polite"
    ]
   },
   {
@@ -299,7 +308,8 @@
      "삐"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 7,
@@ -337,6 +347,11 @@
      "ตลอดชีวิต",
      "따럿치윗"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "excited"
    ]
   },
   {
@@ -398,6 +413,11 @@
      "ใจ",
      "짜이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -449,6 +469,11 @@
      "ก่อน",
      "껀"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "polite"
    ]
   },
   {
@@ -506,7 +531,12 @@
      "찬"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "cheerful"
+   ]
   },
   {
    "num": 11,
@@ -567,7 +597,8 @@
      "ก็ได้",
      "꺼다이"
     ]
-   ]
+   ],
+   "emotion": "shy"
   }
  ],
  "review": {

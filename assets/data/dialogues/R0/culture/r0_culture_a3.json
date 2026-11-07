@@ -59,7 +59,8 @@
      "막"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 2,
@@ -96,7 +97,12 @@
      "깐"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😄",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "cheerful"
+   ]
   },
   {
    "num": 3,
@@ -122,7 +128,8 @@
      "ดี",
      "디"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -153,7 +160,8 @@
      "ปกติ",
      "뽁까띠"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 5,
@@ -189,7 +197,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 6,
@@ -218,7 +227,8 @@
      "빠이"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 7,
@@ -259,6 +269,11 @@
      "กลับมา",
      "끌랍마"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -291,7 +306,12 @@
      "뻰찡"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "☺️",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "shy"
+   ]
   }
  ],
  "review": {

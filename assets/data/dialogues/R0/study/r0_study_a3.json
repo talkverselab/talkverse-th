@@ -68,7 +68,8 @@
      "หน่อย",
      "너이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -95,7 +96,8 @@
      "차 차"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😬",
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -131,7 +133,8 @@
      "มา",
      "마"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 4,
@@ -160,7 +163,8 @@
      "익티"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😬",
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -186,6 +190,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -212,7 +221,8 @@
      "มา",
      "마"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 7,
@@ -263,6 +273,11 @@
      "อัจฉริยะ",
      "앗차리야"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "cheerful"
    ]
   },
   {
@@ -289,6 +304,11 @@
      "ขอบคุณ",
      "컵쿤"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "polite"
    ]
   }
  ],

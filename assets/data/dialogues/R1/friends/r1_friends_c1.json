@@ -55,6 +55,11 @@
      "ผิด",
      "핏"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -70,7 +75,12 @@
     "อะไรนะ"
    ],
    "ui": "bubble",
-   "lemmas": []
+   "lemmas": [],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
+   ]
   },
   {
    "num": 3,
@@ -106,6 +116,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "shy"
    ]
   },
   {
@@ -134,6 +149,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -170,7 +190,8 @@
      "ผิด",
      "핏"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 6,
@@ -196,6 +217,11 @@
      "ชิล",
      "친"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "amused"
    ]
   },
   {
@@ -222,6 +248,11 @@
      "ตาย",
      "따이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "shy"
    ]
   },
   {
@@ -236,7 +267,8 @@
     "ได้แล้ว"
    ],
    "ui": "bubble",
-   "lemmas": []
+   "lemmas": [],
+   "emotion": "shy"
   }
  ],
  "review": {

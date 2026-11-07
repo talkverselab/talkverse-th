@@ -71,7 +71,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 2,
@@ -123,6 +124,11 @@
      "สบายใจ",
      "싸바이짜이"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "sad"
    ]
   },
   {
@@ -180,7 +186,8 @@
      "อีก",
      "익"
     ]
-   ]
+   ],
+   "emotion": "sad"
   },
   {
    "num": 4,
@@ -227,6 +234,11 @@
      "ก่อน",
      "껀"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -263,7 +275,8 @@
      "ขอโทษ",
      "커톳"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 6,
@@ -305,7 +318,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -337,6 +351,11 @@
      "ดีกว่า",
      "디꽈"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "flustered"
    ]
   },
   {
@@ -394,6 +413,11 @@
      "ก็ได้",
      "꺼다이"
     ]
+   ],
+   "emotion": "sad",
+   "emotions": [
+    "sad",
+    "worried"
    ]
   },
   {
@@ -417,7 +441,8 @@
      "ข้อความ",
      "커쾀"
     ]
-   ]
+   ],
+   "emotion": "amused"
   },
   {
    "num": 10,
@@ -459,6 +484,11 @@
      "ตลอดไป",
      "따럿빠이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "excited"
    ]
   },
   {
@@ -516,7 +546,8 @@
      "มา",
      "마"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 12,
@@ -588,6 +619,11 @@
      "ไหม้",
      "마이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "annoyed"
    ]
   },
   {
@@ -665,6 +701,11 @@
      "ก่อน",
      "껀"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "shy"
    ]
   },
   {
@@ -687,7 +728,12 @@
      "킷틍"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ]
   }
  ],
  "review": {

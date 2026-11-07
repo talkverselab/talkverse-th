@@ -100,6 +100,11 @@
      "กัน",
      "깐"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
    ]
   },
   {
@@ -155,6 +160,11 @@
      "เห็น",
      "헨"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -201,7 +211,8 @@
      "ปิดหน้า",
      "삣나"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 4,
@@ -261,7 +272,8 @@
      "น่าสงสัย",
      "나쏭싸이"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 5,
@@ -328,6 +340,11 @@
      "ตัวดี",
      "뚜아디"
     ]
+   ],
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "amused"
    ]
   },
   {
@@ -390,6 +407,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -445,7 +467,8 @@
      "หลบ",
      "롭"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 8,
@@ -521,6 +544,11 @@
      "จริงๆ",
      "찡 찡"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "flustered"
    ]
   },
   {
@@ -576,6 +604,11 @@
      "ดี",
      "디"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "flustered"
    ]
   },
   {
@@ -611,7 +644,12 @@
      "루"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ]
   }
  ],
  "review": {

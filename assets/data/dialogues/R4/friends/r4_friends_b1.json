@@ -106,6 +106,11 @@
      "ช้า",
      "차"
     ]
+   ],
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "cheerful"
    ]
   },
   {
@@ -177,6 +182,11 @@
      "ไม่",
      "마이"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
    ]
   },
   {
@@ -278,6 +288,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "amused"
    ]
   },
   {
@@ -349,6 +364,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "flustered"
    ]
   },
   {
@@ -415,7 +435,8 @@
      "เอาจริง",
      "아오찡"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 6,
@@ -476,7 +497,8 @@
      "ตลอดกาล",
      "따럿깐"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "num": 7,
@@ -542,6 +564,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -593,7 +620,8 @@
      "จริง",
      "찡"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 9,
@@ -664,6 +692,11 @@
      "เดี๋ยว",
      "디아우"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -747,6 +780,11 @@
      "นี้",
      "니"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "amused"
    ]
   },
   {
@@ -823,6 +861,11 @@
      "สุดท้าย",
      "쑷타이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "excited"
    ]
   },
   {
@@ -914,6 +957,11 @@
      "ใคร",
      "크라이"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "gentle"
    ]
   },
   {
@@ -966,7 +1014,12 @@
      "너"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😳",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "flustered"
+   ]
   },
   {
    "num": 14,
@@ -992,6 +1045,11 @@
      "ใคร",
      "크라이"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "gentle"
    ]
   }
  ],

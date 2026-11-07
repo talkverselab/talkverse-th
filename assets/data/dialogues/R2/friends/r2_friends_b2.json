@@ -67,7 +67,8 @@
      "낙싼"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -118,7 +119,8 @@
      "ดู",
      "두"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -149,7 +151,8 @@
      "มา",
      "마"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 4,
@@ -186,7 +189,8 @@
      "망껀"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🤩",
+   "emotion": "excited"
   },
   {
    "num": 5,
@@ -223,7 +227,12 @@
      "디막"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
+   ]
   },
   {
    "num": 6,
@@ -255,7 +264,8 @@
      "찡 찡"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "🙄",
+   "emotion": "tsukkomi"
   },
   {
    "num": 7,
@@ -303,7 +313,8 @@
      "퍼다이"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 8,
@@ -352,7 +363,8 @@
      "디"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "shy"
   },
   {
    "num": 9,
@@ -408,6 +420,11 @@
      "ด้วยซ้ำ",
      "두어이쌈"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -444,7 +461,8 @@
      "หมด",
      "못"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 11,
@@ -475,6 +493,11 @@
      "ใหม่",
      "마이"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   }
  ],

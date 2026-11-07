@@ -73,6 +73,11 @@
      "ขวด",
      "쿠앗"
     ]
+   ],
+   "emotion": "annoyed",
+   "emotions": [
+    "annoyed",
+    "polite"
    ]
   },
   {
@@ -110,7 +115,8 @@
      "엥"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -140,7 +146,8 @@
      "เท่าไหร่",
      "타오라이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -181,6 +188,11 @@
      "ชัด",
      "찻"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "amused"
    ]
   },
   {
@@ -214,6 +226,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "flustered"
    ]
   },
   {
@@ -265,7 +282,8 @@
      "ฟรี",
      "프리"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -301,7 +319,8 @@
      "จริงๆ",
      "찡 찡"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 8,
@@ -334,7 +353,8 @@
      "여"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

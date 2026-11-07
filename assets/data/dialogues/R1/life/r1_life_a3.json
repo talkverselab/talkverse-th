@@ -70,7 +70,8 @@
      "นิดหน่อย",
      "닛너이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -112,7 +113,8 @@
      "차이마이"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -136,7 +138,8 @@
      "ขอบคุณ",
      "컵쿤"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -183,7 +186,8 @@
      "닛능"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 5,
@@ -209,7 +213,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 6,
@@ -245,6 +250,11 @@
      "เอาเลย",
      "아오러이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -286,6 +296,11 @@
      "กัน",
      "깐"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "excited"
    ]
   },
   {
@@ -332,7 +347,12 @@
      "끄라쪽"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "🥰",
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "gentle"
+   ]
   }
  ],
  "review": {

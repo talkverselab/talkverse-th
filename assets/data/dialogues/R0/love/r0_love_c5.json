@@ -60,7 +60,8 @@
      "롬"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😟",
+   "emotion": "worried"
   },
   {
    "num": 2,
@@ -93,7 +94,8 @@
      "룹"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😬",
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -125,7 +127,8 @@
      "จัง",
      "짱"
     ]
-   ]
+   ],
+   "emotion": "amused"
   },
   {
    "num": 4,
@@ -172,7 +175,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -222,7 +226,12 @@
      "랍"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ]
   },
   {
    "num": 6,
@@ -244,6 +253,11 @@
      "จริง",
      "찡"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -271,6 +285,11 @@
      "ตลอด",
      "딸럿"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "amused"
    ]
   },
   {
@@ -298,7 +317,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

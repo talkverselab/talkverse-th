@@ -75,7 +75,8 @@
      "니래"
     ]
    ],
-   "emoji": "😌"
+   "emoji": "😒",
+   "emotion": "annoyed"
   },
   {
    "num": 2,
@@ -119,7 +120,8 @@
      "แป๊บเดียว",
      "뺍디아우"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -141,6 +143,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -170,6 +177,11 @@
      "กลับมา",
      "끌랍마"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "flustered"
    ]
   },
   {
@@ -217,6 +229,11 @@
      "ด้วยกัน",
      "두어이깐"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   },
   {
@@ -246,6 +263,11 @@
      "กัน",
      "깐"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "stiff"
    ]
   },
   {
@@ -283,6 +305,11 @@
      "กัน",
      "깐"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "tsukkomi"
    ]
   },
   {
@@ -328,7 +355,8 @@
      "หยุด",
      "윳"
     ]
-   ]
+   ],
+   "emotion": "shy"
   }
  ],
  "review": {

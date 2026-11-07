@@ -71,7 +71,12 @@
      "난"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😟",
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "worried"
+   ]
   },
   {
    "num": 2,
@@ -118,7 +123,8 @@
      "빠이"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 3,
@@ -170,7 +176,12 @@
      "까"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😲",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "surprised"
+   ]
   },
   {
    "num": 4,
@@ -206,6 +217,11 @@
      "ไม่เป็นไร",
      "마이뻰라이"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "gentle"
    ]
   },
   {
@@ -263,6 +279,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "surprised"
    ]
   },
   {
@@ -345,7 +366,12 @@
      "너"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 7,
@@ -406,6 +432,11 @@
      "ก็ได้",
      "꺼다이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "cheerful"
    ]
   },
   {
@@ -444,7 +475,8 @@
      "พอแล้ว",
      "퍼래우"
     ]
-   ]
+   ],
+   "emotion": "shy"
   },
   {
    "num": 9,
@@ -476,7 +508,12 @@
      "끌라이"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "☺️",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "shy"
+   ]
   },
   {
    "num": 10,
@@ -497,7 +534,12 @@
      "너"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "🥰",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ]
   }
  ],
  "review": {

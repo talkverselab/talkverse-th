@@ -101,7 +101,8 @@
      "아나"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -137,7 +138,8 @@
      "เอง",
      "엥"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -169,7 +171,8 @@
      "친"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "🙄",
+   "emotion": "tsukkomi"
   },
   {
    "num": 4,
@@ -195,7 +198,8 @@
      "นี้",
      "니"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 5,
@@ -258,6 +262,11 @@
      "นี้",
      "니"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "worried"
    ]
   },
   {
@@ -314,6 +323,11 @@
      "มา",
      "마"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "excited"
    ]
   },
   {
@@ -365,7 +379,8 @@
      "ปีใหม่",
      "삐마이"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 8,
@@ -395,6 +410,11 @@
      "เว่อร์",
      "워"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "excited"
    ]
   }
  ],

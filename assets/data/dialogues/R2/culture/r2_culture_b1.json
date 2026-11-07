@@ -81,7 +81,8 @@
      "퍼"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -122,7 +123,8 @@
      "เริ่ม",
      "름"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 3,
@@ -188,7 +190,8 @@
      "ดี",
      "디"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 4,
@@ -244,7 +247,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "annoyed"
   },
   {
    "num": 5,
@@ -310,6 +314,11 @@
      "เว่อร์",
      "워"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -363,7 +372,8 @@
      "นาน",
      "난"
     ]
-   ]
+   ],
+   "emotion": "surprised"
   },
   {
    "num": 7,
@@ -394,6 +404,11 @@
      "น้ำตาไหล",
      "남따라이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "gentle"
    ]
   },
   {
@@ -471,7 +486,12 @@
      "두어이깐"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "🤩",
+   "emotion": "sad",
+   "emotions": [
+    "sad",
+    "excited"
+   ]
   },
   {
    "num": 9,
@@ -543,7 +563,12 @@
      "라이"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😏",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ]
   },
   {
    "num": 10,
@@ -579,6 +604,11 @@
      "โกรธจัด",
      "끄롯짯"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "amused"
    ]
   }
  ],

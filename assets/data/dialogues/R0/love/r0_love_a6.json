@@ -59,7 +59,8 @@
      "쏨땀"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "teasing"
   },
   {
    "num": 2,
@@ -100,7 +101,8 @@
      "ก็ได้",
      "꺼다이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -137,7 +139,12 @@
      "빠이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
+   ]
   },
   {
    "num": 4,
@@ -183,7 +190,8 @@
      "จริง",
      "찡"
     ]
-   ]
+   ],
+   "emotion": "annoyed"
   },
   {
    "num": 5,
@@ -222,7 +230,8 @@
      "막"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "teasing"
   },
   {
    "num": 6,
@@ -263,7 +272,8 @@
      "หน่อย",
      "너이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -307,6 +317,11 @@
      "จัง",
      "짱"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   },
   {
@@ -343,6 +358,11 @@
      "แค่",
      "캐"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "shy"
    ]
   }
  ],

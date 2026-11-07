@@ -75,7 +75,8 @@
      "ภาษาไทย",
      "파싸타이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 2,
@@ -138,7 +139,12 @@
      "두어이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
+   ]
   },
   {
    "num": 3,
@@ -170,7 +176,8 @@
      "ขอโทษ",
      "커톳"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 4,
@@ -237,6 +244,11 @@
      "รอบ",
      "럽"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -276,6 +288,11 @@
      "พูด",
      "풋"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -349,7 +366,12 @@
      "뚜아엥"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ]
   },
   {
    "num": 7,
@@ -386,6 +408,11 @@
      "ใหม่",
      "마이"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "stiff"
    ]
   },
   {
@@ -449,7 +476,12 @@
      "두어이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ]
   }
  ],
  "review": {

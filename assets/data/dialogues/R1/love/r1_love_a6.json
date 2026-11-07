@@ -65,6 +65,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
    ]
   },
   {
@@ -107,7 +112,8 @@
      "막"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😒",
+   "emotion": "annoyed"
   },
   {
    "num": 3,
@@ -148,6 +154,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "amused"
    ]
   },
   {
@@ -189,6 +200,11 @@
      "มา",
      "마"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -232,7 +248,8 @@
      "ม่ะ",
      "마"
     ]
-   ]
+   ],
+   "emotion": "shy"
   },
   {
    "num": 6,
@@ -269,7 +286,8 @@
      "너이"
     ]
    ],
-   "emoji": "😤"
+   "emoji": "🤩",
+   "emotion": "excited"
   },
   {
    "speaker": "A",
@@ -319,7 +337,8 @@
      "탐땀"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😏",
+   "emotion": "teasing"
   },
   {
    "num": 8,
@@ -365,6 +384,11 @@
      "อีก",
      "익"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "shy"
    ]
   }
  ],

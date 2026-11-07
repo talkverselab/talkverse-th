@@ -64,7 +64,8 @@
      "너이"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -86,7 +87,8 @@
      "첩"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -117,7 +119,8 @@
      "มะม่วง",
      "마무앙"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -154,7 +157,12 @@
      "마무앙"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "teasing"
+   ]
   },
   {
    "num": 5,
@@ -187,7 +195,8 @@
      "은"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😒",
+   "emotion": "annoyed"
   },
   {
    "num": 6,
@@ -210,7 +219,8 @@
      "ช้างใหญ่",
      "창야이"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 7,
@@ -246,7 +256,8 @@
      "ชอบ",
      "첩"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 8,
@@ -278,7 +289,12 @@
      "러렌"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😳",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "flustered"
+   ]
   }
  ],
  "review": {

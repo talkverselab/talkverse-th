@@ -68,7 +68,8 @@
      "ทำให้",
      "탐하이"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 2,
@@ -99,7 +100,8 @@
      "อยากได้",
      "약다이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -135,7 +137,8 @@
      "ดี",
      "디"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 4,
@@ -160,7 +163,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -201,6 +205,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "cheerful"
    ]
   },
   {
@@ -234,7 +243,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -276,7 +286,8 @@
      "다이디"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 8,
@@ -301,6 +312,11 @@
      "จริง",
      "찡"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "shy"
    ]
   }
  ],

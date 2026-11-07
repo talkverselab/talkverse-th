@@ -75,6 +75,11 @@
      "พอดี",
      "퍼디"
     ]
+   ],
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "amused"
    ]
   },
   {
@@ -117,7 +122,8 @@
      "꺼다이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -158,6 +164,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "teasing"
    ]
   },
   {
@@ -199,7 +210,8 @@
      "อยู่แล้ว",
      "유래우"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 5,
@@ -245,6 +257,11 @@
      "แฟนคลับ",
      "팬클랍"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "tsukkomi"
    ]
   },
   {
@@ -323,6 +340,11 @@
      "อัน",
      "안"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "excited"
    ]
   },
   {
@@ -375,7 +397,12 @@
      "나이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
+   ]
   },
   {
    "num": 8,
@@ -441,6 +468,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "amused"
    ]
   },
   {
@@ -469,7 +501,8 @@
      "나이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "amused"
   },
   {
    "num": 10,
@@ -560,7 +593,8 @@
      "คน",
      "콘"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 11,
@@ -601,6 +635,11 @@
      "กว่า",
      "꽈"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   }
  ],

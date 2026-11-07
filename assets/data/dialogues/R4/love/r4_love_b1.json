@@ -91,7 +91,8 @@
      "ด้วยกัน",
      "두어이깐"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -152,7 +153,8 @@
      "ตัวเอง",
      "뚜아엥"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 3,
@@ -238,6 +240,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "gentle"
    ]
   },
   {
@@ -304,7 +311,8 @@
      "เนาะ",
      "너"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 5,
@@ -375,6 +383,11 @@
      "ขัน",
      "칸"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "flustered"
    ]
   },
   {
@@ -472,7 +485,12 @@
      "르응아이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😲",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "surprised"
+   ]
   },
   {
    "num": 7,
@@ -568,6 +586,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
    ]
   },
   {
@@ -644,7 +667,8 @@
      "จริงๆ",
      "찡 찡"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "num": 9,
@@ -708,7 +732,12 @@
      "내"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🤩",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "excited"
+   ]
   },
   {
    "num": 10,
@@ -754,7 +783,8 @@
      "อีกครั้ง",
      "익크랑"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 11,
@@ -796,7 +826,12 @@
      "익"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 12,
@@ -833,7 +868,12 @@
      "임"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 13,
@@ -869,6 +909,11 @@
      "แน่",
      "내"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   }
  ],

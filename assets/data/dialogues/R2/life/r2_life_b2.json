@@ -75,7 +75,8 @@
      "นิดหน่อย",
      "닛너이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -116,7 +117,8 @@
      "ไหน",
      "나이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -157,7 +159,8 @@
      "ไว้",
      "와이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 4,
@@ -208,6 +211,11 @@
      "เนอะ",
      "너"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "amused"
    ]
   },
   {
@@ -246,7 +254,8 @@
      "หมด",
      "못"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 6,
@@ -293,7 +302,12 @@
      "두어이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🤩",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "excited"
+   ]
   },
   {
    "num": 7,
@@ -344,6 +358,11 @@
      "ไว้",
      "와이"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
    ]
   },
   {
@@ -395,6 +414,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -425,6 +449,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "sad"
    ]
   },
   {
@@ -476,6 +505,11 @@
      "แน่",
      "내"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
    ]
   }
  ],

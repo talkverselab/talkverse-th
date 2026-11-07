@@ -68,7 +68,8 @@
      "ด้วยกัน",
      "두어이깐"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -104,6 +105,11 @@
      "จัง",
      "짱"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "surprised"
    ]
   },
   {
@@ -145,6 +151,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   },
   {
@@ -178,7 +189,8 @@
      "เปียก",
      "삐악"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 5,
@@ -225,7 +237,12 @@
      "니"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "☺️",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "shy"
+   ]
   },
   {
    "num": 6,
@@ -266,7 +283,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -312,6 +330,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
    ]
   },
   {
@@ -349,7 +372,8 @@
      "콘디아우"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

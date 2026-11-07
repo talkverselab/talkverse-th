@@ -59,7 +59,8 @@
      "ตอนนี้",
      "떤니"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -91,7 +92,8 @@
      "อยู่",
      "유"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -119,7 +121,8 @@
      "아러이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "amused"
   },
   {
    "num": 4,
@@ -163,7 +166,8 @@
      "อยู่",
      "유"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -190,6 +194,11 @@
      "ถุง",
      "퉁"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -232,7 +241,8 @@
      "คิดถึง",
      "킷틍"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -259,6 +269,11 @@
      "ใคร",
      "크라이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -277,7 +292,8 @@
      "คิดถึง",
      "킷틍"
     ]
-   ]
+   ],
+   "emotion": "shy"
   }
  ],
  "review": {

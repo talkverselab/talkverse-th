@@ -58,7 +58,8 @@
      "เกม",
      "껨"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 2,
@@ -99,7 +100,8 @@
      "พอ",
      "퍼"
     ]
-   ]
+   ],
+   "emotion": "amused"
   },
   {
    "num": 3,
@@ -125,7 +127,8 @@
      "ชนะ",
      "차나"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 4,
@@ -157,7 +160,12 @@
      "캄"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 5,
@@ -210,7 +218,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 6,
@@ -247,7 +256,12 @@
      "껨"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😒",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "annoyed"
+   ]
   },
   {
    "num": 7,
@@ -284,7 +298,8 @@
      "익"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "🤩",
+   "emotion": "excited"
   },
   {
    "num": 8,
@@ -315,7 +330,8 @@
      "ดี",
      "디"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

@@ -91,7 +91,8 @@
      "차나"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -147,6 +148,11 @@
      "งานแต่ง",
      "응안땡"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "stiff"
    ]
   },
   {
@@ -218,6 +224,11 @@
      "หัวล้าน",
      "후아란"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -260,7 +271,12 @@
      "완"
     ]
    ],
-   "emoji": "🤷"
+   "emoji": "🤷",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "neutral"
+   ]
   },
   {
    "num": 5,
@@ -306,7 +322,8 @@
      "กลับมา",
      "끌랍마"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 6,
@@ -348,7 +365,8 @@
      "티니"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -382,7 +400,12 @@
      "티니"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ]
   },
   {
    "num": 8,
@@ -403,7 +426,8 @@
      "러"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 9,
@@ -464,6 +488,11 @@
      "เอาจริง",
      "아오찡"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -505,6 +534,11 @@
      "แน่",
      "내"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "gentle"
    ]
   }
  ],

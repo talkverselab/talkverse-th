@@ -67,7 +67,8 @@
      "ใช่",
      "차이"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -96,7 +97,8 @@
      "ชื่อ",
      "츠"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 3,
@@ -141,7 +143,8 @@
      "กัน",
      "깐"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 4,
@@ -171,7 +174,8 @@
      "루짝"
     ]
    ],
-   "female_ok": true
+   "female_ok": true,
+   "emotion": "stiff"
   },
   {
    "num": 5,
@@ -198,6 +202,11 @@
      "แล้วกัน",
      "래우깐"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -222,6 +231,11 @@
      "ขอโทษ",
      "커톳"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -258,7 +272,12 @@
      "터"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 8,
@@ -287,6 +306,11 @@
      "จัง",
      "짱"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   }
  ],

@@ -75,7 +75,8 @@
      "두어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -111,6 +112,11 @@
      "อยู่แล้ว",
      "유래우"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "surprised"
    ]
   },
   {
@@ -143,7 +149,12 @@
      "펀로러"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "teasing"
+   ]
   },
   {
    "num": 4,
@@ -184,7 +195,8 @@
      "เฉย",
      "처이"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 5,
@@ -230,6 +242,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "amused"
    ]
   },
   {
@@ -271,6 +288,11 @@
      "ตั้งใจ",
      "땅짜이"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "flustered"
    ]
   },
   {
@@ -313,7 +335,8 @@
      "못"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "shy"
   },
   {
    "speaker": "A",
@@ -343,7 +366,12 @@
      "싸머깐"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "gentle"
+   ]
   }
  ],
  "review": {

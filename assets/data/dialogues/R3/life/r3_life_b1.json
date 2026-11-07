@@ -67,7 +67,8 @@
      "탐"
     ]
    ],
-   "emoji": "😑"
+   "emoji": "😒",
+   "emotion": "annoyed"
   },
   {
    "num": 2,
@@ -123,7 +124,8 @@
      "ด่า",
      "다"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 3,
@@ -155,7 +157,8 @@
      "디꽈"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😒",
+   "emotion": "annoyed"
   },
   {
    "num": 4,
@@ -206,6 +209,11 @@
      "ดู",
      "두"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -257,6 +265,11 @@
      "มอร์ส",
      "멋"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -314,7 +327,12 @@
      "친"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😆",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
+   ]
   },
   {
    "num": 7,
@@ -365,7 +383,8 @@
      "มา",
      "마"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 8,
@@ -397,7 +416,12 @@
      "컵쿤"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "polite"
+   ]
   },
   {
    "num": 9,
@@ -461,7 +485,12 @@
      "두어이깐"
     ]
    ],
-   "emoji": "🤷"
+   "emoji": "😄",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "cheerful"
+   ]
   },
   {
    "num": 10,
@@ -502,6 +531,11 @@
      "เป็น",
      "뻰"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -538,7 +572,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 12,
@@ -579,7 +614,8 @@
      "ชิล",
      "친"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 13,
@@ -610,6 +646,11 @@
      "ป้า",
      "빠"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   }
  ],

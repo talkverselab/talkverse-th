@@ -70,6 +70,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
    ]
   },
   {
@@ -96,7 +101,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -137,6 +143,11 @@
      "ด้วยกัน",
      "두어이깐"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "stiff"
    ]
   },
   {
@@ -183,6 +194,11 @@
      "เสียบ",
      "씨압"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -210,7 +226,12 @@
      "씨압"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "amused"
+   ]
   },
   {
    "num": 6,
@@ -232,7 +253,8 @@
      "렁두"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -266,7 +288,8 @@
      "파답아"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😲",
+   "emotion": "surprised"
   },
   {
    "num": 8,
@@ -317,6 +340,11 @@
      "ดี",
      "디"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
    ]
   },
   {
@@ -349,6 +377,11 @@
      "ก่อน",
      "껀"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "amused"
    ]
   },
   {
@@ -410,6 +443,11 @@
      "เพราะ",
      "프러"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   },
   {
@@ -424,7 +462,8 @@
     "อ่ะ"
    ],
    "lemmas": [],
-   "emoji": "😅"
+   "emoji": "☺️",
+   "emotion": "shy"
   }
  ],
  "review": {

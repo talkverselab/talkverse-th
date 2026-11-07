@@ -85,7 +85,8 @@
      "ทัน",
      "탄"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 2,
@@ -116,6 +117,11 @@
      "เสร็จ",
      "쎗"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -182,7 +188,8 @@
      "ไหว",
      "와이"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 4,
@@ -224,7 +231,8 @@
      "쑤"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 5,
@@ -256,7 +264,8 @@
      "ทัน",
      "탄"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "num": 6,
@@ -287,6 +296,11 @@
      "ด้วย",
      "두어이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -349,7 +363,12 @@
      "클리아"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "😱",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "shout"
+   ]
   },
   {
    "num": 8,
@@ -405,7 +424,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

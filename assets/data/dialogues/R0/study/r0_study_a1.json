@@ -59,7 +59,8 @@
      "너이"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -100,7 +101,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -136,7 +138,8 @@
      "บ้าน",
      "반"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -162,6 +165,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -199,7 +207,8 @@
      "อยู่",
      "유"
     ]
-   ]
+   ],
+   "emotion": "surprised"
   },
   {
    "num": 6,
@@ -240,7 +249,8 @@
      "빠이"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😳",
+   "emotion": "flustered"
   },
   {
    "num": 7,
@@ -270,7 +280,8 @@
      "ให้ยืม",
      "하이음"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 8,
@@ -310,6 +321,11 @@
      "เธอ",
      "터"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   }
  ],

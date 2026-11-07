@@ -63,7 +63,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 2,
@@ -100,7 +101,8 @@
      "두어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 3,
@@ -141,7 +143,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -162,6 +165,11 @@
      "ไม่ต้อง",
      "마이떵"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
    ]
   },
   {
@@ -188,7 +196,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 6,
@@ -232,7 +241,12 @@
      "락"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "shy"
+   ]
   },
   {
    "num": 7,
@@ -262,7 +276,8 @@
      "ความรัก",
      "쾀락"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 8,
@@ -284,7 +299,12 @@
      "루"
     ]
    ],
-   "emoji": "😊"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   }
  ],
  "review": {

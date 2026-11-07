@@ -70,7 +70,8 @@
      "เร็ว",
      "레우"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "num": 2,
@@ -112,7 +113,8 @@
      "른"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🤩",
+   "emotion": "excited"
   },
   {
    "num": 3,
@@ -133,7 +135,8 @@
      "วิ่ง",
      "윙"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -174,6 +177,11 @@
      "นี้",
      "니"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "shout"
    ]
   },
   {
@@ -232,6 +240,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "flustered"
    ]
   },
   {
@@ -279,7 +292,8 @@
      "껀"
     ]
    ],
-   "emoji": "😤"
+   "emoji": "😱",
+   "emotion": "shout"
   },
   {
    "num": 7,
@@ -315,7 +329,8 @@
      "เก็บ",
      "껩"
     ]
-   ]
+   ],
+   "emotion": "flustered"
   },
   {
    "num": 8,
@@ -361,6 +376,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "amused"
    ]
   }
  ],

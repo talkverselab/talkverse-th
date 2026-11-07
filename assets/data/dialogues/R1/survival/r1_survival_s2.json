@@ -65,7 +65,8 @@
      "เรียก",
      "리악"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -113,7 +114,8 @@
      "นมข้นหวาน",
      "놈콘완"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -156,7 +158,8 @@
      "완"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😬",
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -185,6 +188,11 @@
      "ชาเย็น",
      "차옌"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "tsukkomi"
    ]
   },
   {
@@ -222,7 +230,8 @@
      "หวาน",
      "완"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 6,
@@ -301,6 +310,11 @@
      "น้อย",
      "너이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -341,6 +355,11 @@
      "เท่าไหร่",
      "타오라이"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
    ]
   },
   {
@@ -411,7 +430,12 @@
      "익"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😄",
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "cheerful"
+   ]
   }
  ],
  "review": {

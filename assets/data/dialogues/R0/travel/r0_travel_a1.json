@@ -68,7 +68,8 @@
      "วันนี้",
      "완니"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -119,7 +120,8 @@
      "โมง",
      "몽"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -153,7 +155,8 @@
      "เก้า",
      "까오"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -196,6 +199,11 @@
      "เกาะ",
      "꺼"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -232,7 +240,8 @@
      "โอเค",
      "오케"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 6,
@@ -264,7 +273,8 @@
      "쑤어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 7,
@@ -304,7 +314,8 @@
      "โมง",
      "몽"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 8,
@@ -345,7 +356,12 @@
      "툭티"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "neutral",
+   "emotions": [
+    "neutral",
+    "gentle"
+   ]
   }
  ],
  "review": {

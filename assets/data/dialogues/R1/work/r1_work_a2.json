@@ -49,7 +49,8 @@
      "เห็นด้วย",
      "헨두어이"
     ]
-   ]
+   ],
+   "emotion": "shout"
   },
   {
    "num": 2,
@@ -76,7 +77,12 @@
      "유"
     ]
    ],
-   "emoji": "😮"
+   "emoji": "🙄",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "tsukkomi"
+   ]
   },
   {
    "num": 3,
@@ -106,6 +112,11 @@
      "เห็นด้วย",
      "헨두어이"
     ]
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "stiff"
    ]
   },
   {
@@ -138,7 +149,8 @@
      "빠이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "teasing"
   },
   {
    "num": 5,
@@ -206,7 +218,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 6,
@@ -268,7 +281,8 @@
      "두어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "teasing"
   },
   {
    "num": 7,
@@ -288,7 +302,12 @@
      "쑤"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😢",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "sad"
+   ]
   },
   {
    "num": 8,
@@ -329,7 +348,8 @@
      "두어이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   }
  ],
  "review": {

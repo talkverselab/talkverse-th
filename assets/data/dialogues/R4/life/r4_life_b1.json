@@ -97,7 +97,8 @@
      "니"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -163,7 +164,8 @@
      "บาท",
      "밧"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 3,
@@ -260,7 +262,12 @@
      "익"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😏",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "teasing"
+   ]
   },
   {
    "num": 4,
@@ -347,7 +354,12 @@
      "여"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "🙏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "polite"
+   ]
   },
   {
    "num": 5,
@@ -438,6 +450,11 @@
      "สัญญา",
      "싼야"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "excited"
    ]
   },
   {
@@ -500,7 +517,8 @@
      "쁘라탑뜨라"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 7,
@@ -566,6 +584,11 @@
      "จริงๆ",
      "찡 찡"
     ]
+   ],
+   "emotion": "shout",
+   "emotions": [
+    "shout",
+    "worried"
    ]
   },
   {
@@ -633,7 +656,12 @@
      "빠이"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😬",
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "stiff"
+   ]
   },
   {
    "num": 9,
@@ -729,6 +757,11 @@
      "มีปัญหา",
      "미빤하"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "worried"
    ]
   },
   {
@@ -822,6 +855,11 @@
      "ขึ้น",
      "큰"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
    ]
   },
   {
@@ -913,6 +951,11 @@
      "ใกล้",
      "끌라이"
     ]
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
    ]
   },
   {
@@ -1004,6 +1047,11 @@
      "นั้น",
      "난"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "gentle"
    ]
   },
   {
@@ -1085,7 +1133,8 @@
      "ตรงนี้",
      "뜨롱니"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 14,
@@ -1171,6 +1220,11 @@
      "กัน",
      "깐"
     ]
+   ],
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "shy"
    ]
   }
  ],

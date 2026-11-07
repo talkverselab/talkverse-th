@@ -81,7 +81,8 @@
      "깐"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "🤩",
+   "emotion": "excited"
   },
   {
    "num": 2,
@@ -117,7 +118,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "annoyed"
   },
   {
    "num": 3,
@@ -174,7 +176,8 @@
      "껀"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "teasing"
   },
   {
    "num": 4,
@@ -220,6 +223,11 @@
      "บ้าน",
      "반"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "amused"
    ]
   },
   {
@@ -296,6 +304,11 @@
      "ต่อกัน",
      "떠깐"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "excited"
    ]
   },
   {
@@ -339,7 +352,12 @@
      "끌랍반"
     ]
    ],
-   "emoji": "🙌"
+   "emoji": "😒",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "annoyed"
+   ]
   },
   {
    "num": 7,
@@ -390,7 +408,8 @@
      "ด้วย",
      "두어이"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 8,
@@ -446,6 +465,11 @@
      "เท่านั้น",
      "타오난"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "tsukkomi"
    ]
   },
   {
@@ -502,6 +526,11 @@
      "เช้า",
      "차오"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "excited"
    ]
   },
   {
@@ -539,6 +568,11 @@
      "ก็ได้",
      "꺼다이"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "gentle"
    ]
   },
   {
@@ -581,6 +615,11 @@
      "นิดหน่อย",
      "닛너이"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "sad"
    ]
   }
  ],

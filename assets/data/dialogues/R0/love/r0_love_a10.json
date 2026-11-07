@@ -58,7 +58,8 @@
      "ฉัน",
      "찬"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -84,6 +85,11 @@
      "สุขสันต์วันเกิด",
      "쑥싼완끗"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "cheerful"
    ]
   },
   {
@@ -116,7 +122,12 @@
      "풋"
     ]
    ],
-   "emoji": "👉"
+   "emoji": "🙄",
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "tsukkomi"
+   ]
   },
   {
    "num": 4,
@@ -152,7 +163,8 @@
      "แป๊บ",
      "뺍"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 5,
@@ -179,7 +191,8 @@
      "나이"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😲",
+   "emotion": "surprised"
   },
   {
    "num": 6,
@@ -227,7 +240,8 @@
      "หมด",
      "못"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 7,
@@ -273,6 +287,11 @@
      "นี้",
      "니"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -324,7 +343,8 @@
      "เธอ",
      "터"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

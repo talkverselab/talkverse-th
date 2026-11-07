@@ -66,6 +66,11 @@
      "จัง",
      "짱"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "worried"
    ]
   },
   {
@@ -118,7 +123,12 @@
      "빠이"
     ]
    ],
-   "emoji": "🙌"
+   "emoji": "🥰",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "gentle"
+   ]
   },
   {
    "num": 3,
@@ -164,6 +174,11 @@
      "แล้วกัน",
      "래우깐"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "polite"
    ]
   },
   {
@@ -186,7 +201,8 @@
      "สั่ง",
      "쌍"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 5,
@@ -233,7 +249,8 @@
      "티쑷"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 6,
@@ -265,7 +282,12 @@
      "야이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "polite",
+   "emotions": [
+    "polite",
+    "cheerful"
+   ]
   },
   {
    "num": 7,
@@ -328,6 +350,11 @@
      "ที่สุด",
      "티쑷"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -379,6 +406,11 @@
      "เอง",
      "엥"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -460,6 +492,11 @@
      "มา",
      "마"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "polite"
    ]
   },
   {
@@ -501,7 +538,8 @@
      "มีความสุข",
      "미쾀쑥"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   }
  ],
  "review": {

@@ -95,7 +95,8 @@
      "กัน",
      "깐"
     ]
-   ]
+   ],
+   "emotion": "excited"
   },
   {
    "num": 2,
@@ -146,7 +147,8 @@
      "와"
     ]
    ],
-   "emoji": "😤"
+   "emoji": "😄",
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -195,6 +197,11 @@
      "อ่าน",
      "안"
     ]
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "teasing"
    ]
   },
   {
@@ -240,7 +247,8 @@
      "มาก",
      "막"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 5,
@@ -310,7 +318,8 @@
      "แน่",
      "내"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 6,
@@ -360,6 +369,11 @@
      "รัก",
      "락"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
    ]
   },
   {
@@ -399,6 +413,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "sad"
    ]
   },
   {
@@ -434,6 +453,11 @@
      "ตาแดง",
      "따댕"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "shy"
    ]
   },
   {
@@ -495,7 +519,12 @@
      "두어이깐"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ]
   },
   {
    "num": 10,
@@ -532,7 +561,8 @@
      "여"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 11,
@@ -587,6 +617,11 @@
      "ก่อน",
      "껀"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "cheerful"
    ]
   },
   {
@@ -616,6 +651,11 @@
      "หน่อย",
      "너이"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "amused"
    ]
   }
  ],

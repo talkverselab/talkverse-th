@@ -76,7 +76,8 @@
      "ไหว้ครู",
      "와이크루"
     ]
-   ]
+   ],
+   "emotion": "polite"
   },
   {
    "num": 2,
@@ -137,7 +138,8 @@
      "แบบนี้",
      "뱁니"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 3,
@@ -173,7 +175,8 @@
      "ถูก",
      "툭"
     ]
-   ]
+   ],
+   "emotion": "stiff"
   },
   {
    "num": 4,
@@ -225,7 +228,12 @@
      "마이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "amused"
+   ]
   },
   {
    "num": 5,
@@ -281,6 +289,11 @@
      "เวที",
      "웨티"
     ]
+   ],
+   "emotion": "stiff",
+   "emotions": [
+    "stiff",
+    "surprised"
    ]
   },
   {
@@ -357,6 +370,11 @@
      "ชัด",
      "찻"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
    ]
   },
   {
@@ -386,7 +404,8 @@
      "쩹"
     ]
    ],
-   "emoji": "🤔"
+   "emoji": "😟",
+   "emotion": "worried"
   },
   {
    "num": 8,
@@ -442,7 +461,8 @@
      "ที่สุด",
      "티쑷"
     ]
-   ]
+   ],
+   "emotion": "teasing"
   },
   {
    "num": 9,
@@ -479,7 +499,12 @@
      "쑤"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😄",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "cheerful"
+   ]
   },
   {
    "num": 10,
@@ -506,7 +531,8 @@
      "터"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "☺️",
+   "emotion": "shy"
   }
  ],
  "review": {

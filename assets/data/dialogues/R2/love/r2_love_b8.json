@@ -71,7 +71,8 @@
      "เกรงใจ",
      "끄렝짜이"
     ]
-   ]
+   ],
+   "emotion": "cheerful"
   },
   {
    "num": 2,
@@ -113,7 +114,12 @@
      "엥"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😏",
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "teasing"
+   ]
   },
   {
    "num": 3,
@@ -164,7 +170,8 @@
      "นึง",
      "능"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 4,
@@ -225,6 +232,11 @@
      "เอา",
      "아오"
     ]
+   ],
+   "emotion": "tsukkomi",
+   "emotions": [
+    "tsukkomi",
+    "teasing"
    ]
   },
   {
@@ -261,7 +273,8 @@
      "ไป",
      "빠이"
     ]
-   ]
+   ],
+   "emotion": "neutral"
   },
   {
    "num": 6,
@@ -293,7 +306,8 @@
      "바이"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🙏",
+   "emotion": "polite"
   },
   {
    "num": 7,
@@ -337,7 +351,8 @@
      "크랑"
     ]
    ],
-   "emoji": "😅"
+   "emoji": "😲",
+   "emotion": "surprised"
   },
   {
    "num": 8,
@@ -373,6 +388,11 @@
      "หมด",
      "못"
     ]
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "amused"
    ]
   },
   {
@@ -410,7 +430,8 @@
      "엥"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "🥰",
+   "emotion": "gentle"
   },
   {
    "num": 10,
@@ -442,7 +463,12 @@
      "리앙"
     ]
    ],
-   "emoji": "🙂"
+   "emoji": "😏",
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "teasing"
+   ]
   }
  ],
  "review": {

@@ -101,6 +101,11 @@
      "ฉัน",
      "찬"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "flustered"
    ]
   },
   {
@@ -172,7 +177,8 @@
      "ตรงนี้",
      "뜨롱니"
     ]
-   ]
+   ],
+   "emotion": "worried"
   },
   {
    "num": 3,
@@ -238,7 +244,8 @@
      "โรงพยาบาล",
      "롱파야반"
     ]
-   ]
+   ],
+   "emotion": "neutral"
   },
   {
    "num": 4,
@@ -359,6 +366,11 @@
      "ขอโทษ",
      "커톳"
     ]
+   ],
+   "emotion": "worried",
+   "emotions": [
+    "worried",
+    "flustered"
    ]
   },
   {
@@ -436,7 +448,12 @@
      "니"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "🙄",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
   },
   {
    "num": 6,
@@ -527,7 +544,8 @@
      "หมด",
      "못"
     ]
-   ]
+   ],
+   "emotion": "gentle"
   },
   {
    "num": 7,
@@ -588,7 +606,8 @@
      "ต่อ",
      "떠"
     ]
-   ]
+   ],
+   "emotion": "neutral"
   },
   {
    "num": 8,
@@ -696,6 +715,11 @@
      "มาก",
      "막"
     ]
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "sad"
    ]
   },
   {
@@ -762,6 +786,11 @@
      "ไป",
      "빠이"
     ]
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
    ]
   },
   {
@@ -819,7 +848,12 @@
      "너이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😏",
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
+   ]
   },
   {
    "num": 11,
@@ -886,7 +920,8 @@
      "너이"
     ]
    ],
-   "emoji": "😂"
+   "emoji": "😆",
+   "emotion": "amused"
   },
   {
    "num": 12,
@@ -953,7 +988,12 @@
      "렁하이"
     ]
    ],
-   "emoji": "😑"
+   "emoji": "😒",
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "annoyed"
+   ]
   },
   {
    "num": 13,
@@ -1004,6 +1044,11 @@
      "ทุกอย่าง",
      "툭양"
     ]
+   ],
+   "emotion": "teasing",
+   "emotions": [
+    "teasing",
+    "gentle"
    ]
   }
  ],
