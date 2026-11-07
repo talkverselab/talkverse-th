@@ -33,7 +33,7 @@ void main() async {
   Entitlement.configure(); // 스토어 평생 이용권(기다리지 않음) — 한자 앱과 같은 공용 클라이언트
   UpdateService.instance.loadCurrent();
   // 그림(장면 컷·단어 그림) 기기 내려받기: 버전이 다르면 로딩 화면에서 받고 시작(사용자 지시 2026-11-04, 모든 언어앱 공통)
-  final needSync = await ContentSync.instance.init(large: _isTablet());
+  final needSync = await ContentSync.instance.init(large: _isTablet(), female: LearnerPrefs.isFemale);
   runApp(ThaiUniverseApp(syncFirst: needSync));
   // 콘텐츠만 바뀐 수정은 APK 없이 받는다 — 받으면 화면들이 revision 을 듣고 다시 읽는다.
   ContentStore.instance.refresh();

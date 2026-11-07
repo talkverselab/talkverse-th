@@ -1,0 +1,52 @@
+{
+ "_meta": "태국어 회화 음성 — 목소리·감정·자리 채움. 일본어·한국어앱 data/tts/voices.json 과 같은 짜임. 참고 음성은 VoxCPM2(설명 instruct 는 영어), 문장은 MOSS-TTS(language Thai).",
+ "base_text": "วันนี้ตอนบ่ายมีประชุม เลยจะเตรียมเอกสารไว้ก่อน เสร็จแล้วไปกินข้าวเย็นด้วยกันไหม",
+ "voices": {
+  "am": {"desc": "A young Thai man in his twenties, clear and gentle voice, Bangkok accent"},
+  "af": {"desc": "A young Thai woman in her twenties, clear and soft voice, Bangkok accent"},
+  "fah": {"desc": "A Thai woman in her early twenties, bright, quick and lively voice, slightly playful"},
+  "ton": {"desc": "A Thai man in his mid twenties, relaxed, warm and slightly deep voice"},
+  "huana": {"desc": "A Thai woman in her forties, composed, firm but kind voice"},
+  "colleague": {"desc": "A Thai man in his late twenties, casual, friendly and slightly lazy voice"},
+  "staff": {"desc": "A Thai woman in her twenties, polite, clear service voice"},
+  "vendor": {"desc": "A Thai woman in her fifties, loud, cheerful market-vendor voice"},
+  "win": {"desc": "A Thai man in his forties, rough, cheerful motorcycle-taxi driver voice"},
+  "mom": {"desc": "A Thai woman in her fifties, warm, caring mother's voice"},
+  "dad": {"desc": "A Thai man in his fifties, deep, steady father's voice"},
+  "ajarn": {"desc": "A Thai man in his fifties, calm, articulate teacher's voice"},
+  "monk": {"desc": "A Thai man in his sixties, slow, serene and low voice"},
+  "man_y": {"desc": "A Thai man around twenty, natural and clear voice"},
+  "man_m": {"desc": "A Thai man in his forties, steady and calm voice"},
+  "man_o": {"desc": "A Thai man in his seventies, aged and gentle voice"},
+  "woman_y": {"desc": "A Thai woman around twenty, natural and clear voice"},
+  "woman_m": {"desc": "A Thai woman in her forties, composed and kind voice"},
+  "woman_o": {"desc": "A Thai woman in her seventies, aged and warm voice"},
+  "kid": {"desc": "A Thai child around eight years old, high and lively voice"},
+  "drunk": {"desc": "A Thai man in his thirties, slurred, loud and drunk voice"},
+  "announce": {"desc": "A Thai woman, neutral public-announcement voice, even and clear"}
+ },
+ "emotions": {
+  "neutral": {"instruct": "calm and natural, everyday tone", "ref": "วันนี้ตอนบ่ายมีประชุม เลยจะเตรียมเอกสารไว้ก่อนนะ"},
+  "polite": {"instruct": "polite and professional, like a clerk or station staff", "ref": "สวัสดีค่ะ รับอะไรดีคะ ขอบคุณค่ะ"},
+  "stiff": {"instruct": "very nervous and stiff, formal and overly polite", "ref": "ขอบคุณมากครับที่สละเวลา ผมจะตั้งใจทำงานครับ ฝากตัวด้วยครับ"},
+  "cheerful": {"instruct": "cheerful, bright and friendly", "ref": "โห มาแล้วเหรอ ดีเลย วันนี้อากาศดี อารมณ์ดีสุดๆ"},
+  "amused": {"instruct": "amused, laughing warmly, relaxed", "ref": "ฮ่าๆ ตลกมาก เอาเลย เอาแบบนั้นแหละ"},
+  "teasing": {"instruct": "teasing, playful and mischievous", "ref": "อะไรนะ หน้าแบบนั้น เอ้า บอกมาตรงๆ ไม่บอกใครหรอก"},
+  "excited": {"instruct": "excited, bursting with energy, bright and loud", "ref": "ได้แล้ว พูดแล้ว ตกใจเหมือนกัน ขอบคุณจริงๆ นะ"},
+  "surprised": {"instruct": "surprised, caught off guard, voice jumps", "ref": "เอ๊ะ จริงเหรอ เดี๋ยวนะ หมายความว่าอะไร"},
+  "shout": {"instruct": "surprised and loud, an exaggerated comic retort", "ref": "อะไรนะ ตอนนี้เหรอ อยู่ๆ จะมาแบบนี้ได้ยังไง"},
+  "tsukkomi": {"instruct": "a quick sharp comic retort, exasperated but fond", "ref": "ไม่ใช่แบบนั้น ทำไมต้องทำแบบนั้นตรงนี้เนี่ย จริงๆ เลย"},
+  "annoyed": {"instruct": "annoyed, irritated, sighing", "ref": "โอ๊ย จริงๆ เรื่องนั้นอีกเหรอ เลิกพูดสักทีเถอะ"},
+  "sad": {"instruct": "sad, quiet, voice slightly trembling", "ref": "ก็แค่… เหนื่อยนิดหน่อย ไม่เป็นไร ไม่ต้องห่วงนะ"},
+  "worried": {"instruct": "worried and anxious, hesitant", "ref": "เป็นอะไรไหม ไม่สบายหรือเปล่า ไปหาหมอดีไหม"},
+  "flustered": {"instruct": "flustered and embarrassed, stammering, unsure", "ref": "เอ่อ คือ… เดี๋ยวนะ… ไม่รู้จะพูดยังไงดี…"},
+  "shy": {"instruct": "shy, soft, slightly trailing off", "ref": "อ่า… คือ… เราก็ชอบเหมือนกัน… งั้น… ไปด้วยกันนะ"},
+  "gentle": {"instruct": "gentle, warm and tender, quiet", "ref": "ไม่เป็นไรนะ ค่อยๆ ทำก็ได้ เราอยู่ตรงนี้"}
+ },
+ "fill": {
+  "{name}": {"m": {"text": "อเล็กซ์", "rd": "알렉스", "ko": "알렉스"}, "f": {"text": "เอ็มม่า", "rd": "에마", "ko": "에마"}},
+  "{country}": {"text": "แคนาดา", "rd": "캐나다", "ko": "캐나다"},
+  "{city}": {"text": "โทรอนโต", "rd": "토론토", "ko": "토론토"},
+  "{lang}": {"text": "ภาษาอังกฤษ", "rd": "파싸 앙끄릿", "ko": "영어"}
+ }
+}

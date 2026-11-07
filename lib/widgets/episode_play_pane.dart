@@ -12,8 +12,8 @@ import '../services/art_service.dart';
 import '../services/content_sync.dart';
 import '../services/dialogue_service.dart';
 import '../services/learner_prefs.dart';
-import '../services/tts_service.dart';
 import 'learner_setup_dialog.dart';
+import '../services/dialogue_audio.dart';
 import '../services/ko_reading.dart';
 import 'lemma_chips.dart';
 import 'lemma_text.dart';
@@ -52,7 +52,7 @@ class _EpisodePlayPaneState extends State<EpisodePlayPane> {
   late final List<GlobalKey> _keys = List.generate(widget.dialogue.turns.length, (_) => GlobalKey());
 
   Dialogue get d => widget.dialogue;
-  DialogueTurn get turn => d.turns[_i];
+  DialogueTurn get turn => d.view(d.turns[_i]);
 
   void _onReading() {
     if (mounted) setState(() {});
@@ -75,7 +75,7 @@ class _EpisodePlayPaneState extends State<EpisodePlayPane> {
   void dispose() {
     KoReadingPrefs.show.removeListener(_onReading);
     _session++;
-    TtsService.instance.stop();
+    DialogueAudio.instance.stop();
     super.dispose();
   }
 
@@ -85,9 +85,8 @@ class _EpisodePlayPaneState extends State<EpisodePlayPane> {
     while (mounted && my == _session && _i < d.turns.length) {
       final t = d.turns[_i];
       _scrollTo(_i);
-      final text = _ttsText(t);
-      if (text.isNotEmpty) {
-        await TtsService.instance.speakAndWait(text, gender: _gender(t.speaker), rate: _rate * 0.45);
+      if (DialogueAudio.instance.line(d.id, t.num) != null || _ttsText(t).isNotEmpty) {
+        await speakTurn(d, t, rate: _rate);
       } else {
         await Future.delayed(const Duration(milliseconds: 900)); // 침묵 턴
       }
@@ -106,14 +105,14 @@ class _EpisodePlayPaneState extends State<EpisodePlayPane> {
 
   void _pause() {
     _session++;
-    TtsService.instance.stop();
+    DialogueAudio.instance.stop();
     setState(() => _playing = false);
   }
 
   void _goto(int n, {bool play = false}) {
     n = n.clamp(0, d.turns.length - 1);
     _session++;
-    TtsService.instance.stop();
+    DialogueAudio.instance.stop();
     setState(() {
       _i = n;
       _playing = false;
@@ -123,8 +122,9 @@ class _EpisodePlayPaneState extends State<EpisodePlayPane> {
   }
 
   void _speakOne(DialogueTurn t) {
-    final s = _ttsText(t);
-    if (s.isNotEmpty) TtsService.instance.speakAs(s, gender: _gender(t.speaker), rate: _rate * 0.45);
+    _session++; // 자동 재생 중이면 멈추고 이 턴만
+    if (_playing) setState(() => _playing = false);
+    speakTurn(d, t, rate: _rate);
   }
 
   void _scrollTo(int i) {
@@ -140,7 +140,6 @@ class _EpisodePlayPaneState extends State<EpisodePlayPane> {
     return s;
   }
 
-  String _gender(String sp) => LearnerPrefs.voiceGender(sp); // A = 학습자 프로필 성별
 
   @override
   Widget build(BuildContext context) {
@@ -280,7 +279,7 @@ class _Script extends StatelessWidget {
           padding: EdgeInsets.fromLTRB(12, 4, 12, 12 + bottomInset(context)),
           itemCount: d.turns.length,
           itemBuilder: (context, i) {
-            final t = d.turns[i];
+            final t = d.view(d.turns[i]);
             final on = i == current;
             final me = t.speaker == 'A';
             return Padding(

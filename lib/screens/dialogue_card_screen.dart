@@ -7,8 +7,8 @@ import '../services/art_service.dart';
 import '../services/content_sync.dart';
 import '../services/dialogue_service.dart';
 import '../services/learner_prefs.dart';
-import '../services/tts_service.dart';
 import '../widgets/episode_play_pane.dart' show thStyle, kCutShadow;
+import '../services/dialogue_audio.dart';
 import '../services/ko_reading.dart';
 import '../widgets/lemma_chips.dart';
 import '../widgets/lemma_text.dart';
@@ -33,11 +33,11 @@ class _DialogueCardScreenState extends State<DialogueCardScreen> {
   int _right = 0;
 
   Dialogue get d => widget.dialogue;
-  DialogueTurn get t => d.turns[_order[_pos]];
+  DialogueTurn get t => d.view(d.turns[_order[_pos]]);
 
   @override
   void dispose() {
-    TtsService.instance.stop();
+    DialogueAudio.instance.stop();
     super.dispose();
   }
 
@@ -103,7 +103,7 @@ class _DialogueCardScreenState extends State<DialogueCardScreen> {
                 icon: Icons.volume_up,
                 label: tr('듣기'),
                 color: AppColors.kluayMai,
-                onTap: () => TtsService.instance.speakAs(LearnerPrefs.fill(t.th).replaceAll(RegExp(r'5{3,}'), 'ฮ่าๆ').replaceAll(RegExp(r'[…~]+'), ' '), gender: LearnerPrefs.voiceGender(t.speaker))),
+                onTap: () => speakTurn(d, t)),
             _Btn(icon: Icons.check, label: tr('맞았어요'), color: AppColors.morakot, onTap: () => _mark(true)),
           ]),
         ),
