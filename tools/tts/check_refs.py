@@ -22,9 +22,15 @@ def ltas(x):
 
 
 def noise(f):
-    o = subprocess.run(['ffmpeg', '-hide_banner', '-i', f, '-af', 'astats=measure_perchannel=none:measure_overall=Noise_floor', '-f', 'null', '-'], capture_output=True, text=True).stderr
-    m = re.search(r'Noise floor dB: (-?[\d.]+|-inf)', o)
-    return -99.0 if not m or m.group(1) == '-inf' else float(m.group(1))
+    """무음 구간(-40dB 아래 0.3초 이상)만의 RMS. 그런 구간이 없으면 None(검사 건너뜀) — §5 b189b0c."""
+    o = subprocess.run(['ffmpeg', '-hide_banner', '-i', f, '-af', 'silencedetect=n=-40dB:d=0.3', '-f', 'null', '-'], capture_output=True, text=True).stderr
+    spans = list(zip(re.findall(r'silence_start: ([\d.]+)', o), re.findall(r'silence_end: ([\d.]+)', o)))
+    if not spans:
+        return None
+    a, b = max(spans, key=lambda x: float(x[1]) - float(x[0]))
+    oo = subprocess.run(['ffmpeg', '-hide_banner', '-ss', a, '-to', b, '-i', f, '-af', 'astats=measure_perchannel=none:measure_overall=RMS_level', '-f', 'null', '-'], capture_output=True, text=True).stderr
+    m = re.search(r'RMS level dB: (-?[\d.]+|-inf)', oo)
+    return -99.0 if (m and m.group(1) == '-inf') else (float(m.group(1)) if m else None)
 
 
 def main():
@@ -37,7 +43,7 @@ def main():
     for f in files:
         n = os.path.basename(f)[:-4]; v, e = n.rsplit('_', 1)
         nf = noise(f)
-        if nf > NOISE:
+        if nf is not None and nf > NOISE:
             bad[n] = f'noise {nf:.0f}dB'
         if e == 'base':
             base[v] = ltas(pcm(f))

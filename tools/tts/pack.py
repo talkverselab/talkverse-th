@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """문장 조각 wav → 턴별 mp4(AAC) → R2 `audio/th/<편>/<턴>_<m|f>.mp4` + D1 `audio_lines`(그 편의 줄을 지우고 다시 넣는다).
 모든 턴에 남성판·여성판 두 파일·두 줄(본문 text(태국어)·reading(빈 값)·rd(한글 독음)·ko(한국어 뜻) 포함). 두 판의 소리가 같아도 따로 올린다 — 구조를 단순하게.
-조각마다 앞뒤 무음을 자르고 0.25초 넘는 쉼을 줄인 뒤 0.18초 간격으로 잇고 소리 크기를 맞춘다(-18 LUFS). 말 속도가 10 글자/초 미만이면 음높이를 유지한 채 최대 1.15배로 맞춘다(§5 품질 기준 2026-11-07).
+조각마다 앞뒤 무음을 자르고 0.25초 넘는 쉼을 줄인 뒤 0.18초 간격으로 잇고 소리 크기를 맞춘다(-18 LUFS). 말 속도가 참고 음성 중앙값(12 글자/초)의 0.75배 미만이면 음높이를 유지한 채 최대 1.15배로 맞춘다(§5 품질 기준 2026-11-07).
   python3 tools/tts/pack.py <wav폴더> <편id>... [--upload]
 목록 = data/tts/audio_th.json(리뷰 페이지용). 주소에는 ?v=<sha1 앞 8자리>(서버 캐시가 1년)."""
 import datetime, hashlib, json, os, subprocess, sys, tempfile
@@ -11,7 +11,7 @@ R = L.R
 TRIM = ('silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.03,areverse,'
         'silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,areverse,'
         'silenceremove=stop_periods=-1:stop_duration=0.25:stop_threshold=-45dB:stop_silence=0.25')
-RATE_LO = 10.0
+RATE_LO = 12.0 * 0.75   # 태국어 참고 음성 중앙값 12 글자/초의 0.75배 아래면 최대 1.15배(§5)
 thai_len = lambda s: len(__import__('re').findall(r'[\u0E00-\u0E7F]', s))
 W = ['npx', '-y', 'wrangler@4']
 
