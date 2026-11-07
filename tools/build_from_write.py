@@ -36,7 +36,7 @@ for i, r in enumerate(recs, 1):
     thai_chars = len(re.findall(r'[\u0E00-\u0E7F]', th))
     if thai_chars and th.count(' ') * 6 >= thai_chars:
         th = re.sub(r'(?<=[\u0E00-\u0E7F]) (?=[\u0E00-\u0E7F])', '', th)
-    note = re.sub(r'^해설\s*\(?|\)$', '', parts[2]).strip() if len(parts) > 2 else ''
+    note = re.sub(r'^해설\s*\((.*)\)$|^해설\s*', r'\1', parts[2]).strip() if len(parts) > 2 else ''  # 뜻풀이 끝 괄호는 두고 「해설 (…)」 껍질만 벗긴다
     new = [w.strip() for w in re.split(r'[,，、]', re.sub(r'^새\s*단어\s*[:：]?', '', parts[3]))] if len(parts) > 3 else []
     t = {'num': len(turns) + 1, 'speaker': r['sp'], 'th': th.replace('❓', '').strip(), 'rd': '', 'ko': ko, 'note': note, 'tags': [], 'new': [w for w in new if w][:3]}
     if '❓' in th:

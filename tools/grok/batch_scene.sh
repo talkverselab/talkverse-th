@@ -1,5 +1,5 @@
 #!/bin/zsh
-# batch_scene.sh <편id...> — Grok 장면 컷 4장씩(이미 있으면 건너뜀, 한도면 멈춤). 터널: ssh -fN -L 9226:127.0.0.1:9226 macmini4. 고정 방에 시트가 있으므로 첨부는 GROK_ATTACH=1 일 때만
+# batch_scene.sh <편id...> — Grok 장면 컷 4장씩(이미 있으면 건너뜀, 한도면 멈춤). 터널: ssh -fN -L 9225:127.0.0.1:9225 macmini4. 고정 방에 시트가 있으므로 첨부는 GROK_ATTACH=1 일 때만
 cd ~/talkverse/th
 for id in "$@"; do
   [ -f data/review/scene/$id/img4.jpg ] && { echo "$id skip"; continue; }

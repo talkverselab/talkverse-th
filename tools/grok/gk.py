@@ -1,8 +1,8 @@
 """고정 방(tools/grok/room_th.txt)에서 Grok 한 건: gk.py <prompt> <out.md> [--attach m4path,..] [--img outdir] [--new]  — 끝나면 탭 닫음.
-사용자 지시 2026-11-06: 새 방을 만들지 말고 한 방에서 이어 쓴다(통일성·토큰). --new 는 새 방이 꼭 필요할 때만. 포트 = GROK_CDP_PORT(기본 9226)."""
-# 2026-11-05 tools/grok 로 옮김(/tmp 스크래치패드가 재부팅으로 지워져 복구) — 의존: ~/Hanja/tools/grok_cdp.py, 터널 9226(ssh -fN -L 9226:127.0.0.1:9226 macmini4)
+사용자 지시 2026-11-06: 새 방을 만들지 말고 한 방에서 이어 쓴다(통일성·토큰). --new 는 새 방이 꼭 필요할 때만. 포트 = GROK_CDP_PORT(기본 9225 = 태국어 전용, M4 ~/chrome-grok-th)."""
+# 2026-11-05 tools/grok 로 옮김(/tmp 스크래치패드가 재부팅으로 지워져 복구) — 의존: ~/Hanja/tools/grok_cdp.py, 터널 9225(ssh -fN -L 9225:127.0.0.1:9225 macmini4)
 import sys, time, json, base64, urllib.request, re, os
-os.environ.setdefault('GROK_CDP_PORT','9226')
+os.environ.setdefault('GROK_CDP_PORT','9225')
 sys.path.insert(0,'/Users/talkverse/Hanja/tools'); import grok_cdp as g
 a=sys.argv[1:]; src,dst=a[0],a[1]
 att=a[a.index('--attach')+1].split(',') if '--attach' in a else []
