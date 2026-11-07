@@ -1,6 +1,6 @@
 # 회화 음성 감정 계획 작성법 (태국어)
 
-편마다 `data/tts/plan/<편id>.json` 한 파일. 검사 `python3 tools/tts/check_plan.py <편id>...`. 일본어·한국어앱 `data/tts/PLAN_GUIDE.md` 와 같은 틀, 태국어 칸 이름만 다르다.
+편마다 `data/tts/plan/<편id>.json` 한 파일. **먼저 `python3 tools/tts/make_plan.py <편id>...` 로 회화 JSON 의 감정 열(`emotion`·`emotions`·`segs`)에서 자동으로 만들고**(여성판 ผม→ฉัน·ครับ→ค่ะ 도 자동), 검사 `python3 tools/tts/check_plan.py <편id>...` 뒤 어색한 곳만 손으로 고친다(사용자 지시 2026-11-07: 감정을 손으로 다시 적지 않는다). 감정 열이 없는 옛 편은 화자·문장부호로 어림하므로 들어 보고 고친다. 일본어·한국어앱 `data/tts/PLAN_GUIDE.md` 와 같은 틀, 태국어 칸 이름만 다르다.
 
 ```json
 {"ep":"r1_x_a1",
