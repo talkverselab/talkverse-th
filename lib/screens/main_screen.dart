@@ -24,6 +24,7 @@ import 'quick_phrases_screen.dart';
 import 'script_quiz_screen.dart';
 import 'speaking_practice_screen.dart';
 import 'thai_roots_screen.dart';
+import 'thai_sound_chart_screen.dart';
 import 'tones_screen.dart';
 import 'vocab_hub_screen.dart';
 import 'word_freq_screen.dart';
@@ -494,6 +495,7 @@ class _MenuGrid extends StatelessWidget {
     // 구역 순서: 기초 → 문법 → 회화 → 단어 → 복습 → 참고(맨 아래) — 사용자 지시 2026-11-07, 모든 언어앱 공통.
     final sections = <(String, List<_MenuItem>)>[
       (tr('기초'), [
+        _MenuItem(label: tr('문자와 발음'), sub: tr('자음·모음·성조 · 입모양·IPA'), emblem: 'เสียง', color: AppColors.badges[0], builder: (_) => const ThaiSoundChartScreen()),
         _MenuItem(label: tr('문자 44'), sub: tr('자음 · 3분류 · 모음'), emblem: 'ก', color: AppColors.badges[2], builder: (_) => const AlphabetScreen()),
         _MenuItem(label: tr('성조 5'), sub: 'วรรณยุกต์', emblem: 'เสียง', color: AppColors.badges[3], builder: (_) => const TonesScreen()),
         _MenuItem(label: tr('문자 퀴즈'), sub: tr('4지선다'), emblem: '?', color: AppColors.badges[9], builder: (_) => const ScriptQuizScreen()),

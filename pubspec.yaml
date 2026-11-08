@@ -84,3 +84,4 @@ flutter:
     - assets/data/version.json
     - assets/audio/
     - assets/images/
+    - assets/images/ipa/
