@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """전편 회화 음성 생성 진행기(M6 에서 길게 돈다). 묶음마다: 작업 파일 → PC 생성 → 받아 오기 → 받아쓰기 검사·재생성(두 번까지) → mp4·R2·D1.
-  <venv>/bin/python tools/tts/run_all.py <작업폴더> [묶음 크기=12] [--refs]   참고 음성이 없으면(또는 --refs) 먼저 만들고 §5 검사·재생성. 끝난 편은 <작업폴더>/done.txt 에 적히고 다시 돌리면 건너뛴다.
+  <venv>/bin/python tools/tts/run_all.py <작업폴더> [묶음 크기=12] [--refs]   참고 음성이 없으면(또는 --refs) 먼저 만들고 §5 검사·재생성. 끝난 편은 <작업폴더>/done.txt 에 적히고 다시 돌리면 건너뛴다. <작업폴더>/PAUSE 파일이 있으면 묶음 경계에서 멈춘다(uk 끼어들기용).
 PC 쪽은 작업 스케줄러 'TTS job 2060'(run_job.sh)이 돈다 — 참고 음성 2060, 문장 3090. 중간에 멈춰도 있는 파일은 건너뛰고 이어서 한다."""
 import glob, json, os, subprocess, sys, time
 import ttslib as L
@@ -59,6 +59,8 @@ done = set(open(f'{work}/done.txt').read().split()) if os.path.exists(f'{work}/d
 ids = [e for e in L.planned() if e not in done]
 log('남은 편', len(ids))
 for i in range(0, len(ids), N):
+    if os.path.exists(f'{work}/PAUSE'):      # uk 가 중간에 짧은 시험을 끼울 때: 묶음 경계에서 멈춤(파일을 지우고 다시 실행하면 이어간다)
+        log('PAUSE 로 멈춤 — 남은 편', len(ids) - i); sys.exit(0)
     eps = ids[i:i + N]
     sh(sys.executable, f'{HERE}/make_jobs.py', f'{work}/job', *eps); pc_run()
     for ep in eps:
