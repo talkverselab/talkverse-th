@@ -116,7 +116,7 @@ def main():
         for name, voice, emo, text in L.seg_files(ep):
             k = f'{ep}/{name}'; f = f'{wav}/{k}'; q = Q.setdefault(k, {'tries': 0})
             if not os.path.exists(f):
-                q.update(sim=0.0, ok=False); bad += 1; continue
+                q.pop('sim', None); q['ok'] = False; bad += 1; continue   # 아직 없는 조각 — 생기면 다시 잰다
             if 'sim' not in q:
                 q['sim'], q['dur'], q['why'] = score(f, text)
             for c in sorted(glob.glob(f'{wav}/retake/{k[:-4]}.t*.wav')):          # 받아 온 재생성본 중 더 나은 것을 본 파일로

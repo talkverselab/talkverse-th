@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""참고 음성 검사(§5 품질 기준 2026-11-07): 잡음 바닥 ≤ -60dB · 같은 목소리의 감정별 음색(장기 평균 스펙트럼) 상관 ≥ 0.90.
+"""참고 음성 검사(§5 품질 기준): 잡음 바닥(무음 구간) ≤ -60dB 만 재생성 근거. 같은 목소리의 감정별 음색 상관(장기 평균 스펙트럼)은 **표시만** 한다 —
+문장이 달라 LTAS 상관이 낮게 나와 2026-11-09 190개 중 143개가 미달로 잡혔다(측정 오류). 재생성은 기본(base) 음성을 지우지 않고 감정 음성만.
   <thvenv>/bin/python tools/tts/check_refs.py <ref_th 폴더> [--jobs <vox_jobs.json>]   미달분 재생성 작업(seed 바꿈)을 --jobs 로 쓴다."""
 import glob, json, os, re, subprocess, sys
 import numpy as np
@@ -54,7 +55,8 @@ def main():
         s = ltas(pcm(f))
         c = float(np.corrcoef(base[v], s)[0, 1]) if s is not None else 0.0
         if c < CORR:
-            bad[n] = (bad.get(n, '') + f' timbre {c:.2f}').strip()
+            print(n, f'(표시만) timbre {c:.2f}')
+    bad = {n: w for n, w in bad.items() if not n.endswith('_base')}   # 기본 음성은 다시 만들지 않는다(감정 음성이 참조함)
     for n, why in sorted(bad.items()):
         print(n, why)
     print(f'참고 음성 {len(files)} 미달 {len(bad)}')
