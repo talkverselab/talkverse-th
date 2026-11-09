@@ -208,11 +208,6 @@ class _ProgressScreenState extends State<ProgressScreen> {
                         _ => AppColors.thongDeep,
                       },
                     )),
-                const SizedBox(height: 8),
-                Text(
-                  tr('문자·성조·키보드 진행 기록은 준비 중이에요.'),
-                  style: TextStyle(fontSize: 11, color: AppColors.khramLight),
-                ),
               ],
             ),
     );

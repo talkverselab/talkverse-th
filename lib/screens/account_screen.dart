@@ -62,19 +62,19 @@ class _AccountScreenState extends State<AccountScreen> {
         ..._passTiles(),
       ];
 
-  /// 평생 이용권 — 로그인 없이도 사고 복원한다(스토어).
+  /// 이용권 — 로그인 없이도 사고 복원한다(스토어).
   List<Widget> _passTiles() => [
-        ValueListenableBuilder<Set<String>>(
+        ValueListenableBuilder<Map<String, int>>(
           valueListenable: Purchase.owned,
           builder: (_, _, _) => _card([
-            Text(tr('평생 이용권'), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.kluayMai)),
+            Text(tr('이용권'), style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.kluayMai)),
             const SizedBox(height: 6),
             Text(Entitlement.premium ? tr('태국어 이용 중') : tr('이용권이 없어요'),
                 style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w700, color: AppColors.khram)),
             const SizedBox(height: 10),
             Row(children: [
               if (!Entitlement.premium)
-                Expanded(child: FilledButton(onPressed: () => Entitlement.showPaywall(context), child: Text(tr('평생 이용권 보기')))),
+                Expanded(child: FilledButton(onPressed: () => Entitlement.showPaywall(context), child: Text(tr('이용권 보기')))),
               if (!Entitlement.premium) const SizedBox(width: 8),
               Expanded(child: OutlinedButton(onPressed: _busy ? null : () => Purchase.restore(), child: Text(tr('이전 구매 복원')))),
             ]),

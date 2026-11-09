@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../services/tts_service.dart';
+
 import '../core/theme.dart';
 import '../data/models/tone.dart';
 import '../data/repositories/tone_repository.dart';
@@ -165,14 +167,7 @@ class _ToneCard extends StatelessWidget {
       shadowColor: Colors.black12,
       child: InkWell(
         borderRadius: BorderRadius.circular(18),
-        onTap: () {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(trf('{0} ({1}) — 발음 오디오 준비 중', [tone.sample, tone.nameKo])),
-              duration: const Duration(milliseconds: 1000),
-            ),
-          );
-        },
+        onTap: () => TtsService.instance.speak(tone.sample),
         child: Padding(
           padding: const EdgeInsets.all(14),
           child: Row(

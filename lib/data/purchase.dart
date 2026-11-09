@@ -9,57 +9,79 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'account.dart';
 
-/// 앱 안 결제 — Talkverse 공용 클라이언트(2026-11-02). 결제는 스토어(iOS StoreKit 2 · Android Play Billing),
+/// 판매 상품 하나(가격은 스토어가 정한다 — [krw] 는 스토어 가격을 못 받았을 때의 참고가).
+/// 가격·상품 ID 규칙 = Talkverse 공통(2026-11-09 사용자 최종 확정, ~/talkverse/PRICING.md 앱 정가/할인가): 언어 1개 `lang_<코드>_1m`·`_3m`·`_1y`(자동 갱신 구독)·`_life`(비소모성),
+/// 종합 패키지(모든 언어) `all_1y`·`all_life`. 앱 안에서는 사이트 가격을 안내·유도하지 않는다(스토어 규정).
+class Plan {
+  final String id;
+  final int months; // 0 = 평생
+  final bool bundle;
+  final int krw; // 앱 할인가(스토어 판매가) — 스토어 가격을 못 받았을 때 표시
+  final int listKrw; // 앱 정가(취소선 표기용, ~/talkverse/PRICING.md)
+  const Plan(this.id, this.months, this.krw, {this.listKrw = 0, this.bundle = false});
+  bool get lifetime => months == 0;
+  bool get discounted => listKrw > krw;
+  int get discountPct => discounted ? ((1 - krw / listKrw) * 100).round() : 0;
+}
+
+/// 앱 안 결제 — Talkverse 공용 클라이언트(한자앱 방식). 결제는 스토어(iOS StoreKit 2 · Android Play Billing),
 /// 이용권 기록은 Talkverse ID(auth.talkverse.uk POST /me/purchases).
 /// - 로그인 없이도 사고 복원할 수 있다(스토어가 기억 → 이 기기에 저장).
-/// - 로그인돼 있으면 서버가 스토어에 확인해 계정 이용권으로 기록 → 다른 기기·다른 플랫폼에서도 열림.
-///   로그인 전에 산 것은 로그인할 때 서버로 보낸다.
-/// 앱은 [configure] 한 번, 그 뒤 [buy] · [restore] · [owns] 만 쓴다.
+/// - 로그인돼 있으면 서버가 스토어에 확인해 계정 이용권으로 기록 → 다른 기기·다른 플랫폼에서도 열림. 로그인 전에 산 것은 로그인할 때 서버로 보낸다.
+/// - 구독은 기기에 「구매 시각 + 기간 + 3일」까지만 열어 둔다. 자동 갱신되면 스토어가 새 거래를 보내 기한이 늘어난다(해지하면 그 기한에 닫힘).
+///   기간의 최종 판단은 서버(계정 이용권)가 한다.
 class Purchase {
   Purchase._();
 
-  /// 이용권 언어 키 → 스토어 상품 번호. 예: {'hanja': ('com.talkverse.hanjaUniverse.lifetime', 'lang_hanja')}
-  static Map<String, (String ios, String android)> _items = const {};
-  static final owned = ValueNotifier<Set<String>>(const {});
+  static String lang = 'th';
+  static List<Plan> plans = const [];
+  /// 상품 ID → 만료 시각(ms, 평생이면 0)
+  static final owned = ValueNotifier<Map<String, int>>(const {});
   static final products = ValueNotifier<Map<String, ProductDetails>>(const {});
   /// 구매 진행 상태 알림(화면이 듣고 안내): null = 없음, 'pending' · 'error' · 'done' · 'restored' · 'nothing'
   static final status = ValueNotifier<String?>(null);
   static StreamSubscription<List<PurchaseDetails>>? _sub;
   static bool _restoring = false, _restoredAny = false;
+  /// 옛 평생 상품 ID(2026-11-02 첫 판) — 복원·영수증에 오면 `lang_<코드>_life` 로 친다.
+  static const _legacy = {'com.talkverse.thaiUniverse.lifetime': 'lang_th_life', 'lang_th': 'lang_th_life'};
 
-  static bool owns(String lang) => owned.value.contains(lang);
-  static String _pid(String lang) => !kIsWeb && Platform.isIOS ? _items[lang]!.$1 : _items[lang]!.$2;
-  static String? _langOf(String productId) {
-    for (final e in _items.entries) {
-      if (e.value.$1 == productId || e.value.$2 == productId) return e.key;
-    }
-    return null;
+  static Plan? plan(String id) => plans.where((p) => p.id == id).firstOrNull;
+
+  /// 이 언어를 열 수 있는가 — 언어 상품(lang_<코드>_*) 또는 종합(all_*) 중 기한이 남은 것이 있으면.
+  static bool owns(String code) {
+    final now = DateTime.now().millisecondsSinceEpoch;
+    return owned.value.entries.any((e) => (e.key.startsWith('lang_${code}_') || e.key.startsWith('all_')) && (e.value == 0 || e.value > now));
   }
 
-  static Future<void> configure(Map<String, (String, String)> items) async {
-    _items = items;
+  static Future<void> configure(String code, List<Plan> list) async {
+    lang = code;
+    plans = list;
     final p = await SharedPreferences.getInstance();
-    owned.value = {...?p.getStringList('iap_owned')};
+    final raw = p.getString('iap_owned2');
+    final m = <String, int>{if (raw != null) ...(jsonDecode(raw) as Map).map((k, v) => MapEntry('$k', (v as num).toInt()))};
+    if ((p.getStringList('iap_owned') ?? const []).contains(code)) m['lang_${code}_life'] = 0; // 옛 저장 방식(평생 하나)
+    owned.value = m;
     Account.user.addListener(_onAccount);
     if (kIsWeb || !(Platform.isIOS || Platform.isAndroid)) return;
     _sub ??= InAppPurchase.instance.purchaseStream.listen(_onUpdates, onError: (_) => status.value = 'error');
     try {
       if (!await InAppPurchase.instance.isAvailable()) return;
-      final r = await InAppPurchase.instance.queryProductDetails({for (final l in items.keys) _pid(l)});
-      products.value = {for (final d in r.productDetails) if (_langOf(d.id) != null) _langOf(d.id)!: d};
+      final r = await InAppPurchase.instance.queryProductDetails({for (final x in list) x.id});
+      products.value = {for (final d in r.productDetails) d.id: d};
     } catch (_) {}
   }
 
-  /// 스토어 표시 가격(예 ₩14,900). 상품을 못 받았으면 null.
-  static String? price(String lang) => products.value[lang]?.price;
+  /// 스토어 표시 가격(예 ₩3,900). 상품을 못 받았으면 null.
+  static String? price(String id) => products.value[id]?.price;
 
-  static Future<bool> buy(String lang) async {
-    final d = products.value[lang];
+  static Future<bool> buy(String id) async {
+    final d = products.value[id];
     if (d == null) {
       status.value = 'error';
       return false;
     }
     status.value = 'pending';
+    // 자동 갱신 구독도 이 호출로 산다(in_app_purchase 는 구독·비소모성을 같은 경로로 처리).
     return InAppPurchase.instance.buyNonConsumable(purchaseParam: PurchaseParam(productDetails: d));
   }
 
@@ -78,9 +100,14 @@ class Purchase {
     });
   }
 
+  static String? _known(String productId) {
+    final id = _legacy[productId] ?? productId;
+    return plan(id) != null || id.startsWith('lang_') || id.startsWith('all_') ? id : null;
+  }
+
   static Future<void> _onUpdates(List<PurchaseDetails> list) async {
     for (final pd in list) {
-      final lang = _langOf(pd.productID);
+      final id = _known(pd.productID);
       switch (pd.status) {
         case PurchaseStatus.pending:
           status.value = 'pending';
@@ -90,8 +117,8 @@ class Purchase {
           status.value = null;
         case PurchaseStatus.purchased:
         case PurchaseStatus.restored:
-          if (lang != null) {
-            await _grant(lang, pd);
+          if (id != null) {
+            await _grant(id, pd);
             _restoredAny = true;
             status.value = pd.status == PurchaseStatus.restored ? 'restored' : 'done';
             if (_restoring) _restoring = false;
@@ -101,10 +128,20 @@ class Purchase {
     }
   }
 
-  static Future<void> _grant(String lang, PurchaseDetails pd) async {
-    owned.value = {...owned.value, lang};
+  static int _expiry(String id, PurchaseDetails pd) {
+    final months = plan(id)?.months ?? (id.endsWith('_1m') ? 1 : id.endsWith('_3m') ? 3 : id.endsWith('_1y') ? 12 : 0);
+    if (months == 0) return 0;
+    final t = DateTime.fromMillisecondsSinceEpoch(int.tryParse(pd.transactionDate ?? '') ?? DateTime.now().millisecondsSinceEpoch);
+    return DateTime(t.year, t.month + months, t.day + 3, t.hour, t.minute).millisecondsSinceEpoch;
+  }
+
+  static Future<void> _grant(String id, PurchaseDetails pd) async {
+    final exp = _expiry(id, pd);
+    final cur = owned.value[id];
+    final keep = cur != null && (cur == 0 || (exp != 0 && cur > exp)); // 더 긴 기한이 있으면 유지
+    if (!keep) owned.value = {...owned.value, id: exp};
     final p = await SharedPreferences.getInstance();
-    await p.setStringList('iap_owned', owned.value.toList());
+    await p.setString('iap_owned2', jsonEncode(owned.value));
     // 서버로 보낼 영수증 — 로그인 전이면 쌓아 두었다가 로그인 때 보낸다
     final rec = {
       'platform': Platform.isIOS ? 'ios' : 'android',

@@ -4,6 +4,7 @@ import '../core/theme.dart';
 import '../services/update_service.dart';
 import '../widgets/thai_decor.dart';
 import 'about_screen.dart';
+import '../widgets/legal_links.dart';
 import '../core/l10n.dart';
 import '../core/pane.dart';
 import '../core/platform.dart';
@@ -190,6 +191,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     await openPane(context, (_) => const DevNotesScreen());
                     if (mounted) setState(() {});
                   }),
+            _SettingItem(
+                icon: Icons.description_outlined,
+                title: tr('이용약관'),
+                subtitle: 'talkverse.uk/terms',
+                onTap: () => Legal.open(Legal.terms)),
+            _SettingItem(
+                icon: Icons.privacy_tip_outlined,
+                title: tr('개인정보처리방침'),
+                subtitle: 'talkverse.uk/talkverse/th/privacy',
+                onTap: () => Legal.open(Legal.privacy)),
             _SettingItem(
                 icon: Icons.copyright,
                 title: tr('저작권'),

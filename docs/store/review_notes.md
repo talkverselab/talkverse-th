@@ -1,7 +1,7 @@
 # 심사 메모 · 앱 개인정보 답 · 개인정보처리방침 추가 문안 — 태국어유니버스 (2026-11-02)
 
 > 한자 앱 `docs/store/review_notes.md`·`data_safety.md`(빌드 46~50 검증)를 태국어앱 사실에 맞춰 옮긴 것.
-> 1.0 = Talkverse ID 로그인(선택) + 인앱 구입 1개(평생 이용권). **아직 잠근 콘텐츠는 없다** — 무료/유료 구간이 정해지면 [인앱 구입] 줄의 "어디서 사는지"를 고칠 것.
+> 1.0 = Talkverse ID 로그인(선택) + 인앱 구입(가격표 2026-11-09: 언어 1m·3m·1y 구독·평생, 종합 1y·평생). 4.3 대비 차별화 문단은 `store_listing.md`. **아직 잠근 콘텐츠는 없다** — 무료/유료 구간이 정해지면 [인앱 구입] 줄의 "어디서 사는지"를 고칠 것.
 > 데모 계정 비밀번호는 Doppler `TALKVERSE_REVIEW_ACCOUNT` 에만 있다 — 이 문서에 적지 말 것.
 
 ## App Store Connect "심사 정보 → 메모"
@@ -11,14 +11,14 @@
 - 로그인 화면: 프로필 탭 → 계정 → 로그인. Apple로 로그인 + 이메일 로그인(심사·테스트용).
 - 데모 계정(이메일 로그인): review@talkverse.uk / 비밀번호: <Doppler 에서 복사해 여기 입력>
 - 계정 삭제: 프로필 탭 → 계정 → 계정 삭제(확인 창) → 서버에서 개인정보와 학습 동기화 데이터가 삭제되고 모든 기기에서 로그아웃됩니다.
-[인앱 구입] 비소모성 "평생 이용권"(com.talkverse.thaiUniverse.lifetime) 1개. 프로필 탭 → 계정 → [평생 이용권 보기] → [평생 이용권 구매], [이전 구매 복원]. Sandbox 계정으로 시험할 수 있습니다. 로그인 없이도 구매·복원이 됩니다.
+[인앱 구입] 자동 갱신 구독 lang_th_1m·lang_th_3m·lang_th_1y, 비소모성 lang_th_life(서비스 운영 기간 동안), 종합 패키지 all_1y(구독)·all_life. 프로필 탭 → 계정 → [이용권 보기] → 상품 선택 → [구매], [이전 구매 복원]. 결제 시트에 기간·자동 갱신·해지 방법·약관·개인정보처리방침이 있습니다. Sandbox 계정으로 시험할 수 있고, 로그인 없이도 구매·복원이 됩니다.
 [마이크·음성 인식] "문장 말하기"에서만 발음을 녹음해 판정합니다(사용자가 버튼을 누를 때만).
 
 [Sign-in] Optional. Every learning feature works without an account; sign-in is only for restoring purchases, sharing the pass across devices and syncing study progress.
 - Where: Profile tab → Account → Sign in (Sign in with Apple, or email sign-in for review/testing).
 - Demo account (email sign-in): review@talkverse.uk / password: <paste from Doppler>
 - Account deletion: Profile tab → Account → Delete account (confirmation) → personal data and synced study data are deleted server-side and all sessions are revoked.
-[IAP] One non-consumable "Lifetime Pass" (com.talkverse.thaiUniverse.lifetime). Profile tab → Account → [See Lifetime Pass] → buy, or [Restore purchases]. Works with a Sandbox account; sign-in is not required to buy or restore.
+[IAP] Auto-renewable subscriptions lang_th_1m · lang_th_3m · lang_th_1y, non-consumable lang_th_life (for as long as the service runs), bundle all_1y (subscription) · all_life. Profile tab → Account → [View passes] → choose → [Buy], or [Restore purchases]. The sheet shows period, auto-renewal, how to cancel, Terms and Privacy Policy. Works with a Sandbox account; sign-in is not required.
 [Microphone / speech recognition] Used only in "Sentence speaking" to check pronunciation, when the user taps record.
 ```
 
