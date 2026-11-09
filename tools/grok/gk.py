@@ -36,12 +36,17 @@ try:
         c.call('DOM.setFileInputFiles',nodeId=q['nodeId'],files=att); time.sleep(5+2*len(att))
     c.ev("document.querySelector('.ProseMirror').focus()")
     c.call('Input.insertText',text=open(src,encoding='utf-8').read().strip()); time.sleep(1)
-    c.ev("(()=>{const b=[...document.querySelectorAll('button')].find(e=>(e.getAttribute('aria-label')||'')==='제출');if(b)b.click()})()")
+    c.ev("(()=>{const b=[...document.querySelectorAll('button')].find(e=>['제출','보내기','Submit','Send'].includes(e.getAttribute('aria-label')||''));if(b)b.click()})()")
     time.sleep(3)
     if c.ev("document.querySelector('.ProseMirror').innerText.trim().length")>5:
         for typ in ('keyDown','keyUp'): c.call('Input.dispatchKeyEvent',type=typ,key='Enter',code='Enter',windowsVirtualKeyCode=13,nativeVirtualKeyCode=13)
+    t_sent=time.time(); MAXW=int(a[a.index('--maxwait')+1]) if '--maxwait' in a else 180  # 사용자 지시 2026-11-10: Grok 답은 3분까지만, 넘으면 생성 중지(토큰 낭비 방지)
     time.sleep(20)
-    for i in range(int(a[a.index('--polls')+1]) if '--polls' in a else 100):
+    for i in range(10000):
+        if time.time()-t_sent>MAXW:
+            c.ev("(()=>{const b=[...document.querySelectorAll('button')].find(e=>/응답 중지|중지|Stop/.test(e.getAttribute('aria-label')||''));if(b){b.click();return 1}return 0})()")
+            for typ in ('keyDown','keyUp'): c.call('Input.dispatchKeyEvent',type=typ,key='Escape',code='Escape',windowsVirtualKeyCode=27)
+            open(dst+'.body.txt','w',encoding='utf-8').write(c.ev('document.body.innerText') or ''); print('TIMEOUT3m', t['id']); sys.exit(4)
         c.call('Page.bringToFront'); body=c.ev("document.body.innerText")
         tail=body[-1500:]
         if ('한도' in tail or 'limit' in tail.lower()) and re.search('초기화|업그레이드|upgrade|SuperGrok',tail):

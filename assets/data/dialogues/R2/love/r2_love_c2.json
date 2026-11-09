@@ -1,0 +1,199 @@
+{
+ "id": "r2_love_c2",
+ "region": "R2",
+ "island": "love",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "love"
+ ],
+ "domain": [
+  "love"
+ ],
+ "title": "읽음 표시 끄기",
+ "emoji": "🌙",
+ "scene": "다툰 다음 날 채팅창에 \"입력 중\"이 떴다 사라지기를 반복한다",
+ "where": "채팅",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 7,
+ "twist_type": "emotion",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "พิมพ์ทำไมลบ",
+  "งอนอยู่",
+  "ขอโทษนะ"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "พิมพ์ทำไมลบ",
+   "rd": "",
+   "ko": "왜 쓰고 지워",
+   "note": "พิมพ์ = 쓰다 · ลบ = 지우다",
+   "tags": [],
+   "new": [
+    "พิมพ์",
+    "ลบ"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "งอนอยู่เหรอ",
+   "rd": "",
+   "ko": "삐쳤어",
+   "note": "งอนอยู่ = 삐쳤다 · เหรอ = ~야?",
+   "tags": [],
+   "new": [
+    "งอนอยู่",
+    "เหรอ"
+   ],
+   "emotion": "worried",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ไม่ได้งอน",
+   "rd": "",
+   "ko": "안 삐쳤어",
+   "note": "ไม่ได้ = 안 · งอน = 삐치다",
+   "tags": [],
+   "new": [
+    "ไม่ได้",
+    "งอน"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ขอโทษนะ",
+   "rd": "",
+   "ko": "미안해",
+   "note": "ขอโทษนะ = 미안해",
+   "tags": [],
+   "new": [
+    "ขอโทษนะ"
+   ],
+   "emotion": "gentle",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "ฉันก็ขอโทษ",
+   "rd": "",
+   "ko": "나도 미안해",
+   "note": "ฉันก็ = 나도 · ขอโทษ = 미안하다",
+   "tags": [],
+   "new": [
+    "ฉันก็",
+    "ขอโทษ"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "พิมพ์แล้วลบอีก",
+   "rd": "",
+   "ko": "또 쓰고 지웠어",
+   "note": "พิมพ์ = 쓰다 · ลบ = 지우다",
+   "tags": [],
+   "new": [
+    "พิมพ์",
+    "ลบ"
+   ],
+   "emotion": "teasing",
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ ส่งพร้อมกัน",
+   "rd": "",
+   "ko": "어 같은 순간 보냈어",
+   "note": "ส่ง = 보내다 · พร้อมกัน = 같은 순간",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ส่ง",
+    "พร้อมกัน"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 ขอโทษพร้อมกัน",
+   "rd": "",
+   "ko": "555 동시에 미안해",
+   "note": "555 = 웃음 · พร้อมกัน = 동시에",
+   "tags": [],
+   "new": [
+    "555",
+    "พร้อมกัน"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "งอนอยู่ไหมตอนนี้",
+   "rd": "",
+   "ko": "지금 삐쳤어",
+   "note": "งอนอยู่ = 삐쳤다 · ไหม = ~야?",
+   "tags": [],
+   "new": [
+    "งอนอยู่",
+    "ไหม"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 10,
+   "speaker": "B",
+   "th": "บอกคำที่ลบทั้งหมด…",
+   "rd": "",
+   "ko": "지운 말 다 말해 줘…",
+   "note": "บอก = 말하다 · ที่ลบ = 지운 것",
+   "tags": [],
+   "new": [
+    "บอก",
+    "ที่ลบ"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_love_c2_write.md",
+  "recommended": "อย่าลบ / 지우지 마\nขอโทษจริงๆ / 진짜 미안해"
+ }
+}

@@ -1,0 +1,197 @@
+{
+ "id": "r2_work_c3",
+ "region": "R2",
+ "island": "work",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "work"
+ ],
+ "domain": [
+  "work"
+ ],
+ "title": "전체 메일 실수",
+ "emoji": "📧",
+ "scene": "사내 메일에 답장하며 휴가 신청을 한다",
+ "where": "사내 메신저",
+ "speakers": {
+  "A": "{name}",
+  "B": "ต้น"
+ },
+ "register": "chat",
+ "twist": 7,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ตอบทุกคน",
+  "ลาพักร้อน",
+  "เรียกคืนไม่ได้"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ลาพักร้อนได้ไหม",
+   "rd": "",
+   "ko": "휴가 낼 수 있어",
+   "note": "ลาพักร้อน = 휴가 내다 · ได้ไหม = 할 수 있어",
+   "tags": [],
+   "new": [
+    "ลาพักร้อน",
+    "ได้ไหม"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ตอบเมลก่อนนะ",
+   "rd": "",
+   "ko": "메일 먼저 답장해",
+   "note": "ตอบ = 답장하다 · เมล = 메일",
+   "tags": [],
+   "new": [
+    "ตอบ",
+    "เมล"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "โอเค ตอบแล้ว",
+   "rd": "",
+   "ko": "오케이 답장했어",
+   "note": "โอเค = 오케이 · ตอบแล้ว = 답장했다",
+   "tags": [],
+   "new": [
+    "โอเค",
+    "ตอบแล้ว"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ลาพักร้อนเมื่อไหร่",
+   "rd": "",
+   "ko": "휴가 언제야",
+   "note": "ลาพักร้อน = 휴가 · เมื่อไหร่ = 언제",
+   "tags": [],
+   "new": [
+    "ลาพักร้อน",
+    "เมื่อไหร่"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "สัปดาห์หน้า",
+   "rd": "",
+   "ko": "다음 주",
+   "note": "สัปดาห์หน้า = 다음 주",
+   "tags": [],
+   "new": [
+    "สัปดาห์หน้า"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "ดีจัง",
+   "rd": "",
+   "ko": "좋네",
+   "note": "ดีจัง = 좋네",
+   "tags": [],
+   "new": [
+    "ดีจัง"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ ตอบทุกคนไป",
+   "rd": "",
+   "ko": "어 전체 답장 눌렀어",
+   "note": "ตอบทุกคน = 전체 답장 · ไป = 가다",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ตอบทุกคน",
+    "ไป"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 เรียกคืนไม่ได้",
+   "rd": "",
+   "ko": "555 회수 안 돼",
+   "note": "555 = 웃음 · เรียกคืน = 회수하다",
+   "tags": [],
+   "new": [
+    "555",
+    "เรียกคืน"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "งั้นลาพักร้อนพัง",
+   "rd": "",
+   "ko": "그럼 휴가 망했어",
+   "note": "ลาพักร้อน = 휴가 · พัง = 망하다",
+   "tags": [],
+   "new": [
+    "ลาพักร้อน",
+    "พัง"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 10,
+   "speaker": "B",
+   "th": "ไปเที่ยวให้สนุก ทุกคนอิจฉา…",
+   "rd": "",
+   "ko": "여행 잘 다녀와 다들 부러워해…",
+   "note": "ไปเที่ยว = 여행 가다 · อิจฉา = 부러워하다",
+   "tags": [],
+   "new": [
+    "ไปเที่ยว",
+    "อิจฉา"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_work_c3_write.md",
+  "recommended": "ตอบเฉพาะ / 개별 답장\nลาได้ไหม / 휴가 돼?"
+ }
+}

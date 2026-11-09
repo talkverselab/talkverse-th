@@ -1,0 +1,190 @@
+{
+ "id": "r2_travel_b6",
+ "region": "R2",
+ "island": "travel",
+ "kind": "long",
+ "draft": true,
+ "purpose": [
+  "travel"
+ ],
+ "domain": [
+  "travel"
+ ],
+ "title": "동굴 투어",
+ "emoji": "🧗",
+ "scene": "깐짜나부리 동굴에서 가이드를 따라가며 머리 조심, 출구를 묻는다",
+ "where": "깐짜나부리 동굴",
+ "speakers": {
+  "A": "{name}",
+  "B": "ไกด์"
+ },
+ "register": "polite",
+ "twist": 7,
+ "twist_type": "reveal",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ระวังหัว",
+  "ทางออก",
+  "หลงทาง"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ระวังหัวครับ",
+   "rd": "",
+   "ko": "머리 조심하세요",
+   "note": "ระวังหัว = 머리 조심 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "ระวังหัว",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ใช่ค่ะ ต่ำมาก",
+   "rd": "",
+   "ko": "네 많이 낮아요",
+   "note": "ใช่ = 네 · ต่ำ = 낮다",
+   "tags": [],
+   "new": [
+    "ใช่",
+    "ต่ำ"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ทางออกตรงไหน",
+   "rd": "",
+   "ko": "출구 어디예요",
+   "note": "ทางออก = 출구 · ตรงไหน = 어디",
+   "tags": [],
+   "new": [
+    "ทางออก",
+    "ตรงไหน"
+   ]
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ข้างหน้าค่ะ",
+   "rd": "",
+   "ko": "앞쪽이에요",
+   "note": "ข้างหน้า = 앞쪽 · ค่ะ = 존댓말",
+   "tags": [],
+   "new": [
+    "ข้างหน้า",
+    "ค่ะ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "หลงทางไหมครับ",
+   "rd": "",
+   "ko": "길 잃을까요",
+   "note": "หลงทาง = 길을 잃다 · ไหม = ~까요",
+   "tags": [],
+   "new": [
+    "หลงทาง",
+    "ไหม"
+   ],
+   "emotion": "worried"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "ไม่ค่ะ ตามมา",
+   "rd": "",
+   "ko": "아니요 따라오세요",
+   "note": "ไม่ = 아니요 · ตามมา = 따라오다",
+   "tags": [],
+   "new": [
+    "ไม่",
+    "ตามมา"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ ไกด์ครั้งแรก",
+   "rd": "",
+   "ko": "어 가이드도 처음이에요",
+   "note": "ไกด์ = 가이드 · ครั้งแรก = 처음",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ไกด์",
+    "ครั้งแรก"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
+   ]
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 ใช่วันนี้แรก",
+   "rd": "",
+   "ko": "555 맞아 오늘 처음이야",
+   "note": "555 = 웃음 · แรก = 처음",
+   "tags": [],
+   "new": [
+    "555",
+    "แรก"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "งั้นหลงทางด้วยกัน",
+   "rd": "",
+   "ko": "그럼 같이 길 잃어요",
+   "note": "หลงทาง = 길을 잃다 · ด้วยกัน = 같이",
+   "tags": [],
+   "new": [
+    "หลงทาง",
+    "ด้วยกัน"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 10,
+   "speaker": "B",
+   "th": "ออกช้าๆ ด้วยกัน…",
+   "rd": "",
+   "ko": "같이 천천히 나가요…",
+   "note": "ออก = 나가다 · ช้าๆ = 천천히",
+   "tags": [],
+   "new": [
+    "ออก",
+    "ช้าๆ"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_travel_b6_write.md",
+  "recommended": "ระวังหน่อย / 조심해\nตามมาเลย / 따라와"
+ }
+}

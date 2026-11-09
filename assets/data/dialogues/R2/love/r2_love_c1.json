@@ -1,0 +1,199 @@
+{
+ "id": "r2_love_c1",
+ "region": "R2",
+ "island": "love",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "love"
+ ],
+ "domain": [
+  "love"
+ ],
+ "title": "위치 공유",
+ "emoji": "📍",
+ "scene": "사귄 지 석 달, 위치 공유를 켜고 어디 있는지 묻는다",
+ "where": "채팅",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 7,
+ "twist_type": "reveal",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "แชร์โลเคชัน",
+  "อยู่ไหนเนี่ย",
+  "แอบไป"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "แชร์โลเคชันแล้ว",
+   "rd": "",
+   "ko": "위치 공유 켰어",
+   "note": "แชร์โลเคชัน = 위치 공유 · แล้ว = 이미",
+   "tags": [],
+   "new": [
+    "แชร์โลเคชัน",
+    "แล้ว"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "อยู่ไหนเนี่ย",
+   "rd": "",
+   "ko": "어디야",
+   "note": "อยู่ไหน = 어디 · เนี่ย = 구어",
+   "tags": [],
+   "new": [
+    "อยู่ไหน",
+    "เนี่ย"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "กำลังไปหาเธอ",
+   "rd": "",
+   "ko": "너 만나러 가는 중",
+   "note": "กำลัง = ~하는 중 · ไปหา = 만나러 가다",
+   "tags": [],
+   "new": [
+    "กำลัง",
+    "ไปหา"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "แอบไปไหนมา",
+   "rd": "",
+   "ko": "몰래 어디 갔다 왔어",
+   "note": "แอบไป = 몰래 가다 · ไหน = 어디",
+   "tags": [],
+   "new": [
+    "แอบไป",
+    "ไหน"
+   ],
+   "emotion": "teasing",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "ไม่ได้แอบ",
+   "rd": "",
+   "ko": "안 몰래 갔어",
+   "note": "ไม่ได้ = 안 · แอบ = 몰래",
+   "tags": [],
+   "new": [
+    "ไม่ได้",
+    "แอบ"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "เห็นบนแผนที่",
+   "rd": "",
+   "ko": "지도에 보여",
+   "note": "เห็น = 보다 · แผนที่ = 지도",
+   "tags": [],
+   "new": [
+    "เห็น",
+    "แผนที่"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ ร้านดอกไม้",
+   "rd": "",
+   "ko": "어 꽃집이야",
+   "note": "ร้านดอกไม้ = 꽃집 · เอ่อ = 어",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ร้านดอกไม้",
+    "เอ่อ"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 แอบไปซื้อดอกไม้",
+   "rd": "",
+   "ko": "555 몰래 꽃 사러 갔네",
+   "note": "555 = 웃음 · แอบไป = 몰래 가다",
+   "tags": [],
+   "new": [
+    "555",
+    "แอบไป"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "อยู่ไหนเนี่ยตอนนี้",
+   "rd": "",
+   "ko": "지금 어디야",
+   "note": "อยู่ไหน = 어디 · ตอนนี้ = 지금",
+   "tags": [],
+   "new": [
+    "อยู่ไหน",
+    "ตอนนี้"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 10,
+   "speaker": "B",
+   "th": "ดอกไม้นั้นให้ฉันใช่ไหม…",
+   "rd": "",
+   "ko": "그 꽃 나 주는 거지…",
+   "note": "ดอกไม้ = 꽃 · ให้ฉัน = 나한테 주다",
+   "tags": [],
+   "new": [
+    "ดอกไม้",
+    "ให้ฉัน"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_love_c1_write.md",
+  "recommended": "แชร์โลเคชัน / 위치 공유\nกำลังไป / 가는 중이야"
+ }
+}

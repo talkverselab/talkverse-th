@@ -1,0 +1,200 @@
+{
+ "id": "r2_work_c4",
+ "region": "R2",
+ "island": "work",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "work"
+ ],
+ "domain": [
+  "work"
+ ],
+ "title": "면접 결과 기다리기",
+ "emoji": "💼",
+ "scene": "면접 뒤 결과를 기다리며 ฟ้า 와 채팅한다",
+ "where": "채팅",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 7,
+ "twist_type": "emotion",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ผลสัมภาษณ์",
+  "ได้งาน",
+  "ดีใจด้วย"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ผลสัมภาษณ์ยังไม่มา",
+   "rd": "",
+   "ko": "면접 결과 아직 안 왔어",
+   "note": "ผลสัมภาษณ์ = 면접 결과 · ยังไม่มา = 아직 안 오다",
+   "tags": [],
+   "new": [
+    "ผลสัมภาษณ์",
+    "ยังไม่มา"
+   ],
+   "emotion": "worried",
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "เปิดเมลดู",
+   "rd": "",
+   "ko": "메일 열어 봐",
+   "note": "เปิด = 열다 · เมล = 메일",
+   "tags": [],
+   "new": [
+    "เปิด",
+    "เมล"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "กลัวไม่ผ่าน",
+   "rd": "",
+   "ko": "합격 못 할까 봐 무서워",
+   "note": "กลัว = 무서워하다 · ไม่ผ่าน = 합격 못 하다",
+   "tags": [],
+   "new": [
+    "กลัว",
+    "ไม่ผ่าน"
+   ],
+   "emotion": "worried",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ดีใจด้วยนะ",
+   "rd": "",
+   "ko": "축하해",
+   "note": "ดีใจด้วย = 축하하다 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "ดีใจด้วย",
+    "นะ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "ยังไม่รู้",
+   "rd": "",
+   "ko": "아직 몰라",
+   "note": "ยังไม่ = 아직 안 · รู้ = 알다",
+   "tags": [],
+   "new": [
+    "ยังไม่",
+    "รู้"
+   ],
+   "emotion": "worried",
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "ฉันดูให้ไหม",
+   "rd": "",
+   "ko": "내가 봐 줄까",
+   "note": "ดูให้ = 봐 주다 · ไหม = ~할까",
+   "tags": [],
+   "new": [
+    "ดูให้",
+    "ไหม"
+   ],
+   "emotion": "teasing",
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ ได้งานเหรอ",
+   "rd": "",
+   "ko": "어 합격이야?",
+   "note": "ได้งาน = 일 얻다 · เหรอ = ~야?",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ได้งาน",
+    "เหรอ"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 ผ่านแล้ว",
+   "rd": "",
+   "ko": "555 합격이야",
+   "note": "555 = 웃음 · ผ่าน = 합격하다",
+   "tags": [],
+   "new": [
+    "555",
+    "ผ่าน"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "ดีใจด้วยตัวเอง",
+   "rd": "",
+   "ko": "스스로 축하해",
+   "note": "ดีใจด้วย = 축하하다 · ตัวเอง = 스스로",
+   "tags": [],
+   "new": [
+    "ดีใจด้วย",
+    "ตัวเอง"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 10,
+   "speaker": "B",
+   "th": "อยากยินดีคนแรก…",
+   "rd": "",
+   "ko": "내가 제일 먼저 축하하고 싶었어…",
+   "note": "อยาก = 하고 싶다 · ยินดี = 축하하다",
+   "tags": [],
+   "new": [
+    "อยาก",
+    "ยินดี"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_work_c4_write.md",
+  "recommended": "เปิดดู / 열어 봐\nผ่านไหม / 합격했어?"
+ }
+}

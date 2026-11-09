@@ -1,0 +1,201 @@
+{
+ "id": "r2_culture_c1",
+ "region": "R2",
+ "island": "culture",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "culture"
+ ],
+ "domain": [
+  "culture"
+ ],
+ "title": "스포 금지",
+ "emoji": "🎬",
+ "scene": "단톡방에서 드라마 마지막 화를 봤는지 묻고 스포하지 말라고 한다",
+ "where": "단톡방",
+ "speakers": {
+  "A": "{name}",
+  "B": "ต้น",
+  "C": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 7,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "อย่าสปอยล์",
+  "ดูยัง",
+  "ตอนจบ"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ดูตอนจบยัง",
+   "rd": "",
+   "ko": "마지막 화 봤어",
+   "note": "ดู = 보다 · ตอนจบ = 마지막 화",
+   "tags": [],
+   "new": [
+    "ดู",
+    "ตอนจบ"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ดูยังนะ",
+   "rd": "",
+   "ko": "봤어",
+   "note": "ดูยัง = 봤어 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "ดูยัง",
+    "นะ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "C",
+   "th": "อย่าสปอยล์นะ",
+   "rd": "",
+   "ko": "스포하지 마",
+   "note": "อย่าสปอยล์ = 스포하지 마 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "อย่าสปอยล์",
+    "นะ"
+   ],
+   "emotion": "teasing",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "A",
+   "th": "โอเค ไม่สปอยล์",
+   "rd": "",
+   "ko": "오케이 안 할게",
+   "note": "โอเค = 오케이 · ไม่สปอยล์ = 안 스포",
+   "tags": [],
+   "new": [
+    "โอเค",
+    "ไม่สปอยล์"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "B",
+   "th": "ตอนจบดีมาก",
+   "rd": "",
+   "ko": "마지막 화 완전 좋았어",
+   "note": "ตอนจบ = 마지막 화 · ดีมาก = 완전 좋다",
+   "tags": [],
+   "new": [
+    "ตอนจบ",
+    "ดีมาก"
+   ],
+   "emotion": "excited",
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "C",
+   "th": "ฉันยังไม่ดู",
+   "rd": "",
+   "ko": "나 아직 안 봤어",
+   "note": "ยังไม่ = 아직 안 · ดู = 보다",
+   "tags": [],
+   "new": [
+    "ยังไม่",
+    "ดู"
+   ],
+   "emotion": "worried",
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ คนละตอน",
+   "rd": "",
+   "ko": "어 다른 화 얘기야",
+   "note": "คนละ = 서로 다른 · ตอน = 화",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "คนละ",
+    "ตอน"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 ดูคนละเรื่อง",
+   "rd": "",
+   "ko": "555 다른 거 봤네",
+   "note": "555 = 웃음 · คนละเรื่อง = 다른 거",
+   "tags": [],
+   "new": [
+    "555",
+    "คนละเรื่อง"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "งั้นอย่าสปอยล์",
+   "rd": "",
+   "ko": "그럼 스포하지 마",
+   "note": "อย่าสปอยล์ = 스포하지 마 · งั้น = 그럼",
+   "tags": [],
+   "new": [
+    "อย่าสปอยล์",
+    "งั้น"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 10,
+   "speaker": "C",
+   "th": "ไม่ดูก่อนดูด้วยกัน…",
+   "rd": "",
+   "ko": "같이 볼 때까지 안 볼게…",
+   "note": "ไม่ดู = 안 보다 · ด้วยกัน = 같이",
+   "tags": [],
+   "new": [
+    "ไม่ดู",
+    "ด้วยกัน"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_culture_c1_write.md",
+  "recommended": "อย่าสปอยล์ / 스포하지 마\nดูด้วยกัน / 같이 보자"
+ }
+}

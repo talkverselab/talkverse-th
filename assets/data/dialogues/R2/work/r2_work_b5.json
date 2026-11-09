@@ -1,0 +1,190 @@
+{
+ "id": "r2_work_b5",
+ "region": "R2",
+ "island": "work",
+ "kind": "long",
+ "draft": true,
+ "purpose": [
+  "work"
+ ],
+ "domain": [
+  "work"
+ ],
+ "title": "거래처 이름 실수",
+ "emoji": "🧑‍💼",
+ "scene": "회의실에서 거래처 사장과 처음 인사하고 명함을 주고받는다",
+ "where": "회의실",
+ "speakers": {
+  "A": "{name}",
+  "B": "พี่หัวหน้า"
+ },
+ "register": "polite",
+ "twist": 7,
+ "twist_type": "slip",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ยินดีที่ได้รู้จัก",
+  "ขออภัย",
+  "ออกเสียงผิด"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ยินดีที่ได้รู้จักครับ",
+   "rd": "",
+   "ko": "만나서 반갑습니다",
+   "note": "ยินดีที่ได้รู้จัก = 만나서 반갑다 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "ยินดีที่ได้รู้จัก",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ยื่นนามบัตรสิ",
+   "rd": "",
+   "ko": "명함 내밀어",
+   "note": "ยื่น = 내밀다 · นามบัตร = 명함",
+   "tags": [],
+   "new": [
+    "ยื่น",
+    "นามบัตร"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ครับ นี่ครับ",
+   "rd": "",
+   "ko": "네 여기요",
+   "note": "นี่ = 여기 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "นี่",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "แนะนำตัวหน่อย",
+   "rd": "",
+   "ko": "자기소개 해",
+   "note": "แนะนำตัว = 자기소개 · หน่อย = 좀",
+   "tags": [],
+   "new": [
+    "แนะนำตัว",
+    "หน่อย"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "ผม{name}ครับ",
+   "rd": "",
+   "ko": "저 {name}입니다",
+   "note": "ผม = 저 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "ผม",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "ดีมาก",
+   "rd": "",
+   "ko": "잘했어",
+   "note": "ดีมาก = 잘했어",
+   "tags": [],
+   "new": [
+    "ดีมาก"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ ออกเสียงผิดชื่อ",
+   "rd": "",
+   "ko": "어 이름 성조 틀렸어요",
+   "note": "ออกเสียงผิด = 발음 틀리다 · ชื่อ = 이름",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ออกเสียงผิด",
+    "ชื่อ"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ]
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 ฟังเหมือนคำอื่น",
+   "rd": "",
+   "ko": "555 다른 단어처럼 들려",
+   "note": "555 = 웃음 · ฟังเหมือน = 처럼 들리다",
+   "tags": [],
+   "new": [
+    "555",
+    "ฟังเหมือน"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "ขออภัยครับ",
+   "rd": "",
+   "ko": "죄송합니다",
+   "note": "ขออภัย = 죄송하다 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "ขออภัย",
+    "ครับ"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 10,
+   "speaker": "B",
+   "th": "เขาบอกจำชื่อได้ดี…",
+   "rd": "",
+   "ko": "덕분에 내 이름은 잊지 않겠네…",
+   "note": "จำชื่อ = 이름 기억하다 · ดี = 좋다",
+   "tags": [],
+   "new": [
+    "จำชื่อ",
+    "ดี"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_work_b5_write.md",
+  "recommended": "ยินดีครับ / 반갑습니다\nนามบัตรครับ / 명함입니다"
+ }
+}

@@ -1,0 +1,190 @@
+{
+ "id": "r2_travel_b5",
+ "region": "R2",
+ "island": "travel",
+ "kind": "long",
+ "draft": true,
+ "purpose": [
+  "travel"
+ ],
+ "domain": [
+  "travel"
+ ],
+ "title": "침대 기차 표",
+ "emoji": "🚆",
+ "scene": "후알람퐁 역 창구에서 치앙마이행 침대 기차 편도표를 산다",
+ "where": "방콕 후알람퐁 역",
+ "speakers": {
+  "A": "{name}",
+  "B": "พนักงาน"
+ },
+ "register": "polite",
+ "twist": 7,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ตั๋วรถไฟ",
+  "เที่ยวเดียว",
+  "ไปผิดทาง"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ตั๋วรถไฟไปเชียงใหม่ครับ",
+   "rd": "",
+   "ko": "치앙마이 기차표요",
+   "note": "ตั๋วรถไฟ = 기차표 · ไปเชียงใหม่ = 치앙마이 가다",
+   "tags": [],
+   "new": [
+    "ตั๋วรถไฟ",
+    "ไปเชียงใหม่"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "เที่ยวเดียวไหมคะ",
+   "rd": "",
+   "ko": "편도예요",
+   "note": "เที่ยวเดียว = 편도 · ไหม = ~예요",
+   "tags": [],
+   "new": [
+    "เที่ยวเดียว",
+    "ไหม"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ใช่ครับ",
+   "rd": "",
+   "ko": "네",
+   "note": "ใช่ = 네 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "ใช่",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "นอนชั้นล่างได้ไหม",
+   "rd": "",
+   "ko": "아래층 침대 돼요",
+   "note": "นอน = 침대 · ชั้นล่าง = 아래층",
+   "tags": [],
+   "new": [
+    "นอน",
+    "ชั้นล่าง"
+   ]
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "ได้ครับ",
+   "rd": "",
+   "ko": "네",
+   "note": "ได้ = 네 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "ได้",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "นี่ค่ะ ตั๋ว",
+   "rd": "",
+   "ko": "여기 표요",
+   "note": "นี่ = 여기 · ตั๋ว = 표",
+   "tags": [],
+   "new": [
+    "นี่",
+    "ตั๋ว"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ วันที่ผิด",
+   "rd": "",
+   "ko": "어 날짜 하루 뒤예요",
+   "note": "วันที่ = 날짜 · ผิด = 잘못",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "วันที่",
+    "ผิด"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ]
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 ไปผิดวัน",
+   "rd": "",
+   "ko": "555 잘못된 날이야",
+   "note": "555 = 웃음 · ผิดวัน = 잘못된 날",
+   "tags": [],
+   "new": [
+    "555",
+    "ผิดวัน"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "งั้นเปลี่ยนได้ไหม",
+   "rd": "",
+   "ko": "그럼 바꿀 수 있어요",
+   "note": "เปลี่ยน = 바꾸다 · ได้ไหม = 할 수 있어",
+   "tags": [],
+   "new": [
+    "เปลี่ยน",
+    "ได้ไหม"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 10,
+   "speaker": "B",
+   "th": "ฟ้าโทรมา เล่นต่ออีกวัน…",
+   "rd": "",
+   "ko": "ฟ้า 전화 왔어 하루 더 놀다 와…",
+   "note": "โทรมา = 전화 오다 · เล่นต่อ = 더 놀다",
+   "tags": [],
+   "new": [
+    "โทรมา",
+    "เล่นต่อ"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_travel_b5_write.md",
+  "recommended": "ตั๋วนอน / 침대표\nเปลี่ยนวันที่ / 날짜 바꿔 주세요"
+ }
+}

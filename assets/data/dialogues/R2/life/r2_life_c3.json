@@ -1,0 +1,201 @@
+{
+ "id": "r2_life_c3",
+ "region": "R2",
+ "island": "life",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "life"
+ ],
+ "domain": [
+  "life"
+ ],
+ "title": "콘도 주민방",
+ "emoji": "🏠",
+ "scene": "콘도 주민 단톡방에서 엘리베이터 고장 수리 접수를 확인한다",
+ "where": "콘도 주민 단톡방",
+ "speakers": {
+  "A": "{name}",
+  "B": "นิติ",
+  "C": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 7,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "แจ้งซ่อม",
+  "ลิฟต์เสีย",
+  "ใครอยู่ชั้นไหน"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "แจ้งซ่อมลิฟต์ครับ",
+   "rd": "",
+   "ko": "엘리베이터 수리 접수요",
+   "note": "แจ้งซ่อม = 수리 접수 · ลิฟต์ = 엘리베이터",
+   "tags": [],
+   "new": [
+    "แจ้งซ่อม",
+    "ลิฟต์"
+   ],
+   "emotion": "worried",
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ลิฟต์เสียชั้นไหน",
+   "rd": "",
+   "ko": "엘리베이터 몇 층 고장",
+   "note": "ลิฟต์เสีย = 엘리베이터 고장 · ชั้นไหน = 몇 층",
+   "tags": [],
+   "new": [
+    "ลิฟต์เสีย",
+    "ชั้นไหน"
+   ],
+   "emotion": "polite",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ชั้นห้าครับ",
+   "rd": "",
+   "ko": "5층요",
+   "note": "ชั้นห้า = 5층 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "ชั้นห้า",
+    "ครับ"
+   ],
+   "emotion": "polite",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "C",
+   "th": "ใครอยู่ชั้นไหน",
+   "rd": "",
+   "ko": "누구 몇 층에 살아",
+   "note": "ใครอยู่ = 누구 살다 · ชั้นไหน = 몇 층",
+   "tags": [],
+   "new": [
+    "ใครอยู่",
+    "ชั้นไหน"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "B",
+   "th": "รับทราบค่ะ",
+   "rd": "",
+   "ko": "알겠어요",
+   "note": "รับทราบ = 알겠어요 · ค่ะ = 존댓말",
+   "tags": [],
+   "new": [
+    "รับทราบ",
+    "ค่ะ"
+   ],
+   "emotion": "polite",
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "A",
+   "th": "ขอบคุณครับ",
+   "rd": "",
+   "ko": "감사합니다",
+   "note": "ขอบคุณ = 감사하다 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "ขอบคุณ",
+    "ครับ"
+   ],
+   "emotion": "polite",
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ ชั้นหกไม่ใช่ห้า",
+   "rd": "",
+   "ko": "어 6층이지 5층이 아니야",
+   "note": "ชั้นหก = 6층 · ไม่ใช่ = 아니다",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ชั้นหก",
+    "ไม่ใช่"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 แจ้งผิดชั้น",
+   "rd": "",
+   "ko": "555 잘못된 층 접수했네",
+   "note": "555 = 웃음 · ผิดชั้น = 잘못된 층",
+   "tags": [],
+   "new": [
+    "555",
+    "ผิดชั้น"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "งั้นแจ้งซ่อมใหม่",
+   "rd": "",
+   "ko": "그럼 다시 접수",
+   "note": "แจ้งซ่อม = 수리 접수 · ใหม่ = 다시",
+   "tags": [],
+   "new": [
+    "แจ้งซ่อม",
+    "ใหม่"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 10,
+   "speaker": "C",
+   "th": "ฉันอยู่ชั้นเดียวกัน…",
+   "rd": "",
+   "ko": "저도 같은 층이에요…",
+   "note": "อยู่ = 살다 · ชั้นเดียวกัน = 같은 층",
+   "tags": [],
+   "new": [
+    "อยู่",
+    "ชั้นเดียวกัน"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_life_c3_write.md",
+  "recommended": "ลิฟต์เสีย / 엘리베이터 고장\nชั้นไหน / 몇 층이야"
+ }
+}

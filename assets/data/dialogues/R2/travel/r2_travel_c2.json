@@ -1,0 +1,199 @@
+{
+ "id": "r2_travel_c2",
+ "region": "R2",
+ "island": "travel",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "travel"
+ ],
+ "domain": [
+  "travel"
+ ],
+ "title": "숙소 후기",
+ "emoji": "🏖️",
+ "scene": "숙소 주인과 채팅으로 체크인 시간과 픽업이 되는지 묻는다",
+ "where": "숙소 채팅",
+ "speakers": {
+  "A": "{name}",
+  "B": "เจ้าของที่พัก"
+ },
+ "register": "chat",
+ "twist": 7,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "เช็กอินกี่โมง",
+  "มีรถรับไหม",
+  "ฟรี"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "เช็กอินกี่โมง",
+   "rd": "",
+   "ko": "체크인 몇 시예요",
+   "note": "เช็กอิน = 체크인 · กี่โมง = 몇 시",
+   "tags": [],
+   "new": [
+    "เช็กอิน",
+    "กี่โมง"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "สองโมงเย็นค่ะ",
+   "rd": "",
+   "ko": "오후 2시예요",
+   "note": "สองโมงเย็น = 오후 2시 · ค่ะ = 존댓말",
+   "tags": [],
+   "new": [
+    "สองโมงเย็น",
+    "ค่ะ"
+   ],
+   "emotion": "polite",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "มีรถรับไหม",
+   "rd": "",
+   "ko": "픽업 있어요",
+   "note": "มีรถรับ = 픽업 있다 · ไหม = 있어요",
+   "tags": [],
+   "new": [
+    "มีรถรับ",
+    "ไหม"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "มีค่ะ ฟรี",
+   "rd": "",
+   "ko": "있어요 무료예요",
+   "note": "มี = 있다 · ฟรี = 무료",
+   "tags": [],
+   "new": [
+    "มี",
+    "ฟรี"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "ขอบคุณครับ",
+   "rd": "",
+   "ko": "감사합니다",
+   "note": "ขอบคุณ = 감사하다 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "ขอบคุณ",
+    "ครับ"
+   ],
+   "emotion": "polite",
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "อาหารเช้าฟรีด้วย",
+   "rd": "",
+   "ko": "조식도 무료예요",
+   "note": "อาหารเช้า = 조식 · ฟรี = 무료",
+   "tags": [],
+   "new": [
+    "อาหารเช้า",
+    "ฟรี"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ รถไม่ฟรีเหรอ",
+   "rd": "",
+   "ko": "어 픽업 무료 아니야",
+   "note": "รถ = 차 · ไม่ฟรี = 무료 아니다",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "รถ",
+    "ไม่ฟรี"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 อาหารเช้าฟรี",
+   "rd": "",
+   "ko": "555 조식만 무료야",
+   "note": "555 = 웃음 · อาหารเช้า = 조식",
+   "tags": [],
+   "new": [
+    "555",
+    "อาหารเช้า"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "งั้นเช็กอินกี่โมง",
+   "rd": "",
+   "ko": "그럼 체크인 몇 시",
+   "note": "เช็กอิน = 체크인 · กี่โมง = 몇 시",
+   "tags": [],
+   "new": [
+    "เช็กอิน",
+    "กี่โมง"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 10,
+   "speaker": "B",
+   "th": "ไปสถานีฉันขับให้…",
+   "rd": "",
+   "ko": "그래도 역까진 내가 태워 줄게요…",
+   "note": "ไปสถานี = 역 가다 · ขับ = 운전하다",
+   "tags": [],
+   "new": [
+    "ไปสถานี",
+    "ขับ"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_travel_c2_write.md",
+  "recommended": "เช็กอินได้ / 체크인 돼요\nมีอาหารเช้า / 조식 있어요"
+ }
+}
