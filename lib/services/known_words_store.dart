@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import '../core/prefs.dart';
 
 /// "아는 단어" 저장소 — 주제별 단어 타일의 체크박스.
 /// 기본은 모두 체크(학습 대상). 체크를 없앤 단어 = 아는 단어 → 플래시카드에서 제외.
@@ -13,7 +13,7 @@ class KnownWordsStore {
 
   static Future<void> load() async {
     if (_loaded) return;
-    final p = await SharedPreferences.getInstance();
+    final p = await Prefs.getInstance();
     _known
       ..clear()
       ..addAll(p.getStringList(_key) ?? const []);
@@ -34,7 +34,7 @@ class KnownWordsStore {
       _known.remove(t);
     }
     version.value++;
-    final p = await SharedPreferences.getInstance();
+    final p = await Prefs.getInstance();
     await p.setStringList(_key, _known.toList());
   }
 

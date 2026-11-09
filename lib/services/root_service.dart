@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart' show rootBundle;
 
 import 'thai_dict_service.dart';
 import 'vocab_service.dart';
 import '../core/l10n.dart';
+import '../core/embed_env.dart';
 
 /// 루트 단어 — 여러 단어에 공통으로 들어가는 핵심 형태소 (예: น้ำ 남 '물').
 class RootInfo {
@@ -93,7 +93,7 @@ class RootService {
     await VocabService.instance.ensureLoaded();
     await ThaiDictService.instance.ensureLoaded();
     try {
-      final raw = await rootBundle.loadString(
+      final raw = await tvBundle.loadString(
         'assets/data/vocab/th_roots.json',
       );
       final data = json.decode(raw) as Map<String, dynamic>;

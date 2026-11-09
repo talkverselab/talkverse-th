@@ -4,6 +4,8 @@
 // ignore_for_file: lines_longer_than_80_chars
 
 const Map<String, String> kDictEn = {
+  '다른 언어 배우기': 'Learn another language',
+  'Talkverse 의 다른 언어로 이동': 'Switch to another Talkverse language',
   '정가': 'Regular price',
   '로그인하면 이용약관에 동의하고, 개인정보처리방침에 따른 정보(이메일·이름·계정 ID) 수집에 동의하는 것으로 봅니다.': 'By signing in you agree to the Terms of Use and to the collection of information (email, name, account ID) under the Privacy Policy.',
   '이용권 보기': 'View passes',
@@ -721,6 +723,8 @@ const Map<String, String> kDictEn = {
 };
 
 const Map<String, String> kDictJa = {
+  '다른 언어 배우기': '他の言語を学ぶ',
+  'Talkverse 의 다른 언어로 이동': 'Talkverseの他の言語へ',
   '정가': '定価',
   '로그인하면 이용약관에 동의하고, 개인정보처리방침에 따른 정보(이메일·이름·계정 ID) 수집에 동의하는 것으로 봅니다.': 'ログインすると利用規約に同意し、プライバシーポリシーに基づく情報(メール·名前·アカウントID)の収集に同意したものとみなします。',
   '이용권 보기': '利用券を見る',
@@ -1125,6 +1129,8 @@ const Map<String, String> kDictJa = {
 };
 
 const Map<String, String> kDictZh = {
+  '다른 언어 배우기': '学习其他语言',
+  'Talkverse 의 다른 언어로 이동': '切换到Talkverse其他语言',
   '정가': '原价',
   '로그인하면 이용약관에 동의하고, 개인정보처리방침에 따른 정보(이메일·이름·계정 ID) 수집에 동의하는 것으로 봅니다.': '登录即表示同意使用条款，并同意按隐私政策收集信息(邮箱·姓名·账户ID)。',
   '이용권 보기': '查看使用权',

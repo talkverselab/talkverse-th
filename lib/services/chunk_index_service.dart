@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart' show rootBundle;
 
 import 'thai_dict_service.dart';
 import '../core/l10n.dart';
+import '../core/embed_env.dart';
 
 /// 인덱싱된 문장 하나. 앱의 모든 문장 소스(대화·문법·코퍼스 청크)를 통합한 단위.
 class IndexedSentence {
@@ -70,7 +70,7 @@ class ChunkIndexService {
       final Map<String, dynamic> data;
       try {
         final raw =
-            await rootBundle.loadString('assets/data/dialogues/$level.json');
+            await tvBundle.loadString('assets/data/dialogues/$level.json');
         data = json.decode(raw) as Map<String, dynamic>;
       } catch (_) {
         continue;
@@ -98,7 +98,7 @@ class ChunkIndexService {
   Future<void> _loadGrammar() async {
     final Map<String, dynamic> data;
     try {
-      final raw = await rootBundle.loadString('assets/data/grammar/sfp.json');
+      final raw = await tvBundle.loadString('assets/data/grammar/sfp.json');
       data = json.decode(raw) as Map<String, dynamic>;
     } catch (_) {
       return;
@@ -124,7 +124,7 @@ class ChunkIndexService {
     final Map<String, dynamic> data;
     try {
       final raw =
-          await rootBundle.loadString('assets/data/chunks/th_chunks.json');
+          await tvBundle.loadString('assets/data/chunks/th_chunks.json');
       data = json.decode(raw) as Map<String, dynamic>;
     } catch (_) {
       return;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../core/theme.dart';
 import 'tone_service.dart';
 import '../core/l10n.dart';
+import '../core/prefs.dart';
 
 /// 독음 표시 방식 — 한글 / 한글+성조 / 로마자(우리 표기)+성조 / 숨김.
 enum ReadingStyle { ko, koTone, roman, off }
@@ -23,7 +23,7 @@ class KoReadingPrefs {
       ValueNotifier<ReadingStyle>(ReadingStyle.off);
 
   static Future<void> load() async {
-    final p = await SharedPreferences.getInstance();
+    final p = await Prefs.getInstance();
     final idx = p.getInt(_styleKey);
     if (idx != null && idx >= 0 && idx < ReadingStyle.values.length) {
       style.value = ReadingStyle.values[idx];
@@ -38,7 +38,7 @@ class KoReadingPrefs {
   static Future<void> set(ReadingStyle s) async {
     style.value = s;
     show.value = s != ReadingStyle.off;
-    final p = await SharedPreferences.getInstance();
+    final p = await Prefs.getInstance();
     await p.setInt(_styleKey, s.index);
     await p.setBool(_key, show.value);
   }

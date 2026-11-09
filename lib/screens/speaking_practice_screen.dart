@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:speech_to_text/speech_recognition_error.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
@@ -18,6 +17,7 @@ import '../widgets/thai_decor.dart';
 import 'episode_screen.dart';
 import '../core/l10n.dart';
 import '../core/platform.dart';
+import '../core/prefs.dart';
 
 // ─────────────────────────────────────────────────────────────
 // 문장 말하기 — 한국어를 보고 제한 시간 안에 태국어로 말하기
@@ -79,7 +79,7 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
   int _stage = 1;
   double _threshold = SpeechJudge.defaultThreshold;
   bool _hint = false;
-  SharedPreferences? _prefs;
+  Prefs? _prefs;
 
   @override
   void initState() {
@@ -88,7 +88,7 @@ class _SpeakingPracticeScreenState extends State<SpeakingPracticeScreen> {
   }
 
   Future<void> _load() async {
-    _prefs = await SharedPreferences.getInstance();
+    _prefs = await Prefs.getInstance();
     await EpisodeCatalog.instance.ensureLoaded();
     if (!mounted) return;
     setState(() {
@@ -511,7 +511,7 @@ class _PracticeScreenState extends State<_PracticeScreen>
 
   Future<void> _toggleHint() async {
     setState(() => _hint = !_hint);
-    final prefs = await SharedPreferences.getInstance();
+    final prefs = await Prefs.getInstance();
     await prefs.setBool(_kPrefHint, _hint);
   }
 
@@ -1298,7 +1298,7 @@ class _ResultScreenState extends State<_ResultScreen> {
 
   Future<void> _nextStage() async {
     final next = widget.stage + 1;
-    final prefs = await SharedPreferences.getInstance();
+    final prefs = await Prefs.getInstance();
     await prefs.setInt(_kPrefStage, next);
     if (!mounted) return;
     Navigator.pushReplacement(

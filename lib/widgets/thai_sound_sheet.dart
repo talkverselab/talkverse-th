@@ -7,6 +7,7 @@ import '../core/platform.dart';
 import '../core/theme.dart';
 import '../services/thai_phonetics.dart';
 import '../services/tts_service.dart';
+import '../core/embed_env.dart';
 
 /// 글자 탭 → 발음 상세 시트(일본어앱 kana_sound_sheet.dart 기준, 2026-11-08).
 /// 열리면 1초 뒤 자동 재생 · 다시 듣기 · IPA · 조음 위치(그림) · 모음 위치(태국어 vs 한국어) · 한국어 화자 비교.
@@ -131,7 +132,7 @@ class _SheetState extends State<_Sheet> {
                 if (_chart) ...[
                   ClipRRect(
                     borderRadius: BorderRadius.circular(8),
-                    child: Container(color: Colors.white, padding: const EdgeInsets.all(8), child: Image.asset('assets/images/ipa/places_of_articulation.png', fit: BoxFit.contain)),
+                    child: Container(color: Colors.white, padding: const EdgeInsets.all(8), child: Image.asset(assetPath('assets/images/ipa/places_of_articulation.png'), fit: BoxFit.contain)),
                   ),
                 ],
               ],

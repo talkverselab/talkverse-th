@@ -1,15 +1,15 @@
-import 'package:shared_preferences/shared_preferences.dart';
+import '../core/prefs.dart';
 
-/// 문장별 사용자 메모. SharedPreferences 에 저장.
+/// 문장별 사용자 메모. Prefs 에 저장.
 /// key = "memo:`patternId`:`idx`"
 class MemoService {
   MemoService._();
   static final MemoService instance = MemoService._();
 
-  SharedPreferences? _prefs;
+  Prefs? _prefs;
 
-  Future<SharedPreferences> _p() async {
-    _prefs ??= await SharedPreferences.getInstance();
+  Future<Prefs> _p() async {
+    _prefs ??= await Prefs.getInstance();
     return _prefs!;
   }
 

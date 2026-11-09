@@ -2,8 +2,8 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:path_provider/path_provider.dart';
+import '../core/embed_env.dart';
 
 /// 콘텐츠만 바꾼 수정(스크립트 문장·문법 예문·질문 문구)을 APK 없이 받는다.
 ///
@@ -28,14 +28,14 @@ class ContentStore {
   Directory? _dir;
 
   Future<Directory> _root() async =>
-      _dir ??= Directory('${(await getApplicationDocumentsDirectory()).path}/content');
+      _dir ??= Directory(await storeDir('content', () async => '${(await getApplicationDocumentsDirectory()).path}/content'));
 
   Future<Map<String, dynamic>> _readManifest(String raw) async => json.decode(raw) as Map<String, dynamic>;
 
   /// 앱 시작 때 한 번. 번들보다 오래된 캐시는 지운다.
   Future<void> init() async {
     try {
-      final b = await _readManifest(await rootBundle.loadString(_manifest));
+      final b = await _readManifest(await tvBundle.loadString(_manifest));
       bundledVersion = (b['version'] as num?)?.toInt() ?? 0;
       final root = await _root();
       final local = File('${root.path}/manifest.json');
@@ -60,7 +60,7 @@ class ContentStore {
       final f = File('${(await _root()).path}/$assetPath');
       if (await f.exists()) return await f.readAsString();
     } catch (_) {}
-    return rootBundle.loadString(assetPath);
+    return tvBundle.loadString(assetPath);
   }
 
   Future<String> _get(String url) async {
@@ -90,7 +90,7 @@ class ContentStore {
       final localFile = File('${root.path}/manifest.json');
       final cur = await localFile.exists()
           ? await _readManifest(await localFile.readAsString())
-          : await _readManifest(await rootBundle.loadString(_manifest));
+          : await _readManifest(await tvBundle.loadString(_manifest));
       final curFiles = (cur['files'] as Map?) ?? const {};
       final files = (remote['files'] as Map).cast<String, String>();
       var n = 0;

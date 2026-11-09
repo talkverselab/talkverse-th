@@ -1,10 +1,11 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart' show AssetManifest, rootBundle;
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter/services.dart' show AssetManifest;
 
 import 'content_sync.dart';
 import 'learner_prefs.dart';
+import '../core/embed_env.dart';
+import '../core/prefs.dart';
 
 /// 새 회화(R0~R4, 주제별 JSON) 로더 — 2026-11-03 (일본어앱 이식).
 ///
@@ -189,7 +190,7 @@ class DialogueService {
   String? get lastOpenedId => _lastOpened;
   Future<void> setLastOpened(String id) async {
     _lastOpened = id;
-    (await SharedPreferences.getInstance()).setString(_prefLast, id);
+    (await Prefs.getInstance()).setString(_prefLast, id);
   }
 
   bool isDone(String id) => _done.contains(id);
@@ -197,7 +198,7 @@ class DialogueService {
   /// 끝까지 들은 편 기록. 처음이면 true.
   Future<bool> markDone(String id) async {
     final first = _done.add(id);
-    (await SharedPreferences.getInstance()).setStringList(_prefDone, _done.toList());
+    (await Prefs.getInstance()).setStringList(_prefDone, _done.toList());
     return first;
   }
 
@@ -209,20 +210,20 @@ class DialogueService {
   String get level => _level;
   Future<void> setLevel(String lv) async {
     _level = lv;
-    (await SharedPreferences.getInstance()).setString(_prefLevel, lv);
+    (await Prefs.getInstance()).setString(_prefLevel, lv);
   }
 
   Future<void> ensureLoaded() async {
     if (_loaded) return;
-    final prefs = await SharedPreferences.getInstance();
+    final prefs = await Prefs.getInstance();
     _level = prefs.getString(_prefLevel) ?? 'R1';
     _lastOpened = prefs.getString(_prefLast);
     _done.addAll(prefs.getStringList(_prefDone) ?? const []);
-    final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
-    final paths = manifest.listAssets().where((p) => RegExp(r'^assets/data/dialogues/R[0-4]/[^/]+/[^/]+\.json$').hasMatch(p));
+    final manifest = await AssetManifest.loadFromAssetBundle(tvBundle);
+    final paths = manifest.listAssets().map(stripAssetPrefix).where((p) => RegExp(r'^assets/data/dialogues/R[0-4]/[^/]+/[^/]+\.json$').hasMatch(p));
     for (final p in paths) {
       try {
-        final d = Dialogue.fromJson(json.decode(await rootBundle.loadString(p)) as Map<String, dynamic>);
+        final d = Dialogue.fromJson(json.decode(await tvBundle.loadString(p)) as Map<String, dynamic>);
         if (d.turns.isNotEmpty) _byId[d.id] = d;
       } catch (_) {}
     }

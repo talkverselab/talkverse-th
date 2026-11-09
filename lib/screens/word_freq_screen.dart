@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/l10n.dart';
 import '../core/platform.dart';
@@ -10,6 +9,7 @@ import '../services/cliff_service.dart';
 import '../services/ko_reading.dart';
 import '../services/tts_service.dart';
 import '../widgets/word_art_thumb.dart';
+import '../core/embed_env.dart';
 
 /// 절벽 단어 — 회화 빈도 1~2,000위를 절벽구간(R1~R5)별 **20어 단원**으로, 단어는 **네모 타일**로 보여 준다(사용자 지시 2026-11-07, 모든 언어앱 공통).
 /// 위 버튼 「절벽구간 단어만 / 회화 단어 포함」 — 포함이면 회화 전 편에 나오지만 2,000위 밖인 단어가 「회화」 구간으로 뒤에 붙는다.
@@ -42,7 +42,7 @@ class _WordFreqScreenState extends State<WordFreqScreen> {
   }
 
   Future<void> _load() async {
-    final j = json.decode(await rootBundle.loadString('assets/data/wordsets/th_cliff_words.json')) as Map<String, dynamic>;
+    final j = json.decode(await tvBundle.loadString('assets/data/wordsets/th_cliff_words.json')) as Map<String, dynamic>;
     WordEntry read(Map<String, dynamic> m, int rank, String region) =>
         WordEntry(rank: rank, word: m['w'] as String, reading: (m['rd'] as String?) ?? '', ko: (m['ko'] as String?) ?? '', region: region);
     final words = [

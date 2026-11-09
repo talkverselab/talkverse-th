@@ -1,6 +1,5 @@
 import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../core/theme.dart';
 import '../data/db/app_database.dart';
@@ -14,6 +13,7 @@ import '../widgets/thai_decor.dart';
 import 'episode_screen.dart';
 import '../core/l10n.dart';
 import '../core/platform.dart';
+import '../core/prefs.dart';
 
 /// 힌트: 독음의 첫 어절만 (전체 문장 노출 방지)
 class SentenceFlashcardHint {
@@ -67,7 +67,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
   bool _flipped = false;
   bool _koFirst = true;
   bool _showHint = true;
-  SharedPreferences? _prefs;
+  Prefs? _prefs;
 
   @override
   void initState() {
@@ -76,7 +76,7 @@ class _SentenceFlashcardScreenState extends State<SentenceFlashcardScreen> {
   }
 
   Future<void> _load() async {
-    _prefs = await SharedPreferences.getInstance();
+    _prefs = await Prefs.getInstance();
     await ChunkIndexService.instance.ensureLoaded();
     _koFirst = true; // 항상 한→태로 시작 (세션 안에서만 전환)
     _showHint = _prefs!.getBool(_kShowHint) ?? true;

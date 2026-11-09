@@ -5,7 +5,7 @@ import 'package:integration_test/integration_test.dart';
 import 'package:thai_universe/core/l10n.dart';
 import 'package:thai_universe/data/db/app_database.dart';
 import 'package:thai_universe/data/db/seed_loader.dart';
-import 'package:thai_universe/main.dart';
+import 'package:thai_universe/embed.dart';
 import 'package:thai_universe/services/ko_reading.dart';
 
 void main() {

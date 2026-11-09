@@ -2,12 +2,12 @@ import 'dart:convert';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/theme.dart';
 import '../services/tts_service.dart';
 import '../core/l10n.dart';
 import '../core/platform.dart';
+import '../core/embed_env.dart';
 
 /// 문자 퀴즈 — 자음 44자 4지선다 (문자 → 이름·뜻 고르기).
 class ScriptQuizScreen extends StatefulWidget {
@@ -46,7 +46,7 @@ class _ScriptQuizScreenState extends State<ScriptQuizScreen> {
 
   Future<void> _load() async {
     final raw =
-        await rootBundle.loadString('assets/data/alphabet/th_alphabet.json');
+        await tvBundle.loadString('assets/data/alphabet/th_alphabet.json');
     final data = json.decode(raw) as Map<String, dynamic>;
     final consonants = (data['consonants'] as List?) ?? [];
     _letters = [

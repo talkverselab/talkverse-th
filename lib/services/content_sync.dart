@@ -5,7 +5,8 @@ import 'dart:io';
 import 'package:crypto/crypto.dart';
 import 'package:flutter/widgets.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import '../core/prefs.dart';
+import '../core/embed_env.dart';
 
 /// 그림(장면 컷·단어 그림) 기기 내려받기 + 버전 관리 — 일본어앱 content_sync.dart 이식(사용자 지시 2026-11-04, 모든 언어앱 공통)
 /// "앱 시작할 때 로딩하면서 다운로드 받고, 업데이트 번호가 다르면 갱신".
@@ -69,14 +70,14 @@ class ContentSync {
     _large = large;
     _female = female;
     try {
-      _dir = Directory('${(await getApplicationSupportDirectory()).path}/art');
+      _dir = Directory(await storeDir('art', () async => '${(await getApplicationSupportDirectory()).path}/art'));
       if (!await _dir!.exists()) await _dir!.create(recursive: true);
       final f = File('${_dir!.path}/index.json');
       if (await f.exists()) _index.addAll((json.decode(await f.readAsString()) as Map).cast<String, String>());
     } catch (e) {
       debugPrint('ContentSync: 색인 읽기 실패 $e');
     }
-    final prefs = await SharedPreferences.getInstance();
+    final prefs = await Prefs.getInstance();
     // 저장된 장면 매니페스트가 있으면 먼저 색인으로(오프라인 대비)
     final cachedScene = prefs.getString(_prefScene);
     if (cachedScene != null) _applyScene(cachedScene);
@@ -96,7 +97,7 @@ class ContentSync {
     return need;
   }
 
-  Future<bool> _fetchManifests(SharedPreferences prefs) async {
+  Future<bool> _fetchManifests(Prefs prefs) async {
     try {
       final w = await _get(wordsManifestUrl);
       final s = await _get(sceneManifestUrl);
@@ -212,7 +213,7 @@ class ContentSync {
     await _saveIndex();
     final left = _wanted.entries.where((e) => _index[e.key] != e.value).length;
     if (left == 0 && _wantedVersion != null) {
-      (await SharedPreferences.getInstance()).setString(_prefVersion, _wantedVersion!);
+      (await Prefs.getInstance()).setString(_prefVersion, _wantedVersion!);
     }
     progress.value = SyncProgress(left == 0 ? 'done' : 'download', _wanted.length - left, _wanted.length, false);
   }

@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/theme.dart';
 import '../services/ko_reading.dart';
@@ -10,6 +9,7 @@ import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
 import '../core/l10n.dart';
 import '../core/platform.dart';
+import '../core/embed_env.dart';
 
 /// 바로 문장 — 태국인이 가장 많이 쓰는 표현 모음.
 /// 카테고리 칩 + 큰 카드 + TTS. 여행·일상에서 바로 꺼내 쓰는 코너.
@@ -65,7 +65,7 @@ class _QuickPhrasesScreenState extends State<QuickPhrasesScreen> {
 
   Future<void> _load() async {
     final raw =
-        await rootBundle.loadString('assets/data/phrases/quick_phrases.json');
+        await tvBundle.loadString('assets/data/phrases/quick_phrases.json');
     final data = json.decode(raw) as Map<String, dynamic>;
     final cats = (data['categories'] as List?) ?? [];
     if (!mounted) return;

@@ -29,6 +29,7 @@ import 'tones_screen.dart';
 import 'vocab_hub_screen.dart';
 import 'word_freq_screen.dart';
 import '../core/l10n.dart';
+import '../core/embed_env.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -172,7 +173,7 @@ class _PaneEmpty extends StatelessWidget {
                     aspectRatio: 470 / 645, // 그림 비율 그대로(잘리지 않게)
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(24),
-                      child: Image.asset('assets/images/scene_home.jpg', fit: BoxFit.cover),
+                      child: Image.asset(assetPath('assets/images/scene_home.jpg'), fit: BoxFit.cover),
                     ),
                   ),
                 ),

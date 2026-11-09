@@ -1,6 +1,6 @@
 import 'dart:convert';
+import '../core/embed_env.dart';
 
-import 'package:flutter/services.dart' show rootBundle;
 
 /// 단어 타일의 그림(이모지) — 한국어 뜻의 키워드로 고르고, 없으면 주제별 풀에서
 /// 같은 화면 안에서 겹치지 않게 배정한다.
@@ -25,7 +25,7 @@ class EmojiService {
   Future<void> _load() async {
     try {
       final raw =
-          await rootBundle.loadString('assets/data/vocab/th_emoji_map.json');
+          await tvBundle.loadString('assets/data/vocab/th_emoji_map.json');
       final data = json.decode(raw) as Map<String, dynamic>;
       (data['keywords'] as Map<String, dynamic>? ?? {}).forEach((k, v) {
         if (k.trim().isNotEmpty && '$v'.trim().isNotEmpty) {

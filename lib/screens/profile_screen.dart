@@ -4,6 +4,7 @@ import '../core/theme.dart';
 import '../services/update_service.dart';
 import '../widgets/thai_decor.dart';
 import 'about_screen.dart';
+import '../embed.dart' show switchLanguage;
 import '../widgets/legal_links.dart';
 import '../core/l10n.dart';
 import '../core/pane.dart';
@@ -17,6 +18,7 @@ import '../services/ko_reading.dart';
 import '../services/learner_prefs.dart';
 import '../core/thai_font.dart';
 import 'dev_notes_screen.dart';
+import '../core/embed_env.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -109,6 +111,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               )),
           const SizedBox(height: 8),
           _SettingsGroup(items: [
+            // 통합 앱(Talkverse)에서만: 다른 언어 앱으로(2026-11-09)
+            if (switchLanguage != null)
+              _SettingItem(icon: Icons.swap_horiz, title: tr('다른 언어 배우기'), subtitle: tr('Talkverse 의 다른 언어로 이동'), onTap: switchLanguage!),
             _SettingItem(
                 icon: Icons.badge_outlined,
                 title: tr('나 · 이름과 성별'),
@@ -366,7 +371,7 @@ Future<void> _pickThaiFont(BuildContext context) => showModalBottomSheet(
                         Expanded(
                           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
                             Text('สวัสดีครับ ภาษาไทย กขค',
-                                style: TextStyle(fontFamily: f.family, fontSize: 24, color: AppColors.khram, height: 1.5)),
+                                style: TextStyle(fontFamily: fontFamilyOf(f.family), fontSize: 24, color: AppColors.khram, height: 1.5)),
                             Text('${tr(f.label)} · ${tr(f.desc)}', style: const TextStyle(fontSize: 12, color: AppColors.khramLight)),
                           ]),
                         ),

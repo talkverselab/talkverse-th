@@ -6,13 +6,14 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../core/backend.dart';
 import '../core/platform.dart';
 import '../data/learn_api.dart';
 import 'content_store.dart';
 import 'update_service.dart';
+import '../core/prefs.dart';
+import '../core/embed_env.dart';
 
 /// 검수용 개발자 메모 — 어느 화면에서든 메모 + 화면 캡처 + 맥락을 남긴다.
 /// 서버 = 공용 학습 API POST /v1/th/dev-notes(2026-11-02 Supabase 에서 이전). 캡처 이미지 업로드는 서버에 아직 없어 폰에만 남긴다.
@@ -38,19 +39,19 @@ class DevNotes {
   final Map<String, Map<String, dynamic>> _context = {};
 
   Future<void> load() async {
-    final p = await SharedPreferences.getInstance();
+    final p = await Prefs.getInstance();
     unlocked.value = p.getBool(_kUnlocked) ?? false;
     enabled.value = unlocked.value && (p.getBool(_kEnabled) ?? false);
   }
 
   Future<void> unlock() async {
     unlocked.value = true;
-    (await SharedPreferences.getInstance()).setBool(_kUnlocked, true);
+    (await Prefs.getInstance()).setBool(_kUnlocked, true);
   }
 
   Future<void> setEnabled(bool v) async {
     enabled.value = v;
-    (await SharedPreferences.getInstance()).setBool(_kEnabled, v);
+    (await Prefs.getInstance()).setBool(_kEnabled, v);
     if (v) flushQueue();
   }
 
@@ -90,7 +91,7 @@ class DevNotes {
     final row = snapshot(note);
     String? shotFile;
     if (shot != null) {
-      final dir = Directory('${(await getApplicationDocumentsDirectory()).path}/dev_notes');
+      final dir = Directory(await storeDir('dev_notes', () async => '${(await getApplicationDocumentsDirectory()).path}/dev_notes'));
       await dir.create(recursive: true);
       shotFile = '${dir.path}/${DateTime.now().millisecondsSinceEpoch}.png';
       await File(shotFile).writeAsBytes(shot);
@@ -98,7 +99,7 @@ class DevNotes {
     final item = {'row': row, 'shot': shotFile};
     final ok = await _send(item);
     if (!ok) {
-      final p = await SharedPreferences.getInstance();
+      final p = await Prefs.getInstance();
       final q = p.getStringList(_kQueue) ?? [];
       q.add(json.encode(item));
       await p.setStringList(_kQueue, q);
@@ -106,10 +107,10 @@ class DevNotes {
     return ok;
   }
 
-  Future<int> queued() async => ((await SharedPreferences.getInstance()).getStringList(_kQueue) ?? const []).length;
+  Future<int> queued() async => ((await Prefs.getInstance()).getStringList(_kQueue) ?? const []).length;
 
   Future<void> flushQueue() async {
-    final p = await SharedPreferences.getInstance();
+    final p = await Prefs.getInstance();
     final q = p.getStringList(_kQueue) ?? [];
     if (q.isEmpty) return;
     final left = <String>[];

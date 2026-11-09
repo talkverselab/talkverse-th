@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/l10n.dart';
 import '../core/theme.dart';
+import '../core/embed_env.dart';
 
 /// 절벽 기준(2026-11-07, 모든 언어앱 공통): 누적 55/60/70/80% 첫 순위 → R1~R4 끝, 80% 밖 R5, R5 는 2,000위에서 끊는다.
 /// 숫자는 태국 드라마 50편 대사(26만 토큰)에서 산출(docs/CONTENT_STATUS.md). 경계는 여기 한 곳에만 둔다.
@@ -26,7 +26,7 @@ class CliffService {
 
   Future<void> _load() async {
     try {
-      final j = json.decode(await rootBundle.loadString('assets/data/wordsets/th_cliff_words.json')) as Map<String, dynamic>;
+      final j = json.decode(await tvBundle.loadString('assets/data/wordsets/th_cliff_words.json')) as Map<String, dynamic>;
       for (final m in (j['words'] as List).cast<Map<String, dynamic>>()) {
         _rank[m['w'] as String] = m['r'] as int;
       }

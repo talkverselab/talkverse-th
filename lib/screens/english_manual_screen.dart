@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/theme.dart';
 import '../core/platform.dart';
 import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
+import '../core/embed_env.dart';
 
 /// Manual for English Users — every Thai sound with the standard (RTGS)
 /// romanization next to this app's own English-friendly romanization.
@@ -24,7 +24,7 @@ class _EnglishManualScreenState extends State<EnglishManualScreen> {
   @override
   void initState() {
     super.initState();
-    rootBundle
+    tvBundle
         .loadString('assets/data/alphabet/th_romanization.json')
         .then((raw) {
           if (!mounted) return;

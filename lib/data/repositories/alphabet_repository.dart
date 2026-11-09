@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../models/alphabet.dart';
+import '../../core/embed_env.dart';
 
 /// 자음·모음 JSON을 에셋에서 한 번 로드해 캐싱.
 class AlphabetRepository {
@@ -21,7 +21,7 @@ class AlphabetRepository {
   }
 
   Future<AlphabetData> _load() async {
-    final raw = await rootBundle.loadString(_assetPath);
+    final raw = await tvBundle.loadString(_assetPath);
     final map = json.decode(raw) as Map<String, dynamic>;
 
     final consonants = (map['consonants'] as List<dynamic>)

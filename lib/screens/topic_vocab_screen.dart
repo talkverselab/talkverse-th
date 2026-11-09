@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/theme.dart';
 import '../services/emoji_service.dart';
@@ -14,6 +13,7 @@ import 'vocab_screen.dart';
 import 'word_flashcard_screen.dart';
 import '../core/l10n.dart';
 import '../core/platform.dart';
+import '../core/embed_env.dart';
 
 /// 주제별 단어 — 주제 타일 그리드 + 맨 위 플래시카드 연습 버튼.
 class TopicVocabScreen extends StatefulWidget {
@@ -39,7 +39,7 @@ class _TopicVocabScreenState extends State<TopicVocabScreen> {
     await EmojiService.instance.ensureLoaded();
     await KnownWordsStore.load();
     try {
-      final raw = await rootBundle.loadString(
+      final raw = await tvBundle.loadString(
         'assets/data/vocab/th_topics.json',
       );
       final data = json.decode(raw) as Map<String, dynamic>;

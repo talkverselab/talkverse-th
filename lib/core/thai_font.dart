@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import './prefs.dart';
+import 'embed_env.dart';
 
 /// 태국어 글꼴 선택 — 사용자 지시(2026-11-02) "태국어는 폰트에 따라 글자의 느낌이 많이 달라져, 고를 수 있게".
 /// 고리(หัว) 있는 전통형과 고리 없는 현대형의 인상 차이가 커서 학습자가 바꿔 본다. 글꼴은 모두 OFL(assets/fonts/OFL_*.txt).
@@ -27,10 +28,10 @@ class ThaiFontPrefs {
   static final ValueNotifier<String> id = ValueNotifier('sarabun'); // 기본 = 고리형(초보에게 유리, Grok 추천)
 
   static ThaiFont get current => options.firstWhere((o) => o.id == id.value, orElse: () => options.first);
-  static String? get family => current.family;
+  static String? get family => fontFamilyOf(current.family); // 통합 앱이면 packages/thai_universe/ 접두
 
   static Future<void> load() async {
-    final v = (await SharedPreferences.getInstance()).getString(_k);
+    final v = (await Prefs.getInstance()).getString(_k);
     if (v != null && options.any((o) => o.id == v)) id.value = v;
   }
 
@@ -42,6 +43,6 @@ class ThaiFontPrefs {
 
   static Future<void> set(String v) async {
     id.value = v;
-    (await SharedPreferences.getInstance()).setString(_k, v);
+    (await Prefs.getInstance()).setString(_k, v);
   }
 }

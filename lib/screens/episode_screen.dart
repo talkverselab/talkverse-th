@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:drift/drift.dart' hide Column;
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/theme.dart';
 import '../services/learner_prefs.dart';
@@ -17,6 +16,7 @@ import '../widgets/thai_decor.dart';
 import 'sentence_flashcard_screen.dart';
 import '../core/l10n.dart';
 import '../core/platform.dart';
+import '../core/embed_env.dart';
 
 /// 에피소드/다이얼로그 메타 (Learn 탭·회화 허브·홈 공용).
 class EpisodeMeta {
@@ -49,7 +49,7 @@ class EpisodeCatalog {
     if (_loaded) return;
     for (final level in ['L1', 'L2', 'L3']) {
       try {
-        final raw = await rootBundle.loadString(
+        final raw = await tvBundle.loadString(
           'assets/data/dialogues/$level.json',
         );
         final data = json.decode(raw) as Map<String, dynamic>;

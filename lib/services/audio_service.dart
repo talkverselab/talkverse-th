@@ -1,9 +1,9 @@
 import 'dart:convert';
 
 import 'package:audioplayers/audioplayers.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/platform.dart';
+import '../core/embed_env.dart';
 
 /// 합성 mp3 재생. manifest(letters/turns)가 있으면 에셋 경로를 찾아 재생한다.
 class AudioService {
@@ -28,7 +28,7 @@ class AudioService {
     }
     try {
       final raw =
-          await rootBundle.loadString('assets/data/audio_manifest.json');
+          await tvBundle.loadString('assets/data/audio_manifest.json');
       final data = json.decode(raw) as Map<String, dynamic>;
       final letters = (data['letters'] as Map<String, dynamic>?) ?? {};
       _letterMap = letters.map((k, v) => MapEntry(k, v.toString()));

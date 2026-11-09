@@ -2,10 +2,10 @@ import 'dart:convert';
 
 import 'package:csv/csv.dart';
 import 'package:drift/drift.dart';
-import 'package:flutter/services.dart' show rootBundle;
-import 'package:shared_preferences/shared_preferences.dart';
 
 import 'app_database.dart';
+import '../../core/embed_env.dart';
+import '../../core/prefs.dart';
 
 class SeedLoader {
   final AppDatabase db;
@@ -15,7 +15,7 @@ class SeedLoader {
   /// 옛 키(`db_seeded_th_v5`)는 더 쓰지 않는다 — 번호는 version.json 한 곳에서만 올린다.
   static const _kDbVersion = 'db_version';
   Future<void> seedIfNeeded() async {
-    final prefs = await SharedPreferences.getInstance();
+    final prefs = await Prefs.getInstance();
     final bundled = await bundledVersion();
     if (prefs.getInt(_kDbVersion) == bundled) return;
 
@@ -28,7 +28,7 @@ class SeedLoader {
 
   static Future<int> bundledVersion() async {
     try {
-      final j = json.decode(await rootBundle.loadString('assets/data/version.json')) as Map<String, dynamic>;
+      final j = json.decode(await tvBundle.loadString('assets/data/version.json')) as Map<String, dynamic>;
       return (j['db'] as num).toInt();
     } catch (_) {
       return 0;
@@ -37,7 +37,7 @@ class SeedLoader {
 
   Future<void> _seedWords() async {
     final raw =
-        await rootBundle.loadString('assets/data/wordsets/th_top1000.csv');
+        await tvBundle.loadString('assets/data/wordsets/th_top1000.csv');
     final rows = const CsvToListConverter(eol: '\n').convert(raw);
     final batch = <Insertable<WordRow>>[];
     for (var i = 1; i < rows.length; i++) {
@@ -61,7 +61,7 @@ class SeedLoader {
       final Map<String, dynamic> data;
       try {
         final raw =
-            await rootBundle.loadString('assets/data/dialogues/$level.json');
+            await tvBundle.loadString('assets/data/dialogues/$level.json');
         data = json.decode(raw) as Map<String, dynamic>;
       } catch (_) {
         continue;

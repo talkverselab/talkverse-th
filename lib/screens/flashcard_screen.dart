@@ -1,12 +1,12 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/theme.dart';
 import '../services/tts_service.dart';
 import '../widgets/thai_decor.dart';
 import '../core/l10n.dart';
+import '../core/embed_env.dart';
 
 /// 복습 카드 — 태국 자음 44자 플래시카드 (TTS 발음 포함).
 class FlashcardScreen extends StatefulWidget {
@@ -29,7 +29,7 @@ class _FlashcardScreenState extends State<FlashcardScreen> {
 
   Future<void> _load() async {
     final raw =
-        await rootBundle.loadString('assets/data/alphabet/th_alphabet.json');
+        await tvBundle.loadString('assets/data/alphabet/th_alphabet.json');
     final data = json.decode(raw) as Map<String, dynamic>;
     final consonants = (data['consonants'] as List?) ?? [];
     final cards = <_Card>[];

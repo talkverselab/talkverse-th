@@ -1,5 +1,5 @@
 import 'package:csv/csv.dart';
-import 'package:flutter/services.dart' show rootBundle;
+import '../core/embed_env.dart';
 
 /// 단어 정보 (구어 코퍼스 빈도 기반).
 class ThaiWordInfo {
@@ -36,7 +36,7 @@ class ThaiDictService {
     if (_loaded) return;
     try {
       final raw =
-          await rootBundle.loadString('assets/data/wordsets/th_top1000.csv');
+          await tvBundle.loadString('assets/data/wordsets/th_top1000.csv');
       final rows = const CsvToListConverter(eol: '\n').convert(raw);
       for (var i = 1; i < rows.length; i++) {
         final row = rows[i];

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart' show rootBundle;
 import '../core/l10n.dart';
+import '../core/embed_env.dart';
 
 /// 음절 하나의 성조 정보.
 class ToneSyllable {
@@ -56,7 +56,7 @@ class ToneService {
   Future<void> _load() async {
     try {
       final raw =
-          await rootBundle.loadString('assets/data/vocab/th_tones.json');
+          await tvBundle.loadString('assets/data/vocab/th_tones.json');
       final data = json.decode(raw) as Map<String, dynamic>;
       final entries = data['entries'] as Map<String, dynamic>;
       entries.forEach((k, v) {

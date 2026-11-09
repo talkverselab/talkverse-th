@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../core/l10n.dart';
 import '../core/thai_font.dart';
 import '../core/theme.dart';
+import '../core/embed_env.dart';
 
 /// 앱바 글꼴 버튼 — 누를 때마다 태국어 글꼴이 바뀐다(사라분 → 깐잇 → 바이짬쭈리 → 기기 기본). 버튼의 「ก」가 지금 글꼴로 보인다.
 class ThaiFontAction extends StatelessWidget {
@@ -33,7 +34,7 @@ class ThaiFontAction extends StatelessWidget {
                 border: Border.all(color: AppColors.kluayMai, width: 1.4),
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: Text('ก', style: TextStyle(fontFamily: f.family, fontSize: 18, height: 1.1, color: AppColors.kluayMaiDeep)),
+              child: Text('ก', style: TextStyle(fontFamily: fontFamilyOf(f.family), fontSize: 18, height: 1.1, color: AppColors.kluayMaiDeep)),
             ),
           );
         },

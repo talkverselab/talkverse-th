@@ -1,6 +1,6 @@
 import 'dart:convert';
+import '../core/embed_env.dart';
 
-import 'package:flutter/services.dart' show rootBundle;
 
 /// 문자·발음 기초 데이터(자음 44·모음 25·성조 5) — assets/data/alphabet/th_phonetics.json(tools/build_phonetics.py).
 /// 일본어앱 kana_phonetics.dart 와 같은 역할(2026-11-08, 모든 언어앱 「문자와 발음」).
@@ -42,7 +42,7 @@ class ThaiPhonetics {
   Future<void> ensureLoaded() => _loading ??= _load();
 
   Future<void> _load() async {
-    final j = json.decode(await rootBundle.loadString('assets/data/alphabet/th_phonetics.json')) as Map<String, dynamic>;
+    final j = json.decode(await tvBundle.loadString('assets/data/alphabet/th_phonetics.json')) as Map<String, dynamic>;
     String s(Map m, String k) => (m[k] as String?) ?? '';
     (j['consonants'] as Map<String, dynamic>).forEach((k, v) {
       final m = v as Map<String, dynamic>;

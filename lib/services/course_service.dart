@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:shared_preferences/shared_preferences.dart';
 
 import 'content_store.dart';
+import '../core/prefs.dart';
 
 /// 「내 코스」 — 질문 답으로 미리 써 둔 스크립트에 점수를 매겨 재생 목록을 만든다.
 ///
@@ -169,7 +169,7 @@ class CourseService {
     driveOrder = [...((q['meta'] as Map)['drive_order'] as List).cast<String>()];
     driveLabels = (q['drives'] as Map).map((k, v) => MapEntry(k as String, (v as Map)['label'] as String));
     _all = [for (final x in (s['scripts'] as List).cast<Map<String, dynamic>>()) CourseScript.fromJson(x)];
-    final p = await SharedPreferences.getInstance();
+    final p = await Prefs.getInstance();
     final raw = p.getString(_kAnswers);
     if (raw != null) answers = migrate(json.decode(raw) as Map<String, dynamic>);
     done = {...(p.getStringList(_kDone) ?? const [])};
@@ -182,7 +182,7 @@ class CourseService {
   Future<void> saveAnswers(Map<String, dynamic> a, {bool touch = true}) async {
     a = migrate(a);
     answers = a;
-    final p = await SharedPreferences.getInstance();
+    final p = await Prefs.getInstance();
     await p.setString(_kAnswers, json.encode(a));
     if (touch) {
       answersUpdatedAt = DateTime.now();
@@ -197,13 +197,13 @@ class CourseService {
 
   Future<void> markDone(CourseScript s) async {
     done.add(s.progressId);
-    (await SharedPreferences.getInstance()).setStringList(_kDone, done.toList());
+    (await Prefs.getInstance()).setStringList(_kDone, done.toList());
     onDone?.call(s.progressId);
   }
 
   Future<void> mergeDone(Set<String> keys) async {
     done.addAll(keys);
-    (await SharedPreferences.getInstance()).setStringList(_kDone, done.toList());
+    (await Prefs.getInstance()).setStringList(_kDone, done.toList());
   }
 
   bool isDone(CourseScript s) => done.contains(s.progressId);

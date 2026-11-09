@@ -1,9 +1,9 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart' show rootBundle;
 
 import 'thai_dict_service.dart';
 import '../core/l10n.dart';
+import '../core/embed_env.dart';
 
 /// 통합 단어장 항목 — 표제어 기준으로 병합된 단어 (출처는 노출하지 않는다).
 class VocabEntry {
@@ -195,7 +195,7 @@ class VocabService {
 
   Future<void> _load() async {
     try {
-      final raw = await rootBundle.loadString(
+      final raw = await tvBundle.loadString(
         'assets/data/vocab/th_vocab.json',
       );
       final data = json.decode(raw) as Map<String, dynamic>;
@@ -225,7 +225,7 @@ class VocabService {
 
   Future<void> _loadExpressions() async {
     try {
-      final raw = await rootBundle.loadString(
+      final raw = await tvBundle.loadString(
         'assets/data/vocab/th_expressions.json',
       );
       final data = json.decode(raw) as Map<String, dynamic>;
@@ -242,7 +242,7 @@ class VocabService {
 
   Future<void> _loadObec() async {
     try {
-      final raw = await rootBundle.loadString(
+      final raw = await tvBundle.loadString(
         'assets/data/wordsets/th_obec_basic.json',
       );
       final data = json.decode(raw) as Map<String, dynamic>;

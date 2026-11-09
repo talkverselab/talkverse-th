@@ -1,13 +1,13 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../core/l10n.dart';
 import '../core/platform.dart';
 import '../core/theme.dart';
 import '../services/thai_phonetics.dart';
 import '../widgets/thai_sound_sheet.dart';
+import '../core/embed_env.dart';
 
 /// 문자와 발음 — 일본어앱 「50음도와 발음」 기준(사용자 지시 2026-11-08, 모든 언어앱). 배우기 「기초」 첫 줄.
 /// 자음 44(묶음: 전체·중·고·저 / 소리별) · 모음 25(단·장·복합) · 성조 5 격자 + 로마자 토글. 글자 탭 = 발음 시트(1초 뒤 자동 재생).
@@ -47,7 +47,7 @@ class _ThaiSoundChartScreenState extends State<ThaiSoundChartScreen> {
 
   Future<void> _load() async {
     await ThaiPhonetics.instance.ensureLoaded();
-    final j = json.decode(await rootBundle.loadString('assets/data/alphabet/th_alphabet.json')) as Map<String, dynamic>;
+    final j = json.decode(await tvBundle.loadString('assets/data/alphabet/th_alphabet.json')) as Map<String, dynamic>;
     final cons = [
       for (final c in (j['consonants'] as List).cast<Map<String, dynamic>>())
         _Cons(c['char'] as String, c['acrophonic'] as String, c['ko'] as String, c['cls'] as String),

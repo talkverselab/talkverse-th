@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:flutter/services.dart' show rootBundle;
 
 import '../models/tone.dart';
+import '../../core/embed_env.dart';
 
 /// 성조 JSON을 에셋에서 한 번 로드해 캐싱.
 class ToneRepository {
@@ -21,7 +21,7 @@ class ToneRepository {
   }
 
   Future<ToneData> _load() async {
-    final raw = await rootBundle.loadString(_assetPath);
+    final raw = await tvBundle.loadString(_assetPath);
     final map = json.decode(raw) as Map<String, dynamic>;
 
     final tones = (map['tones'] as List<dynamic>)

@@ -8,6 +8,7 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_web_auth_2/flutter_web_auth_2.dart';
 import 'package:http/http.dart' as http;
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+import '../core/embed_env.dart';
 
 /// Talkverse ID — 언어앱·talkverse.uk 와 같은 공용 계정(auth.talkverse.uk, 2026-11-02).
 /// 로그인은 선택: 안 해도 앱 전체가 동작한다. 로그인하면 이용권(lang = 'th')을 서버에서 받는다.
@@ -16,7 +17,8 @@ import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 class Account {
   Account._();
   static const base = 'https://auth.talkverse.uk';
-  static const clientId = 'th';
+  /// 통합 앱(Talkverse)이면 'talkverse', 단독 앱이면 'th'(2026-11-09 EMBED_GUIDE §4). 콜백 스킴은 그대로.
+  static String get clientId => embedded ? 'talkverse' : 'th';
   static const scheme = 'talkverse.th';
   static const _redirect = '$scheme://auth';
 
@@ -171,7 +173,10 @@ class Account {
     _access = null;
     user.value = null;
     entitlements.value = const [];
-    await _store.deleteAll();
+    // 우리 키만 지운다 — 통합 앱에서는 키체인을 다른 언어 패키지와 같이 쓴다. tv_* 는 Talkverse 계정 공용 키.
+    for (final k in const ['tv_refresh', 'tv_user', 'tv_ent']) {
+      await _store.delete(key: k);
+    }
   }
 
   static String get _device => 'th ${kIsWeb ? 'web' : Platform.operatingSystem}';
