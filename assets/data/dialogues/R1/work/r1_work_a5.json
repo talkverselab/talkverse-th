@@ -1,0 +1,162 @@
+{
+ "id": "r1_work_a5",
+ "region": "R1",
+ "island": "work",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "work"
+ ],
+ "domain": [
+  "work"
+ ],
+ "title": "비밀 산타",
+ "emoji": "🎁",
+ "scene": "연말 선물 교환 제비를 뽑고 누구를 뽑았는지 서로 떠본다",
+ "where": "사무실 탕비실",
+ "speakers": {
+  "A": "{name}",
+  "B": "ต้น"
+ },
+ "register": "polite",
+ "twist": 5,
+ "twist_type": "reveal",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "จับฉลาก",
+  "ได้ใคร",
+  "ของขวัญ"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "จับฉลากแล้วครับ",
+   "rd": "",
+   "ko": "제비 뽑았어요",
+   "note": "จับฉลาก = 제비 뽑다 · แล้ว = 이미",
+   "tags": [],
+   "new": [
+    "จับฉลาก",
+    "แล้ว",
+    "ครับ"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ได้ใครคะ",
+   "rd": "",
+   "ko": "누구 뽑았어요",
+   "note": "ได้ใคร = 누구 뽑다 · คะ = 존댓말",
+   "tags": [],
+   "new": [
+    "ได้ใคร",
+    "คะ"
+   ]
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ยังไม่บอกครับ",
+   "rd": "",
+   "ko": "아직 안 말해요",
+   "note": "ยังไม่ = 아직 안 · บอก = 말하다",
+   "tags": [],
+   "new": [
+    "ยังไม่",
+    "บอก"
+   ],
+   "emotion": "teasing"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ของขวัญอะไรดี",
+   "rd": "",
+   "ko": "선물 뭐가 좋아",
+   "note": "ของขวัญ = 선물 · อะไร = 뭐",
+   "tags": [],
+   "new": [
+    "ของขวัญ",
+    "อะไร"
+   ]
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ ได้คุณต้น",
+   "rd": "",
+   "ko": "어 ต้น 님 뽑았어요",
+   "note": "ได้ = 뽑다 · คุณ = 님",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ได้",
+    "คุณ"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
+   ]
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 จริงเหรอ",
+   "rd": "",
+   "ko": "555 진짜예요",
+   "note": "555 = 웃음 · จริงเหรอ = 진짜야",
+   "tags": [],
+   "new": [
+    "555",
+    "จริงเหรอ"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "ของขวัญอะไรดีครับ",
+   "rd": "",
+   "ko": "선물 뭐가 좋을까요",
+   "note": "ของขวัญ = 선물 · อะไรดี = 뭐가 좋아",
+   "tags": [],
+   "new": [
+    "ของขวัญ",
+    "อะไรดี"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "ฉันชอบขนมไทยนะ…",
+   "rd": "",
+   "ko": "나 태국 과자 좋아하는 거 알지…",
+   "note": "ขนมไทย = 태국 과자 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "ขนมไทย",
+    "นะ"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_work_a5_write.md",
+  "recommended": "ยังไม่เปิด / 아직 안 열었어\nแลกของขวัญ / 선물 교환"
+ }
+}

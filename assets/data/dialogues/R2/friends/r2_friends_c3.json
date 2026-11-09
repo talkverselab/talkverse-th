@@ -1,0 +1,200 @@
+{
+ "id": "r2_friends_c3",
+ "region": "R2",
+ "island": "friends",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "friends"
+ ],
+ "domain": [
+  "friends"
+ ],
+ "title": "N빵 정산",
+ "emoji": "🧾",
+ "scene": "여행 뒤 단톡방에서 숙소·밥값을 나누고 송금했는지 확인한다",
+ "where": "단톡방",
+ "speakers": {
+  "A": "{name}",
+  "B": "ต้น",
+  "C": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 7,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "หารกัน",
+  "โอนแล้วนะ",
+  "ขาดอีก"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "หารกันเท่าไหร่",
+   "rd": "",
+   "ko": "나눠서 얼마야",
+   "note": "หารกัน = 나눠 내다 · เท่าไหร่ = 얼마",
+   "tags": [],
+   "new": [
+    "หารกัน",
+    "เท่าไหร่"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "คนละห้าร้อย",
+   "rd": "",
+   "ko": "인당 500",
+   "note": "คนละ = 인당 · ห้าร้อย = 500",
+   "tags": [],
+   "new": [
+    "คนละ",
+    "ห้าร้อย"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "C",
+   "th": "โอนแล้วนะ",
+   "rd": "",
+   "ko": "송금했어",
+   "note": "โอนแล้ว = 송금했다 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "โอนแล้ว",
+    "นะ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "A",
+   "th": "ฉันโอนแล้วนะ",
+   "rd": "",
+   "ko": "나 송금했어",
+   "note": "โอนแล้ว = 송금했다 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "โอนแล้ว",
+    "นะ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "B",
+   "th": "เช็คยอดหน่อย",
+   "rd": "",
+   "ko": "금액 확인해",
+   "note": "เช็ค = 확인하다 · ยอด = 금액",
+   "tags": [],
+   "new": [
+    "เช็ค",
+    "ยอด"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "C",
+   "th": "โอเค รอแป๊บ",
+   "rd": "",
+   "ko": "오케이 잠깐만",
+   "note": "โอเค = 오케이 · รอ = 기다리다",
+   "tags": [],
+   "new": [
+    "โอเค",
+    "รอ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ โอนสองครั้ง",
+   "rd": "",
+   "ko": "어 두 번 보냈어",
+   "note": "โอน = 송금하다 · สองครั้ง = 두 번",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "โอน",
+    "สองครั้ง"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 ขาดอีกเหรอ",
+   "rd": "",
+   "ko": "555 또 모자란 거야",
+   "note": "555 = 웃음 · ขาดอีก = 또 모자라다",
+   "tags": [],
+   "new": [
+    "555",
+    "ขาดอีก"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "งั้นหารกันใหม่",
+   "rd": "",
+   "ko": "그럼 다시 나눠",
+   "note": "หารกัน = 나눠 내다 · ใหม่ = 다시",
+   "tags": [],
+   "new": [
+    "หารกัน",
+    "ใหม่"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 10,
+   "speaker": "C",
+   "th": "ส่วนเธอฉันจ่ายแล้ว…",
+   "rd": "",
+   "ko": "네 몫은 내가 이미 냈어…",
+   "note": "ส่วน = 몫 · จ่าย = 내다",
+   "tags": [],
+   "new": [
+    "ส่วน",
+    "จ่าย"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_friends_c3_write.md",
+  "recommended": "โอนแล้ว / 송금했어\nเท่าไหร่ต่อคน / 인당 얼마"
+ }
+}

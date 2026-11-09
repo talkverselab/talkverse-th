@@ -1,0 +1,169 @@
+{
+ "id": "r1_culture_c2",
+ "region": "R1",
+ "island": "culture",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "culture"
+ ],
+ "domain": [
+  "culture"
+ ],
+ "title": "이 노래 뭐야?",
+ "emoji": "🎵",
+ "scene": "ฟ้า 가 태국 노래를 추천하고 들어 봤는지, 무슨 뜻인지 묻는다",
+ "where": "채팅",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 5,
+ "twist_type": "emotion",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "เพลงนี้",
+  "แปลว่าอะไร",
+  "ฟังยัง"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "เพลงนี้ดีไหม",
+   "rd": "",
+   "ko": "이 노래 좋아",
+   "note": "เพลงนี้ = 이 노래 · ดี = 좋다",
+   "tags": [],
+   "new": [
+    "เพลงนี้",
+    "ดี"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ฟังยัง",
+   "rd": "",
+   "ko": "들어 봤어",
+   "note": "ฟัง = 듣다 · ยัง = 아직/이미",
+   "tags": [],
+   "new": [
+    "ฟัง",
+    "ยัง"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ฟังแล้ว แปลว่าอะไร",
+   "rd": "",
+   "ko": "들었어 무슨 뜻이야",
+   "note": "ฟังแล้ว = 들었어 · แปลว่า = 뜻이",
+   "tags": [],
+   "new": [
+    "ฟังแล้ว",
+    "แปลว่า"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ลองแปลดู",
+   "rd": "",
+   "ko": "번역해 봐",
+   "note": "ลอง = 해 보다 · แปล = 번역하다",
+   "tags": [],
+   "new": [
+    "ลอง",
+    "แปล"
+   ],
+   "emotion": "teasing",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ เพลงรักเหรอ",
+   "rd": "",
+   "ko": "어 사랑 노래야?",
+   "note": "เพลงรัก = 사랑 노래 · เหรอ = ~야?",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "เพลงรัก",
+    "เหรอ"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 ใช่แปลถูก",
+   "rd": "",
+   "ko": "555 맞아 번역 잘했어",
+   "note": "555 = 웃음 · ใช่ = 맞아",
+   "tags": [],
+   "new": [
+    "555",
+    "ใช่"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "แปลว่าอะไรอีก",
+   "rd": "",
+   "ko": "또 무슨 뜻이야",
+   "note": "แปลว่า = 뜻이 · อะไร = 뭐",
+   "tags": [],
+   "new": [
+    "แปลว่า",
+    "อะไร"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "แปลเสร็จยัง…",
+   "rd": "",
+   "ko": "번역 끝났어…",
+   "note": "แปล = 번역하다 · เสร็จ = 끝나다",
+   "tags": [],
+   "new": [
+    "แปล",
+    "เสร็จ"
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_culture_c2_write.md",
+  "recommended": "ฟังอีกที / 다시 들어\nเพลงโปรด / 좋아하는 노래"
+ }
+}

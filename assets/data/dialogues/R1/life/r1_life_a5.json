@@ -1,0 +1,164 @@
+{
+ "id": "r1_life_a5",
+ "region": "R1",
+ "island": "life",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "life"
+ ],
+ "domain": [
+  "life"
+ ],
+ "title": "오토바이 택시 요금",
+ "emoji": "🛵",
+ "scene": "골목 입구에서 오토바이 택시 기사에게 어느 소이까지 얼마인지 묻고 깎아 달라고 한다",
+ "where": "골목 입구",
+ "speakers": {
+  "A": "{name}",
+  "B": "พี่วิน"
+ },
+ "register": "polite",
+ "twist": 5,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ไปซอยไหน",
+  "กี่บาท",
+  "ลดหน่อย"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ไปซอยห้ากี่บาทครับ",
+   "rd": "",
+   "ko": "소이 5까지 얼마예요",
+   "note": "ไปซอย = 소이 가다 · กี่บาท = 얼마",
+   "tags": [],
+   "new": [
+    "ไปซอย",
+    "กี่บาท",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ห้าสิบบาทค่ะ",
+   "rd": "",
+   "ko": "50바트예요",
+   "note": "ห้าสิบ = 50 · บาท = 바트",
+   "tags": [],
+   "new": [
+    "ห้าสิบ",
+    "บาท"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ลดหน่อยได้ไหมครับ",
+   "rd": "",
+   "ko": "좀 깎아 주세요",
+   "note": "ลดหน่อย = 좀 깎다 · ได้ไหม = 할 수 있어",
+   "tags": [],
+   "new": [
+    "ลดหน่อย",
+    "ได้ไหม"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "สี่สิบก็ได้",
+   "rd": "",
+   "ko": "40이면 돼",
+   "note": "สี่สิบ = 40 · ก็ได้ = 해도 돼",
+   "tags": [],
+   "new": [
+    "สี่สิบ",
+    "ก็ได้"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ ซอยสี่ไม่ใช่ห้า",
+   "rd": "",
+   "ko": "어 소이 4지 5가 아니야",
+   "note": "ซอย = 소이 · ไม่ใช่ = 아니다",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ซอย",
+    "ไม่ใช่"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ]
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 ลงผิดซอย",
+   "rd": "",
+   "ko": "555 잘못된 소이에 내렸네",
+   "note": "555 = 웃음 · ผิดซอย = 잘못된 소이",
+   "tags": [],
+   "new": [
+    "555",
+    "ผิดซอย"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "ไปซอยห้าอีกที",
+   "rd": "",
+   "ko": "소이 5로 다시",
+   "note": "ไปซอย = 소이 가다 · อีกที = 다시",
+   "tags": [],
+   "new": [
+    "ไปซอย",
+    "อีกที"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "พรุ่งนี้ราคาลูกค้าประจำ…",
+   "rd": "",
+   "ko": "내일부터 단골 요금 해 줄게…",
+   "note": "พรุ่งนี้ = 내일 · ลูกค้าประจำ = 단골",
+   "tags": [],
+   "new": [
+    "พรุ่งนี้",
+    "ลูกค้าประจำ"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_life_a5_write.md",
+  "recommended": "ไปเลย / 가자\nเท่าไหร่ / 얼마야"
+ }
+}

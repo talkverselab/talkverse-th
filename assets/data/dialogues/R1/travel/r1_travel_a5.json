@@ -1,0 +1,164 @@
+{
+ "id": "r1_travel_a5",
+ "region": "R1",
+ "island": "travel",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "travel"
+ ],
+ "domain": [
+  "travel"
+ ],
+ "title": "수상시장 흥정",
+ "emoji": "🚤",
+ "scene": "수상시장 배 위 상인에게 망고 값을 묻고 흥정한다",
+ "where": "수상시장",
+ "speakers": {
+  "A": "{name}",
+  "B": "แม่ค้า"
+ },
+ "register": "polite",
+ "twist": 5,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "เท่าไหร่",
+  "แพงไป",
+  "แถมหน่อย"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "มะม่วงเท่าไหร่ครับ",
+   "rd": "",
+   "ko": "망고 얼마예요",
+   "note": "มะม่วง = 망고 · เท่าไหร่ = 얼마",
+   "tags": [],
+   "new": [
+    "มะม่วง",
+    "เท่าไหร่",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ร้อยบาทค่ะ",
+   "rd": "",
+   "ko": "100바트예요",
+   "note": "ร้อย = 100 · บาท = 바트",
+   "tags": [],
+   "new": [
+    "ร้อย",
+    "บาท"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "แพงไปครับ",
+   "rd": "",
+   "ko": "너무 비싸요",
+   "note": "แพงไป = 너무 비싸다 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "แพงไป",
+    "ครับ"
+   ],
+   "emotion": "worried"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "แปดสิบก็ได้",
+   "rd": "",
+   "ko": "80이면 돼",
+   "note": "แปดสิบ = 80 · ก็ได้ = 해도 돼",
+   "tags": [],
+   "new": [
+    "แปดสิบ",
+    "ก็ได้"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ เรือข้างๆถูกกว่า",
+   "rd": "",
+   "ko": "어 옆 배가 더 싸네",
+   "note": "เรือ = 배 · ถูกกว่า = 더 싸다",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "เรือ",
+    "ถูกกว่า"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
+   ]
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 ราคาเดิม",
+   "rd": "",
+   "ko": "555 원래 그 값이야",
+   "note": "555 = 웃음 · ราคาเดิม = 원래 가격",
+   "tags": [],
+   "new": [
+    "555",
+    "ราคาเดิม"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "แถมหน่อยได้ไหม",
+   "rd": "",
+   "ko": "하나 더 얹어 주세요",
+   "note": "แถมหน่อย = 하나 더 · ได้ไหม = 할 수 있어",
+   "tags": [],
+   "new": [
+    "แถมหน่อย",
+    "ได้ไหม"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "แถมให้หนึ่งผล…",
+   "rd": "",
+   "ko": "하나 더 얹어 줄게…",
+   "note": "แถม = 얹어 주다 · หนึ่งผล = 하나",
+   "tags": [],
+   "new": [
+    "แถม",
+    "หนึ่งผล"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_travel_a5_write.md",
+  "recommended": "ลดได้ไหม / 깎아 주세요\nเอาสอง / 두 개 주세요"
+ }
+}

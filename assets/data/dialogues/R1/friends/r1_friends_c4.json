@@ -1,0 +1,172 @@
+{
+ "id": "r1_friends_c4",
+ "region": "R1",
+ "island": "friends",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "friends"
+ ],
+ "domain": [
+  "friends"
+ ],
+ "title": "몰래 선물 모금",
+ "emoji": "🎂",
+ "scene": "ต้น 몰래 만든 방에서 생일 선물 돈을 얼마씩 낼지 정한다",
+ "where": "단톡방(ต้น 몰래 만든 방)",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า",
+  "C": "ต้น"
+ },
+ "register": "chat",
+ "twist": 5,
+ "twist_type": "slip",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ลงขัน",
+  "ผิดกลุ่ม",
+  "เซอร์ไพรส์"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ลงขันคนละเท่าไหร่",
+   "rd": "",
+   "ko": "인당 얼마씩 낼까",
+   "note": "ลงขัน = 돈을 모으다 · คนละ = 인당",
+   "tags": [],
+   "new": [
+    "ลงขัน",
+    "คนละ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "คนละห้าร้อยพอ",
+   "rd": "",
+   "ko": "인당 500이면 돼",
+   "note": "คนละ = 인당 · ห้าร้อย = 500",
+   "tags": [],
+   "new": [
+    "คนละ",
+    "ห้าร้อย"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "เซอร์ไพรส์ของขวัญอะไรดี",
+   "rd": "",
+   "ko": "깜짝 선물 뭐가 좋아",
+   "note": "เซอร์ไพรส์ = 깜짝 · ของขวัญ = 선물",
+   "tags": [],
+   "new": [
+    "เซอร์ไพรส์",
+    "ของขวัญ"
+   ],
+   "emotion": "excited",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "อย่าส่งผิดกลุ่มนะ",
+   "rd": "",
+   "ko": "잘못된 방에 보내지 마",
+   "note": "ผิดกลุ่ม = 잘못된 그룹 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "ผิดกลุ่ม",
+    "นะ"
+   ],
+   "emotion": "teasing",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ ส่งผิดกลุ่มแล้ว",
+   "rd": "",
+   "ko": "어 잘못된 방에 보냈어",
+   "note": "ผิดกลุ่ม = 잘못된 그룹 · เอ่อ = 어",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ผิดกลุ่ม",
+    "เอ่อ"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "C",
+   "th": "555 เห็นแล้วนะ",
+   "rd": "",
+   "ko": "555 봤어",
+   "note": "555 = 웃음 · เห็น = 보다",
+   "tags": [],
+   "new": [
+    "555",
+    "เห็น"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "ขอโทษ เซอร์ไพรส์พัง",
+   "rd": "",
+   "ko": "미안 깜짝이 망했어",
+   "note": "ขอโทษ = 미안 · เซอร์ไพรส์ = 깜짝",
+   "tags": [],
+   "new": [
+    "ขอโทษ",
+    "เซอร์ไพรส์"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "C",
+   "th": "ไม่เป็นไร แกล้งไม่รู้นะ…",
+   "rd": "",
+   "ko": "괜찮아 모르는 척해 줄게…",
+   "note": "ไม่เป็นไร = 괜찮아 · แกล้ง = 척하다",
+   "tags": [],
+   "new": [
+    "ไม่เป็นไร",
+    "แกล้ง"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_friends_c4_write.md",
+  "recommended": "คนละเท่าไหร่ / 인당 얼마\nอย่าบอกนะ / 말하지 마"
+ }
+}

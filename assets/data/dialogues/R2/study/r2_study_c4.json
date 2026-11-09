@@ -1,0 +1,199 @@
+{
+ "id": "r2_study_c4",
+ "region": "R2",
+ "island": "study",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "study"
+ ],
+ "domain": [
+  "study"
+ ],
+ "title": "모닝콜 약속",
+ "emoji": "⏰",
+ "scene": "시험 날 아침에 깨워 달라고 부탁하고 일어났는지 확인한다",
+ "where": "채팅",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 7,
+ "twist_type": "emotion",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ปลุกด้วย",
+  "ตื่นยัง",
+  "สู้ๆ"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ปลุกด้วยพรุ่งนี้",
+   "rd": "",
+   "ko": "내일 깨워 줘",
+   "note": "ปลุกด้วย = 깨워 줘 · พรุ่งนี้ = 내일",
+   "tags": [],
+   "new": [
+    "ปลุกด้วย",
+    "พรุ่งนี้"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ตื่นยัง",
+   "rd": "",
+   "ko": "일어났어",
+   "note": "ตื่น = 일어나다 · ยัง = 아직/이미",
+   "tags": [],
+   "new": [
+    "ตื่น",
+    "ยัง"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ยังไม่ตื่น",
+   "rd": "",
+   "ko": "아직 안 일어났어",
+   "note": "ยังไม่ = 아직 안 · ตื่น = 일어나다",
+   "tags": [],
+   "new": [
+    "ยังไม่",
+    "ตื่น"
+   ],
+   "emotion": "worried",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "สู้ๆนะ",
+   "rd": "",
+   "ko": "화이팅",
+   "note": "สู้ๆ = 화이팅 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "สู้ๆ",
+    "นะ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "ขอบคุณ",
+   "rd": "",
+   "ko": "고마워",
+   "note": "ขอบคุณ = 고마워",
+   "tags": [],
+   "new": [
+    "ขอบคุณ"
+   ],
+   "emotion": "polite",
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "โทรห้าครั้งแล้วนะ",
+   "rd": "",
+   "ko": "다섯 번 전화했어",
+   "note": "โทร = 전화하다 · ห้าครั้ง = 다섯 번",
+   "tags": [],
+   "new": [
+    "โทร",
+    "ห้าครั้ง"
+   ],
+   "emotion": "teasing",
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ ปิดนาฬิกา",
+   "rd": "",
+   "ko": "어 알람 껐어",
+   "note": "ปิด = 끄다 · นาฬิกา = 알람",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ปิด",
+    "นาฬิกา"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 ตื่นยัง",
+   "rd": "",
+   "ko": "555 일어났어",
+   "note": "555 = 웃음 · ตื่น = 일어나다",
+   "tags": [],
+   "new": [
+    "555",
+    "ตื่น"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "ตื่นแล้ว สู้ๆ",
+   "rd": "",
+   "ko": "일어났어 화이팅",
+   "note": "ตื่นแล้ว = 일어났다 · สู้ๆ = 화이팅",
+   "tags": [],
+   "new": [
+    "ตื่นแล้ว",
+    "สู้ๆ"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 10,
+   "speaker": "B",
+   "th": "ตื่นสิ ไปสอบให้ดี…",
+   "rd": "",
+   "ko": "일어나 잘 보고 와…",
+   "note": "ตื่น = 일어나다 · สอบ = 시험",
+   "tags": [],
+   "new": [
+    "ตื่น",
+    "สอบ"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_study_c4_write.md",
+  "recommended": "ตั้งนาฬิกา / 알람 맞춰\nไปสอบ / 시험 보러 가"
+ }
+}

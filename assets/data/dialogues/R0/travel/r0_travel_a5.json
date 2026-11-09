@@ -1,0 +1,165 @@
+{
+ "id": "r0_travel_a5",
+ "region": "R0",
+ "island": "travel",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "travel"
+ ],
+ "domain": [
+  "travel"
+ ],
+ "title": "지도가 거꾸로",
+ "emoji": "🧭",
+ "scene": "골목에서 휴대폰 지도를 보며 카페 가는 길을 묻고 왼쪽·오른쪽을 정한다",
+ "where": "골목",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "casual",
+ "twist": 5,
+ "twist_type": "slip",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ไปทางไหน",
+  "ซ้ายหรือขวา",
+  "หลงทาง"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ไปทางไหนดี",
+   "rd": "",
+   "ko": "어느 쪽으로 갈까",
+   "note": "ไปทางไหน = 어느 쪽으로 · ดี = 좋을까",
+   "tags": [],
+   "new": [
+    "ไปทางไหน",
+    "ดี"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ซ้ายหรือขวา",
+   "rd": "",
+   "ko": "왼쪽이냐 오른쪽이냐",
+   "note": "ซ้ายหรือขวา = 왼쪽 또는 오른쪽",
+   "tags": [],
+   "new": [
+    "ซ้าย",
+    "หรือ",
+    "ขวา"
+   ]
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "แผนที่บอกซ้ายนะ",
+   "rd": "",
+   "ko": "지도는 왼쪽이래",
+   "note": "แผนที่ = 지도 · บอก = 말하다",
+   "tags": [],
+   "new": [
+    "แผนที่",
+    "บอก",
+    "นะ"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ไปซ้ายเลย",
+   "rd": "",
+   "ko": "왼쪽으로 가",
+   "note": "ไปซ้าย = 왼쪽으로 가다 · เลย = 그냥",
+   "tags": [],
+   "new": [
+    "ไปซ้าย",
+    "เลย"
+   ],
+   "emotion": "teasing"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "ไปทางขวาเหรอ",
+   "rd": "",
+   "ko": "오른쪽으로야?",
+   "note": "ไปทางขวา = 오른쪽으로 · เหรอ = ~야?",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ไปทางขวา",
+    "เหรอ"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ]
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 แผนที่หมุน",
+   "rd": "",
+   "ko": "555 지도 방향 돌아갔어",
+   "note": "555 = 웃음 · หมุน = 돌다",
+   "tags": [],
+   "new": [
+    "555",
+    "หมุน"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ หลงทางแล้ว",
+   "rd": "",
+   "ko": "어 길 잃었네",
+   "note": "เอ่อ = 어 · หลงทาง = 길을 잃다",
+   "tags": [],
+   "new": [
+    "เอ่อ",
+    "หลงทาง",
+    "แล้ว"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "หลงทางก็ดี เดินกับ{name}…",
+   "rd": "",
+   "ko": "길 잃어도 좋아 {name}랑 걸으니까…",
+   "note": "หลงทาง = 길을 잃다 · เดินกับ = ~랑 걷다",
+   "tags": [],
+   "new": [
+    "หลงทาง",
+    "เดินกับ"
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r0_travel_a5_write.md",
+  "recommended": "ตรงไป / 직진\nเลี้ยวซ้าย / 좌회전"
+ }
+}

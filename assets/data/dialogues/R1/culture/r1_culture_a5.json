@@ -1,0 +1,163 @@
+{
+ "id": "r1_culture_a5",
+ "region": "R1",
+ "island": "culture",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "culture"
+ ],
+ "domain": [
+  "culture"
+ ],
+ "title": "스님 앞에서",
+ "emoji": "🙏",
+ "scene": "아침에 신발을 벗고 처음 탁발 공양을 드리는 법을 배운다",
+ "where": "아침 탁발 길",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "polite",
+ "twist": 5,
+ "twist_type": "slip",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ใส่บาตร",
+  "ถอดรองเท้า",
+  "สาธุ"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ถอดรองเท้าตรงไหนครับ",
+   "rd": "",
+   "ko": "신발 어디서 벗어요",
+   "note": "ถอดรองเท้า = 신발 벗다 · ตรงไหน = 어디",
+   "tags": [],
+   "new": [
+    "ถอดรองเท้า",
+    "ตรงไหน",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ตรงนี้ค่ะ",
+   "rd": "",
+   "ko": "여기예요",
+   "note": "ตรงนี้ = 여기 · ค่ะ = 존댓말",
+   "tags": [],
+   "new": [
+    "ตรงนี้",
+    "ค่ะ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ใส่บาตรยังไง",
+   "rd": "",
+   "ko": "탁발 어떻게 해요",
+   "note": "ใส่บาตร = 탁발 공양 · ยังไง = 어떻게",
+   "tags": [],
+   "new": [
+    "ใส่บาตร",
+    "ยังไง"
+   ]
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "วางข้าวเบาๆ",
+   "rd": "",
+   "ko": "밥을 살살 놓아",
+   "note": "วาง = 놓다 · เบาๆ = 살살",
+   "tags": [],
+   "new": [
+    "วาง",
+    "เบาๆ"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ เอาข้าวหนึ่งที่",
+   "rd": "",
+   "ko": "어 밥 하나 주세요",
+   "note": "เอา = 하다 · หนึ่งที่ = 하나",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "เอา",
+    "หนึ่งที่"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ]
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 ไม่ใช่สั่งอาหาร",
+   "rd": "",
+   "ko": "555 음식 주문 아니야",
+   "note": "555 = 웃음 · สั่งอาหาร = 음식 주문",
+   "tags": [],
+   "new": [
+    "555",
+    "สั่งอาหาร"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "สาธุครับ",
+   "rd": "",
+   "ko": "사뚜",
+   "note": "สาธุ = 사뚜 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "สาธุ",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "ใจถึงแล้ว…",
+   "rd": "",
+   "ko": "마음은 전해졌어…",
+   "note": "ใจ = 마음 · ถึง = 닿다",
+   "tags": [],
+   "new": [
+    "ใจ",
+    "ถึง"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_culture_a5_write.md",
+  "recommended": "วางเบาๆ / 살살 놓아\nสาธุค่ะ / 사뚜"
+ }
+}

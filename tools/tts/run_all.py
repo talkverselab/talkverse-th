@@ -5,7 +5,7 @@ PC 쪽은 작업 스케줄러 'TTS job 2060'(run_job.sh)이 돈다 — 참고 �
 import glob, json, os, subprocess, sys, time
 import ttslib as L
 PC = 'Administrator@100.127.143.37'; HERE = os.path.dirname(os.path.abspath(__file__))
-_a = [x for x in sys.argv[1:] if x != '--refs']; work = _a[0]; N = int(_a[1]) if len(_a) > 1 else 12
+_a = [x for x in sys.argv[1:] if x not in ('--refs', '--night')]; work = _a[0]; N = int(_a[1]) if len(_a) > 1 else 12
 os.makedirs(f'{work}/job', exist_ok=True); os.makedirs(f'{work}/wav', exist_ok=True)
 log = lambda *a: print(time.strftime('%H:%M:%S'), *a, flush=True)
 
@@ -61,6 +61,8 @@ log('남은 편', len(ids))
 for i in range(0, len(ids), N):
     if os.path.exists(f'{work}/PAUSE'):      # uk 가 중간에 짧은 시험을 끼울 때: 묶음 경계에서 멈춤(파일을 지우고 다시 실행하면 이어간다)
         log('PAUSE 로 멈춤 — 남은 편', len(ids) - i); sys.exit(0)
+    if '--night' in sys.argv and not (1 <= time.localtime().tm_hour < 7):   # 음성은 새벽 01~07시만(사용자 지시 2026-11-09)
+        log('07시 지나 멈춤 — 남은 편', len(ids) - i); sys.exit(0)
     eps = ids[i:i + N]
     sh(sys.executable, f'{HERE}/make_jobs.py', f'{work}/job', *eps); pc_run()
     for ep in eps:

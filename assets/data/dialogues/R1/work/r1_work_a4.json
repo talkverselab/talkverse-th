@@ -1,0 +1,163 @@
+{
+ "id": "r1_work_a4",
+ "region": "R1",
+ "island": "work",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "work"
+ ],
+ "domain": [
+  "work"
+ ],
+ "title": "복사기 전쟁",
+ "emoji": "🖨️",
+ "scene": "마감 전 복사기가 멈춰 옆자리 선배에게 무엇을 눌러야 하는지 묻는다",
+ "where": "사무실",
+ "speakers": {
+  "A": "{name}",
+  "B": "พี่หัวหน้า",
+  "C": "ต้น"
+ },
+ "register": "polite",
+ "twist": 5,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "เครื่องเสีย",
+  "กดอะไร",
+  "ช่วยด้วย"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "เครื่องเสียครับ",
+   "rd": "",
+   "ko": "복사기 고장 났어요",
+   "note": "เครื่องเสีย = 기계 고장 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "เครื่องเสีย",
+    "ครับ"
+   ],
+   "emotion": "worried"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "กดอะไรอยู่",
+   "rd": "",
+   "ko": "뭘 누르고 있어",
+   "note": "กด = 누르다 · อะไร = 뭐",
+   "tags": [],
+   "new": [
+    "กด",
+    "อะไร"
+   ]
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ช่วยด้วยครับ",
+   "rd": "",
+   "ko": "도와주세요",
+   "note": "ช่วยด้วย = 도와줘 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "ช่วยด้วย",
+    "ครับ"
+   ],
+   "emotion": "worried"
+  },
+  {
+   "num": 4,
+   "speaker": "C",
+   "th": "ดูกระดาษไหม",
+   "rd": "",
+   "ko": "종이 확인했어",
+   "note": "กระดาษ = 종이 · ไหม = ~했어",
+   "tags": [],
+   "new": [
+    "กระดาษ",
+    "ไหม"
+   ],
+   "emotion": "teasing"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ กระดาษหมด",
+   "rd": "",
+   "ko": "어 종이 떨어졌네",
+   "note": "กระดาษ = 종이 · หมด = 떨어지다",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "กระดาษ",
+    "หมด"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
+   ]
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 ไม่ได้เสีย",
+   "rd": "",
+   "ko": "555 고장 아니야",
+   "note": "555 = 웃음 · ไม่ได้เสีย = 고장 아니다",
+   "tags": [],
+   "new": [
+    "555",
+    "ไม่ได้เสีย"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "งั้นกดอะไรต่อ",
+   "rd": "",
+   "ko": "그럼 뭘 눌러요",
+   "note": "กด = 누르다 · อะไร = 뭐",
+   "tags": [],
+   "new": [
+    "กด",
+    "อะไร"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "เดือนแรกเป็นแบบนี้…",
+   "rd": "",
+   "ko": "첫 달엔 다 그래…",
+   "note": "เดือนแรก = 첫 달 · เป็นแบบนี้ = 이렇다",
+   "tags": [],
+   "new": [
+    "เดือนแรก",
+    "เป็นแบบนี้"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_work_a4_write.md",
+  "recommended": "ใส่กระดาษ / 종이 넣어\nลองใหม่ / 다시 해 봐"
+ }
+}

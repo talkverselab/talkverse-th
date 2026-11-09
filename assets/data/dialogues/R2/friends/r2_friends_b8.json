@@ -1,0 +1,190 @@
+{
+ "id": "r2_friends_b8",
+ "region": "R2",
+ "island": "friends",
+ "kind": "long",
+ "draft": true,
+ "purpose": [
+  "friends"
+ ],
+ "domain": [
+  "friends"
+ ],
+ "title": "축구장 대타",
+ "emoji": "🏕️",
+ "scene": "동네 풋살장에 사람이 모자라 학습자가 대신 뛰며 패스를 주고받는다",
+ "where": "동네 풋살장",
+ "speakers": {
+  "A": "{name}",
+  "B": "ต้น"
+ },
+ "register": "casual",
+ "twist": 7,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ส่งบอล",
+  "ยิงเลย",
+  "ขาดคน"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ขาดคนเหรอ",
+   "rd": "",
+   "ko": "사람 모자라",
+   "note": "ขาดคน = 사람 모자라다 · เหรอ = ~야?",
+   "tags": [],
+   "new": [
+    "ขาดคน",
+    "เหรอ"
+   ]
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ใช่ มาเล่นด้วย",
+   "rd": "",
+   "ko": "응 같이 해",
+   "note": "ใช่ = 응 · มาเล่น = 와서 하다",
+   "tags": [],
+   "new": [
+    "ใช่",
+    "มาเล่น"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ส่งบอลมา",
+   "rd": "",
+   "ko": "공 패스해",
+   "note": "ส่งบอล = 공 패스 · มา = 오다",
+   "tags": [],
+   "new": [
+    "ส่งบอล",
+    "มา"
+   ],
+   "emotion": "excited"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ยิงเลยสิ",
+   "rd": "",
+   "ko": "그냥 쏴",
+   "note": "ยิงเลย = 그냥 슛 · สิ = 좀",
+   "tags": [],
+   "new": [
+    "ยิงเลย",
+    "สิ"
+   ],
+   "emotion": "teasing"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "โอเค ฉันยิง",
+   "rd": "",
+   "ko": "오케이 내가 쏠게",
+   "note": "โอเค = 오케이 · ยิง = 슛하다",
+   "tags": [],
+   "new": [
+    "โอเค",
+    "ยิง"
+   ],
+   "emotion": "excited"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "ระวังประตูเรา",
+   "rd": "",
+   "ko": "우리 골대 조심해",
+   "note": "ระวัง = 조심하다 · ประตู = 골대",
+   "tags": [],
+   "new": [
+    "ระวัง",
+    "ประตู"
+   ],
+   "emotion": "worried"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ ยิงเข้าประตูเรา",
+   "rd": "",
+   "ko": "어 우리 골대에 넣었어",
+   "note": "ยิงเข้า = 넣다 · ประตูเรา = 우리 골대",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ยิงเข้า",
+    "ประตูเรา"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ]
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 ประตูตัวเอง",
+   "rd": "",
+   "ko": "555 자책골이네",
+   "note": "555 = 웃음 · ประตูตัวเอง = 자책골",
+   "tags": [],
+   "new": [
+    "555",
+    "ประตูตัวเอง"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "ขาดคนอีกไหม",
+   "rd": "",
+   "ko": "사람 또 모자라",
+   "note": "ขาดคน = 사람 모자라다 · อีก = 또",
+   "tags": [],
+   "new": [
+    "ขาดคน",
+    "อีก"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 10,
+   "speaker": "B",
+   "th": "ไม่เป็นไร อาทิตย์หน้ามาอีก…",
+   "rd": "",
+   "ko": "괜찮아 다음 주도 나와…",
+   "note": "ไม่เป็นไร = 괜찮아 · อาทิตย์หน้า = 다음 주",
+   "tags": [],
+   "new": [
+    "ไม่เป็นไร",
+    "อาทิตย์หน้า"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_friends_b8_write.md",
+  "recommended": "เล่นต่อ / 계속 하자\nส่งมา / 패스해"
+ }
+}

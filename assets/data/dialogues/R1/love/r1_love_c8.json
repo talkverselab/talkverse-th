@@ -1,0 +1,169 @@
+{
+ "id": "r1_love_c8",
+ "region": "R1",
+ "island": "love",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "love"
+ ],
+ "domain": [
+  "love"
+ ],
+ "title": "데리러 갈까?",
+ "emoji": "🌧️",
+ "scene": "비 오는 밤 퇴근길에 우산이 있는지, 데리러 갈지 채팅한다",
+ "where": "채팅",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 5,
+ "twist_type": "emotion",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ฝนตก",
+  "ไปรับไหม",
+  "ถึงแล้ว"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ฝนตกแล้ว",
+   "rd": "",
+   "ko": "비 와",
+   "note": "ฝนตก = 비가 오다 · แล้ว = 이미",
+   "tags": [],
+   "new": [
+    "ฝนตก",
+    "แล้ว"
+   ],
+   "emotion": "worried",
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ไปรับไหม",
+   "rd": "",
+   "ko": "데리러 갈까",
+   "note": "ไปรับ = 데리러 가다 · ไหม = ~할까",
+   "tags": [],
+   "new": [
+    "ไปรับ",
+    "ไหม"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ไม่ต้อง ถึงแล้ว",
+   "rd": "",
+   "ko": "괜찮아 도착했어",
+   "note": "ไม่ต้อง = 안 해도 돼 · ถึงแล้ว = 도착했다",
+   "tags": [],
+   "new": [
+    "ไม่ต้อง",
+    "ถึงแล้ว"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "จริงเหรอ",
+   "rd": "",
+   "ko": "진짜야",
+   "note": "จริงเหรอ = 진짜야",
+   "tags": [],
+   "new": [
+    "จริงเหรอ"
+   ],
+   "emotion": "surprised",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ อยู่ใกล้แล้ว",
+   "rd": "",
+   "ko": "어 이미 근처야",
+   "note": "อยู่ใกล้ = 근처에 있다 · แล้ว = 이미",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "อยู่ใกล้",
+    "แล้ว"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 มาเร็วมาก",
+   "rd": "",
+   "ko": "555 엄청 빨리 왔네",
+   "note": "555 = 웃음 · มาเร็ว = 빨리 오다",
+   "tags": [],
+   "new": [
+    "555",
+    "มาเร็ว"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "ถึงแล้วจริงๆ",
+   "rd": "",
+   "ko": "진짜 도착했어",
+   "note": "ถึงแล้ว = 도착했다 · จริงๆ = 진짜",
+   "tags": [],
+   "new": [
+    "ถึงแล้ว",
+    "จริงๆ"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "มาถึงแล้วเหรอ…",
+   "rd": "",
+   "ko": "벌써 왔어…",
+   "note": "มาถึง = 도착하다 · เหรอ = ~야?",
+   "tags": [],
+   "new": [
+    "มาถึง",
+    "เหรอ"
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_love_c8_write.md",
+  "recommended": "ฝนหนัก / 비 많이 와\nรอแป๊บ / 잠깐 기다려"
+ }
+}

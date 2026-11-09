@@ -1,0 +1,201 @@
+{
+ "id": "r2_friends_c1",
+ "region": "R2",
+ "island": "friends",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "friends"
+ ],
+ "domain": [
+  "friends"
+ ],
+ "title": "인스타 댓글 전쟁",
+ "emoji": "💬",
+ "scene": "ต้น 의 셀카에 댓글을 달고 친구들을 태그한다",
+ "where": "인스타 댓글",
+ "speakers": {
+  "A": "{name}",
+  "B": "ต้น",
+  "C": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 7,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "คอมเมนต์",
+  "แท็กเพื่อน",
+  "ปังมาก"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "คอมเมนต์อะไรดี",
+   "rd": "",
+   "ko": "댓글 뭐라고 달까",
+   "note": "คอมเมนต์ = 댓글 · อะไรดี = 뭐가 좋아",
+   "tags": [],
+   "new": [
+    "คอมเมนต์",
+    "อะไรดี"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "แท็กเพื่อนด้วยนะ",
+   "rd": "",
+   "ko": "친구도 태그해",
+   "note": "แท็กเพื่อน = 친구 태그 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "แท็กเพื่อน",
+    "นะ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "C",
+   "th": "ปังมากเลย",
+   "rd": "",
+   "ko": "완전 멋져",
+   "note": "ปังมาก = 완전 멋져 · เลย = 강조",
+   "tags": [],
+   "new": [
+    "ปังมาก",
+    "เลย"
+   ],
+   "emotion": "excited",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "A",
+   "th": "ฉันเขียนปังมาก",
+   "rd": "",
+   "ko": "나 멋있다고 쓸게",
+   "note": "เขียน = 쓰다 · ปังมาก = 멋져",
+   "tags": [],
+   "new": [
+    "เขียน",
+    "ปังมาก"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "B",
+   "th": "แท็กฉันด้วย",
+   "rd": "",
+   "ko": "나도 태그해",
+   "note": "แท็ก = 태그하다 · ด้วย = 도",
+   "tags": [],
+   "new": [
+    "แท็ก",
+    "ด้วย"
+   ],
+   "emotion": "teasing",
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "C",
+   "th": "โอเค รอคอมเมนต์",
+   "rd": "",
+   "ko": "오케이 댓글 기다려",
+   "note": "โอเค = 오케이 · รอ = 기다리다",
+   "tags": [],
+   "new": [
+    "โอเค",
+    "รอ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ พิมพ์ผิดอ้วน",
+   "rd": "",
+   "ko": "어 오타로 뚱뚱하다고",
+   "note": "พิมพ์ผิด = 오타 · อ้วน = 뚱뚱하다",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "พิมพ์ผิด",
+    "อ้วน"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 ไม่ใช่ปัง",
+   "rd": "",
+   "ko": "555 멋지가 아니야",
+   "note": "555 = 웃음 · ไม่ใช่ = 아니다",
+   "tags": [],
+   "new": [
+    "555",
+    "ไม่ใช่"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "แก้คอมเมนต์แล้ว",
+   "rd": "",
+   "ko": "댓글 고쳤어",
+   "note": "แก้ = 고치다 · คอมเมนต์ = 댓글",
+   "tags": [],
+   "new": [
+    "แก้",
+    "คอมเมนต์"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 10,
+   "speaker": "C",
+   "th": "กดไลก์ให้แล้วนะ…",
+   "rd": "",
+   "ko": "몰래 좋아요 눌렀어…",
+   "note": "กดไลก์ = 좋아요 누르다 · ให้ = 주다",
+   "tags": [],
+   "new": [
+    "กดไลก์",
+    "ให้"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_friends_c1_write.md",
+  "recommended": "แท็กมา / 태그해\nปังเวอร์ / 완전 멋져"
+ }
+}

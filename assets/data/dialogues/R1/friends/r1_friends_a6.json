@@ -1,0 +1,163 @@
+{
+ "id": "r1_friends_a6",
+ "region": "R1",
+ "island": "friends",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "friends"
+ ],
+ "domain": [
+  "friends"
+ ],
+ "title": "볼링 내기",
+ "emoji": "🎳",
+ "scene": "볼링장에서 신발을 빌리고 진 사람이 음료 사기 내기를 한다",
+ "where": "볼링장",
+ "speakers": {
+  "A": "{name}",
+  "B": "ต้น"
+ },
+ "register": "casual",
+ "twist": 5,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "พนันกัน",
+  "แพ้แล้ว",
+  "อีกตา"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "รองเท้าขนาดไหนดี",
+   "rd": "",
+   "ko": "신발 사이즈 몇이 좋아",
+   "note": "รองเท้า = 신발 · ขนาดไหน = 사이즈 몇",
+   "tags": [],
+   "new": [
+    "รองเท้า",
+    "ขนาดไหน"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "เอาสิบก็พอ แล้วพนันกัน",
+   "rd": "",
+   "ko": "10이면 돼 그리고 내기 하자",
+   "note": "เอา = 하다 · พนันกัน = 내기하다",
+   "tags": [],
+   "new": [
+    "เอา",
+    "พนันกัน"
+   ],
+   "emotion": "teasing"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "แพ้แล้วเลี้ยงเครื่องดื่ม",
+   "rd": "",
+   "ko": "지면 음료 사기",
+   "note": "แพ้แล้ว = 지면 · เลี้ยง = 사주다",
+   "tags": [],
+   "new": [
+    "แพ้แล้ว",
+    "เลี้ยง"
+   ],
+   "emotion": "excited"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "โอเค เริ่มเลย",
+   "rd": "",
+   "ko": "오케이 시작하자",
+   "note": "โอเค = 오케이 · เริ่ม = 시작하다",
+   "tags": [],
+   "new": [
+    "โอเค",
+    "เริ่ม"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ ตกคูทั้งตา",
+   "rd": "",
+   "ko": "어 거터만 굴렸어",
+   "note": "ตกคู = 거터 · ตา = 프레임",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ตกคู",
+    "ตา"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ]
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 แพ้แล้วจริงๆ",
+   "rd": "",
+   "ko": "555 진짜 졌네",
+   "note": "555 = 웃음 · แพ้แล้ว = 졌다",
+   "tags": [],
+   "new": [
+    "555",
+    "แพ้แล้ว"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "งั้นอีกตาได้ไหม",
+   "rd": "",
+   "ko": "그럼 한 판 더 해도 돼",
+   "note": "อีกตา = 한 판 더 · ได้ไหม = 해도 돼",
+   "tags": [],
+   "new": [
+    "อีกตา",
+    "ได้ไหม"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "อีกตาเลย ฉันสอนให้…",
+   "rd": "",
+   "ko": "한 판 더 하자 내가 알려 줄게…",
+   "note": "อีกตา = 한 판 더 · สอน = 가르치다",
+   "tags": [],
+   "new": [
+    "อีกตา",
+    "สอน"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_friends_a6_write.md",
+  "recommended": "เริ่มเลย / 시작하자\nเลี้ยงเลย / 사줄게"
+ }
+}

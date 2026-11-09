@@ -1,0 +1,191 @@
+{
+ "id": "r2_friends_b6",
+ "region": "R2",
+ "island": "friends",
+ "kind": "long",
+ "draft": true,
+ "purpose": [
+  "friends"
+ ],
+ "domain": [
+  "friends"
+ ],
+ "title": "게임 팀 해체",
+ "emoji": "🎮",
+ "scene": "PC방에서 시간을 충전하고 ต้น 과 팀으로 게임을 한다",
+ "where": "PC방",
+ "speakers": {
+  "A": "{name}",
+  "B": "ต้น"
+ },
+ "register": "casual",
+ "twist": 7,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "โทษกัน",
+  "อย่าโทษ",
+  "แพ้ก็แพ้"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "เติมเวลาเท่าไหร่ดี",
+   "rd": "",
+   "ko": "시간 얼마나 충전할까",
+   "note": "เติมเวลา = 시간 충전 · เท่าไหร่ = 얼마",
+   "tags": [],
+   "new": [
+    "เติมเวลา",
+    "เท่าไหร่"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "สองชั่วโมงพอ เล่นด้วยกัน",
+   "rd": "",
+   "ko": "2시간이면 돼 같이 하자",
+   "note": "สองชั่วโมง = 2시간 · เล่นด้วยกัน = 같이 하다",
+   "tags": [],
+   "new": [
+    "สองชั่วโมง",
+    "เล่นด้วยกัน"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "โทษกันถ้าแพ้",
+   "rd": "",
+   "ko": "지면 서로 탓하기",
+   "note": "โทษกัน = 서로 탓하다 · ถ้าแพ้ = 지면",
+   "tags": [],
+   "new": [
+    "โทษกัน",
+    "ถ้าแพ้"
+   ],
+   "emotion": "teasing"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "อย่าโทษฉันนะ",
+   "rd": "",
+   "ko": "나 탓하지 마",
+   "note": "อย่าโทษ = 탓하지 마 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "อย่าโทษ",
+    "นะ"
+   ],
+   "emotion": "teasing"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "แพ้ก็แพ้ เริ่มเลย",
+   "rd": "",
+   "ko": "지면 지는 거지 시작하자",
+   "note": "แพ้ก็แพ้ = 지면 지는 것 · เริ่ม = 시작하다",
+   "tags": [],
+   "new": [
+    "แพ้ก็แพ้",
+    "เริ่ม"
+   ],
+   "emotion": "excited"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "โอเค ทีมเดียวกัน",
+   "rd": "",
+   "ko": "오케이 같은 팀이야",
+   "note": "โอเค = 오케이 · ทีม = 팀",
+   "tags": [],
+   "new": [
+    "โอเค",
+    "ทีม"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ รีเพลย์ดูสิ",
+   "rd": "",
+   "ko": "어 리플레이 봐",
+   "note": "รีเพลย์ = 리플레이 · ดู = 보다",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "รีเพลย์",
+    "ดู"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
+   ]
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 ทั้งคู่ผิด",
+   "rd": "",
+   "ko": "555 둘 다 실수했네",
+   "note": "555 = 웃음 · ทั้งคู่ = 둘 다",
+   "tags": [],
+   "new": [
+    "555",
+    "ทั้งคู่"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "อย่าโทษกันแล้ว",
+   "rd": "",
+   "ko": "이제 서로 탓하지 말자",
+   "note": "อย่าโทษ = 탓하지 마 · แล้ว = 이제",
+   "tags": [],
+   "new": [
+    "อย่าโทษ",
+    "แล้ว"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 10,
+   "speaker": "B",
+   "th": "ทีมเราคือเธอคนเดียว…",
+   "rd": "",
+   "ko": "우리 팀은 너뿐이야…",
+   "note": "ทีมเรา = 우리 팀 · คนเดียว = 혼자",
+   "tags": [],
+   "new": [
+    "ทีมเรา",
+    "คนเดียว"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_friends_b6_write.md",
+  "recommended": "เล่นอีก / 한 판 더\nเติมต่อ / 시간 더 충전"
+ }
+}

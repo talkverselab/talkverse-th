@@ -1,0 +1,169 @@
+{
+ "id": "r1_travel_c1",
+ "region": "R1",
+ "island": "travel",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "travel"
+ ],
+ "domain": [
+  "travel"
+ ],
+ "title": "짐 어디 있어?",
+ "emoji": "🧳",
+ "scene": "공항 도착층에서 ฟ้า 를 기다리며 어디서 기다리는지 채팅한다",
+ "where": "채팅(공항)",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 5,
+ "twist_type": "reveal",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ถึงแล้ว",
+  "รออยู่ตรงไหน",
+  "กระเป๋า"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ถึงแล้ว",
+   "rd": "",
+   "ko": "도착했어",
+   "note": "ถึงแล้ว = 도착했다",
+   "tags": [],
+   "new": [
+    "ถึงแล้ว"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "รออยู่ตรงไหน",
+   "rd": "",
+   "ko": "어디서 기다려",
+   "note": "รออยู่ = 기다리고 있다 · ตรงไหน = 어디",
+   "tags": [],
+   "new": [
+    "รออยู่",
+    "ตรงไหน"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ชั้นหนึ่ง กระเป๋า",
+   "rd": "",
+   "ko": "1층 짐 찾는 곳",
+   "note": "ชั้นหนึ่ง = 1층 · กระเป๋า = 짐",
+   "tags": [],
+   "new": [
+    "ชั้นหนึ่ง",
+    "กระเป๋า"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ฉันชั้นสอง",
+   "rd": "",
+   "ko": "나 2층이야",
+   "note": "ชั้นสอง = 2층 · ฉัน = 나",
+   "tags": [],
+   "new": [
+    "ชั้นสอง",
+    "ฉัน"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ คนละชั้น",
+   "rd": "",
+   "ko": "어 다른 층이네",
+   "note": "คนละ = 서로 다른 · ชั้น = 층",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "คนละ",
+    "ชั้น"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 รอผิดที่",
+   "rd": "",
+   "ko": "555 잘못된 데서 기다렸네",
+   "note": "555 = 웃음 · ผิดที่ = 잘못된 곳",
+   "tags": [],
+   "new": [
+    "555",
+    "ผิดที่"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "งั้นรออยู่ตรงไหน",
+   "rd": "",
+   "ko": "그럼 어디서 기다려",
+   "note": "รออยู่ = 기다리고 있다 · ตรงไหน = 어디",
+   "tags": [],
+   "new": [
+    "รออยู่",
+    "ตรงไหน"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "เจอแล้ว…",
+   "rd": "",
+   "ko": "찾았다…",
+   "note": "เจอ = 찾다 · แล้ว = 이미",
+   "tags": [],
+   "new": [
+    "เจอ",
+    "แล้ว"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "excited"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_travel_c1_write.md",
+  "recommended": "อยู่ชั้นไหน / 몇 층이야\nออกมาเลย / 나와"
+ }
+}

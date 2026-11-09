@@ -1,0 +1,162 @@
+{
+ "id": "r1_friends_a7",
+ "region": "R1",
+ "island": "friends",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "friends"
+ ],
+ "domain": [
+  "friends"
+ ],
+ "title": "강아지 맡아 줘",
+ "emoji": "🐶",
+ "scene": "ต้น 이 하루 출장이라 강아지를 맡기며 밥·산책 시간을 알려 준다",
+ "where": "ต้น 의 콘도",
+ "speakers": {
+  "A": "{name}",
+  "B": "ต้น"
+ },
+ "register": "casual",
+ "twist": 5,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ฝากหน่อย",
+  "วันเดียว",
+  "ไม่กัดนะ"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "วันนี้ฝากหน่อยได้ไหม",
+   "rd": "",
+   "ko": "오늘 좀 맡겨도 돼",
+   "note": "ฝากหน่อย = 좀 맡기다 · วันนี้ = 오늘",
+   "tags": [],
+   "new": [
+    "ฝากหน่อย",
+    "วันนี้"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "วันเดียวเท่านั้น เดินเย็นห้าโมง",
+   "rd": "",
+   "ko": "하루만이야 산책은 저녁 5시",
+   "note": "วันเดียว = 하루만 · เดิน = 산책하다",
+   "tags": [],
+   "new": [
+    "วันเดียว",
+    "เดิน"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ข้าวกี่โมง",
+   "rd": "",
+   "ko": "밥은 몇 시",
+   "note": "ข้าว = 밥 · กี่โมง = 몇 시",
+   "tags": [],
+   "new": [
+    "ข้าว",
+    "กี่โมง"
+   ]
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "เช้าเจ็ด เย็นห้า ไม่กัดนะ",
+   "rd": "",
+   "ko": "아침 7시 저녁 5시 안 물어",
+   "note": "ไม่กัด = 안 물다 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "ไม่กัด",
+    "นะ"
+   ],
+   "emotion": "teasing"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ มันกัดรองเท้าฉัน",
+   "rd": "",
+   "ko": "어 내 슬리퍼 물고 다녀",
+   "note": "กัด = 물다 · รองเท้า = 슬리퍼",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "กัด",
+    "รองเท้า"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ]
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 ไม่กัดนะบอกแล้ว",
+   "rd": "",
+   "ko": "555 안 문다고 했잖아",
+   "note": "555 = 웃음 · ไม่กัด = 안 물다",
+   "tags": [],
+   "new": [
+    "555",
+    "ไม่กัด"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "งั้นวันเดียวพอไหม",
+   "rd": "",
+   "ko": "그럼 하루만 괜찮아",
+   "note": "วันเดียว = 하루만 · พอ = 괜찮아",
+   "tags": [],
+   "new": [
+    "วันเดียว",
+    "พอ"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "ฝากเพราะเชื่อใจเธอที่สุด…",
+   "rd": "",
+   "ko": "제일 믿을 만해서 부탁한 거야…",
+   "note": "ฝาก = 맡기다 · เชื่อใจ = 믿다",
+   "tags": [],
+   "new": [
+    "ฝาก",
+    "เชื่อใจ"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_friends_a7_write.md",
+  "recommended": "เดินเล่น / 산책하다\nให้อาหาร / 밥 주다"
+ }
+}

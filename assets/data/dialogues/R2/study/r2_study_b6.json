@@ -1,0 +1,192 @@
+{
+ "id": "r2_study_b6",
+ "region": "R2",
+ "island": "study",
+ "kind": "long",
+ "draft": true,
+ "purpose": [
+  "study"
+ ],
+ "domain": [
+  "study"
+ ],
+ "title": "커닝 오해",
+ "emoji": "📝",
+ "scene": "시험 전 휴대폰을 끄라는 안내를 듣고 시험을 본다",
+ "where": "시험장",
+ "speakers": {
+  "A": "{name}",
+  "B": "อาจารย์",
+  "C": "ฟ้า"
+ },
+ "register": "polite",
+ "twist": 7,
+ "twist_type": "reveal",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ปิดมือถือ",
+  "เข้าใจผิด",
+  "ขอโทษครับ"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "B",
+   "th": "ปิดมือถือทุกคน",
+   "rd": "",
+   "ko": "다들 휴대폰 꺼",
+   "note": "ปิดมือถือ = 휴대폰 끄다 · ทุกคน = 다들",
+   "tags": [],
+   "new": [
+    "ปิดมือถือ",
+    "ทุกคน"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 2,
+   "speaker": "A",
+   "th": "ปิดแล้วครับ",
+   "rd": "",
+   "ko": "껐어요",
+   "note": "ปิดแล้ว = 껐다 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "ปิดแล้ว",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 3,
+   "speaker": "C",
+   "th": "สู้ๆนะ",
+   "rd": "",
+   "ko": "화이팅",
+   "note": "สู้ๆ = 화이팅 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "สู้ๆ",
+    "นะ"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 4,
+   "speaker": "A",
+   "th": "เข้าใจครับ",
+   "rd": "",
+   "ko": "알겠어요",
+   "note": "เข้าใจ = 이해하다 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "เข้าใจ",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 5,
+   "speaker": "B",
+   "th": "เริ่มสอบได้",
+   "rd": "",
+   "ko": "시험 시작해도 돼",
+   "note": "เริ่ม = 시작하다 · สอบ = 시험",
+   "tags": [],
+   "new": [
+    "시작",
+    "สอบ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 6,
+   "speaker": "A",
+   "th": "โอเคครับ",
+   "rd": "",
+   "ko": "오케이요",
+   "note": "โอเค = 오케이 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "โอเค",
+    "ครับ"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ มือถือดัง",
+   "rd": "",
+   "ko": "어 휴대폰 울려요",
+   "note": "มือถือ = 휴대폰 · ดัง = 울리다",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "มือถือ",
+    "ดัง"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ]
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 ไม่ได้ปิด",
+   "rd": "",
+   "ko": "555 안 껐네",
+   "note": "555 = 웃음 · ไม่ได้ปิด = 안 껐다",
+   "tags": [],
+   "new": [
+    "555",
+    "ไม่ได้ปิด"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "ขอโทษครับ เข้าใจผิด",
+   "rd": "",
+   "ko": "죄송합니다 착각했어요",
+   "note": "ขอโทษ = 죄송하다 · เข้าใจผิด = 착각하다",
+   "tags": [],
+   "new": [
+    "ขอโทษ",
+    "เข้าใจผิด"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 10,
+   "speaker": "C",
+   "th": "สอบเสร็จไปโดนด่าด้วยกัน…",
+   "rd": "",
+   "ko": "시험 끝나고 같이 혼나러 가자…",
+   "note": "สอบเสร็จ = 시험 끝나다 · โดนด่า = 혼나다",
+   "tags": [],
+   "new": [
+    "สอบเสร็จ",
+    "โดนด่า"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_study_b6_write.md",
+  "recommended": "ปิดเสียง / 무음으로\nเริ่มได้ / 시작해도 돼"
+ }
+}

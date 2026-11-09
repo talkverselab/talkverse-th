@@ -1,0 +1,161 @@
+{
+ "id": "r1_study_a5",
+ "region": "R1",
+ "island": "study",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "study"
+ ],
+ "domain": [
+  "study"
+ ],
+ "title": "듣기 평가",
+ "emoji": "🎧",
+ "scene": "어학당 듣기 시간에 다시 들려 달라고 하고 답을 말한다",
+ "where": "어학당 교실",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "casual",
+ "twist": 5,
+ "twist_type": "slip",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ฟังอีกที",
+  "ตอบว่า",
+  "ผิดนิดเดียว"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ฟังอีกทีได้ไหม",
+   "rd": "",
+   "ko": "다시 들려 줄 수 있어",
+   "note": "ฟังอีกที = 다시 듣다 · ได้ไหม = 할 수 있어",
+   "tags": [],
+   "new": [
+    "ฟังอีกที",
+    "ได้ไหม"
+   ]
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ได้ ครูเปิดอีกที",
+   "rd": "",
+   "ko": "돼 선생님이 다시 틀어",
+   "note": "ได้ = 돼 · ครู = 선생님",
+   "tags": [],
+   "new": [
+    "ได้",
+    "ครู"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ตอบว่าอะไร",
+   "rd": "",
+   "ko": "답이 뭐야",
+   "note": "ตอบว่า = 답하다 · อะไร = 뭐",
+   "tags": [],
+   "new": [
+    "ตอบว่า",
+    "อะไร"
+   ]
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ฟังดีๆ นะ",
+   "rd": "",
+   "ko": "잘 들어",
+   "note": "ฟังดีๆ = 잘 듣다 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "ฟังดีๆ",
+    "นะ"
+   ],
+   "emotion": "teasing"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "ตอบว่าม้าเหรอ",
+   "rd": "",
+   "ko": "말이라고 답했어?",
+   "note": "ตอบว่า = 답하다 · ม้า = 말 (동물)",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ตอบว่า",
+    "ม้า"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ]
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 มาไม่ใช่ม้า",
+   "rd": "",
+   "ko": "555 오다지 말이 아니야",
+   "note": "555 = 웃음 · มา = 오다",
+   "tags": [],
+   "new": [
+    "555",
+    "มา"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "ผิดนิดเดียวเอง",
+   "rd": "",
+   "ko": "조금 틀렸어",
+   "note": "ผิด = 틀리다 · นิดเดียว = 조금",
+   "tags": [],
+   "new": [
+    "ผิด",
+    "นิดเดียว"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "เกือบถูกแล้ว…",
+   "rd": "",
+   "ko": "거의 맞았어…",
+   "note": "เกือบ = 거의 · ถูก = 맞다",
+   "tags": [],
+   "new": [
+    "เกือบ",
+    "ถูก"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_study_a5_write.md",
+  "recommended": "เปิดอีกที / 다시 틀어 줘\nฟังไม่ทัน / 못 들었어"
+ }
+}

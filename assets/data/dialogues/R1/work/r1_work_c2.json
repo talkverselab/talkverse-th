@@ -1,0 +1,170 @@
+{
+ "id": "r1_work_c2",
+ "region": "R1",
+ "island": "work",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "work"
+ ],
+ "domain": [
+  "work"
+ ],
+ "title": "오늘 재택이에요?",
+ "emoji": "📞",
+ "scene": "업무 채팅으로 오늘 재택인지 출근인지 묻고 답한다",
+ "where": "업무 채팅",
+ "speakers": {
+  "A": "{name}",
+  "B": "พี่หัวหน้า"
+ },
+ "register": "chat",
+ "twist": 5,
+ "twist_type": "slip",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ทำงานที่บ้าน",
+  "เข้าออฟฟิศ",
+  "รับทราบครับ"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "วันนี้ทำงานที่บ้านไหม",
+   "rd": "",
+   "ko": "오늘 재택이에요",
+   "note": "ทำงานที่บ้าน = 재택근무 · ไหม = ~예요",
+   "tags": [],
+   "new": [
+    "ทำงานที่บ้าน",
+    "ไหม"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "เข้าออฟฟิศนะ",
+   "rd": "",
+   "ko": "출근이야",
+   "note": "เข้าออฟฟิศ = 출근하다 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "เข้าออฟฟิศ",
+    "นะ"
+   ],
+   "emotion": "polite",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "รับทราบครับ",
+   "rd": "",
+   "ko": "알겠습니다",
+   "note": "รับทราบ = 알겠습니다 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "รับทราบ",
+    "ครับ"
+   ],
+   "emotion": "polite",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "มาเก้าโมง",
+   "rd": "",
+   "ko": "9시에 와",
+   "note": "มา = 오다 · เก้าโมง = 9시",
+   "tags": [],
+   "new": [
+    "มา",
+    "เก้าโมง"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ กดหัวใจไป",
+   "rd": "",
+   "ko": "어 하트 눌렀어요",
+   "note": "กด = 누르다 · หัวใจ = 하트",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "กด",
+    "หัวใจ"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 รับทราบหัวใจ",
+   "rd": "",
+   "ko": "555 하트로 알겠어요",
+   "note": "555 = 웃음 · หัวใจ = 하트",
+   "tags": [],
+   "new": [
+    "555",
+    "หัวใจ"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "รับทราบครับ จริงๆ",
+   "rd": "",
+   "ko": "진짜 알겠습니다",
+   "note": "รับทราบ = 알겠습니다 · จริงๆ = 진짜",
+   "tags": [],
+   "new": [
+    "รับทราบ",
+    "จริงๆ"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "❤️ เข้าออฟฟิศนะ…",
+   "rd": "",
+   "ko": "❤️ 출근이야…",
+   "note": "เข้าออฟฟิศ = 출근하다 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "เข้าออฟฟิศ",
+    "นะ"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_work_c2_write.md",
+  "recommended": "วันนี้ WFH / 오늘 재택\nมาสายได้ไหม / 늦어도 돼?"
+ }
+}

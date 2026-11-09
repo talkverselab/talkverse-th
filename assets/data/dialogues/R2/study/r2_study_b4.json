@@ -1,0 +1,191 @@
+{
+ "id": "r2_study_b4",
+ "region": "R2",
+ "island": "study",
+ "kind": "long",
+ "draft": true,
+ "purpose": [
+  "study"
+ ],
+ "domain": [
+  "study"
+ ],
+ "title": "실험실 사고",
+ "emoji": "🧪",
+ "scene": "대학 실험실에서 조교에게 순서를 묻고 첫 실험을 한다",
+ "where": "대학 실험실",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "polite",
+ "twist": 7,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ระวังนะ",
+  "ทำไงดี",
+  "อาจารย์มา"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ขั้นตอนแรกยังไงครับ",
+   "rd": "",
+   "ko": "첫 순서 어떻게 해요",
+   "note": "ขั้นตอน = 순서 · แรก = 첫",
+   "tags": [],
+   "new": [
+    "ขั้นตอน",
+    "แรก",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "เทน้ำก่อนค่ะ",
+   "rd": "",
+   "ko": "물 먼저 부어요",
+   "note": "เท = 붓다 · น้ำ = 물",
+   "tags": [],
+   "new": [
+    "เท",
+    "น้ำ"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ระวังนะครับ",
+   "rd": "",
+   "ko": "조심하세요",
+   "note": "ระวัง = 조심하다 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "ระวัง",
+    "นะ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ใช่ ระวังสารเคมี",
+   "rd": "",
+   "ko": "응 시약 조심해",
+   "note": "สารเคมี = 시약 · ระวัง = 조심하다",
+   "tags": [],
+   "new": [
+    "สารเคมี",
+    "ระวัง"
+   ],
+   "emotion": "teasing"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "ทำไงดีครับ",
+   "rd": "",
+   "ko": "어떻게 하죠",
+   "note": "ทำไงดี = 어떻게 하다 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "ทำไงดี",
+    "ครับ"
+   ],
+   "emotion": "worried"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "อาจารย์มารึยัง",
+   "rd": "",
+   "ko": "선생님 오셨어요",
+   "note": "อาจารย์ = 선생님 · มา = 오다",
+   "tags": [],
+   "new": [
+    "อาจารย์",
+    "มา"
+   ]
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ หยิบขวดผิด",
+   "rd": "",
+   "ko": "어 병 잘못 들었어요",
+   "note": "หยิบ = 들다 · ผิด = 잘못",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "หยิบ",
+    "ผิด"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ]
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 เริ่มใหม่เลย",
+   "rd": "",
+   "ko": "555 처음부터 다시야",
+   "note": "555 = 웃음 · เริ่มใหม่ = 다시 시작",
+   "tags": [],
+   "new": [
+    "555",
+    "เริ่มใหม่"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "ทำไงดีตอนนี้",
+   "rd": "",
+   "ko": "지금 어떻게 하죠",
+   "note": "ทำไงดี = 어떻게 하다 · ตอนนี้ = 지금",
+   "tags": [],
+   "new": [
+    "ทำไงดี",
+    "ตอนนี้"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 10,
+   "speaker": "B",
+   "th": "ฉันอยู่ช่วยเก็บ…",
+   "rd": "",
+   "ko": "내가 남아서 같이 정리해 줄게…",
+   "note": "อยู่ = 남다 · ช่วย = 돕다",
+   "tags": [],
+   "new": [
+    "อยู่",
+    "ช่วย"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_study_b4_write.md",
+  "recommended": "เริ่มใหม่ / 다시 시작\nระวังหน่อย / 조심해"
+ }
+}

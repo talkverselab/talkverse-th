@@ -1,0 +1,168 @@
+{
+ "id": "r1_friends_c3",
+ "region": "R1",
+ "island": "friends",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "friends"
+ ],
+ "domain": [
+  "friends"
+ ],
+ "title": "오늘 나올 사람",
+ "emoji": "🍻",
+ "scene": "단톡방에서 금요일 저녁 누가 시간 되는지, 몇 시에 어디서 볼지 정한다",
+ "where": "단톡방",
+ "speakers": {
+  "A": "{name}",
+  "B": "ต้น",
+  "C": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 5,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ใครว่างบ้าง",
+  "เจอกันกี่โมง",
+  "ขอโทษนะ"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ศุกร์ใครว่างบ้าง",
+   "rd": "",
+   "ko": "금요일 누구 시간 돼",
+   "note": "ใครว่าง = 누구 시간 되다 · ศุกร์ = 금요일",
+   "tags": [],
+   "new": [
+    "ใครว่าง",
+    "ศุกร์"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ฉันว่าง เจอกันกี่โมง",
+   "rd": "",
+   "ko": "나 돼 몇 시에 만나",
+   "note": "ว่าง = 시간 되다 · เจอกัน = 만나다",
+   "tags": [],
+   "new": [
+    "ว่าง",
+    "เจอกัน"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "C",
+   "th": "หกโมงที่เดิมได้ไหม",
+   "rd": "",
+   "ko": "6시에 그 자리에서 돼",
+   "note": "หกโมง = 6시 · ที่เดิม = 그 자리",
+   "tags": [],
+   "new": [
+    "หกโมง",
+    "ที่เดิม"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "A",
+   "th": "โอเค ทุกคนไปนะ",
+   "rd": "",
+   "ko": "오케이 다들 가는 거지",
+   "note": "โอเค = 오케이 · ทุกคน = 다들",
+   "tags": [],
+   "new": [
+    "โอเค",
+    "ทุกคน"
+   ],
+   "emotion": "excited",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "B",
+   "th": "ขอโทษนะ วันนี้ติดงาน",
+   "rd": "",
+   "ko": "미안 오늘 일 생겼어",
+   "note": "ขอโทษนะ = 미안해 · ติดงาน = 일 생기다",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ขอโทษนะ",
+    "ติดงาน"
+   ],
+   "emotion": "worried",
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "C",
+   "th": "555 เหลือสองคน",
+   "rd": "",
+   "ko": "555 둘만 남았네",
+   "note": "555 = 웃음 · เหลือ = 남다",
+   "tags": [],
+   "new": [
+    "555",
+    "เหลือ"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "งั้นเจอกันกี่โมง",
+   "rd": "",
+   "ko": "그럼 몇 시에 만나",
+   "note": "เจอกัน = 만나다 · กี่โมง = 몇 시",
+   "tags": [],
+   "new": [
+    "เจอกัน",
+    "กี่โมง"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "C",
+   "th": "งั้นสองคนเจอกันไหม…",
+   "rd": "",
+   "ko": "그럼 둘이 볼까…",
+   "note": "งั้น = 그럼 · สองคน = 둘",
+   "tags": [],
+   "new": [
+    "งั้น",
+    "สองคน"
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_friends_c3_write.md",
+  "recommended": "ไปได้ไหม / 갈 수 있어?\nเลื่อนได้ไหม / 미룰 수 있어?"
+ }
+}

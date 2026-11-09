@@ -1,0 +1,172 @@
+{
+ "id": "r0_love_c6",
+ "region": "R0",
+ "island": "love",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "love"
+ ],
+ "domain": [
+  "love"
+ ],
+ "title": "매칭됐어요",
+ "emoji": "💘",
+ "scene": "앱에서 매칭되어 인사하고 지금 뭐 하는지, 어디 있는지 묻는다",
+ "where": "데이팅 앱",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 5,
+ "twist_type": "emotion",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "สวัสดี",
+  "ทำอะไรอยู่",
+  "อยู่ไหน"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "สวัสดี ฟ้า",
+   "rd": "",
+   "ko": "안녕 ฟ้า",
+   "note": "สวัสดี = 안녕 · ฟ้า = 이름",
+   "tags": [],
+   "new": [
+    "สวัสดี",
+    "ฟ้า"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "สวัสดี ทำอะไรอยู่",
+   "rd": "",
+   "ko": "안녕 뭐 해",
+   "note": "ทำอะไรอยู่ = 뭐 하고 있어",
+   "tags": [],
+   "new": [
+    "สวัสดี",
+    "ทำอะไรอยู่"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ชิลๆ อยู่ที่คาเฟ่",
+   "rd": "",
+   "ko": "카페에서 쉬고 있어",
+   "note": "ชิลๆ = 느긋하게 · อยู่ที่ = ~에 있다",
+   "tags": [],
+   "new": [
+    "ชิลๆ",
+    "อยู่ที่",
+    "คาเฟ่"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "อยู่ไหนอ่ะ",
+   "rd": "",
+   "ko": "어디야",
+   "note": "อยู่ไหน = 어디 · อ่ะ = 구어 끝말",
+   "tags": [],
+   "new": [
+    "อยู่ไหน",
+    "อ่ะ"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "คาเฟ่หัวมุมอ่ะ",
+   "rd": "",
+   "ko": "모퉁이 카페야",
+   "note": "คาเฟ่ = 카페 · หัวมุม = 모퉁이",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "คาเฟ่",
+    "หัวมุม",
+    "อ่ะ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 ฉันก็ที่นั่น",
+   "rd": "",
+   "ko": "555 나도 거기야",
+   "note": "555 = 웃음 · ที่นั่น = 거기",
+   "tags": [],
+   "new": [
+    "555",
+    "ที่นั่น"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "surprised"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "จริงเหรอ",
+   "rd": "",
+   "ko": "진짜야",
+   "note": "จริงเหรอ = 진짜야",
+   "tags": [],
+   "new": [
+    "จริงเหรอ"
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "งั้นกาแฟด้วยกันไหม…",
+   "rd": "",
+   "ko": "그럼 커피 한 잔 할래…",
+   "note": "งั้น = 그럼 · ด้วยกัน = 같이",
+   "tags": [],
+   "new": [
+    "งั้น",
+    "ด้วยกัน",
+    "ไหม"
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r0_love_c6_write.md",
+  "recommended": "อยู่ใกล้ไหม / 가까워?\nส่งรูปมา / 사진 보내"
+ }
+}

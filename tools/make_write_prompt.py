@@ -8,13 +8,14 @@ LEVEL = {'R0': '왕초보(턴당 1문장, 가끔 2문장 · 4~8단어 — 쉬운
 LEN = {'R0': '1문장(가끔 2문장), 4~8단어, 독음 8~14음절 — 단어 하나짜리 대답 금지', 'R1': '1~2문장(독음 20음절 안팎)', 'R2': '1~2문장', 'R3': '1~3문장', 'R4': '1~3문장(긴 턴은 복문으로)'}
 TURNS = {'R0': 8, 'R1': 8, 'R2': 10, 'R3': 13, 'R4': 14}
 REG = {'polite': '존댓말(ครับ/ค่ะ)', 'casual': '반말(친구·연인)', 'mixed': '존댓말로 시작해 반말로 넘어감', 'chat': '채팅(LINE 말투, 짧게)'}
-TT = {'chaos': '일이 걷잡을 수 없이 커지는 장면 — 끝으로 갈수록 사람·물건·오해가 늘어나게, 줄이지 말고 더 세게.',
-      'slip': '말실수(성조·어미·직역) 하나가 판을 뒤집는 장면 — 실수를 상대가 받아치며 웃음이 커지게.',
-      'reveal': '숨기던 마음·사실이 들키는 장면 — 들키는 순간을 짧고 세게.',
+TT = {'chaos': '현실에서 있을 법한 꼬임 하나(주문이 바뀜·약속 장소를 서로 다르게 앎·단톡방에 잘못 보냄 정도) — 과장된 소동·우연의 연속·비현실적 사건 금지.',
+      'slip': '말실수(성조·어미·직역) 하나와 상대의 정정 — 일상 대화 흐름 안에서 가볍게.',
+      'reveal': '작은 의외 사실이 드러남(알고 보니 같은 동네·이미 계산함 정도) — 짧게.',
       'emotion': '심쿵 — 상대가 마음을 들키는 한 줄(말끝 흐리기·여운)이 핵심, 설명하지 말 것.',
-      'ignore': '한쪽이 완전히 엉뚱하게 반응(무시·딴소리)해서 웃긴 장면.'}
+      'ignore': '예상 밖의 무심한 대답·읽씹 정도의 엇갈림.'}
+SHORT = '--short' in sys.argv  # 한 줄 기획(규칙은 방에 한 번 — tools/prompts/write_rules_grok.md, 2026-11-09 프롬프트 최소화)
 plans = json.load(open(sys.argv[1], encoding='utf-8'))
-want = set(sys.argv[2:])
+want = {a for a in sys.argv[2:] if not a.startswith('--')}
 for p in plans:
     if want and p['id'] not in want:
         continue
@@ -25,6 +26,10 @@ for p in plans:
             .replace('{register}', REG.get(p['register'], p['register'])).replace('{level}', LEVEL[region]).replace('{twist_type}', p['twist_type'])
             .replace('{twist_rule}', TT[p['twist_type']]).replace('{twist}', str(p['twist'])).replace('{chaos}', p['chaos']).replace('{heart}', p['heart'])
             .replace('{n}', str(n)).replace('{targets}', '·'.join(p['targets'])).replace('{length}', LEN[region]))
+    if SHORT:
+        sp = ', '.join(f"{k}={'학습자 {name}' if v == '{name}' else v}" for k, v in p['speakers'].items())
+        text = (f"[{p['id']}] {sp} | {p['where']} | {p['scene']} | {REG.get(p['register'], p['register'])} | {region} | {p['twist_type']}@{p['twist']} | "
+                f"카오스: {p['chaos']} | 심쿵: {p['heart']} | 목표: {'·'.join(p['targets'])} | {n}턴")
     out = ROOT / f"data/review/{p['id']}_write_prompt.md"
     out.write_text(text, encoding='utf-8')
     print(out)

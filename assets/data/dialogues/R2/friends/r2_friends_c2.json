@@ -1,0 +1,199 @@
+{
+ "id": "r2_friends_c2",
+ "region": "R2",
+ "island": "friends",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "friends"
+ ],
+ "domain": [
+  "friends"
+ ],
+ "title": "친구한테만 말해",
+ "emoji": "🫣",
+ "scene": "DM으로 ต้น 이 아무에게도 말하지 말라며 비밀을 털어놓는다",
+ "where": "DM",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 7,
+ "twist_type": "reveal",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "อย่าบอกใคร",
+  "รู้กันทั้งกลุ่ม",
+  "สาบาน"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "มีอะไรเหรอ",
+   "rd": "",
+   "ko": "무슨 일이야",
+   "note": "มีอะไร = 무슨 일 · เหรอ = ~야?",
+   "tags": [],
+   "new": [
+    "มีอะไร",
+    "เหรอ"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "อย่าบอกใครนะ",
+   "rd": "",
+   "ko": "아무에게도 말하지 마",
+   "note": "อย่าบอก = 말하지 마 · ใคร = 누구",
+   "tags": [],
+   "new": [
+    "อย่าบอก",
+    "ใคร"
+   ],
+   "emotion": "worried",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "สาบานได้ไหม",
+   "rd": "",
+   "ko": "맹세할 수 있어",
+   "note": "สาบาน = 맹세하다 · ได้ไหม = 할 수 있어",
+   "tags": [],
+   "new": [
+    "สาบาน",
+    "ได้ไหม"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "สาบาน เรื่องต้น",
+   "rd": "",
+   "ko": "맹세해 ต้น 얘기야",
+   "note": "สาบาน = 맹세하다 · เรื่อง = 이야기",
+   "tags": [],
+   "new": [
+    "สาบาน",
+    "เรื่อง"
+   ],
+   "emotion": "teasing",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "รู้แล้วเหรอ",
+   "rd": "",
+   "ko": "이미 알아",
+   "note": "รู้แล้ว = 이미 알다 · เหรอ = ~야?",
+   "tags": [],
+   "new": [
+    "รู้แล้ว",
+    "เหรอ"
+   ],
+   "emotion": "surprised",
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "ยัง อย่าบอก",
+   "rd": "",
+   "ko": "아직 말하지 마",
+   "note": "ยัง = 아직 · อย่าบอก = 말하지 마",
+   "tags": [],
+   "new": [
+    "ยัง",
+    "อย่าบอก"
+   ],
+   "emotion": "worried",
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ รู้กันทั้งกลุ่ม",
+   "rd": "",
+   "ko": "어 단톡 사람들이 다 알아",
+   "note": "รู้กัน = 서로 알다 · ทั้งกลุ่ม = 그룹 전체",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "รู้กัน",
+    "ทั้งกลุ่ม"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 จริงดิ",
+   "rd": "",
+   "ko": "555 진짜야",
+   "note": "555 = 웃음 · จริงดิ = 진짜야",
+   "tags": [],
+   "new": [
+    "555",
+    "จริงดิ"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "งั้นสาบานทำไม",
+   "rd": "",
+   "ko": "그럼 왜 맹세해",
+   "note": "สาบาน = 맹세하다 · ทำไม = 왜",
+   "tags": [],
+   "new": [
+    "สาบาน",
+    "ทำไม"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 10,
+   "speaker": "B",
+   "th": "กับเธอจริงๆ นะ…",
+   "rd": "",
+   "ko": "너한테만은 진짜야…",
+   "note": "กับเธอ = 너한테 · จริงๆ = 진짜",
+   "tags": [],
+   "new": [
+    "กับเธอ",
+    "จริงๆ"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_friends_c2_write.md",
+  "recommended": "เก็บเป็นความลับ / 비밀로 해\nอย่าแชร์ / 공유하지 마"
+ }
+}

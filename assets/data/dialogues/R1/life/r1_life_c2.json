@@ -1,0 +1,169 @@
+{
+ "id": "r1_life_c2",
+ "region": "R1",
+ "island": "life",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "life"
+ ],
+ "domain": [
+  "life"
+ ],
+ "title": "장 볼 목록",
+ "emoji": "🛒",
+ "scene": "마트에 간 학습자에게 ฟ้า 가 장 볼 목록을 채팅으로 보낸다",
+ "where": "채팅",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 5,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ซื้อเพิ่ม",
+  "อีกอย่าง",
+  "พอแล้ว"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ซื้ออะไรดี",
+   "rd": "",
+   "ko": "뭐 살까",
+   "note": "ซื้อ = 사다 · อะไร = 뭐",
+   "tags": [],
+   "new": [
+    "ซื้อ",
+    "อะไร"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ไข่กับนมก่อน",
+   "rd": "",
+   "ko": "계란이랑 우유 먼저",
+   "note": "ไข่ = 계란 · นม = 우유",
+   "tags": [],
+   "new": [
+    "ไข่",
+    "นม"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ซื้อเพิ่มอีกอย่างไหม",
+   "rd": "",
+   "ko": "하나 더 살까",
+   "note": "ซื้อเพิ่ม = 더 사다 · อีกอย่าง = 하나 더",
+   "tags": [],
+   "new": [
+    "ซื้อเพิ่ม",
+    "อีกอย่าง"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "อีกอย่าง ผักด้วย",
+   "rd": "",
+   "ko": "하나 더 채소도",
+   "note": "อีกอย่าง = 하나 더 · ผัก = 채소",
+   "tags": [],
+   "new": [
+    "อีกอย่าง",
+    "ผัก"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ เต็มแล้ว",
+   "rd": "",
+   "ko": "어 가득 찼어",
+   "note": "เต็ม = 가득 · แล้ว = 이미",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "เต็ม",
+    "แล้ว"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 พอแล้วเหรอ",
+   "rd": "",
+   "ko": "555 이제 됐어",
+   "note": "555 = 웃음 · พอแล้ว = 이제 됐다",
+   "tags": [],
+   "new": [
+    "555",
+    "พอแล้ว"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "พอแล้วจริงๆ",
+   "rd": "",
+   "ko": "진짜 이제 됐어",
+   "note": "พอแล้ว = 이제 됐다 · จริงๆ = 진짜",
+   "tags": [],
+   "new": [
+    "พอแล้ว",
+    "จริงๆ"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "พรุ่งนี้ฉันทำอาหารให้…",
+   "rd": "",
+   "ko": "내일 내가 이걸로 요리해 줄게…",
+   "note": "พรุ่งนี้ = 내일 · ทำอาหาร = 요리하다",
+   "tags": [],
+   "new": [
+    "พรุ่งนี้",
+    "ทำอาหาร"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_life_c2_write.md",
+  "recommended": "ซื้อมาเลย / 사 와\nอย่าลืม / 잊지 마"
+ }
+}

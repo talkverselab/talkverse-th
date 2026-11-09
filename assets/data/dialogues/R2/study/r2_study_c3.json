@@ -1,0 +1,201 @@
+{
+ "id": "r2_study_c3",
+ "region": "R2",
+ "island": "study",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "study"
+ ],
+ "domain": [
+  "study"
+ ],
+ "title": "교수님 단톡방",
+ "emoji": "🧑‍🏫",
+ "scene": "수업 단톡방에서 과제 마감과 제출 방법을 확인한다",
+ "where": "수업 단톡방",
+ "speakers": {
+  "A": "{name}",
+  "B": "อาจารย์",
+  "C": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 7,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ลบข้อความ",
+  "ส่งผิด",
+  "ขอโทษอาจารย์"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ส่งงานยังไงครับ",
+   "rd": "",
+   "ko": "과제 어떻게 내요",
+   "note": "ส่งงาน = 과제 내다 · ยังไง = 어떻게",
+   "tags": [],
+   "new": [
+    "ส่งงาน",
+    "ยังไง"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "อัปโหลดก่อนเที่ยงคืน",
+   "rd": "",
+   "ko": "자정 전에 업로드",
+   "note": "อัปโหลด = 업로드 · เที่ยงคืน = 자정",
+   "tags": [],
+   "new": [
+    "อัปโหลด",
+    "เที่ยงคืน"
+   ],
+   "emotion": "polite",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "C",
+   "th": "เข้าใจค่ะ",
+   "rd": "",
+   "ko": "알겠어요",
+   "note": "เข้าใจ = 이해하다 · ค่ะ = 존댓말",
+   "tags": [],
+   "new": [
+    "เข้าใจ",
+    "ค่ะ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "A",
+   "th": "โอเคครับ",
+   "rd": "",
+   "ko": "오케이요",
+   "note": "โอเค = 오케이 · ครับ = 존댓말",
+   "tags": [],
+   "new": [
+    "โอเค",
+    "ครับ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "B",
+   "th": "ถามได้ถ้าไม่เข้าใจ",
+   "rd": "",
+   "ko": "이해 안 되면 물어봐",
+   "note": "ถาม = 묻다 · ไม่เข้าใจ = 이해 못 하다",
+   "tags": [],
+   "new": [
+    "ถาม",
+    "ไม่เข้าใจ"
+   ],
+   "emotion": "polite",
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "C",
+   "th": "ขอบคุณค่ะ",
+   "rd": "",
+   "ko": "감사해요",
+   "note": "ขอบคุณ = 감사하다 · ค่ะ = 존댓말",
+   "tags": [],
+   "new": [
+    "ขอบคุณ",
+    "ค่ะ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ ส่งผิด งานเยอะไป",
+   "rd": "",
+   "ko": "어 잘못된 방에 과제 너무 많아",
+   "note": "ส่งผิด = 잘못 보내다 · งาน = 과제",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ส่งผิด",
+    "งาน"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 ลบข้อความได้",
+   "rd": "",
+   "ko": "555 메시지 지울 수 있어",
+   "note": "555 = 웃음 · ลบ = 지우다",
+   "tags": [],
+   "new": [
+    "555",
+    "ลบ"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 9,
+   "speaker": "A",
+   "th": "ขอโทษอาจารย์ครับ",
+   "rd": "",
+   "ko": "죄송합니다 교수님",
+   "note": "ขอโทษ = 죄송하다 · อาจารย์ = 교수님",
+   "tags": [],
+   "new": [
+    "ขอโทษ",
+    "อาจารย์"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 10,
+   "speaker": "C",
+   "th": "ถามเรื่องส่งงานอีกที…",
+   "rd": "",
+   "ko": "제출 방법 다시 물어볼게요…",
+   "note": "ถาม = 묻다 · ส่งงาน = 과제 내다",
+   "tags": [],
+   "new": [
+    "ถาม",
+    "ส่งงาน"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "teasing"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r2_study_c3_write.md",
+  "recommended": "ลบได้ไหม / 지울 수 있어?\nส่งถูกห้อง / 올바른 방에 보내"
+ }
+}

@@ -1,0 +1,170 @@
+{
+ "id": "r0_work_a3",
+ "region": "R0",
+ "island": "work",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "work"
+ ],
+ "domain": [
+  "work"
+ ],
+ "title": "점심 뭐 먹어?",
+ "emoji": "🍱",
+ "scene": "점심 메뉴를 묻는데 동료는 계속 다른 말만 한다",
+ "where": "회사 앞",
+ "speakers": {
+  "A": "{name}",
+  "B": "ต้น"
+ },
+ "register": "polite",
+ "twist": 5,
+ "twist_type": "ignore",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "กินอะไรดี",
+  "อะไรก็ได้",
+  "ไปกัน"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "วันนี้กินอะไรดีครับ",
+   "rd": "",
+   "ko": "오늘 뭐 먹을까요",
+   "note": "กินอะไรดี = 뭐 먹을까 · วันนี้ = 오늘",
+   "tags": [],
+   "new": [
+    "กินอะไรดี",
+    "วันนี้",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "หวยออกเมื่อเช้าค่ะ",
+   "rd": "",
+   "ko": "복권 아침에 나왔어요",
+   "note": "หวยออก = 복권 나오다 · เมื่อเช้า = 아침",
+   "tags": [],
+   "new": [
+    "หวย",
+    "ออก",
+    "เมื่อเช้า"
+   ],
+   "emotion": "cheerful",
+   "emotions": [
+    "cheerful",
+    "amused"
+   ]
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ไปกินข้าวกันไหมครับ",
+   "rd": "",
+   "ko": "밥 먹으러 갈까요",
+   "note": "ไปกัน = 같이 가다 · กินข้าว = 밥 먹다",
+   "tags": [],
+   "new": [
+    "ไปกัน",
+    "กินข้าว",
+    "ไหม"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ฉันถูกรางวัลค่ะ",
+   "rd": "",
+   "ko": "저 당첨됐어요",
+   "note": "ถูก = 당첨되다 · รางวัล = 상",
+   "tags": [],
+   "new": [
+    "ถูก",
+    "รางวัล"
+   ],
+   "emotion": "excited"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "อะไรก็ได้ครับ",
+   "rd": "",
+   "ko": "뭐든 괜찮아요",
+   "note": "อะไรก็ได้ = 뭐든 괜찮아",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "อะไรก็ได้",
+    "ครับ"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "polite"
+   ]
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 ถูกจริงๆนะ",
+   "rd": "",
+   "ko": "555 진짜 당첨이야",
+   "note": "555 = 웃음 · จริงๆ = 진짜",
+   "tags": [],
+   "new": [
+    "555",
+    "จริงๆ"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "งั้นไปกันครับ",
+   "rd": "",
+   "ko": "그럼 가요",
+   "note": "งั้น = 그럼 · ไปกัน = 가자",
+   "tags": [],
+   "new": [
+    "งั้น",
+    "ไปกัน"
+   ],
+   "emotion": "cheerful"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "ฉันเลี้ยงข้าววันนี้…",
+   "rd": "",
+   "ko": "오늘 내가 살게…",
+   "note": "เลี้ยงข้าว = 밥 사주다 · วันนี้ = 오늘",
+   "tags": [],
+   "new": [
+    "เลี้ยงข้าว",
+    "วันนี้"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "cheerful"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r0_work_a3_write.md",
+  "recommended": "หิวแล้ว / 배고파\nไปเลยค่ะ / 가요"
+ }
+}

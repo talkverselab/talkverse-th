@@ -1,0 +1,174 @@
+{
+ "id": "r0_study_c1",
+ "region": "R0",
+ "island": "study",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "study"
+ ],
+ "domain": [
+  "study"
+ ],
+ "title": "내일 시험?",
+ "emoji": "✏️",
+ "scene": "내일 시험이 맞는지 묻는 짧은 채팅",
+ "where": "채팅",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 5,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "พรุ่งนี้สอบ",
+  "จริงเหรอ",
+  "อ่านหนังสือ"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "พรุ่งนี้มีสอบไหม",
+   "rd": "",
+   "ko": "내일 시험 있어?",
+   "note": "พรุ่งนี้สอบ = 내일 시험 · ไหม = ~있어?",
+   "tags": [],
+   "new": [
+    "พรุ่งนี้",
+    "สอบ",
+    "ไหม"
+   ],
+   "emotion": "worried",
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "จริงเหรอ ฉันเพิ่งรู้",
+   "rd": "",
+   "ko": "진짜야 나도 방금 알았어",
+   "note": "จริงเหรอ = 진짜야 · เพิ่งรู้ = 방금 알다",
+   "tags": [],
+   "new": [
+    "จริงเหรอ",
+    "เพิ่งรู้"
+   ],
+   "emotion": "surprised",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ต้องอ่านหนังสือแล้ว",
+   "rd": "",
+   "ko": "공부해야겠네",
+   "note": "อ่านหนังสือ = 공부하다 · ต้อง = ~해야 해",
+   "tags": [],
+   "new": [
+    "อ่านหนังสือ",
+    "ต้อง",
+    "แล้ว"
+   ],
+   "emotion": "worried",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ทุกคนถามสอบเหมือนกัน",
+   "rd": "",
+   "ko": "다들 시험 물어봐",
+   "note": "ทุกคน = 다들 · เหมือนกัน = 똑같이",
+   "tags": [],
+   "new": [
+    "ทุกคน",
+    "ถาม",
+    "เหมือนกัน"
+   ],
+   "emotion": "amused",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "กลุ่มเต็มไปด้วยสอบ",
+   "rd": "",
+   "ko": "단톡이 시험? 으로 가득",
+   "note": "กลุ่ม = 그룹 · เต็มไปด้วย = 가득 차다",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "กลุ่ม",
+    "เต็มไปด้วย"
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 ระเบิดจริงๆ",
+   "rd": "",
+   "ko": "555 진짜 터졌어",
+   "note": "555 = 웃음 · ระเบิด = 터지다",
+   "tags": [],
+   "new": [
+    "555",
+    "ระเบิด"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ ฉันก็ส่งสอบ",
+   "rd": "",
+   "ko": "어 나도 시험? 보냈어",
+   "note": "เอ่อ = 어 · ส่งสอบ = 시험 보내다",
+   "tags": [],
+   "new": [
+    "เอ่อ",
+    "ส่ง"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "มาอ่านหนังสือด้วยกันไหม…",
+   "rd": "",
+   "ko": "같이 공부할래…",
+   "note": "มาด้วยกัน = 같이 · อ่านหนังสือ = 공부하다",
+   "tags": [],
+   "new": [
+    "มาด้วยกัน",
+    "ไหม"
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r0_study_c1_write.md",
+  "recommended": "ยังไม่รู้ / 아직 몰라\nเต็มไปหมด / 가득 차"
+ }
+}

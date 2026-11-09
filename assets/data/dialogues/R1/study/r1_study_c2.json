@@ -1,0 +1,168 @@
+{
+ "id": "r1_study_c2",
+ "region": "R1",
+ "island": "study",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "study"
+ ],
+ "domain": [
+  "study"
+ ],
+ "title": "과제 어디까지 했어",
+ "emoji": "📚",
+ "scene": "채팅으로 과제를 어디까지 했는지 서로 묻는다",
+ "where": "채팅",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 5,
+ "twist_type": "reveal",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ทำถึงไหนแล้ว",
+  "เกือบเสร็จ",
+  "ยังไม่เริ่ม"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ทำถึงไหนแล้ว",
+   "rd": "",
+   "ko": "어디까지 했어",
+   "note": "ทำถึงไหน = 어디까지 하다 · แล้ว = 이미",
+   "tags": [],
+   "new": [
+    "ทำถึงไหน",
+    "แล้ว"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "เกือบเสร็จแล้ว",
+   "rd": "",
+   "ko": "거의 다 했어",
+   "note": "เกือบเสร็จ = 거의 끝나다 · แล้ว = 이미",
+   "tags": [],
+   "new": [
+    "เกือบเสร็จ",
+    "แล้ว"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "ฉันก็เกือบเสร็จ",
+   "rd": "",
+   "ko": "나도 거의 다 했어",
+   "note": "ฉันก็ = 나도 · เกือบเสร็จ = 거의 끝나다",
+   "tags": [],
+   "new": [
+    "ฉันก็",
+    "เกือบเสร็จ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "จริงเหรอ",
+   "rd": "",
+   "ko": "진짜야",
+   "note": "จริงเหรอ = 진짜야",
+   "tags": [],
+   "new": [
+    "จริงเหรอ"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ ยังไม่เริ่มเลย",
+   "rd": "",
+   "ko": "어 아직 시작도 안 했어",
+   "note": "ยังไม่เริ่ม = 아직 시작 안 하다 · เลย = 전혀",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "ยังไม่เริ่ม",
+    "เลย"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "worried"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 ฉันก็ยังไม่เริ่ม",
+   "rd": "",
+   "ko": "555 나도 아직 안 했어",
+   "note": "555 = 웃음 · ยังไม่เริ่ม = 아직 시작 안 하다",
+   "tags": [],
+   "new": [
+    "555",
+    "ยังไม่เริ่ม"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "งั้นทำถึงไหน",
+   "rd": "",
+   "ko": "그럼 어디까지 한 거야",
+   "note": "ทำถึงไหน = 어디까지 하다 · งั้น = 그럼",
+   "tags": [],
+   "new": [
+    "ทำถึงไหน",
+    "งั้น"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "มาวิดีโอคอลด้วยกัน…",
+   "rd": "",
+   "ko": "영상통화로 같이 하자…",
+   "note": "วิดีโอคอล = 영상통화 · ด้วยกัน = 같이",
+   "tags": [],
+   "new": [
+    "วิดีโอคอล",
+    "ด้วยกัน"
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_study_c2_write.md",
+  "recommended": "ยังไม่ทำ / 아직 안 했어\nทำด้วยกัน / 같이 하자"
+ }
+}

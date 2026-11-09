@@ -1,0 +1,173 @@
+{
+ "id": "r0_friends_c2",
+ "region": "R0",
+ "island": "friends",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "friends"
+ ],
+ "domain": [
+  "friends"
+ ],
+ "title": "사진 보내 줘",
+ "emoji": "📸",
+ "scene": "어제 찍은 사진을 보내 달라는데 학습자가 엉뚱한 사진을 보낸다",
+ "where": "채팅",
+ "speakers": {
+  "A": "{name}",
+  "B": "ต้น"
+ },
+ "register": "chat",
+ "twist": 5,
+ "twist_type": "slip",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ส่งรูปหน่อย",
+  "รูปไหน",
+  "555"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ส่งรูปเมื่อวานหน่อย",
+   "rd": "",
+   "ko": "어제 사진 좀 보내 줘",
+   "note": "ส่งรูปหน่อย = 사진 좀 보내줘 · เมื่อวาน = 어제",
+   "tags": [],
+   "new": [
+    "ส่งรูป",
+    "เมื่อวาน",
+    "หน่อย"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "รูปไหนเมื่อวานอ่ะ",
+   "rd": "",
+   "ko": "어제 어떤 사진이야?",
+   "note": "รูปไหน = 어떤 사진 · อ่ะ = 구어 끝말",
+   "tags": [],
+   "new": [
+    "รูปไหน",
+    "อ่ะ"
+   ],
+   "emotion": "teasing",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "รูปต้นเมื่อวานครับ",
+   "rd": "",
+   "ko": "어제 원 사진요",
+   "note": "รูปต้น = 원 사진 · เมื่อวาน = 어제",
+   "tags": [],
+   "new": [
+    "ต้น",
+    "ครับ"
+   ],
+   "emotion": "polite",
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "โอเค เดี๋ยวส่งให้นะ",
+   "rd": "",
+   "ko": "오케이 금방 보낼게",
+   "note": "เดี๋ยว = 금방 · ส่งให้ = 보내 줄게",
+   "tags": [],
+   "new": [
+    "โอเค",
+    "เดี๋ยว",
+    "นะ"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "นี่ไง รูปผม",
+   "rd": "",
+   "ko": "여기 내 사진이야",
+   "note": "นี่ไง = 여기 있어 · รูปผม = 내 사진 (ต้น이라고 하려다 말실수)",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "นี่ไง",
+    "รูปผม"
+   ],
+   "emotion": "excited",
+   "emotions": [
+    "excited",
+    "flustered"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 นี่รูป{name}นอน",
+   "rd": "",
+   "ko": "555 이거 {name} 자는 얼굴이잖아",
+   "note": "555 = 웃음 · รูป{name} = {name} 사진 · นอน = 자다",
+   "tags": [],
+   "new": [
+    "555",
+    "นอน"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "teasing"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เอ่อ ส่งผิดแล้วครับ",
+   "rd": "",
+   "ko": "어 잘못 보냈네요",
+   "note": "ส่งผิด = 잘못 보내다 · เอ่อ = 어",
+   "tags": [],
+   "new": [
+    "เอ่อ",
+    "ส่งผิด"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "555 จะเอาเป็นโปรไฟล์",
+   "rd": "",
+   "ko": "555 프로필로 쓸게",
+   "note": "555 = 웃음 · จะเอา = 쓸게 · โปรไฟล์ = 프로필",
+   "tags": [],
+   "new": [
+    "โปรไฟล์",
+    "จะเอา"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "amused"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r0_friends_c2_write.md",
+  "recommended": "รอแป๊บ / 잠깐만\nส่งมาเลย / 바로 보내"
+ }
+}

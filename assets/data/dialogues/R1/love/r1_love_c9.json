@@ -1,0 +1,169 @@
+{
+ "id": "r1_love_c9",
+ "region": "R1",
+ "island": "love",
+ "kind": "chat",
+ "draft": true,
+ "purpose": [
+  "love"
+ ],
+ "domain": [
+  "love"
+ ],
+ "title": "두 번째 데이트",
+ "emoji": "🗓️",
+ "scene": "데이팅 앱에서 두 번째 만남 날짜를 맞춘다",
+ "where": "데이팅 앱",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "chat",
+ "twist": 5,
+ "twist_type": "chaos",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "ว่างวันไหน",
+  "นัดกัน",
+  "เจอกัน"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "ว่างวันไหน",
+   "rd": "",
+   "ko": "언제 시간 돼",
+   "note": "ว่าง = 시간 되다 · วันไหน = 언제",
+   "tags": [],
+   "new": [
+    "ว่าง",
+    "วันไหน"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "อาทิตย์หน้าได้ไหม",
+   "rd": "",
+   "ko": "다음 주 돼",
+   "note": "อาทิตย์หน้า = 다음 주 · ได้ไหม = 돼",
+   "tags": [],
+   "new": [
+    "อาทิตย์หน้า",
+    "ได้ไหม"
+   ],
+   "emotion": "cheerful",
+   "ui": "bubble"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "นัดกันวันไหนดี",
+   "rd": "",
+   "ko": "언제 약속 잡을까",
+   "note": "นัดกัน = 약속하다 · วันไหน = 언제",
+   "tags": [],
+   "new": [
+    "นัดกัน",
+    "วันไหน"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "ฉันยุ่งนิดหน่อย",
+   "rd": "",
+   "ko": "나 좀 바빠",
+   "note": "ยุ่ง = 바쁘다 · นิดหน่อย = 조금",
+   "tags": [],
+   "new": [
+    "ยุ่ง",
+    "นิดหน่อย"
+   ],
+   "emotion": "teasing",
+   "ui": "bubble"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เอ่อ พรุ่งนี้เย็นว่าง",
+   "rd": "",
+   "ko": "어 내일 저녁 비어",
+   "note": "พรุ่งนี้ = 내일 · เย็น = 저녁",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "พรุ่งนี้",
+    "เย็น"
+   ],
+   "emotion": "flustered",
+   "emotions": [
+    "flustered",
+    "surprised"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 ฉันก็ว่าง",
+   "rd": "",
+   "ko": "555 나도 비어",
+   "note": "555 = 웃음 · ว่าง = 시간 되다",
+   "tags": [],
+   "new": [
+    "555",
+    "ว่าง"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ],
+   "ui": "bubble"
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "งั้นนัดกันพรุ่งนี้",
+   "rd": "",
+   "ko": "그럼 내일 약속 하자",
+   "note": "นัดกัน = 약속하다 · พรุ่งนี้ = 내일",
+   "tags": [],
+   "new": [
+    "นัดกัน",
+    "พรุ่งนี้"
+   ],
+   "emotion": "flustered",
+   "ui": "bubble"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "เจอกันพรุ่งนี้นะ…",
+   "rd": "",
+   "ko": "그럼 내일 보자…",
+   "note": "เจอกัน = 만나다 · พรุ่งนี้ = 내일",
+   "tags": [],
+   "new": [
+    "เจอกัน",
+    "พรุ่งนี้"
+   ],
+   "emotion": "shy",
+   "emotions": [
+    "shy",
+    "gentle"
+   ],
+   "ui": "bubble"
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_love_c9_write.md",
+  "recommended": "ว่างไหม / 시간 돼?\nเลื่อนได้ไหม / 미룰 수 있어?"
+ }
+}

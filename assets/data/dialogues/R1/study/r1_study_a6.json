@@ -1,0 +1,165 @@
+{
+ "id": "r1_study_a6",
+ "region": "R1",
+ "island": "study",
+ "kind": "short",
+ "draft": true,
+ "purpose": [
+  "study"
+ ],
+ "domain": [
+  "study"
+ ],
+ "title": "스터디 카페 규칙",
+ "emoji": "🥤",
+ "scene": "스터디 카페에서 조용히 몇 시에 끝나는지 묻는다",
+ "where": "스터디 카페",
+ "speakers": {
+  "A": "{name}",
+  "B": "ฟ้า"
+ },
+ "register": "polite",
+ "twist": 5,
+ "twist_type": "ignore",
+ "flags": [],
+ "goal": "",
+ "expressions": [
+  "เบาๆ หน่อย",
+  "เงียบๆ",
+  "เสร็จกี่โมง"
+ ],
+ "turns": [
+  {
+   "num": 1,
+   "speaker": "A",
+   "th": "เสร็จกี่โมงครับ",
+   "rd": "",
+   "ko": "몇 시에 끝나요",
+   "note": "เสร็จ = 끝나다 · กี่โมง = 몇 시",
+   "tags": [],
+   "new": [
+    "เสร็จ",
+    "กี่โมง",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 2,
+   "speaker": "B",
+   "th": "ห้าโมงค่ะ",
+   "rd": "",
+   "ko": "5시예요",
+   "note": "ห้าโมง = 5시 · ค่ะ = 존댓말",
+   "tags": [],
+   "new": [
+    "ห้าโมง",
+    "ค่ะ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 3,
+   "speaker": "A",
+   "th": "เบาๆ หน่อยครับ",
+   "rd": "",
+   "ko": "조금만 조용히 해 주세요",
+   "note": "เบาๆ = 조용히 · หน่อย = 조금",
+   "tags": [],
+   "new": [
+    "เบาๆ",
+    "หน่อย",
+    "ครับ"
+   ],
+   "emotion": "polite"
+  },
+  {
+   "num": 4,
+   "speaker": "B",
+   "th": "เงียบๆ นะคะ",
+   "rd": "",
+   "ko": "조용히요",
+   "note": "เงียบๆ = 조용히 · นะ = 강조",
+   "tags": [],
+   "new": [
+    "เงียบๆ",
+    "นะ"
+   ],
+   "emotion": "teasing"
+  },
+  {
+   "num": 5,
+   "speaker": "A",
+   "th": "เขียนโน้ตเหรอครับ",
+   "rd": "",
+   "ko": "쪽지로 해요?",
+   "note": "เขียน = 쓰다 · โน้ต = 쪽지",
+   "tags": [
+    "twist"
+   ],
+   "new": [
+    "เขียน",
+    "โน้ต"
+   ],
+   "emotion": "surprised",
+   "emotions": [
+    "surprised",
+    "flustered"
+   ]
+  },
+  {
+   "num": 6,
+   "speaker": "B",
+   "th": "555 เงียบๆดี",
+   "rd": "",
+   "ko": "555 조용한 게 좋아",
+   "note": "555 = 웃음 · เงียบๆ = 조용히",
+   "tags": [],
+   "new": [
+    "555",
+    "เงียบๆ"
+   ],
+   "emotion": "amused",
+   "emotions": [
+    "amused",
+    "tsukkomi"
+   ]
+  },
+  {
+   "num": 7,
+   "speaker": "A",
+   "th": "เสร็จกี่โมงอีกที",
+   "rd": "",
+   "ko": "몇 시인지 다시",
+   "note": "เสร็จ = 끝나다 · กี่โมง = 몇 시",
+   "tags": [],
+   "new": [
+    "เสร็จ",
+    "กี่โมง"
+   ],
+   "emotion": "flustered"
+  },
+  {
+   "num": 8,
+   "speaker": "B",
+   "th": "เสร็จแล้วไปกินข้าว…",
+   "rd": "",
+   "ko": "끝나면 밥 먹자…",
+   "note": "เสร็จแล้ว = 끝나면 · กินข้าว = 밥 먹다",
+   "tags": [],
+   "new": [
+    "เสร็จแล้ว",
+    "กินข้าว"
+   ],
+   "emotion": "gentle",
+   "emotions": [
+    "gentle",
+    "shy"
+   ]
+  }
+ ],
+ "review": {
+  "grok_write": "data/review/r1_study_a6_write.md",
+  "recommended": "เบาเสียงหน่อย / 목소리 낮춰 줘\nห้าโมงเย็น / 오후 5시"
+ }
+}
