@@ -1,3 +1,15 @@
+# 2026-11-10 마감 메모(허브 정리 지시로 세션 종료)
+
+- **회화 집필(Grok)**: R_next 72편 중 48편 완료·푸시(dcceb27·50a87d0). 남은 24편 = r3_friends_c1 r3_study_b2 r3_study_b3 r3_study_c1 r3_work_b3 r3_work_b4 r3_work_c1 r3_life_b2 r3_life_c1 r3_travel_b2 r3_culture_c1 r3_love_c1 r4_friends_b4 r4_friends_b5 r4_friends_c1 r4_study_b2 r4_study_c1 r4_work_b3 r4_work_b4 r4_work_c1 r4_life_b3 r4_travel_b2 r4_culture_b3 r4_culture_c1.
+  - 실행: `python3 tools/make_write_prompt.py data/plans/R_next.json --short <ids>` → `zsh tools/grok/batch_write.sh data/plans/R_next.json <ids>`. **Grok 주간 한도 — 11/16 초기화 전 사용 금지(uk 전달).**
+  - Grok = PC 크롬 9259(D:\chrome-grok-th, 예약 작업 Grok-Chrome-th-9259, 9258 은 de). 터널 `ssh -fN -L 9259:127.0.0.1:9259 pc`(M4 쪽도 9259), 쿠키 `ssh macmini4 '/usr/bin/python3 ~/talkverse-uk/tools/grok_cookie_sync.py 9231 9259'`. gk.py 가 전문가 모드 확인(아니면 바꿈)·답 3분 상한(넘으면 중지)·가상화 목록 대응.
+  - 빠른 모드로 쓴 R0 5편(r0_friends_c2·r0_study_a4·r0_study_c1·r0_work_a3·r0_life_a6) 전문가로 재작성, 감사 major 10편(scratchpad audit — r1_friends_a4 r1_travel_a3 r2_love_b10 r3_culture_b2 r3_love_b5 r3_love_b6 r3_love_b7 r3_work_b2 r4_culture_b2 r4_love_b3) 수정.
+  - 새 편 후처리 남음: check_dialogues --fix-rd(~/venvs/th) · add_lemmas · add_emoji · make_plan, 장면 컷(batch_scene.sh — 첨부는 PC 경로 필요), REVIEW_th 갱신, 빌드(안드+iOS; 빌드 79 iOS·Zealot 미업로드).
+- **음성**: 96/173 편, `~/tts_work/th/PAUSE` 로 멈춤. uk 지시(11/10) "새벽원칙 폐기 지금부터 진행" — 재개 = `rm ~/tts_work/th/PAUSE; ~/venvs/th/bin/python tools/tts/run_all.py ~/tts_work/th 12`(디스크 여유 확인 후). 끝나면 uk 에 "GPU 끝"(다음 순서 중국어 22조각).
+- **D1·R2 대조(11/10)**: 음성 97편 1,558줄·장면 344편 1,376장 전부 올라가 있음(로컬 `_v1` 10폴더는 옛 판이라 안 올림). 회화·단어표는 D1 표가 없음(앱 번들·GitHub). 무선 갱신 매니페스트에 회화가 들어 있는지 미확인.
+- **정리(11/10)**: build·.dart_tool·android/.gradle·ios/Pods 삭제(약 2.1GB). 다음 빌드 전 `flutter pub get`·`pod install`.
+- **지울 후보(애매해서 둠)**: `~/tts_work/th/wav`(322MB, 남은 음성 생성에 쓰일 수 있음), `data/review/scene/*_v1`(옛 판 그림 10폴더), `corpus/cliff3/*.log`.
+
 # 2026-10-26 마감 메모
 
 - 끝: 아이콘 「ก」·talkverse.uk 화면 톤(빌드 48, Zealot 「태국어유니버스」 첫 업로드) · Supabase 이관 조사·Talkverse ID 설계(`docs/CLOUDFLARE_MIGRATION.md`) · 원본 보관 R2 `supabase-archive/talkverse/`(16개) · D1 적재용 SQL PC `D:\backup\supabase_talkverse_20261026\`.
