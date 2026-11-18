@@ -1,9 +1,9 @@
 # 2026-11-10 마감 메모(허브 정리 지시로 세션 종료)
 
 - **회화 집필(Grok)**: R_next 72편 중 48편 완료·푸시(dcceb27·50a87d0). 남은 24편 = r3_friends_c1 r3_study_b2 r3_study_b3 r3_study_c1 r3_work_b3 r3_work_b4 r3_work_c1 r3_life_b2 r3_life_c1 r3_travel_b2 r3_culture_c1 r3_love_c1 r4_friends_b4 r4_friends_b5 r4_friends_c1 r4_study_b2 r4_study_c1 r4_work_b3 r4_work_b4 r4_work_c1 r4_life_b3 r4_travel_b2 r4_culture_b3 r4_culture_c1.
-  - 실행: `python3 tools/make_write_prompt.py data/plans/R_next.json --short <ids>` → `zsh tools/grok/batch_write.sh data/plans/R_next.json <ids>`. Grok 주간 한도는 11/16 초기화됨 — 재개 가능(전문가 모드·답 3분 상한·프롬프트 한 줄, `~/logs/rc/RELAY_grok_20261109.md`).
-  - Grok = PC 크롬 9259(D:\chrome-grok-th, 예약 작업 Grok-Chrome-th-9259, 9258 은 de). 터널 `ssh -fN -L 9259:127.0.0.1:9259 pc`(M4 쪽도 9259), 쿠키 `ssh macmini4 '/usr/bin/python3 ~/talkverse-uk/tools/grok_cookie_sync.py 9231 9259'`. gk.py 가 전문가 모드 확인(아니면 바꿈)·답 3분 상한(넘으면 중지)·가상화 목록 대응.
-  - 빠른 모드로 쓴 R0 5편(r0_friends_c2·r0_study_a4·r0_study_c1·r0_work_a3·r0_life_a6) 전문가로 재작성, 감사 major 10편(scratchpad audit — r1_friends_a4 r1_travel_a3 r2_love_b10 r3_culture_b2 r3_love_b5 r3_love_b6 r3_love_b7 r3_work_b2 r4_culture_b2 r4_love_b3) 수정.
+  - 실행: `python3 tools/make_write_prompt.py data/plans/R_next.json --short <ids>` → `zsh tools/grok/batch_write.sh data/plans/R_next.json <ids>`. Grok 주간 한도는 11/16 초기화됨 — 재개 가능(빠른 모드·답 3분 상한·프롬프트 한 줄, `~/logs/rc/RELAY_grok_20261109.md`).
+  - Grok = PC 크롬 9259(D:\chrome-grok-th, 예약 작업 Grok-Chrome-th-9259, 9258 은 de). 터널 `ssh -fN -L 9259:127.0.0.1:9259 pc`(M4 쪽도 9259), 쿠키 `ssh macmini4 '/usr/bin/python3 ~/talkverse-uk/tools/grok_cookie_sync.py 9231 9259'`. gk.py 가 **빠른** 모드 확인(아니면 바꿈; 11/18 사용자 지시 — 문법 세션 외 전부 빠른, 전문가 강제 스크립트 금지)·답 3분 상한(넘으면 중지)·가상화 목록 대응.
+  - 빠른 모드로 쓴 R0 5편(r0_friends_c2·r0_study_a4·r0_study_c1·r0_work_a3·r0_life_a6) (11/18부터 빠른 모드로) 재작성, 감사 major 10편(scratchpad audit — r1_friends_a4 r1_travel_a3 r2_love_b10 r3_culture_b2 r3_love_b5 r3_love_b6 r3_love_b7 r3_work_b2 r4_culture_b2 r4_love_b3) 수정.
   - 새 편 후처리 남음: check_dialogues --fix-rd(~/venvs/th) · add_lemmas · add_emoji · make_plan, 장면 컷(batch_scene.sh — 첨부는 PC 경로 필요), REVIEW_th 갱신, 빌드(안드+iOS; 빌드 79 iOS·Zealot 미업로드).
 - **음성**: 173/173 편 생성·D1/R2 업로드 완료(11/10 16:24). uk 에 "GPU 끝" 보냄(11/17). 중간 wav(828MB) 삭제. uk 가 DB 에서 173편 3,296줄 확인. 앞으로 새 음성: 3090 창은 11/16 부터 새벽 03:40~06:55, uk 가 「지금 시작」 보낸 날만 — 돌릴 것이 생기면 uk 에 「시험 준비됨」 먼저.
 - **D1·R2 대조(11/10)**: 음성 97편 1,558줄·장면 344편 1,376장 전부 올라가 있음(로컬 `_v1` 10폴더는 옛 판이라 안 올림). 회화·단어표는 D1 표가 없음(앱 번들·GitHub). 무선 갱신 매니페스트에 회화가 들어 있는지 미확인.
