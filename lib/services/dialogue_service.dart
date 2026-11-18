@@ -1,6 +1,8 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart' show ValueNotifier;
 import 'package:flutter/services.dart' show AssetManifest;
+import 'script_sync.dart';
 
 import 'content_sync.dart';
 import 'learner_prefs.dart';
@@ -219,15 +221,40 @@ class DialogueService {
     _level = prefs.getString(_prefLevel) ?? 'R1';
     _lastOpened = prefs.getString(_prefLast);
     _done.addAll(prefs.getStringList(_prefDone) ?? const []);
+    await _readAll();
+    _loaded = true;
+    // 서버에 더 새 원고가 있으면 뒤에서 받아 다시 읽는다(없거나 실패하면 그대로) — 2026-11-18 일본어앱 113·114 와 같게
+    ScriptSync.instance.refresh().then((changed) async {
+      if (!changed) return;
+      await _readAll();
+      revision.value++;
+    });
+  }
+
+  /// 원고가 서버 판으로 바뀌어 다시 읽힐 때마다 오른다.
+  final ValueNotifier<int> revision = ValueNotifier(0);
+
+  /// 앱 안 편 + 서버에서 받은 새 편을 읽는다. 각 파일은 덮어쓴 판이 있으면 그것([ScriptSync]).
+  Future<void> _readAll() async {
+    final sync = ScriptSync.instance;
+    await sync.init();
     final manifest = await AssetManifest.loadFromAssetBundle(tvBundle);
-    final paths = manifest.listAssets().map(stripAssetPrefix).where((p) => RegExp(r'^assets/data/dialogues/R[0-4]/[^/]+/[^/]+\.json$').hasMatch(p));
-    for (final p in paths) {
+    final pat = RegExp(r'^assets/data/dialogues/R[0-4]/[^/]+/[^/]+\.json$');
+    // 매니페스트 키는 통합 앱이면 packages/thai_universe/ 가 붙어 있다 — 접두를 떼고 견준다
+    final rels = <String>{
+      for (final p in manifest.listAssets().map(stripAssetPrefix).where(pat.hasMatch)) p.substring('assets/data/'.length),
+      ...sync.added.where((p) => pat.hasMatch('assets/data/$p')),
+    }..removeAll(sync.removed);
+    final next = <String, Dialogue>{};
+    for (final rel in rels) {
       try {
-        final d = Dialogue.fromJson(json.decode(await tvBundle.loadString(p)) as Map<String, dynamic>);
-        if (d.turns.isNotEmpty) _byId[d.id] = d;
+        final d = Dialogue.fromJson(json.decode(await sync.load(rel)) as Map<String, dynamic>);
+        if (d.turns.isNotEmpty) next[d.id] = d;
       } catch (_) {}
     }
-    _loaded = true;
+    _byId
+      ..clear()
+      ..addAll(next);
   }
 
   Dialogue? byId(String id) => _byId[id];

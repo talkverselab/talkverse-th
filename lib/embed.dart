@@ -14,6 +14,7 @@ import 'services/auth_service.dart';
 import 'services/cliff_service.dart';
 import 'services/content_store.dart';
 import 'services/content_sync.dart';
+import 'services/script_sync.dart';
 import 'services/dev_notes.dart';
 import 'services/ko_reading.dart';
 import 'services/learner_prefs.dart';
@@ -52,6 +53,11 @@ Future<void> embedInit({bool standalone = false}) async {
   Purchase.ownStream = standalone; // 통합 앱이면 결제 스트림은 공용 결제가 넘겨준다
   Entitlement.configure(); // 스토어 상품(기다리지 않음) — 가격표 ~/talkverse/PRICING.md
   if (standalone) UpdateService.instance.loadCurrent(); // 앱 버전 표시(단독 앱만)
+  // 회화 원고는 켤 때마다 무조건 서버 판을 확인해 받는다 — 그림·음성 내려받기(선택·「나중에」)와 따로(2026-11-18, 일본어앱 114 와 같게).
+  // 느린 망에서는 startupWait 까지만 기다리고 앱을 연다(받기는 뒤에서 이어지고, 끝나면 회화 목록을 다시 읽는다).
+  try {
+    await ScriptSync.instance.refresh().timeout(ScriptSync.startupWait);
+  } catch (_) {}
   // 그림(장면 컷·단어 그림)·회화 음성 기기 내려받기: 버전이 다르면 로딩 화면에서 받고 시작
   _syncFirst = await ContentSync.instance.init(large: _isTablet(), female: LearnerPrefs.isFemale);
   // 콘텐츠만 바뀐 수정은 APK 없이 받는다 — 받으면 화면들이 revision 을 듣고 다시 읽는다.
