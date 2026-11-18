@@ -1,5 +1,6 @@
 # 2026-11-10 마감 메모(허브 정리 지시로 세션 종료)
 
+- **원고 서버 받기(11/18, 일본어앱 113·114 와 같게)**: f9503ac — `ScriptSync`(켤 때마다 15초 상한) · R2 `script/th` rev 1(226편) · 턴 잠금 `data/review/turn_lock_th.json`. 원고를 고치면 `python3 tools/script_publish.py --publish` 후 `assets/data/script_rev.json` 커밋. 남은 것: 일본어앱 수준 맞추기(전달문 `~/talkverse/ja/docs/RELAY_2026-11-18_ja_parity.md` §2 — 언어감각 과정 외울 대화 꼴·외국어 단어 퀴즈·〇〇 → 이름), 안드+iOS 빌드, uk 에 해시·패키지·rev 보고.
 - **회화 집필(Grok)**: R_next 72편 중 48편 완료·푸시(dcceb27·50a87d0). 남은 24편 = r3_friends_c1 r3_study_b2 r3_study_b3 r3_study_c1 r3_work_b3 r3_work_b4 r3_work_c1 r3_life_b2 r3_life_c1 r3_travel_b2 r3_culture_c1 r3_love_c1 r4_friends_b4 r4_friends_b5 r4_friends_c1 r4_study_b2 r4_study_c1 r4_work_b3 r4_work_b4 r4_work_c1 r4_life_b3 r4_travel_b2 r4_culture_b3 r4_culture_c1.
   - 실행: `python3 tools/make_write_prompt.py data/plans/R_next.json --short <ids>` → `zsh tools/grok/batch_write.sh data/plans/R_next.json <ids>`. Grok 주간 한도는 11/16 초기화됨 — 재개 가능(빠른 모드·답 3분 상한·프롬프트 한 줄, `~/logs/rc/RELAY_grok_20261109.md`).
   - Grok = PC 크롬 9259(D:\chrome-grok-th, 예약 작업 Grok-Chrome-th-9259, 9258 은 de). 터널 `ssh -fN -L 9259:127.0.0.1:9259 pc`(M4 쪽도 9259), 쿠키 `ssh macmini4 '/usr/bin/python3 ~/talkverse-uk/tools/grok_cookie_sync.py 9231 9259'`. gk.py 가 **빠른** 모드 확인(아니면 바꿈; 11/18 사용자 지시 — 문법 세션 외 전부 빠른, 전문가 강제 스크립트 금지)·답 3분 상한(넘으면 중지)·가상화 목록 대응.
