@@ -1362,7 +1362,8 @@
   "where": "구청 상담실",
   "speakers": {
    "A": "{name}",
-   "B": "เจ้าของห้อง"
+   "B": "เจ้าของห้อง",
+   "C": "เจ้าหน้าที่"
   },
   "register": "polite",
   "twist_type": "chaos",
@@ -1649,7 +1650,8 @@
   "where": "재개발 마을 회의",
   "speakers": {
    "A": "{name}",
-   "B": "ผู้ใหญ่บ้าน"
+   "B": "ผู้ใหญ่บ้าน",
+   "C": "คุณยาย"
   },
   "register": "polite",
   "twist_type": "chaos",
