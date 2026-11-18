@@ -42,6 +42,10 @@ for i, r in enumerate(recs, 1):
     thai_chars = len(re.findall(r'[\u0E00-\u0E7F]', th))
     if thai_chars and th.count(' ') * 6 >= thai_chars:
         th = re.sub(r'(?<=[\u0E00-\u0E7F]) (?=[\u0E00-\u0E7F])', '', th)
+    if len(parts) != 5:  # 칸이 빠지거나 늘면 뒤 칸 값이 메모로 밀려 들어가 앱에 💡 로 보인다(2026-11-19 인도네시아어앱 사례)
+        print('  ⚠ 칸 수', len(parts), '(5여야 함):', ' / '.join(parts)[:80])
+    if len(parts) > 2 and set(re.split(r'[|/,·\s]+', parts[2].strip().lower())) <= set(EMOTIONS):
+        print('  ⚠ 메모 칸에 감정 값:', ' / '.join(parts)[:80])
     note = re.sub(r'^해설\s*\((.*)\)$|^해설\s*', r'\1', parts[2]).strip() if len(parts) > 2 else ''  # 뜻풀이 끝 괄호는 두고 「해설 (…)」 껍질만 벗긴다
     new = [w.strip() for w in re.split(r'[,，、]', re.sub(r'^새\s*단어\s*[:：]?', '', parts[3]))] if len(parts) > 3 else []
     # 감정(음성 고려, 사용자 지시 2026-11-07 모든 언어앱): 5번째 칸 `감정1|감정2` → emotion(첫 값)·emotions(전부). 감정 계획(data/tts/plan)의 segs 는 이 값으로 시작한다.
