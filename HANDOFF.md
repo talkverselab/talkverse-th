@@ -1,3 +1,11 @@
+# 2026-11-19 밤 메모(「1 2 3 모두 진행」)
+
+- **ja-parity §2 완료**(2218a61·1b35924): 언어감각 10급(`sense_course_screen.dart`, 외울 대화 Grok 10편 = `tools/sense_import.py`, 서버 원고 rev 7 에 `grammar/sense_course.json` 포함) · 외래어 3단계+퀴즈(`loanword_quiz_screen.dart`) · 장면 글 A → 이름(`sceneShown`).
+- **빌드**: pubspec 에 R0~R4 하위 폴더 38개 추가(90f2d65 — 없으면 APK 에 회화가 안 들어감). CI Flutter 3.47.7 고정(최신 stable 은 Gradle 9.3.1 요구). 안드 81(Zealot·PC 백업, 서명 fa0e4ef9…) · iOS 2611192202(TestFlight 처리 확인 안 함). pod install 이 남긴 ios/Podfile·Podfile.lock·swiftpm 은 미커밋.
+- **장면 컷**: R3·R4 24편(남·여 48) Grok 그림 → th-art 75d2a59, 서버 192편 게시.
+- **내 코스 86편 Grok**(f3aee49): `tools/course_regrok.py prompts|apply` + `tools/grok/batch_course.sh`(25편마다 새 방). variants.json overrides 19건 비움(옛 대사 덮어씀). content_manifest 무선 갱신 = push 가 배포(공개 manifest 확인). 생성 음성 없음.
+- **음성 남은 것**: 11-20 03:40 r4_work_b4·r4_work_c1(scratchpad tts_window24.sh, 끝나면 uk 에 「GPU 끝」 — 뒤에 베트남어). 11-21 03:40 언어감각 외울 대화 10편 100조각(uk 배정, 아직 음성 계획 파일 없음).
+
 # 2026-11-10 마감 메모(허브 정리 지시로 세션 종료)
 
 - **원고 서버 받기(11/18, 일본어앱 113·114 와 같게)**: f9503ac — `ScriptSync`(켤 때마다 15초 상한) · R2 `script/th` rev 1(226편) · 턴 잠금 `data/review/turn_lock_th.json`. 원고를 고치면 `python3 tools/script_publish.py --publish` 후 `assets/data/script_rev.json` 커밋. **심사 준비 기준(11/18 사용자: 회화 급마다 30%·단어 그림 공용 DB·장면 컷 10장·원고 서버) 충족** — 회화 226(R0 53·R1 70·R2 65·R3 20·R4 18), 장면 344편, uk 에 보고함. 남은 것: 일본어앱 수준 맞추기(전달문 `~/talkverse/ja/docs/RELAY_2026-11-18_ja_parity.md` §2 — 언어감각 과정 외울 대화 꼴·외국어 단어 퀴즈·〇〇 → 이름), 안드+iOS 빌드, uk 에 해시·패키지·rev 보고.
