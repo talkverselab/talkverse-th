@@ -77,6 +77,45 @@ flutter:
     - assets/data/alphabet/
     - assets/data/tones/
     - assets/data/dialogues/
+    # 하위 폴더는 따로 적어야 번들에 들어간다(2026-11-19 확인 — 빠져 있었음)
+    - assets/data/dialogues/R0/culture/
+    - assets/data/dialogues/R0/friends/
+    - assets/data/dialogues/R0/life/
+    - assets/data/dialogues/R0/love/
+    - assets/data/dialogues/R0/study/
+    - assets/data/dialogues/R0/survival/
+    - assets/data/dialogues/R0/travel/
+    - assets/data/dialogues/R0/work/
+    - assets/data/dialogues/R1/culture/
+    - assets/data/dialogues/R1/friends/
+    - assets/data/dialogues/R1/life/
+    - assets/data/dialogues/R1/love/
+    - assets/data/dialogues/R1/study/
+    - assets/data/dialogues/R1/survival/
+    - assets/data/dialogues/R1/travel/
+    - assets/data/dialogues/R1/work/
+    - assets/data/dialogues/R2/culture/
+    - assets/data/dialogues/R2/friends/
+    - assets/data/dialogues/R2/life/
+    - assets/data/dialogues/R2/love/
+    - assets/data/dialogues/R2/study/
+    - assets/data/dialogues/R2/survival/
+    - assets/data/dialogues/R2/travel/
+    - assets/data/dialogues/R2/work/
+    - assets/data/dialogues/R3/culture/
+    - assets/data/dialogues/R3/friends/
+    - assets/data/dialogues/R3/life/
+    - assets/data/dialogues/R3/love/
+    - assets/data/dialogues/R3/study/
+    - assets/data/dialogues/R3/travel/
+    - assets/data/dialogues/R3/work/
+    - assets/data/dialogues/R4/culture/
+    - assets/data/dialogues/R4/friends/
+    - assets/data/dialogues/R4/life/
+    - assets/data/dialogues/R4/love/
+    - assets/data/dialogues/R4/study/
+    - assets/data/dialogues/R4/travel/
+    - assets/data/dialogues/R4/work/
     - assets/data/wordsets/
     - assets/data/grammar/
     - assets/data/phrases/
