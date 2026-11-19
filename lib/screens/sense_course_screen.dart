@@ -10,6 +10,7 @@ import '../core/platform.dart';
 import '../core/prefs.dart';
 import '../core/theme.dart';
 import '../services/ko_reading.dart';
+import '../services/dialogue_audio.dart';
 import '../services/tts_service.dart';
 import '../widgets/episode_play_pane.dart' show thStyle, kCutShadow;
 import 'loanword_screen.dart';
@@ -324,6 +325,14 @@ List<InlineSpan> markedSpans(String s, TextStyle base) {
   return out;
 }
 
+/// 외울 대화 한 줄 듣기 — 생성 음성(편 `sense_L<n>`, 턴 = 줄 번호 1부터, tools/tts/sense_eps.py)이 있으면 그것, 없으면 기기 TTS.
+Future<void> speakSenseLine(Map<String, dynamic> lesson, int i) async {
+  final ep = 'sense_${(lesson['id'] as String? ?? '').split('-').first}';
+  if (await DialogueAudio.instance.play(ep, i + 1)) return;
+  final s = (lesson['sentences'] as List)[i] as Map<String, dynamic>;
+  await TtsService.instance.speak(plainMarked(s['th'] as String));
+}
+
 class _Memorize extends StatelessWidget {
   final Map<String, dynamic> lesson;
   const _Memorize({required this.lesson});
@@ -364,7 +373,7 @@ class _Memorize extends StatelessWidget {
             IconButton(
               tooltip: tr('듣기'),
               icon: const Icon(Icons.volume_up, color: AppColors.sunset, size: 22),
-              onPressed: () => TtsService.instance.speak(plainMarked(sentences[i]['th'] as String)),
+              onPressed: () => speakSenseLine(lesson, i),
             ),
           ]),
         ),

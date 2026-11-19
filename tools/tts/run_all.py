@@ -56,7 +56,7 @@ def refs():
 if '--refs' in sys.argv or not glob.glob(f'{work}/ref_th/*.wav'):
     refs()
 done = set(open(f'{work}/done.txt').read().split()) if os.path.exists(f'{work}/done.txt') else set()
-ids = [e for e in L.planned() if e not in done]
+ids = [e for e in L.planned() if e not in done and (not os.environ.get('TTS_ONLY') or e.startswith(tuple(os.environ['TTS_ONLY'].split(','))))]   # TTS_ONLY=sense_ 처럼 접두어로 거름(uk 새벽 배정 단위)
 log('남은 편', len(ids))
 for i in range(0, len(ids), N):
     if os.path.exists(f'{work}/PAUSE'):      # uk 가 중간에 짧은 시험을 끼울 때: 묶음 경계에서 멈춤(파일을 지우고 다시 실행하면 이어간다)

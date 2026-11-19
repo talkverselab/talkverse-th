@@ -4,7 +4,7 @@ D1 audio_lines 열에 맞춘 이름: text = 태국어 본문, reading = (태국�
 import glob, json, os, re
 R = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 V = json.load(open(f'{R}/data/tts/voices.json', encoding='utf-8'))
-EP = {os.path.basename(p)[:-5]: p for p in glob.glob(f'{R}/assets/data/dialogues/*/*/*.json')}
+EP = {os.path.basename(p)[:-5]: p for p in glob.glob(f'{R}/assets/data/dialogues/*/*/*.json') + glob.glob(f'{R}/data/tts/sense_ep/*.json')}  # 언어감각 외울 대화(sense_eps.py)
 SIL = re.compile(r'[\s…。、！？!?.,~♪5ๆ]|\([^)]*\)')
 
 
