@@ -140,6 +140,9 @@ class Dialogue {
     return t.withText(th: l.text, rd: l.rd.isNotEmpty ? l.rd : t.rd, ko: l.ko.isNotEmpty ? l.ko : t.ko);
   }
 
+  /// 화면에 보일 장면 설명 — 원고의 「A」(학습자)를 이름(없으면 「나」)으로(일본어앱 111, 사용자 지시 2026-11-17).
+  String get sceneShown => scene.replaceAllMapped(RegExp(r'(?<![A-Za-z])A(?![A-Za-z]) ?(?=[가-힣])'), (_) => speakerName('A'));
+
   String speakerName(String sp) {
     final raw = speakers[sp] ?? sp;
     if (raw.contains('{name}')) return LearnerPrefs.name.value.isNotEmpty ? LearnerPrefs.name.value : '나';

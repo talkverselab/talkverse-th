@@ -5,7 +5,7 @@ for id in "$@"; do
   [ -f data/review/scene/$id/img4.jpg ] && { echo "$id skip"; continue; }
   att=""
   [ -n "$GROK_ATTACH" ] && [ -f data/review/${id}_scene_prompt.att ] && att=$(cat data/review/${id}_scene_prompt.att)
-  r=$(/usr/bin/python3 tools/grok/gk.py data/review/${id}_scene_prompt.md data/review/scene/${id}.md ${att:+--attach "$att"} --img data/review/scene/$id 2>&1 | tail -1)
+  r=$(/usr/bin/python3 tools/grok/gk.py data/review/${id}_scene_prompt.md data/review/scene/${id}.md ${att:+--attach "$att"} --img data/review/scene/$id ${GROK_NEW:+--new} ${GROK_MAXWAIT:+--maxwait $GROK_MAXWAIT} 2>&1 | tail -1)
   echo "$id $r $(ls data/review/scene/$id 2>/dev/null | wc -l)"
   case "$r" in LIMIT*) break;; esac
 done

@@ -554,7 +554,7 @@ class SceneCut extends StatelessWidget {
             child: bubble && turn.th.trim().isNotEmpty
                 ? Column(children: [
                     Expanded(child: pic),
-                    _LineStrip(speaker: dialogue.speakerName(turn.speaker), me: me, text: LearnerPrefs.fill(turn.th), small: c.maxHeight < 220),
+                    _LineStrip(speaker: dialogue.speakerName(turn.speaker), me: me, text: LearnerPrefs.fill(dialogue.view(turn).th), small: c.maxHeight < 220),
                   ])
                 : pic,
           ),
@@ -610,7 +610,7 @@ class _SceneCard extends StatelessWidget {
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
           Text(turn.stamp ?? dialogue.emoji, style: TextStyle(fontSize: small ? 34 : 56)),
           SizedBox(height: small ? 4 : 10),
-          Flexible(child: Text(dialogue.scene, textAlign: TextAlign.center, maxLines: small ? 2 : 3, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: small ? 11 : 13, color: AppColors.khramLight, height: 1.4))),
+          Flexible(child: Text(dialogue.sceneShown, textAlign: TextAlign.center, maxLines: small ? 2 : 3, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: small ? 11 : 13, color: AppColors.khramLight, height: 1.4))),
           if (!small) ...[
             const SizedBox(height: 6),
             Text(dialogue.speakerName(turn.speaker), style: thStyle(fontSize: 12, color: AppColors.kluayMai)),

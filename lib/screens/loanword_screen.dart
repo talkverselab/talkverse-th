@@ -9,6 +9,8 @@ import '../widgets/thai_decor.dart';
 import '../core/l10n.dart';
 import '../core/platform.dart';
 import '../core/embed_env.dart';
+import '../core/pane.dart';
+import 'loanword_quiz_screen.dart';
 
 /// 영어 유래 단어 — 영어가 태국어로 음차되는 8가지 줄기와 최다 사용 200단어.
 /// 줄기 칩 → 규칙 설명 카드 → 단어 목록(재생 버튼, 예외 표시).
@@ -40,6 +42,7 @@ class _Word {
   final String group;
   final String note;
   final bool exception;
+  final int st; // 1=핵심 · 2=중급까지 · 3=전체(일본어앱 110 과 같은 3단계, 2026-11-19)
   const _Word({
     required this.th,
     required this.reading,
@@ -48,6 +51,7 @@ class _Word {
     required this.group,
     required this.note,
     required this.exception,
+    this.st = 3,
   });
 }
 
@@ -56,6 +60,7 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
   List<_Group> _groups = [];
   List<_Word> _words = [];
   String _group = 'ALL';
+  int _stage = 1; // 1단계(핵심) 디폴트
   String _query = '';
   final _ctrl = TextEditingController();
 
@@ -94,6 +99,7 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
             group: '${w['group'] ?? ''}',
             note: '${w['note'] ?? ''}',
             exception: w['exception'] == true,
+            st: (w['st'] as num?)?.toInt() ?? 3,
           ),
       ];
     } catch (_) {
@@ -109,8 +115,8 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
   }
 
   List<_Word> get _list {
-    Iterable<_Word> pool =
-        _group == 'ALL' ? _words : _words.where((w) => w.group == _group);
+    Iterable<_Word> pool = (_group == 'ALL' ? _words : _words.where((w) => w.group == _group))
+        .where((w) => w.st <= _stage);
     final q = _query.trim().toLowerCase();
     if (q.isNotEmpty) {
       pool = pool.where((w) =>
@@ -218,6 +224,41 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
                     ),
                   ),
                 ),
+                Container(
+                  color: AppColors.creamDeep,
+                  padding: const EdgeInsets.fromLTRB(12, 0, 12, 8),
+                  child: SizedBox(
+                    height: 34,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        for (final st in const [1, 2, 3])
+                          _Chip(
+                            label: st == 1
+                                ? trf('1단계 핵심 {0}', [_words.where((w) => w.st <= 1).length])
+                                : st == 2
+                                    ? trf('2단계 중급까지 {0}', [_words.where((w) => w.st <= 2).length])
+                                    : trf('3단계 전체 {0}', [_words.length]),
+                            selected: _stage == st,
+                            onTap: () => setState(() => _stage = st),
+                          ),
+                        _Chip(
+                          key: const ValueKey('loanword-quiz'),
+                          label: tr('📝 퀴즈 복습'),
+                          selected: false,
+                          color: const Color(0xFFC62828),
+                          onTap: () => openFull(
+                            context,
+                            (_) => LoanwordQuizScreen(words: [
+                              for (final w in _words)
+                                if (w.st <= _stage) LQWord(w.th, w.en, w.ko, w.reading),
+                            ]),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
                 const LaiThaiDivider(height: 8),
                 Expanded(
                   child: ListView(
@@ -228,7 +269,7 @@ class _LoanwordScreenState extends State<LoanwordScreen> {
                         Padding(
                           padding: EdgeInsets.fromLTRB(2, 2, 2, 10),
                           child: Text(
-                            tr('영어 단어가 태국어에 들어올 때 소리가 바뀌는 규칙을 8가지 줄기로 나눴어요. 줄기를 고르면 규칙 설명과 해당 단어가 보입니다. 규칙에서 벗어나는 단어는 "예외"로 표시했습니다.'),
+                            tr('영어 단어가 태국어로 들어올 때 소리가 바뀌는 규칙 8가지예요. 줄기를 고르면 규칙과 단어가 보여요.'),
                             style: TextStyle(
                                 fontSize: 12.5,
                                 height: 1.45,
@@ -513,6 +554,7 @@ class _Chip extends StatelessWidget {
   final VoidCallback onTap;
   final Color color;
   const _Chip({
+    super.key,
     required this.label,
     required this.selected,
     required this.onTap,

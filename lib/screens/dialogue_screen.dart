@@ -111,7 +111,7 @@ class TodayCut extends StatelessWidget {
       const SizedBox(height: 2),
       Text('${d.region} · ${tr(DialogueService.islandKo[d.island] ?? d.island)} · ${trf('{0}턴', [d.turns.length])}', style: const TextStyle(fontSize: 11, color: AppColors.thongDeep)),
       const SizedBox(height: 6),
-      Text(d.scene, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12, color: AppColors.khramLight, height: 1.4)),
+      Text(d.sceneShown, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12, color: AppColors.khramLight, height: 1.4)),
       const SizedBox(height: 10),
       FilledButton.icon(
         onPressed: () => openPane(context, (_) => DialogueScreen(dialogue: d)),
@@ -203,7 +203,7 @@ class DialogueListScreen extends StatelessWidget {
                 onTap: () => openPane(context, (_) => DialogueScreen(dialogue: d)),
                 leading: Text(d.emoji, style: const TextStyle(fontSize: 24)),
                 title: Text('${d.title}${svc.isDone(d.id) ? ' ✓' : ''}', style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: AppColors.khram)),
-                subtitle: Text('${d.isChat ? '💬 ' : ''}${d.scene}', maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11, color: AppColors.thongDeep, height: 1.3)),
+                subtitle: Text('${d.isChat ? '💬 ' : ''}${d.sceneShown}', maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11, color: AppColors.thongDeep, height: 1.3)),
                 trailing: Text(trf('{0}턴', [d.turns.length]), style: const TextStyle(fontSize: 11, color: AppColors.thongDeep)),
               ),
             ),
@@ -283,7 +283,7 @@ class _DialogueScreenState extends State<DialogueScreen> {
                 ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(20, 4, 20, 4),
-                  child: Text(d.scene, style: const TextStyle(fontSize: 12, color: AppColors.khramLight, height: 1.4)),
+                  child: Text(d.sceneShown, style: const TextStyle(fontSize: 12, color: AppColors.khramLight, height: 1.4)),
                 ),
                 const Divider(height: 2, color: AppColors.thong),
                 Expanded(

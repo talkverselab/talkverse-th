@@ -18,6 +18,7 @@ import 'flashcard_screen.dart';
 import 'grammar_hub_screen.dart';
 import 'keyboard_practice_screen.dart';
 import 'loanword_screen.dart';
+import 'sense_course_screen.dart';
 import 'profile_screen.dart';
 import 'progress_screen.dart';
 import 'quick_phrases_screen.dart';
@@ -504,6 +505,7 @@ class _MenuGrid extends StatelessWidget {
       ]),
       (tr('문법'), [
         _MenuItem(label: tr('문법'), sub: tr('초급 코스 16과 · เป็น · ได้ · ขึ้น/ลง'), emblem: 'ได้', color: AppColors.badges[4], builder: (_) => const GrammarHubScreen()),
+        _MenuItem(label: tr('언어감각 익히기'), sub: tr('10급 · 대화 통째로 외우기 → 참고'), emblem: 'จำ', color: AppColors.badges[6], builder: (_) => const SenseCourseScreen()),
       ]),
       (tr('회화'), [
         _MenuItem(label: tr('회화'), sub: 'Dialogue', emblem: 'คุย', color: AppColors.badges[0], builder: (_) => const ConversationScreen()),

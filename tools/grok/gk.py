@@ -7,7 +7,7 @@ sys.path.insert(0,'/Users/talkverse/Hanja/tools'); import grok_cdp as g
 a=sys.argv[1:]; src,dst=a[0],a[1]
 att=a[a.index('--attach')+1].split(',') if '--attach' in a else []
 imgdir=a[a.index('--img')+1] if '--img' in a else None
-room=open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'room_th.txt')).read().strip()
+room=open(os.path.join(os.path.dirname(os.path.abspath(__file__)),os.environ.get('GROK_ROOM_FILE','room_th.txt'))).read().strip()  # 장면 컷은 room_th_scene.txt(uk 11-19: 대사·장면 방 따로)
 url='https://grok.com/' if '--new' in a else 'https://grok.com/c/'+room
 t=json.load(urllib.request.urlopen(urllib.request.Request(g.BASE+'/json/new?'+url,method='PUT')))
 try:
