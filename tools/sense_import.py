@@ -12,7 +12,7 @@ import rd_th  # noqa: E402
 
 P = ROOT / 'assets/data/grammar/sense_course.json'
 MARK = re.compile(r'\{([^|}]+)\|(\d+)\}')
-LINE = re.compile(r'^\s*\**(\d+)[.)]?\s*\**\s*([^:：/]{1,20}?)\s*[:：]\s*(.+)$')
+LINE = re.compile(r'^\s*\**(?:(\d+)[.)]?\s*)?\**\s*([^:：/{}]{1,20}?)\s*\**\s*[:：]\s*(.+)$')  # 번호는 있어도 없어도
 
 
 def plain(s):

@@ -34,6 +34,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: 3.47.7  # 2026-11-19: stable 최신이 Gradle 9.3.1 을 요구해 #80 실패 — 맥(M6)과 같은 판으로 고정
           cache: true
 
       - name: Restore signing key

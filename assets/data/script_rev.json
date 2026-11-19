@@ -249,7 +249,8 @@
 "dialogues/R4/work/r4_work_b2.json": "d9949325cf7f",
 "dialogues/R4/work/r4_work_b3.json": "c7a9bacff4d6",
 "dialogues/R4/work/r4_work_b4.json": "a91287f8296b",
-"dialogues/R4/work/r4_work_c1.json": "ce74395d2e81"
+"dialogues/R4/work/r4_work_c1.json": "ce74395d2e81",
+"grammar/sense_course.json": "6a78a244e446"
 },
-"rev": 6
+"rev": 7
 }
