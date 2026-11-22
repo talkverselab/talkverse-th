@@ -72,6 +72,13 @@ def edge_ok(w, g):
     return g.startswith(toks[0][:2]) and toks[-1][-2:] in g[-6:]
 
 
+def sig(f):
+    """점수 캐시 열쇠 — 파일 크기 + 내용 해시. 같은 이름으로 다시 만들면 바뀐다."""
+    import hashlib
+    b = open(f, 'rb').read()
+    return f'{len(b)}:{hashlib.sha1(b).hexdigest()[:12]}'
+
+
 def score(f, text):
     """(점수, 길이, 사유). 점수 1.0 = 합격 기준(유사도 ≥ 0.90 이고 다른 검사 통과), 0.0 = 불합격 사유 있음."""
     w = norm(LAUGH.sub('', text)); d = dur(f)   # 웃음(ฮ่าๆ)은 받아쓰기·속도에서 뺀다
@@ -117,12 +124,12 @@ def main():
             k = f'{ep}/{name}'; f = f'{wav}/{k}'; q = Q.setdefault(k, {'tries': 0})
             if not os.path.exists(f):
                 q.pop('sim', None); q['ok'] = False; bad += 1; continue   # 아직 없는 조각 — 생기면 다시 잰다
-            if 'sim' not in q:
-                q['sim'], q['dur'], q['why'] = score(f, text)
+            if 'sim' not in q or q.get('sig') != sig(f):   # 같은 이름으로 다시 만든 조각은 옛 점수를 쓰지 않는다(한국어앱 c6433c4 와 같은 버그, 2026-11-23)
+                q['sim'], q['dur'], q['why'] = score(f, text); q['sig'] = sig(f)
             for c in sorted(glob.glob(f'{wav}/retake/{k[:-4]}.t*.wav')):          # 받아 온 재생성본 중 더 나은 것을 본 파일로
                 s, d, why = score(c, text)
                 if s > q['sim']:
-                    shutil.copy(c, f); q['sim'], q['dur'], q['why'] = s, d, why
+                    shutil.copy(c, f); q['sim'], q['dur'], q['why'] = s, d, why; q['sig'] = sig(f)
                 os.remove(c)
             q['ok'] = q['sim'] >= SIM
             if not q['ok']:
