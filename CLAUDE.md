@@ -30,7 +30,7 @@ INSTALL_FAILED_UPDATE_INCOMPATIBLE: signatures do not match
 → 앱을 지우지 말고 **서명부터 확인**한다:
 
 ```bash
-apksigner verify --print-certs <apk> | grep SHA-1   # 9cc4bc932638be43a3982df20b71c4750288476b 여야 한다
+apksigner verify --print-certs <apk> | grep SHA-1   # fa0e4ef9d09f48abbf270034cc6ac761e6353e56 여야 한다(CN=ThaiUniverse, 2026-11-22 정정 — 빌드 46~84 실측)
 ```
 
 ## 폰에 설치할 때 (PC에서 케이블로)

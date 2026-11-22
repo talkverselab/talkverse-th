@@ -1,3 +1,10 @@
+# 2026-11-22 메모
+
+- **음성**: 회화 197/250 · 언어감각 sense_L1~L10 완료(11-21 03:40~04:18, b963778). 남은 회화 53편(725조각) = **11-23 02:30 부터 3090 먼저**(uk 배정, scratchpad `tts_53c.sh` — 02:30 뒤 3090 < 8GB 확인, 06:30 PAUSE). 끝나면 uk·중국어앱에 「GPU 끝」+남은 편, `data/tts/audio_th.json` 커밋 [skip ci]. 못 끝내면 11-24 00:01 중국어 다음 차례.
+- 속도 실측: 두 편 묶음 8~9분 = 시간당 약 14편.
+- **스스로 정한 것(11-22 「막힌 것 각자 판단대로 완료」)**: ① CLAUDE.md §1 서명 SHA-1 을 실측값 `fa0e4ef9…6353e56` 으로 고침(10-11 메모 1번 — 옛 값 9cc4… 는 이 앱 것 아님, 빌드 46~84 모두 fa0e). ② `ios/Podfile`·`Podfile.lock`·swiftpm 은 커밋하지 않음 — 커밋하면 안드 CI 빌드가 헛되이 돌고, `ios_release.sh` 가 pod install 로 다시 만든다. ③ `data/review/course/*_write_old.md`(Grok 첫 답, 화자 순서 틀린 8편)는 미커밋 보관 — 지워도 됨.
+- 크롬 규칙(11-22): Grok 크롬 PC 9259 는 작업 때만 켜고 끝나면 끔, 터널도 닫음(지금 둘 다 꺼짐).
+
 # 2026-11-19 밤 메모(「1 2 3 모두 진행」)
 
 - **ja-parity §2 완료**(2218a61·1b35924): 언어감각 10급(`sense_course_screen.dart`, 외울 대화 Grok 10편 = `tools/sense_import.py`, 서버 원고 rev 7 에 `grammar/sense_course.json` 포함) · 외래어 3단계+퀴즈(`loanword_quiz_screen.dart`) · 장면 글 A → 이름(`sceneShown`).
