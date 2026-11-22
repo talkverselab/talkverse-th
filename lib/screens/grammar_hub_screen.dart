@@ -6,6 +6,7 @@ import '../core/l10n.dart';
 import '../core/platform.dart';
 import '../core/theme.dart';
 import '../services/content_store.dart';
+import '../services/script_sync.dart';
 import '../services/dev_notes.dart';
 import '../widgets/thai_decor.dart';
 import 'grammar_lesson_screen.dart';
@@ -31,12 +32,13 @@ class _GrammarHubScreenState extends State<GrammarHubScreen> {
   }
 
   Future<void> _load() async {
-    final raw = await ContentStore.instance.loadString('assets/data/grammar/lessons.json');
+    final raw = await ScriptSync.instance.loadOr('assets/data/grammar/lessons.json', () => ContentStore.instance.loadString('assets/data/grammar/lessons.json'));
     final data = json.decode(raw) as Map<String, dynamic>;
     final list = (data['lessons'] as List?) ?? [];
     if (!mounted) return;
     setState(() {
-      _lessons = list.whereType<Map>().map((m) => GrammarLesson.fromJson(m.cast<String, dynamic>())).toList();
+      // 과 목록·제목·순서는 데이터(서버 원고 먼저)에서 — 항목이 없는 과는 숨기고, 서버에 내용이 오면 저절로 나타난다(2026-11-23)
+      _lessons = list.whereType<Map>().map((m) => GrammarLesson.fromJson(m.cast<String, dynamic>())).where((l) => l.items.isNotEmpty).toList();
       _loading = false;
     });
   }

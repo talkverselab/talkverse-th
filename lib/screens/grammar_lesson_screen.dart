@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../core/theme.dart';
 import '../services/content_store.dart';
+import '../services/script_sync.dart';
 import '../services/tts_service.dart';
 import '../widgets/memo_toggle.dart';
 import '../widgets/thai_decor.dart';
@@ -39,7 +40,7 @@ class _GrammarLessonScreenState extends State<GrammarLessonScreen> {
   }
 
   Future<void> _load() async {
-    final raw = await ContentStore.instance.loadString('assets/data/grammar/sfp.json');
+    final raw = await ScriptSync.instance.loadOr('assets/data/grammar/sfp.json', () => ContentStore.instance.loadString('assets/data/grammar/sfp.json'));
     final data = json.decode(raw) as Map<String, dynamic>;
     final items = (data['items'] as List?) ?? [];
     if (!mounted) return;

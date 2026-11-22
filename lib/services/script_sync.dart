@@ -100,6 +100,17 @@ class ScriptSync {
     return utf8.decode((await rootBundle.load(assetPath('assets/data/$rel'))).buffer.asUint8List());
   }
 
+  /// 서버에서 받은 덮어쓴 판이 있는 파일인지.
+  bool has(String rel) => _over.containsKey(rel);
+
+  /// 문법 파일처럼 서버 원고와 GitHub 무선 갱신(`ContentStore`) 둘 다 받는 파일 — 서버 원고가 있으면 그것, 없으면 [fallback].
+  /// (사용자 지시 2026-11-23 「문법 파트는 DB 업데이트하면서 업뎃되게」)
+  Future<String> loadOr(String assetPath, Future<String> Function() fallback) async {
+    await init();
+    final rel = assetPath.startsWith('assets/data/') ? assetPath.substring('assets/data/'.length) : assetPath;
+    return has(rel) ? load(rel) : fallback();
+  }
+
   /// 서버 판을 확인하고 바뀐 파일을 받는다. 무엇이든 바뀌었으면 true(읽어 둔 원고를 다시 읽을 것).
   /// 동시에 두 번 불러도 한 번만 돈다(앱 시작 때 기다리는 호출 + 회화를 읽은 뒤의 호출).
   /// 이번 실행에서 서버 목록을 한 번 확인했으면 다시 묻지 않는다.

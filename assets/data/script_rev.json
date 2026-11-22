@@ -250,7 +250,9 @@
 "dialogues/R4/work/r4_work_b3.json": "c7a9bacff4d6",
 "dialogues/R4/work/r4_work_b4.json": "a91287f8296b",
 "dialogues/R4/work/r4_work_c1.json": "ce74395d2e81",
-"grammar/sense_course.json": "6a78a244e446"
+"grammar/lessons.json": "ca72ba5a96f9",
+"grammar/sense_course.json": "6a78a244e446",
+"grammar/sfp.json": "f054bb293c83"
 },
-"rev": 8
+"rev": 9
 }
