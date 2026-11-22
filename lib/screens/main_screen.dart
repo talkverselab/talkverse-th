@@ -12,6 +12,7 @@ import 'alphabet_screen.dart';
 import 'chunk_search_screen.dart';
 import 'conversation_screen.dart';
 import 'course_screen.dart';
+import 'curriculum_screen.dart';
 import 'english_manual_screen.dart';
 import 'episode_screen.dart';
 import 'flashcard_screen.dart';
@@ -267,6 +268,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 8),
+                // 토크버스 커리큘럼(전 언어 공통, 2026-11-22 사용자 지시) — 오늘 분량 카드
+                CurriculumHomeCard(onTap: () => openPane(context, (_) => const CurriculumScreen())),
+                const SizedBox(height: 12),
                 const _TodayMission(),
                 const SizedBox(height: 12),
                 const _TodayTasks(),
@@ -508,6 +512,7 @@ class _MenuGrid extends StatelessWidget {
         _MenuItem(label: tr('언어감각 익히기'), sub: tr('10급 · 대화 통째로 외우기 → 참고'), emblem: 'จำ', color: AppColors.badges[6], builder: (_) => const SenseCourseScreen()),
       ]),
       (tr('회화'), [
+        _MenuItem(label: tr('토크버스 커리큘럼'), sub: tr('다이얼로그 코스 · 80% 통과 · 매일 분량'), emblem: 'เรียน', color: AppColors.badges[1], builder: (_) => const CurriculumScreen()),
         _MenuItem(label: tr('회화'), sub: 'Dialogue', emblem: 'คุย', color: AppColors.badges[0], builder: (_) => const ConversationScreen()),
         _MenuItem(label: tr('문장 말하기'), sub: tr('한글 보고 태국어로 · 7초/4초/2초'), emblem: 'พูด', color: AppColors.badges[1], builder: (_) => const SpeakingPracticeScreen()),
       ]),
