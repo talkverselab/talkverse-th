@@ -344,8 +344,7 @@ class _Memorize extends StatelessWidget {
     final jaStyle = thStyle(fontSize: 20, height: 1.45);
     const koStyle = TextStyle(fontSize: 14, color: AppColors.khram, height: 1.45);
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
-      LessonVideo(url: video),
-      const SizedBox(height: 12),
+      if (video.isNotEmpty) ...[LessonVideo(url: video), const SizedBox(height: 12)],   // 영상 없으면 칸을 안 보임(심사 — 자리표시 금지, 2026-11-22)
       Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(color: AppColors.creamDeep, borderRadius: BorderRadius.circular(10)),

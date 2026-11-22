@@ -40,7 +40,7 @@ void main() {
     await t.pumpWidget(const MaterialApp(home: SenseLessonScreen(index: 0)));
     await settle(t, find.byKey(const ValueKey('sense-finish')));
     expect(t.takeException(), isNull);
-    expect(find.byKey(const ValueKey('memorize-video')), findsOneWidget);
+    expect(find.byKey(const ValueKey('memorize-video')), findsNothing);   // 영상 주소 없으면 칸 숨김(심사 2026-11-22)
     expect(find.textContaining('{', findRichText: true), findsNothing);
     expect(plainMarked('ขอบคุณ{ครับ|1}'), 'ขอบคุณครับ');
     await t.tap(find.byKey(const ValueKey('sense-finish')));
