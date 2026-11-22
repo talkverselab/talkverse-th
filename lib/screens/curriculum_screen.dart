@@ -333,11 +333,10 @@ class _CurriculumScreenState extends State<CurriculumScreen> {
         ),
       ],
       const SizedBox(height: 10),
-      Row(children: [
+      // Row 대신 Wrap — 300px 폭(아이패드 분할 왼쪽)에서 넘치던 것(uk 전달, 몽골어앱 발견 2026-11-22)
+      Wrap(spacing: 6, runSpacing: 4, crossAxisAlignment: WrapCrossAlignment.center, children: [
         for (final n in const [3, 5, 10])
-          Padding(
-            padding: const EdgeInsets.only(right: 6),
-            child: ChoiceChip(
+          ChoiceChip(
               label: Text(trf('{0}편', [n])),
               selected: _pickCount == n,
               onSelected: (_) => setState(() {
@@ -347,8 +346,6 @@ class _CurriculumScreenState extends State<CurriculumScreen> {
                 }
               }),
             ),
-          ),
-        const Spacer(),
         TextButton.icon(
           onPressed: () => setState(() => _picked.addAll(recommend(list, passed, _picked, _pickCount))),
           icon: const Icon(Icons.auto_awesome, size: 16),
