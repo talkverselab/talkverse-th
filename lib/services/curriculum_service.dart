@@ -131,7 +131,11 @@ class CurriculumState {
   List<ReviewItem> dueReview(String today) => review.where((r) => r.due.compareTo(today) <= 0).toList();
 
   /// 오늘 남은 새 편 수.
-  int newLeft(String today) => max(0, dailyGoal - (todayDay == today ? todayNew : 0));
+  /// 하루 새 편 수(가볍게·보통·집중) — 단계 데이터의 daily(§12 덧붙임), 저장하지 않는다. [dailyGoal] 은 그중 몇 번째인지(1~3).
+  List<int> dailyN = const [1, 2, 3];
+  int get dailyCount => dailyN[(dailyGoal - 1).clamp(0, dailyN.length - 1)];
+
+  int newLeft(String today) => max(0, dailyCount - (todayDay == today ? todayNew : 0));
 
   /// 오늘 분량을 다 했나(복습 0 + 새 편 목표 채움).
   bool dayDone(String today) => dueReview(today).isEmpty && newLeft(today) == 0;
@@ -185,12 +189,12 @@ class CurriculumState {
   }
 
   /// 코스 시험 결과. 통과면 코스 완료·통과 편 기록, 아니면 틀린 편의 연습 표시를 지워 다시 연습하게.
-  bool recordExam(int correct, int total, Set<String> wrongDialogues, String today) {
+  bool recordExam(int correct, int total, Set<String> wrongDialogues, String today, {int pass = kPassPercent}) {
     final c = course;
     if (c == null) return false;
     final s = scorePercent(correct, total);
     c.examScores.add(s);
-    if (s >= kPassPercent) {
+    if (s >= pass) {
       c.passedAt = today;
       for (final id in c.dialogueIds) {
         if (!passedDialogues.contains(id)) passedDialogues.add(id);
@@ -299,8 +303,25 @@ class CurStage {
   final int n;
   final String title, desc;
   final List<String> dialogueIds;
-  const CurStage(this.n, this.title, this.desc, this.dialogueIds);
+  /// 고를 편 수·통과 점수·하루 새 편 수(가볍게·보통·집중) — 데이터에 없으면 기본값(§12 덧붙임).
+  final List<int> pick;
+  final int pass;
+  final List<int> daily;
+  const CurStage(this.n, this.title, this.desc, this.dialogueIds, {this.pick = const [3, 5, 10], this.pass = kPassPercent, this.daily = const [1, 2, 3]});
+  CurStage withIds(List<String> ids) => CurStage(n, title, desc, ids, pick: pick, pass: pass, daily: daily);
   String get key => '$n';
+}
+
+List<int> _ints(Object? v, List<int> def) {
+  final l = [for (final x in (v is List ? v : const [])) if (x is num && x > 0) x.toInt()];
+  return l.isEmpty ? def : l;
+}
+
+List<int> _daily(Object? v) {
+  const def = [1, 2, 3];
+  if (v is! Map) return def;
+  final keys = ['light', 'normal', 'focus'];
+  return [for (var i = 0; i < 3; i++) ((v[keys[i]] as num?)?.toInt() ?? def[i]).clamp(1, 99)];
 }
 
 /// 커리큘럼 JSON(§12 형식)을 단계 목록으로. 형식이 틀리면 null.
@@ -309,7 +330,10 @@ class CurStage {
     final j = json.decode(raw) as Map;
     final st = [
       for (final s in (j['stages'] as List).whereType<Map>())
-        CurStage((s['n'] as num).toInt(), '${s['title'] ?? '${s['n']}단계'}', '${s['desc'] ?? ''}', [for (final x in (s['dialogueIds'] as List? ?? const [])) '$x']),
+        CurStage((s['n'] as num).toInt(), '${s['title'] ?? '${s['n']}단계'}', '${s['desc'] ?? ''}', [for (final x in (s['dialogueIds'] as List? ?? const [])) '$x'],
+            pick: _ints(s['pick'], const [3, 5, 10]),
+            pass: (s['pass'] as num?)?.toInt() ?? kPassPercent,
+            daily: _daily(s['daily'])),
     ]..sort((a, b) => a.n.compareTo(b.n));
     return ((j['rev'] as num?)?.toInt() ?? 0, st);
   } catch (_) {
@@ -373,6 +397,7 @@ class CurriculumService {
       if (p == null || p.$1 <= planRev || p.$2.isEmpty) return false;
       await (await Prefs.getInstance()).setString(_kPlan, body);
       _setPlan(p);
+      applyStage();
       changed.value++;
       return true;
     } catch (e) {
@@ -407,7 +432,7 @@ class CurriculumService {
         ];
     return [
       for (final s in plan)
-        if (s.dialogueIds.any((id) => ds.byId(id) != null)) CurStage(s.n, s.title, s.desc, [for (final id in s.dialogueIds) if (ds.byId(id) != null) id]),
+        if (s.dialogueIds.any((id) => ds.byId(id) != null)) s.withIds([for (final id in s.dialogueIds) if (ds.byId(id) != null) id]),
     ];
   }
 
@@ -417,6 +442,13 @@ class CurriculumService {
     }
     return null;
   }
+
+  /// 지금 단계의 통과 점수·고를 편 수(데이터에 없으면 기본값).
+  int get passPercent => stage(state.level)?.pass ?? kPassPercent;
+  List<int> get pickCounts => stage(state.level)?.pick ?? const [3, 5, 10];
+
+  /// 지금 단계의 하루 새 편 수를 상태에 넣는다(단계를 바꾸거나 서버 판을 받은 뒤).
+  void applyStage() => state.dailyN = stage(state.level)?.daily ?? const [1, 2, 3];
 
   /// 단계 이름(없으면 「N단계」).
   String stageTitle(String? level) => stage(level)?.title ?? '${level ?? ''}단계';
@@ -432,10 +464,12 @@ class CurriculumService {
         state = CurriculumState.fromJson(json.decode(raw) as Map);
       } catch (_) {}
     }
+    applyStage();
     _loaded = true;
   }
 
   Future<void> save() async {
+    applyStage();
     await (await Prefs.getInstance()).setString(key, json.encode(state.toJson()));
     changed.value++;
   }

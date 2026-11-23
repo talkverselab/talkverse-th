@@ -26,6 +26,22 @@ void main() {
     expect(p.$2.first.title, '1단계');
   });
 
+  test('단계의 고를 개수·통과 점수·하루 분량도 데이터에서, 없으면 기본값', () {
+    final p = parsePlan('{"rev":1,"stages":[{"n":1,"dialogueIds":["a"],"pick":[2,4],"pass":70,"daily":{"light":2,"normal":3,"focus":5}},{"n":2,"dialogueIds":["b"]}]}')!.$2;
+    expect(p[0].pick, [2, 4]);
+    expect(p[0].pass, 70);
+    expect(p[0].daily, [2, 3, 5]);
+    expect(p[1].pick, [3, 5, 10]);
+    expect(p[1].pass, 80);
+    expect(p[1].daily, [1, 2, 3]);
+    // 통과 점수 70 → 7/10 통과
+    final st = CurriculumState(course: Course('c', ['a']));
+    expect(st.recordExam(7, 10, {}, '2026-11-23', pass: 70), isTrue);
+    // 하루 새 편 수 = daily[dailyGoal-1]
+    final d = CurriculumState(dailyGoal: 3)..dailyN = p[0].daily;
+    expect(d.newLeft('2026-11-23'), 5);
+  });
+
   testWidgets('서버 판이 더 높으면 그것 — 앱에 없는 편은 건너뛰고 빈 단계는 숨김, 단계가 빠지면 사라짐', (t) async {
     String plan(int rev, Map<int, List<String>> m) => json.encode({
           'rev': rev,
