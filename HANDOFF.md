@@ -4,6 +4,7 @@
 - **커리큘럼**(uk 전달 사용자 지시, `~/talkverse/CURRICULUM_SPEC.md`): df3349b → 19d11ac(일본어 ja ceb91c3 기준 맞춤, 저장 키 `th_curriculum_v1`) → 1a3340d(칩 줄 Row→Wrap, 300px 폭 테스트). 홈 「오늘의 학습」 아래 `CurriculumHomeCard` — 심사 빌드에 **보임**. AI 회화 작성(`custom_script_screen.dart`)은 `kCustomScriptLive=false` 숨김(사용자 결정 전까지).
 - **문법 서버 받기**(78f79bc, 사용자 지시 「스텝 15까지·DB 업데이트로·늘고 줄 수 있게」): 언어감각 급·문법 과 목록·순서·제목을 데이터(서버 원고 먼저, 없으면 묶음)에서, 빈 스텝 숨김, 개수 고정 없음. lessons·sfp 도 `script_publish.py` 대상 → 원고 rev 9. 내용 있는 스텝 10/15.
 - **빌드**: 안드 Zealot 89(78f79bc) · iOS TestFlight 2611222346. build/ 는 올린 뒤 지움(M6 디스크 부족 — uk 규칙: iOS 빌드는 한 번에 한 세션, `pgrep -x xcodebuild` 로 확인, 끝나면 build/ 삭제).
+- **qa 재검사·목록 정리**(uk 기준): 캐시 열쇠 내용 해시로(d32e2ea). 로컬 98편 불합격 251 중 134조각(174행·53편)을 D1 `audio_lines` 에서 뺌(6c80ca7, 백업 `data/tts/removed_th_20261123.json`, R2 파일 유지) — 앱은 그 줄을 기기 TTS. **재생성 134조각 = uk 「th 재생성 시작」(es 다음) 뒤**: 백업의 segs 로 moss 작업 → qa → pack.py --upload(그 편 줄을 다시 넣음). 원본 없는 162편 검사는 그때.
 - 언어감각은 이제 Claude 전용(기존 Grok 문장은 그대로). Gemini 검수 대상 없음.
 
 # 2026-11-22 메모
