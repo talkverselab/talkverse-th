@@ -205,3 +205,8 @@ GH_TOKEN=$(gh auth token --user talkverselab) gh run list -R talkverselab/talkve
 
 ## 푸시 확인
 - 이 파일을 담은 커밋은 맥미니에서 §2 의 토큰 방식으로 푸시했다. 확인: `git ls-remote https://github.com/talkverselab/talkverse-th.git refs/heads/master` 가 이 커밋 해시와 같으면 푸시된 것.
+
+## 2026-11-23 17:40 음성 재생성 끝
+- 지웠던 174줄 중 90줄 복귀(R2·D1, D1 th 5030줄). 88줄(원래 174줄 가운데 84 + 점수 0 조각 4)은 3회 재생성 뒤에도 0.85 미만이라 계속 기기 TTS — 목록 `data/tts/still_out_th_20261123.json`.
+- 도구: `tools/tts/pack.py --min-sim 0.85`(미달 조각 든 줄 제외), 재생성 스크립트 `~/tts_work/th/regen.py`(seed 1009+211·회차, 출력 retake t4~t6), 로그 `regen.log`.
+- 남은 88줄 처리 방식(문장 손보기 / 기준 낮추기 / 그대로) = uk·사용자 판단 대기.
