@@ -29,6 +29,7 @@ def noise(f):
     if not spans:
         return None
     a, b = max(spans, key=lambda x: float(x[1]) - float(x[0]))
+    a, b = str(float(a) + 0.06), str(float(b) - 0.06)   # 앞뒤 60ms 버림(말소리 꼬리, it 2ce965d 와 같게)
     oo = subprocess.run(['ffmpeg', '-hide_banner', '-ss', a, '-to', b, '-i', f, '-af', 'astats=measure_perchannel=none:measure_overall=RMS_level', '-f', 'null', '-'], capture_output=True, text=True).stderr
     m = re.search(r'RMS level dB: (-?[\d.]+|-inf)', oo)
     return -99.0 if (m and m.group(1) == '-inf') else (float(m.group(1)) if m else None)
