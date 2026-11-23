@@ -157,10 +157,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_life_a5_write.md",
-  "recommended": "ไปเลย / 가자\nเท่าไหร่ / 얼마야"
- },
  "stats": {
   "cliff_cover": 33
  }

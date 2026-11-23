@@ -339,10 +339,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_friends_c1_write.md",
-  "recommended": "สุขสันต์นะจ้า / 생일 축하해 · ขอให้โชคดีนะ / 행운 있길"
- },
  "stats": {
   "cliff_cover": 73
  }

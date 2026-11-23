@@ -365,10 +365,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_friends_a2_write.md",
-  "recommended": "เอาอีกป่ะ / 더 줄까? · บิลเท่าไหร่ / 계산 얼마야?"
- },
  "stats": {
   "cliff_cover": 55
  }

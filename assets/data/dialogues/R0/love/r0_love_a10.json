@@ -347,10 +347,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_a10_write.md",
-  "recommended": "เอาจริง / 진짜로 · ชิลๆ / 편하게"
- },
  "stats": {
   "cliff_cover": 89
  }

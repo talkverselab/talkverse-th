@@ -539,10 +539,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_culture_b4_write.md",
-  "recommended": "ชิลๆ นะ / 편하게 해 · ดังๆ หน่อย / 좀 더 크게"
- },
  "stats": {
   "cliff_cover": 55
  }

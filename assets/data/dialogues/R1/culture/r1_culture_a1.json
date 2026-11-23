@@ -360,10 +360,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_culture_a1_write.md",
-  "recommended": "ห้ามใส่รองเท้าเข้าไป / 신발 신고 들어가면 안 돼 · วางไว้ตรงนี้เลย / 그냥 여기 놓아"
- },
  "stats": {
   "cliff_cover": 49
  }

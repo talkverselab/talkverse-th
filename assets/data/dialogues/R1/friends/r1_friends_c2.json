@@ -416,10 +416,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_friends_c2_write.md",
-  "recommended": "อย่าโกรธนะ / 화내지 마 · เดี๋ยวไป / 곧 갈게"
- },
  "stats": {
   "cliff_cover": 49
  }

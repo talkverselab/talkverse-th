@@ -614,10 +614,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_life_b5_write.md",
-  "recommended": "ไฟดับทั้งบ้าน / 집 전체 정전 · มืดสนิทเลย / 완전 깜깜해"
- },
  "stats": {
   "cliff_cover": 56
  }

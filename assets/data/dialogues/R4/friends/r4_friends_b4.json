@@ -699,10 +699,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_friends_b4_write.md",
-  "recommended": "ขอให้วิญญาณไปสู่สุคติ / 영혼이 좋은 곳으로 가시길. · ผมเสียใจด้วยจริงๆ / 정말 유감입니다."
- },
  "stats": {
   "cliff_cover": 78
  }

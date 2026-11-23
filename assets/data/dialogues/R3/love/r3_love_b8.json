@@ -744,10 +744,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_love_b8_write.md",
-  "recommended": "มีใครแนะนำได้บ้าง / 누구 소개해 줄 수 있어? · อยากได้เพื่อนใหม่จัง / 새 친구 진짜 생겼으면"
- },
  "stats": {
   "cliff_cover": 78
  }

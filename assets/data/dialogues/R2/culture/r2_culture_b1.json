@@ -612,10 +612,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_culture_b1_write.md",
-  "recommended": "ติดแล้ว / 중독됐어 · ดูอีกหน่อยสิ / 조금만 더 보자"
- },
  "stats": {
   "cliff_cover": 60
  }

@@ -344,10 +344,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_life_a2_write.md",
-  "recommended": "ลดได้ไหมคะ / 깎아 주세요? · ไข่สดไหมคะ / 계란 신선해요?"
- },
  "stats": {
   "cliff_cover": 75
  }

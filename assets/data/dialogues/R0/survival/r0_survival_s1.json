@@ -402,10 +402,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_survival_s1_write.md",
-  "recommended": "ห้องน้ำตรงไหนครับ / 화장실 어디예요 · ไปทางนี้เลยค่ะ / 이쪽으로 가세요"
- },
  "stats": {
   "cliff_cover": 77
  }

@@ -1053,10 +1053,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_friends_b1_write.md",
-  "recommended": "เปิดประตูให้หน่อย / 문 좀 열어줘 · ผ่านได้แล้ว / 통과됐어"
- },
  "stats": {
   "cliff_cover": 74
  }

@@ -312,10 +312,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_study_a3_write.md",
-  "recommended": "ลองดูสิ / 한번 해 봐 · เก่งจังเลย / 정말 잘하네"
- },
  "stats": {
   "cliff_cover": 84
  }

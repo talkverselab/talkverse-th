@@ -548,10 +548,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_work_b2_write.md",
-  "recommended": "ขออนุญาตลาครับ / 휴가 허락해 주세요 · มีธุระส่วนตัวครับ / 개인적인 일이 있어서요"
- },
  "stats": {
   "cliff_cover": 70
  }

@@ -192,10 +192,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_c1_write.md",
-  "recommended": "แชร์โลเคชัน / 위치 공유\nกำลังไป / 가는 중이야"
- },
  "stats": {
   "cliff_cover": 60
  }

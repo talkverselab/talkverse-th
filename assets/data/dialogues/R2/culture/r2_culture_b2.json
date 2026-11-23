@@ -535,10 +535,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_culture_b2_write.md",
-  "recommended": "ระวังนะ / 조심해 · ลุกขึ้นมา / 일어나"
- },
  "stats": {
   "cliff_cover": 58
  }

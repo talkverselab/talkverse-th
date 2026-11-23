@@ -153,10 +153,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_study_a4_write.md",
-  "recommended": "ชิลๆ / 느긋하게\nอ่านต่อไหม / 계속 읽을래"
- },
  "stats": {
   "cliff_cover": 93
  }

@@ -701,10 +701,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_survival_b1_write.md",
-  "recommended": "รบกวนหน่อยค่ะ / 좀 부탁드려요 · เดี๋ยวรอแป๊บหนึ่งนะคะ / 조금만 기다려 주세요"
- },
  "stats": {
   "cliff_cover": 65
  }

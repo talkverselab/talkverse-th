@@ -193,10 +193,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_friends_c3_write.md",
-  "recommended": "โอนแล้ว / 송금했어\nเท่าไหร่ต่อคน / 인당 얼마"
- },
  "stats": {
   "cliff_cover": 52
  }

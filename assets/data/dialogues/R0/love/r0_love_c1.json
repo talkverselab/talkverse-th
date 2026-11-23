@@ -296,10 +296,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_c1_write.md",
-  "recommended": "ว่างมั้ย / 한가해? · คิดถึงเหมือนกัน / 나도 그리워"
- },
  "stats": {
   "cliff_cover": 90
  }

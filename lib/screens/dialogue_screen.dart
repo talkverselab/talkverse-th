@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../data/entitlement.dart';
 import '../services/dialogue_audio.dart';
 import '../services/ko_reading.dart';
 import '../widgets/lemma_text.dart';
@@ -114,7 +115,10 @@ class TodayCut extends StatelessWidget {
       Text(d.sceneShown, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 12, color: AppColors.khramLight, height: 1.4)),
       const SizedBox(height: 10),
       FilledButton.icon(
-        onPressed: () => openPane(context, (_) => DialogueScreen(dialogue: d)),
+        onPressed: () async {
+          // 회화 2단계(R2~) 편은 이용권(PAYWALL_SPEC)
+          if (await Entitlement.gate(context, Entitlement.dialogueFree(d.region)) && context.mounted) openPane(context, (_) => DialogueScreen(dialogue: d));
+        },
         style: FilledButton.styleFrom(backgroundColor: AppColors.kluayMai, foregroundColor: Colors.white, shape: const StadiumBorder(), visualDensity: VisualDensity.compact),
         icon: const Icon(Icons.menu_book_rounded, size: 18),
         label: Text(tr('읽기 시작'), style: const TextStyle(fontWeight: FontWeight.w800)),
@@ -200,11 +204,15 @@ class DialogueListScreen extends StatelessWidget {
             child: Material(
               color: Colors.transparent,
               child: ListTile(
-                onTap: () => openPane(context, (_) => DialogueScreen(dialogue: d)),
+                onTap: () async {
+                  if (await Entitlement.gate(context, Entitlement.dialogueFree(d.region)) && context.mounted) openPane(context, (_) => DialogueScreen(dialogue: d));
+                },
                 leading: Text(d.emoji, style: const TextStyle(fontSize: 24)),
                 title: Text('${d.title}${svc.isDone(d.id) ? ' ✓' : ''}', style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: AppColors.khram)),
                 subtitle: Text('${d.isChat ? '💬 ' : ''}${d.sceneShown}', maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11, color: AppColors.thongDeep, height: 1.3)),
-                trailing: Text(trf('{0}턴', [d.turns.length]), style: const TextStyle(fontSize: 11, color: AppColors.thongDeep)),
+                trailing: !Entitlement.dialogueFree(d.region) && !Entitlement.premium
+                    ? const LockBadge()
+                    : Text(trf('{0}턴', [d.turns.length]), style: const TextStyle(fontSize: 11, color: AppColors.thongDeep)),
               ),
             ),
           );

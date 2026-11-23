@@ -542,10 +542,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_friends_b3_write.md",
-  "recommended": "อย่าหายไปนานนะ / 오래 사라지지 마 · กลับมาแล้วนะ / 돌아오면"
- },
  "stats": {
   "cliff_cover": 54
  }

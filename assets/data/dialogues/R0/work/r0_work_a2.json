@@ -334,10 +334,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_work_a2_write.md",
-  "recommended": "ใครโทรมาครับ / 누가 전화했어 · เดี๋ยวผมรับให้ / 내가 받을게"
- },
  "stats": {
   "cliff_cover": 86
  }

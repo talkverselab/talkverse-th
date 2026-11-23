@@ -278,10 +278,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_survival_s2_write.md",
-  "recommended": "รอแป๊บนะคะ / 잠깐만요 · เชิญค่ะ / 여기요"
- },
  "stats": {
   "cliff_cover": 80
  }

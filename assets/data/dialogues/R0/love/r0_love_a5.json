@@ -360,10 +360,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_a5_write.md",
-  "recommended": "เลยไปแล้ว / 이미 지나쳤다 · ตกใจเลย / 깜짝 놀랐다"
- },
  "stats": {
   "cliff_cover": 92
  }

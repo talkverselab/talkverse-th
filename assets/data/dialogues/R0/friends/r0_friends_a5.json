@@ -335,10 +335,6 @@
    "emotion": "teasing"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_friends_a5_write.md",
-  "recommended": "เอาเลย / 그냥 가져 · ไม่ต้องเกรงใจ / 신경 쓰지 마"
- },
  "stats": {
   "cliff_cover": 80
  }

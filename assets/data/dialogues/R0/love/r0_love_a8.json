@@ -347,10 +347,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_a8_write.md",
-  "recommended": "ตื่นได้แล้ว / 일어나도 돼 · ง่วงจัง / 졸려 죽겠네"
- },
  "stats": {
   "cliff_cover": 84
  }

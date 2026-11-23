@@ -374,10 +374,6 @@
    "emotion": "excited"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_c7_write.md",
-  "recommended": "ว่างป่ะ / 시간 돼? · เดี๋ยวดูนะ / 나중에 볼게"
- },
  "stats": {
   "cliff_cover": 47
  }

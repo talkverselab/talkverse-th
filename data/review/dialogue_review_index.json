@@ -1,0 +1,1002 @@
+{
+ "r0_culture_a1": {
+  "grok_write": "data/review/r0_culture_a1_write.md",
+  "recommended": "ไหว้พระ / 불상에게 인사 · สบาย ๆ / 편하게"
+ },
+ "r0_culture_a2": {
+  "grok_write": "data/review/r0_culture_a2_write.md",
+  "recommended": "สาดน้ำ / 물을 끼얹다 · เปียกปอน / 흠뻑 젖다"
+ },
+ "r0_culture_a3": {
+  "grok_write": "data/review/r0_culture_a3_write.md",
+  "recommended": "ขอให้สมหวังนะ / 소원 성취되길 · วันนี้สนุกนะ / 오늘 재밌어"
+ },
+ "r0_culture_a4": {
+  "grok_write": "data/review/r0_culture_a4_write.md",
+  "recommended": "ชื่อเล่นอะไรดี / 별명 뭐가 좋을까 · เอาอันไหนดี / 어떤 걸로 할까"
+ },
+ "r0_friends_a1": {
+  "grok_write": "data/review/r0_friends_a1_write.md",
+  "recommended": "เล่นอีกป่ะ / 한 판 더 할래 · ยังไม่นอนเหรอ / 아직 안 자?"
+ },
+ "r0_friends_a2": {
+  "grok_write": "data/review/r0_friends_a2_write.md",
+  "recommended": "หวานไหม / 달아요? · ขอชั่งหน่อย / 좀 달아주세요"
+ },
+ "r0_friends_a3": {
+  "grok_write": "data/review/r0_friends_a3_write.md",
+  "recommended": "ใจเย็นๆ / 진정해 · เร็วๆ สิ / 빨리 좀"
+ },
+ "r0_friends_a5": {
+  "grok_write": "data/review/r0_friends_a5_write.md",
+  "recommended": "เอาเลย / 그냥 가져 · ไม่ต้องเกรงใจ / 신경 쓰지 마"
+ },
+ "r0_friends_c1": {
+  "grok_write": "data/review/r0_friends_c1_write.md",
+  "recommended": "สุขสันต์นะจ้า / 생일 축하해 · ขอให้โชคดีนะ / 행운 있길"
+ },
+ "r0_friends_c2": {
+  "grok_write": "data/review/r0_friends_c2_write.md",
+  "recommended": "รอแป๊บ / 잠깐만\nส่งมาเลย / 바로 보내"
+ },
+ "r0_life_a1": {
+  "grok_write": "data/review/r0_life_a1_write.md",
+  "recommended": "ใส่ตรงนี้ได้เลยค่ะ / 여기에 넣으시면 돼요 · เอาไปใช้ได้เลยนะคะ / 가져가서 쓰세요"
+ },
+ "r0_life_a2": {
+  "grok_write": "data/review/r0_life_a2_write.md",
+  "recommended": "ลดได้ไหมคะ / 깎아 주세요? · ไข่สดไหมคะ / 계란 신선해요?"
+ },
+ "r0_life_a3": {
+  "grok_write": "data/review/r0_life_a3_write.md",
+  "recommended": "ลืมกุญแจ / 열쇠를 깜빡했어 · เข้าไม่ได้ / 들어갈 수가 없어"
+ },
+ "r0_life_a4": {
+  "grok_write": "data/review/r0_life_a4_write.md",
+  "recommended": "ร้อนตายแล้ว / 더워 죽겠네 · เปิดแอร์ให้หน่อยสิ / 에어컨 좀 켜 줘"
+ },
+ "r0_life_a5": {
+  "grok_write": "data/review/r0_life_a5_write.md",
+  "recommended": "หมาไม่ดุหรอก / 개 안 사나워 · เดินช้าๆ นะ / 천천히 걸어"
+ },
+ "r0_life_a6": {
+  "grok_write": "data/review/r0_life_a6_write.md",
+  "recommended": "เจอที่ไหน / 어디서 주웠어\nไม่เป็นไรค่ะ / 괜찮아요"
+ },
+ "r0_life_c1": {
+  "grok_write": "data/review/r0_life_c1_write.md",
+  "recommended": "เอาอะไรดี / 뭐 할래 · มีอะไรบ้าง / 뭐 있어"
+ },
+ "r0_love_a1": {
+  "grok_write": "data/review/r0_love_a1_write.md",
+  "recommended": "มีคนนั่งมั้ย / 누가 앉았나요 · นั่งตรงนี้ได้มั้ย / 여기 앉아도 될까"
+ },
+ "r0_love_a10": {
+  "grok_write": "data/review/r0_love_a10_write.md",
+  "recommended": "เอาจริง / 진짜로 · ชิลๆ / 편하게"
+ },
+ "r0_love_a11": {
+  "grok_write": "data/review/r0_love_a11_write.md",
+  "recommended": "รับอะไรดี / 뭐 드릴까요 · หวานน้อยหน่อย / 덜 달게 해 주세요"
+ },
+ "r0_love_a12": {
+  "grok_write": "data/review/r0_love_a12_write.md",
+  "recommended": "ร้องตามป่ะ / 따라 부를래? · เพลงนี้เพราะดี / 이 노래 예쁘다"
+ },
+ "r0_love_a13": {
+  "grok_write": "data/review/r0_love_a13_write.md",
+  "recommended": "แล้วเจอกัน / 그럼 보자 · ไปก่อนนะ / 먼저 갈게"
+ },
+ "r0_love_a2": {
+  "grok_write": "data/review/r0_love_a2_write.md",
+  "recommended": "ลดได้ไหม / 좀 깎아 줄 수 있어? · ห่อให้หน่อย / 포장 좀 해 줘"
+ },
+ "r0_love_a3": {
+  "grok_write": "data/review/r0_love_a3_write.md",
+  "recommended": "ยิ้มหน่อย / 좀 웃어 · ถ่ายรวมกันไหม / 같이 찍을까"
+ },
+ "r0_love_a4": {
+  "grok_write": "data/review/r0_love_a4_write.md",
+  "recommended": "ขออีกหน่อย / 한 입 더 · แบ่งกันกินป่ะ / 나눠 먹을래?"
+ },
+ "r0_love_a5": {
+  "grok_write": "data/review/r0_love_a5_write.md",
+  "recommended": "เลยไปแล้ว / 이미 지나쳤다 · ตกใจเลย / 깜짝 놀랐다"
+ },
+ "r0_love_a6": {
+  "grok_write": "data/review/r0_love_a6_write.md",
+  "recommended": "เผ็ดไปป่ะ / 너무 매워? · ขอน้ำเย็นหน่อย / 찬물 좀 주세요"
+ },
+ "r0_love_a7": {
+  "grok_write": "data/review/r0_love_a7_write.md",
+  "recommended": "ร่มเล็กไป / 우산 너무 작아 · เปียกหมดแล้ว / 완전 젖었어"
+ },
+ "r0_love_a8": {
+  "grok_write": "data/review/r0_love_a8_write.md",
+  "recommended": "ตื่นได้แล้ว / 일어나도 돼 · ง่วงจัง / 졸려 죽겠네"
+ },
+ "r0_love_a9": {
+  "grok_write": "data/review/r0_love_a9_write.md",
+  "recommended": "ขึ้นมาเลย / 바로 올라타 · ไปกันป่ะ / 갈까?"
+ },
+ "r0_love_c1": {
+  "grok_write": "data/review/r0_love_c1_write.md",
+  "recommended": "ว่างมั้ย / 한가해? · คิดถึงเหมือนกัน / 나도 그리워"
+ },
+ "r0_love_c2": {
+  "grok_write": "data/review/r0_love_c2_write.md",
+  "recommended": "ไปนอนได้แล้วนะ / 이제 자러 가도 돼 · ง่วงจังเลยอะ / 엄청 졸려"
+ },
+ "r0_love_c3": {
+  "grok_write": "data/review/r0_love_c3_write.md",
+  "recommended": "จริงดิ / 진짜? · อร่อยป่ะ / 맛있어?"
+ },
+ "r0_love_c4": {
+  "grok_write": "data/review/r0_love_c4_write.md",
+  "recommended": "เอาจริง / 진짜로 · ชิลๆ / 여유롭게"
+ },
+ "r0_love_c5": {
+  "grok_write": "data/review/r0_love_c5_write.md",
+  "recommended": "ฝนตกหนักมาก / 비가 많이 와요 · ร่มพับ / 접이식 우산"
+ },
+ "r0_love_c6": {
+  "grok_write": "data/review/r0_love_c6_write.md",
+  "recommended": "อยู่ใกล้ไหม / 가까워?\nส่งรูปมา / 사진 보내"
+ },
+ "r0_study_a1": {
+  "grok_write": "data/review/r0_study_a1_write.md",
+  "recommended": "ขอยืมหน่อยสิ / 좀 빌려줘 · ได้เลยจ้า / 응, 가져가"
+ },
+ "r0_study_a2": {
+  "grok_write": "data/review/r0_study_a2_write.md",
+  "recommended": "ยังไม่ทันทำ / 아직 못 했어 · ทำไม่เสร็จ / 못 끝냈어"
+ },
+ "r0_study_a3": {
+  "grok_write": "data/review/r0_study_a3_write.md",
+  "recommended": "ลองดูสิ / 한번 해 봐 · เก่งจังเลย / 정말 잘하네"
+ },
+ "r0_study_a4": {
+  "grok_write": "data/review/r0_study_a4_write.md",
+  "recommended": "ชิลๆ / 느긋하게\nอ่านต่อไหม / 계속 읽을래"
+ },
+ "r0_study_c1": {
+  "grok_write": "data/review/r0_study_c1_write.md",
+  "recommended": "ยังไม่รู้ / 아직 몰라\nเต็มไปหมด / 가득 차"
+ },
+ "r0_survival_s1": {
+  "grok_write": "data/review/r0_survival_s1_write.md",
+  "recommended": "ห้องน้ำตรงไหนครับ / 화장실 어디예요 · ไปทางนี้เลยค่ะ / 이쪽으로 가세요"
+ },
+ "r0_survival_s2": {
+  "grok_write": "data/review/r0_survival_s2_write.md",
+  "recommended": "รอแป๊บนะคะ / 잠깐만요 · เชิญค่ะ / 여기요"
+ },
+ "r0_survival_s3": {
+  "grok_write": "data/review/r0_survival_s3_write.md",
+  "recommended": "ร้อนตายแล้ว / 더워 죽겠다 · น้ำเปล่ามีมั้ยคะ / 생수 있어요?"
+ },
+ "r0_travel_a1": {
+  "grok_write": "data/review/r0_travel_a1_write.md",
+  "recommended": "ขึ้นเรือเลย / 바로 배 타요 · เกาะไหนดี / 어느 섬이 좋아"
+ },
+ "r0_travel_a2": {
+  "grok_write": "data/review/r0_travel_a2_write.md",
+  "recommended": "ช้าๆ นะ / 천천히 해 · ระวังนะ / 조심해"
+ },
+ "r0_travel_a3": {
+  "grok_write": "data/review/r0_travel_a3_write.md",
+  "recommended": "สวยเนอะ / 예쁘지 · ดูสิ / 봐"
+ },
+ "r0_travel_a4": {
+  "grok_write": "data/review/r0_travel_a4_write.md",
+  "recommended": "ไปกันป่ะ / 같이 갈까? · จริงป่ะ / 진짜야?"
+ },
+ "r0_travel_a5": {
+  "grok_write": "data/review/r0_travel_a5_write.md",
+  "recommended": "ตรงไป / 직진\nเลี้ยวซ้าย / 좌회전"
+ },
+ "r0_work_a1": {
+  "grok_write": "data/review/r0_work_a1_write.md",
+  "recommended": "หวานน้อย / 덜 달게 · น้ำตาลใส่เท่าไหร่ / 설탕 얼마나 넣을까"
+ },
+ "r0_work_a2": {
+  "grok_write": "data/review/r0_work_a2_write.md",
+  "recommended": "ใครโทรมาครับ / 누가 전화했어 · เดี๋ยวผมรับให้ / 내가 받을게"
+ },
+ "r0_work_a3": {
+  "grok_write": "data/review/r0_work_a3_write.md",
+  "recommended": "หิวแล้ว / 배고파\nไปเลยค่ะ / 가요"
+ },
+ "r0_work_c1": {
+  "grok_write": "data/review/r0_work_c1_write.md",
+  "recommended": "โอเคนะ / 오케이네 · ได้เลยครับ / 바로 돼요"
+ },
+ "r1_culture_a1": {
+  "grok_write": "data/review/r1_culture_a1_write.md",
+  "recommended": "ห้ามใส่รองเท้าเข้าไป / 신발 신고 들어가면 안 돼 · วางไว้ตรงนี้เลย / 그냥 여기 놓아"
+ },
+ "r1_culture_a2": {
+  "grok_write": "data/review/r1_culture_a2_write.md",
+  "recommended": "เล่นน้ำ / 물놀이하다 · เย็นๆ / 시원하게"
+ },
+ "r1_culture_a3": {
+  "grok_write": "data/review/r1_culture_a3_write.md",
+  "recommended": "ขอให้สมหวังนะ / 소원 이루어지길 / สุขสันต์วันลอยกระทง / 로이끄라통 축하해"
+ },
+ "r1_culture_a4": {
+  "grok_write": "data/review/r1_culture_a4_write.md",
+  "recommended": "กินแบบนี้สิ / 이렇게 먹어. · ข้าวหกหมด / 밥 다 쏟았어."
+ },
+ "r1_culture_a5": {
+  "grok_write": "data/review/r1_culture_a5_write.md",
+  "recommended": "วางเบาๆ / 살살 놓아\nสาธุค่ะ / 사뚜"
+ },
+ "r1_culture_c1": {
+  "grok_write": "data/review/r1_culture_c1_write.md",
+  "recommended": "ชื่อเล่นน่ารักจัง / 별명 진짜 귀엽다 , อยากรู้ชื่อจริงป่ะ / 본명 알고 싶어?"
+ },
+ "r1_culture_c2": {
+  "grok_write": "data/review/r1_culture_c2_write.md",
+  "recommended": "ฟังอีกที / 다시 들어\nเพลงโปรด / 좋아하는 노래"
+ },
+ "r1_friends_a1": {
+  "grok_write": "data/review/r1_friends_a1_write.md",
+  "recommended": "ห้องนี้นะ / 이 방이야. · ใส่ของได้เลย / 물건 넣어도 돼."
+ },
+ "r1_friends_a2": {
+  "grok_write": "data/review/r1_friends_a2_write.md",
+  "recommended": "เอาอีกป่ะ / 더 줄까? · บิลเท่าไหร่ / 계산 얼마야?"
+ },
+ "r1_friends_a3": {
+  "grok_write": "data/review/r1_friends_a3_write.md",
+  "recommended": "อร่อยมั้ย / 맛있어? · สั่งเพิ่มไหม / 더 시킬까?"
+ },
+ "r1_friends_a4": {
+  "grok_write": "data/review/r1_friends_a4_write.md",
+  "recommended": "จริงดิ / 진짜? · ชิลๆ / 여유 있게"
+ },
+ "r1_friends_a5": {
+  "grok_write": "data/review/r1_friends_a5_write.md",
+  "recommended": "ร่มเล็กไปหน่อย / 우산이 좀 작아. · รอฝนหยุดไหม / 비 그칠 때까지 기다릴까?"
+ },
+ "r1_friends_a6": {
+  "grok_write": "data/review/r1_friends_a6_write.md",
+  "recommended": "เริ่มเลย / 시작하자\nเลี้ยงเลย / 사줄게"
+ },
+ "r1_friends_a7": {
+  "grok_write": "data/review/r1_friends_a7_write.md",
+  "recommended": "เดินเล่น / 산책하다\nให้อาหาร / 밥 주다"
+ },
+ "r1_friends_c1": {
+  "grok_write": "data/review/r1_friends_c1_write.md",
+  "recommended": "เว่อร์ / 과하다 (너무 세다) / เอาจริง / 진짜로"
+ },
+ "r1_friends_c2": {
+  "grok_write": "data/review/r1_friends_c2_write.md",
+  "recommended": "อย่าโกรธนะ / 화내지 마 · เดี๋ยวไป / 곧 갈게"
+ },
+ "r1_friends_c3": {
+  "grok_write": "data/review/r1_friends_c3_write.md",
+  "recommended": "ไปได้ไหม / 갈 수 있어?\nเลื่อนได้ไหม / 미룰 수 있어?"
+ },
+ "r1_friends_c4": {
+  "grok_write": "data/review/r1_friends_c4_write.md",
+  "recommended": "คนละเท่าไหร่ / 인당 얼마\nอย่าบอกนะ / 말하지 마"
+ },
+ "r1_life_a1": {
+  "grok_write": "data/review/r1_life_a1_write.md",
+  "recommended": "เดี๋ยวจัดการให้ครับ / 제가 처리해 드릴게요 · รอแป๊บนะครับ / 잠깐 기다려 주세요"
+ },
+ "r1_life_a2": {
+  "grok_write": "data/review/r1_life_a2_write.md",
+  "recommended": "ถึงแล้วครับ / 도착했어요 · รับของเลย / 물건 받아"
+ },
+ "r1_life_a3": {
+  "grok_write": "data/review/r1_life_a3_write.md",
+  "recommended": "สั้นเท่าไหร่ดี / 얼마나 짧게 할까요\nชอบไหมครับ / 마음에 드세요?"
+ },
+ "r1_life_a4": {
+  "grok_write": "data/review/r1_life_a4_write.md",
+  "recommended": "กินให้อร่อยนะ / 맛있게 먹어 · ระวังตัวด้วยนะคะ / 몸 조심해"
+ },
+ "r1_life_a5": {
+  "grok_write": "data/review/r1_life_a5_write.md",
+  "recommended": "ไปเลย / 가자\nเท่าไหร่ / 얼마야"
+ },
+ "r1_life_c1": {
+  "grok_write": "data/review/r1_life_c1_write.md",
+  "recommended": "ไม่เป็นไร ตัวเอง / 괜찮아 자기야 · 555 เว่อร์ / 555 과해"
+ },
+ "r1_life_c2": {
+  "grok_write": "data/review/r1_life_c2_write.md",
+  "recommended": "ซื้อมาเลย / 사 와\nอย่าลืม / 잊지 마"
+ },
+ "r1_love_a1": {
+  "grok_write": "data/review/r1_love_a1_write.md",
+  "recommended": "นั่งด้วยกันได้ป่ะ / 같이 앉아도 돼? · โต๊ะนี้ว่างมั้ย / 이 테이블 비었나요?"
+ },
+ "r1_love_a10": {
+  "grok_write": "data/review/r1_love_a10_write.md",
+  "recommended": "ระวังลื่นนะ / 미끄러우니까 조심해 · วิ่งเร็วๆ / 빨리빨리 뛰어"
+ },
+ "r1_love_a2": {
+  "grok_write": "data/review/r1_love_a2_write.md",
+  "recommended": "อายุเท่าไหร่แล้ว / 이제 몇 살이니 · เรียกพี่นะ / พี่라고 불러"
+ },
+ "r1_love_a3": {
+  "grok_write": "data/review/r1_love_a3_write.md",
+  "recommended": "ไปช้าๆ นะ / 천천히 가 · ระวังด้วยนะ / 조심해"
+ },
+ "r1_love_a4": {
+  "grok_write": "data/review/r1_love_a4_write.md",
+  "recommended": "เช็คบิล / 계산 · เอาอีกไหม / 더 먹을래?"
+ },
+ "r1_love_a5": {
+  "grok_write": "data/review/r1_love_a5_write.md",
+  "recommended": "ฟอลโล่กลับ / 맞팔 · แอบชอบ / 몰래 좋아하다"
+ },
+ "r1_love_a6": {
+  "grok_write": "data/review/r1_love_a6_write.md",
+  "recommended": "อย่างอนนะ / 삐지지 마 · หายงอนยัง / 삐짐 풀렸어?"
+ },
+ "r1_love_a7": {
+  "grok_write": "data/review/r1_love_a7_write.md",
+  "recommended": "ชิลๆ / 여유 있게\nจริงดิ / 진짜야?"
+ },
+ "r1_love_a8": {
+  "grok_write": "data/review/r1_love_a8_write.md",
+  "recommended": "อย่าแอบดูนะ / 몰래 보지 마. · ฝึกพูดอยู่ / 말하기 연습 중이야."
+ },
+ "r1_love_a9": {
+  "grok_write": "data/review/r1_love_a9_write.md",
+  "recommended": "คิดถึงนะ / 보고 싶었어 · ครบเดือนแล้วนะ / 한 달 됐어"
+ },
+ "r1_love_b1": {
+  "grok_write": "data/review/r1_love_b1_write.md",
+  "recommended": "ชิลๆ / 편하게 · จริงดิ / 진짜야?"
+ },
+ "r1_love_c1": {
+  "grok_write": "data/review/r1_love_c1_write.md",
+  "recommended": "กินอะไรดี / 뭐 먹을까? · ส่งรูปมาหน่อย / 사진 좀 보내줘"
+ },
+ "r1_love_c2": {
+  "grok_write": "data/review/r1_love_c2_write.md",
+  "recommended": "นอนละ / 잘게 · ฝันดีนะ / 좋은 꿈"
+ },
+ "r1_love_c3": {
+  "grok_write": "data/review/r1_love_c3_write.md",
+  "recommended": "ได้รับแล้วนะ / 받았어 · เสียงชัดเจนดี / 목소리 잘 들려"
+ },
+ "r1_love_c4": {
+  "grok_write": "data/review/r1_love_c4_write.md",
+  "recommended": "งั้นเหรอ / 그렇구나 · ป่ะ / ~할까?"
+ },
+ "r1_love_c5": {
+  "grok_write": "data/review/r1_love_c5_write.md",
+  "recommended": "ชิลๆ / 여유롭게 · จ้า / 응"
+ },
+ "r1_love_c6": {
+  "grok_write": "data/review/r1_love_c6_write.md",
+  "recommended": "รักนะ / 사랑해 · เกิดวันนี้นะ / 오늘 생일이지"
+ },
+ "r1_love_c7": {
+  "grok_write": "data/review/r1_love_c7_write.md",
+  "recommended": "ว่างป่ะ / 시간 돼? · เดี๋ยวดูนะ / 나중에 볼게"
+ },
+ "r1_love_c8": {
+  "grok_write": "data/review/r1_love_c8_write.md",
+  "recommended": "ฝนหนัก / 비 많이 와\nรอแป๊บ / 잠깐 기다려"
+ },
+ "r1_love_c9": {
+  "grok_write": "data/review/r1_love_c9_write.md",
+  "recommended": "ว่างไหม / 시간 돼?\nเลื่อนได้ไหม / 미룰 수 있어?"
+ },
+ "r1_study_a1": {
+  "grok_write": "data/review/r1_study_a1_write.md",
+  "recommended": "ไม่เป็นไรค่ะ / 괜찮아요 · ลองอีกทีสิคะ / 다시 해봐"
+ },
+ "r1_study_a2": {
+  "grok_write": "data/review/r1_study_a2_write.md",
+  "recommended": "งานนี้โหลดโหด / 이 일 진짜 빡세다 · เคลียร์ยัง / 다 끝났어?"
+ },
+ "r1_study_a3": {
+  "grok_write": "data/review/r1_study_a3_write.md",
+  "recommended": "จริงดิ / 진짜? · เนอะ / 그치"
+ },
+ "r1_study_a5": {
+  "grok_write": "data/review/r1_study_a5_write.md",
+  "recommended": "เปิดอีกที / 다시 틀어 줘\nฟังไม่ทัน / 못 들었어"
+ },
+ "r1_study_a6": {
+  "grok_write": "data/review/r1_study_a6_write.md",
+  "recommended": "เบาเสียงหน่อย / 목소리 낮춰 줘\nห้าโมงเย็น / 오후 5시"
+ },
+ "r1_study_c1": {
+  "grok_write": "data/review/r1_study_c1_write.md",
+  "recommended": "รับทราบครับ / 알겠습니다 · เดี๋ยวส่งครับ / 곧 보낼게요"
+ },
+ "r1_study_c2": {
+  "grok_write": "data/review/r1_study_c2_write.md",
+  "recommended": "ยังไม่ทำ / 아직 안 했어\nทำด้วยกัน / 같이 하자"
+ },
+ "r1_survival_s1": {
+  "grok_write": "data/review/r1_survival_s1_write.md",
+  "recommended": "ถุงพลาสติกไหมคะ / 비닐봉투 드릴까요? · สแตมป์ครบแล้วนะคะ / 스탬프 다 모았어요."
+ },
+ "r1_survival_s2": {
+  "grok_write": "data/review/r1_survival_s2_write.md",
+  "recommended": "หวานน้อยนะคะ / 덜 달게요. · แก้วนี้เท่าไหร่คะ / 이 잔 얼마예요?"
+ },
+ "r1_survival_s3": {
+  "grok_write": "data/review/r1_survival_s3_write.md",
+  "recommended": "ไปส่งที่ไหนครับ / 어디로 모실까요 · ช้าหน่อยนะครับ / 천천히 가주세요"
+ },
+ "r1_survival_s4": {
+  "grok_write": "data/review/r1_survival_s4_write.md",
+  "recommended": "ถ้ายังไม่หายมาอีกนะ / 아직 안 나으면 다시 오세요 · รับประทานหลังอาหารนะคะ / 식후에 드세요"
+ },
+ "r1_survival_s5": {
+  "grok_write": "data/review/r1_survival_s5_write.md",
+  "recommended": "ตามมาเลย / 따라와 · อีกนิดเดียว / 조금만 더"
+ },
+ "r1_travel_a1": {
+  "grok_write": "data/review/r1_travel_a1_write.md",
+  "recommended": "ไปกันเถอะ / 같이 가자 · จ้า / 응 (캐주얼)"
+ },
+ "r1_travel_a2": {
+  "grok_write": "data/review/r1_travel_a2_write.md",
+  "recommended": "ลงน้ำกันเถอะ / 물에 들어가자 · ระวังนะ / 조심해"
+ },
+ "r1_travel_a3": {
+  "grok_write": "data/review/r1_travel_a3_write.md",
+  "recommended": "เหงาไหม / 심심해? · ตามมาทำไม / 왜 따라왔어"
+ },
+ "r1_travel_a4": {
+  "grok_write": "data/review/r1_travel_a4_write.md",
+  "recommended": "ห้องว่างไหมคะ / 빈 방 있나요 · ราคาเท่าไหร่คะ / 얼마예요"
+ },
+ "r1_travel_a5": {
+  "grok_write": "data/review/r1_travel_a5_write.md",
+  "recommended": "ลดได้ไหม / 깎아 주세요\nเอาสอง / 두 개 주세요"
+ },
+ "r1_travel_c1": {
+  "grok_write": "data/review/r1_travel_c1_write.md",
+  "recommended": "อยู่ชั้นไหน / 몇 층이야\nออกมาเลย / 나와"
+ },
+ "r1_work_a1": {
+  "grok_write": "data/review/r1_work_a1_write.md",
+  "recommended": "ไม่เป็นไรค่ะ / 괜찮아 · เดี๋ยวไปด้วยกันนะคะ / 이따 같이 가자"
+ },
+ "r1_work_a2": {
+  "grok_write": "data/review/r1_work_a2_write.md",
+  "recommended": "รับทราบครับ / 알겠습니다 · เดี๋ยวจัดการครับ / 제가 알아서 할게요"
+ },
+ "r1_work_a3": {
+  "grok_write": "data/review/r1_work_a3_write.md",
+  "recommended": "มาสิ / 어서 해 · เสียงดีนะ / 목소리 좋네"
+ },
+ "r1_work_a4": {
+  "grok_write": "data/review/r1_work_a4_write.md",
+  "recommended": "ใส่กระดาษ / 종이 넣어\nลองใหม่ / 다시 해 봐"
+ },
+ "r1_work_a5": {
+  "grok_write": "data/review/r1_work_a5_write.md",
+  "recommended": "ยังไม่เปิด / 아직 안 열었어\nแลกของขวัญ / 선물 교환"
+ },
+ "r1_work_c1": {
+  "grok_write": "data/review/r1_work_c1_write.md",
+  "recommended": "กินอะไรดี / 뭐 먹을까 · ร้อนจัง / 엄청 덥다"
+ },
+ "r1_work_c2": {
+  "grok_write": "data/review/r1_work_c2_write.md",
+  "recommended": "วันนี้ WFH / 오늘 재택\nมาสายได้ไหม / 늦어도 돼?"
+ },
+ "r2_culture_b1": {
+  "grok_write": "data/review/r2_culture_b1_write.md",
+  "recommended": "ติดแล้ว / 중독됐어 · ดูอีกหน่อยสิ / 조금만 더 보자"
+ },
+ "r2_culture_b2": {
+  "grok_write": "data/review/r2_culture_b2_write.md",
+  "recommended": "ระวังนะ / 조심해 · ลุกขึ้นมา / 일어나"
+ },
+ "r2_culture_b3": {
+  "grok_write": "data/review/r2_culture_b3_write.md",
+  "recommended": "รับไว้เลยนะ / 그냥 받아. · ขอให้โชคดีนะ / 행운을 빌어요."
+ },
+ "r2_culture_b4": {
+  "grok_write": "data/review/r2_culture_b4_write.md",
+  "recommended": "ชิลๆ นะ / 편하게 해 · ดังๆ หน่อย / 좀 더 크게"
+ },
+ "r2_culture_b5": {
+  "grok_write": "data/review/r2_culture_b5_write.md",
+  "recommended": "เสียดายจัง / 아쉽다 · ไปแทนให้ได้ป่ะ / 대신 가 줄 수 있어?"
+ },
+ "r2_culture_b6": {
+  "grok_write": "data/review/r2_culture_b6_write.md",
+  "recommended": "ขอแสดงความเสียใจ / 위로드립니다\nทำบุญค่ะ / 공양해요"
+ },
+ "r2_culture_c1": {
+  "grok_write": "data/review/r2_culture_c1_write.md",
+  "recommended": "อย่าสปอยล์ / 스포하지 마\nดูด้วยกัน / 같이 보자"
+ },
+ "r2_friends_b1": {
+  "grok_write": "data/review/r2_friends_b1_write.md",
+  "recommended": "ไปอีกแก้ว / 한 잔 더 · ยังไม่กลับบ้าน / 아직 집에 안 가"
+ },
+ "r2_friends_b2": {
+  "grok_write": "data/review/r2_friends_b2_write.md",
+  "recommended": "ปีอะไรเกิด / 몇 년생이야 · ดูดวงให้หน่อย / 운세 좀 봐줘"
+ },
+ "r2_friends_b3": {
+  "grok_write": "data/review/r2_friends_b3_write.md",
+  "recommended": "อย่าหายไปนานนะ / 오래 사라지지 마 · กลับมาแล้วนะ / 돌아오면"
+ },
+ "r2_friends_b4": {
+  "grok_write": "data/review/r2_friends_b4_write.md",
+  "recommended": "ช่วยกันหน่อยสิ / 같이 좀 해줘 , มันไม่เข้าจริงๆ / 진짜 안 들어가"
+ },
+ "r2_friends_b5": {
+  "grok_write": "data/review/r2_friends_b5_write.md",
+  "recommended": "ใครจะร้อง / 누가 노래할래 · เปิดเพลงช้าๆ / 느린 노래 틀어"
+ },
+ "r2_friends_b6": {
+  "grok_write": "data/review/r2_friends_b6_write.md",
+  "recommended": "เล่นอีก / 한 판 더\nเติมต่อ / 시간 더 충전"
+ },
+ "r2_friends_b7": {
+  "grok_write": "data/review/r2_friends_b7_write.md",
+  "recommended": "หลบไป / 피해\nอย่ามอง / 보지 마"
+ },
+ "r2_friends_b8": {
+  "grok_write": "data/review/r2_friends_b8_write.md",
+  "recommended": "เล่นต่อ / 계속 하자\nส่งมา / 패스해"
+ },
+ "r2_friends_c1": {
+  "grok_write": "data/review/r2_friends_c1_write.md",
+  "recommended": "แท็กมา / 태그해\nปังเวอร์ / 완전 멋져"
+ },
+ "r2_friends_c2": {
+  "grok_write": "data/review/r2_friends_c2_write.md",
+  "recommended": "เก็บเป็นความลับ / 비밀로 해\nอย่าแชร์ / 공유하지 마"
+ },
+ "r2_friends_c3": {
+  "grok_write": "data/review/r2_friends_c3_write.md",
+  "recommended": "โอนแล้ว / 송금했어\nเท่าไหร่ต่อคน / 인당 얼마"
+ },
+ "r2_life_b1": {
+  "grok_write": "data/review/r2_life_b1_write.md",
+  "recommended": "ว่างไหม / 비어 있나요 · เข้าอยู่ได้เลย / 바로 입주 가능"
+ },
+ "r2_life_b2": {
+  "grok_write": "data/review/r2_life_b2_write.md",
+  "recommended": "อย่าสั้นไปนะ / 너무 짧지 않게 · เท่านี้พอ / 이 정도면 돼요"
+ },
+ "r2_life_b3": {
+  "grok_write": "data/review/r2_life_b3_write.md",
+  "recommended": "ขึ้นบันไดไปเลย / 계단으로 올라가자 · อาหารรออยู่ / 음식 기다리고 있어"
+ },
+ "r2_life_b4": {
+  "grok_write": "data/review/r2_life_b4_write.md",
+  "recommended": "รบกวนหน่อยนะคะ / 조금 방해해서 죄송 · เดี๋ยวตามไปนะคะ / 바로 따라갈게요"
+ },
+ "r2_life_b5": {
+  "grok_write": "data/review/r2_life_b5_write.md",
+  "recommended": "ไฟดับทั้งบ้าน / 집 전체 정전 · มืดสนิทเลย / 완전 깜깜해"
+ },
+ "r2_life_b6": {
+  "grok_write": "data/review/r2_life_b6_write.md",
+  "recommended": "ปวดตรงไหน / 어디가 아파요\nไม่แพ้ยา / 약 알레르기 없어요"
+ },
+ "r2_life_b7": {
+  "grok_write": "data/review/r2_life_b7_write.md",
+  "recommended": "รอแป๊บ / 잠깐만\nเอกสารครบ / 서류 다 됐어요"
+ },
+ "r2_life_c3": {
+  "grok_write": "data/review/r2_life_c3_write.md",
+  "recommended": "ลิฟต์เสีย / 엘리베이터 고장\nชั้นไหน / 몇 층이야"
+ },
+ "r2_love_b1": {
+  "grok_write": "data/review/r2_love_b1_write.md",
+  "recommended": "รถไฟขบวนไหน / 어느 열차야? · ยังมีเวลาอีกหน่อย / 아직 시간 좀 있어."
+ },
+ "r2_love_b10": {
+  "grok_write": "data/review/r2_love_b10_write.md",
+  "recommended": "ช่วยทีสิ / 좀 도와줘 · ชิลๆ หน่อย / 좀  chill하게"
+ },
+ "r2_love_b11": {
+  "grok_write": "data/review/r2_love_b11_write.md",
+  "recommended": "จริงดิ / 진짜? · งั้นเหรอ / 그렇구나"
+ },
+ "r2_love_b12": {
+  "grok_write": "data/review/r2_love_b12_write.md",
+  "recommended": "เดี๋ยวก่อนนะ / 잠깐만 · ขอเปลี่ยนได้ไหม / 바꿀 수 있어요?"
+ },
+ "r2_love_b2": {
+  "grok_write": "data/review/r2_love_b2_write.md",
+  "recommended": "เมาแล้วพูดนะ / 취해서 하는 말이야 · เอาจริงดิ / 진짜로?"
+ },
+ "r2_love_b3": {
+  "grok_write": "data/review/r2_love_b3_write.md",
+  "recommended": "ไปกันเถอะ / 가자 · เลือกเลย / 네가 골라"
+ },
+ "r2_love_b4": {
+  "grok_write": "data/review/r2_love_b4_write.md",
+  "recommended": "แบตเหลือน้อยมาก / 배터리 거의 없어. · เสียบได้เลยไหม / 꽂아도 돼?"
+ },
+ "r2_love_b5": {
+  "grok_write": "data/review/r2_love_b5_write.md",
+  "recommended": "ชิลๆ ไป /  chill하게 해 · โอเคป่ะ / 괜찮아?"
+ },
+ "r2_love_b6": {
+  "grok_write": "data/review/r2_love_b6_write.md",
+  "recommended": "ช้าหน่อยนะ / 좀 천천히 해 · ไม่เป็นไร / 괜찮아"
+ },
+ "r2_love_b7": {
+  "grok_write": "data/review/r2_love_b7_write.md",
+  "recommended": "หลบฝนกันเถอะ / 같이 비 피하자 · ร่มพังแล้ว / 우산 망가졌어"
+ },
+ "r2_love_b8": {
+  "grok_write": "data/review/r2_love_b8_write.md",
+  "recommended": "เช็คบิลด้วย / 계산해 주세요 · รอบหน้าฉันออก / 다음엔 내가 낼게"
+ },
+ "r2_love_b9": {
+  "grok_write": "data/review/r2_love_b9_write.md",
+  "recommended": "หลบไปก่อนสิ / 일단 피해 · เดินตามปกติ / 평소처럼 걸어"
+ },
+ "r2_love_c1": {
+  "grok_write": "data/review/r2_love_c1_write.md",
+  "recommended": "แชร์โลเคชัน / 위치 공유\nกำลังไป / 가는 중이야"
+ },
+ "r2_love_c2": {
+  "grok_write": "data/review/r2_love_c2_write.md",
+  "recommended": "อย่าลบ / 지우지 마\nขอโทษจริงๆ / 진짜 미안해"
+ },
+ "r2_study_b1": {
+  "grok_write": "data/review/r2_study_b1_write.md",
+  "recommended": "ยังไงดี / 어떡하지 · เดี๋ยวจัดการ / 잠깐 처리할게"
+ },
+ "r2_study_b2": {
+  "grok_write": "data/review/r2_study_b2_write.md",
+  "recommended": "ที่นั่งเต็มหมด / 자리 다 찼어. · เดี๋ยวเขากลับมา / 곧 돌아올 거야."
+ },
+ "r2_study_b3": {
+  "grok_write": "data/review/r2_study_b3_write.md",
+  "recommended": "เอาจริง / 진짜로 · ชิลๆ /  Chill하게"
+ },
+ "r2_study_b4": {
+  "grok_write": "data/review/r2_study_b4_write.md",
+  "recommended": "เริ่มใหม่ / 다시 시작\nระวังหน่อย / 조심해"
+ },
+ "r2_study_b5": {
+  "grok_write": "data/review/r2_study_b5_write.md",
+  "recommended": "ขอบคุณครับ / 감사합니다\nอยากเรียน / 공부하고 싶어요"
+ },
+ "r2_study_b6": {
+  "grok_write": "data/review/r2_study_b6_write.md",
+  "recommended": "ปิดเสียง / 무음으로\nเริ่มได้ / 시작해도 돼"
+ },
+ "r2_study_c3": {
+  "grok_write": "data/review/r2_study_c3_write.md",
+  "recommended": "ลบได้ไหม / 지울 수 있어?\nส่งถูกห้อง / 올바른 방에 보내"
+ },
+ "r2_study_c4": {
+  "grok_write": "data/review/r2_study_c4_write.md",
+  "recommended": "ตั้งนาฬิกา / 알람 맞춰\nไปสอบ / 시험 보러 가"
+ },
+ "r2_survival_b1": {
+  "grok_write": "data/review/r2_survival_b1_write.md",
+  "recommended": "รบกวนหน่อยค่ะ / 좀 부탁드려요 · เดี๋ยวรอแป๊บหนึ่งนะคะ / 조금만 기다려 주세요"
+ },
+ "r2_travel_b1": {
+  "grok_write": "data/review/r2_travel_b1_write.md",
+  "recommended": "ทางนี้ใช่ไหม / 이쪽 맞아? · ใกล้แล้วป่ะ / 거의 다 온 거 아냐?"
+ },
+ "r2_travel_b2": {
+  "grok_write": "data/review/r2_travel_b2_write.md",
+  "recommended": "ไปเช่ากันป่ะ / 같이 빌리러 갈까 · ดูดีสุดๆ เลย / 완전 잘 어울려"
+ },
+ "r2_travel_b3": {
+  "grok_write": "data/review/r2_travel_b3_write.md",
+  "recommended": "ตามลิงไปเร็ว / 원숭이 빨리 쫓아가 · สวยจังเลย / 진짜 예쁘다"
+ },
+ "r2_travel_b4": {
+  "grok_write": "data/review/r2_travel_b4_write.md",
+  "recommended": "ถึงแล้วบอกนะ / 도착하면 말해 · โชคดีนะ / 행운을 빌어"
+ },
+ "r2_travel_b5": {
+  "grok_write": "data/review/r2_travel_b5_write.md",
+  "recommended": "ตั๋วนอน / 침대표\nเปลี่ยนวันที่ / 날짜 바꿔 주세요"
+ },
+ "r2_travel_b6": {
+  "grok_write": "data/review/r2_travel_b6_write.md",
+  "recommended": "ระวังหน่อย / 조심해\nตามมาเลย / 따라와"
+ },
+ "r2_travel_c2": {
+  "grok_write": "data/review/r2_travel_c2_write.md",
+  "recommended": "เช็กอินได้ / 체크인 돼요\nมีอาหารเช้า / 조식 있어요"
+ },
+ "r2_work_b1": {
+  "grok_write": "data/review/r2_work_b1_write.md",
+  "recommended": "ไชโย / 만세·건배 · หมดแก้ว / 원샷"
+ },
+ "r2_work_b2": {
+  "grok_write": "data/review/r2_work_b2_write.md",
+  "recommended": "ขออนุญาตลาครับ / 휴가 허락해 주세요 · มีธุระส่วนตัวครับ / 개인적인 일이 있어서요"
+ },
+ "r2_work_b3": {
+  "grok_write": "data/review/r2_work_b3_write.md",
+  "recommended": "เอาจริงเหรอ / 진짜로? · เดี๋ยววุ่นวาย / 곧 난리 나"
+ },
+ "r2_work_b4": {
+  "grok_write": "data/review/r2_work_b4_write.md",
+  "recommended": "งั้นเหรอ / 그런 거야? · ชิลๆ / 편하게"
+ },
+ "r2_work_b5": {
+  "grok_write": "data/review/r2_work_b5_write.md",
+  "recommended": "ยินดีครับ / 반갑습니다\nนามบัตรครับ / 명함입니다"
+ },
+ "r2_work_b6": {
+  "grok_write": "data/review/r2_work_b6_write.md",
+  "recommended": "สั่งเลย / 시키자\nหารครึ่ง / 반반 내자"
+ },
+ "r2_work_b7": {
+  "grok_write": "data/review/r2_work_b7_write.md",
+  "recommended": "ขึ้นมาเลย / 올라와\nร้องต่อ / 계속 불러"
+ },
+ "r2_work_c3": {
+  "grok_write": "data/review/r2_work_c3_write.md",
+  "recommended": "ตอบเฉพาะ / 개별 답장\nลาได้ไหม / 휴가 돼?"
+ },
+ "r2_work_c4": {
+  "grok_write": "data/review/r2_work_c4_write.md",
+  "recommended": "เปิดดู / 열어 봐\nผ่านไหม / 합격했어?"
+ },
+ "r3_culture_b1": {
+  "grok_write": "data/review/r3_culture_b1_write.md",
+  "recommended": "ใจเย็นก่อน / 일단 진정해 · 5555 เว่อร์มาก / 5555 완전 오버네"
+ },
+ "r3_culture_b2": {
+  "grok_write": "data/review/r3_culture_b2_write.md",
+  "recommended": "ห้ามมองกล้องนะ / 카메라 보지 마 · ชิล ๆ เดินไป / 편하게 걸어가"
+ },
+ "r3_culture_b3": {
+  "grok_write": "data/review/r3_culture_b3_write.md",
+  "recommended": "รถเต็มแล้ว / 차 꽉 찼어 · กินเยอะไปมั้ย / 너무 많이 먹었어?"
+ },
+ "r3_culture_c1": {
+  "grok_write": "data/review/r3_culture_c1_write.md",
+  "recommended": "แชร์ข่าวนี้หน่อย / 이 뉴스 공유해 줘. · ความเห็นต่างได้ / 다른 의견도 괜찮아."
+ },
+ "r3_friends_b1": {
+  "grok_write": "data/review/r3_friends_b1_write.md",
+  "recommended": "ไม่เป็นไรนะ / 괜찮아 · เอาเถอะ / 그냥 해"
+ },
+ "r3_friends_b3": {
+  "grok_write": "data/review/r3_friends_b3_write.md",
+  "recommended": "เก็บไว้ดีๆ นะ / 잘 보관해 · ไว้เจอกันอีกสิบปี / 10년 뒤에 다시 만나자"
+ },
+ "r3_friends_b4": {
+  "grok_write": "data/review/r3_friends_b4_write.md",
+  "recommended": "อย่ากังวล / 걱정하지 마\nบอกตรงๆ / 솔직히 말해"
+ },
+ "r3_friends_b5": {
+  "grok_write": "data/review/r3_friends_b5_write.md",
+  "recommended": "แพ็คเสร็จยัง / 짐 다 쌌어\nอย่าลืมของ / 물건 잊지 마"
+ },
+ "r3_friends_c1": {
+  "grok_write": "data/review/r3_friends_c1_write.md",
+  "recommended": "โหวตกันไหม / 투표할까? · เดี๋ยวตัดสินใจ / 곧 결정할게."
+ },
+ "r3_life_b1": {
+  "grok_write": "data/review/r3_life_b1_write.md",
+  "recommended": "เงียบหน่อยสิ / 조용히 좀 해 · ทนไม่ไหวแล้ว / 더 이상 못 참겠어"
+ },
+ "r3_life_b2": {
+  "grok_write": "data/review/r3_life_b2_write.md",
+  "recommended": "ขอดูสัญญาได้ไหม / 계약서 볼 수 있을까요? · มีรูปเพิ่มไหมครับ / 사진 더 있나요?"
+ },
+ "r3_life_c1": {
+  "grok_write": "data/review/r3_life_c1_write.md",
+  "recommended": "มากินข้าวไหม / 밥 먹으러 올래? · อย่าลืมกินนะ / 밥 먹는 거 잊지 마."
+ },
+ "r3_love_b1": {
+  "grok_write": "data/review/r3_love_b1_write.md",
+  "recommended": "ใครส่งมา / 누가 보냈어? · ไม่ต้องห่วงนะ / 걱정하지 마."
+ },
+ "r3_love_b2": {
+  "grok_write": "data/review/r3_love_b2_write.md",
+  "recommended": "ไม่ต้องเกรงใจนะคะ / 부담 갖지 마세요 · เปิดดูก่อนสิ / 일단 한번 열어 봐요"
+ },
+ "r3_love_b3": {
+  "grok_write": "data/review/r3_love_b3_write.md",
+  "recommended": "วันนี้บรรยากาศดีเนอะ / 오늘 분위기 좋다 · ไปต่อที่อื่นไหม / 다른 데 더 갈래?"
+ },
+ "r3_love_b4": {
+  "grok_write": "data/review/r3_love_b4_write.md",
+  "recommended": "แขนชาไปหมด / 팔이 완전히 저렸다 · อย่าขยับนะ / 움직이지 마"
+ },
+ "r3_love_b5": {
+  "grok_write": "data/review/r3_love_b5_write.md",
+  "recommended": "รอก่อนนะ / 잠깐 기다려 · ใจเย็นๆ / 진정해"
+ },
+ "r3_love_b6": {
+  "grok_write": "data/review/r3_love_b6_write.md",
+  "recommended": "ปล่อยไว้ก่อนมั้ง / 일단 놔둘까 , มันดังไปหน่อย / 좀 너무 유명해졌어"
+ },
+ "r3_love_b7": {
+  "grok_write": "data/review/r3_love_b7_write.md",
+  "recommended": "ใจเย็นๆ นะ / 진정해 · 555 หยุดก่อน / 555 잠깐만"
+ },
+ "r3_love_b8": {
+  "grok_write": "data/review/r3_love_b8_write.md",
+  "recommended": "มีใครแนะนำได้บ้าง / 누구 소개해 줄 수 있어? · อยากได้เพื่อนใหม่จัง / 새 친구 진짜 생겼으면"
+ },
+ "r3_love_c1": {
+  "grok_write": "data/review/r3_love_c1_write.md",
+  "recommended": "เวลาที่นั่นกี่โมง / 거기 몇 시야? · อย่าวางนะ / 끊지 마."
+ },
+ "r3_study_b1": {
+  "grok_write": "data/review/r3_study_b1_write.md",
+  "recommended": "ขออนุญาตเลื่อนส่งงาน / 과제 제출 연장 허락 부탁드립니다 · รบกวนอาจารย์ / 교수님 打扰합니다"
+ },
+ "r3_study_b2": {
+  "grok_write": "data/review/r3_study_b2_write.md",
+  "recommended": "มีข้อโต้แย้งไหมครับ / 반론 있나요? · สรุปประเด็นได้ไหม / 논점 정리해 줄래요?"
+ },
+ "r3_study_b3": {
+  "grok_write": "data/review/r3_study_b3_write.md",
+  "recommended": "มีเวลาปรึกษาไหมครับ / 상담 시간 있으세요? · หัวข้อนี้ยากไปหน่อย / 이 주제가 좀 어려워요."
+ },
+ "r3_study_c1": {
+  "grok_write": "data/review/r3_study_c1_write.md",
+  "recommended": "ไปเมื่อไหร่ / 언제 가? · คิดถึงแล้วนะ / 벌써 그리워."
+ },
+ "r3_travel_b1": {
+  "grok_write": "data/review/r3_travel_b1_write.md",
+  "recommended": "ตื่นได้ยัง / 일어날 준비 됐어? · อย่าลืมนะ / 잊지 마"
+ },
+ "r3_travel_b2": {
+  "grok_write": "data/review/r3_travel_b2_write.md",
+  "recommended": "ทำพาสปอร์ตหายที่ไหน / 여권을 어디서 잃어버리셨나요? · ต้องการใบแจ้งความไหม / 신고서가 필요하세요?"
+ },
+ "r3_work_b1": {
+  "grok_write": "data/review/r3_work_b1_write.md",
+  "recommended": "ขอตัวกลับก่อนนะ / 먼저 실례할게요 · สู้ ๆ นะ / 힘내"
+ },
+ "r3_work_b2": {
+  "grok_write": "data/review/r3_work_b2_write.md",
+  "recommended": "เดี๋ยวจัดการให้ / 제가 처리할게요 · ขอโทษที่ทำให้เสียเวลา / 시간 뺏어서 미안해요"
+ },
+ "r3_work_b3": {
+  "grok_write": "data/review/r3_work_b3_write.md",
+  "recommended": "ขอเลื่อนกำหนดได้ไหมครับ / 일정 미뤄도 될까요? · มีแผนสำรองไหม / 대안 계획 있나요?"
+ },
+ "r3_work_b4": {
+  "grok_write": "data/review/r3_work_b4_write.md",
+  "recommended": "มีข่าวอะไรไหม / 무슨 소식 있나요? · ขอบคุณสำหรับทุกอย่าง / 모든 것에 감사합니다."
+ },
+ "r3_work_c1": {
+  "grok_write": "data/review/r3_work_c1_write.md",
+  "recommended": "ส่งลิงก์มาได้ไหม / 링크 보내 줄래요? · เดี๋ยวทำให้ / 곧 해 줄게."
+ },
+ "r4_culture_b1": {
+  "grok_write": "data/review/r4_culture_b1_write.md",
+  "recommended": "ปลงผม / 머리를 완전히 밀다 · สาธุ / 잘했어요, 좋아요 (공덕 기뻐함)"
+ },
+ "r4_culture_b2": {
+  "grok_write": "data/review/r4_culture_b2_write.md",
+  "recommended": "โอเคป่ะ / 괜찮아? งั้นเหรอ / 그렇구나"
+ },
+ "r4_culture_b3": {
+  "grok_write": "data/review/r4_culture_b3_write.md",
+  "recommended": "สวยงามมากครับ / 정말 아름답네요. · ขอถ่ายรูปได้ไหม / 사진 찍어도 될까요?"
+ },
+ "r4_culture_c1": {
+  "grok_write": "data/review/r4_culture_c1_write.md",
+  "recommended": "ตอนใหม่เมื่อไหร่ / 새 에피소드 언제 나와? · เสียงดีขึ้นนะ / 발음 좋아졌네."
+ },
+ "r4_friends_b1": {
+  "grok_write": "data/review/r4_friends_b1_write.md",
+  "recommended": "เปิดประตูให้หน่อย / 문 좀 열어줘 · ผ่านได้แล้ว / 통과됐어"
+ },
+ "r4_friends_b2": {
+  "grok_write": "data/review/r4_friends_b2_write.md",
+  "recommended": "ใจเย็นๆ / 진정해 · เดี๋ยวก็ผ่าน / 곧 지나갈 거야"
+ },
+ "r4_friends_b3": {
+  "grok_write": "data/review/r4_friends_b3_write.md",
+  "recommended": "ค่อยว่ากัน / 천천히 얘기하자 · ไม่รีบหรอก / 안 급해"
+ },
+ "r4_friends_b4": {
+  "grok_write": "data/review/r4_friends_b4_write.md",
+  "recommended": "ขอให้วิญญาณไปสู่สุคติ / 영혼이 좋은 곳으로 가시길. · ผมเสียใจด้วยจริงๆ / 정말 유감입니다."
+ },
+ "r4_friends_b5": {
+  "grok_write": "data/review/r4_friends_b5_write.md",
+  "recommended": "ทำงานที่ไหนตอนนี้ / 지금 어디서 일해? · นานแล้วที่ไม่เจอ / 오랜만이야."
+ },
+ "r4_friends_c1": {
+  "grok_write": "data/review/r4_friends_c1_write.md",
+  "recommended": "ใครออกไป / 누가 나갔어? · รูปเก่าๆ ส่งมา / 옛날 사진 보내 줘."
+ },
+ "r4_life_b1": {
+  "grok_write": "data/review/r4_life_b1_write.md",
+  "recommended": "เดี๋ยวคุยกันก่อน / 일단 얘기하고 나서\nไม่ต้องรีบขนาดนั้น / 그렇게까지 서두를 필요 없어"
+ },
+ "r4_life_b2": {
+  "grok_write": "data/review/r4_life_b2_write.md",
+  "recommended": "อย่าเพิ่งโอนเด็ดขาด / 절대 아직 송금하지 마 · มีหลักฐานอะไรไหม / 무슨 증거 있어?"
+ },
+ "r4_life_b3": {
+  "grok_write": "data/review/r4_life_b3_write.md",
+  "recommended": "มีข้อกังวลอะไรไหมครับ / 우려 사항 있으신가요? · ขอให้พิจารณาอีกครั้ง / 다시 고려해 주시기 바랍니다."
+ },
+ "r4_love_b1": {
+  "grok_write": "data/review/r4_love_b1_write.md",
+  "recommended": "อโหสิกรรม / 용서해 주세요 · น้ำอบ / 향수 섞은 물"
+ },
+ "r4_love_b2": {
+  "grok_write": "data/review/r4_love_b2_write.md",
+  "recommended": "หายไปไหน / 어디 갔어 · ไม่ตอบเลยเว่อร์ / 답이 너무 없네"
+ },
+ "r4_love_b3": {
+  "grok_write": "data/review/r4_love_b3_write.md",
+  "recommended": "เอาจริง / 진짜로 · เว่อร์ / 오버하다"
+ },
+ "r4_love_b4": {
+  "grok_write": "data/review/r4_love_b4_write.md",
+  "recommended": "ว่างป่ะ / 비었어? · นั่งได้มั้ย / 앉아도 돼?"
+ },
+ "r4_love_b5": {
+  "grok_write": "data/review/r4_love_b5_write.md",
+  "recommended": "ชิลๆ /  Chill하게 · เว่อร์ / 과하다, 오버하다"
+ },
+ "r4_love_b6": {
+  "grok_write": "data/review/r4_love_b6_write.md",
+  "recommended": "ยินดีที่ได้รู้จักค่ะ / 만나서 반가워요 · ฝากตัวด้วยนะคะ / 잘 부탁드려요"
+ },
+ "r4_love_b7": {
+  "grok_write": "data/review/r4_love_b7_write.md",
+  "recommended": "อย่าเงียบดิ / 조용히 하지 마\nมาคุยกันก่อนสิ / 먼저 이야기하자"
+ },
+ "r4_study_b1": {
+  "grok_write": "data/review/r4_study_b1_write.md",
+  "recommended": "งั้นเหรอครับ / 그런가요 · ไม่รู้สิครับ / 잘 모르겠어요"
+ },
+ "r4_study_b2": {
+  "grok_write": "data/review/r4_study_b2_write.md",
+  "recommended": "ขออนุญาตเพิ่มเติมครับ / 추가로 말씀드려도 될까요? · มีคำถามอื่นไหมครับ / 다른 질문 있으신가요?"
+ },
+ "r4_study_c1": {
+  "grok_write": "data/review/r4_study_c1_write.md",
+  "recommended": "ส่งอีเมลยืนยันได้ไหมครับ / 확인 이메일 보내 주실 수 있나요? · ขอเวลาตรวจสอบเพิ่ม / 추가 확인 시간을 부탁드립니다."
+ },
+ "r4_travel_b1": {
+  "grok_write": "data/review/r4_travel_b1_write.md",
+  "recommended": "กลับบ้านก่อน / 일단 돌아가자 · ฝนจะตกหนัก / 비 더 세게 올 거야"
+ },
+ "r4_travel_b2": {
+  "grok_write": "data/review/r4_travel_b2_write.md",
+  "recommended": "อากาศดีนะครับ / 날씨 좋네요. · ขอบคุณที่ต้อนรับ / 환대해 주셔서 감사합니다."
+ },
+ "r4_work_b1": {
+  "grok_write": "data/review/r4_work_b1_write.md",
+  "recommended": "ถ้าพร้อมแล้วก็บอกได้เลย / 준비되면 말해도 돼 · ไปฉลองกันมั้ย / 축하하러 갈까"
+ },
+ "r4_work_b2": {
+  "grok_write": "data/review/r4_work_b2_write.md",
+  "recommended": "ยังไงดี / 어떻게 하지 · เอาจริงดิ / 진짜야?"
+ },
+ "r4_work_b3": {
+  "grok_write": "data/review/r4_work_b3_write.md",
+  "recommended": "ขออนุญาตไม่ตอบข้อนี้ / 이 질문은 답변하지 않겠습니다. · ข้อมูลยังเป็นความลับ / 정보는 아직 기밀입니다."
+ },
+ "r4_work_b4": {
+  "grok_write": "data/review/r4_work_b4_write.md",
+  "recommended": "ขอดูฉบับร่างได้ไหมครับ / 초안을 볼 수 있을까요? · มีข้อสงวนไหม / 유보 조항 있나요?"
+ },
+ "r4_work_c1": {
+  "grok_write": "data/review/r4_work_c1_write.md",
+  "recommended": "โพสต์นี้ใครเขียน / 이 글 누가 썼어? · อย่าแชร์ต่อ / 공유하지 마."
+ }
+}

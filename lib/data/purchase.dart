@@ -1,10 +1,12 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io' show Platform;
+import 'dart:math' show max;
 
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:in_app_purchase/in_app_purchase.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'account.dart';
 import '../core/prefs.dart';
@@ -57,22 +59,47 @@ class Purchase {
     return owned.value.entries.any((e) => (e.key.startsWith('lang_${code}_') || e.key.startsWith('all_')) && (e.value == 0 || e.value > now));
   }
 
+  static const entKey = 'entitlement_v1';
+  static const allKey = 'all_entitlement_v1';
+
   static Future<void> configure(String code, List<Plan> list) async {
     lang = code;
     plans = list;
     final p = await Prefs.getInstance();
     final raw = p.getString('iap_owned2');
     final m = <String, int>{if (raw != null) ...(jsonDecode(raw) as Map).map((k, v) => MapEntry('$k', (v as num).toInt()))};
+    // PAYWALL_SPEC §4: 언어 이용권 <언어>_entitlement_v1(Prefs 가 th_ 를 붙임), 종합은 22개 언어 공통 all_entitlement_v1(접두 없음)
+    for (final r in [p.getString(entKey), (await SharedPreferences.getInstance()).getString(allKey)]) {
+      if (r == null) continue;
+      try {
+        (jsonDecode(r) as Map).forEach((k, v) => m['$k'] = (m['$k'] == 0 || v == 0) ? 0 : max(m['$k'] ?? 0, (v as num).toInt()));
+      } catch (_) {}
+    }
     if ((p.getStringList('iap_owned') ?? const []).contains(code)) m['lang_${code}_life'] = 0; // 옛 저장 방식(평생 하나)
     owned.value = m;
     Account.user.addListener(_onAccount);
     if (kIsWeb || !(Platform.isIOS || Platform.isAndroid)) return;
     if (ownStream) _sub ??= InAppPurchase.instance.purchaseStream.listen(onPurchaseUpdates, onError: (_) => status.value = 'error');
+    await reloadProducts();
+    // 시작 때 조용히 복원 조회(PAYWALL_SPEC §4) — 안드로이드만. iOS 는 암호 창이 뜰 수 있어 미완료 거래 자동 수신 + 「구매 복원」 단추만(uk 11-23)
+    if (ownStream && Platform.isAndroid) {
+      try {
+        if (await InAppPurchase.instance.isAvailable()) await InAppPurchase.instance.restorePurchases();
+      } catch (_) {}
+    }
+  }
+
+  /// 상품(가격) 다시 받기 — 결제 화면의 「다시 시도」. 받았으면 true.
+  static Future<bool> reloadProducts() async {
+    if (kIsWeb || !(Platform.isIOS || Platform.isAndroid)) return false;
     try {
-      if (!await InAppPurchase.instance.isAvailable()) return;
-      final r = await InAppPurchase.instance.queryProductDetails({for (final x in list) x.id});
+      if (!await InAppPurchase.instance.isAvailable()) return false;
+      final r = await InAppPurchase.instance.queryProductDetails({for (final x in plans) x.id}).timeout(const Duration(seconds: 15));
       products.value = {for (final d in r.productDetails) d.id: d};
-    } catch (_) {}
+      return products.value.isNotEmpty;
+    } catch (_) {
+      return false;
+    }
   }
 
   /// 스토어 표시 가격(예 ₩3,900). 상품을 못 받았으면 null.
@@ -147,6 +174,9 @@ class Purchase {
     if (!keep) owned.value = {...owned.value, id: exp};
     final p = await Prefs.getInstance();
     await p.setString('iap_owned2', jsonEncode(owned.value));
+    await p.setString(entKey, jsonEncode({for (final e in owned.value.entries) if (e.key.startsWith('lang_')) e.key: e.value}));
+    final all = {for (final e in owned.value.entries) if (e.key.startsWith('all_')) e.key: e.value};
+    if (all.isNotEmpty) await (await SharedPreferences.getInstance()).setString(allKey, jsonEncode(all));
     // 서버로 보낼 영수증 — 로그인 전이면 쌓아 두었다가 로그인 때 보낸다
     final rec = {
       'platform': Platform.isIOS ? 'ios' : 'android',

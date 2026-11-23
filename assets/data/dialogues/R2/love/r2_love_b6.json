@@ -546,10 +546,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_b6_write.md",
-  "recommended": "ช้าหน่อยนะ / 좀 천천히 해 · ไม่เป็นไร / 괜찮아"
- },
  "stats": {
   "cliff_cover": 64
  }

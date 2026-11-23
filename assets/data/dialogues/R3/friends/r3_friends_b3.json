@@ -659,10 +659,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_friends_b3_write.md",
-  "recommended": "เก็บไว้ดีๆ นะ / 잘 보관해 · ไว้เจอกันอีกสิบปี / 10년 뒤에 다시 만나자"
- },
  "stats": {
   "cliff_cover": 63
  }

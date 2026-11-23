@@ -462,10 +462,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_a1_write.md",
-  "recommended": "นั่งด้วยกันได้ป่ะ / 같이 앉아도 돼? · โต๊ะนี้ว่างมั้ย / 이 테이블 비었나요?"
- },
  "stats": {
   "cliff_cover": 60
  }

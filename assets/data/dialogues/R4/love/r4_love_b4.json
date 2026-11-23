@@ -692,10 +692,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_love_b4_write.md",
-  "recommended": "ว่างป่ะ / 비었어? · นั่งได้มั้ย / 앉아도 돼?"
- },
  "stats": {
   "cliff_cover": 84
  }

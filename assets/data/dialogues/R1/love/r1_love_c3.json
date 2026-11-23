@@ -484,10 +484,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_c3_write.md",
-  "recommended": "ได้รับแล้วนะ / 받았어 · เสียงชัดเจนดี / 목소리 잘 들려"
- },
  "stats": {
   "cliff_cover": 51
  }

@@ -399,10 +399,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_life_a2_write.md",
-  "recommended": "ถึงแล้วครับ / 도착했어요 · รับของเลย / 물건 받아"
- },
  "stats": {
   "cliff_cover": 50
  }

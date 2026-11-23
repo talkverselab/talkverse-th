@@ -320,10 +320,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_work_a1_write.md",
-  "recommended": "หวานน้อย / 덜 달게 · น้ำตาลใส่เท่าไหร่ / 설탕 얼마나 넣을까"
- },
  "stats": {
   "cliff_cover": 82
  }

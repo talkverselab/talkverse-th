@@ -424,10 +424,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_life_a1_write.md",
-  "recommended": "เดี๋ยวจัดการให้ครับ / 제가 처리해 드릴게요 · รอแป๊บนะครับ / 잠깐 기다려 주세요"
- },
  "stats": {
   "cliff_cover": 58
  }

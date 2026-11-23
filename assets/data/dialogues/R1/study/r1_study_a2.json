@@ -428,10 +428,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_study_a2_write.md",
-  "recommended": "งานนี้โหลดโหด / 이 일 진짜 빡세다 · เคลียร์ยัง / 다 끝났어?"
- },
  "stats": {
   "cliff_cover": 55
  }

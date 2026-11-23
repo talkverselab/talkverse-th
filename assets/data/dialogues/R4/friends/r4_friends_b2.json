@@ -869,10 +869,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_friends_b2_write.md",
-  "recommended": "ใจเย็นๆ / 진정해 · เดี๋ยวก็ผ่าน / 곧 지나갈 거야"
- },
  "stats": {
   "cliff_cover": 82
  }

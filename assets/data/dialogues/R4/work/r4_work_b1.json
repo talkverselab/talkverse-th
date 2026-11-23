@@ -933,10 +933,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_work_b1_write.md",
-  "recommended": "ถ้าพร้อมแล้วก็บอกได้เลย / 준비되면 말해도 돼 · ไปฉลองกันมั้ย / 축하하러 갈까"
- },
  "stats": {
   "cliff_cover": 84
  }

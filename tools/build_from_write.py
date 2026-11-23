@@ -68,11 +68,16 @@ tw = min(p['twist'], len(turns))
 turns[tw - 1]['tags'].append('twist')
 ep = {'id': p['id'], 'region': region, 'island': island, 'kind': p['kind'], 'draft': True, 'purpose': [island], 'domain': [island],
       'title': p['title'], 'emoji': p['emoji'], 'scene': p['scene'], 'where': p['where'], 'speakers': p['speakers'], 'register': p['register'],
-      'twist': tw, 'twist_type': p['twist_type'], 'flags': p.get('flags', []), 'goal': '', 'expressions': p['targets'], 'turns': turns,
-      'review': {'grok_write': f'data/review/{p["id"]}_write.md'}}
+      'twist': tw, 'twist_type': p['twist_type'], 'flags': p.get('flags', []), 'goal': '', 'expressions': p['targets'], 'turns': turns}
+# 작업 기록(답 파일·추천 표현)은 앱 묶음·서버 원고에 넣지 않고 따로 둔다(심사 — 공개 원고에 AI 이름 금지, uk 점검 2026-11-23)
+rv = {'write': f'data/review/{p["id"]}_write.md'}
 rec = re.search(r'추천 표현\s*[:：]\s*(.+)', ans, re.S)
 if rec:
-    ep['review']['recommended'] = rec.group(1).strip()[:300]
+    rv['recommended'] = rec.group(1).strip()[:300]
+IDX = ROOT / 'data/review/dialogue_review_index.json'
+ix = json.loads(IDX.read_text(encoding='utf-8')) if IDX.exists() else {}
+ix[p['id']] = rv
+IDX.write_text(json.dumps(ix, ensure_ascii=False, indent=1, sort_keys=True), encoding='utf-8')
 out = ROOT / f'assets/data/dialogues/{region}/{island}/{p["id"]}.json'
 out.parent.mkdir(parents=True, exist_ok=True)
 json.dump(ep, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)

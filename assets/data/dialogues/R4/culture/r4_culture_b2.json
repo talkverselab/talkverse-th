@@ -1020,10 +1020,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_culture_b2_write.md",
-  "recommended": "โอเคป่ะ / 괜찮아? งั้นเหรอ / 그렇구나"
- },
  "stats": {
   "cliff_cover": 77
  }

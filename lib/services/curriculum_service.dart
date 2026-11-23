@@ -307,8 +307,10 @@ class CurStage {
   final List<int> pick;
   final int pass;
   final List<int> daily;
-  const CurStage(this.n, this.title, this.desc, this.dialogueIds, {this.pick = const [3, 5, 10], this.pass = kPassPercent, this.daily = const [1, 2, 3]});
-  CurStage withIds(List<String> ids) => CurStage(n, title, desc, ids, pick: pick, pass: pass, daily: daily);
+  /// 이용권 없이 열림 — 서버 free, 없으면 1단계만(PAYWALL_SPEC §2).
+  final bool free;
+  const CurStage(this.n, this.title, this.desc, this.dialogueIds, {this.pick = const [3, 5, 10], this.pass = kPassPercent, this.daily = const [1, 2, 3], bool? free}) : free = free ?? n == 1;
+  CurStage withIds(List<String> ids) => CurStage(n, title, desc, ids, pick: pick, pass: pass, daily: daily, free: free);
   String get key => '$n';
 }
 
@@ -324,8 +326,9 @@ List<int> _daily(Object? v) {
   return [for (var i = 0; i < 3; i++) ((v[keys[i]] as num?)?.toInt() ?? def[i]).clamp(1, 99)];
 }
 
-/// 커리큘럼 JSON(§12 형식)을 단계 목록으로. 형식이 틀리면 null.
-(int, List<CurStage>)? parsePlan(String raw) {
+/// 커리큘럼 JSON(§12 형식)을 (rev, 단계, 문법 무료 스텝 수, 언어감각 무료 급 수) 로. 형식이 틀리면 null.
+typedef CurPlan = (int, List<CurStage>, int, int);
+CurPlan? parsePlan(String raw) {
   try {
     final j = json.decode(raw) as Map;
     final st = [
@@ -333,9 +336,10 @@ List<int> _daily(Object? v) {
         CurStage((s['n'] as num).toInt(), '${s['title'] ?? '${s['n']}단계'}', '${s['desc'] ?? ''}', [for (final x in (s['dialogueIds'] as List? ?? const [])) '$x'],
             pick: _ints(s['pick'], const [3, 5, 10]),
             pass: (s['pass'] as num?)?.toInt() ?? kPassPercent,
-            daily: _daily(s['daily'])),
+            daily: _daily(s['daily']),
+            free: s['free'] is bool ? s['free'] as bool : null),
     ]..sort((a, b) => a.n.compareTo(b.n));
-    return ((j['rev'] as num?)?.toInt() ?? 0, st);
+    return ((j['rev'] as num?)?.toInt() ?? 0, st, (j['freeSteps'] as num?)?.toInt() ?? 2, (j['freeSenseLevels'] as num?)?.toInt() ?? 1);
   } catch (_) {
     return null;
   }
@@ -368,10 +372,18 @@ class CurriculumService {
   int planRev = 0;
   List<CurStage>? _plan;
 
-  void _setPlan((int, List<CurStage>) p) {
+  void _setPlan(CurPlan p) {
     planRev = p.$1;
     _plan = p.$2;
+    freeSteps = p.$3;
+    freeSenseLevels = p.$4;
   }
+
+  /// 문법 스텝·언어감각 급의 무료 한도(서버, 없으면 2·1 — PAYWALL_SPEC §2).
+  int freeSteps = 2, freeSenseLevels = 1;
+
+  /// 이용권 없이 열리는 단계인가(데이터의 free, 데이터가 없으면 1단계만).
+  bool stageFree(String? level) => stage(level)?.free ?? level == '1';
 
   /// 묶음 기본값 → 받아 둔 서버 판(rev 가 더 높으면). 둘 다 없거나 틀리면 null(회화 레벨 대응으로).
   Future<void> _loadPlan() async {

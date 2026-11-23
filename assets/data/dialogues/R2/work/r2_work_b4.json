@@ -587,10 +587,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_work_b4_write.md",
-  "recommended": "งั้นเหรอ / 그런 거야? · ชิลๆ / 편하게"
- },
  "stats": {
   "cliff_cover": 69
  }

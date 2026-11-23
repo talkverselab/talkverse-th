@@ -373,10 +373,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_a5_write.md",
-  "recommended": "ฟอลโล่กลับ / 맞팔 · แอบชอบ / 몰래 좋아하다"
- },
  "stats": {
   "cliff_cover": 52
  }

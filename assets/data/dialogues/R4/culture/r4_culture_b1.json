@@ -1126,10 +1126,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_culture_b1_write.md",
-  "recommended": "ปลงผม / 머리를 완전히 밀다 · สาธุ / 잘했어요, 좋아요 (공덕 기뻐함)"
- },
  "stats": {
   "cliff_cover": 71
  }

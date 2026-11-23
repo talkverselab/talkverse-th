@@ -271,10 +271,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_friends_c1_write.md",
-  "recommended": "เว่อร์ / 과하다 (너무 세다) / เอาจริง / 진짜로"
- },
  "stats": {
   "cliff_cover": 59
  }

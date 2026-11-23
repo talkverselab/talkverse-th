@@ -183,10 +183,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_travel_b6_write.md",
-  "recommended": "ระวังหน่อย / 조심해\nตามมาเลย / 따라와"
- },
  "stats": {
   "cliff_cover": 51
  }

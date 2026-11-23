@@ -573,10 +573,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_culture_c1_write.md",
-  "recommended": "แชร์ข่าวนี้หน่อย / 이 뉴스 공유해 줘. · ความเห็นต่างได้ / 다른 의견도 괜찮아."
- },
  "stats": {
   "cliff_cover": 61
  }

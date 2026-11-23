@@ -944,10 +944,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_friends_b3_write.md",
-  "recommended": "ค่อยว่ากัน / 천천히 얘기하자 · ไม่รีบหรอก / 안 급해"
- },
  "stats": {
   "cliff_cover": 76
  }

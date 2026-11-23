@@ -395,10 +395,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_survival_s3_write.md",
-  "recommended": "ไปส่งที่ไหนครับ / 어디로 모실까요 · ช้าหน่อยนะครับ / 천천히 가주세요"
- },
  "stats": {
   "cliff_cover": 55
  }

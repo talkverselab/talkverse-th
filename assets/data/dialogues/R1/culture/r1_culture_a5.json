@@ -156,10 +156,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_culture_a5_write.md",
-  "recommended": "วางเบาๆ / 살살 놓아\nสาธุค่ะ / 사뚜"
- },
  "stats": {
   "cliff_cover": 40
  }

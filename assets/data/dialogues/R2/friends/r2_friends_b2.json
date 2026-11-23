@@ -501,10 +501,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_friends_b2_write.md",
-  "recommended": "ปีอะไรเกิด / 몇 년생이야 · ดูดวงให้หน่อย / 운세 좀 봐줘"
- },
  "stats": {
   "cliff_cover": 58
  }

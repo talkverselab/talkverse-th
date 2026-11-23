@@ -182,10 +182,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_friends_b7_write.md",
-  "recommended": "หลบไป / 피해\nอย่ามอง / 보지 마"
- },
  "stats": {
   "cliff_cover": 58
  }

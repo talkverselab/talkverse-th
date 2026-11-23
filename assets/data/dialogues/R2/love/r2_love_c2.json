@@ -192,10 +192,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_c2_write.md",
-  "recommended": "อย่าลบ / 지우지 마\nขอโทษจริงๆ / 진짜 미안해"
- },
  "stats": {
   "cliff_cover": 59
  }

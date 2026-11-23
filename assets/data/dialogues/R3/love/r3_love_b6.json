@@ -789,10 +789,6 @@
    "emotion": "cheerful"
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_love_b6_write.md",
-  "recommended": "ปล่อยไว้ก่อนมั้ง / 일단 놔둘까 , มันดังไปหน่อย / 좀 너무 유명해졌어"
- },
  "stats": {
   "cliff_cover": 68
  }

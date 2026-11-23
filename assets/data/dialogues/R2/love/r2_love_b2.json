@@ -463,10 +463,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_b2_write.md",
-  "recommended": "เมาแล้วพูดนะ / 취해서 하는 말이야 · เอาจริงดิ / 진짜로?"
- },
  "stats": {
   "cliff_cover": 63
  }

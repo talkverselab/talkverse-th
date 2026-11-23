@@ -364,10 +364,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_travel_a4_write.md",
-  "recommended": "ห้องว่างไหมคะ / 빈 방 있나요 · ราคาเท่าไหร่คะ / 얼마예요"
- },
  "stats": {
   "cliff_cover": 53
  }

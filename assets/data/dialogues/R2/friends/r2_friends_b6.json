@@ -184,10 +184,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_friends_b6_write.md",
-  "recommended": "เล่นอีก / 한 판 더\nเติมต่อ / 시간 더 충전"
- },
  "stats": {
   "cliff_cover": 53
  }

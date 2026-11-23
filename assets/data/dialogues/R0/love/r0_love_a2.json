@@ -358,10 +358,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_a2_write.md",
-  "recommended": "ลดได้ไหม / 좀 깎아 줄 수 있어? · ห่อให้หน่อย / 포장 좀 해 줘"
- },
  "stats": {
   "cliff_cover": 59
  }

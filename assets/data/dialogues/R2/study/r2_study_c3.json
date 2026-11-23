@@ -194,10 +194,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_study_c3_write.md",
-  "recommended": "ลบได้ไหม / 지울 수 있어?\nส่งถูกห้อง / 올바른 방에 보내"
- },
  "stats": {
   "cliff_cover": 62
  }

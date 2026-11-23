@@ -736,10 +736,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_love_b2_write.md",
-  "recommended": "หายไปไหน / 어디 갔어 · ไม่ตอบเลยเว่อร์ / 답이 너무 없네"
- },
  "stats": {
   "cliff_cover": 78
  }

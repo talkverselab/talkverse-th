@@ -297,10 +297,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_culture_a4_write.md",
-  "recommended": "ชื่อเล่นอะไรดี / 별명 뭐가 좋을까 · เอาอันไหนดี / 어떤 걸로 할까"
- },
  "stats": {
   "cliff_cover": 86
  }

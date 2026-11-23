@@ -163,10 +163,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_work_c2_write.md",
-  "recommended": "วันนี้ WFH / 오늘 재택\nมาสายได้ไหม / 늦어도 돼?"
- },
  "stats": {
   "cliff_cover": 36
  }

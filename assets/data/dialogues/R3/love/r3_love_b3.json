@@ -799,10 +799,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_love_b3_write.md",
-  "recommended": "วันนี้บรรยากาศดีเนอะ / 오늘 분위기 좋다 · ไปต่อที่อื่นไหม / 다른 데 더 갈래?"
- },
  "stats": {
   "cliff_cover": 74
  }

@@ -933,10 +933,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_culture_b3_write.md",
-  "recommended": "รถเต็มแล้ว / 차 꽉 찼어 · กินเยอะไปมั้ย / 너무 많이 먹었어?"
- },
  "stats": {
   "cliff_cover": 67
  }

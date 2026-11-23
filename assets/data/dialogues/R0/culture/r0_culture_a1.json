@@ -306,10 +306,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_culture_a1_write.md",
-  "recommended": "ไหว้พระ / 불상에게 인사 · สบาย ๆ / 편하게"
- },
  "stats": {
   "cliff_cover": 72
  }

@@ -161,10 +161,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_study_c2_write.md",
-  "recommended": "ยังไม่ทำ / 아직 안 했어\nทำด้วยกัน / 같이 하자"
- },
  "stats": {
   "cliff_cover": 64
  }

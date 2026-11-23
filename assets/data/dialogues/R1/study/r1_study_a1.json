@@ -298,10 +298,6 @@
    "emotion": "cheerful"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_study_a1_write.md",
-  "recommended": "ไม่เป็นไรค่ะ / 괜찮아요 · ลองอีกทีสิคะ / 다시 해봐"
- },
  "stats": {
   "cliff_cover": 50
  }

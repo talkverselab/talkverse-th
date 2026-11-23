@@ -165,10 +165,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_friends_c4_write.md",
-  "recommended": "คนละเท่าไหร่ / 인당 얼마\nอย่าบอกนะ / 말하지 마"
- },
  "stats": {
   "cliff_cover": 37
  }

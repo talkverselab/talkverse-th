@@ -313,10 +313,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_a3_write.md",
-  "recommended": "ยิ้มหน่อย / 좀 웃어 · ถ่ายรวมกันไหม / 같이 찍을까"
- },
  "stats": {
   "cliff_cover": 97
  }

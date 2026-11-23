@@ -166,10 +166,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_friends_c2_write.md",
-  "recommended": "รอแป๊บ / 잠깐만\nส่งมาเลย / 바로 보내"
- },
  "stats": {
   "cliff_cover": 84
  }

@@ -917,10 +917,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_love_b1_write.md",
-  "recommended": "อโหสิกรรม / 용서해 주세요 · น้ำอบ / 향수 섞은 물"
- },
  "stats": {
   "cliff_cover": 77
  }

@@ -768,10 +768,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_friends_b1_write.md",
-  "recommended": "ไม่เป็นไรนะ / 괜찮아 · เอาเถอะ / 그냥 해"
- },
  "stats": {
   "cliff_cover": 75
  }

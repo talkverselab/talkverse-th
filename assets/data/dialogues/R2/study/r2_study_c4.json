@@ -192,10 +192,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_study_c4_write.md",
-  "recommended": "ตั้งนาฬิกา / 알람 맞춰\nไปสอบ / 시험 보러 가"
- },
  "stats": {
   "cliff_cover": 50
  }

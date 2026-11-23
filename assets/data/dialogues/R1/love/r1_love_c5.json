@@ -337,10 +337,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_c5_write.md",
-  "recommended": "ชิลๆ / 여유롭게 · จ้า / 응"
- },
  "stats": {
   "cliff_cover": 70
  }

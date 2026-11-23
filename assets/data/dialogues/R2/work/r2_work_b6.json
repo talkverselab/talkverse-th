@@ -181,10 +181,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_work_b6_write.md",
-  "recommended": "สั่งเลย / 시키자\nหารครึ่ง / 반반 내자"
- },
  "stats": {
   "cliff_cover": 62
  }

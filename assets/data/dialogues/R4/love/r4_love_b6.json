@@ -1064,10 +1064,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_love_b6_write.md",
-  "recommended": "ยินดีที่ได้รู้จักค่ะ / 만나서 반가워요 · ฝากตัวด้วยนะคะ / 잘 부탁드려요"
- },
  "stats": {
   "cliff_cover": 85
  }

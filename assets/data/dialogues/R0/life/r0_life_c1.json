@@ -314,10 +314,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_life_c1_write.md",
-  "recommended": "เอาอะไรดี / 뭐 할래 · มีอะไรบ้าง / 뭐 있어"
- },
  "stats": {
   "cliff_cover": 93
  }

@@ -654,10 +654,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_life_b1_write.md",
-  "recommended": "เงียบหน่อยสิ / 조용히 좀 해 · ทนไม่ไหวแล้ว / 더 이상 못 참겠어"
- },
  "stats": {
   "cliff_cover": 70
  }

@@ -364,10 +364,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_c4_write.md",
-  "recommended": "เอาจริง / 진짜로 · ชิลๆ / 여유롭게"
- },
  "stats": {
   "cliff_cover": 84
  }

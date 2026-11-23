@@ -346,10 +346,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_life_c1_write.md",
-  "recommended": "ไม่เป็นไร ตัวเอง / 괜찮아 자기야 · 555 เว่อร์ / 555 과해"
- },
  "stats": {
   "cliff_cover": 43
  }

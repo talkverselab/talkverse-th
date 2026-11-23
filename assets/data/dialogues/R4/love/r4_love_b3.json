@@ -1056,10 +1056,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_love_b3_write.md",
-  "recommended": "เอาจริง / 진짜로 · เว่อร์ / 오버하다"
- },
  "stats": {
   "cliff_cover": 73
  }

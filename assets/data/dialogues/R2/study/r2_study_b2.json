@@ -443,10 +443,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_study_b2_write.md",
-  "recommended": "ที่นั่งเต็มหมด / 자리 다 찼어. · เดี๋ยวเขากลับมา / 곧 돌아올 거야."
- },
  "stats": {
   "cliff_cover": 76
  }

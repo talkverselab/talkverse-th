@@ -552,10 +552,6 @@
    "emoji": "😢"
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_work_b4_write.md",
-  "recommended": "มีข่าวอะไรไหม / 무슨 소식 있나요? · ขอบคุณสำหรับทุกอย่าง / 모든 것에 감사합니다."
- },
  "stats": {
   "cliff_cover": 74
  }

@@ -619,10 +619,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_friends_c1_write.md",
-  "recommended": "โหวตกันไหม / 투표할까? · เดี๋ยวตัดสินใจ / 곧 결정할게."
- },
  "stats": {
   "cliff_cover": 62
  }

@@ -155,10 +155,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_work_a5_write.md",
-  "recommended": "ยังไม่เปิด / 아직 안 열었어\nแลกของขวัญ / 선물 교환"
- },
  "stats": {
   "cliff_cover": 74
  }

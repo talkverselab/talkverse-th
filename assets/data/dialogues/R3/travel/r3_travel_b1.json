@@ -845,10 +845,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_travel_b1_write.md",
-  "recommended": "ตื่นได้ยัง / 일어날 준비 됐어? · อย่าลืมนะ / 잊지 마"
- },
  "stats": {
   "cliff_cover": 65
  }

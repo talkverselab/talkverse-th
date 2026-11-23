@@ -379,10 +379,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_b1_write.md",
-  "recommended": "ชิลๆ / 편하게 · จริงดิ / 진짜야?"
- },
  "stats": {
   "cliff_cover": 62
  }

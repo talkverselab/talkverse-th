@@ -307,10 +307,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_a12_write.md",
-  "recommended": "ร้องตามป่ะ / 따라 부를래? · เพลงนี้เพราะดี / 이 노래 예쁘다"
- },
  "stats": {
   "cliff_cover": 95
  }

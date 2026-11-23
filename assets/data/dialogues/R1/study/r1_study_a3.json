@@ -375,10 +375,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_study_a3_write.md",
-  "recommended": "จริงดิ / 진짜? · เนอะ / 그치"
- },
  "stats": {
   "cliff_cover": 54
  }

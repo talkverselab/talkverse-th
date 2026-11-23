@@ -194,10 +194,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_life_c3_write.md",
-  "recommended": "ลิฟต์เสีย / 엘리베이터 고장\nชั้นไหน / 몇 층이야"
- },
  "stats": {
   "cliff_cover": 41
  }

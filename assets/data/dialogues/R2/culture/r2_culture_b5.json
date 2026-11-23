@@ -643,10 +643,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_culture_b5_write.md",
-  "recommended": "เสียดายจัง / 아쉽다 · ไปแทนให้ได้ป่ะ / 대신 가 줄 수 있어?"
- },
  "stats": {
   "cliff_cover": 63
  }

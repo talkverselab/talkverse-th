@@ -182,10 +182,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_life_b6_write.md",
-  "recommended": "ปวดตรงไหน / 어디가 아파요\nไม่แพ้ยา / 약 알레르기 없어요"
- },
  "stats": {
   "cliff_cover": 53
  }

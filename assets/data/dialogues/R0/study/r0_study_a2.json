@@ -336,10 +336,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_study_a2_write.md",
-  "recommended": "ยังไม่ทันทำ / 아직 못 했어 · ทำไม่เสร็จ / 못 끝냈어"
- },
  "stats": {
   "cliff_cover": 97
  }

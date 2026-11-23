@@ -319,10 +319,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_a3_write.md",
-  "recommended": "ไปช้าๆ นะ / 천천히 가 · ระวังด้วยนะ / 조심해"
- },
  "stats": {
   "cliff_cover": 67
  }

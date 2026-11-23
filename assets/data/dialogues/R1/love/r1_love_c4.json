@@ -380,10 +380,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_c4_write.md",
-  "recommended": "งั้นเหรอ / 그렇구나 · ป่ะ / ~할까?"
- },
  "stats": {
   "cliff_cover": 55
  }

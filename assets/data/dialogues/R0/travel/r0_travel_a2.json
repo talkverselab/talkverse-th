@@ -358,10 +358,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_travel_a2_write.md",
-  "recommended": "ช้าๆ นะ / 천천히 해 · ระวังนะ / 조심해"
- },
  "stats": {
   "cliff_cover": 73
  }

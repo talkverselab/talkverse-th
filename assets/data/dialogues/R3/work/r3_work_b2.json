@@ -928,10 +928,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_work_b2_write.md",
-  "recommended": "เดี๋ยวจัดการให้ / 제가 처리할게요 · ขอโทษที่ทำให้เสียเวลา / 시간 뺏어서 미안해요"
- },
  "stats": {
   "cliff_cover": 63
  }

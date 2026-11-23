@@ -275,10 +275,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_a2_write.md",
-  "recommended": "อายุเท่าไหร่แล้ว / 이제 몇 살이니 · เรียกพี่นะ / พี่라고 불러"
- },
  "stats": {
   "cliff_cover": 62
  }

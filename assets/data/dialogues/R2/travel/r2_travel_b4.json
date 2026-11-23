@@ -498,10 +498,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_travel_b4_write.md",
-  "recommended": "ถึงแล้วบอกนะ / 도착하면 말해 · โชคดีนะ / 행운을 빌어"
- },
  "stats": {
   "cliff_cover": 56
  }

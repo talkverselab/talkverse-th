@@ -368,10 +368,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_survival_s4_write.md",
-  "recommended": "ถ้ายังไม่หายมาอีกนะ / 아직 안 나으면 다시 오세요 · รับประทานหลังอาหารนะคะ / 식후에 드세요"
- },
  "stats": {
   "cliff_cover": 61
  }

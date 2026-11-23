@@ -304,10 +304,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_a9_write.md",
-  "recommended": "คิดถึงนะ / 보고 싶었어 · ครบเดือนแล้วนะ / 한 달 됐어"
- },
  "stats": {
   "cliff_cover": 58
  }

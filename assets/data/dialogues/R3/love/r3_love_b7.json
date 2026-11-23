@@ -1052,10 +1052,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_love_b7_write.md",
-  "recommended": "ใจเย็นๆ นะ / 진정해 · 555 หยุดก่อน / 555 잠깐만"
- },
  "stats": {
   "cliff_cover": 68
  }

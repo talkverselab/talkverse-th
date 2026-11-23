@@ -652,10 +652,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_b9_write.md",
-  "recommended": "หลบไปก่อนสิ / 일단 피해 · เดินตามปกติ / 평소처럼 걸어"
- },
  "stats": {
   "cliff_cover": 65
  }

@@ -542,10 +542,6 @@
    "emoji": "☺️"
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_study_c1_write.md",
-  "recommended": "ไปเมื่อไหร่ / 언제 가? · คิดถึงแล้วนะ / 벌써 그리워."
- },
  "stats": {
   "cliff_cover": 77
  }

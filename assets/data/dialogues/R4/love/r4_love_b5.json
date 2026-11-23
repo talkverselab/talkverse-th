@@ -875,10 +875,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_love_b5_write.md",
-  "recommended": "ชิลๆ /  Chill하게 · เว่อร์ / 과하다, 오버하다"
- },
  "stats": {
   "cliff_cover": 92
  }

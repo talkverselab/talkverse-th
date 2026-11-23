@@ -419,10 +419,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_travel_a3_write.md",
-  "recommended": "เหงาไหม / 심심해? · ตามมาทำไม / 왜 따라왔어"
- },
  "stats": {
   "cliff_cover": 56
  }

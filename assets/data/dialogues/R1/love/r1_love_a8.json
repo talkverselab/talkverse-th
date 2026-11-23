@@ -332,10 +332,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_a8_write.md",
-  "recommended": "อย่าแอบดูนะ / 몰래 보지 마. · ฝึกพูดอยู่ / 말하기 연습 중이야."
- },
  "stats": {
   "cliff_cover": 52
  }

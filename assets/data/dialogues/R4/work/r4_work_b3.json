@@ -672,10 +672,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_work_b3_write.md",
-  "recommended": "ขออนุญาตไม่ตอบข้อนี้ / 이 질문은 답변하지 않겠습니다. · ข้อมูลยังเป็นความลับ / 정보는 아직 기밀입니다."
- },
  "stats": {
   "cliff_cover": 68
  }

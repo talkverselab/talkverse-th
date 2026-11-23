@@ -532,10 +532,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_friends_b4_write.md",
-  "recommended": "ช่วยกันหน่อยสิ / 같이 좀 해줘 , มันไม่เข้าจริงๆ / 진짜 안 들어가"
- },
  "stats": {
   "cliff_cover": 59
  }

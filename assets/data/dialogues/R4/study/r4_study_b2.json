@@ -688,10 +688,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_study_b2_write.md",
-  "recommended": "ขออนุญาตเพิ่มเติมครับ / 추가로 말씀드려도 될까요? · มีคำถามอื่นไหมครับ / 다른 질문 있으신가요?"
- },
  "stats": {
   "cliff_cover": 57
  }

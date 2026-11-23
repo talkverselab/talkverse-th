@@ -484,10 +484,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_work_a1_write.md",
-  "recommended": "ไม่เป็นไรค่ะ / 괜찮아 · เดี๋ยวไปด้วยกันนะคะ / 이따 같이 가자"
- },
  "stats": {
   "cliff_cover": 57
  }

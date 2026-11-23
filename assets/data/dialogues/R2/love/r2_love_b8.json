@@ -471,10 +471,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_b8_write.md",
-  "recommended": "เช็คบิลด้วย / 계산해 주세요 · รอบหน้าฉันออก / 다음엔 내가 낼게"
- },
  "stats": {
   "cliff_cover": 66
  }

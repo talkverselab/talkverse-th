@@ -156,10 +156,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_work_a4_write.md",
-  "recommended": "ใส่กระดาษ / 종이 넣어\nลองใหม่ / 다시 해 봐"
- },
  "stats": {
   "cliff_cover": 45
  }

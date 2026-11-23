@@ -165,10 +165,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_c6_write.md",
-  "recommended": "อยู่ใกล้ไหม / 가까워?\nส่งรูปมา / 사진 보내"
- },
  "stats": {
   "cliff_cover": 66
  }

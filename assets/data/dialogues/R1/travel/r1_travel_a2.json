@@ -343,10 +343,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_travel_a2_write.md",
-  "recommended": "ลงน้ำกันเถอะ / 물에 들어가자 · ระวังนะ / 조심해"
- },
  "stats": {
   "cliff_cover": 46
  }

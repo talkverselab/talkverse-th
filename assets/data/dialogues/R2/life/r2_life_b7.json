@@ -179,10 +179,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_life_b7_write.md",
-  "recommended": "รอแป๊บ / 잠깐만\nเอกสารครบ / 서류 다 됐어요"
- },
  "stats": {
   "cliff_cover": 62
  }

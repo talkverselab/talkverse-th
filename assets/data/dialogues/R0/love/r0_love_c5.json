@@ -321,10 +321,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_c5_write.md",
-  "recommended": "ฝนตกหนักมาก / 비가 많이 와요 · ร่มพับ / 접이식 우산"
- },
  "stats": {
   "cliff_cover": 82
  }

@@ -662,10 +662,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_culture_b1_write.md",
-  "recommended": "ใจเย็นก่อน / 일단 진정해 · 5555 เว่อร์มาก / 5555 완전 오버네"
- },
  "stats": {
   "cliff_cover": 82
  }

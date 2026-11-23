@@ -156,10 +156,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_friends_a6_write.md",
-  "recommended": "เริ่มเลย / 시작하자\nเลี้ยงเลย / 사줄게"
- },
  "stats": {
   "cliff_cover": 51
  }

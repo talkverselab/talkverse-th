@@ -224,10 +224,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_friends_b5_write.md",
-  "recommended": "แพ็คเสร็จยัง / 짐 다 쌌어\nอย่าลืมของ / 물건 잊지 마"
- },
  "stats": {
   "cliff_cover": 62
  }

@@ -338,10 +338,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_life_a3_write.md",
-  "recommended": "ลืมกุญแจ / 열쇠를 깜빡했어 · เข้าไม่ได้ / 들어갈 수가 없어"
- },
  "stats": {
   "cliff_cover": 83
  }

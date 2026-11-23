@@ -192,10 +192,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_travel_c2_write.md",
-  "recommended": "เช็กอินได้ / 체크인 돼요\nมีอาหารเช้า / 조식 있어요"
- },
  "stats": {
   "cliff_cover": 45
  }

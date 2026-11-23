@@ -314,10 +314,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_culture_a3_write.md",
-  "recommended": "ขอให้สมหวังนะ / 소원 성취되길 · วันนี้สนุกนะ / 오늘 재밌어"
- },
  "stats": {
   "cliff_cover": 78
  }

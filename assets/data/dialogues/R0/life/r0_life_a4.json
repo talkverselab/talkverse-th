@@ -348,10 +348,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_life_a4_write.md",
-  "recommended": "ร้อนตายแล้ว / 더워 죽겠네 · เปิดแอร์ให้หน่อยสิ / 에어컨 좀 켜 줘"
- },
  "stats": {
   "cliff_cover": 76
  }

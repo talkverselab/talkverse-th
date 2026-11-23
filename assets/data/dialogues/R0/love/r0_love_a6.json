@@ -366,10 +366,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_a6_write.md",
-  "recommended": "เผ็ดไปป่ะ / 너무 매워? · ขอน้ำเย็นหน่อย / 찬물 좀 주세요"
- },
  "stats": {
   "cliff_cover": 86
  }

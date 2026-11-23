@@ -605,10 +605,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_study_b2_write.md",
-  "recommended": "มีข้อโต้แย้งไหมครับ / 반론 있나요? · สรุปประเด็นได้ไหม / 논점 정리해 줄래요?"
- },
  "stats": {
   "cliff_cover": 64
  }

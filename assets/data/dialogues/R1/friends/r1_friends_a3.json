@@ -310,10 +310,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_friends_a3_write.md",
-  "recommended": "อร่อยมั้ย / 맛있어? · สั่งเพิ่มไหม / 더 시킬까?"
- },
  "stats": {
   "cliff_cover": 57
  }

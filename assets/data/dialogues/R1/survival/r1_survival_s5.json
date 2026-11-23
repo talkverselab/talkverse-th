@@ -476,10 +476,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_survival_s5_write.md",
-  "recommended": "ตามมาเลย / 따라와 · อีกนิดเดียว / 조금만 더"
- },
  "stats": {
   "cliff_cover": 55
  }

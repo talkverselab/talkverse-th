@@ -296,10 +296,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_a4_write.md",
-  "recommended": "ขออีกหน่อย / 한 입 더 · แบ่งกันกินป่ะ / 나눠 먹을래?"
- },
  "stats": {
   "cliff_cover": 92
  }

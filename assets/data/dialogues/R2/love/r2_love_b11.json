@@ -413,10 +413,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_b11_write.md",
-  "recommended": "จริงดิ / 진짜? · งั้นเหรอ / 그렇구나"
- },
  "stats": {
   "cliff_cover": 63
  }

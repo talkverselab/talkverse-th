@@ -330,10 +330,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_survival_s1_write.md",
-  "recommended": "ถุงพลาสติกไหมคะ / 비닐봉투 드릴까요? · สแตมป์ครบแล้วนะคะ / 스탬프 다 모았어요."
- },
  "stats": {
   "cliff_cover": 71
  }

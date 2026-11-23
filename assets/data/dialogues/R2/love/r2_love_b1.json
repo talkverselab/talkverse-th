@@ -477,10 +477,6 @@
    "emoji": "😄"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_b1_write.md",
-  "recommended": "รถไฟขบวนไหน / 어느 열차야? · ยังมีเวลาอีกหน่อย / 아직 시간 좀 있어."
- },
  "stats": {
   "cliff_cover": 68
  }

@@ -413,10 +413,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_c1_write.md",
-  "recommended": "กินอะไรดี / 뭐 먹을까? · ส่งรูปมาหน่อย / 사진 좀 보내줘"
- },
  "stats": {
   "cliff_cover": 67
  }

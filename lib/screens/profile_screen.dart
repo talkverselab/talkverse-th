@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../core/theme.dart';
@@ -31,7 +32,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   int _versionTaps = 0;
 
   Future<void> _tapVersion() async {
-    if (DevNotes.instance.unlocked.value) return;
+    if (!kDebugMode || DevNotes.instance.unlocked.value) return; // 개발 빌드에서만
     if (++_versionTaps < 7) return;
     await DevNotes.instance.unlock();
     if (!mounted) return;

@@ -380,10 +380,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_culture_a3_write.md",
-  "recommended": "ขอให้สมหวังนะ / 소원 이루어지길 / สุขสันต์วันลอยกระทง / 로이끄라통 축하해"
- },
  "stats": {
   "cliff_cover": 50
  }

@@ -328,10 +328,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_travel_a3_write.md",
-  "recommended": "สวยเนอะ / 예쁘지 · ดูสิ / 봐"
- },
  "stats": {
   "cliff_cover": 83
  }

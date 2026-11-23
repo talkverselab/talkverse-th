@@ -334,10 +334,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_c2_write.md",
-  "recommended": "นอนละ / 잘게 · ฝันดีนะ / 좋은 꿈"
- },
  "stats": {
   "cliff_cover": 64
  }

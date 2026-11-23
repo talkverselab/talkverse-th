@@ -161,10 +161,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_friends_c3_write.md",
-  "recommended": "ไปได้ไหม / 갈 수 있어?\nเลื่อนได้ไหม / 미룰 수 있어?"
- },
  "stats": {
   "cliff_cover": 48
  }

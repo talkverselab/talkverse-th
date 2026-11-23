@@ -1080,10 +1080,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_life_b2_write.md",
-  "recommended": "อย่าเพิ่งโอนเด็ดขาด / 절대 아직 송금하지 마 · มีหลักฐานอะไรไหม / 무슨 증거 있어?"
- },
  "stats": {
   "cliff_cover": 79
  }

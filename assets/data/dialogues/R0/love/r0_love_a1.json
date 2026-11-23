@@ -298,10 +298,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_a1_write.md",
-  "recommended": "มีคนนั่งมั้ย / 누가 앉았나요 · นั่งตรงนี้ได้มั้ย / 여기 앉아도 될까"
- },
  "stats": {
   "cliff_cover": 96
  }

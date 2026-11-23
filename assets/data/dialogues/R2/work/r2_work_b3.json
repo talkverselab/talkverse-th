@@ -570,10 +570,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_work_b3_write.md",
-  "recommended": "เอาจริงเหรอ / 진짜로? · เดี๋ยววุ่นวาย / 곧 난리 나"
- },
  "stats": {
   "cliff_cover": 72
  }

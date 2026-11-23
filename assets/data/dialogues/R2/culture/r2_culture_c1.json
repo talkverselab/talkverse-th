@@ -194,10 +194,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_culture_c1_write.md",
-  "recommended": "อย่าสปอยล์ / 스포하지 마\nดูด้วยกัน / 같이 보자"
- },
  "stats": {
   "cliff_cover": 63
  }

@@ -542,10 +542,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_b12_write.md",
-  "recommended": "เดี๋ยวก่อนนะ / 잠깐만 · ขอเปลี่ยนได้ไหม / 바꿀 수 있어요?"
- },
  "stats": {
   "cliff_cover": 57
  }

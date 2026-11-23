@@ -582,10 +582,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_study_b1_write.md",
-  "recommended": "ยังไงดี / 어떡하지 · เดี๋ยวจัดการ / 잠깐 처리할게"
- },
  "stats": {
   "cliff_cover": 65
  }

@@ -183,10 +183,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_friends_b8_write.md",
-  "recommended": "เล่นต่อ / 계속 하자\nส่งมา / 패스해"
- },
  "stats": {
   "cliff_cover": 51
  }

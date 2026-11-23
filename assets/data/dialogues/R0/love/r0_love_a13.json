@@ -292,10 +292,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_a13_write.md",
-  "recommended": "แล้วเจอกัน / 그럼 보자 · ไปก่อนนะ / 먼저 갈게"
- },
  "stats": {
   "cliff_cover": 86
  }

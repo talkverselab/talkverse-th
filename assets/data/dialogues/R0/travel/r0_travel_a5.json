@@ -158,10 +158,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_travel_a5_write.md",
-  "recommended": "ตรงไป / 직진\nเลี้ยวซ้าย / 좌회전"
- },
  "stats": {
   "cliff_cover": 61
  }

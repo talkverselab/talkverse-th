@@ -7,6 +7,7 @@ import '../core/platform.dart';
 import '../core/theme.dart';
 import '../services/content_store.dart';
 import '../services/script_sync.dart';
+import '../data/entitlement.dart';
 import '../services/dev_notes.dart';
 import '../widgets/thai_decor.dart';
 import 'grammar_lesson_screen.dart';
@@ -74,10 +75,14 @@ class _GrammarHubScreenState extends State<GrammarHubScreen> {
                     sub: _lessons[i].sub,
                     count: _lessons[i].items.length,
                     accent: accent,
-                    onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (_) => GrammarTopicScreen(lesson: _lessons[i], index: i)),
-                    ).then((_) => DevNotes.instance.clearContext('grammar')),
+                    locked: !Entitlement.stepFree(i + 1) && !Entitlement.premium,
+                    onTap: () async {
+                      // 문법 3스텝부터 이용권(PAYWALL_SPEC, 서버 freeSteps)
+                      if (!await Entitlement.gate(context, Entitlement.stepFree(i + 1)) || !context.mounted) return;
+                      await Navigator.push(context, MaterialPageRoute(builder: (_) => GrammarTopicScreen(lesson: _lessons[i], index: i)));
+                      DevNotes.instance.clearContext('grammar');
+                      if (mounted) setState(() {});
+                    },
                   ),
                   const SizedBox(height: 8),
                 ],
@@ -88,7 +93,12 @@ class _GrammarHubScreenState extends State<GrammarHubScreen> {
                   sub: 'นะ · สิ · เถอะ · ล่ะ · หรอก · จัง',
                   count: 14,
                   accent: accent,
-                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const GrammarLessonScreen())),
+                  locked: !Entitlement.stepFree(_lessons.length + 1) && !Entitlement.premium,
+                  onTap: () async {
+                    if (!await Entitlement.gate(context, Entitlement.stepFree(_lessons.length + 1)) || !context.mounted) return;
+                    await Navigator.push(context, MaterialPageRoute(builder: (_) => const GrammarLessonScreen()));
+                    if (mounted) setState(() {});
+                  },
                 ),
               ],
             ),
@@ -104,7 +114,9 @@ class _LessonTile extends StatelessWidget {
   final int count;
   final Color accent;
   final VoidCallback onTap;
+  final bool locked;
   const _LessonTile({
+    this.locked = false,
     required this.number,
     required this.emoji,
     required this.title,
@@ -154,7 +166,7 @@ class _LessonTile extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Text(trf('{0}개', [count]), style: const TextStyle(fontSize: 11, color: AppColors.khramLight)),
-              const Icon(Icons.chevron_right, color: AppColors.khramLight),
+              if (locked) const LockBadge(size: 18) else const Icon(Icons.chevron_right, color: AppColors.khramLight),
             ],
           ),
         ),

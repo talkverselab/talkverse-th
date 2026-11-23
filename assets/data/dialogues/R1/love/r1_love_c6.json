@@ -408,10 +408,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_c6_write.md",
-  "recommended": "รักนะ / 사랑해 · เกิดวันนี้นะ / 오늘 생일이지"
- },
  "stats": {
   "cliff_cover": 51
  }

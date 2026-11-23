@@ -946,10 +946,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_travel_b1_write.md",
-  "recommended": "กลับบ้านก่อน / 일단 돌아가자 · ฝนจะตกหนัก / 비 더 세게 올 거야"
- },
  "stats": {
   "cliff_cover": 79
  }

@@ -430,10 +430,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_work_a3_write.md",
-  "recommended": "มาสิ / 어서 해 · เสียงดีนะ / 목소리 좋네"
- },
  "stats": {
   "cliff_cover": 62
  }

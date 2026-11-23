@@ -418,10 +418,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_culture_a2_write.md",
-  "recommended": "เล่นน้ำ / 물놀이하다 · เย็นๆ / 시원하게"
- },
  "stats": {
   "cliff_cover": 40
  }

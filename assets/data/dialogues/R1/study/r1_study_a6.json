@@ -158,10 +158,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_study_a6_write.md",
-  "recommended": "เบาเสียงหน่อย / 목소리 낮춰 줘\nห้าโมงเย็น / 오후 5시"
- },
  "stats": {
   "cliff_cover": 32
  }

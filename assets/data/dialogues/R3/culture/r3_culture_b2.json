@@ -898,10 +898,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_culture_b2_write.md",
-  "recommended": "ห้ามมองกล้องนะ / 카메라 보지 마 · ชิล ๆ เดินไป / 편하게 걸어가"
- },
  "stats": {
   "cliff_cover": 62
  }

@@ -589,10 +589,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_love_c1_write.md",
-  "recommended": "เวลาที่นั่นกี่โมง / 거기 몇 시야? · อย่าวางนะ / 끊지 마."
- },
  "stats": {
   "cliff_cover": 73
  }

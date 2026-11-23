@@ -350,10 +350,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_survival_s2_write.md",
-  "recommended": "หวานน้อยนะคะ / 덜 달게요. · แก้วนี้เท่าไหร่คะ / 이 잔 얼마예요?"
- },
  "stats": {
   "cliff_cover": 67
  }

@@ -545,10 +545,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_study_b3_write.md",
-  "recommended": "เอาจริง / 진짜로 · ชิลๆ /  Chill하게"
- },
  "stats": {
   "cliff_cover": 57
  }

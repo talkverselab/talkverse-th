@@ -338,10 +338,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_life_a5_write.md",
-  "recommended": "หมาไม่ดุหรอก / 개 안 사나워 · เดินช้าๆ นะ / 천천히 걸어"
- },
  "stats": {
   "cliff_cover": 79
  }

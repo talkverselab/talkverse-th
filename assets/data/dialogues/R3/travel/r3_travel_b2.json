@@ -529,10 +529,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_travel_b2_write.md",
-  "recommended": "ทำพาสปอร์ตหายที่ไหน / 여권을 어디서 잃어버리셨나요? · ต้องการใบแจ้งความไหม / 신고서가 필요하세요?"
- },
  "stats": {
   "cliff_cover": 55
  }

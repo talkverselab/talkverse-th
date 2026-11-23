@@ -384,10 +384,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_a10_write.md",
-  "recommended": "ระวังลื่นนะ / 미끄러우니까 조심해 · วิ่งเร็วๆ / 빨리빨리 뛰어"
- },
  "stats": {
   "cliff_cover": 56
  }

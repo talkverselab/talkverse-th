@@ -512,10 +512,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_work_c1_write.md",
-  "recommended": "ส่งลิงก์มาได้ไหม / 링크 보내 줄래요? · เดี๋ยวทำให้ / 곧 해 줄게."
- },
  "stats": {
   "cliff_cover": 73
  }

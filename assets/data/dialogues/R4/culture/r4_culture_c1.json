@@ -750,10 +750,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_culture_c1_write.md",
-  "recommended": "ตอนใหม่เมื่อไหร่ / 새 에피소드 언제 나와? · เสียงดีขึ้นนะ / 발음 좋아졌네."
- },
  "stats": {
   "cliff_cover": 75
  }

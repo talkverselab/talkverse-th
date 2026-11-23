@@ -472,10 +472,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_culture_c1_write.md",
-  "recommended": "ชื่อเล่นน่ารักจัง / 별명 진짜 귀엽다 , อยากรู้ชื่อจริงป่ะ / 본명 알고 싶어?"
- },
  "stats": {
   "cliff_cover": 40
  }

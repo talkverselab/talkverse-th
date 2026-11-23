@@ -522,10 +522,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_life_c1_write.md",
-  "recommended": "มากินข้าวไหม / 밥 먹으러 올래? · อย่าลืมกินนะ / 밥 먹는 거 잊지 마."
- },
  "stats": {
   "cliff_cover": 64
  }

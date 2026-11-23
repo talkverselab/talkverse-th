@@ -495,10 +495,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_travel_b1_write.md",
-  "recommended": "ทางนี้ใช่ไหม / 이쪽 맞아? · ใกล้แล้วป่ะ / 거의 다 온 거 아냐?"
- },
  "stats": {
   "cliff_cover": 52
  }

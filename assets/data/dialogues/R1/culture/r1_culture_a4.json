@@ -405,10 +405,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_culture_a4_write.md",
-  "recommended": "กินแบบนี้สิ / 이렇게 먹어. · ข้าวหกหมด / 밥 다 쏟았어."
- },
  "stats": {
   "cliff_cover": 44
  }

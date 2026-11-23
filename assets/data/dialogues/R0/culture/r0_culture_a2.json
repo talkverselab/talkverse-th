@@ -377,10 +377,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_culture_a2_write.md",
-  "recommended": "สาดน้ำ / 물을 끼얹다 · เปียกปอน / 흠뻑 젖다"
- },
  "stats": {
   "cliff_cover": 86
  }

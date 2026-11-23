@@ -843,10 +843,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_love_b4_write.md",
-  "recommended": "แขนชาไปหมด / 팔이 완전히 저렸다 · อย่าขยับนะ / 움직이지 마"
- },
  "stats": {
   "cliff_cover": 71
  }

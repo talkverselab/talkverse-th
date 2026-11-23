@@ -358,10 +358,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_friends_a1_write.md",
-  "recommended": "ห้องนี้นะ / 이 방이야. · ใส่ของได้เลย / 물건 넣어도 돼."
- },
  "stats": {
   "cliff_cover": 58
  }

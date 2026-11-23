@@ -17,6 +17,7 @@ import hashlib
 import json
 import subprocess
 import sys
+import re
 import tempfile
 from pathlib import Path
 
@@ -27,6 +28,7 @@ BUCKET = 'talkverse-art'
 PREFIX = 'script/th'
 # 문법 파트도 원고처럼 — 언어감각(2026-11-19) + 문법 코스·어말조사(사용자 지시 2026-11-23 「DB 업데이트하면서 업뎃되게」)
 GRAMMAR = ('sense_course', 'lessons', 'sfp')
+AI_NAME = re.compile(r'claude|grok|gemini|chatgpt|openai', re.I)
 
 
 def current():
@@ -35,6 +37,8 @@ def current():
     for p in paths:
         b = Path(p).read_bytes()
         json.loads(b)  # 깨진 JSON 은 올리지 않는다
+        if AI_NAME.search(b.decode('utf-8')):  # 공개 원고에 작업 기록(AI 이름)이 남으면 올리지 않는다(심사, 2026-11-23)
+            sys.exit(f'작업 기록 남음 — {p} 에서 AI 이름을 빼고 다시')
         out[str(Path(p).relative_to(DATA))] = hashlib.sha1(b).hexdigest()[:12]
     return out
 

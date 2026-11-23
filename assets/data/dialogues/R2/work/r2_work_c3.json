@@ -190,10 +190,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_work_c3_write.md",
-  "recommended": "ตอบเฉพาะ / 개별 답장\nลาได้ไหม / 휴가 돼?"
- },
  "stats": {
   "cliff_cover": 46
  }

@@ -185,10 +185,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_study_b6_write.md",
-  "recommended": "ปิดเสียง / 무음으로\nเริ่มได้ / 시작해도 돼"
- },
  "stats": {
   "cliff_cover": 46
  }

@@ -392,10 +392,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_travel_a4_write.md",
-  "recommended": "ไปกันป่ะ / 같이 갈까? · จริงป่ะ / 진짜야?"
- },
  "stats": {
   "cliff_cover": 81
  }

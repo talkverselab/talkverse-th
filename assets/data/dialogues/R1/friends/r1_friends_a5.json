@@ -364,10 +364,6 @@
    "emoji": "😄"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_friends_a5_write.md",
-  "recommended": "ร่มเล็กไปหน่อย / 우산이 좀 작아. · รอฝนหยุดไหม / 비 그칠 때까지 기다릴까?"
- },
  "stats": {
   "cliff_cover": 50
  }

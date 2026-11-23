@@ -577,10 +577,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_life_b2_write.md",
-  "recommended": "ขอดูสัญญาได้ไหม / 계약서 볼 수 있을까요? · มีรูปเพิ่มไหมครับ / 사진 더 있나요?"
- },
  "stats": {
   "cliff_cover": 67
  }

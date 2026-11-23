@@ -543,10 +543,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_b5_write.md",
-  "recommended": "ชิลๆ ไป /  chill하게 해 · โอเคป่ะ / 괜찮아?"
- },
  "stats": {
   "cliff_cover": 71
  }

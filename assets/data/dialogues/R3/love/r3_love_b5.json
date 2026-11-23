@@ -846,10 +846,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_love_b5_write.md",
-  "recommended": "รอก่อนนะ / 잠깐 기다려 · ใจเย็นๆ / 진정해"
- },
  "stats": {
   "cliff_cover": 67
  }

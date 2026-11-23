@@ -357,10 +357,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_survival_s3_write.md",
-  "recommended": "ร้อนตายแล้ว / 더워 죽겠다 · น้ำเปล่ามีมั้ยคะ / 생수 있어요?"
- },
  "stats": {
   "cliff_cover": 79
  }

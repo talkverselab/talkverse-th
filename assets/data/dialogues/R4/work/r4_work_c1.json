@@ -578,10 +578,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_work_c1_write.md",
-  "recommended": "โพสต์นี้ใครเขียน / 이 글 누가 썼어? · อย่าแชร์ต่อ / 공유하지 마."
- },
  "stats": {
   "cliff_cover": 69
  }

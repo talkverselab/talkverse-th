@@ -644,10 +644,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_work_b3_write.md",
-  "recommended": "ขอเลื่อนกำหนดได้ไหมครับ / 일정 미뤄도 될까요? · มีแผนสำรองไหม / 대안 계획 있나요?"
- },
  "stats": {
   "cliff_cover": 66
  }

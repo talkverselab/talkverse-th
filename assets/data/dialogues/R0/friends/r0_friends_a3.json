@@ -342,10 +342,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_friends_a3_write.md",
-  "recommended": "ใจเย็นๆ / 진정해 · เร็วๆ สิ / 빨리 좀"
- },
  "stats": {
   "cliff_cover": 81
  }

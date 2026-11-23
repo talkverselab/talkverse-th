@@ -439,10 +439,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_life_a4_write.md",
-  "recommended": "กินให้อร่อยนะ / 맛있게 먹어 · ระวังตัวด้วยนะคะ / 몸 조심해"
- },
  "stats": {
   "cliff_cover": 60
  }

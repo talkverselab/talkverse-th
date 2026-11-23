@@ -521,10 +521,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_work_b1_write.md",
-  "recommended": "ไชโย / 만세·건배 · หมดแก้ว / 원샷"
- },
  "stats": {
   "cliff_cover": 65
  }

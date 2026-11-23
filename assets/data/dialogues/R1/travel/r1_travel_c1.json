@@ -162,10 +162,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_travel_c1_write.md",
-  "recommended": "อยู่ชั้นไหน / 몇 층이야\nออกมาเลย / 나와"
- },
  "stats": {
   "cliff_cover": 36
  }

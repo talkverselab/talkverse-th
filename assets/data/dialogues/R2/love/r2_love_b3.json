@@ -560,10 +560,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_b3_write.md",
-  "recommended": "ไปกันเถอะ / 가자 · เลือกเลย / 네가 골라"
- },
  "stats": {
   "cliff_cover": 58
  }

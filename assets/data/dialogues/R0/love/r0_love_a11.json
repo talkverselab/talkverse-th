@@ -330,10 +330,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_a11_write.md",
-  "recommended": "รับอะไรดี / 뭐 드릴까요 · หวานน้อยหน่อย / 덜 달게 해 주세요"
- },
  "stats": {
   "cliff_cover": 69
  }

@@ -155,10 +155,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_friends_a7_write.md",
-  "recommended": "เดินเล่น / 산책하다\nให้อาหาร / 밥 주다"
- },
  "stats": {
   "cliff_cover": 38
  }

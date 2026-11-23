@@ -184,10 +184,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_work_b7_write.md",
-  "recommended": "ขึ้นมาเลย / 올라와\nร้องต่อ / 계속 불러"
- },
  "stats": {
   "cliff_cover": 54
  }

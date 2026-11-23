@@ -324,10 +324,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_work_c1_write.md",
-  "recommended": "โอเคนะ / 오케이네 · ได้เลยครับ / 바로 돼요"
- },
  "stats": {
   "cliff_cover": 56
  }

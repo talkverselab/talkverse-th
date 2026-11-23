@@ -601,10 +601,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_life_b1_write.md",
-  "recommended": "ว่างไหม / 비어 있나요 · เข้าอยู่ได้เลย / 바로 입주 가능"
- },
  "stats": {
   "cliff_cover": 63
  }

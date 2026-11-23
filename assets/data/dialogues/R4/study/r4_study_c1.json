@@ -649,10 +649,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_study_c1_write.md",
-  "recommended": "ส่งอีเมลยืนยันได้ไหมครับ / 확인 이메일 보내 주실 수 있나요? · ขอเวลาตรวจสอบเพิ่ม / 추가 확인 시간을 부탁드립니다."
- },
  "stats": {
   "cliff_cover": 66
  }

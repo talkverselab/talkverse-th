@@ -777,10 +777,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_study_b1_write.md",
-  "recommended": "ขออนุญาตเลื่อนส่งงาน / 과제 제출 연장 허락 부탁드립니다 · รบกวนอาจารย์ / 교수님 打扰합니다"
- },
  "stats": {
   "cliff_cover": 72
  }

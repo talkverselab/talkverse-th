@@ -651,10 +651,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_travel_b2_write.md",
-  "recommended": "อากาศดีนะครับ / 날씨 좋네요. · ขอบคุณที่ต้อนรับ / 환대해 주셔서 감사합니다."
- },
  "stats": {
   "cliff_cover": 75
  }

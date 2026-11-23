@@ -504,10 +504,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_life_b4_write.md",
-  "recommended": "รบกวนหน่อยนะคะ / 조금 방해해서 죄송 · เดี๋ยวตามไปนะคะ / 바로 따라갈게요"
- },
  "stats": {
   "cliff_cover": 60
  }

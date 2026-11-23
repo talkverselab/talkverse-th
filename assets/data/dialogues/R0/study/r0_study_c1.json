@@ -167,10 +167,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_study_c1_write.md",
-  "recommended": "ยังไม่รู้ / 아직 몰라\nเต็มไปหมด / 가득 차"
- },
  "stats": {
   "cliff_cover": 70
  }

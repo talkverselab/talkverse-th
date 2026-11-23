@@ -163,10 +163,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_work_a3_write.md",
-  "recommended": "หิวแล้ว / 배고파\nไปเลยค่ะ / 가요"
- },
  "stats": {
   "cliff_cover": 87
  }

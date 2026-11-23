@@ -184,10 +184,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_study_b5_write.md",
-  "recommended": "ขอบคุณครับ / 감사합니다\nอยากเรียน / 공부하고 싶어요"
- },
  "stats": {
   "cliff_cover": 62
  }

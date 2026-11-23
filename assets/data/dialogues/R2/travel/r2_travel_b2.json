@@ -555,10 +555,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_travel_b2_write.md",
-  "recommended": "ไปเช่ากันป่ะ / 같이 빌리러 갈까 · ดูดีสุดๆ เลย / 완전 잘 어울려"
- },
  "stats": {
   "cliff_cover": 65
  }

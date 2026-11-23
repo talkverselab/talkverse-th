@@ -1062,10 +1062,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_work_b2_write.md",
-  "recommended": "ยังไงดี / 어떻게 하지 · เอาจริงดิ / 진짜야?"
- },
  "stats": {
   "cliff_cover": 82
  }

@@ -329,10 +329,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_study_a1_write.md",
-  "recommended": "ขอยืมหน่อยสิ / 좀 빌려줘 · ได้เลยจ้า / 응, 가져가"
- },
  "stats": {
   "cliff_cover": 76
  }

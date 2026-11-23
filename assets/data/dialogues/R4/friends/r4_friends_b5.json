@@ -674,10 +674,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_friends_b5_write.md",
-  "recommended": "ทำงานที่ไหนตอนนี้ / 지금 어디서 일해? · นานแล้วที่ไม่เจอ / 오랜만이야."
- },
  "stats": {
   "cliff_cover": 69
  }

@@ -157,10 +157,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_travel_a5_write.md",
-  "recommended": "ลดได้ไหม / 깎아 주세요\nเอาสอง / 두 개 주세요"
- },
  "stats": {
   "cliff_cover": 38
  }

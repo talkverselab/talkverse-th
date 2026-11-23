@@ -702,10 +702,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_work_b4_write.md",
-  "recommended": "ขอดูฉบับร่างได้ไหมครับ / 초안을 볼 수 있을까요? · มีข้อสงวนไหม / 유보 조항 있나요?"
- },
  "stats": {
   "cliff_cover": 67
  }

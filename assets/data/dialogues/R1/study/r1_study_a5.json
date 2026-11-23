@@ -154,10 +154,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_study_a5_write.md",
-  "recommended": "เปิดอีกที / 다시 틀어 줘\nฟังไม่ทัน / 못 들었어"
- },
  "stats": {
   "cliff_cover": 50
  }

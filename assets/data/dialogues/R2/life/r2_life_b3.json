@@ -668,10 +668,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_life_b3_write.md",
-  "recommended": "ขึ้นบันไดไปเลย / 계단으로 올라가자 · อาหารรออยู่ / 음식 기다리고 있어"
- },
  "stats": {
   "cliff_cover": 57
  }

@@ -1346,10 +1346,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_study_b1_write.md",
-  "recommended": "งั้นเหรอครับ / 그런가요 · ไม่รู้สิครับ / 잘 모르겠어요"
- },
  "stats": {
   "cliff_cover": 79
  }

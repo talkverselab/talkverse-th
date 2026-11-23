@@ -192,10 +192,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_friends_c2_write.md",
-  "recommended": "เก็บเป็นความลับ / 비밀로 해\nอย่าแชร์ / 공유하지 마"
- },
  "stats": {
   "cliff_cover": 78
  }

@@ -466,10 +466,6 @@
    "emotion": "shy"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_b4_write.md",
-  "recommended": "แบตเหลือน้อยมาก / 배터리 거의 없어. · เสียบได้เลยไหม / 꽂아도 돼?"
- },
  "stats": {
   "cliff_cover": 67
  }

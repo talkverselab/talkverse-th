@@ -604,10 +604,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_friends_b5_write.md",
-  "recommended": "ใครจะร้อง / 누가 노래할래 · เปิดเพลงช้าๆ / 느린 노래 틀어"
- },
  "stats": {
   "cliff_cover": 57
  }

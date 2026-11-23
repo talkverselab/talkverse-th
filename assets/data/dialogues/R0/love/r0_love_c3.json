@@ -359,10 +359,6 @@
    "emotion": "excited"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_c3_write.md",
-  "recommended": "จริงดิ / 진짜? · อร่อยป่ะ / 맛있어?"
- },
  "stats": {
   "cliff_cover": 96
  }

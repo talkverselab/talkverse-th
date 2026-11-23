@@ -334,10 +334,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_friends_a1_write.md",
-  "recommended": "เล่นอีกป่ะ / 한 판 더 할래 · ยังไม่นอนเหรอ / 아직 안 자?"
- },
  "stats": {
   "cliff_cover": 95
  }

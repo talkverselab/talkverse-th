@@ -183,10 +183,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_work_b5_write.md",
-  "recommended": "ยินดีครับ / 반갑습니다\nนามบัตรครับ / 명함입니다"
- },
  "stats": {
   "cliff_cover": 45
  }

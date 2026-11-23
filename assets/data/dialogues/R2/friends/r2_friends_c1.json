@@ -194,10 +194,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_friends_c1_write.md",
-  "recommended": "แท็กมา / 태그해\nปังเวอร์ / 완전 멋져"
- },
  "stats": {
   "cliff_cover": 57
  }

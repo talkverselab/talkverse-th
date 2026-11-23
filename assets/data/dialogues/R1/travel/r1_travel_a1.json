@@ -334,10 +334,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_travel_a1_write.md",
-  "recommended": "ไปกันเถอะ / 같이 가자 · จ้า / 응 (캐주얼)"
- },
  "stats": {
   "cliff_cover": 76
  }

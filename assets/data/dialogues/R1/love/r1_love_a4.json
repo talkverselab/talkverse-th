@@ -342,10 +342,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_a4_write.md",
-  "recommended": "เช็คบิล / 계산 · เอาอีกไหม / 더 먹을래?"
- },
  "stats": {
   "cliff_cover": 51
  }

@@ -352,10 +352,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_work_a2_write.md",
-  "recommended": "รับทราบครับ / 알겠습니다 · เดี๋ยวจัดการครับ / 제가 알아서 할게요"
- },
  "stats": {
   "cliff_cover": 62
  }

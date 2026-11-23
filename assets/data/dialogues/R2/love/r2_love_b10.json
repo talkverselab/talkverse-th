@@ -591,10 +591,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_b10_write.md",
-  "recommended": "ช่วยทีสิ / 좀 도와줘 · ชิลๆ หน่อย / 좀  chill하게"
- },
  "stats": {
   "cliff_cover": 68
  }

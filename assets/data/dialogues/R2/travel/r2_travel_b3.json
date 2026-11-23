@@ -518,10 +518,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_travel_b3_write.md",
-  "recommended": "ตามลิงไปเร็ว / 원숭이 빨리 쫓아가 · สวยจังเลย / 진짜 예쁘다"
- },
  "stats": {
   "cliff_cover": 60
  }

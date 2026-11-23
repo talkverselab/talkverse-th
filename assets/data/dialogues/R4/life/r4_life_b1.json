@@ -1228,10 +1228,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_life_b1_write.md",
-  "recommended": "เดี๋ยวคุยกันก่อน / 일단 얘기하고 나서\nไม่ต้องรีบขนาดนั้น / 그렇게까지 서두를 필요 없어"
- },
  "stats": {
   "cliff_cover": 85
  }

@@ -872,10 +872,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_love_b7_write.md",
-  "recommended": "อย่าเงียบดิ / 조용히 하지 마\nมาคุยกันก่อนสิ / 먼저 이야기하자"
- },
  "stats": {
   "cliff_cover": 85
  }

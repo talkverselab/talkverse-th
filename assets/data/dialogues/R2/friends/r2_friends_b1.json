@@ -622,10 +622,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_friends_b1_write.md",
-  "recommended": "ไปอีกแก้ว / 한 잔 더 · ยังไม่กลับบ้าน / 아직 집에 안 가"
- },
  "stats": {
   "cliff_cover": 59
  }

@@ -376,10 +376,6 @@
    "emotion": "cheerful"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_a9_write.md",
-  "recommended": "ขึ้นมาเลย / 바로 올라타 · ไปกันป่ะ / 갈까?"
- },
  "stats": {
   "cliff_cover": 66
  }

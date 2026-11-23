@@ -320,10 +320,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_friends_a2_write.md",
-  "recommended": "หวานไหม / 달아요? · ขอชั่งหน่อย / 좀 달아주세요"
- },
  "stats": {
   "cliff_cover": 70
  }

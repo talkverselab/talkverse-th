@@ -741,10 +741,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_friends_c1_write.md",
-  "recommended": "ใครออกไป / 누가 나갔어? · รูปเก่าๆ ส่งมา / 옛날 사진 보내 줘."
- },
  "stats": {
   "cliff_cover": 82
  }

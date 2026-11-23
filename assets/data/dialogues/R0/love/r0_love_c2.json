@@ -357,10 +357,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_c2_write.md",
-  "recommended": "ไปนอนได้แล้วนะ / 이제 자러 가도 돼 · ง่วงจังเลยอะ / 엄청 졸려"
- },
  "stats": {
   "cliff_cover": 90
  }

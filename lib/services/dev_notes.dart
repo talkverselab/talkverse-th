@@ -40,16 +40,19 @@ class DevNotes {
 
   Future<void> load() async {
     final p = await Prefs.getInstance();
-    unlocked.value = p.getBool(_kUnlocked) ?? false;
+    // 개발자 메모는 개발 빌드에서만(심사 — 숨은 메뉴 금지, uk 점검 2026-11-23)
+    unlocked.value = kDebugMode && (p.getBool(_kUnlocked) ?? false);
     enabled.value = unlocked.value && (p.getBool(_kEnabled) ?? false);
   }
 
   Future<void> unlock() async {
+    if (!kDebugMode) return;
     unlocked.value = true;
     (await Prefs.getInstance()).setBool(_kUnlocked, true);
   }
 
   Future<void> setEnabled(bool v) async {
+    if (!kDebugMode) v = false;
     enabled.value = v;
     (await Prefs.getInstance()).setBool(_kEnabled, v);
     if (v) flushQueue();

@@ -560,10 +560,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_culture_b3_write.md",
-  "recommended": "รับไว้เลยนะ / 그냥 받아. · ขอให้โชคดีนะ / 행운을 빌어요."
- },
  "stats": {
   "cliff_cover": 55
  }

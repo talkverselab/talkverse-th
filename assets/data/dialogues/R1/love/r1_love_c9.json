@@ -162,10 +162,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_love_c9_write.md",
-  "recommended": "ว่างไหม / 시간 돼?\nเลื่อนได้ไหม / 미룰 수 있어?"
- },
  "stats": {
   "cliff_cover": 48
  }

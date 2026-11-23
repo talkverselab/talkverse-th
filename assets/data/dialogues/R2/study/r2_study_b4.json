@@ -184,10 +184,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_study_b4_write.md",
-  "recommended": "เริ่มใหม่ / 다시 시작\nระวังหน่อย / 조심해"
- },
  "stats": {
   "cliff_cover": 61
  }

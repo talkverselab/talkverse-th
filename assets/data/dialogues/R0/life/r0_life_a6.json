@@ -158,10 +158,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_life_a6_write.md",
-  "recommended": "เจอที่ไหน / 어디서 주웠어\nไม่เป็นไรค่ะ / 괜찮아요"
- },
  "stats": {
   "cliff_cover": 84
  }

@@ -591,10 +591,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_love_b1_write.md",
-  "recommended": "ใครส่งมา / 누가 보냈어? · ไม่ต้องห่วงนะ / 걱정하지 마."
- },
  "stats": {
   "cliff_cover": 85
  }

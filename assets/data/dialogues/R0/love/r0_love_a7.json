@@ -376,10 +376,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_love_a7_write.md",
-  "recommended": "ร่มเล็กไป / 우산 너무 작아 · เปียกหมดแล้ว / 완전 젖었어"
- },
  "stats": {
   "cliff_cover": 78
  }

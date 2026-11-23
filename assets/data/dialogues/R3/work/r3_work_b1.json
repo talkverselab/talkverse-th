@@ -757,10 +757,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_work_b1_write.md",
-  "recommended": "ขอตัวกลับก่อนนะ / 먼저 실례할게요 · สู้ ๆ นะ / 힘내"
- },
  "stats": {
   "cliff_cover": 73
  }

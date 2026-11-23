@@ -666,10 +666,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_study_b3_write.md",
-  "recommended": "มีเวลาปรึกษาไหมครับ / 상담 시간 있으세요? · หัวข้อนี้ยากไปหน่อย / 이 주제가 좀 어려워요."
- },
  "stats": {
   "cliff_cover": 69
  }

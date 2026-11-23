@@ -162,10 +162,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_life_c2_write.md",
-  "recommended": "ซื้อมาเลย / 사 와\nอย่าลืม / 잊지 마"
- },
  "stats": {
   "cliff_cover": 55
  }

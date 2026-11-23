@@ -182,10 +182,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_culture_b6_write.md",
-  "recommended": "ขอแสดงความเสียใจ / 위로드립니다\nทำบุญค่ะ / 공양해요"
- },
  "stats": {
   "cliff_cover": 63
  }

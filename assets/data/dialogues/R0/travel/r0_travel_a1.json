@@ -364,10 +364,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r0_travel_a1_write.md",
-  "recommended": "ขึ้นเรือเลย / 바로 배 타요 · เกาะไหนดี / 어느 섬이 좋아"
- },
  "stats": {
   "cliff_cover": 77
  }

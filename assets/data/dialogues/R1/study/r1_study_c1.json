@@ -360,10 +360,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_study_c1_write.md",
-  "recommended": "รับทราบครับ / 알겠습니다 · เดี๋ยวส่งครับ / 곧 보낼게요"
- },
  "stats": {
   "cliff_cover": 72
  }

@@ -406,10 +406,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_friends_a4_write.md",
-  "recommended": "จริงดิ / 진짜? · ชิลๆ / 여유 있게"
- },
  "stats": {
   "cliff_cover": 55
  }

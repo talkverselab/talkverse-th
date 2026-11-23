@@ -223,10 +223,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r3_friends_b4_write.md",
-  "recommended": "อย่ากังวล / 걱정하지 마\nบอกตรงๆ / 솔직히 말해"
- },
  "stats": {
   "cliff_cover": 73
  }

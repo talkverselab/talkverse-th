@@ -542,10 +542,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_love_b7_write.md",
-  "recommended": "หลบฝนกันเถอะ / 같이 비 피하자 · ร่มพังแล้ว / 우산 망가졌어"
- },
  "stats": {
   "cliff_cover": 59
  }

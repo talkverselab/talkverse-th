@@ -356,10 +356,6 @@
    "emotion": "gentle"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_work_c1_write.md",
-  "recommended": "กินอะไรดี / 뭐 먹을까 · ร้อนจัง / 엄청 덥다"
- },
  "stats": {
   "cliff_cover": 38
  }

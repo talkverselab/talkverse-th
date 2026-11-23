@@ -193,10 +193,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r2_work_c4_write.md",
-  "recommended": "เปิดดู / 열어 봐\nผ่านไหม / 합격했어?"
- },
  "stats": {
   "cliff_cover": 61
  }

@@ -162,10 +162,6 @@
    "ui": "bubble"
   }
  ],
- "review": {
-  "grok_write": "data/review/r1_culture_c2_write.md",
-  "recommended": "ฟังอีกที / 다시 들어\nเพลงโปรด / 좋아하는 노래"
- },
  "stats": {
   "cliff_cover": 50
  }

@@ -666,10 +666,6 @@
    ]
   }
  ],
- "review": {
-  "grok_write": "data/review/r4_life_b3_write.md",
-  "recommended": "มีข้อกังวลอะไรไหมครับ / 우려 사항 있으신가요? · ขอให้พิจารณาอีกครั้ง / 다시 고려해 주시기 바랍니다."
- },
  "stats": {
   "cliff_cover": 70
  }
