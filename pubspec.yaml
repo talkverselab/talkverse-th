@@ -74,6 +74,7 @@ flutter:
           weight: 600
 
   assets:
+    - assets/curriculum_th.json   # 토크버스 커리큘럼 단계 기본값(서버 rev 가 높으면 받아 바꿈, CURRICULUM_SPEC §12)
     - assets/data/alphabet/
     - assets/data/tones/
     - assets/data/dialogues/

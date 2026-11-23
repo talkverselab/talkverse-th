@@ -103,7 +103,7 @@ class _CurriculumScreenState extends State<CurriculumScreen> {
     for (final r in due) {
       final d = DialogueService.instance.byId(r.dialogueId);
       if (d == null) continue;
-      qs.addAll(buildQuestions(d, limit: 1, pool: _svc.levelList(d.region), seed: seed, onlyTurns: {r.turn}));
+      qs.addAll(buildQuestions(d, limit: 1, pool: DialogueService.instance.list(region: d.region), seed: seed, onlyTurns: {r.turn}));
     }
     if (qs.isEmpty) {
       // 원고가 바뀌어 줄이 없어진 항목은 대기열에서 뺀다
@@ -126,7 +126,7 @@ class _CurriculumScreenState extends State<CurriculumScreen> {
           if (!_loading && _st.level != null && !_levelPick)
             TextButton(
               onPressed: () => setState(() => _levelPick = true),
-              child: Text('${_st.level} ${tr(DialogueService.levelKo[_st.level] ?? '')}', style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.kluayMaiDeep)),
+              child: Text(tr(_svc.stageTitle(_st.level)), style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.kluayMaiDeep)),
             ),
         ],
       ),
@@ -141,14 +141,15 @@ class _CurriculumScreenState extends State<CurriculumScreen> {
 
   // ── 레벨 고르기 ──
   List<Widget> _levelPicker() {
-    final lowest = DialogueService.levels.firstWhere((l) => DialogueService.instance.count(l) > 0, orElse: () => 'R1');
+    final stages = _svc.stages; // 단계 목록·편 목록은 데이터에서(§12) — 편 없는 단계는 이미 빠져 있다
+    final lowest = stages.isEmpty ? null : stages.first.key;
     return [
-      Text(tr('회화 레벨을 골라요'), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppColors.khram)),
+      Text(tr('단계를 골라요'), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppColors.khram)),
       const SizedBox(height: 4),
-      Text(tr('처음이면 가장 낮은 레벨부터 권해요. 문법 레벨과는 따로예요.'), style: const TextStyle(fontSize: 12.5, color: AppColors.khramLight)),
+      Text(tr('처음이면 1단계부터 권해요. 문법 레벨과는 따로예요.'), style: const TextStyle(fontSize: 12.5, color: AppColors.khramLight)),
       const SizedBox(height: 12),
-      for (final lv in DialogueService.levels)
-        if (DialogueService.instance.count(lv) > 0)
+      for (final s in stages)
+        for (final lv in [s.key])
           _card(
             onTap: () => _setLevel(lv),
             selected: _st.level == lv,
@@ -157,9 +158,10 @@ class _CurriculumScreenState extends State<CurriculumScreen> {
               const SizedBox(width: 12),
               Expanded(
                 child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(tr(DialogueService.levelKo[lv] ?? lv), style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.khram)),
+                  Text(tr(s.title), style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.khram)),
+                  if (s.desc.isNotEmpty) Text(tr(s.desc), style: const TextStyle(fontSize: 12, color: AppColors.khramLight)),
                   Text(
-                    trf('{0}편 · 통과 {1}', [DialogueService.instance.count(lv), _svc.levelList(lv).where((d) => _st.passedDialogues.contains(d.id)).length]),
+                    trf('{0}편 · 통과 {1}', [s.dialogueIds.length, _svc.levelList(lv).where((d) => _st.passedDialogues.contains(d.id)).length]),
                     style: const TextStyle(fontSize: 12, color: AppColors.khramLight),
                   ),
                 ]),
@@ -309,7 +311,7 @@ class _CurriculumScreenState extends State<CurriculumScreen> {
         const SizedBox(height: 12),
         _card(
           onTap: () => _setLevel(_svc.nextLevel(lv)!),
-          child: Text(trf('{0} 편을 모두 통과했어요 → {1} 로', [lv, _svc.nextLevel(lv)!]), style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.morakot)),
+          child: Text(trf('{0} 편을 모두 통과했어요 → {1} 로', [tr(_svc.stageTitle(lv)), tr(_svc.stageTitle(_svc.nextLevel(lv)))]), style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.morakot)),
         ),
       ],
     ];
@@ -329,7 +331,7 @@ class _CurriculumScreenState extends State<CurriculumScreen> {
         const SizedBox(height: 8),
         _card(
           onTap: () => _setLevel(next),
-          child: Text(trf('{0} 편을 모두 통과했어요 → {1} 로', [lv, next]), style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.morakot)),
+          child: Text(trf('{0} 편을 모두 통과했어요 → {1} 로', [tr(_svc.stageTitle(lv)), tr(_svc.stageTitle(next))]), style: const TextStyle(fontWeight: FontWeight.w800, color: AppColors.morakot)),
         ),
       ],
       const SizedBox(height: 10),
@@ -462,7 +464,7 @@ class _CurriculumPracticeScreenState extends State<CurriculumPracticeScreen> {
     _stop = true;
     await DialogueAudio.instance.stop();
     final svc = CurriculumService.instance;
-    final qs = buildQuestions(d, limit: 10, pool: svc.levelList(d.region), seed: DateTime.now().millisecondsSinceEpoch);
+    final qs = buildQuestions(d, limit: 10, pool: DialogueService.instance.list(region: d.region), seed: DateTime.now().millisecondsSinceEpoch);
     if (!mounted) return;
     final res = await openFull<QuizResult>(context, (_) => CurriculumQuizScreen(title: d.title, questions: qs, mode: QuizMode.practice));
     if (res == null || !mounted) return;
@@ -696,7 +698,7 @@ class _CurriculumHomeCardState extends State<CurriculumHomeCard> {
     final total = doneN + due + newLeft;
     final streak = _ready ? st.streakShown(today) : 0;
     final sub = !_ready || st.level == null
-        ? tr('레벨에서 다이얼로그를 골라 연습 · 80% 넘으면 다음 코스')
+        ? tr('단계에서 다이얼로그를 골라 연습 · 80% 넘으면 다음 코스')
         : st.dayDone(today)
             ? (streak > 0 ? trf('오늘 분량 끝 · 🔥 {0}일 연속', [streak]) : tr('오늘 분량 끝'))
             : trf('오늘: 복습 {0} · 새 편 {1}', [due, newLeft]);
