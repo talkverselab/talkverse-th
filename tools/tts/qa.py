@@ -10,6 +10,7 @@ import ttslib as L
 from pythainlp.tokenize import word_tokenize
 M = 'mlx-community/whisper-large-v3-turbo'
 SIM, NOISE = 0.90, -55.0
+TRIES = int(os.environ.get('TTS_TRIES', 3))   # 재생성 한도. PC 생성기는 있는 파일을 건너뛰므로 tries 를 되돌리지 말고 한도를 올려 새 번호(t4~)로 만든다
 REF_RATE = 12.0                      # 태국어 참고 음성(VoxCPM2) 속도 중앙값(글자/초, 2026-11-07 25개 측정) — 말 속도 범위 = 0.75~1.15배
 RATE_LO, RATE_HI = REF_RATE * 0.75, REF_RATE * 1.15
 TRIM = 'silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.03,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.03,areverse'
@@ -134,7 +135,7 @@ def main():
             q['ok'] = q['sim'] >= SIM
             if not q['ok']:
                 bad += 1
-                if q['tries'] < 3:
+                if jobs_out and q['tries'] < TRIES:     # 채점만 할 때(--jobs 없음)는 횟수를 올리지 않는다
                     q['tries'] += 1
                     jobs.append({'out': f"th/retake/{k[:-4]}.t{q['tries']}.wav", 'text': text, 'language': 'Thai', 'reference': f'out/ref_th/{voice}_{emo}.wav', 'seed': 42 + 97 * q['tries']})
     json.dump(Q, open(qf, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)

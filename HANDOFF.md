@@ -213,3 +213,5 @@ GH_TOKEN=$(gh auth token --user talkverselab) gh run list -R talkverselab/talkve
 - 17:50 uk 판단: 88줄은 지금은 기기 TTS 그대로(기준·문장 유지). 음성 순서가 한 바퀴 돈 뒤 그 줄만 같은 성별의 다른 화자 참고 음성으로 1회 더 시도 → 안 되면 그대로 TTS. uk 가 순서를 알려 주면 시작.
 - 2026-11-24 `run_all.py` 3회째 재생성본이 채점 없이 pack 되던 버그 수정(d20ba18). M6 `~/tts_work/th/wav/retake` 에 채점 전 t3 68조각(26편, 그중 26조각은 본 wav 없음 → PC 에서 받아야 함) — **지우지 말 것**, uk 차례에 다시 채점 → 바뀐 편만 pack. t1·t2 파일 303개도 같이 남아 있음(폴더째 다시 받은 것).
 - `run_all.py` 의 pack 에는 `--min-sim` 이 없다 — 그대로 돌리면 0.85 미만 줄도 목록에 들어간다(uk 와 정할 것).
+- 2026-11-24 `qa.py`: 채점만(--jobs 없음) 할 때 tries 가 오르던 버그 수정, 한도는 `TTS_TRIES`(기본 3). PC 파일과 견주니 이미 부풀려진 tries 는 0건. 채점 차례 = pt → es → ar → vi → th(uk).
+- 88줄 재시도 주의: PC 에 t1~t3 뿐 아니라 재생성분 t4~t6(134·86·76)도 있어 건너뛴다 → **t7 부터** 새 번호로(다른 화자 reference). `regen.py` 의 `t{3 + rnd}` 를 그대로 돌리지 말 것.
