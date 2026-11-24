@@ -217,3 +217,4 @@ GH_TOKEN=$(gh auth token --user talkverselab) gh run list -R talkverselab/talkve
 - 88줄 재시도 주의: PC 에 t1~t3 뿐 아니라 재생성분 t4~t6(134·86·76)도 있어 건너뛴다 → **t7 부터** 새 번호로(다른 화자 reference). `regen.py` 의 `t{3 + rnd}` 를 그대로 돌리지 말 것.
 - 2026-11-24 23:28 「th 채점 차례」 끝: t3 68조각 중 42조각 채점(26조각은 지금 대본에 없는 옛 조각 이름 — 건너뜀), 7조각 나아져 6편 다시 올림(r0_work_a3·r2_love_c1·r2_work_b7·r2_work_c3·r4_friends_b5·r4_study_b2). tries 변동 0. 백업 `~/tts_work/th/bak_20261124_t3`(188MB, 지울 후보). 스크립트 `~/tts_work/th/rescore_t3.py`.
 - 대사에 한글 지문 섞임 4곳(보고만): r3_culture_b1 턴 1·7·10, r2_study_b1 턴 6.
+- 2026-11-24 23:4x 사용자 지시(uk 전달) 「음성작업 하던거 하고 멈춰줘」 — 채점은 끝났고, **음성 일(끝 재생성 72조각 등)은 새로 시작하지 않는다.** uk 가 다시 하라는 신호를 보낼 때까지 대기.
