@@ -90,6 +90,13 @@ for i in range(0, len(ids), N):
         pc_run()
         for ep in eps:
             fetch(f'retake/{ep}')
+    else:                                      # break 없이 3회를 다 돌았으면 마지막 재생성본이 아직 채점 전 — 한 번 더 재서 나은 판을 고른 뒤 묶는다
+        for ep in eps:
+            try:
+                r = subprocess.run([sys.executable, f'{HERE}/qa.py', f'{work}/wav', ep], capture_output=True, text=True, timeout=600)
+                log('마지막 채점', ep, r.stdout.strip() or r.stderr.strip()[-200:])
+            except subprocess.TimeoutExpired:
+                log('TIMEOUT', ep)
     for ep in eps:
         r = sh(sys.executable, f'{HERE}/pack.py', f'{work}/wav', ep, '--upload', check=False)
         if r.returncode:
