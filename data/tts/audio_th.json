@@ -33646,8 +33646,8 @@
 "speaker": "ton",
 "emotion": "amused",
 "key": "audio/th/r4_friends_b5/06_m.mp4",
-"sha1": "a6a45df4093dcd2388f1fdffacb40e70899d18bc",
-"ms": 2919
+"sha1": "0900eb482e7dcf00b83c488326d310e2d5a62a47",
+"ms": 2529
 },
 {
 "turn": 6,
@@ -33655,8 +33655,8 @@
 "speaker": "ton",
 "emotion": "amused",
 "key": "audio/th/r4_friends_b5/06_f.mp4",
-"sha1": "a6a45df4093dcd2388f1fdffacb40e70899d18bc",
-"ms": 2919
+"sha1": "0900eb482e7dcf00b83c488326d310e2d5a62a47",
+"ms": 2529
 },
 {
 "turn": 7,
@@ -34363,8 +34363,8 @@
 "speaker": "af",
 "emotion": "polite",
 "key": "audio/th/r4_study_b2/03_f.mp4",
-"sha1": "106f0fde3e45723065e18b3afcc2cde74066f306",
-"ms": 3600
+"sha1": "47bf02c414856fd1a147e4f20311fd6849aff942",
+"ms": 4400
 },
 {
 "turn": 4,
@@ -38529,8 +38529,8 @@
 "speaker": "ton",
 "emotion": "excited",
 "key": "audio/th/r0_work_a3/04_m.mp4",
-"sha1": "ddd6a6113400216dd94ebf0252816dc89b8885e5",
-"ms": 1421
+"sha1": "4690953586957661a5df24af6c78c9aedfcab50f",
+"ms": 1627
 },
 {
 "turn": 4,
@@ -38538,8 +38538,8 @@
 "speaker": "ton",
 "emotion": "excited",
 "key": "audio/th/r0_work_a3/04_f.mp4",
-"sha1": "ddd6a6113400216dd94ebf0252816dc89b8885e5",
-"ms": 1421
+"sha1": "4690953586957661a5df24af6c78c9aedfcab50f",
+"ms": 1627
 },
 {
 "turn": 5,
@@ -42981,8 +42981,8 @@
 "speaker": "af",
 "emotion": "flustered",
 "key": "audio/th/r2_love_c1/09_f.mp4",
-"sha1": "4f33a5f2e3bba583227627d26ed2335eb1e829e5",
-"ms": 1657
+"sha1": "99fb38fedb6a0ef08b17a39355bab29dd4fe0d50",
+"ms": 1257
 },
 {
 "turn": 10,
@@ -44949,8 +44949,8 @@
 "speaker": "am",
 "emotion": "flustered",
 "key": "audio/th/r2_work_b7/07_m.mp4",
-"sha1": "03b99b83aaf3a8bbc9afbf6c3a8c8aa2cdf2f27e",
-"ms": 1737
+"sha1": "2e4bc23f402dfd51e85070a3d7b3c6f15ff8a15d",
+"ms": 1902
 },
 {
 "turn": 7,
@@ -45023,8 +45023,8 @@
 "speaker": "am",
 "emotion": "neutral",
 "key": "audio/th/r2_work_c3/01_m.mp4",
-"sha1": "c8ec224e683392ca64c470ec6914681d848dd380",
-"ms": 1153
+"sha1": "67f94b839246948b29dee0c8fc18f3cd53e93f3e",
+"ms": 972
 },
 {
 "turn": 1,
@@ -45077,8 +45077,8 @@
 "speaker": "ton",
 "emotion": "neutral",
 "key": "audio/th/r2_work_c3/04_m.mp4",
-"sha1": "99404a951148bab39569ede52136b22a44e92b7e",
-"ms": 1214
+"sha1": "867fe29dc152649e4af6513f8347c7388f597e57",
+"ms": 1085
 },
 {
 "turn": 4,
@@ -45086,8 +45086,8 @@
 "speaker": "ton",
 "emotion": "neutral",
 "key": "audio/th/r2_work_c3/04_f.mp4",
-"sha1": "99404a951148bab39569ede52136b22a44e92b7e",
-"ms": 1214
+"sha1": "867fe29dc152649e4af6513f8347c7388f597e57",
+"ms": 1085
 },
 {
 "turn": 5,
