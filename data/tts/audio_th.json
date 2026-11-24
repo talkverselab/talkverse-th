@@ -36273,24 +36273,6 @@
 "ms": 1707
 },
 {
-"turn": 5,
-"voice": "m",
-"speaker": "ton",
-"emotion": "neutral",
-"key": "audio/th/sense_L2/05_m.mp4",
-"sha1": "48f50fc640b9c1a82323e2b71e86a62c28ea57b3",
-"ms": 1263
-},
-{
-"turn": 5,
-"voice": "f",
-"speaker": "ton",
-"emotion": "neutral",
-"key": "audio/th/sense_L2/05_f.mp4",
-"sha1": "48f50fc640b9c1a82323e2b71e86a62c28ea57b3",
-"ms": 1263
-},
-{
 "turn": 6,
 "voice": "m",
 "speaker": "am",

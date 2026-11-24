@@ -1,0 +1,37 @@
+{
+"reason": "sense_L2 5번 턴 — 속도 폭주 0점, uk 지시로 목록에서만 뺌(R2 파일 유지)",
+"rows": [
+{
+"lang": "th",
+"episode": "sense_L2",
+"turn": 5,
+"voice": "f",
+"speaker": "ton",
+"emotion": "neutral",
+"key": "audio/th/sense_L2/05_f.mp4",
+"ms": 1263,
+"sha1": "48f50fc640b9c1a82323e2b71e86a62c28ea57b3",
+"created_at": "2026-11-20 19:02:18",
+"text": "ใช่ไหม",
+"reading": "",
+"rd": "차이마이",
+"ko": "맞아요?"
+},
+{
+"lang": "th",
+"episode": "sense_L2",
+"turn": 5,
+"voice": "m",
+"speaker": "ton",
+"emotion": "neutral",
+"key": "audio/th/sense_L2/05_m.mp4",
+"ms": 1263,
+"sha1": "48f50fc640b9c1a82323e2b71e86a62c28ea57b3",
+"created_at": "2026-11-20 19:02:18",
+"text": "ใช่ไหม",
+"reading": "",
+"rd": "차이마이",
+"ko": "맞아요?"
+}
+]
+}
