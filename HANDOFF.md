@@ -224,3 +224,4 @@ GH_TOKEN=$(gh auth token --user talkverselab) gh run list -R talkverselab/talkve
 ## 2026-11-25 대사 4곳 한국어 지문 뺌 (사용자 결정, uk 전달)
 - r3_culture_b1 턴 1·7·10, r2_study_b1 턴 6 — th·rd·ko 의 지문만 뺌(턴 6 은 `final_진짜final_진짜จริง` → `final_final_จริง`, ko 는 번역이라 그대로). 원고·`data/tts/plan`·`turn_lock_th.json` 같이 고침. 서버 원고 **rev 11**.
 - 다시 만들 음성 표시: `data/tts/redo_th_20261125.json`(서버 줄 8개 · 조각 6개). **음성 일은 멈춤 상태 — 굽지 않았고 D1 줄도 그대로**(D1 의 text·rd·ko 칸에는 옛 지문이 남아 있음, pack 때 바뀜). 음성 일이 열리면: 이 6조각 PC 옛 파일을 지우거나 새 이름으로 만들고 → qa → pack. 끝 재생성 72조각과 한 묶음으로.
+- 2026-11-25 사용자 지시(uk 전달): 회화 장면 그림은 **공개 65편 것만**. 65편 밖 회화 그림은 단어 그림이 끝날 때까지 멈춤(그리기·발주 모두). 이 세션은 지시 시점에 진행 중인 회화 그림 작업 없음.
