@@ -239,3 +239,7 @@ GH_TOKEN=$(gh auth token --user talkverselab) gh run list -R talkverselab/talkve
 ## 2026-11-25 「데이팅앱」 → 「언어교류앱」 (사용자 지시, uk 전달)
 - 원고 rev 12: r0_love_c6 where · r1_love_c1 scene · r1_love_c9 scene·where. 앱 묶음 L2 d1 제목 「소개팅 앱 첫 대화」 → 「언어교류앱 첫 대화」(서버 원고 대상이 아니라 **다음 빌드에 나감**). 다시 만들 때 되돌아오지 않게 `data/plans/R_next.json`·`R_regrok.json` 도 같이.
 - 대사(태국어)에 데이팅앱을 직접 가리키는 줄 0. `data/review/` 의 옛 작업 기록에는 옛 말이 남아 있음(앱에 안 나감).
+
+## 2026-11-26 Grok 중지 (사용자 지시, uk 전달 「모든세션전달 그록 작업 중지」)
+- 그림·회화 등 Grok 작업을 새로 보내지 않는다. 다시 시작은 **사용자가 말할 때만**. 위의 옛 Grok 실행 순서는 그때까지 쓰지 않음.
+- 확인(11-26): PC 9259 크롬 0·예약 작업 Ready(자동 실행 없음)·터널 0·M6 에 도는 Grok 프로세스와 예약 0.
