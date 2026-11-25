@@ -158,7 +158,7 @@
   "kind": "chat",
   "emoji": "💘",
   "title": "매칭됐어요",
-  "where": "데이팅 앱",
+  "where": "언어교류앱",
   "speakers": {
    "A": "{name}",
    "B": "ฟ้า"
@@ -557,7 +557,7 @@
   "kind": "chat",
   "emoji": "🗓️",
   "title": "두 번째 데이트",
-  "where": "데이팅 앱",
+  "where": "언어교류앱",
   "speakers": {
    "A": "{name}",
    "B": "ฟ้า"
@@ -565,7 +565,7 @@
   "register": "chat",
   "twist_type": "chaos",
   "twist": 5,
-  "scene": "데이팅 앱에서 두 번째 만남 날짜를 맞춘다",
+  "scene": "언어교류앱에서 두 번째 만남 날짜를 맞춘다",
   "chaos": "서로 바쁜 척 날짜를 미루다 둘 다 내일 저녁이 비어 있다는 걸 안다",
   "heart": "ฟ้า \"그럼 내일 보자\"",
   "targets": [

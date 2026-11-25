@@ -35,7 +35,7 @@
 "dialogues/R0/love/r0_love_c3.json": "91ac3703bada",
 "dialogues/R0/love/r0_love_c4.json": "5084f2c5878f",
 "dialogues/R0/love/r0_love_c5.json": "bfc4a21d9767",
-"dialogues/R0/love/r0_love_c6.json": "ec96cf8b4cd7",
+"dialogues/R0/love/r0_love_c6.json": "410675318a7c",
 "dialogues/R0/study/r0_study_a1.json": "6d0b0ab7d38e",
 "dialogues/R0/study/r0_study_a2.json": "65c84544048c",
 "dialogues/R0/study/r0_study_a3.json": "0b67bb7cbff2",
@@ -89,7 +89,7 @@
 "dialogues/R1/love/r1_love_a8.json": "a712921365d2",
 "dialogues/R1/love/r1_love_a9.json": "d753a13149c2",
 "dialogues/R1/love/r1_love_b1.json": "914949c7d65b",
-"dialogues/R1/love/r1_love_c1.json": "4645730e6b57",
+"dialogues/R1/love/r1_love_c1.json": "33fab4389479",
 "dialogues/R1/love/r1_love_c2.json": "9fc37045d022",
 "dialogues/R1/love/r1_love_c3.json": "74dd73c3d41f",
 "dialogues/R1/love/r1_love_c4.json": "7d56ab8a2da0",
@@ -97,7 +97,7 @@
 "dialogues/R1/love/r1_love_c6.json": "cb70c33183bb",
 "dialogues/R1/love/r1_love_c7.json": "3de531618a72",
 "dialogues/R1/love/r1_love_c8.json": "184a212e0e00",
-"dialogues/R1/love/r1_love_c9.json": "762aa722c3e3",
+"dialogues/R1/love/r1_love_c9.json": "a5cb3964bf13",
 "dialogues/R1/study/r1_study_a1.json": "1bd2a0c4bd0f",
 "dialogues/R1/study/r1_study_a2.json": "362cec9c5769",
 "dialogues/R1/study/r1_study_a3.json": "927843772b41",
@@ -254,5 +254,5 @@
 "grammar/sense_course.json": "6a78a244e446",
 "grammar/sfp.json": "f054bb293c83"
 },
-"rev": 11
+"rev": 12
 }
