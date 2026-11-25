@@ -1,0 +1,8 @@
+name: talkverse_pitch
+description: 발화 음높이(F0) 추적·정규화·성조 채점 — 플랫폼 의존 없는 순수 Dart. 녹음(마이크)은 앱 쪽에서 PCM 을 넘긴다.
+version: 0.1.0
+publish_to: 'none'
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+dev_dependencies:
+  test: any

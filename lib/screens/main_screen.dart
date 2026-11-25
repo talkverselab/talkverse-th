@@ -28,6 +28,7 @@ import 'script_quiz_screen.dart';
 import 'speaking_practice_screen.dart';
 import 'thai_roots_screen.dart';
 import 'thai_sound_chart_screen.dart';
+import 'tone_drill_screen.dart';
 import 'tones_screen.dart';
 import 'vocab_hub_screen.dart';
 import 'word_freq_screen.dart';
@@ -505,6 +506,7 @@ class _MenuGrid extends StatelessWidget {
         _MenuItem(label: tr('문자와 발음'), sub: tr('자음·모음·성조 · 입모양·IPA'), emblem: 'เสียง', color: AppColors.badges[0], builder: (_) => const ThaiSoundChartScreen()),
         _MenuItem(label: tr('문자 44'), sub: tr('자음 · 3분류 · 모음'), emblem: 'ก', color: AppColors.badges[2], builder: (_) => const AlphabetScreen()),
         _MenuItem(label: tr('성조 5'), sub: 'วรรณยุกต์', emblem: 'เสียง', color: AppColors.badges[3], builder: (_) => const TonesScreen()),
+        _MenuItem(label: tr('성조연습'), sub: tr('성조 조합 25 · 낱말 → 문장'), emblem: 'ฝึก', color: AppColors.badges[4], builder: (_) => const ToneDrillHubScreen()),
         _MenuItem(label: tr('문자 퀴즈'), sub: tr('4지선다'), emblem: '?', color: AppColors.badges[9], builder: (_) => const ScriptQuizScreen()),
         _MenuItem(label: tr('키보드연습'), sub: 'Kedmanee', emblem: 'พิมพ์', color: AppColors.badges[10], builder: (_) => const KeyboardPracticeScreen()),
       ]),

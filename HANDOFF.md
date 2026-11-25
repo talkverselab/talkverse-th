@@ -225,3 +225,11 @@ GH_TOKEN=$(gh auth token --user talkverselab) gh run list -R talkverselab/talkve
 - r3_culture_b1 턴 1·7·10, r2_study_b1 턴 6 — th·rd·ko 의 지문만 뺌(턴 6 은 `final_진짜final_진짜จริง` → `final_final_จริง`, ko 는 번역이라 그대로). 원고·`data/tts/plan`·`turn_lock_th.json` 같이 고침. 서버 원고 **rev 11**.
 - 다시 만들 음성 표시: `data/tts/redo_th_20261125.json`(서버 줄 8개 · 조각 6개). **음성 일은 멈춤 상태 — 굽지 않았고 D1 줄도 그대로**(D1 의 text·rd·ko 칸에는 옛 지문이 남아 있음, pack 때 바뀜). 음성 일이 열리면: 이 6조각 PC 옛 파일을 지우거나 새 이름으로 만들고 → qa → pack. 끝 재생성 72조각과 한 묶음으로.
 - 2026-11-25 사용자 지시(uk 전달): 회화 장면 그림은 **공개 65편 것만**. 65편 밖 회화 그림은 단어 그림이 끝날 때까지 멈춤(그리기·발주 모두). 이 세션은 지시 시점에 진행 중인 회화 그림 작업 없음.
+
+## 2026-11-25 성조연습 (중국어앱 b46bba1 → 태국어판, 사용자 지시·중국어앱 전달, 기준 `~/talkverse/TONE_DRILL_PORT.md`)
+- 메뉴: 배우기 「기초」 줄 「성조연습」(`lib/screens/tone_drill_screen.dart`). 성조 조합 5×5 = 25칸, 칸마다 2음절 낱말 12 = 묶음 3(낱말 4 + 문장 1). 낱말 2→3→4 → 문장, 진도 = 연습한 날 5일.
+- 낱말 판정 = 문서 3절 1번 길: 성조 이름을 판정하지 않고 **목표 모양(`thaiIdeal`, 대표 곡선)과의 닮음만 참고 점수**로. 음절은 모듈 `splitSyllables` 로 나눔. 모듈(`packages/talkverse_pitch`, uk 원본 1ba2b2c 복사)은 고치지 않음.
+- 자료 `assets/data/tone_drill.json` = `~/venvs/th/bin/python tools/build_tone_drill.py`(낱말: 단어장 → 기초 낱말, 성조 = 성조 DB의 소리 나는 성조 / 문장: M6 에 wav 있는 편에서 조각 하나·받아쓰기 0.90↑·서버 목록에 있는 줄 75개). 눈으로 보고 뺀 낱말 `tools/tone_drill_skip.json`.
+- **성조 DB(th_tones.json)에서 본 오류**(자료에서만 피함, DB 는 안 고침): ก็ 를 평성으로 계산(실제 하성), เลิก 같은 เ-ิ 긴 모음 막힌 음절을 고성으로(실제 하성), ภูมิ 를 고성으로, ผลไม้·เอกสาร·กรุณา·สวัสดี 처럼 숨은 음절이 있는 낱말을 2음절로 셈, เหรอ 를 2음절로 나눔.
+- 못 한 것: 실제 목소리로 기기 확인(점수가 사람 목소리에 맞는지 모름), 목표 곡선은 대표 모양이지 원어민 본보기가 아님, iOS 빌드(통합 앱에서 나감 — `record` 플러그인 추가됨).
+- 저장 키 `th_pitch_coach_days_v1`·`th_pitch_coach_hz_v1`(Prefs), 자료 읽기는 `assetPath`.

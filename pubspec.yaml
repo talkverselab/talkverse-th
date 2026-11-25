@@ -38,6 +38,9 @@ dependencies:
   drift_flutter: ^0.3.0
   sqlite3_flutter_libs: ^0.6.0+eol
   speech_to_text: ^7.4.0
+  record: ^6.2.1   # 성조연습 녹음(16kHz PCM) — 중국어앱과 같은 판
+  talkverse_pitch:   # 음높이 추적·곡선 비교 모듈(uk 담당 원본 ~/talkverse/talkverse-pitch 복사본 — 고치지 말 것)
+    path: packages/talkverse_pitch
   url_launcher: ^6.3.3
 
 dev_dependencies:
@@ -77,6 +80,7 @@ flutter:
     - assets/curriculum_th.json   # 토크버스 커리큘럼 단계 기본값(서버 rev 가 높으면 받아 바꿈, CURRICULUM_SPEC §12)
     - assets/data/alphabet/
     - assets/data/tones/
+    - assets/data/tone_drill.json   # 성조연습 자료(tools/build_tone_drill.py)
     - assets/data/dialogues/
     # 하위 폴더는 따로 적어야 번들에 들어간다(2026-11-19 확인 — 빠져 있었음)
     - assets/data/dialogues/R0/culture/
