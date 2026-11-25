@@ -163,7 +163,7 @@
 "dialogues/R2/love/r2_love_b9.json": "c9d8fe3dd94e",
 "dialogues/R2/love/r2_love_c1.json": "328fb31cade9",
 "dialogues/R2/love/r2_love_c2.json": "23f08b654400",
-"dialogues/R2/study/r2_study_b1.json": "5adbad82768d",
+"dialogues/R2/study/r2_study_b1.json": "37800188841b",
 "dialogues/R2/study/r2_study_b2.json": "ee0ebd6c3f87",
 "dialogues/R2/study/r2_study_b3.json": "57d6555bb1dd",
 "dialogues/R2/study/r2_study_b4.json": "0ba253b2f52b",
@@ -188,7 +188,7 @@
 "dialogues/R2/work/r2_work_b7.json": "ce93d44460a7",
 "dialogues/R2/work/r2_work_c3.json": "13748fcaaf25",
 "dialogues/R2/work/r2_work_c4.json": "d0b4e3dbbab1",
-"dialogues/R3/culture/r3_culture_b1.json": "6122cc4cb2a4",
+"dialogues/R3/culture/r3_culture_b1.json": "8aaf28203ae2",
 "dialogues/R3/culture/r3_culture_b2.json": "645dcd803a4d",
 "dialogues/R3/culture/r3_culture_b3.json": "b48782bc2e34",
 "dialogues/R3/culture/r3_culture_c1.json": "4dba550233a8",
@@ -254,5 +254,5 @@
 "grammar/sense_course.json": "6a78a244e446",
 "grammar/sfp.json": "f054bb293c83"
 },
-"rev": 10
+"rev": 11
 }

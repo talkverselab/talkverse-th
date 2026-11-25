@@ -1,0 +1,69 @@
+{
+"reason": "원고에서 한국어 지문을 뺌(2026-11-25 사용자 결정, 원고 rev 11). 아래 줄의 지금 음성은 지문까지 넣어 만든 것 — 음성 일이 다시 열리면 이 조각을 새로 만들고 pack. 그때까지 서버 목록은 그대로 둠",
+"rows": [
+{
+"episode": "r3_culture_b1",
+"turn": 1,
+"voice": "m",
+"key": "audio/th/r3_culture_b1/01_m.mp4",
+"sha1": "89b3d3fcb57797f9c9882f42eb4737cda85aad6b"
+},
+{
+"episode": "r3_culture_b1",
+"turn": 1,
+"voice": "f",
+"key": "audio/th/r3_culture_b1/01_f.mp4",
+"sha1": "a070e511f5ce5c4b13dd97cf927cfee1253aeb92"
+},
+{
+"episode": "r3_culture_b1",
+"turn": 7,
+"voice": "m",
+"key": "audio/th/r3_culture_b1/07_m.mp4",
+"sha1": "e847874db69c9ae9b25a808f4633dd60db42788c"
+},
+{
+"episode": "r3_culture_b1",
+"turn": 7,
+"voice": "f",
+"key": "audio/th/r3_culture_b1/07_f.mp4",
+"sha1": "57de2e63f4bf00fc2855178dae629e160cfa227e"
+},
+{
+"episode": "r3_culture_b1",
+"turn": 10,
+"voice": "m",
+"key": "audio/th/r3_culture_b1/10_m.mp4",
+"sha1": "07911b31228c1a34d28787e659dafc0251a46746"
+},
+{
+"episode": "r3_culture_b1",
+"turn": 10,
+"voice": "f",
+"key": "audio/th/r3_culture_b1/10_f.mp4",
+"sha1": "07911b31228c1a34d28787e659dafc0251a46746"
+},
+{
+"episode": "r2_study_b1",
+"turn": 6,
+"voice": "m",
+"key": "audio/th/r2_study_b1/06_m.mp4",
+"sha1": "21d974ed74b242fb6024e82566f3717bfa0c2850"
+},
+{
+"episode": "r2_study_b1",
+"turn": 6,
+"voice": "f",
+"key": "audio/th/r2_study_b1/06_f.mp4",
+"sha1": "21d974ed74b242fb6024e82566f3717bfa0c2850"
+}
+],
+"segs": [
+"r3_culture_b1/01_0_m.wav",
+"r3_culture_b1/01_0_f.wav",
+"r3_culture_b1/07_1_m.wav",
+"r3_culture_b1/07_1_f.wav",
+"r3_culture_b1/10_0_c.wav",
+"r2_study_b1/06_0_c.wav"
+]
+}
