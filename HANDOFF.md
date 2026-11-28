@@ -243,3 +243,16 @@ GH_TOKEN=$(gh auth token --user talkverselab) gh run list -R talkverselab/talkve
 ## 2026-11-26 Grok 중지 (사용자 지시, uk 전달 「모든세션전달 그록 작업 중지」)
 - 그림·회화 등 Grok 작업을 새로 보내지 않는다. 다시 시작은 **사용자가 말할 때만**. 위의 옛 Grok 실행 순서는 그때까지 쓰지 않음.
 - 확인(11-26): PC 9259 크롬 0·예약 작업 Ready(자동 실행 없음)·터널 0·M6 에 도는 Grok 프로세스와 예약 0.
+
+## 2026-11-28 세션 닫음 (uk 전달 사용자 지시 — 베트남어·일본어 외 언어 세션 닫기)
+다시 열면 `~/talkverse/CHANGES.md` 를 먼저 읽는다. 아래 지시는 거기서 풀렸다고 할 때까지 그대로: 음성 중지 · Grok 중지(사용자가 말할 때만) · Gemini 교차 검수 창 금지 · 단어 작업 중지 · 회화 그림은 공개 65편만.
+- **돌던 작업**: 없음. 음성·그림·빌드 백그라운드 0, `~/tts_work/th/PAUSE` 없음(실행기 자체가 안 돎), M6 build/ 없음.
+- **커밋 안 한 변경**: 이 세션이 만든 것은 없음. 남은 ` M` 은 줄 끝(CRLF)만 바뀐 파일(android·ios·analysis_options·th_tones·th_emoji_map·drafts/script_engine·tools/vocab_pipeline 등 — 커밋 금지). `??` 는 옛 Grok 작업 기록·프롬프트(`data/review/*_prompt.md`·`*_write_old.md`·`.body.txt`·`.att`), `RELAY_from_ja*.md`, `.wrangler/` — 앱에 안 나감, 지울 후보.
+- **다음 할 일**
+  1. 음성(uk/CHANGES 의 다시 시작 신호 뒤, 새벽 01~07시): 0.85 미만 72조각(40편) + 지문 뺀 6조각(`data/tts/redo_th_20261125.json`) 재생성 → qa → `pack.py <W> <ep> --upload --min-sim 0.85`. `~/tts_work/th/regen.py` 는 **고친 뒤** 재사용: 파일 이름 t7 부터(PC 에 t4~t6 있음, 생성기는 있는 파일을 건너뜀), 같은 성별 다른 화자, 대상 목록 교체. `run_all.py` 의 pack 에 `--min-sim` 을 넣을지 정할 것.
+  2. 언어교류앱 L2 첫 회화 제목은 다음 빌드에서 나감.
+- **사용자에게 물을 것**
+  1. 성조연습(Zealot 빌드 93) 실제 목소리 기기 확인 결과.
+  2. 성조 DB(th_tones.json) 오류(위 목록: ก็·เลิก·ภูมิ·숨은 음절·เหรอ)를 고칠지.
+  3. r2_study_b1 6턴 한국어 뜻(태국어는 지문 빼고 고침), 「매칭됐어요」·「두 번째 데이트」·「L2 연애 챗」 표현 유지 여부(12세 심사).
+- **지울 후보**: `~/tts_work/th/bak_20261124_t3`(188MB, t3 재채점 전 백업), PC `D:\tts_test\job\out\th_old_20261119`.
